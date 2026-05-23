@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Calculatrice de retraite gratuite - Combien épargner? | Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover, .nav-links a.active { color: var(--text); }
+ .nav-links a.active { border-bottom: 2px solid var(--terra); padding-bottom: 2px; }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+ .nav-cta:hover { background: var(--terra2); }
+
+ /* HERO */
+ .page-hero { position: relative; height: 44vh; min-height: 320px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.85) 0%, rgba(15,25,8,0.15) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 52px; max-width: 800px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--light); margin-bottom: 12px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 3.5vw, 44px); font-weight: 400; color: #fff; line-height: 1.2; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* INTRO */
+ .intro-section { max-width: 720px; margin: 0 auto; padding: 56px 40px 0; }
+ .intro-section p { font-size: 16px; line-height: 1.85; color: var(--text); margin-bottom: 1.2em; }
+
+ /* CALCULATOR */
+ .calc-wrap { max-width: 1020px; margin: 0 auto; padding: 48px 40px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+
+ /* INPUTS */
+ .calc-inputs { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; }
+ .calc-inputs h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--text); margin-bottom: 28px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+
+ .field { margin-bottom: 22px; }
+ .field:last-child { margin-bottom: 0; }
+ .field label { display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+ .field-row { display: flex; align-items: center; gap: 12px; }
+ .field input[type="number"] { flex: 1; background: var(--cream); border: 1px solid var(--border); border-radius: 8px; padding: 11px 16px; font-size: 16px; font-family: 'Jost', sans-serif; color: var(--text); outline: none; transition: border-color 0.2s; min-height: 44px; }
+ .field input[type="number"]:focus { border-color: var(--terra); }
+ .field-unit { font-size: 13px; color: var(--muted); white-space: nowrap; min-width: 20px; }
+
+ /* RESULTS */
+ .calc-results { display: flex; flex-direction: column; gap: 12px; }
+ .calc-results h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--text); margin-bottom: 4px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+
+ .result-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; }
+ .result-card.primary { border-color: var(--terra); background: var(--terra); }
+ .result-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; display: block; }
+ .result-card.primary .result-label { color: rgba(255,255,255,0.65); }
+ .result-value { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--terra); line-height: 1.1; display: block; }
+ .result-card.primary .result-value { color: #fff; font-size: 36px; }
+ .result-sub { font-size: 12px; color: var(--light); margin-top: 4px; display: block; }
+ .result-card.primary .result-sub { color: rgba(255,255,255,0.55); }
+
+ .results-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+ /* PROPORTION BAR */
+ .proportion-wrap { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; }
+ .proportion-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; display: block; }
+ .proportion-bar { height: 8px; background: var(--cream2); border-radius: 100px; overflow: hidden; margin-bottom: 10px; }
+ .proportion-fill { height: 100%; background: var(--terra); border-radius: 100px; transition: width 0.5s ease; width: 50%; }
+ .proportion-legend { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); }
+ .proportion-legend span strong { color: var(--text); }
+
+ /* CHART */
+ .chart-section { max-width: 1020px; margin: 0 auto; padding: 40px 40px 0; }
+ .chart-section h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--text); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+ .chart-container { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; height: 320px; position: relative; }
+
+ /* INTERPRET */
+ .interpret-section { max-width: 720px; margin: 0 auto; padding: 56px 40px 0; }
+ .interpret-section h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 28px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+ .interpret-section h3 { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 400; color: var(--text); margin: 28px 0 10px; }
+ .interpret-section p { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 1em; }
+
+ .note-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 40px 0 0; }
+ .note-box p { font-size: 14px; color: var(--text); line-height: 1.75; margin: 0; }
+ .note-box strong { color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; margin-top: 64px; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ .disclaimer { max-width: 720px; margin: 0 auto; padding: 24px 40px 48px; font-size: 13px; color: var(--light); line-height: 1.7; font-style: italic; text-align: center; }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .intro-section { padding: 40px 20px 0; }
+ .calc-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 0; }
+ .results-grid-2 { grid-template-columns: 1fr; }
+ .chart-section { padding: 32px 20px 0; }
+ .interpret-section { padding: 40px 20px 0; }
+ .note-box { margin: 32px 0 0; }
+ .cta-bottom { padding: 48px 20px; }
+ .disclaimer { padding: 20px 20px 40px; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Calculez combien vous aurez à la retraite et quel revenu attendre. Outil gratuit pour Québécois. CÉLI, REER, indépendance financière."/>
+ <meta name="keywords" content="calculatrice retraite, simulation retraite Québec, combien épargner retraite, CÉLI REER retraite, capital retraite"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/calculatrice-retraite/"/>
+ <meta property="og:type" content="website"/>
+ <meta property="og:title" content="Calculatrice de retraite gratuite - Combien épargner? | Route vers le Million"/>
+ <meta property="og:description" content="Calculez combien vous aurez à la retraite et quel revenu attendre. Outil gratuit pour Québécois. CÉLI, REER, indépendance financière."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/calculatrice-retraite/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Calculatrice de retraite gratuite | Route vers le Million"/>
+ <meta name="twitter:description" content="Calculez combien vous aurez à la retraite et quel revenu attendre. Outil gratuit pour Québécois."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Calculatrice de retraite",
+ "description": "Calculez combien vous aurez à la retraite et quel revenu mensuel attendre selon vos cotisations et votre horizon de placement.",
+ "url": "https://route-vers-le-million.blog/calculatrice-retraite/",
+ "applicationCategory": "FinanceApplication",
+ "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/">ETFs</a></li>
+ <li><a href="/outils/" class="active">Outils</a></li>
+ <li><a href="/articles/">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/">Accueil</a>
+ <a href="/celi-reer/">CÉLI &amp; REER</a>
+ <a href="/etf/">ETFs</a>
+ <a href="/outils/" style="color:var(--terra);font-weight:500;">Outils</a>
+ <a href="/articles/">Tous les articles</a>
+ <a href="/fonds-urgence/">Fonds d'urgence</a>
+ <a href="/histoire/">Mon parcours</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/">Accueil</a> &nbsp;/&nbsp; <a href="/outils/">Outils</a> &nbsp;/&nbsp; Retraite</p>
+ <p class="hero-tag">Outil gratuit · Simulation · Retraite</p>
+ <h1>Calculatrice de retraite —<br><em>combien aurez-vous ?</em></h1>
+ </div>
+</div>
+
+<!-- INTRO -->
+<div class="intro-section">
+ <p>Combien faut-il épargner pour prendre sa retraite confortablement ? Cette calculatrice vous permet d'estimer votre capital futur et le revenu mensuel que vous pourriez en tirer, en tenant compte des intérêts composés, de l'inflation et de votre horizon de placement.</p>
+ <p>Ajustez les paramètres ci-dessous pour obtenir une simulation personnalisée. Les résultats se mettent à jour instantanément.</p>
+</div>
+
+<!-- CALCULATOR -->
+<div class="calc-wrap">
+
+ <!-- INPUTS -->
+ <div class="calc-inputs">
+ <h2>Vos paramètres</h2>
+
+ <div class="field">
+ <label for="inp-age">Age actuel</label>
+ <div class="field-row">
+ <input type="number" id="inp-age" value="35" min="18" max="99" step="1" oninput="calculate()"/>
+ <span class="field-unit">ans</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-age-ret">Age de retraite visé</label>
+ <div class="field-row">
+ <input type="number" id="inp-age-ret" value="65" min="19" max="100" step="1" oninput="calculate()"/>
+ <span class="field-unit">ans</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-epargne">Épargne actuelle</label>
+ <div class="field-row">
+ <input type="number" id="inp-epargne" value="10000" min="0" step="100" oninput="calculate()"/>
+ <span class="field-unit">$</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-cotisation">Cotisation mensuelle</label>
+ <div class="field-row">
+ <input type="number" id="inp-cotisation" value="500" min="0" step="50" oninput="calculate()"/>
+ <span class="field-unit">$/mois</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-rendement">Rendement annuel attendu</label>
+ <div class="field-row">
+ <input type="number" id="inp-rendement" value="7" min="0" max="20" step="0.1" oninput="calculate()"/>
+ <span class="field-unit">%</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-inflation">Inflation annuelle</label>
+ <div class="field-row">
+ <input type="number" id="inp-inflation" value="2" min="0" max="10" step="0.1" oninput="calculate()"/>
+ <span class="field-unit">%</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-retrait">Taux de retrait à la retraite</label>
+ <div class="field-row">
+ <input type="number" id="inp-retrait" value="4" min="1" max="10" step="0.1" oninput="calculate()"/>
+ <span class="field-unit">%/an</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- RESULTS -->
+ <div class="calc-results">
+ <h2>Résultats</h2>
+
+ <div class="result-card primary">
+ <span class="result-label">Capital à la retraite (dollars futurs)</span>
+ <span class="result-value" id="res-capital">—</span>
+ <span class="result-sub" id="res-annees">— années d'accumulation</span>
+ </div>
+
+ <div class="result-card">
+ <span class="result-label">Capital ajusté pour l'inflation (dollars d'aujourd'hui)</span>
+ <span class="result-value" id="res-capital-reel">—</span>
+ </div>
+
+ <div class="results-grid-2">
+ <div class="result-card">
+ <span class="result-label">Revenu mensuel</span>
+ <span class="result-value" id="res-revenu" style="font-size:22px;">—</span>
+ <span class="result-sub">dollars futurs</span>
+ </div>
+ <div class="result-card">
+ <span class="result-label">Revenu mensuel réel</span>
+ <span class="result-value" id="res-revenu-reel" style="font-size:22px;">—</span>
+ <span class="result-sub">dollars d'aujourd'hui</span>
+ </div>
+ </div>
+
+ <div class="proportion-wrap">
+ <span class="proportion-label">Cotisations vs intérêts générés</span>
+ <div class="proportion-bar">
+ <div class="proportion-fill" id="prop-fill"></div>
+ </div>
+ <div class="proportion-legend">
+ <span>Cotisations : <strong id="prop-cotisations">—</strong></span>
+ <span>Intérêts : <strong id="prop-interets">—</strong></span>
+ </div>
+ </div>
+ </div>
+
+</div>
+
+<!-- CHART -->
+<div class="chart-section">
+ <h2>Croissance du portefeuille année par année</h2>
+ <div class="chart-container">
+ <canvas id="retraiteChart" aria-label="Graphique de croissance du portefeuille"></canvas>
+ </div>
+</div>
+
+<!-- INTERPRET -->
+<div class="interpret-section">
+ <h2>Comment interpréter ces résultats</h2>
+
+ <h3>Capital nominal et capital réel</h3>
+ <p>Le capital nominal est la valeur brute de votre portefeuille à la retraite, en dollars futurs. Le capital réel est ce même montant converti en pouvoir d'achat d'aujourd'hui, après avoir tenu compte de l'inflation. C'est ce dernier chiffre qui reflète le mieux ce que vous pourrez réellement vous offrir.</p>
+
+ <h3>Le taux de retrait</h3>
+ <p>Le taux de retrait correspond au pourcentage du capital que vous retirez chaque année à la retraite. La règle des 4 % est souvent citée comme un point de départ : elle suggère qu'un portefeuille bien diversifié peut théoriquement soutenir des retraits annuels de 4 % pendant 30 ans ou plus. Ce n'est pas une garantie — c'est une référence de planification.</p>
+
+ <h3>Le rendement attendu</h3>
+ <p>Le rendement que vous inscrivez a une influence considérable sur les résultats. Les marchés ne progressent pas de façon linéaire : certaines années sont excellentes, d'autres sont négatives. Cette calculatrice suppose un rendement constant, ce qui est une simplification. Les résultats réels dépendront des conditions de marché au fil du temps.</p>
+
+ <div class="note-box">
+ <p><strong>Limites de cette simulation :</strong> cette calculatrice ne tient pas compte des impôts sur les retraits (sauf si vous utilisez un CÉLI), des cotisations au Régime de rentes du Québec (RRQ), de la Sécurité de la vieillesse (SV) ni de l'évolution de vos revenus et dépenses dans le temps. Elle est conçue pour donner un ordre de grandeur, pas une projection certifiée.</p>
+ </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2>Prêt à mettre votre plan en action ?</h2>
+ <p>Ouvre ton CÉLI sur Wealthsimple et commence à investir selon ta stratégie — gratuit, sans commission.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="noopener">Ouvrir Wealthsimple →</a>
+ <a href="/outils/" class="cta-btn secondary">Tous les outils →</a>
+</div>
+
+<p class="disclaimer">Ceci est un outil de simulation à titre informatif et ne constitue pas un conseil financier. Les projections affichées sont basées sur des hypothèses simplifiées et ne garantissent aucun résultat. Consultez un planificateur financier agréé pour des conseils adaptés à votre situation.</p>
+
+<!-- FOOTER -->
+<footer>
+ <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+</footer>
+
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}
+
+function fmt(n) {
+ if (isNaN(n) || !isFinite(n) || n < 0) return '0 $';
+ return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' $';
+}
+
+function fmtM(n) {
+ return fmt(n) + '/mois';
+}
+
+var retraiteChart = null;
+
+function calculate() {
+ var age = Math.max(18, Math.min(99, parseInt(document.getElementById('inp-age').value) || 35));
+ var ageRet = Math.max(age + 1, Math.min(100, parseInt(document.getElementById('inp-age-ret').value) || 65));
+ var epargne = Math.max(0, parseFloat(document.getElementById('inp-epargne').value) || 0);
+ var cotisation = Math.max(0, parseFloat(document.getElementById('inp-cotisation').value) || 0);
+ var rendement = Math.max(0, Math.min(20, parseFloat(document.getElementById('inp-rendement').value) || 0));
+ var inflation = Math.max(0, Math.min(10, parseFloat(document.getElementById('inp-inflation').value) || 0));
+ var tauxRetrait = Math.max(1, Math.min(10, parseFloat(document.getElementById('inp-retrait').value) || 4));
+
+ var annees = ageRet - age;
+ var n = annees * 12;
+ var r = rendement / 100 / 12;
+
+ var fv;
+ if (r === 0) {
+ fv = epargne + cotisation * n;
+ } else {
+ fv = epargne * Math.pow(1 + r, n) + cotisation * (Math.pow(1 + r, n) - 1) / r;
+ }
+
+ var capitalReel = fv / Math.pow(1 + inflation / 100, annees);
+ var revenuMensuel = fv * tauxRetrait / 100 / 12;
+ var revenuReel = capitalReel * tauxRetrait / 100 / 12;
+ var totalCotisations = epargne + cotisation * n;
+ var totalInterets = Math.max(0, fv - totalCotisations);
+ var pctCotisations = fv > 0 ? Math.round(totalCotisations / fv * 100) : 100;
+
+ document.getElementById('res-capital').textContent = fmt(fv);
+ document.getElementById('res-annees').textContent = annees + ' année' + (annees > 1 ? 's' : '') + ' d’accumulation';
+ document.getElementById('res-capital-reel').textContent = fmt(capitalReel);
+ document.getElementById('res-revenu').textContent = fmt(revenuMensuel);
+ document.getElementById('res-revenu-reel').textContent = fmt(revenuReel);
+ document.getElementById('prop-fill').style.width = Math.min(100, pctCotisations) + '%';
+ document.getElementById('prop-cotisations').textContent = fmt(totalCotisations);
+ document.getElementById('prop-interets').textContent = fmt(totalInterets);
+
+ updateChart(age, ageRet, epargne, cotisation, r, inflation);
+}
+
+function updateChart(age, ageRet, epargne, cotisation, r, inflation) {
+ var labels = [];
+ var dataNominal = [];
+ var dataReel = [];
+
+ for (var a = age; a <= ageRet; a++) {
+ var ans = a - age;
+ var nm = ans * 12;
+ var fv;
+ if (r === 0) {
+ fv = epargne + cotisation * nm;
+ } else {
+ fv = epargne * Math.pow(1 + r, nm) + cotisation * (Math.pow(1 + r, nm) - 1) / r;
+ }
+ var reel = fv / Math.pow(1 + (inflation || 0) / 100, ans);
+ labels.push(a + ' ans');
+ dataNominal.push(Math.round(fv));
+ dataReel.push(Math.round(reel));
+ }
+
+ if (!retraiteChart) return;
+
+ retraiteChart.data.labels = labels;
+ retraiteChart.data.datasets[0].data = dataNominal;
+ retraiteChart.data.datasets[1].data = dataReel;
+ retraiteChart.update('none');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+ var ctx = document.getElementById('retraiteChart').getContext('2d');
+ retraiteChart = new Chart(ctx, {
+ type: 'line',
+ data: {
+ labels: [],
+ datasets: [
+ {
+ label: 'Capital nominal',
+ data: [],
+ borderColor: '#2D4A1A',
+ backgroundColor: 'rgba(45,74,26,0.08)',
+ fill: true,
+ tension: 0.4,
+ borderWidth: 2,
+ pointRadius: 0,
+ pointHoverRadius: 4
+ },
+ {
+ label: 'Capital ajusté inflation',
+ data: [],
+ borderColor: '#A0B480',
+ backgroundColor: 'rgba(160,180,128,0.05)',
+ fill: true,
+ tension: 0.4,
+ borderWidth: 1.5,
+ borderDash: [6, 4],
+ pointRadius: 0,
+ pointHoverRadius: 4
+ }
+ ]
+ },
+ options: {
+ responsive: true,
+ maintainAspectRatio: false,
+ interaction: { mode: 'index', intersect: false },
+ plugins: {
+ legend: {
+ position: 'top',
+ align: 'end',
+ labels: { font: { family: 'Jost', size: 12 }, color: '#607848', boxWidth: 20, padding: 16 }
+ },
+ tooltip: {
+ callbacks: {
+ label: function(ctx) {
+ var v = ctx.parsed.y;
+ var s = Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+ return ctx.dataset.label + ' : ' + s + ' $';
+ }
+ }
+ }
+ },
+ scales: {
+ y: {
+ beginAtZero: true,
+ ticks: {
+ callback: function(v) {
+ if (v >= 1000000) return (v / 1000000).toFixed(1) + 'M $';
+ if (v >= 1000) return (v / 1000).toFixed(0) + 'k $';
+ return v + ' $';
+ },
+ font: { family: 'Jost', size: 11 },
+ color: '#607848',
+ maxTicksLimit: 6
+ },
+ grid: { color: 'rgba(200,212,176,0.3)' }
+ },
+ x: {
+ ticks: {
+ maxTicksLimit: 8,
+ font: { family: 'Jost', size: 11 },
+ color: '#607848'
+ },
+ grid: { display: false }
+ }
+ }
+ }
+ });
+ calculate();
+});
+</script>
+</body>
+</html>

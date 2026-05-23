@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Outils financiers gratuits - Calculatrices et simulateurs | Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover, .nav-links a.active { color: var(--text); }
+ .nav-links a.active { border-bottom: 2px solid var(--terra); padding-bottom: 2px; }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+ .nav-cta:hover { background: var(--terra2); }
+
+ /* HERO */
+ .tools-hero { background: var(--text); padding: 80px 56px 64px; text-align: center; position: relative; overflow: hidden; }
+ .tools-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; opacity: 0.07; }
+ .tools-hero-content { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+ .hero-tag { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--light); margin-bottom: 20px; display: block; }
+ .tools-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 4.5vw, 52px); font-weight: 400; color: #fff; line-height: 1.2; margin-bottom: 14px; }
+ .tools-hero h1 em { font-style: italic; color: #B8D890; }
+ .tools-hero p { font-size: 15px; color: rgba(255,255,255,0.55); max-width: 480px; margin: 0 auto; }
+
+ /* TOOLS GRID */
+ .tools-wrap { max-width: 960px; margin: 0 auto; padding: 72px 40px 100px; }
+ .tools-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+
+ .tool-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px 36px; display: flex; flex-direction: column; gap: 0; transition: transform 0.2s, box-shadow 0.2s; }
+ .tool-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(46,28,14,0.08); }
+ .tool-card-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 16px; display: block; }
+ .tool-card h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--text); line-height: 1.3; margin-bottom: 14px; }
+ .tool-card p { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 28px; flex: 1; }
+ .tool-card-divider { height: 1px; background: var(--border); margin-bottom: 24px; }
+ .tool-link { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 13px 28px; text-decoration: none; border-radius: 100px; transition: background 0.2s; align-self: flex-start; min-height: 44px; display: flex; align-items: center; }
+ .tool-link:hover { background: var(--terra2); }
+ .tool-link.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .tool-link.secondary:hover { background: var(--border); }
+
+ /* ACCENT CARD */
+ .tool-card.featured { border-color: var(--terra); }
+ .tool-card.featured .tool-card-tag { color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .tools-hero { padding: 56px 20px 48px; }
+ .tools-wrap { padding: 48px 20px 80px; }
+ .tools-grid { grid-template-columns: 1fr; }
+ .cta-bottom { padding: 48px 20px; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Outils gratuits pour gérer vos finances au Québec: calculatrice d'intérêts composés, explorateur d'ETF, calculatrice de retraite, explorateur de carrières."/>
+ <meta name="keywords" content="outils financiers gratuits, calculatrice retraite, explorateur ETF, calculatrice intérêts composés, finances Québec"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/outils/"/>
+ <meta property="og:type" content="website"/>
+ <meta property="og:title" content="Outils financiers gratuits - Calculatrices et simulateurs | Route vers le Million"/>
+ <meta property="og:description" content="Outils gratuits pour gérer vos finances au Québec: calculatrice d'intérêts composés, explorateur d'ETF, calculatrice de retraite, explorateur de carrières."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/outils/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Outils financiers gratuits | Route vers le Million"/>
+ <meta name="twitter:description" content="Outils gratuits pour gérer vos finances au Québec: calculatrice d'intérêts composés, explorateur d'ETF, calculatrice de retraite, explorateur de carrières."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Outils financiers gratuits",
+ "description": "Outils gratuits pour gérer vos finances au Québec: calculatrice d'intérêts composés, explorateur d'ETF, calculatrice de retraite, explorateur de carrières.",
+ "url": "https://route-vers-le-million.blog/outils/",
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/">ETFs</a></li>
+ <li><a href="/outils/" class="active">Outils</a></li>
+ <li><a href="/articles/">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/">Accueil</a>
+ <a href="/celi-reer/">CÉLI &amp; REER</a>
+ <a href="/etf/">ETFs</a>
+ <a href="/outils/" style="color:var(--terra);font-weight:500;">Outils</a>
+ <a href="/articles/">Tous les articles</a>
+ <a href="/fonds-urgence/">Fonds d'urgence</a>
+ <a href="/histoire/">Mon parcours</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="tools-hero">
+ <div class="tools-hero-content">
+ <span class="hero-tag">Outils gratuits · Finances personnelles · Québec</span>
+ <h1>Nos <em>outils</em> financiers</h1>
+ <p>Calculatrices et simulateurs conçus pour vous aider à prendre de meilleures décisions financières.</p>
+ </div>
+</div>
+
+<!-- TOOLS -->
+<div class="tools-wrap">
+ <div class="tools-grid">
+
+ <div class="tool-card featured">
+ <span class="tool-card-tag">Retraite</span>
+ <h2>Calculatrice de retraite</h2>
+ <div class="tool-card-divider"></div>
+ <p>Estimez votre capital à la retraite et le revenu mensuel attendu selon vos cotisations, votre horizon de placement et le rendement espéré. Inclut un graphique de croissance année par année et l'ajustement pour l'inflation.</p>
+ <a href="/calculatrice-retraite/" class="tool-link">Explorer →</a>
+ </div>
+
+ <div class="tool-card">
+ <span class="tool-card-tag">Épargne</span>
+ <h2>Calculatrice d'intérêts composés</h2>
+ <div class="tool-card-divider"></div>
+ <p>Simulez la croissance de votre épargne selon le montant investi, la fréquence des cotisations et le rendement espéré. Visualisez concrètement la puissance des intérêts composés sur le long terme.</p>
+ <a href="/calculatrice/" class="tool-link">Explorer →</a>
+ </div>
+
+ <div class="tool-card">
+ <span class="tool-card-tag">Investissement</span>
+ <h2>Radar ETF</h2>
+ <div class="tool-card-divider"></div>
+ <p>Comparez les ETF canadiens par frais de gestion, rendement historique et exposition géographique. Trouvez l'ETF adapté à votre profil d'investisseur et à votre stratégie.</p>
+ <a href="/etf-explorer/" class="tool-link">Explorer →</a>
+ </div>
+
+ <div class="tool-card">
+ <span class="tool-card-tag">Emploi</span>
+ <h2>Explorateur de carrières</h2>
+ <div class="tool-card-divider"></div>
+ <p>Découvrez les salaires réels, les durées d'études et les perspectives d'emploi pour des dizaines de métiers au Canada. Filtrez selon votre profil pour trouver la carrière qui vous correspond.</p>
+ <a href="/carrieres/" class="tool-link">Explorer →</a>
+ </div>
+
+ </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2>Prêt à passer à l'action ?</h2>
+ <p>Ouvre ton CÉLI sur Wealthsimple et commence à investir — gratuit, sans commission.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="noopener">Ouvrir Wealthsimple →</a>
+ <a href="/articles/" class="cta-btn secondary">Lire les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+ <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+</footer>
+
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+</body>
+</html>
