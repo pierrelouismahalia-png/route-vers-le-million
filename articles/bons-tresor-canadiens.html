@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Bons du Trésor canadiens : pour investisseurs prudents | Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+ <meta name="description" content="Découvrez ce qu'est un Bon du Trésor canadien, comment l'acheter via Wealthsimple, ses avantages fiscaux et ses limites pour investisseurs québécois prudents."/>
+ <meta name="keywords" content="bons du trésor canadiens, t-bills Canada, investissement prudent, CBIL TBIL, court terme, placement sécuritaire, CÉLI, REER"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Mahalia Pierre Louis"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/articles/bons-tresor-canadiens/"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Bons du Trésor canadiens : pour investisseurs prudents | Route vers le Million"/>
+ <meta property="og:description" content="Découvrez ce qu'est un Bon du Trésor canadien, comment l'acheter via Wealthsimple, ses avantages fiscaux et ses limites pour investisseurs québécois prudents."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/articles/bons-tresor-canadiens/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Bons du Trésor canadiens : pour investisseurs prudents | Route vers le Million"/>
+ <meta name="twitter:description" content="Découvrez ce qu'est un Bon du Trésor canadien, comment l'acheter via Wealthsimple, ses avantages fiscaux et ses limites pour investisseurs québécois prudents."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Les Bons du Trésor canadiens : une option intéressante pour les investisseurs prudents ?",
+ "description": "Découvrez ce qu'est un Bon du Trésor canadien, comment l'acheter via Wealthsimple, ses avantages fiscaux et ses limites pour investisseurs québécois prudents.",
+ "url": "https://route-vers-le-million.blog/articles/bons-tresor-canadiens/",
+ "datePublished": "2026-05-23",
+ "author": {"@type": "Person", "name": "Mahalia Pierre Louis"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/">ETFs</a></li>
+ <li><a href="/etf-explorer/" style="background:rgba(45,74,26,0.1);color:var(--terra);padding:6px 14px;border-radius:100px;border:1px solid var(--border);"> Radar ETF</a></li>
+ <li><a href="/calculatrice/">Calculatrice</a></li>
+ <li><a href="/carrieres/">Carrières</a></li>
+ <li><a href="/articles/">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/">Accueil</a>
+ <a href="/celi-reer/">CÉLI &amp; REER</a>
+ <a href="/etf/">ETFs</a>
+ <a href="/etf-explorer/" style="color:var(--terra);font-weight:500;"> Radar ETF</a>
+ <a href="/calculatrice/">Calculatrice</a>
+ <a href="/articles/">Tous les articles</a>
+ <a href="/fonds-urgence/">Fonds d'urgence</a>
+ <a href="/histoire/">Mon parcours</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/">Accueil</a> &nbsp;/&nbsp; <a href="/articles/">Articles</a> &nbsp;/&nbsp; Épargne</p>
+ <p class="hero-tag">Épargne · Sécurité · Court terme</p>
+ <h1>Les Bons du Trésor canadiens :<br><em>une option pour les investisseurs prudents ?</em></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span>Québec, Canada</span>
+ <span>·</span>
+ <span>7 min de lecture</span>
+ <span>·</span>
+ <span>Épargne · Placement sécuritaire</span>
+ </div>
+
+ <div class="prose">
+
+ <p class="lead">
+ "Les Bons du Trésor ne sont généralement pas conçus pour bâtir une richesse importante à très long terme — mais ils peuvent être exactement ce qu'il faut pour protéger son capital à court terme, ou apporter une dose de stabilité à un portefeuille plus agressif."
+ </p>
+
+ <p>Lorsqu'on parle d'investissement, plusieurs personnes pensent immédiatement aux actions ou aux ETF. Pourtant, il existe aussi des placements beaucoup plus stables utilisés par les investisseurs qui souhaitent surtout protéger leur capital à court terme : les Bons du Trésor du Canada, aussi appelés T-bills canadiens.</p>
+
+ <h2>Qu'est-ce qu'un Bon du Trésor canadien ?</h2>
+
+ <p>Un Bon du Trésor est un titre de dette à court terme émis par le gouvernement du Canada. Contrairement à une obligation traditionnelle, il ne verse pas d'intérêts mensuels ou annuels. Il fonctionne plutôt avec un <strong>système d'escompte</strong>.</p>
+
+ <p>En pratique, l'investisseur achète le Bon du Trésor à un prix inférieur à sa valeur réelle, puis récupère la pleine valeur à l'échéance. La différence entre le prix payé et le montant récupéré représente le rendement.</p>
+
+ <p>Par exemple, si une personne achète un Bon du Trésor de 1 000 $ pour 980 $, elle recevra 1 000 $ à l'échéance. Son gain brut sera donc de 20 $.</p>
+
+ <h2>Des échéances très courtes</h2>
+
+ <p>Les Bons du Trésor canadiens sont généralement offerts avec des échéances très courtes. C'est donc un placement principalement utilisé pour le court terme.</p>
+
+ <ul>
+ <li>1 mois</li>
+ <li>3 mois</li>
+ <li>6 mois</li>
+ <li>12 mois</li>
+ </ul>
+
+ <h2>Comment y accéder en tant qu'investisseur québécois ?</h2>
+
+ <p>Au Canada, il est rare pour un particulier d'acheter des Bons du Trésor directement auprès du gouvernement. La plupart des investisseurs y accèdent plutôt par l'entremise de l'une des options suivantes :</p>
+
+ <ul>
+ <li>Un courtier en ligne comme Wealthsimple ou Questrade</li>
+ <li>Un ETF qui regroupe des Bons du Trésor, comme <strong>CBIL.TO</strong> ou <strong>TBIL.TO</strong></li>
+ <li>Un ETF de compte d'épargne à intérêt élevé (HISA), comme <strong>CASH.TO</strong> ou <strong>PSA.TO</strong>, qui offre une sécurité semblable</li>
+ </ul>
+
+ <p>Les ETF sont souvent la voie la plus simple, parce qu'on peut les acheter directement dans son CÉLI ou son REER, comme n'importe quelle action.</p>
+
+ <h2>Pourquoi certains investisseurs les apprécient</h2>
+
+ <p>Les Bons du Trésor sont populaires parce qu'ils sont considérés comme des placements à très faible risque. Comme ils sont émis par le gouvernement canadien, plusieurs investisseurs les utilisent pour <strong>préserver leur capital</strong> plutôt que pour rechercher une forte croissance.</p>
+
+ <p>Ils peuvent être particulièrement intéressants pour :</p>
+
+ <ul>
+ <li>Les personnes plus prudentes face aux marchés financiers</li>
+ <li>Les investisseurs anxieux face aux fluctuations</li>
+ <li>Ceux qui veulent protéger une partie de leur portefeuille</li>
+ <li>Les gens qui auront besoin de leur argent dans les prochains mois</li>
+ <li>Ceux qui cherchent un endroit sécuritaire pour leur fonds d'urgence</li>
+ </ul>
+
+ <div class="highlight-box">
+ <p>Contrairement aux actions ou à plusieurs ETF, les Bons du Trésor sont beaucoup moins volatils. Leur rendement est généralement connu à l'avance, ce qui apporte une certaine <strong>stabilité psychologique</strong> à plusieurs investisseurs. En période d'incertitude économique, il est d'ailleurs fréquent de voir des investisseurs déplacer une partie de leur argent vers des placements plus sécuritaires comme les Bons du Trésor.</p>
+ </div>
+
+ <h2>Un mot sur la fiscalité</h2>
+
+ <p>Au Canada, les revenus générés par les Bons du Trésor sont considérés comme des <strong>intérêts</strong>. Ils sont donc imposés au taux d'imposition marginal complet, contrairement aux dividendes canadiens qui bénéficient d'un crédit d'impôt avantageux.</p>
+
+ <div class="pullquote">
+ <p>"Pour cette raison, plusieurs investisseurs préfèrent détenir leurs Bons du Trésor dans un compte enregistré comme le CÉLI ou le REER, afin d'éviter l'impact fiscal sur leur rendement."</p>
+ </div>
+
+ <h2>Pourquoi certains préfèrent quand même les actions ou les ETF</h2>
+
+ <p>Même si les Bons du Trésor sont plus stables, ils ont une limite importante : leur <strong>potentiel de croissance à long terme est généralement beaucoup plus faible</strong>.</p>
+
+ <p>Les actions et certains ETF peuvent connaître de fortes fluctuations, mais historiquement, ils ont souvent offert de meilleurs rendements sur plusieurs années. C'est pourquoi plusieurs investisseurs plus jeunes ou ayant un horizon de placement plus long préfèrent accepter davantage de volatilité afin de maximiser la croissance de leur portefeuille.</p>
+
+ <p>Au final, le choix dépend surtout de l'objectif recherché :</p>
+
+ <ul>
+ <li>Protéger son argent à court terme</li>
+ <li>Ou chercher une croissance plus importante à long terme</li>
+ </ul>
+
+ <h2>Une bonne option pour diversifier</h2>
+
+ <p>Personnellement, je pense que les Bons du Trésor canadiens peuvent être une bonne alternative pour les personnes plus prudentes ou anxieuses face au marché, particulièrement lorsqu'il s'agit d'argent qu'on pourrait avoir besoin d'utiliser prochainement.</p>
+
+ <p>Ils peuvent aussi servir à diversifier un portefeuille en ajoutant une portion plus stable aux investissements plus agressifs, ou encore à faire fructifier un fonds d'urgence sans prendre de risque important.</p>
+
+ <p>Par contre, il est important de comprendre qu'ils ne sont généralement pas conçus pour bâtir une richesse importante à très long terme comme peuvent le faire certains ETF de croissance ou investissements boursiers.</p>
+
+ <p>Comme souvent en finance, il ne s'agit pas de trouver "le meilleur placement", mais plutôt <strong>le placement qui correspond réellement à ses objectifs</strong>, son horizon de temps et sa tolérance au risque.</p>
+
+ <p style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Ceci est un outil de simulation à titre informatif et ne constitue pas un conseil financier. Je ne suis pas planificatrice financière. Consultez un professionnel pour votre situation spécifique.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3>Investir prudemment</h3>
+ <p>CBIL.TO et TBIL.TO sont accessibles directement dans ton CÉLI Wealthsimple — sans commission.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank" rel="noopener">Wealthsimple →</a>
+ <a href="/fonds-urgence/" class="sidebar-btn secondary">Fonds d'urgence →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4>Placement étudié</h4>
+ <div class="info-row"><span>Type</span><span>T-bills</span></div>
+ <div class="info-row"><span>Horizon</span><span>Court terme</span></div>
+ <div class="info-row"><span>Risque</span><span>Très faible</span></div>
+ <div class="info-row"><span>Compte conseillé</span><span>CÉLI / REER</span></div>
+ <div class="info-row"><span>Objectif</span><span>Protection</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2>Prêt à investir prudemment ?</h2>
+ <p>Ouvre ton CÉLI sur Wealthsimple — CBIL.TO et TBIL.TO y sont disponibles, sans commission.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="noopener">Ouvrir Wealthsimple →</a>
+ <a href="/articles/" class="cta-btn secondary">Voir tous les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+ <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+</footer>
+
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+</body>
+</html>
