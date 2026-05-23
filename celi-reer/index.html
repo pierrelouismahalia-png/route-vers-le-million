@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Comment j'utilise le CÉLI et le REER — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ .page-hero { position: relative; height: 52vh; min-height: 380px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.85) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 1.8em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+
+ .pullquote { background: var(--white); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; border: 1px solid var(--border); }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* 3 STEPS */
+ .steps { margin: 2em 0; }
+ .step { display: flex; gap: 24px; margin-bottom: 20px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; align-items: flex-start; }
+ .step-num { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 700; color: rgba(45,74,26,0.2); line-height: 1; flex-shrink: 0; width: 56px; }
+ .step-body h4 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--text); margin-bottom: 8px; }
+ .step-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+ .step-badge { display: inline-block; background: rgba(45,74,26,0.12); color: var(--terra); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; margin-bottom: 10px; }
+
+ /* COMPARISON */
+ .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 2em 0; }
+ .compare-card { border-radius: var(--radius); padding: 28px; border: 1px solid var(--border); }
+ .compare-card.celi { background: rgba(212,132,90,0.06); border-color: rgba(45,74,26,0.3); }
+ .compare-card.reer { background: var(--white); }
+ .compare-title { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+ .compare-title span { color: var(--terra); }
+ .compare-item { display: flex; gap: 10px; font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+ .compare-item::before { content: "→"; color: var(--terra); flex-shrink: 0; }
+
+ /* MYTH BOX */
+ .myth-box { background: var(--text); border-radius: var(--radius); padding: 32px; margin: 2em 0; }
+ .myth-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 20px; }
+ .myth-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+ .myth-col h5 { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+ .myth-col.wrong h5 { color: #E87060; }
+ .myth-col.right h5 { color: #7AAA5A; }
+ .myth-col p { font-size: 14px; line-height: 1.7; }
+ .myth-col.wrong p { color: rgba(255,255,255,0.5); text-decoration: line-through; text-decoration-color: rgba(255,100,80,0.4); }
+ .myth-col.right p { color: rgba(255,255,255,0.85); }
+
+ /* PORTFOLIO CARDS */
+ .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 2em 0; }
+ .port-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+ .port-icon { font-size: 28px; margin-bottom: 10px; }
+ .port-inst { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--terra); margin-bottom: 6px; }
+ .port-name { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--text); margin-bottom: 8px; }
+ .port-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+ /* HIGHLIGHT */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.8; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 160px; background: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; }
+
+ .sidebar-quick { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-quick h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .quick-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .quick-row:last-child { border: none; }
+ .quick-row span:first-child { color: var(--muted); }
+ .quick-row span:last-child { font-weight: 500; color: var(--text); }
+
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ .compare-grid, .portfolio-grid, .myth-row { grid-template-columns: 1fr; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+ 
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+ <meta name="description" content="Ma stratégie en 3 étapes pour maximiser le CÉLI et le REER au Québec. Comparatif et conseils pratiques."/>
+ <meta name="keywords" content="CÉLI Québec, REER, stratégie CÉLI, cotisation CÉLI 2026, investissement CÉLI, fonds enregistré"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/celi-reer/"/>
+ <meta property="og:type" content="Article"/>
+ <meta property="og:title" content="Comment j'utilise le CÉLI et le REER — Route vers le Million"/>
+ <meta property="og:description" content="Ma stratégie en 3 étapes pour maximiser le CÉLI et le REER au Québec. Comparatif et conseils pratiques."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/celi-reer/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Comment j'utilise le CÉLI et le REER — Route vers le Million"/>
+ <meta name="twitter:description" content="Ma stratégie en 3 étapes pour maximiser le CÉLI et le REER au Québec. Comparatif et conseils pratiques."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Comment j'utilise le CÉLI et le REER — Route vers le Million",
+ "description": "Ma stratégie en 3 étapes pour maximiser le CÉLI et le REER au Québec. Comparatif et conseils pratiques.",
+ "url": "https://route-vers-le-million.blog/celi-reer/",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/">ETFs</a></li>
+ <li><a href="/etf-explorer/" style="background:rgba(45,74,26,0.1);color:var(--terra);padding:6px 14px;border-radius:100px;border:1px solid var(--border);"> Radar ETF</a></li>
+ <li><a href="/calculatrice/">Calculatrice</a></li>
+ <li><a href="/carrieres/">Carrières</a></li>
+ <li><a href="/articles/">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/">Accueil</a>
+ <a href="/celi-reer/">CÉLI &amp; REER</a>
+ <a href="/etf/">ETFs</a>
+ <a href="/etf-explorer/" style="color:var(--terra);font-weight:500;"> Radar ETF</a>
+ <a href="/calculatrice/">Calculatrice</a>
+ <a href="/articles/">Tous les articles</a>
+ <a href="/fonds-urgence/">Fonds d'urgence</a>
+ <a href="/histoire/">Mon parcours</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple →</a>
+</div>
+
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/">Accueil</a> &nbsp;/&nbsp; CÉLI & REER</p>
+ <p class="hero-tag">CÉLI · REER · Stratégie · Patrimoine</p>
+ <h1>Comment j'utilise le CÉLI et le REER<br>pour <em>bâtir mon patrimoine</em></h1>
+ </div>
+</div>
+
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span> Québec, Canada</span>
+ <span>·</span>
+ <span> 7 min de lecture</span>
+ <span>·</span>
+ <span>CÉLI · REER · Stratégie</span>
+ </div>
+
+ <div class="prose">
+
+ <p class="lead">
+ "Il ne suffit pas simplement d'économiser de l'argent. Il faut surtout comprendre où le placer — et pourquoi. C'est ce que j'ai mis des années à apprendre."
+ </p>
+
+ <p>Avec le temps, j'ai développé une stratégie d'épargne qui est à la fois équilibrée, fiscalement avantageuse et adaptée à mes objectifs à long terme. Ce n'est pas une stratégie parfaite — c'est la mienne, et elle évolue au fil des années.</p>
+
+ <h2>Ma stratégie en 3 étapes</h2>
+
+ <div class="steps">
+
+ <div class="step">
+ <div class="step-num">1</div>
+ <div class="step-body">
+ <span class="step-badge">Priorité absolue</span>
+ <h4>Maximiser le CÉLI d'abord</h4>
+ <p>Le CÉLI est l'un des outils les plus puissants au Canada. Tous les gains — intérêts, dividendes, gains en capital — croissent à l'abri de l'impôt. Et les retraits ? Entièrement libres d'impôt, en tout temps. C'est ma priorité numéro un chaque année : mettre 7 000$ dans mon CÉLI dès janvier.</p>
+ </div>
+ </div>
+
+ <div class="step">
+ <div class="step-num">2</div>
+ <div class="step-body">
+ <span class="step-badge">Optimisation fiscale</span>
+ <h4>Cotiser au REER ensuite</h4>
+ <p>Une fois mon CÉLI maximisé, je me tourne vers le REER. Chaque dollar cotisé réduit mon revenu imposable — ce qui diminue l'impôt à payer maintenant. L'impôt est simplement reporté à la retraite, quand les revenus sont généralement plus bas. C'est un avantage réel, surtout lorsqu'on est dans une tranche d'imposition plus élevée.</p>
+ </div>
+ </div>
+
+ <div class="step">
+ <div class="step-num">3</div>
+ <div class="step-body">
+ <span class="step-badge">Au-delà des limites</span>
+ <h4>Compte non-enregistré pour le reste</h4>
+ <p>Quand mes comptes enregistrés sont optimisés, j'investis le surplus dans un compte de courtage non-enregistré. Ces placements sont imposables, mais ils permettent de continuer à faire croître son patrimoine au-delà des plafonds gouvernementaux.</p>
+ </div>
+ </div>
+
+ </div>
+
+ <h2>CÉLI vs REER — ce n'est pas l'un ou l'autre</h2>
+
+ <p>Beaucoup de gens opposent le CÉLI et le REER comme s'il fallait choisir. En réalité, <strong>les deux sont complémentaires</strong>. Chacun a ses forces selon votre situation.</p>
+
+ <div class="compare-grid">
+ <div class="compare-card celi">
+ <div class="compare-title"><span>CÉLI</span> — Flexibilité</div>
+ <div class="compare-item">Gains 100% libres d'impôt</div>
+ <div class="compare-item">Retraits à tout moment sans pénalité</div>
+ <div class="compare-item">Droits de cotisation récupérés l'année suivante</div>
+ <div class="compare-item">Idéal pour objectifs à court et long terme</div>
+ <div class="compare-item">7 000$/an en 2026</div>
+ </div>
+ <div class="compare-card reer">
+ <div class="compare-title"><span>REER</span> — Optimisation fiscale</div>
+ <div class="compare-item">Réduit le revenu imposable maintenant</div>
+ <div class="compare-item">Impôt reporté à la retraite</div>
+ <div class="compare-item">Puissant quand le revenu est plus élevé</div>
+ <div class="compare-item">Idéal pour planification retraite</div>
+ <div class="compare-item">18% du revenu de l'année précédente</div>
+ </div>
+ </div>
+
+ <div class="pullquote">
+ <p>"L'important, c'est surtout de développer l'habitude d'investir régulièrement — même avec des montants modestes au départ. L'effet composé fait le reste."</p>
+ </div>
+
+ <h2>Le mythe des comptes multiples — démystifié</h2>
+
+ <p>Voici quelque chose que j'ai réalisé en discutant avec des gens autour de moi : <strong>beaucoup croient qu'on ne peut avoir qu'un seul CÉLI ou un seul REER.</strong> Ce n'est absolument pas vrai.</p>
+
+ <div class="myth-box">
+ <p class="myth-title">Mythe vs Réalité</p>
+ <div class="myth-row">
+ <div class="myth-col wrong">
+ <h5> Mythe</h5>
+ <p>Je ne peux avoir qu'un seul CÉLI. Ouvrir un deuxième compte CÉLI est illégal ou non conforme.</p>
+ </div>
+ <div class="myth-col right">
+ <h5> Réalité</h5>
+ <p>On peut avoir autant de CÉLI qu'on veut dans autant d'institutions financières qu'on veut. Ce qui est limité, c'est le montant total des cotisations — pas le nombre de comptes.</p>
+ </div>
+ </div>
+ </div>
+
+ <p>Le gouvernement fixe une limite annuelle de cotisation — 7 000$ en 2026 — mais cette limite s'applique à <strong>l'ensemble de vos CÉLI combinés</strong>, peu importe combien de comptes vous avez. Le même principe s'applique au REER.</p>
+
+ <div class="highlight-box">
+ <p>Il est souvent <strong>stratégique de diversifier ses institutions financières</strong>. Certains comptes sont meilleurs pour les ETFs à faibles frais, d'autres pour les fonds technologiques, d'autres encore pour l'épargne liquide. Il n'y a aucun problème légal à avoir plusieurs comptes.</p>
+ </div>
+
+ <h2>Mes 3 CÉLI actuels</h2>
+
+ <p>Personnellement, j'ai actuellement trois CÉLI répartis dans différentes institutions, chacun avec un objectif précis.</p>
+
+ <div class="portfolio-grid">
+ <div class="port-card">
+ <div class="port-icon"></div>
+ <div class="port-inst">Départ</div>
+ <div class="port-name">RBC</div>
+ <div class="port-desc">Mon premier CÉLI. Avec le temps, j'ai réalisé que les frais et les options correspondaient moins à ce que je cherchais.</div>
+ </div>
+ <div class="port-card">
+ <div class="port-icon"></div>
+ <div class="port-inst">Principal</div>
+ <div class="port-name">Wealthsimple</div>
+ <div class="port-desc">Mon compte principal aujourd'hui. Frais minimaux, interface simple, ETFs sans commission. QQC.F y est investi.</div>
+ </div>
+ <div class="port-card">
+ <div class="port-icon"></div>
+ <div class="port-inst">Croissance</div>
+ <div class="port-name">Fonds tech</div>
+ <div class="port-desc">Fonds technologique (ATL496). Performance de +48% à un certain moment. Une belle leçon sur la diversification sectorielle.</div>
+ </div>
+ </div>
+
+ <h2>Ce que j'ai vraiment appris</h2>
+
+ <p>Investir ne consiste pas seulement à ouvrir un compte et laisser dormir son argent. Il faut comprendre les outils disponibles, comparer les frais, diversifier ses placements et surtout <strong>développer une stratégie cohérente avec ses objectifs financiers personnels</strong>.</p>
+
+ <p>Les frais de gestion, en particulier, peuvent avoir un impact énorme sur le rendement à long terme. La différence entre 0,20% et 2,5% de frais annuels peut représenter des dizaines de milliers de dollars sur 20 ans. C'est un calcul que tout investisseur devrait faire au moins une fois.</p>
+
+ <p style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;"> Je ne suis pas conseillère financière. Cet article partage mon expérience personnelle. Consultez un professionnel pour votre situation spécifique.</p>
+
+ </div>
+ </article>
+
+ <aside class="sidebar">
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3>Ouvre ton CÉLI</h3>
+ <p>Wealthsimple — 0$ de commission, interface simple, ETFs disponibles.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank">Ouvrir Wealthsimple →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-quick">
+ <h4>Chiffres clés 2026</h4>
+ <div class="quick-row"><span>CÉLI limite</span><span>7 000$/an</span></div>
+ <div class="quick-row"><span>CÉLI max comptes</span><span>Illimité</span></div>
+ <div class="quick-row"><span>REER limite</span><span>18% revenu</span></div>
+ <div class="quick-row"><span>Gains CÉLI imposés</span><span>Jamais </span></div>
+ <div class="quick-row"><span>Mon ETF</span><span>QQC.F</span></div>
+ <div class="quick-row"><span>Frais QQC.F</span><span>0,20%/an</span></div>
+ </div>
+ </aside>
+
+</div>
+
+<div class="cta-bottom">
+ <h2>Prêt à ouvrir ton CÉLI ?</h2>
+ <p>Commence dès aujourd'hui — même avec 50$. Wealthsimple, gratuit et sans commission.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank">Ouvrir un compte gratuit →</a>
+</div>
+
+<footer>
+ <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+</footer>
+
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+</body>
+</html>

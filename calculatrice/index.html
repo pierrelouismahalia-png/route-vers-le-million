@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Calculatrice d'intérêts composés — Route vers le Million</title>
+ <meta name="description" content="Calculez la puissance des intérêts composés. Visualisez la croissance de votre épargne avec cette calculatrice interactive gratuite — Québec, Canada."/>
+ <meta name="keywords" content="calculatrice intérêts composés, calculatrice épargne Québec, CÉLI calculateur, investissement Canada"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/calculatrice/"/>
+ <meta property="og:type" content="website"/>
+ <meta property="og:title" content="Calculatrice d'intérêts composés — Route vers le Million"/>
+ <meta property="og:description" content="Visualisez la puissance des intérêts composés. Outil gratuit pour calculer la croissance de votre épargne au Québec."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/calculatrice/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --green: #4A8A5A;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 28px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover, .nav-links a.active { color: var(--text); }
+ .nav-links a.active { border-bottom: 2px solid var(--terra); padding-bottom: 2px; }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+ .nav-cta:hover { background: var(--terra2); }
+
+ /* HERO */
+ .page-hero { position: relative; height: 52vh; min-height: 380px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.88) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 52px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* MAIN */
+ .main-wrap { max-width: 1060px; margin: 0 auto; padding: 64px 40px 100px; display: grid; grid-template-columns: 400px 1fr; gap: 32px; align-items: start; }
+
+ /* CARD */
+ .card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+ .card-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+
+ /* FORM */
+ .field { margin-bottom: 20px; }
+ .field label { display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+ .input-wrap { position: relative; }
+ .input-prefix { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: 14px; color: var(--muted); }
+ input[type="number"], select { width: 100%; padding: 13px 16px 13px 36px; font-size: 15px; font-family: 'Jost', sans-serif; font-weight: 500; background: var(--cream); border: 1.5px solid var(--border); border-radius: 10px; color: var(--text); outline: none; transition: border-color 0.2s; -moz-appearance: textfield; }
+ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+ select { padding-left: 16px; cursor: pointer; }
+ input:focus, select:focus { border-color: var(--terra); }
+
+ /* RENDEMENT */
+ .rendement-group { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+ .rendement-btn { padding: 12px 8px; border: 1.5px solid var(--border); border-radius: 10px; background: var(--cream); font-family: 'Jost', sans-serif; font-size: 13px; cursor: pointer; text-align: center; transition: all 0.2s; color: var(--muted); }
+ .rendement-btn .rate { display: block; font-family: 'Playfair Display', serif; font-size: 22px; color: var(--text); font-weight: 400; line-height: 1.2; }
+ .rendement-btn .label { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+ .rendement-btn.active { border-color: var(--terra); background: rgba(45,74,26,0.08); }
+ .rendement-btn.active .rate, .rendement-btn.active .label { color: var(--terra); }
+
+ /* BUTTONS */
+ .btn-group { display: grid; grid-template-columns: 1fr auto; gap: 12px; margin-top: 28px; }
+ .btn-calc { padding: 14px 24px; background: var(--terra); color: #fff; border: none; border-radius: 100px; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+ .btn-calc:hover { background: var(--terra2); }
+ .btn-reset { padding: 14px 20px; background: transparent; color: var(--muted); border: 1.5px solid var(--border); border-radius: 100px; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.2s; }
+ .btn-reset:hover { border-color: var(--terra); color: var(--terra); }
+
+ /* RESULTS */
+ .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 20px; }
+ .result-card { border-radius: var(--radius); padding: 22px 18px; text-align: center; border: 1px solid var(--border); transition: all 0.4s; opacity: 0; transform: translateY(8px); }
+ .result-card.visible { opacity: 1; transform: translateY(0); }
+ .result-card.investi { background: var(--cream2); }
+ .result-card.interets { background: var(--white); border-color: var(--green); }
+ .result-card.total { background: var(--terra); border-color: var(--terra); }
+ .result-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; display: block; }
+ .result-card.investi .result-label { color: var(--muted); }
+ .result-card.interets .result-label { color: var(--green); }
+ .result-card.total .result-label { color: rgba(255,255,255,0.7); }
+ .result-amount { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; display: block; line-height: 1; margin-bottom: 4px; }
+ .result-card.investi .result-amount { color: var(--text); }
+ .result-card.interets .result-amount { color: var(--green); }
+ .result-card.total .result-amount { color: #fff; }
+ .result-sub { font-size: 11px; }
+ .result-card.investi .result-sub { color: var(--light); }
+ .result-card.interets .result-sub { color: var(--green); opacity: 0.7; }
+ .result-card.total .result-sub { color: rgba(255,255,255,0.6); }
+
+ /* MULTIPLIER */
+ .multiplier-bar { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 24px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; opacity: 0; transition: opacity 0.4s 0.3s; }
+ .multiplier-bar.visible { opacity: 1; }
+ .multiplier-text { font-size: 14px; color: var(--muted); }
+ .multiplier-num { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--terra); }
+
+ /* CHART */
+ .chart-wrap { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; opacity: 0; transition: opacity 0.4s 0.2s; }
+ .chart-wrap.visible { opacity: 1; }
+ .chart-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 20px; }
+ .placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 40px; text-align: center; color: var(--light); }
+ .placeholder .icon { font-size: 40px; margin-bottom: 14px; opacity: 0.4; }
+ .placeholder p { font-size: 14px; }
+
+ /* INFO BOX */
+ .info-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin-top: 20px; }
+ .info-box p { font-size: 15px; color: var(--text); line-height: 1.8; }
+ .info-box strong { color: var(--terra); }
+
+ /* CTA BOTTOM */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+ .cta-btn:hover { background: var(--terra2); }
+
+ .disclaimer { text-align: center; font-size: 12px; color: var(--light); padding: 24px 40px; line-height: 1.7; border-top: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 900px) {
+ .main-wrap { grid-template-columns: 1fr; }
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ }
+ @media (max-width: 600px) {
+ .results-grid { grid-template-columns: 1fr; }
+ .main-wrap { padding: 40px 20px 80px; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+ 
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+</head>
+<body>
+
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/">ETFs</a></li>
+ <li><a href="/etf-explorer/" style="background:rgba(45,74,26,0.1);color:var(--terra);padding:6px 14px;border-radius:100px;border:1px solid var(--border);"> Radar ETF</a></li>
+ <li><a href="/calculatrice/">Calculatrice</a></li>
+ <li><a href="/carrieres/">Carrières</a></li>
+ <li><a href="/articles/">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/">Accueil</a>
+ <a href="/celi-reer/">CÉLI &amp; REER</a>
+ <a href="/etf/">ETFs</a>
+ <a href="/etf-explorer/" style="color:var(--terra);font-weight:500;"> Radar ETF</a>
+ <a href="/calculatrice/">Calculatrice</a>
+ <a href="/articles/">Tous les articles</a>
+ <a href="/fonds-urgence/">Fonds d'urgence</a>
+ <a href="/histoire/">Mon parcours</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple →</a>
+</div>
+
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/">Accueil</a> &nbsp;/&nbsp; Outils</p>
+ <p class="hero-tag">Outil gratuit · Intérêts composés · Québec</p>
+ <h1>Calculatrice<br><em>d'intérêts composés</em></h1>
+ </div>
+</div>
+
+<div class="main-wrap">
+
+ <!-- FORM -->
+ <div class="card">
+ <div class="card-title">Vos paramètres</div>
+
+ <div class="field">
+ <label>Montant déjà épargné</label>
+ <div class="input-wrap">
+ <span class="input-prefix">$</span>
+ <input type="number" id="montantInitial" value="1000" min="0" oninput="calculate()"/>
+ </div>
+ </div>
+
+ <div class="field">
+ <label>Montant ajouté régulièrement</label>
+ <div class="input-wrap">
+ <span class="input-prefix">$</span>
+ <input type="number" id="montantRegulier" value="50" min="0" oninput="calculate()"/>
+ </div>
+ </div>
+
+ <div class="field">
+ <label>Fréquence des dépôts</label>
+ <select id="frequence" onchange="calculate()">
+ <option value="52">Chaque semaine</option>
+ <option value="104">Deux fois par semaine</option>
+ <option value="26" selected>Aux deux semaines</option>
+ <option value="12">Chaque mois</option>
+ </select>
+ </div>
+
+ <div class="field">
+ <label>Durée de l'investissement (années)</label>
+ <div class="input-wrap">
+ <span class="input-prefix" style="font-size:12px;left:12px;">ans</span>
+ <input type="number" id="duree" value="20" min="1" max="50" oninput="calculate()" style="padding-left:48px;"/>
+ </div>
+ </div>
+
+ <div class="field">
+ <label>Type de rendement estimé</label>
+ <div class="rendement-group">
+ <button class="rendement-btn" onclick="setRendement(4, this)">
+ <span class="rate">4%</span>
+ <span class="label">Conservateur</span>
+ </button>
+ <button class="rendement-btn active" onclick="setRendement(7, this)">
+ <span class="rate">7%</span>
+ <span class="label">Modéré</span>
+ </button>
+ <button class="rendement-btn" onclick="setRendement(10, this)">
+ <span class="rate">10%</span>
+ <span class="label">Dynamique</span>
+ </button>
+ </div>
+ </div>
+
+ <div class="btn-group">
+ <button class="btn-calc" onclick="calculate()">Calculer →</button>
+ <button class="btn-reset" onclick="resetForm()">Réinit.</button>
+ </div>
+
+ <div class="info-box" style="margin-top:24px;">
+ <p>Cette page a été créée pour vous aider à visualiser le potentiel de vos économies à long terme. Même de <strong>petits montants investis régulièrement</strong> peuvent croître considérablement grâce à la puissance des intérêts composés.</p>
+ </div>
+ </div>
+
+ <!-- RESULTS -->
+ <div>
+ <div class="results-grid">
+ <div class="result-card investi" id="cardInvesti">
+ <span class="result-label">Total investi</span>
+ <span class="result-amount" id="totalInvesti">—</span>
+ <span class="result-sub">De votre poche</span>
+ </div>
+ <div class="result-card interets" id="cardInterets">
+ <span class="result-label">Intérêts gagnés</span>
+ <span class="result-amount" id="totalInterets">—</span>
+ <span class="result-sub">Argent gratuit </span>
+ </div>
+ <div class="result-card total" id="cardTotal">
+ <span class="result-label">Montant final</span>
+ <span class="result-amount" id="montantFinal">—</span>
+ <span class="result-sub">Estimation</span>
+ </div>
+ </div>
+
+ <div class="multiplier-bar" id="multiplierBar">
+ <span class="multiplier-text">Votre argent a été multiplié par</span>
+ <span class="multiplier-num" id="multiplierNum">—</span>
+ </div>
+
+ <div class="chart-wrap" id="chartWrap">
+ <div class="chart-title">Évolution de votre épargne année par année</div>
+ <div id="chartPlaceholder" class="placeholder">
+ <div class="icon"></div>
+ <p>Entrez vos paramètres et cliquez sur Calculer</p>
+ </div>
+ <canvas id="myChart" style="display:none;"></canvas>
+ </div>
+
+ <div class="info-box" style="margin-top:20px;">
+ <p><strong>Commencer tôt, même avec de petits montants, peut faire une énorme différence.</strong> La constance est souvent plus puissante que le montant investi. Un dépôt de 50$ aux deux semaines pendant 20 ans peut devenir plus de 70 000$ — avec seulement 26 000$ de votre poche.</p>
+ </div>
+ </div>
+
+</div>
+
+<div class="cta-bottom">
+ <h2>Prêt à commencer ?</h2>
+ <p>Ouvre ton CÉLI sur Wealthsimple — gratuit, sans commission, sans frais cachés.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="noopener">Ouvrir un compte gratuit →</a>
+</div>
+
+<div class="disclaimer">
+ Les calculs présentés sur cette page sont fournis à titre indicatif seulement et ne constituent pas des conseils financiers ou des garanties de rendement. Les rendements passés ne garantissent pas les rendements futurs. Consultez un professionnel pour votre situation spécifique.
+</div>
+
+<footer>
+ <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+</footer>
+
+<script>
+ let rendement = 7;
+ let myChart = null;
+
+ function setRendement(val, btn) {
+ rendement = val;
+ document.querySelectorAll('.rendement-btn').forEach(b => b.classList.remove('active'));
+ btn.classList.add('active');
+ calculate();
+ }
+
+ function formatCAD(n) {
+ return new Intl.NumberFormat('fr-CA', { style: 'currency', currency: 'CAD', maximumFractionDigits: 0 }).format(n);
+ }
+
+ function calculate() {
+ const initial = parseFloat(document.getElementById('montantInitial').value) || 0;
+ const regulier = parseFloat(document.getElementById('montantRegulier').value) || 0;
+ const freq = parseInt(document.getElementById('frequence').value);
+ const duree = parseInt(document.getElementById('duree').value) || 20;
+ const r = rendement / 100;
+ const rP = r / freq;
+ const n = freq * duree;
+
+ const fvI = initial * Math.pow(1 + rP, n);
+ const fvR = regulier * ((Math.pow(1 + rP, n) - 1) / rP);
+ const total = fvI + fvR;
+ const totalInvesti = initial + (regulier * n);
+ const interets = total - totalInvesti;
+ const multiplier = (total / Math.max(totalInvesti, 1)).toFixed(1);
+
+ animateValue('totalInvesti', totalInvesti);
+ animateValue('totalInterets', interets);
+ animateValue('montantFinal', total);
+ document.getElementById('multiplierNum').textContent = multiplier + 'x';
+
+ ['cardInvesti', 'cardInterets', 'cardTotal'].forEach((id, i) => {
+ setTimeout(() => document.getElementById(id).classList.add('visible'), i * 100);
+ });
+ setTimeout(() => document.getElementById('multiplierBar').classList.add('visible'), 300);
+ setTimeout(() => document.getElementById('chartWrap').classList.add('visible'), 400);
+
+ drawChart(initial, regulier, freq, duree, r);
+ }
+
+ function animateValue(id, target) {
+ const el = document.getElementById(id);
+ const start = performance.now();
+ function update(time) {
+ const p = Math.min((time - start) / 800, 1);
+ const ease = 1 - Math.pow(1 - p, 3);
+ el.textContent = formatCAD(target * ease);
+ if (p < 1) requestAnimationFrame(update);
+ }
+ requestAnimationFrame(update);
+ }
+
+ function drawChart(initial, regulier, freq, duree, r) {
+ const labels = [], dataTotal = [], dataInvesti = [];
+ const rP = r / freq;
+ for (let yr = 0; yr <= duree; yr++) {
+ const n = freq * yr;
+ const fvI = initial * Math.pow(1 + rP, n);
+ const fvR = n> 0 ? regulier * ((Math.pow(1 + rP, n) - 1) / rP) : 0;
+ labels.push(yr + ' an' + (yr> 1 ? 's' : ''));
+ dataTotal.push(Math.round(fvI + fvR));
+ dataInvesti.push(Math.round(initial + regulier * n));
+ }
+
+ document.getElementById('chartPlaceholder').style.display = 'none';
+ const canvas = document.getElementById('myChart');
+ canvas.style.display = 'block';
+
+ if (myChart) myChart.destroy();
+
+ myChart = new Chart(canvas, {
+ type: 'line',
+ data: {
+ labels,
+ datasets: [
+ {
+ label: 'Valeur totale estimée',
+ data: dataTotal,
+ borderColor: '#2D4A1A',
+ backgroundColor: 'rgba(45,74,26,0.08)',
+ borderWidth: 2.5,
+ fill: true,
+ tension: 0.4,
+ pointRadius: 0,
+ pointHoverRadius: 6,
+ pointHoverBackgroundColor: '#2D4A1A',
+ },
+ {
+ label: 'Total investi',
+ data: dataInvesti,
+ borderColor: '#C8D4B0',
+ backgroundColor: 'transparent',
+ borderWidth: 1.5,
+ fill: false,
+ tension: 0.4,
+ pointRadius: 0,
+ borderDash: [6, 3],
+ }
+ ]
+ },
+ options: {
+ responsive: true,
+ interaction: { intersect: false, mode: 'index' },
+ plugins: {
+ legend: { labels: { color: '#607848', font: { family: 'Jost', size: 12 }, boxWidth: 20 } },
+ tooltip: { callbacks: { label: ctx => ' ' + formatCAD(ctx.parsed.y) } }
+ },
+ scales: {
+ x: { grid: { color: 'rgba(46,28,14,0.06)' }, ticks: { color: '#607848', font: { family: 'Jost', size: 11 }, maxTicksLimit: 6 } },
+ y: { grid: { color: 'rgba(46,28,14,0.06)' }, ticks: { color: '#607848', font: { family: 'Jost', size: 11 }, callback: v => formatCAD(v) } }
+ }
+ }
+ });
+ }
+
+ function resetForm() {
+ document.getElementById('montantInitial').value = 1000;
+ document.getElementById('montantRegulier').value = 50;
+ document.getElementById('frequence').value = 26;
+ document.getElementById('duree').value = 20;
+ rendement = 7;
+ document.querySelectorAll('.rendement-btn').forEach((b, i) => b.classList.toggle('active', i === 1));
+ ['cardInvesti', 'cardInterets', 'cardTotal'].forEach(id => document.getElementById(id).classList.remove('visible'));
+ document.getElementById('multiplierBar').classList.remove('visible');
+ document.getElementById('chartWrap').classList.remove('visible');
+ ['totalInvesti', 'totalInterets', 'montantFinal'].forEach(id => document.getElementById(id).textContent = '—');
+ document.getElementById('multiplierNum').textContent = '—';
+ if (myChart) { myChart.destroy(); myChart = null; }
+ document.getElementById('chartPlaceholder').style.display = 'flex';
+ document.getElementById('myChart').style.display = 'none';
+ }
+
+ window.addEventListener('load', calculate);
+</script>
+
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+</body>
+</html>

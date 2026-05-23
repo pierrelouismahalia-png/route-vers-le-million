@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Lire, apprendre et mieux gérer son argent — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ .page-hero { position: relative; height: 52vh; min-height: 380px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.85) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 52px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose strong { color: var(--text); font-weight: 500; }
+
+ .pullquote { background: var(--white); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; border: 1px solid var(--border); }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* RESSOURCES CARDS */
+ .ressources-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 2em 0; }
+ .ressource-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+ .ressource-icon { font-size: 28px; margin-bottom: 12px; display: block; }
+ .ressource-title { font-family: 'Playfair Display', serif; font-size: 17px; color: var(--text); margin-bottom: 8px; }
+ .ressource-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+ /* LIVRES */
+ .livres-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 2em 0; }
+ .livre-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; display: flex; gap: 20px; align-items: center; }
+ .livre-num { font-family: 'Playfair Display', serif; font-size: 28px; color: rgba(212,132,90,0.25); font-weight: 700; flex-shrink: 0; width: 36px; }
+ .livre-body { flex: 1; }
+ .livre-title { font-family: 'Playfair Display', serif; font-size: 17px; color: var(--text); margin-bottom: 4px; }
+ .livre-author { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+ .livre-why { font-size: 13px; color: var(--terra); }
+
+ /* HIGHLIGHT */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.8; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* FORMATIONS GRATUITES */
+ .formation-list { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .formation-list h4 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--text); margin-bottom: 16px; }
+ .formation-item { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+ .formation-item:last-child { border: none; }
+ .formation-icon { color: var(--terra); flex-shrink: 0; font-size: 18px; }
+ .formation-content strong { display: block; font-size: 15px; color: var(--text); margin-bottom: 3px; }
+ .formation-content span { font-size: 13px; color: var(--muted); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 160px; background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; margin-bottom: 10px; transition: background 0.2s; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.outline { background: transparent; color: var(--terra); border: 1px solid var(--terra); }
+
+ .sidebar-ressources { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-ressources h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .res-item { padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text); }
+ .res-item:last-child { border: none; }
+ .res-item::before { content: "→ "; color: var(--terra); }
+
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; margin: 6px; }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ .ressources-grid { grid-template-columns: 1fr; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+ 
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+ <meta name="description" content="Mes livres, podcasts et ressources gratuites pour apprendre les finances personnelles au Québec."/>
+ <meta name="keywords" content="livres finances personnelles, Die With Zero, Psychology of Money, ressources gratuites finances Québec"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/lire-apprendre/"/>
+ <meta property="og:type" content="Article"/>
+ <meta property="og:title" content="Lire, apprendre et mieux gérer son argent — Route vers le Million"/>
+ <meta property="og:description" content="Mes livres, podcasts et ressources gratuites pour apprendre les finances personnelles au Québec."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/lire-apprendre/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Lire, apprendre et mieux gérer son argent — Route vers le Million"/>
+ <meta name="twitter:description" content="Mes livres, podcasts et ressources gratuites pour apprendre les finances personnelles au Québec."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Lire, apprendre et mieux gérer son argent — Route vers le Million",
+ "description": "Mes livres, podcasts et ressources gratuites pour apprendre les finances personnelles au Québec.",
+ "url": "https://route-vers-le-million.blog/lire-apprendre/",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/">ETFs</a></li>
+ <li><a href="/etf-explorer/" style="background:rgba(45,74,26,0.1);color:var(--terra);padding:6px 14px;border-radius:100px;border:1px solid var(--border);"> Radar ETF</a></li>
+ <li><a href="/calculatrice/">Calculatrice</a></li>
+ <li><a href="/carrieres/">Carrières</a></li>
+ <li><a href="/articles/">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/">Accueil</a>
+ <a href="/celi-reer/">CÉLI &amp; REER</a>
+ <a href="/etf/">ETFs</a>
+ <a href="/etf-explorer/" style="color:var(--terra);font-weight:500;"> Radar ETF</a>
+ <a href="/calculatrice/">Calculatrice</a>
+ <a href="/articles/">Tous les articles</a>
+ <a href="/fonds-urgence/">Fonds d'urgence</a>
+ <a href="/histoire/">Mon parcours</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple →</a>
+</div>
+
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/">Accueil</a> &nbsp;/&nbsp; Éducation financière</p>
+ <p class="hero-tag">Lecture · Apprentissage · Éducation financière</p>
+ <h1>Lire, apprendre et<br><em>mieux gérer son argent</em></h1>
+ </div>
+</div>
+
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span> Québec, Canada</span>
+ <span>·</span>
+ <span> 6 min de lecture</span>
+ <span>·</span>
+ <span>Éducation · Livres · Ressources</span>
+ </div>
+
+ <div class="prose">
+
+ <p class="lead">
+ "Il y a une différence entre savoir quelque chose et vraiment l'appliquer dans sa vie. Parfois, entendre la bonne idée au bon moment suffit à tout changer."
+ </p>
+
+ <p>Je dois admettre que les conseils que je partage peuvent parfois sembler simples — voire évidents pour certaines personnes. Ce ne sont pas des stratégies révolutionnaires ou des concepts ultra-complexes. Mais avec le temps, j'ai compris qu'il y a une grande différence entre <strong>savoir quelque chose</strong> et réellement l'appliquer au quotidien.</p>
+
+ <p>Parfois, une idée entendue au bon moment agit simplement comme un rappel. Un rappel de notions qu'on connaissait déjà, mais qu'on avait mises de côté. Et c'est souvent comme ça que les vrais changements commencent — par une petite prise de conscience.</p>
+
+ <h2>Pourquoi l'éducation financière est si importante</h2>
+
+ <p>Le problème avec les finances, c'est que lorsqu'on ne comprend pas un sujet lié à l'argent, on a tendance à l'éviter complètement. On se dit que c'est trop compliqué, qu'on n'a pas les connaissances nécessaires, qu'on regardera ça plus tard.</p>
+
+ <p>Mais les années passent vite. Et les erreurs financières s'accumulent : mauvaises habitudes, absence d'épargne, dettes, peur d'investir, mauvaise gestion fiscale. À un moment donné, il faut accepter d'en parler — et de s'y intéresser sérieusement.</p>
+
+ <div class="pullquote">
+ <p>"Toutes les connaissances que j'ai acquises, je les ai développées par moi-même. Je ne suis ni planificatrice financière, ni conseillère. Je suis simplement quelqu'un qui aime apprendre."</p>
+ </div>
+
+ <h2>Comment j'apprends — mes sources principales</h2>
+
+ <div class="ressources-grid">
+ <div class="ressource-card">
+ <span class="ressource-icon"></span>
+ <div class="ressource-title">Livres de finances personnelles</div>
+ <div class="ressource-desc">La psychologie de l'argent, les habitudes financières, l'investissement à long terme — j'ai toujours eu un réel plaisir à lire, et les livres restent ma source préférée d'apprentissage.</div>
+ </div>
+ <div class="ressource-card">
+ <span class="ressource-icon"></span>
+ <div class="ressource-title">Podcasts pendant le travail</div>
+ <div class="ressource-desc">J'écoute des podcasts sur les finances, l'investissement et la fiscalité pendant que je travaille dans mon entreprise. En consommant régulièrement du contenu éducatif, les notions finissent par s'intégrer naturellement.</div>
+ </div>
+ <div class="ressource-card">
+ <span class="ressource-icon"></span>
+ <div class="ressource-title">Formations en ligne</div>
+ <div class="ressource-desc">Revenu Québec offre des formations gratuites pour travailleurs autonomes. Le Cégep Beauce-Appalaches propose des formations en fiscalité pour entrepreneurs. Des ressources accessibles qui évitent beaucoup d'erreurs coûteuses.</div>
+ </div>
+ <div class="ressource-card">
+ <span class="ressource-icon"></span>
+ <div class="ressource-title">Blogs et témoignages honnêtes</div>
+ <div class="ressource-desc">Lire des témoignages de gens qui parlent honnêtement de leur relation avec l'argent — leurs erreurs, leurs réussites, leurs réflexions. L'argent reste un sujet très sensible dans notre société, et en parler de façon saine aide vraiment.</div>
+ </div>
+ </div>
+
+ <h2>Mes livres recommandés</h2>
+
+ <p>Vous verrez plusieurs recommandations de livres sur ce site. Ce sont des ouvrages qui m'ont personnellement aidée à changer ma façon de penser l'argent.</p>
+
+ <div class="livres-grid">
+ <div class="livre-card">
+ <div class="livre-num">01</div>
+ <div class="livre-body">
+ <div class="livre-title">Die With Zero</div>
+ <div class="livre-author">Bill Perkins</div>
+ <div class="livre-why">→ Repenser l'équilibre entre vivre aujourd'hui et préparer demain</div>
+ </div>
+ </div>
+ <div class="livre-card">
+ <div class="livre-num">02</div>
+ <div class="livre-body">
+ <div class="livre-title">The Psychology of Money</div>
+ <div class="livre-author">Morgan Housel</div>
+ <div class="livre-why">→ Comprendre son rapport émotionnel à l'argent</div>
+ </div>
+ </div>
+ <div class="livre-card">
+ <div class="livre-num">03</div>
+ <div class="livre-body">
+ <div class="livre-title">L'homme le plus riche de Babylone</div>
+ <div class="livre-author">George Clason</div>
+ <div class="livre-why">→ Les bases intemporelles de l'épargne et de l'investissement</div>
+ </div>
+ </div>
+ <div class="livre-card">
+ <div class="livre-num">04</div>
+ <div class="livre-body">
+ <div class="livre-title">The Simple Path to Wealth</div>
+ <div class="livre-author">JL Collins</div>
+ <div class="livre-why">→ Investir simplement avec des ETFs à long terme</div>
+ </div>
+ </div>
+ <div class="livre-card">
+ <div class="livre-num">05</div>
+ <div class="livre-body">
+ <div class="livre-title">I Will Teach You To Be Rich</div>
+ <div class="livre-author">Ramit Sethi</div>
+ <div class="livre-why">→ Automatiser ses finances et arrêter de culpabiliser</div>
+ </div>
+ </div>
+ <div class="livre-card">
+ <div class="livre-num">06</div>
+ <div class="livre-body">
+ <div class="livre-title">Millionaire Next Door</div>
+ <div class="livre-author">Thomas Stanley</div>
+ <div class="livre-why">→ Comment les vrais millionnaires pensent et vivent</div>
+ </div>
+ </div>
+ </div>
+
+ <h2>Ressources gratuites au Québec</h2>
+
+ <div class="formation-list">
+ <h4>Pour aller plus loin — sans dépenser</h4>
+ <div class="formation-item">
+ <span class="formation-icon"></span>
+ <div class="formation-content">
+ <strong>Revenu Québec — Formations gratuites</strong>
+ <span>Tenue de livres, gestion fiscale pour travailleurs autonomes. Indispensable pour éviter les erreurs coûteuses.</span>
+ </div>
+ </div>
+ <div class="formation-item">
+ <span class="formation-icon"></span>
+ <div class="formation-content">
+ <strong>Autorité des marchés financiers (AMF)</strong>
+ <span>lautorite.qc.ca — Guides gratuits sur le CÉLI, REER, investissement, retraite. La référence québécoise.</span>
+ </div>
+ </div>
+ <div class="formation-item">
+ <span class="formation-icon"></span>
+ <div class="formation-content">
+ <strong>Cégep Beauce-Appalaches</strong>
+ <span>Formation en fiscalité pour entrepreneurs. Des connaissances qui peuvent sauver des milliers de dollars.</span>
+ </div>
+ </div>
+ <div class="formation-item">
+ <span class="formation-icon"></span>
+ <div class="formation-content">
+ <strong>YouTube — Monsieur MMQ</strong>
+ <span>Contenu en français, spécifique au Québec. CÉLI, REER, ETFs, retraite expliqués simplement.</span>
+ </div>
+ </div>
+ <div class="formation-item">
+ <span class="formation-icon"></span>
+ <div class="formation-content">
+ <strong>retraite101.com</strong>
+ <span>Blogue québécois sur la retraite, l'investissement et la liberté financière. Très accessible.</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="highlight-box">
+ <p>Je commence moi-même une formation en fiscalité prochainement. Une fois terminée, <strong>j'écrirai un article pour partager ce que j'aurai appris</strong> et comment je compte l'appliquer dans ma propre réalité. Restez à l'affût.</p>
+ </div>
+
+ <h2>L'argent que j'économise, je le réinvestis</h2>
+
+ <p>Pour les personnes qui ne sont pas à l'aise de gérer leurs finances seules, il existe des planificateurs financiers compétents. Personnellement, ce n'est pas une avenue que j'utilise pour le moment — simplement parce que j'aime apprendre, comprendre et gérer par moi-même.</p>
+
+ <p>Et honnêtement ? <strong>Chaque dollar économisé en frais ou en mauvaises décisions, je préfère le réinvestir.</strong> Parce qu'au final, chaque dollar économisé aujourd'hui peut devenir un actif qui continue de croître grâce aux intérêts composés.</p>
+
+ <p>On ne retient pas tout ce qu'on lit. Mais parfois, une seule idée suffit à modifier une habitude — et les petits changements répétés sur plusieurs années peuvent avoir un impact énorme sur la stabilité financière d'une personne.</p>
+
+ <p style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;"> Je ne suis pas conseillère financière. Cet article partage mon expérience personnelle et mes ressources préférées — pas des conseils financiers officiels.</p>
+
+ </div>
+ </article>
+
+ <aside class="sidebar">
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3>Commence à investir</h3>
+ <p>Wealthsimple — la plateforme que j'utilise. Gratuite, sans commission.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank">Ouvrir Wealthsimple →</a>
+ <a href="/die-with-zero/" class="sidebar-btn outline">Mon article Die With Zero →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-ressources">
+ <h4>Mes ressources gratuites</h4>
+ <div class="res-item">lautorite.qc.ca</div>
+ <div class="res-item">retraite101.com</div>
+ <div class="res-item">Monsieur MMQ (YouTube)</div>
+ <div class="res-item">Revenu Québec formations</div>
+ <div class="res-item">Cégep Beauce-Appalaches</div>
+ </div>
+ </aside>
+
+</div>
+
+<div class="cta-bottom">
+ <h2>Commencer quelque part</h2>
+ <p>Un livre, une ressource gratuite, un compte CÉLI. L'important c'est de faire le premier pas.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank">Ouvrir Wealthsimple →</a>
+ <a href="/die-with-zero/" class="cta-btn secondary">Lire : Die With Zero →</a>
+</div>
+
+<footer>
+ <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+</footer>
+
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Die With Zero — Ce livre a changé ma stratégie financière</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* LEÇON CARDS */
+ .lecon-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 1.2em 0; display: flex; gap: 20px; align-items: flex-start; }
+ .lecon-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--terra); opacity: 0.5; line-height: 1; flex-shrink: 0; min-width: 44px; }
+ .lecon-body h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+ .lecon-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* ETF TABLE */
+ .etf-table { width: 100%; border-collapse: collapse; margin: 2em 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+ .etf-table th { background: var(--cream2); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); padding: 14px 20px; text-align: left; border-bottom: 1px solid var(--border); }
+ .etf-table td { padding: 14px 20px; font-size: 14px; border-bottom: 1px solid var(--border); background: var(--white); color: var(--text); }
+ .etf-table tr:last-child td { border: none; }
+ .etf-table .highlight { color: var(--terra); font-weight: 500; font-family: 'Playfair Display', serif; font-size: 16px; }
+
+ /* PROJECTION CARDS */
+ .projection-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 2em 0; }
+ .proj-card { border-radius: var(--radius); padding: 24px 20px; text-align: center; border: 1px solid var(--border); }
+ .proj-card.low { background: var(--cream2); }
+ .proj-card.mid { background: var(--white); border-color: var(--terra); }
+ .proj-card.high { background: var(--terra); }
+ .proj-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+ .proj-card.low .proj-label { color: var(--muted); }
+ .proj-card.mid .proj-label { color: var(--terra); }
+ .proj-card.high .proj-label { color: rgba(255,255,255,0.7); }
+ .proj-rate { font-size: 13px; margin-bottom: 8px; display: block; }
+ .proj-card.low .proj-rate { color: var(--muted); }
+ .proj-card.mid .proj-rate { color: var(--muted); }
+ .proj-card.high .proj-rate { color: rgba(255,255,255,0.7); }
+ .proj-amount { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; display: block; line-height: 1; margin-bottom: 8px; }
+ .proj-card.low .proj-amount { color: var(--text); }
+ .proj-card.mid .proj-amount { color: var(--terra); }
+ .proj-card.high .proj-amount { color: #fff; }
+ .proj-invested { font-size: 12px; }
+ .proj-card.low .proj-invested { color: var(--light); }
+ .proj-card.mid .proj-invested { color: var(--light); }
+ .proj-card.high .proj-invested { color: rgba(255,255,255,0.55); }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ .projection-grid { grid-template-columns: 1fr; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+ 
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+ <meta name="description" content="Résumé et application de Die With Zero de Bill Perkins. ETFs, intérêts composés, projections 50$ aux 2 semaines."/>
+ <meta name="keywords" content="Die With Zero résumé, Bill Perkins, liberté financière, investissement ETF, intérêts composés Québec"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/die-with-zero/"/>
+ <meta property="og:type" content="Article"/>
+ <meta property="og:title" content="Die With Zero — Ce livre a changé ma stratégie financière | Route vers le Million"/>
+ <meta property="og:description" content="Résumé et application personnelle de Die With Zero de Bill Perkins. ETFs, intérêts composés, projections 50$ aux 2 semaines."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/die-with-zero/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Die With Zero — Ce livre a changé ma stratégie financière | Route vers le Million"/>
+ <meta name="twitter:description" content="Résumé et application personnelle de Die With Zero de Bill Perkins. ETFs, intérêts composés, projections 50$ aux 2 semaines."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Die With Zero — Ce livre a changé ma stratégie financière | Route vers le Million",
+ "description": "Résumé et application personnelle de Die With Zero de Bill Perkins. ETFs, intérêts composés, projections 50$ aux 2 semaines.",
+ "url": "https://route-vers-le-million.blog/die-with-zero/",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/">ETFs</a></li>
+ <li><a href="/etf-explorer/" style="background:rgba(45,74,26,0.1);color:var(--terra);padding:6px 14px;border-radius:100px;border:1px solid var(--border);"> Radar ETF</a></li>
+ <li><a href="/calculatrice/">Calculatrice</a></li>
+ <li><a href="/carrieres/">Carrières</a></li>
+ <li><a href="/articles/">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/">Accueil</a>
+ <a href="/celi-reer/">CÉLI &amp; REER</a>
+ <a href="/etf/">ETFs</a>
+ <a href="/etf-explorer/" style="color:var(--terra);font-weight:500;"> Radar ETF</a>
+ <a href="/calculatrice/">Calculatrice</a>
+ <a href="/articles/">Tous les articles</a>
+ <a href="/fonds-urgence/">Fonds d'urgence</a>
+ <a href="/histoire/">Mon parcours</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="index.html">Accueil</a> &nbsp;/&nbsp; Livres Finance</p>
+ <p class="hero-tag">Livres Finance · ETFs · Stratégie</p>
+ <h1><em>Die With Zero</em> — le livre qui a<br>tout changé dans ma stratégie</h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span> Québec, Canada</span>
+ <span>·</span>
+ <span> 8 min de lecture</span>
+ <span>·</span>
+ <span>Livres Finance · ETFs</span>
+ </div>
+
+ <div class="prose">
+
+ <p class="lead">
+ "J'avais économisé 200 000 $. J'avais un plan vers le million. Et pourtant, je me sentais encore coupable de dépenser 50 $ au restaurant. Ce livre m'a libérée de cette anxiété."
+ </p>
+
+ <p>Je vais être honnête avec vous — j'ai longtemps cru que plus j'accumulais, plus j'étais en sécurité. Chaque dollar dépensé me semblait être un dollar de moins pour ma retraite. Je stressais. Je calculais. Je me privais parfois inutilement.</p>
+
+ <p>Puis j'ai lu <strong>Die With Zero de Bill Perkins</strong>. Et quelque chose a changé.</p>
+
+ <h2>Ce que dit le livre — en bref</h2>
+
+ <p>Die With Zero part d'une prémisse simple mais dérangeante : <strong>mourir avec beaucoup d'argent, c'est avoir mal vécu.</strong></p>
+
+ <p>Chaque dollar non dépensé représente de l'énergie de vie gaspillée. Du temps passé à travailler pour rien. Des expériences non vécues. Des voyages non faits. Des moments avec vos proches que vous n'avez jamais pris.</p>
+
+ <p>Ce n'est pas un livre qui dit "dépense tout et n'épargne pas". C'est beaucoup plus nuancé que ça.</p>
+
+ <div class="lecon-card">
+ <span class="lecon-num">01</span>
+ <div class="lecon-body">
+ <h4>Le bon argent au bon moment</h4>
+ <p>100 000 $ à 35 ans vaut beaucoup plus que 100 000 $ à 75 ans. Votre corps, votre énergie, votre capacité à profiter — tout ça diminue avec le temps. Investir dans des expériences maintenant, c'est maximiser leur valeur.</p>
+ </div>
+ </div>
+
+ <div class="lecon-card">
+ <span class="lecon-num">02</span>
+ <div class="lecon-body">
+ <h4>Les Memory Dividends</h4>
+ <p>Un voyage à 38 ans avec votre enfant vous donne des souvenirs pour 40 ans. Ce même voyage à 72 ans vous donne des souvenirs pour peut-être 10 ans. Les expériences rapportent des "dividendes de mémoire" — et plus tôt vous les vivez, plus vous en profitez longtemps.</p>
+ </div>
+ </div>
+
+ <div class="lecon-card">
+ <span class="lecon-num">03</span>
+ <div class="lecon-body">
+ <h4>Calculer votre pic de richesse</h4>
+ <p>Il existe un moment optimal pour commencer à décaisser — pas trop tôt, pas trop tard. L'objectif n'est pas d'avoir le plus possible à 90 ans, mais d'avoir assez au bon moment de votre vie.</p>
+ </div>
+ </div>
+
+ <h2>Comment j'ai appliqué ça à ma vie</h2>
+
+ <p>Quand j'ai lu ce livre, j'avais déjà économisé près de <strong>200 000 $</strong> depuis la pandémie. Mon objectif : atteindre 1 million pour ma retraite.</p>
+
+ <p>Mathématiquement, j'ai réalisé quelque chose d'important : avec ce capital investi dans des ETFs à rendement historique, <strong>mon million est déjà sur autopilote</strong>. Les intérêts composés font le gros du travail — avec ou sans moi.</p>
+
+ <div class="pullquote">
+ <p>"J'ai réalisé que l'argent que j'investis maintenant, c'est pour accélérer le processus — pas pour survivre. Je peux souffler. Je peux prendre des vacances. Je peux vivre maintenant."</p>
+ </div>
+
+ <p>Avant ce livre, je me sentais coupable de dépenser. Après, j'ai compris que <strong>vivre et investir ne sont pas opposés</strong>. Je continue à investir 7 000 $/an dans mon CÉLI. Mais le reste ? Je vis avec. Sans culpabilité.</p>
+
+ <p>Miami dans quelques années. Des voyages avec mon fils. Des expériences que j'aurais reportées indéfiniment par peur de "dépenser inutilement".</p>
+
+ <h2>Mais c'est quoi un ETF — et pourquoi j'en utilise</h2>
+
+ <p>Ce livre m'a aussi poussée à mieux comprendre <em>comment</em> mon argent travaillait. Et c'est là que les ETFs entrent en jeu.</p>
+
+ <h3>La définition simple</h3>
+
+ <p>Un <strong>ETF (Exchange Traded Fund)</strong> c'est un panier de plusieurs centaines d'actions que vous achetez en une seule transaction. Au lieu de choisir UNE compagnie et espérer qu'elle performe, vous investissez dans des centaines à la fois.</p>
+
+ <p><strong>Exemple concret :</strong> QQC.F — l'ETF que j'utilise — contient Apple, Nvidia, Microsoft, Amazon, Google, Tesla et 94 autres compagnies. En achetant UNE part de QQC.F, vous possédez une fraction de toutes ces entreprises.</p>
+
+ <h3>ETF vs Action individuelle</h3>
+
+ <table class="etf-table">
+ <thead>
+ <tr>
+ <th>Critère</th>
+ <th>ETF (QQC.F)</th>
+ <th>Action individuelle</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Diversification</td>
+ <td class="highlight">100+ compagnies </td>
+ <td>1 seule compagnie </td>
+ </tr>
+ <tr>
+ <td>Frais annuels</td>
+ <td class="highlight">0.20%/an </td>
+ <td>Commissions par transaction</td>
+ </tr>
+ <tr>
+ <td>Risque</td>
+ <td class="highlight">Faible à modéré </td>
+ <td>Élevé </td>
+ </tr>
+ <tr>
+ <td>Rendement historique</td>
+ <td class="highlight">~14%/an (NASDAQ 20 ans)</td>
+ <td>Variable — imprévisible</td>
+ </tr>
+ <tr>
+ <td>Analyse requise</td>
+ <td class="highlight">Aucune </td>
+ <td>Beaucoup </td>
+ </tr>
+ </tbody>
+ </table>
+
+ <h2>Si vous commencez avec 50 $ aux 2 semaines</h2>
+
+ <p>Vous pensez que 50 $ aux 2 semaines c'est pas assez pour changer votre vie ? Laissez les chiffres parler.</p>
+
+ <p><strong>50 $ × 26 fois/an = 1 300 $/an investi.</strong> Total sur 20 ans : <strong>26 000 $ de votre poche.</strong></p>
+
+ <div class="projection-grid">
+ <div class="proj-card low">
+ <span class="proj-label">Scénario conservateur</span>
+ <span class="proj-rate">Rendement 8%/an</span>
+ <span class="proj-amount">59 000 $</span>
+ <span class="proj-invested">Investi : 26 000 $</span>
+ </div>
+ <div class="proj-card mid">
+ <span class="proj-label">Scénario réaliste</span>
+ <span class="proj-rate">Rendement 10%/an</span>
+ <span class="proj-amount">74 000 $</span>
+ <span class="proj-invested">Investi : 26 000 $</span>
+ </div>
+ <div class="proj-card high">
+ <span class="proj-label">Scénario optimiste</span>
+ <span class="proj-rate">Rendement 14%/an</span>
+ <span class="proj-amount">118 000 $</span>
+ <span class="proj-invested">Investi : 26 000 $</span>
+ </div>
+ </div>
+
+ <div class="highlight-box">
+ <p>Vous investissez <strong>26 000 $</strong> de votre poche sur 20 ans — et vous ressortez avec entre <strong>59 000 $ et 118 000 $</strong> selon le rendement. C'est la magie des intérêts composés : votre argent génère des intérêts, ces intérêts génèrent des intérêts, et ça s'emballe exponentiellement avec le temps.</p>
+ </div>
+
+ <h3>Ce que ça veut dire concrètement</h3>
+
+ <p>À 14%/an — le rendement historique du NASDAQ sur 20 ans — votre 50 $ bimensuel devient <strong>4.5x votre mise</strong>. Vous avez mis 26 000 $. Vous récupérez 118 000 $.</p>
+
+ <p>Et si vous mettez ça dans votre <strong>CÉLI</strong> ? Zéro impôt sur ces 92 000 $ de gains. 100 % dans vos poches.</p>
+
+ <h2>Ma conclusion — Die With Zero appliqué</h2>
+
+ <p>Ce livre ne m'a pas dit d'arrêter d'investir. Il m'a dit d'investir <em>intelligemment</em> — et de vivre <em>maintenant</em>.</p>
+
+ <p>Aujourd'hui ma stratégie c'est simple :</p>
+
+ <p> <strong>7 000 $/an dans mon CÉLI</strong> → automatique, sans stress<br>
+ <strong>Mon capital travaille seul</strong> → les intérêts composés font le reste<br>
+ <strong>Le reste de mes revenus ?</strong> → vivre, voyager, profiter</p>
+
+ <p>Je n'ai pas besoin de stresser. Mon million est en route. Et pendant ce temps, je vis ma vie.</p>
+
+ <p><em>C'est ça, la vraie liberté financière.</em></p>
+
+ <p style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;"> Avis : Je ne suis pas planificatrice financière. Cet article partage mon expérience personnelle — pas des conseils financiers officiels. Consultez un professionnel pour votre situation spécifique.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3>Ouvre ton CÉLI</h3>
+ <p>Commence à investir avec Wealthsimple — gratuit, simple, sans frais cachés.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank">Wealthsimple →</a>
+ <a href="https://www.amazon.ca/Die-Zero-Getting-Your-Money/dp/0358099765" class="sidebar-btn secondary" target="_blank">Acheter Die With Zero →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4>Mon portfolio actuel</h4>
+ <div class="info-row"><span>Capital investi</span><span>200k$</span></div>
+ <div class="info-row"><span>ETF principal</span><span>QQC.F</span></div>
+ <div class="info-row"><span>CÉLI/an</span><span>7k$</span></div>
+ <div class="info-row"><span>Objectif</span><span>1M$</span></div>
+ <div class="info-row"><span>Projection 65 ans</span><span>3M$+</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2>Prêt à commencer ?</h2>
+ <p>50 $ aux 2 semaines dans un CÉLI Wealthsimple. C'est tout ce qu'il faut pour commencer.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank">Ouvrir Wealthsimple →</a>
+ <a href="https://www.amazon.ca/Die-Zero-Getting-Your-Money/dp/0358099765" class="cta-btn secondary" target="_blank">Acheter Die With Zero →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+ <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+</footer>
+
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+</body>
+</html>

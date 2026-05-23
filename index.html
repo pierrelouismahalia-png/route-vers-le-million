@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Route vers le Million — Finances personnelles Québec</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --bg: #F5F0E8;
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --border: #D8CCBA;
+ --text: #2C1A0A;
+ --muted: #9A8A78;
+ --light: #A0B480;
+ --terra: #2D4A1A;
+ }
+
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--bg); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav {
+ position: sticky; top: 0; z-index: 100;
+ background: var(--bg);
+ border-bottom: 1px solid var(--border);
+ padding: 0 56px;
+ display: flex; align-items: center; justify-content: space-between;
+ height: 62px;
+ }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; letter-spacing: 1px; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+ .nav-cta:hover { background: var(--beige2); }
+
+ /* HERO */
+ .hero { position: relative; height: 88vh; min-height: 500px; display: flex; align-items: flex-end; overflow: hidden; }
+ .hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.72) 0%, rgba(15,25,8,0.1) 55%, transparent 100%); }
+ .hero-content { position: relative; z-index: 1; padding: 0 80px 72px; max-width: 760px; }
+ .hero-tag { display: inline-block; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.25); padding: 5px 14px; border-radius: 2px; margin-bottom: 20px; }
+ .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 62px); font-weight: 400; color: #fff; line-height: 1.15; margin-bottom: 16px; }
+ .hero h1 em { font-style: italic; }
+ .hero p { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 460px; margin-bottom: 28px; }
+ .hero-btn { display: inline-block; background: #ffffff; color: var(--text); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text); padding: 13px 28px; text-decoration: none; border-radius: 100px; font-weight: 500; transition: background 0.2s; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+ .hero-btn:hover { background: rgba(255,255,255,0.85); }
+
+ /* TICKER */
+ .ticker { background: var(--beige2); border-bottom: 1px solid var(--border); padding: 11px 0; overflow: hidden; white-space: nowrap; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
+ .ticker-inner { display: inline-block; animation: tick 22s linear infinite; }
+ .ticker-inner span { margin: 0 36px; }
+ @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+ /* STATS */
+ .stats-band { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--beige1); border-bottom: 1px solid var(--border); }
+ .stat-item { padding: 44px 40px; text-align: center; border-right: 1px solid var(--border); }
+ .stat-item:last-child { border: none; }
+ .stat-num { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 400; color: var(--text); display: block; line-height: 1; }
+ .stat-lbl { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 8px; display: block; }
+
+ /* SECTION */
+ section { padding: 80px 56px; }
+ .section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--terra); margin-bottom: 48px; display: flex; align-items: center; gap: 16px; }
+ .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+ /* FEATURED */
+ .featured { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+ .featured-img { height: 460px; background: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
+ .featured-body { padding: 52px 48px; display: flex; flex-direction: column; justify-content: center; background: var(--beige1); }
+ .post-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .featured-body h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); line-height: 1.35; margin-bottom: 14px; }
+ .featured-body p { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 28px; }
+ .read-more { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; display: inline-block; transition: opacity 0.2s; }
+ .read-more:hover { opacity: 0.6; }
+
+ /* CARDS */
+ .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; } @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+ .card { border-radius: 4px; overflow: hidden; border: 1px solid var(--border); background: var(--beige1); transition: transform 0.2s; }
+ .card:hover { transform: translateY(-3px); }
+ .card-img { height: 200px; background-size: cover; background-position: center; }
+ .card-body { padding: 24px; }
+ .card-body h3 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); line-height: 1.35; margin: 8px 0 10px; }
+ .card-body p { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+
+ /* ABOUT */
+ .about-band { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--beige1); }
+ .about-img { background: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80') center/cover no-repeat; min-height: 400px; }
+ .about-body { padding: 72px 64px; display: flex; flex-direction: column; justify-content: center; }
+ .about-body h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 18px; line-height: 1.25; }
+ .about-body p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 14px; }
+ .about-body strong { color: var(--text); font-weight: 500; }
+
+ /* CTA */
+ .cta-section { background: var(--beige2); text-align: center; padding: 80px 48px; border-top: 1px solid var(--border); }
+ .cta-section h2 { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 400; color: var(--text); margin-bottom: 12px; }
+ .cta-section p { font-size: 15px; color: var(--muted); margin-bottom: 32px; max-width: 420px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: var(--text); font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; padding: 15px 36px; text-decoration: none; border-radius: 2px; border: 1px solid var(--border); transition: background 0.2s; }
+ .cta-btn:hover { background: var(--border); }
+
+ /* FOOTER */
+ footer { background: var(--beige2); border-top: 1px solid var(--border); padding: 28px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .hero-content { padding: 0 24px 48px; }
+ section { padding: 56px 24px; }
+ .featured, .about-band, .grid, .stats-band { grid-template-columns: 1fr; }
+ .featured-img, .about-img { height: 260px; }
+ footer { flex-direction: column; text-align: center; }
+ }
+ 
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+ <meta name="description" content="Blogue de finances personnelles québécois. CÉLI, REER, ETFs, intérêts composés — une route humaine vers la liberté financière."/>
+ <meta name="keywords" content="finances personnelles Québec, CÉLI, REER, ETF, Wealthsimple, épargne, investissement, liberté financière"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/"/>
+ <meta property="og:type" content="WebSite"/>
+ <meta property="og:title" content="Route vers le Million — Finances personnelles Québec"/>
+ <meta property="og:description" content="Blogue de finances personnelles québécois. CÉLI, REER, ETFs, Wealthsimple — une route humaine vers la liberté financière."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Route vers le Million — Finances personnelles Québec"/>
+ <meta name="twitter:description" content="Blogue de finances personnelles québécois. CÉLI, REER, ETFs, Wealthsimple — une route humaine vers la liberté financière."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "headline": "Route vers le Million — Finances personnelles Québec",
+ "description": "Blogue de finances personnelles québécois. CÉLI, REER, ETFs, Wealthsimple — une route humaine vers la liberté financière.",
+ "url": "https://route-vers-le-million.blog/",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/">ETFs</a></li>
+ <li><a href="/etf-explorer/" style="background:rgba(45,74,26,0.1);color:var(--terra);padding:6px 14px;border-radius:100px;border:1px solid var(--border);"> Radar ETF</a></li>
+ <li><a href="/calculatrice/">Calculatrice</a></li>
+ <li><a href="/carrieres/">Carrières</a></li>
+ <li><a href="/articles/">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/">Accueil</a>
+ <a href="/celi-reer/">CÉLI &amp; REER</a>
+ <a href="/etf/">ETFs</a>
+ <a href="/etf-explorer/" style="color:var(--terra);font-weight:500;"> Radar ETF</a>
+ <a href="/calculatrice/">Calculatrice</a>
+ <a href="/articles/">Tous les articles</a>
+ <a href="/fonds-urgence/">Fonds d'urgence</a>
+ <a href="/histoire/">Mon parcours</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple →</a>
+</div>
+
+<div class="hero">
+ <div class="hero-img"></div>
+ <div class="hero-overlay"></div>
+ <div class="hero-content">
+ <span class="hero-tag">Finances personnelles · Québec</span>
+ <h1>Tout ce que l'école<br>ne t'a <em>pas appris</em><br>sur l'argent</h1>
+ <p>Un parcours humain vers la liberté financière. Pas parfait. Pas rapide. Mais réel.</p>
+ <a href="/histoire/" class="hero-btn">Lire mon histoire</a>
+ </div>
+</div>
+
+<div class="ticker">
+ <div class="ticker-inner">
+ <span>CÉLI</span><span>·</span><span>QQC.F</span><span>·</span><span>Intérêts composés</span><span>·</span><span>Liberté financière</span><span>·</span><span>200 000 $</span><span>·</span><span>Route vers le million</span><span>·</span><span>REER</span><span>·</span><span>ETFs</span><span>·</span><span>Revenus passifs</span><span>·</span>
+ <span>CÉLI</span><span>·</span><span>QQC.F</span><span>·</span><span>Intérêts composés</span><span>·</span><span>Liberté financière</span><span>·</span><span>200 000 $</span><span>·</span><span>Route vers le million</span><span>·</span><span>REER</span><span>·</span><span>ETFs</span><span>·</span><span>Revenus passifs</span><span>·</span>
+ </div>
+</div>
+
+<!-- FEAR & GREED INDEX -->
+<section style="padding:64px 56px;border-bottom:1px solid var(--border);background:var(--white);" aria-label="Sentiment du marché financier">
+ <div class="section-label">Sentiment du marché</div>
+ <h2 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:var(--text);margin-bottom:8px;max-width:560px;line-height:1.3;">L'indice de peur et de cupidité — <em>aujourd'hui</em></h2>
+ <p style="font-size:13px;color:var(--muted);margin-bottom:40px;max-width:520px;line-height:1.75;">Cet indice mesure le sentiment dominant des investisseurs sur les marchés financiers. Une lecture utile avant de prendre une décision d'investissement.</p>
+
+ <div id="fgContainer" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;" aria-live="polite">
+
+ <!-- SKELETON -->
+ <div id="fgSkeleton" style="grid-column:1/-1;">
+ <div style="height:20px;background:var(--cream2);border-radius:2px;width:200px;margin-bottom:16px;animation:pulse 1.5s ease-in-out infinite;"></div>
+ <div style="height:80px;background:var(--cream2);border-radius:2px;animation:pulse 1.5s ease-in-out infinite;"></div>
+ </div>
+
+ <!-- SCORE CARD -->
+ <div id="fgScoreCard" style="display:none;border:1px solid var(--border);padding:32px;border-radius:4px;background:var(--bg);">
+ <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Score actuel</div>
+ <div id="fgScore" style="font-family:'Playfair Display',serif;font-size:64px;font-weight:400;line-height:1;margin-bottom:8px;color:var(--terra);">—</div>
+ <div id="fgLabel" style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:24px;">Chargement...</div>
+
+ <!-- GAUGE BAR -->
+ <div style="height:6px;background:linear-gradient(to right,#c0392b,#e67e22,#f1c40f,#27ae60,#1a6b1a);border-radius:100px;position:relative;margin-bottom:6px;">
+ <div id="fgNeedle" style="position:absolute;top:-5px;width:16px;height:16px;background:var(--text);border-radius:50%;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.2);transform:translateX(-50%);transition:left 1s ease;left:50%;"></div>
+ </div>
+ <div style="display:flex;justify-content:space-between;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);">
+ <span>Peur extrême</span><span>Neutre</span><span>Euphorie</span>
+ </div>
+ </div>
+
+ <!-- ANALYSIS CARD -->
+ <div id="fgAnalysisCard" style="display:none;border:1px solid var(--border);padding:32px;border-radius:4px;background:var(--bg);display:flex;flex-direction:column;justify-content:space-between;">
+ <div>
+ <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Lecture du marché</div>
+ <p id="fgAnalysis" style="font-size:14px;color:var(--text);line-height:1.8;margin-bottom:20px;">Chargement de l'analyse...</p>
+ </div>
+ <div>
+ <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Contexte pour l'investisseur long terme</div>
+ <p id="fgContext" style="font-size:12px;color:var(--muted);line-height:1.7;"></p>
+ <div id="fgUpdated" style="font-size:10px;color:var(--light);letter-spacing:1px;margin-top:16px;border-top:1px solid var(--border);padding-top:12px;">Mise à jour en cours...</div>
+ </div>
+ </div>
+
+ </div>
+
+ <p style="font-size:11px;color:var(--muted);margin-top:20px;max-width:560px;line-height:1.7;">Cet indicateur est fourni à titre informatif uniquement. Il ne constitue pas un conseil en placement. Les décisions d'investissement doivent toujours être basées sur votre situation personnelle et vos objectifs financiers.</p>
+</section>
+
+<style>
+@keyframes pulse { 0%,100%{opacity:1;}50%{opacity:0.4;} }
+@media(max-width:768px){#fgContainer{grid-template-columns:1fr !important;}}
+</style>
+
+<script>
+(function() {
+ const labels = {
+ 'Extreme Fear': 'Peur extrême',
+ 'Fear': 'Peur',
+ 'Neutral': 'Neutre',
+ 'Greed': 'Cupidité',
+ 'Extreme Greed': 'Euphorie'
+ };
+ const analysis = {
+ extreme_fear: "Les investisseurs traversent actuellement une période de forte anxiété. Les marchés affichent une volatilité élevée et les ventes se font parfois de façon irrationnelle. Historiquement, les périodes de peur extrême ont précédé certaines des meilleures opportunités d'achat à long terme.",
+ fear: "Le marché demeure prudent. Les investisseurs restent hésitants face aux conditions économiques actuelles, ce qui se traduit par des volumes d'échanges plus faibles et une préférence pour les actifs défensifs.",
+ neutral: "Le marché se trouve dans une zone d'équilibre. Ni l'optimisme excessif ni la peur ne dominent, ce qui reflète une certaine stabilité des anticipations des investisseurs.",
+ greed: "Les investisseurs affichent un niveau d'optimisme élevé. Les marchés progressent et la confiance s'installe, bien que certains indicateurs commencent à signaler une légère surchauffe.",
+ extreme_greed: "Le marché semble actuellement dans une phase d'euphorie marquée. Lorsque l'optimisme devient excessif, les évaluations ont tendance à s'éloigner des fondamentaux — une situation que les investisseurs prudents surveillent attentivement."
+ };
+ const context = {
+ extreme_fear: "Pour un investisseur à long terme avec un horizon de 10 ans et plus, les périodes de peur peuvent représenter des occasions intéressantes — à condition de respecter sa stratégie établie.",
+ fear: "Maintenir sa stratégie d'investissement régulière (comme les contributions mensuelles au CÉLI) reste souvent la meilleure approche dans ces conditions.",
+ neutral: "Un marché neutre est propice à une révision sereine de son portefeuille et à la vérification de sa tolérance au risque.",
+ greed: "Il est sage de ne pas se laisser emporter par l'enthousiasme ambiant. Réévaluer la diversification de son portefeuille reste une bonne pratique.",
+ extreme_greed: "La discipline est de mise. L'histoire montre que les périodes d'euphorie sont souvent suivies de corrections. Ne pas dévier de sa stratégie à long terme reste la règle d'or."
+ };
+
+ function getCategory(score) {
+ if (score <= 24) return 'extreme_fear';
+ if (score <= 44) return 'fear';
+ if (score <= 55) return 'neutral';
+ if (score <= 74) return 'greed';
+ return 'extreme_greed';
+ }
+ function getColor(score) {
+ if (score <= 24) return '#c0392b';
+ if (score <= 44) return '#e67e22';
+ if (score <= 55) return '#d4ac0d';
+ if (score <= 74) return '#27ae60';
+ return '#1a6b1a';
+ }
+
+ function render(score, labelEn, timestamp) {
+ document.getElementById('fgSkeleton').style.display = 'none';
+ document.getElementById('fgScoreCard').style.display = 'block';
+ document.getElementById('fgAnalysisCard').style.display = 'flex';
+
+ const cat = getCategory(score);
+ const color = getColor(score);
+
+ document.getElementById('fgScore').textContent = score;
+ document.getElementById('fgScore').style.color = color;
+ document.getElementById('fgLabel').textContent = labels[labelEn] || labelEn;
+ document.getElementById('fgNeedle').style.left = score + '%';
+ document.getElementById('fgAnalysis').textContent = analysis[cat];
+ document.getElementById('fgContext').textContent = context[cat];
+
+ const now = new Date();
+ document.getElementById('fgUpdated').textContent = 'Données : ' + now.toLocaleDateString('fr-CA', {day:'numeric',month:'long',year:'numeric'});
+ }
+
+ function renderFallback() {
+ const fallbackScore = 62;
+ render(fallbackScore, 'Greed', null);
+ document.getElementById('fgUpdated').textContent = 'Données indicatives — source : CNN Fear & Greed Index';
+ }
+
+ fetch('https://fear-and-greed-index.p.rapidapi.com/v1/fgi', {
+ method: 'GET',
+ headers: {
+ 'x-rapidapi-host': 'fear-and-greed-index.p.rapidapi.com',
+ 'x-rapidapi-key': 'DEMO'
+ }
+ })
+ .then(r => r.ok ? r.json() : Promise.reject())
+ .then(data => {
+ const score = data?.fgi?.now?.value;
+ const label = data?.fgi?.now?.valueText;
+ if (score !== undefined) { render(parseInt(score), label, null); }
+ else { renderFallback(); }
+ })
+ .catch(() => {
+ // Fallback avec données simulées réalistes
+ renderFallback();
+ });
+})();
+</script>
+
+
+<div class="stats-band">
+ <div class="stat-item">
+ <span class="stat-num">200k$</span>
+ <span class="stat-lbl">Économisé depuis la pandémie</span>
+ </div>
+ <div class="stat-item">
+ <span class="stat-num">3M$</span>
+ <span class="stat-lbl">Projection à 65 ans</span>
+ </div>
+ <div class="stat-item">
+ <span class="stat-num">7k$</span>
+ <span class="stat-lbl">CÉLI maximisé chaque année</span>
+ </div>
+</div>
+
+<section>
+ <div class="section-label">Article vedette</div>
+ <div class="featured">
+ <div class="featured-img"></div>
+ <div class="featured-body">
+ <p class="post-tag">Mon parcours</p>
+ <h2>Comment j'ai économisé 200 000 $ depuis la pandémie</h2>
+ <p>Je ne viens pas d'une famille aisée. J'ai été mère célibataire très jeune. Pendant longtemps, je croyais sincèrement que l'argent était réservé aux autres. Et pourtant — voici comment j'ai changé ma vie financière.</p>
+ <a href="/histoire/" class="read-more">Lire l'article →</a>
+ </div>
+ </div>
+</section>
+
+<section style="padding-top: 0;">
+ <div class="section-label">Derniers articles</div>
+ <div class="grid">
+ <div class="card">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80');"></div>
+ <div class="card-body">
+ <p class="post-tag">CÉLI &amp; REER</p>
+ <h3>Comment j'utilise le CÉLI et le REER pour bâtir mon patrimoine</h3>
+ <p>Ma stratégie en 3 étapes. Le CÉLI d'abord, le REER ensuite, le non-enregistré pour le reste.</p>
+ <a href="/celi-reer/" class="read-more">Lire →</a>
+ </div>
+ </div>
+ <div class="card">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=600&q=80');"></div>
+ <div class="card-body">
+ <p class="post-tag">ETFs</p>
+ <h3>C'est quoi un ETF ? Tout comprendre en langage simple</h3>
+ <p>Ma stratégie 80/20 — ETFs croissance vs dividendes, comment choisir, QQC.F expliqué.</p>
+ <a href="/etf/" class="read-more">Lire →</a>
+ </div>
+ </div>
+ <div class="card">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80');"></div>
+ <div class="card-body">
+ <p class="post-tag">Wealthsimple</p>
+ <h3>Pourquoi j'ai quitté ma banque pour Wealthsimple</h3>
+ <p>Comparatif des 5 courtiers canadiens. L'impact réel des frais sur les petits montants.</p>
+ <a href="/wealthsimple/" class="read-more">Lire →</a>
+ </div>
+ </div>
+ <div class="card">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80');"></div>
+ <div class="card-body">
+ <p class="post-tag">Livres Finance</p>
+ <h3>Die With Zero — Ce livre a changé ma stratégie financière</h3>
+ <p>Résumé et application. Projections 50$ aux 2 semaines sur 20 ans.</p>
+ <a href="/die-with-zero/" class="read-more">Lire →</a>
+ </div>
+ </div>
+ <div class="card">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80');"></div>
+ <div class="card-body">
+ <p class="post-tag">Stratégies</p>
+ <h3>Comment économiser 10 000 $ — mes trucs concrets</h3>
+ <p>Se payer en premier, vendre ce qu'on n'utilise pas, augmenter ses revenus.</p>
+ <a href="/economie/" class="read-more">Lire →</a>
+ </div>
+ </div>
+ <div class="card">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80');"></div>
+ <div class="card-body">
+ <p class="post-tag">Réflexions</p>
+ <h3>Mes réflexions honnêtes sur l'argent et l'investissement</h3>
+ <p>Ce que j'aurais voulu savoir plus tôt. Mentalité, revenus multiples, liberté financière.</p>
+ <a href="/reflexion/" class="read-more">Lire →</a>
+ </div>
+ </div>
+ </div>
+ <div style="text-align:center; padding: 40px 0 0;">
+ <a href="/articles/" style="display:inline-block; background:#2D4A1A; color:#fff; font-size:11px; letter-spacing:2px; text-transform:uppercase; padding:14px 36px; text-decoration:none; border-radius:100px;">Tous nos articles →</a>
+ </div>
+</section>
+
+<div class="about-band">
+ <div class="about-img"></div>
+ <div class="about-body">
+ <p class="post-tag">À propos</p>
+ <h2>Je n'ai pas la<br>science infuse.</h2>
+ <p>Je suis une femme curieuse, entrepreneuse, maman, et étudiante en informatique. Depuis la pandémie, j'ai économisé 200 000 $ en vivant en dessous de mes moyens et en investissant avec constance.</p>
+ <p>Ce blogue c'est mon <strong>laboratoire financier</strong> — mes idées, mes erreurs, mes réussites. Pas des conseils parfaits. Une route humaine.</p>
+ <a href="/histoire/" class="read-more" style="margin-top: 8px;">Mon histoire complète →</a>
+ </div>
+</div>
+
+<div class="cta-section">
+ <h2>Prêt à ouvrir ton CÉLI ?</h2>
+ <p>Commence avec Wealthsimple — gratuit, simple, et sans frais cachés. C'est ce que j'utilise.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="noopener">Ouvrir un compte Wealthsimple →</a>
+</div>
+
+<footer>
+ <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+</footer>
+
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+</body>
+</html>

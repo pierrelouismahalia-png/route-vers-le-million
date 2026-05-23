@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>C'est quoi un ETF ? — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ .page-hero { position: relative; height: 52vh; min-height: 380px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.85) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 52px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+
+ .pullquote { background: var(--white); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; border: 1px solid var(--border); }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* BASKET VISUAL */
+ .basket-visual { background: var(--text); border-radius: var(--radius); padding: 32px; margin: 2em 0; }
+ .basket-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 20px; }
+ .basket-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+ .basket-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 8px; text-align: center; }
+ .basket-item .company { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+ .basket-item .ticker { font-family: 'Playfair Display', serif; font-size: 16px; color: #fff; font-weight: 700; }
+ .basket-arrow { text-align: center; color: var(--terra); font-size: 24px; margin: 12px 0; }
+ .basket-result { background: rgba(45,74,26,0.15); border: 1px solid rgba(45,74,26,0.3); border-radius: 8px; padding: 16px; text-align: center; }
+ .basket-result .label { font-size: 12px; color: var(--terra); letter-spacing: 2px; text-transform: uppercase; }
+ .basket-result .etf { font-family: 'Playfair Display', serif; font-size: 22px; color: #fff; margin-top: 4px; }
+
+ /* CRITERIA CARDS */
+ .criteria-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 2em 0; }
+ .criteria-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; }
+ .criteria-num { font-family: 'Playfair Display', serif; font-size: 32px; color: rgba(45,74,26,0.3); line-height: 1; margin-bottom: 8px; }
+ .criteria-title { font-family: 'Playfair Display', serif; font-size: 17px; color: var(--text); margin-bottom: 8px; }
+ .criteria-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+ /* STRATEGY */
+ .strategy-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .strategy-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 20px; }
+ .strategy-bars { margin-bottom: 12px; }
+ .bar-row { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+ .bar-label { font-size: 13px; color: var(--text); width: 180px; flex-shrink: 0; }
+ .bar-track { flex: 1; height: 12px; background: var(--border); border-radius: 6px; overflow: hidden; }
+ .bar-fill { height: 100%; border-radius: 6px; }
+ .bar-fill.growth { background: var(--terra); width: 80%; }
+ .bar-fill.dividend { background: #8A9A6A; width: 20%; }
+ .bar-pct { font-size: 13px; color: var(--muted); width: 40px; text-align: right; flex-shrink: 0; }
+
+ /* CHECKLIST */
+ .checklist { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .checklist h4 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--text); margin-bottom: 16px; }
+ .check-item { display: flex; gap: 14px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--border); }
+ .check-item:last-child { border: none; }
+ .check-icon { color: var(--terra); font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+ .check-text { font-size: 15px; color: var(--text); line-height: 1.6; }
+ .check-sub { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 160px; background: url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; }
+
+ .sidebar-etf { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-etf h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .etf-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .etf-row:last-child { border: none; }
+ .etf-row span:first-child { color: var(--muted); }
+ .etf-row span:last-child { font-weight: 500; color: var(--text); }
+
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ .criteria-grid { grid-template-columns: 1fr; }
+ .basket-grid { grid-template-columns: repeat(2, 1fr); }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+ 
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+ <meta name="description" content="Comprendre les ETFs en langage simple. Qu'est-ce qu'un ETF, comment choisir, ma stratégie 80/20 au Québec."/>
+ <meta name="keywords" content="ETF Canada, QQC.F, fonds négocié bourse, investissement ETF Québec, NASDAQ ETF Canada"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/etf/"/>
+ <meta property="og:type" content="Article"/>
+ <meta property="og:title" content="C'est quoi un ETF ? Tout comprendre en langage simple — Route vers le Million"/>
+ <meta property="og:description" content="Comprendre les ETFs en langage simple. Qu'est-ce qu'un ETF, comment choisir QQC.F, ma stratégie 80/20 au Québec."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/etf/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="C'est quoi un ETF ? Tout comprendre en langage simple — Route vers le Million"/>
+ <meta name="twitter:description" content="Comprendre les ETFs en langage simple. Qu'est-ce qu'un ETF, comment choisir QQC.F, ma stratégie 80/20 au Québec."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "C'est quoi un ETF ? Tout comprendre en langage simple — Route vers le Million",
+ "description": "Comprendre les ETFs en langage simple. Qu'est-ce qu'un ETF, comment choisir QQC.F, ma stratégie 80/20 au Québec.",
+ "url": "https://route-vers-le-million.blog/etf/",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/">ETFs</a></li>
+ <li><a href="/etf-explorer/" style="background:rgba(45,74,26,0.1);color:var(--terra);padding:6px 14px;border-radius:100px;border:1px solid var(--border);"> Radar ETF</a></li>
+ <li><a href="/calculatrice/">Calculatrice</a></li>
+ <li><a href="/carrieres/">Carrières</a></li>
+ <li><a href="/articles/">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/">Accueil</a>
+ <a href="/celi-reer/">CÉLI &amp; REER</a>
+ <a href="/etf/">ETFs</a>
+ <a href="/etf-explorer/" style="color:var(--terra);font-weight:500;"> Radar ETF</a>
+ <a href="/calculatrice/">Calculatrice</a>
+ <a href="/articles/">Tous les articles</a>
+ <a href="/fonds-urgence/">Fonds d'urgence</a>
+ <a href="/histoire/">Mon parcours</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple →</a>
+</div>
+
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/">Accueil</a> &nbsp;/&nbsp; Éducation financière</p>
+ <p class="hero-tag">ETFs · Éducation financière · Débutants</p>
+ <h1>C'est quoi un ETF ?<br><em>Tout comprendre en langage simple</em></h1>
+ </div>
+</div>
+
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span> Québec, Canada</span>
+ <span>·</span>
+ <span> 7 min de lecture</span>
+ <span>·</span>
+ <span>ETFs · Débutants</span>
+ </div>
+
+ <div class="prose">
+
+ <p class="lead">
+ "Au tout début, j'investissais dans les actions d'une seule entreprise. Après la pandémie et les fortes fluctuations du marché, j'ai réalisé à quel point c'était risqué. C'est là que j'ai découvert les ETFs."
+ </p>
+
+ <p>Comme plusieurs personnes qui débutent, je pensais surtout au potentiel de gains quand j'achetais des actions individuelles. Mais quand le marché a plongé, j'ai compris que mettre tout son argent dans une seule compagnie, c'est un risque énorme.</p>
+
+ <p>Les ETFs ont changé ma façon d'investir. Voici tout ce que j'aurais voulu savoir au début.</p>
+
+ <h2>C'est quoi, en mots simples ?</h2>
+
+ <p>Imagine un <strong>gros panier qui contient plusieurs actions</strong> en même temps. Au lieu d'acheter une action à la fois, tu achètes une part de ce panier.</p>
+
+ <p>Le but, dans la majorité des cas, n'est pas de "battre le marché", mais plutôt de <strong>suivre un marché ou un indice</strong> — par exemple le S&P 500, le NASDAQ, le TSX 60 ou un secteur précis.</p>
+
+ <div class="basket-visual">
+ <p class="basket-title">Exemple — QQC.F (NASDAQ-100)</p>
+ <div class="basket-grid">
+ <div class="basket-item"><div class="company">Apple</div><div class="ticker">AAPL</div></div>
+ <div class="basket-item"><div class="company">Nvidia</div><div class="ticker">NVDA</div></div>
+ <div class="basket-item"><div class="company">Microsoft</div><div class="ticker">MSFT</div></div>
+ <div class="basket-item"><div class="company">Amazon</div><div class="ticker">AMZN</div></div>
+ <div class="basket-item"><div class="company">Google</div><div class="ticker">GOOGL</div></div>
+ <div class="basket-item"><div class="company">Meta</div><div class="ticker">META</div></div>
+ <div class="basket-item"><div class="company">Tesla</div><div class="ticker">TSLA</div></div>
+ <div class="basket-item"><div class="company">+ 93 autres</div><div class="ticker">...</div></div>
+ </div>
+ <div class="basket-arrow">↓</div>
+ <div class="basket-result">
+ <div class="label">1 seul achat</div>
+ <div class="etf">QQC.F — 0,20% de frais/an</div>
+ </div>
+ </div>
+
+ <h2>Comment ça fonctionne</h2>
+
+ <p>Un ETF regroupe l'argent de plusieurs investisseurs pour acheter un ensemble de titres. Son prix bouge en bourse pendant la journée, comme celui d'une action ordinaire.</p>
+
+ <p>Si l'indice suivi monte, l'ETF monte aussi. Si l'indice baisse, l'ETF baisse. Il peut y avoir de petites différences à cause des frais et de la façon dont le fonds réplique l'indice.</p>
+
+ <div class="pullquote">
+ <p>"Un ETF n'est pas sans risque. Si le marché baisse, l'ETF baisse aussi. Mais sur 20 ans, l'histoire a montré que les marchés montent plus qu'ils ne descendent."</p>
+ </div>
+
+ <h2>Comment bien choisir un ETF</h2>
+
+ <div class="criteria-grid">
+ <div class="criteria-card">
+ <div class="criteria-num">01</div>
+ <div class="criteria-title">L'indice suivi</div>
+ <div class="criteria-desc">C'est le "contenu" réel de l'ETF. S&P 500, NASDAQ, TSX 60 — chacun suit un marché différent. Vérifiez ce que l'ETF contient vraiment.</div>
+ </div>
+ <div class="criteria-card">
+ <div class="criteria-num">02</div>
+ <div class="criteria-title">Les frais (TER)</div>
+ <div class="criteria-desc">Même une petite différence de frais peut coûter des milliers de dollars sur 20 ans. Cherchez un TER sous 0,5% si possible.</div>
+ </div>
+ <div class="criteria-card">
+ <div class="criteria-num">03</div>
+ <div class="criteria-title">La liquidité</div>
+ <div class="criteria-desc">Un ETF très liquide se vend et s'achète facilement sans affecter le prix. Plus il est populaire, mieux c'est.</div>
+ </div>
+ <div class="criteria-card">
+ <div class="criteria-num">04</div>
+ <div class="criteria-title">La devise</div>
+ <div class="criteria-desc">Un ETF en USD expose au risque de change. QQC.F est "hedgé" en CAD — il protège contre les fluctuations USD/CAD.</div>
+ </div>
+ <div class="criteria-card">
+ <div class="criteria-num">05</div>
+ <div class="criteria-title">Les dividendes</div>
+ <div class="criteria-desc">Certains ETFs versent les dividendes en argent, d'autres les réinvestissent automatiquement. Choisissez selon votre stratégie.</div>
+ </div>
+ <div class="criteria-card">
+ <div class="criteria-num">06</div>
+ <div class="criteria-title">Votre objectif</div>
+ <div class="criteria-desc">Croissance à long terme ? Revenu passif ? Portefeuille simple ? Le bon ETF dépend surtout de CE QUE VOUS VOULEZ faire.</div>
+ </div>
+ </div>
+
+ <h2>Ma stratégie personnelle</h2>
+
+ <p>Après plusieurs réflexions et calculs, j'ai réalisé que je préférais investir majoritairement dans des <strong>ETFs orientés croissance</strong>.</p>
+
+ <p>Mentalement, je considère cet argent comme de l'argent que je ne toucherai pas avant très longtemps. Je sais qu'il y aura des hauts et des bas — mais mon objectif est de laisser le temps travailler pour moi.</p>
+
+ <div class="strategy-box">
+ <p class="strategy-title">Ma répartition actuelle</p>
+ <div class="strategy-bars">
+ <div class="bar-row">
+ <span class="bar-label">ETFs croissance (QQC.F)</span>
+ <div class="bar-track"><div class="bar-fill growth"></div></div>
+ <span class="bar-pct">80%</span>
+ </div>
+ <div class="bar-row">
+ <span class="bar-label">ETFs dividendes</span>
+ <div class="bar-track"><div class="bar-fill dividend"></div></div>
+ <span class="bar-pct">20%</span>
+ </div>
+ </div>
+ <p style="font-size:13px; color: var(--muted); margin:0;">Cette approche me permet d'avoir un équilibre entre croissance à long terme et revenus réguliers.</p>
+ </div>
+
+ <p>Je garde aussi toujours un <strong>fonds d'urgence séparé</strong> dans un compte d'épargne à intérêt élevé — comme Wealthsimple Cash — pour ne jamais être obligée de retirer de mes investissements lors d'imprévus.</p>
+
+ <h2>5 questions à se poser avant d'acheter</h2>
+
+ <div class="checklist">
+ <h4>Checklist avant d'acheter un ETF</h4>
+ <div class="check-item">
+ <span class="check-icon">→</span>
+ <div>
+ <div class="check-text">Qu'est-ce que l'ETF suit exactement ?</div>
+ <div class="check-sub">S&P 500 ? NASDAQ ? Dividendes canadiens ? Vérifiez le contenu.</div>
+ </div>
+ </div>
+ <div class="check-item">
+ <span class="check-icon">→</span>
+ <div>
+ <div class="check-text">Combien ça coûte par année ?</div>
+ <div class="check-sub">Cherchez le TER ou ratio de frais de gestion. Idéalement sous 0,5%.</div>
+ </div>
+ </div>
+ <div class="check-item">
+ <span class="check-icon">→</span>
+ <div>
+ <div class="check-text">Est-ce que je peux l'acheter et vendre facilement ?</div>
+ <div class="check-sub">Volume de transactions élevé = bonne liquidité.</div>
+ </div>
+ </div>
+ <div class="check-item">
+ <span class="check-icon">→</span>
+ <div>
+ <div class="check-text">Est-ce qu'il réplique bien son indice ?</div>
+ <div class="check-sub">Comparez la performance de l'ETF vs l'indice sur 3-5 ans.</div>
+ </div>
+ </div>
+ <div class="check-item">
+ <span class="check-icon">→</span>
+ <div>
+ <div class="check-text">Est-ce que ça correspond à mon objectif ?</div>
+ <div class="check-sub">Horizon de 20 ans ? Croissance. Retraite proche ? Dividendes + stabilité.</div>
+ </div>
+ </div>
+ </div>
+
+ <p style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;"> Je ne suis pas conseillère financière. Cet article partage mon expérience personnelle — pas des conseils financiers officiels. Consultez un professionnel pour votre situation.</p>
+
+ </div>
+ </article>
+
+ <aside class="sidebar">
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3>Investis sans commission</h3>
+ <p>Achète des ETFs sur Wealthsimple — 0$ de frais de transaction.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank">Ouvrir Wealthsimple →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-etf">
+ <h4>Mon ETF principal</h4>
+ <div class="etf-row"><span>Nom</span><span>QQC.F</span></div>
+ <div class="etf-row"><span>Indice</span><span>NASDAQ-100</span></div>
+ <div class="etf-row"><span>Frais</span><span>0,20%/an</span></div>
+ <div class="etf-row"><span>Devise</span><span>CAD hedgé</span></div>
+ <div class="etf-row"><span>Rendement hist.</span><span>~14%/an</span></div>
+ <div class="etf-row"><span>Plateforme</span><span>Wealthsimple</span></div>
+ </div>
+ </aside>
+
+</div>
+
+<div class="cta-bottom">
+ <h2>Prêt à acheter ton premier ETF ?</h2>
+ <p>Ouvre un compte Wealthsimple gratuitement et commence avec aussi peu que 1$.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank">Ouvrir un compte gratuit →</a>
+</div>
+
+<footer>
+ <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+</footer>
+
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+</body>
+</html>

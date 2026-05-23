@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Nos Articles — Route vers le Million</title>
+ <meta name="description" content="Tous les articles sur les finances personnelles au Québec. CÉLI, REER, ETFs, Wealthsimple, épargne, liberté financière."/>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover, .nav-links a.active { color: var(--text); }
+ .nav-links a.active { border-bottom: 2px solid var(--terra); padding-bottom: 2px; }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+ .nav-cta:hover { background: var(--terra2); }
+
+ /* HERO SEARCH SECTION */
+ .search-hero {
+ background: var(--text);
+ padding: 72px 56px 56px;
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+ }
+ .search-hero::before {
+ content: '';
+ position: absolute; inset: 0;
+ background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+ opacity: 0.08;
+ }
+ .search-hero-content { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+ .search-tag { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--terra); margin-bottom: 16px; display: block; }
+ .search-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 46px); font-weight: 400; color: #fff; line-height: 1.2; margin-bottom: 12px; }
+ .search-hero h1 em { font-style: italic; color: #B8D890; }
+ .search-hero p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 36px; }
+
+ /* SEARCH BAR */
+ .search-bar-wrap { display: flex; gap: 0; max-width: 560px; margin: 0 auto 28px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); border-radius: 100px; overflow: hidden; }
+ .search-input { flex: 1; padding: 16px 24px; font-size: 15px; font-family: 'Jost', sans-serif; border: none; background: var(--white); color: var(--text); outline: none; }
+ .search-input::placeholder { color: var(--light); }
+ .search-btn { background: var(--terra); color: #fff; border: none; padding: 16px 28px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; font-family: 'Jost', sans-serif; transition: background 0.2s; white-space: nowrap; }
+ .search-btn:hover { background: var(--terra2); }
+
+ /* KEYWORD TAGS */
+ .keywords { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+ .keyword { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.75); font-size: 12px; letter-spacing: 1px; padding: 7px 16px; border-radius: 100px; cursor: pointer; transition: all 0.2s; text-transform: uppercase; }
+ .keyword:hover, .keyword.active { background: var(--terra); border-color: var(--terra); color: #fff; }
+
+ /* ARTICLES SECTION */
+ .articles-wrap { max-width: 1100px; margin: 0 auto; padding: 64px 40px 100px; }
+ .articles-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 12px; }
+ .articles-header h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 400; color: var(--text); }
+ .articles-count { font-size: 13px; color: var(--light); }
+ .no-results { text-align: center; padding: 60px 20px; color: var(--muted); font-size: 16px; display: none; }
+ .no-results h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--text); margin-bottom: 8px; }
+
+ /* ARTICLE GRID */
+ .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+ .article-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-radius: var(--radius);
+ overflow: hidden;
+ transition: transform 0.2s, box-shadow 0.2s;
+ display: flex; flex-direction: column;
+ }
+ .article-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(46,28,14,0.1); }
+ .article-card.hidden { display: none; }
+
+ .card-img { height: 200px; background-size: cover; background-position: center; position: relative; flex-shrink: 0; }
+ .card-category { position: absolute; top: 14px; left: 14px; background: var(--terra); color: #fff; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; }
+ .card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+ .card-date { font-size: 11px; color: var(--light); letter-spacing: 1px; margin-bottom: 10px; }
+ .card-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 400; color: var(--text); line-height: 1.35; margin-bottom: 10px; }
+ .card-excerpt { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; flex: 1; }
+ .card-link { display: inline-block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--terra); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; transition: border-color 0.2s; align-self: flex-start; }
+ .card-link:hover { border-color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 420px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 900px) { .articles-grid { grid-template-columns: repeat(2, 1fr); } }
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .search-hero { padding: 48px 24px 40px; }
+ .articles-wrap { padding: 40px 24px 80px; }
+ .articles-grid { grid-template-columns: 1fr; }
+ .search-bar-wrap { flex-direction: column; border-radius: var(--radius); }
+ .search-input, .search-btn { border-radius: 0; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+ 
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+ <meta name="keywords" content="articles finances personnelles Québec, CÉLI REER, ETF, Wealthsimple, épargne investissement"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/articles/"/>
+ <meta property="og:type" content="Blog"/>
+ <meta property="og:title" content="Tous nos articles — Route vers le Million"/>
+ <meta property="og:description" content="Tous les articles sur les finances personnelles au Québec. CÉLI, REER, ETFs, Wealthsimple, épargne, liberté financière."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/articles/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Tous nos articles — Route vers le Million"/>
+ <meta name="twitter:description" content="Tous les articles sur les finances personnelles au Québec. CÉLI, REER, ETFs, Wealthsimple, épargne, liberté financière."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Blog",
+ "headline": "Tous nos articles — Route vers le Million",
+ "description": "Tous les articles sur les finances personnelles au Québec. CÉLI, REER, ETFs, Wealthsimple, épargne, liberté financière.",
+ "url": "https://route-vers-le-million.blog/articles/",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/">ETFs</a></li>
+ <li><a href="/etf-explorer/" style="background:rgba(45,74,26,0.1);color:var(--terra);padding:6px 14px;border-radius:100px;border:1px solid var(--border);"> Radar ETF</a></li>
+ <li><a href="/calculatrice/">Calculatrice</a></li>
+ <li><a href="/carrieres/">Carrières</a></li>
+ <li><a href="/articles/">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/">Accueil</a>
+ <a href="/celi-reer/">CÉLI &amp; REER</a>
+ <a href="/etf/">ETFs</a>
+ <a href="/etf-explorer/" style="color:var(--terra);font-weight:500;"> Radar ETF</a>
+ <a href="/calculatrice/">Calculatrice</a>
+ <a href="/articles/">Tous les articles</a>
+ <a href="/fonds-urgence/">Fonds d'urgence</a>
+ <a href="/histoire/">Mon parcours</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- SEARCH HERO -->
+<div class="search-hero">
+ <div class="search-hero-content">
+ <span class="search-tag">Blogue · Finances personnelles · Québec</span>
+ <h1>Tous nos <em>articles</em></h1>
+ <p>CÉLI, REER, ETFs, épargne, liberté financière — explorez tous nos contenus.</p>
+
+ <div class="search-bar-wrap">
+ <input type="text" class="search-input" id="searchInput" placeholder="Rechercher un sujet... ex: CÉLI, ETF, épargne" oninput="filterArticles()"/>
+ <button class="search-btn" onclick="filterArticles()">Rechercher</button>
+ </div>
+
+ <div class="keywords">
+ <span class="keyword" onclick="filterByKeyword(this, 'celi')">CÉLI</span>
+ <span class="keyword" onclick="filterByKeyword(this, 'reer')">REER</span>
+ <span class="keyword" onclick="filterByKeyword(this, 'etf')">ETFs</span>
+ <span class="keyword" onclick="filterByKeyword(this, 'wealthsimple')">Wealthsimple</span>
+ <span class="keyword" onclick="filterByKeyword(this, 'epargne')">Épargne</span>
+ <span class="keyword" onclick="filterByKeyword(this, 'budget')">Budget</span>
+ <span class="keyword" onclick="filterByKeyword(this, 'livre')">Livres</span>
+ <span class="keyword" onclick="filterByKeyword(this, 'liberte')">Liberté financière</span>
+ <span class="keyword" onclick="filterByKeyword(this, 'urgence')">Fonds d'urgence</span>
+ <span class="keyword active" onclick="filterByKeyword(this, '')">Tous</span>
+ </div>
+ </div>
+</div>
+
+<!-- ARTICLES -->
+<div class="articles-wrap">
+ <div class="articles-header">
+ <h2>Articles récents</h2>
+ <span class="articles-count" id="articleCount">9 articles</span>
+ </div>
+
+ <div class="no-results" id="noResults">
+ <h3>Aucun résultat</h3>
+ <p>Essayez un autre mot-clé ou parcourez tous les articles.</p>
+ </div>
+
+ <div class="articles-grid" id="articlesGrid">
+
+ <div class="article-card" data-tags="celi reer epargne investissement liberte">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80');">
+ <span class="card-category">CÉLI &amp; REER</span>
+ </div>
+ <div class="card-body">
+ <div class="card-date">Mai 2026</div>
+ <div class="card-title">Comment j'utilise le CÉLI et le REER pour bâtir mon patrimoine</div>
+ <div class="card-excerpt">Ma stratégie en 3 étapes. Le CÉLI d'abord, le REER ensuite — et pourquoi tu peux avoir plusieurs comptes CÉLI.</div>
+ <a href="/celi-reer/" class="card-link">Lire l'article →</a>
+ </div>
+ </div>
+
+ <div class="article-card" data-tags="etf investissement liberte epargne wealthsimple">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80');">
+ <span class="card-category">ETFs</span>
+ </div>
+ <div class="card-body">
+ <div class="card-date">Mai 2026</div>
+ <div class="card-title">C'est quoi un ETF ? Tout comprendre en langage simple</div>
+ <div class="card-excerpt">Ma stratégie 80/20, comment choisir son ETF et pourquoi j'ai choisi QQC.F dans mon CÉLI Wealthsimple.</div>
+ <a href="/etf/" class="card-link">Lire l'article →</a>
+ </div>
+ </div>
+
+ <div class="article-card" data-tags="wealthsimple banque frais investissement celi">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=600&q=80');">
+ <span class="card-category">Wealthsimple</span>
+ </div>
+ <div class="card-body">
+ <div class="card-date">Mai 2026</div>
+ <div class="card-title">Pourquoi j'ai quitté ma banque pour Wealthsimple</div>
+ <div class="card-excerpt">Comparatif honnête des 5 courtiers canadiens. L'impact réel des frais sur les petits montants investis.</div>
+ <a href="/wealthsimple/" class="card-link">Lire l'article →</a>
+ </div>
+ </div>
+
+ <div class="article-card" data-tags="livre liberte investissement etf epargne">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80');">
+ <span class="card-category">Livres Finance</span>
+ </div>
+ <div class="card-body">
+ <div class="card-date">Mai 2026</div>
+ <div class="card-title">Die With Zero — Ce livre a changé ma stratégie financière</div>
+ <div class="card-excerpt">Résumé et application personnelle. Projections 50$ aux 2 semaines sur 20 ans — les chiffres surprennent.</div>
+ <a href="/die-with-zero/" class="card-link">Lire l'article →</a>
+ </div>
+ </div>
+
+ <div class="article-card" data-tags="epargne budget revenus liberte">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80');">
+ <span class="card-category">Épargne</span>
+ </div>
+ <div class="card-body">
+ <div class="card-date">Mai 2026</div>
+ <div class="card-title">Comment économiser 10 000 $ — mes trucs concrets</div>
+ <div class="card-excerpt">Se payer en premier, vendre ce qu'on n'utilise pas, augmenter ses revenus. Formations courtes au Québec incluses.</div>
+ <a href="/economie/" class="card-link">Lire l'article →</a>
+ </div>
+ </div>
+
+ <div class="article-card" data-tags="liberte investissement epargne budget">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80');">
+ <span class="card-category">Réflexions</span>
+ </div>
+ <div class="card-body">
+ <div class="card-date">Mai 2026</div>
+ <div class="card-title">Mes réflexions honnêtes sur l'argent et l'investissement</div>
+ <div class="card-excerpt">Ce que j'aurais voulu savoir plus tôt. Mentalité, revenus multiples, liberté financière — mon parcours honnête.</div>
+ <a href="/reflexion/" class="card-link">Lire l'article →</a>
+ </div>
+ </div>
+
+ <div class="article-card" data-tags="livre epargne investissement liberte budget">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80');">
+ <span class="card-category">Éducation financière</span>
+ </div>
+ <div class="card-body">
+ <div class="card-date">Mai 2026</div>
+ <div class="card-title">Lire, apprendre et mieux gérer son argent</div>
+ <div class="card-excerpt">Mes livres, podcasts et ressources gratuites pour apprendre les finances personnelles au Québec.</div>
+ <a href="/lire-apprendre/" class="card-link">Lire l'article →</a>
+ </div>
+ </div>
+
+ <div class="article-card" data-tags="liberte epargne investissement">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523289333742-be1143f6b766?auto=format&fit=crop&w=600&q=80');">
+ <span class="card-category">Mon Parcours</span>
+ </div>
+ <div class="card-body">
+ <div class="card-date">Mai 2026</div>
+ <div class="card-title">Mon histoire — Je n'ai pas la science infuse</div>
+ <div class="card-excerpt">Mère célibataire, entrepreneuse, étudiante en informatique. Comment j'ai économisé depuis la pandémie.</div>
+ <a href="/histoire/" class="card-link">Lire l'article →</a>
+ </div>
+ </div>
+
+
+ <div class="article-card" data-tags="epargne budget fonds urgence interets banque">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80');">
+ <span class="card-category">Épargne</span>
+ </div>
+ <div class="card-body">
+ <div class="card-date">Mai 2026</div>
+ <div class="card-title">Où mettre son fonds d'urgence ? Ce que j'ai appris</div>
+ <div class="card-excerpt">Fonds d'urgence ≠ investissements. EQ Bank vs Wealthsimple vs Questrade — comparatif honnête pour 2026.</div>
+ <a href="/fonds-urgence/" class="card-link">Lire l'article →</a>
+ </div>
+ </div>
+
+
+ <div class="article-card" data-tags="carrieres emploi salaire formation etudes liberte">
+ <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80');">
+ <span class="card-category">Carrières</span>
+ </div>
+ <div class="card-body">
+ <div class="card-date">Mai 2026</div>
+ <div class="card-title">Explorateur de carrières au Canada — salaires, formations et programmes</div>
+ <div class="card-excerpt">Trouve la profession qui correspond à ton profil. Salaires réels, durée des études, télétravail, perspectives d'emploi — filtre selon tes critères.</div>
+ <a href="/carrieres/" class="card-link">Explorer les carrières →</a>
+ </div>
+ </div>
+
+ </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2>Prêt à commencer ?</h2>
+ <p>Ouvre ton CÉLI sur Wealthsimple — gratuit, sans commission, sans frais cachés.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="noopener">Ouvrir un compte gratuit →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+ <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+</footer>
+
+<script>
+ let activeKeyword = '';
+
+ function filterByKeyword(el, keyword) {
+ // Update active keyword tag
+ document.querySelectorAll('.keyword').forEach(k => k.classList.remove('active'));
+ el.classList.add('active');
+ activeKeyword = keyword;
+
+ // Clear search input
+ document.getElementById('searchInput').value = '';
+
+ filterArticles();
+ }
+
+ function filterArticles() {
+ const searchVal = document.getElementById('searchInput').value.toLowerCase().trim();
+ const query = searchVal || activeKeyword;
+
+ const cards = document.querySelectorAll('.article-card');
+ let visible = 0;
+
+ cards.forEach(card => {
+ const tags = card.getAttribute('data-tags') || '';
+ const title = card.querySelector('.card-title').textContent.toLowerCase();
+ const excerpt = card.querySelector('.card-excerpt').textContent.toLowerCase();
+ const combined = tags + ' ' + title + ' ' + excerpt;
+
+ if (!query || combined.includes(query)) {
+ card.classList.remove('hidden');
+ visible++;
+ } else {
+ card.classList.add('hidden');
+ }
+ });
+
+ document.getElementById('articleCount').textContent = visible + ' article' + (visible> 1 ? 's' : '');
+ document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+ }
+
+ // Clear keyword when typing in search
+ document.getElementById('searchInput').addEventListener('keyup', function(e) {
+ if (this.value.length> 0) {
+ document.querySelectorAll('.keyword').forEach(k => k.classList.remove('active'));
+ activeKeyword = '';
+ }
+ if (e.key === 'Enter') filterArticles();
+ });
+</script>
+
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+</body>
+</html>
