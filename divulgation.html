@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Divulgation des liens d'affiliation — Route vers le Million</title>
+ <meta name="description" content="Politique de divulgation des liens d'affiliation de Route vers le Million. Wealthsimple, Tangerine, Borrowell, Amazon."/>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8; --cream2: #E8DCC8; --white: #FFFFFF;
+ --terra: #2D4A1A; --terra2: #1E3810; --border: #C8D4B0;
+ --text: #1A2E0A; --muted: #607848; --light: #A0B480; --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+ .nav-cta:hover { background: var(--terra2); }
+
+ /* HERO */
+ .page-hero { background: var(--text); padding: 72px 56px 60px; position: relative; overflow: hidden; }
+ .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; opacity: 0.06; }
+ .page-hero-content { position: relative; z-index: 1; max-width: 680px; }
+ .hero-tag { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--light); margin-bottom: 18px; display: block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 46px); font-weight: 400; color: #fff; line-height: 1.2; }
+
+ /* CONTENT */
+ .disclosure-content { max-width: 680px; margin: 0 auto; padding: 72px 40px 100px; }
+ .meta { font-size: 12px; color: var(--light); letter-spacing: 1px; margin-bottom: 56px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+ .disclosure-content h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--text); margin: 2.4em 0 0.8em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .disclosure-content h2:first-of-type { margin-top: 0; }
+ .disclosure-content p { font-size: 15px; line-height: 1.9; color: var(--text); margin-bottom: 1.4em; }
+ .disclosure-content ul { margin: 0 0 1.4em 20px; }
+ .disclosure-content li { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 0.6em; }
+ .disclosure-content strong { color: var(--text); font-weight: 500; }
+
+ /* FOOTER */
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero { padding: 48px 20px 40px; }
+ .disclosure-content { padding: 48px 20px 80px; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+</head>
+<body>
+
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/">ETFs</a></li>
+ <li><a href="/outils/">Outils</a></li>
+ <li><a href="/articles/">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/">Accueil</a>
+ <a href="/celi-reer/">CÉLI &amp; REER</a>
+ <a href="/etf/">ETFs</a>
+ <a href="/outils/">Outils</a>
+ <a href="/articles/">Tous les articles</a>
+ <a href="/fonds-urgence/">Fonds d'urgence</a>
+ <a href="/histoire/">Mon parcours</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener">Ouvrir Wealthsimple →</a>
+</div>
+
+<div class="page-hero">
+ <div class="page-hero-content">
+ <span class="hero-tag">Transparence</span>
+ <h1>Divulgation des liens d'affiliation</h1>
+ </div>
+</div>
+
+<div class="disclosure-content">
+ <p class="meta">Dernière mise à jour : 24 mai 2026</p>
+
+ <h2>En bref</h2>
+ <p>Route vers le Million utilise des liens d'affiliation. Concrètement : si tu cliques sur certains liens et que tu t'inscris ou achètes, je reçois une commission. <strong>Ça ne change rien au prix que tu paies</strong>, et dans plusieurs cas tu reçois aussi un bonus.</p>
+
+ <h2>Pourquoi je le fais</h2>
+ <p>Ces commissions m'aident à maintenir le blogue gratuit, à continuer à écrire, et à tester moi-même les produits avant de les recommander. Je ne recommande que des outils que j'utilise personnellement ou que j'ai sérieusement étudiés.</p>
+
+ <h2>Mes partenaires affiliés actuels</h2>
+ <ul>
+ <li><strong>Wealthsimple</strong> — courtage et placements. Toi et moi recevons un bonus quand tu t'inscris via mon lien.</li>
+ <li><strong>Tangerine</strong> — banque en ligne. Programme "Invitez un ami" avec bonus pour les deux parties.</li>
+ <li><strong>Borrowell</strong> — cote de crédit gratuite. Je reçois une commission lors d'une inscription qualifiée.</li>
+ <li><strong>Amazon (Programme d'associés)</strong> — quand je recommande un livre, je reçois un petit pourcentage si tu l'achètes via mon lien.</li>
+ </ul>
+
+ <h2>Mon engagement envers toi</h2>
+ <ul>
+ <li>Je ne recommande aucun produit que je n'utilise pas ou que je ne respecte pas.</li>
+ <li>L'existence d'une commission ne change pas mon avis. Si un produit a des défauts, je les nomme.</li>
+ <li>Tu n'es jamais obligée d'utiliser mes liens. Tu peux toujours chercher le partenaire directement.</li>
+ </ul>
+
+ <h2>Conformité légale</h2>
+ <p>Cette divulgation respecte les lignes directrices du <strong>Bureau de la concurrence du Canada</strong> sur les indications commerciales et les témoignages, ainsi que les exigences de l'<strong>Office de la protection du consommateur du Québec</strong>.</p>
+</div>
+
+<footer>
+ <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+</body>
+</html>

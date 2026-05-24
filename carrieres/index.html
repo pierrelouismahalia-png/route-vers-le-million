@@ -120,7 +120,7 @@
   </ul>
   <div style="display:flex;align-items:center;gap:10px;">
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
-    <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple</a>
+    <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple</a>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
@@ -129,7 +129,7 @@
   <a href="/etf/">ETFs</a>
   <a href="/outils/" style="color:var(--terra);font-weight:500;">Outils</a>
   <a href="/articles/">Tous les articles</a>
-  <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple</a>
+  <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener">Ouvrir Wealthsimple</a>
 </div>
 <div class="page-hero">
   <div class="hero-img"></div>
@@ -188,11 +188,12 @@
   <h2 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:var(--text);margin-bottom:10px;">Changer de carriere et investir en meme temps</h2>
   <p style="font-size:14px;color:var(--muted);margin-bottom:24px;max-width:400px;margin-left:auto;margin-right:auto;line-height:1.75;">Chaque augmentation de salaire est une opportunite d'investir davantage. Meme 50$ de plus par mois peut faire une difference enorme sur 20 ans.</p>
   <a href="/calculatrice/" style="display:inline-block;border:1px solid var(--border);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;color:var(--text);border-radius:2px;margin-right:10px;">Voir la calculatrice</a>
-  <a href="https://wealthsimple.com/invite/G7ZSVC" style="display:inline-block;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;border-radius:2px;" target="_blank" rel="noopener">Ouvrir un CELI gratuit</a>
+  <a href="https://wealthsimple.com/invite/G7ZSVC" style="display:inline-block;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;border-radius:2px;" target="_blank" rel="sponsored nofollow noopener">Ouvrir un CELI gratuit</a>
 </div>
 <footer>
   <p><strong style="color:var(--muted);font-weight:400;">Route vers le Million</strong> &nbsp;&middot;&nbsp; <a href="/">route-vers-le-million.blog</a></p>
   <p>Donnees : Adzuna Canada API &middot; Plateforme educative &middot; Aucun conseil financier</p>
+  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
 </footer>
 <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
   <div class="modal-wrap"><div class="modal" id="modalBox">
@@ -361,7 +362,7 @@ function openModal(id){
     (jobs.length?"<div class='m-section'>Offres d'emploi actives — Adzuna Canada</div><div class='jobs-list'>"+
     jobs.map(j=>"<div class='job-row'><div class='job-title'>"+j.title+"</div><div class='job-company'>"+j.company+"</div><div class='job-meta'><span>"+j.location+"</span>"+(j.salMin&&j.salMax?"<span class='job-salary'>"+fmt(j.salMin)+" — "+fmt(j.salMax)+"</span>":"")+"</div><a href='"+j.url+"' target='_blank' rel='noopener' class='job-link'>Voir l'offre</a></div>").join("")+
     "</div>":"<div style='padding:16px;background:var(--bg);border:1px solid var(--border);border-radius:2px;font-size:12px;color:var(--muted);margin-bottom:18px'>Les offres d'emploi sont en cours de chargement ou non disponibles pour ce titre.</div>")+
-    "<a href='https://wealthsimple.com/invite/G7ZSVC' class='ws-btn' target='_blank' rel='noopener'>Ouvrir un CELI et investir davantage</a></div>"+
+    "<a href='https://wealthsimple.com/invite/G7ZSVC' class='ws-btn' target='_blank' rel='sponsored nofollow noopener'>Ouvrir un CELI et investir davantage</a></div>"+
     "<div class='m-disclaimer'>Donnees salariales et offres d'emploi fournies par Adzuna Canada. Les salaires affiches representent des moyennes basees sur les offres actives et peuvent varier selon l'experience et la region.</div>";
   document.getElementById("modalOverlay").classList.add("open");
   document.body.style.overflow="hidden";

@@ -54,6 +54,9 @@
 
  .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
 
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
  /* PROSE */
  .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
  .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
@@ -204,7 +207,7 @@
  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
  <span></span><span></span><span></span>
  </button>
- <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple →</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
  </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
@@ -215,7 +218,7 @@
  <a href="/articles/">Tous les articles</a>
  <a href="/fonds-urgence/">Fonds d'urgence</a>
  <a href="/histoire/">Mon parcours</a>
- <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple →</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener">Ouvrir Wealthsimple →</a>
 </div>
 
 <!-- HERO -->
@@ -241,6 +244,8 @@
  </div>
 
  <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgation&nbsp;: Cet article contient des liens d'affiliation. Si tu t'inscris ou achètes via mes liens, je touche une commission, sans frais supplémentaires pour toi. Mes recommandations restent basées sur mon usage personnel.</div>
 
  <p class="lead">
  "En investissement, la richesse se construit davantage par la constance et la patience que par la recherche de gains rapides. Le temps reste l'élément le plus puissant — encore faut-il choisir une stratégie qu'on est capable de tenir."
@@ -356,7 +361,7 @@
  <div class="sidebar-body">
  <h3>Commencer à investir</h3>
  <p>Ouvre ton CÉLI sur Wealthsimple — sans frais, sans commissions, en quelques minutes.</p>
- <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank" rel="noopener">Wealthsimple →</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
  <a href="/calculatrice/" class="sidebar-btn secondary">Calculatrice →</a>
  </div>
  </div>
@@ -378,7 +383,7 @@
 <div class="cta-bottom">
  <h2>Prêt à passer à l'action ?</h2>
  <p>Ouvre ton CÉLI sur Wealthsimple et commence à investir selon ta stratégie — gratuit, sans commission.</p>
- <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="noopener">Ouvrir Wealthsimple →</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener">Ouvrir Wealthsimple →</a>
  <a href="/articles/" class="cta-btn secondary">Voir tous les articles →</a>
 </div>
 
@@ -386,8 +391,10 @@
 <footer>
  <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
  <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
 </footer>
 
+<script src="/translations.js"></script>
 <script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
 </body>
 </html>

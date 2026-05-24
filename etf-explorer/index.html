@@ -133,7 +133,7 @@
   </ul>
   <div style="display:flex;align-items:center;gap:10px;">
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
-    <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="noopener">Wealthsimple</a>
+    <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple</a>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
@@ -142,7 +142,7 @@
   <a href="/etf/">ETFs</a>
   <a href="/outils/" style="color:var(--terra);font-weight:500;">Outils</a>
   <a href="/articles/">Tous les articles</a>
-  <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank">Ouvrir Wealthsimple</a>
+  <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener">Ouvrir Wealthsimple</a>
 </div>
 <div class="page-hero">
   <div class="hero-img"></div>
@@ -219,11 +219,12 @@
   <p style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--terra);margin-bottom:14px;">Investir sans commission</p>
   <h2 style="font-family:Playfair Display,serif;font-size:28px;font-weight:400;color:var(--text);margin-bottom:10px;">Achetez ces ETFs gratuitement sur Wealthsimple</h2>
   <p style="font-size:14px;color:var(--muted);margin-bottom:26px;max-width:380px;margin-left:auto;margin-right:auto;line-height:1.75;">Zero commission, zero frais caches. Ouvre ton CELI en 10 minutes depuis ton telephone.</p>
-  <a href="https://wealthsimple.com/invite/G7ZSVC" style="display:inline-block;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;padding:13px 32px;text-decoration:none;border-radius:2px;" target="_blank" rel="noopener">Ouvrir un compte gratuit</a>
+  <a href="https://wealthsimple.com/invite/G7ZSVC" style="display:inline-block;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;padding:13px 32px;text-decoration:none;border-radius:2px;" target="_blank" rel="sponsored nofollow noopener">Ouvrir un compte gratuit</a>
 </div>
 <footer>
   <p><strong style="color:var(--muted);font-weight:400;">Route vers le Million</strong> &nbsp;&middot;&nbsp; <a href="/">route-vers-le-million.blog</a></p>
   <p>Source : Financial Modeling Prep API &middot; Plateforme educative &middot; Aucun conseil financier</p>
+  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
 </footer>
 <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
   <div class="modal-wrap"><div class="modal" id="modalBox">
@@ -354,7 +355,7 @@ function openModal(ticker){
     "<div class='m-item'>Bourse<span>"+(e.r==="CA"?"Toronto Stock Exchange (TSX)":"NYSE / NASDAQ")+"</span></div></div>"+
     "<div class='m-section'>Principales composantes</div>"+
     "<div class='holdings-list'>"+e.h.map(h=>"<div class='holding-row'><span class='h-ticker'>"+h.t+"</span><span class='h-name'>"+h.n+"</span><div class='h-bar' style='width:"+Math.max(h.p*4,8)+"px'></div><span class='h-pct'>"+h.p.toFixed(1)+"%</span></div>").join("")+"</div>"+
-    "<a href='https://wealthsimple.com/invite/G7ZSVC' class='ws-btn' target='_blank' rel='noopener'>Acheter "+e.t+" sans commission sur Wealthsimple</a></div>"+
+    "<a href='https://wealthsimple.com/invite/G7ZSVC' class='ws-btn' target='_blank' rel='sponsored nofollow noopener'>Acheter "+e.t+" sans commission sur Wealthsimple</a></div>"+
     "<div class='m-disclaimer'>Les donnees sont fournies par Financial Modeling Prep a titre informatif uniquement. Elles ne constituent pas un conseil en placement. Les performances passees ne garantissent pas les rendements futurs.</div>";
   document.getElementById("modalOverlay").classList.add("open");
   document.body.style.overflow="hidden";
