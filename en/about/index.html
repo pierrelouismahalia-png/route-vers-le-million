@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
  <!-- Google Analytics -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
@@ -11,8 +11,8 @@
  </script>
  <meta charset="UTF-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>Divulgación de enlaces de afiliados — Route vers le Million</title>
- <meta name="description" content="Política de divulgación de enlaces de afiliados de Route vers le Million. Wealthsimple, Tangerine, Borrowell, Amazon."/>
+ <title>About — Route vers le Million</title>
+ <meta name="description" content="A human approach to personal finance. Who I am, why this blog exists, and my vision of money in Québec."/>
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
  <style>
  :root {
@@ -35,20 +35,19 @@
 
  /* HERO */
  .page-hero { background: var(--text); padding: 72px 56px 60px; position: relative; overflow: hidden; }
- .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; opacity: 0.06; }
+ .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; opacity: 0.08; }
  .page-hero-content { position: relative; z-index: 1; max-width: 680px; }
  .hero-tag { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--light); margin-bottom: 18px; display: block; }
- .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 46px); font-weight: 400; color: #fff; line-height: 1.2; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 58px); font-weight: 400; color: #fff; line-height: 1.15; margin-bottom: 14px; }
+ .page-hero h1 em { font-style: italic; }
+ .page-hero .subtitle { font-family: 'Playfair Display', serif; font-size: 17px; font-style: italic; color: rgba(255,255,255,0.6); }
 
  /* CONTENT */
- .disclosure-content { max-width: 680px; margin: 0 auto; padding: 72px 40px 100px; }
- .meta { font-size: 12px; color: var(--light); letter-spacing: 1px; margin-bottom: 56px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
- .disclosure-content h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--text); margin: 2.4em 0 0.8em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
- .disclosure-content h2:first-of-type { margin-top: 0; }
- .disclosure-content p { font-size: 15px; line-height: 1.9; color: var(--text); margin-bottom: 1.4em; }
- .disclosure-content ul { margin: 0 0 1.4em 20px; }
- .disclosure-content li { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 0.6em; }
- .disclosure-content strong { color: var(--text); font-weight: 500; }
+ .about-content { max-width: 680px; margin: 0 auto; padding: 72px 40px 100px; }
+ .about-content p { font-size: 15px; line-height: 1.9; color: var(--text); margin-bottom: 1.6em; }
+ .about-content p.intro { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 2em; }
+ .about-content strong { color: var(--text); font-weight: 500; }
+ .about-content .sunday { font-family: 'Playfair Display', serif; font-size: 18px; font-style: italic; color: var(--terra); padding: 22px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2em 0; }
 
  /* FOOTER */
  footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -71,7 +70,7 @@
  .nav-links { display: none !important; }
  .hamburger { display: flex; }
  .page-hero { padding: 48px 20px 40px; }
- .disclosure-content { padding: 48px 20px 80px; }
+ .about-content { padding: 48px 20px 80px; }
  footer { padding: 20px 24px; flex-direction: column; text-align: center; }
  }
  </style>
@@ -81,7 +80,7 @@
 <nav>
  <a href="/" class="nav-logo">Route vers le Million</a>
  <ul class="nav-links">
- <li><a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a></li>
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
  <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
  <li><a href="/etf/">ETFs</a></li>
  <li><a href="/outils/">Outils</a></li>
@@ -103,11 +102,11 @@
 </nav>
 <div class="mobile-menu" id="mobileMenu">
  <a href="/">Accueil</a>
- <a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
  <a href="/celi-reer/">CÉLI &amp; REER</a>
  <a href="/etf/">ETFs</a>
  <a href="/outils/">Outils</a>
- <a href="/articles/">Articles</a>
+ <a href="/articles/">Tous les articles</a>
  <a href="/fonds-urgence/">Fonds d'urgence</a>
  <a href="/histoire/">Mon parcours</a>
  <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
@@ -115,48 +114,55 @@
  <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
  <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
  </div>
- <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener">Abrir Wealthsimple →</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener">Open Wealthsimple →</a>
 </div>
 
 <div class="page-hero">
  <div class="page-hero-content">
- <span class="hero-tag">Transparencia</span>
- <h1>Divulgación de enlaces de afiliados</h1>
+ <span class="hero-tag">ABOUT</span>
+ <h1><em>About</em></h1>
+ <p class="subtitle">A human approach to personal finance</p>
  </div>
 </div>
 
-<div class="disclosure-content">
- <p class="meta">Última actualización: 24 de mayo de 2026</p>
+<div class="about-content">
+ <p class="intro"><strong>Welcome.</strong></p>
 
- <h2>En resumen</h2>
- <p>Route vers le Million utiliza enlaces de afiliados. En la práctica: si haces clic en ciertos enlaces y te registras o realizas una compra, recibo una comisión. <strong>Esto no cambia el precio que pagas</strong>, y en muchos casos tú también recibes un bono.</p>
+ <p>This blog was born from a deep curiosity about finance — but not only in its mathematical or technical aspects.</p>
 
- <h2>Por qué lo hago</h2>
- <p>Estas comisiones me ayudan a mantener el blog gratuito, seguir escribiendo, y probar personalmente los productos antes de recomendarlos. Solo recomiendo herramientas que uso personalmente o que he investigado seriamente.</p>
+ <p>Yes, I love understanding numbers, investments, retirement planning, compound interest, and the way money can grow over time. But what interests me even more is everything surrounding money and how it influences our daily lives.</p>
 
- <h2>Mis socios afiliados actuales</h2>
- <ul>
- <li><strong>Wealthsimple</strong> — corretaje e inversiones. Tú y yo recibimos un bono cuando te registras a través de mi enlace.</li>
- <li><strong>Tangerine</strong> — banco en línea. Programa "Invita a un amigo" con bonos para ambas partes.</li>
- <li><strong>Borrowell</strong> — puntaje crediticio gratuito. Recibo una comisión por un registro calificado.</li>
- <li><strong>Amazon (Programa de Asociados)</strong> — cuando recomiendo un libro, recibo un pequeño porcentaje si lo compras a través de mi enlace.</li>
- </ul>
+ <p>Why do some people earn a good living but live under constant stress? Why do we have such difficulty talking about money with our children, our partner, or our family? Why do some financial decisions bring us a sense of freedom while others create anxiety, guilt, or pressure?</p>
 
- <h2>Mi compromiso contigo</h2>
- <ul>
- <li>No recomiendo ningún producto que no use o respete.</li>
- <li>La existencia de una comisión no cambia mi opinión. Si un producto tiene defectos, los menciono.</li>
- <li>Nunca estás obligado/a a usar mis enlaces. Siempre puedes buscar al socio directamente.</li>
- </ul>
+ <p>Finance isn't limited to financial products or investments. It also touches on marriage, relationships, family wealth, gifts, the cost of living, rent increases, our relationship with work, our ambitions, and even our personal definition of success.</p>
 
- <h2>Cumplimiento legal</h2>
- <p>Esta divulgación cumple con las directrices del <strong>Bureau de la concurrence du Canada</strong> (Agencia de Competencia de Canadá) sobre indicaciones comerciales y testimonios, así como con los requisitos de la <strong>Office de la protection du consommateur du Québec (OPC)</strong>.</p>
+ <p>It was this more human, psychological, and realistic vision of money that I wanted to explore through this blog.</p>
+
+ <p>I read a great many books on finance, economics, the psychology of money, human behaviour, and wealth management. Many of these works draw on research, statistics, studies, and concrete data. I enjoy taking these concepts, understanding them deeply, and then reflecting on how they can realistically apply to our reality here in Québec.</p>
+
+ <p>I therefore share my reading summaries, reflections, and commentary on various books that push us to think differently about money, work, time, and success.</p>
+
+ <p>I also take many courses and training programs in various fields related to finance, particularly in taxation, family wealth planning, and other subjects that directly affect our financial lives. I am someone who is constantly seeking to learn, to better understand, and to continue educating myself.</p>
+
+ <p>This blog is therefore a space where I share what I learn, what I observe, and how these concepts can be concretely applied in our everyday lives.</p>
+
+ <p>I don't claim to hold the absolute truth or to replace professional advice tailored to your personal situation. I simply enjoy learning, analyzing, and making financial subjects more accessible through a more human lens.</p>
+
+ <p>This blog aims to be different from what is typically found in Québec. Here we talk as much about financial psychology as about investing, as much about human behaviour as about numbers.</p>
+
+ <p class="sunday"><strong>New articles are published every Sunday.</strong></p>
+
+ <p>For those who would like to receive new publications, reading summaries, and stay informed of new articles, feel free to subscribe to the newsletter to receive an email when new content is published.</p>
+
+ <!-- TODO: Add newsletter button here when the link is available -->
+
+ <p>I sincerely hope that this blog will inspire you to think differently about money and to have more open conversations about a subject that greatly influences our lives.</p>
 </div>
 
 <footer>
- <p><strong>Route vers le Million</strong> · Finanzas personales · Québec, Canadá</p>
- <p>Solo con fines informativos — no constituye asesoramiento financiero oficial.</p>
- <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contiene enlaces de afiliados (Wealthsimple, Tangerine, Borrowell, Amazon). Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. — <a href="/es/divulgacion.html" style="color:inherit;text-decoration:underline;">Más información →</a></p>
+ <p><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p>For informational purposes only — not official financial advice.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
 </footer>
 
 <script src="/translations.js"></script>
