@@ -125,7 +125,7 @@
  .search-input, .search-btn { border-radius: 0; }
  footer { padding: 24px; flex-direction: column; text-align: center; }
  }
- 
+
  /* HAMBURGER */
  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
  .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
@@ -232,26 +232,26 @@
 <!-- SEARCH HERO -->
 <div class="search-hero">
  <div class="search-hero-content">
- <span class="search-tag">Blogue · Finances personnelles · Québec</span>
- <h1>Tous nos <em>articles</em></h1>
- <p>CÉLI, REER, ETFs, épargne, liberté financière — explorez tous nos contenus.</p>
+ <span class="search-tag" data-i18n="art.hero.tag">Blogue · Finances personnelles · Québec</span>
+ <h1 data-i18n="art.hero.title">Tous nos <em>articles</em></h1>
+ <p data-i18n="art.hero.sub">CÉLI, REER, ETFs, épargne, liberté financière — explorez tous nos contenus.</p>
 
  <div class="search-bar-wrap">
- <input type="text" class="search-input" id="searchInput" placeholder="Rechercher un sujet... ex: CÉLI, ETF, épargne" oninput="filterArticles()"/>
- <button class="search-btn" onclick="filterArticles()">Rechercher</button>
+  <input type="text" class="search-input" id="searchInput" placeholder="Rechercher un sujet... ex: CÉLI, ETF, épargne" oninput="filterArticles()"/>
+  <button class="search-btn" onclick="filterArticles()" data-i18n="art.searchBtn">Rechercher</button>
  </div>
 
  <div class="keywords">
- <span class="keyword" onclick="filterByKeyword(this, 'celi')">CÉLI</span>
- <span class="keyword" onclick="filterByKeyword(this, 'reer')">REER</span>
- <span class="keyword" onclick="filterByKeyword(this, 'etf')">ETFs</span>
- <span class="keyword" onclick="filterByKeyword(this, 'wealthsimple')">Wealthsimple</span>
- <span class="keyword" onclick="filterByKeyword(this, 'epargne')">Épargne</span>
- <span class="keyword" onclick="filterByKeyword(this, 'budget')">Budget</span>
- <span class="keyword" onclick="filterByKeyword(this, 'livre')">Livres</span>
- <span class="keyword" onclick="filterByKeyword(this, 'liberte')">Liberté financière</span>
- <span class="keyword" onclick="filterByKeyword(this, 'urgence')">Fonds d'urgence</span>
- <span class="keyword active" onclick="filterByKeyword(this, '')">Tous</span>
+  <span class="keyword" onclick="filterByKeyword(this, 'celi')">CÉLI</span>
+  <span class="keyword" onclick="filterByKeyword(this, 'reer')">REER</span>
+  <span class="keyword" onclick="filterByKeyword(this, 'etf')">ETFs</span>
+  <span class="keyword" onclick="filterByKeyword(this, 'wealthsimple')">Wealthsimple</span>
+  <span class="keyword" data-i18n="art.kw.epargne" onclick="filterByKeyword(this, 'epargne')">Épargne</span>
+  <span class="keyword" data-i18n="art.kw.budget" onclick="filterByKeyword(this, 'budget')">Budget</span>
+  <span class="keyword" data-i18n="art.kw.livres" onclick="filterByKeyword(this, 'livre')">Livres</span>
+  <span class="keyword" data-i18n="art.kw.liberte" onclick="filterByKeyword(this, 'liberte')">Liberté financière</span>
+  <span class="keyword" data-i18n="art.kw.urgence" onclick="filterByKeyword(this, 'urgence')">Fonds d'urgence</span>
+  <span class="keyword active" data-i18n="art.kw.tous" onclick="filterByKeyword(this, '')">Tous</span>
  </div>
  </div>
 </div>
@@ -259,160 +259,158 @@
 <!-- ARTICLES -->
 <div class="articles-wrap">
  <div class="articles-header">
- <h2>Articles récents</h2>
+ <h2 data-i18n="art.section.title">Articles récents</h2>
  <span class="articles-count" id="articleCount">12 articles</span>
  </div>
 
  <div class="no-results" id="noResults">
- <h3>Aucun résultat</h3>
- <p>Essayez un autre mot-clé ou parcourez tous les articles.</p>
+ <h3 data-i18n="art.noresult.title">Aucun résultat</h3>
+ <p data-i18n="art.noresult.body">Essayez un autre mot-clé ou parcourez tous les articles.</p>
  </div>
 
  <div class="articles-grid" id="articlesGrid">
 
  <div class="article-card" data-tags="celi reer epargne investissement liberte">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">CÉLI &amp; REER</span>
+  <span class="card-category" data-i18n="art.cat.celiReer">CÉLI &amp; REER</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">Comment j'utilise le CÉLI et le REER pour bâtir mon patrimoine</div>
- <div class="card-excerpt">Ma stratégie en 3 étapes. Le CÉLI d'abord, le REER ensuite — et pourquoi tu peux avoir plusieurs comptes CÉLI.</div>
- <a href="/celi-reer/" class="card-link">Lire l'article →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c1.title">Comment j'utilise le CÉLI et le REER pour bâtir mon patrimoine</div>
+  <div class="card-excerpt" data-i18n="art.c1.excerpt">Ma stratégie en 3 étapes. Le CÉLI d'abord, le REER ensuite — et pourquoi tu peux avoir plusieurs comptes CÉLI.</div>
+  <a href="/celi-reer/" class="card-link" data-i18n="art.readLink">Lire l'article →</a>
  </div>
  </div>
 
  <div class="article-card" data-tags="etf investissement liberte epargne wealthsimple">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">ETFs</span>
+  <span class="card-category">ETFs</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">C'est quoi un ETF ? Tout comprendre en langage simple</div>
- <div class="card-excerpt">Ma stratégie 80/20, comment choisir son ETF et pourquoi j'ai choisi QQC.F dans mon CÉLI Wealthsimple.</div>
- <a href="/etf/" class="card-link">Lire l'article →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c2.title">C'est quoi un ETF ? Tout comprendre en langage simple</div>
+  <div class="card-excerpt" data-i18n="art.c2.excerpt">Ma stratégie 80/20, comment choisir son ETF et pourquoi j'ai choisi QQC.F dans mon CÉLI Wealthsimple.</div>
+  <a href="/etf/" class="card-link" data-i18n="art.readLink">Lire l'article →</a>
  </div>
  </div>
 
  <div class="article-card" data-tags="wealthsimple banque frais investissement celi">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">Wealthsimple</span>
+  <span class="card-category">Wealthsimple</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">Pourquoi j'ai quitté ma banque pour Wealthsimple</div>
- <div class="card-excerpt">Comparatif honnête des 5 courtiers canadiens. L'impact réel des frais sur les petits montants investis.</div>
- <a href="/wealthsimple/" class="card-link">Lire l'article →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c3.title">Pourquoi j'ai quitté ma banque pour Wealthsimple</div>
+  <div class="card-excerpt" data-i18n="art.c3.excerpt">Comparatif honnête des 5 courtiers canadiens. L'impact réel des frais sur les petits montants investis.</div>
+  <a href="/wealthsimple/" class="card-link" data-i18n="art.readLink">Lire l'article →</a>
  </div>
  </div>
 
  <div class="article-card" data-tags="livre liberte investissement etf epargne">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">Livres Finance</span>
+  <span class="card-category" data-i18n="art.cat.livres">Livres Finance</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">Die With Zero — Ce livre a changé ma stratégie financière</div>
- <div class="card-excerpt">Résumé et application personnelle. Projections 50$ aux 2 semaines sur 20 ans — les chiffres surprennent.</div>
- <a href="/die-with-zero/" class="card-link">Lire l'article →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c4.title">Die With Zero — Ce livre a changé ma stratégie financière</div>
+  <div class="card-excerpt" data-i18n="art.c4.excerpt">Résumé et application personnelle. Projections 50$ aux 2 semaines sur 20 ans — les chiffres surprennent.</div>
+  <a href="/die-with-zero/" class="card-link" data-i18n="art.readLink">Lire l'article →</a>
  </div>
  </div>
 
  <div class="article-card" data-tags="epargne budget revenus liberte">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">Épargne</span>
+  <span class="card-category" data-i18n="art.cat.epargne">Épargne</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">Comment économiser 10 000 $ — mes trucs concrets</div>
- <div class="card-excerpt">Se payer en premier, vendre ce qu'on n'utilise pas, augmenter ses revenus. Formations courtes au Québec incluses.</div>
- <a href="/economie/" class="card-link">Lire l'article →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c5.title">Comment économiser 10 000 $ — mes trucs concrets</div>
+  <div class="card-excerpt" data-i18n="art.c5.excerpt">Se payer en premier, vendre ce qu'on n'utilise pas, augmenter ses revenus. Formations courtes au Québec incluses.</div>
+  <a href="/economie/" class="card-link" data-i18n="art.readLink">Lire l'article →</a>
  </div>
  </div>
 
  <div class="article-card" data-tags="liberte investissement epargne budget">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">Réflexions</span>
+  <span class="card-category" data-i18n="art.cat.reflex">Réflexions</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">Mes réflexions honnêtes sur l'argent et l'investissement</div>
- <div class="card-excerpt">Ce que j'aurais voulu savoir plus tôt. Mentalité, revenus multiples, liberté financière — mon parcours honnête.</div>
- <a href="/reflexion/" class="card-link">Lire l'article →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c6.title">Mes réflexions honnêtes sur l'argent et l'investissement</div>
+  <div class="card-excerpt" data-i18n="art.c6.excerpt">Ce que j'aurais voulu savoir plus tôt. Mentalité, revenus multiples, liberté financière — mon parcours honnête.</div>
+  <a href="/reflexion/" class="card-link" data-i18n="art.readLink">Lire l'article →</a>
  </div>
  </div>
 
  <div class="article-card" data-tags="livre epargne investissement liberte budget">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">Éducation financière</span>
+  <span class="card-category" data-i18n="art.cat.edu">Éducation financière</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">Lire, apprendre et mieux gérer son argent</div>
- <div class="card-excerpt">Mes livres, podcasts et ressources gratuites pour apprendre les finances personnelles au Québec.</div>
- <a href="/lire-apprendre/" class="card-link">Lire l'article →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c7.title">Lire, apprendre et mieux gérer son argent</div>
+  <div class="card-excerpt" data-i18n="art.c7.excerpt">Mes livres, podcasts et ressources gratuites pour apprendre les finances personnelles au Québec.</div>
+  <a href="/lire-apprendre/" class="card-link" data-i18n="art.readLink">Lire l'article →</a>
  </div>
  </div>
 
  <div class="article-card" data-tags="liberte epargne investissement">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523289333742-be1143f6b766?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">Mon Parcours</span>
+  <span class="card-category" data-i18n="art.cat.parcours">Mon Parcours</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">Mon histoire — Je n'ai pas la science infuse</div>
- <div class="card-excerpt">Mère célibataire, entrepreneuse, étudiante en informatique. Comment j'ai économisé depuis la pandémie.</div>
- <a href="/histoire/" class="card-link">Lire l'article →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c8.title">Mon histoire — Je n'ai pas la science infuse</div>
+  <div class="card-excerpt" data-i18n="art.c8.excerpt">Mère célibataire, entrepreneuse, étudiante en informatique. Comment j'ai économisé depuis la pandémie.</div>
+  <a href="/histoire/" class="card-link" data-i18n="art.readLink">Lire l'article →</a>
  </div>
  </div>
-
 
  <div class="article-card" data-tags="epargne budget fonds urgence interets banque">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">Épargne</span>
+  <span class="card-category" data-i18n="art.cat.epargne">Épargne</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">Où mettre son fonds d'urgence ? Ce que j'ai appris</div>
- <div class="card-excerpt">Fonds d'urgence ≠ investissements. EQ Bank vs Wealthsimple vs Questrade — comparatif honnête pour 2026.</div>
- <a href="/fonds-urgence/" class="card-link">Lire l'article →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c9.title">Où mettre son fonds d'urgence ? Ce que j'ai appris</div>
+  <div class="card-excerpt" data-i18n="art.c9.excerpt">Fonds d'urgence ≠ investissements. EQ Bank vs Wealthsimple vs Questrade — comparatif honnête pour 2026.</div>
+  <a href="/fonds-urgence/" class="card-link" data-i18n="art.readLink">Lire l'article →</a>
  </div>
  </div>
-
 
  <div class="article-card" data-tags="investissement etf croissance dividendes retraite liberte epargne">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">Stratégie</span>
+  <span class="card-category" data-i18n="art.cat.strategie">Stratégie</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">Croissance ou dividendes : quelle stratégie privilégier pour la retraite ?</div>
- <div class="card-excerpt">Il n'existe pas une seule bonne réponse. Horizon de temps, tolérance au risque, fonds d'urgence — comment choisir la stratégie adaptée à sa situation.</div>
- <a href="/articles/croissance-vs-dividendes.html" class="card-link">Lire l'article →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c10.title">Croissance ou dividendes : quelle stratégie privilégier pour la retraite ?</div>
+  <div class="card-excerpt" data-i18n="art.c10.excerpt">Il n'existe pas une seule bonne réponse. Horizon de temps, tolérance au risque, fonds d'urgence — comment choisir la stratégie adaptée à sa situation.</div>
+  <a href="/articles/croissance-vs-dividendes.html" class="card-link" data-i18n="art.readLink">Lire l'article →</a>
  </div>
  </div>
 
  <div class="article-card" data-tags="bons-tresor t-bills securite court-terme diversification prudence celi reer epargne">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">Épargne</span>
+  <span class="card-category" data-i18n="art.cat.epargne">Épargne</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">Les Bons du Trésor canadiens : une option pour les investisseurs prudents ?</div>
- <div class="card-excerpt">T-bills, CBIL.TO, TBIL.TO — comment y accéder, leurs avantages fiscaux et leurs limites par rapport aux ETF de croissance.</div>
- <a href="/articles/bons-tresor-canadiens.html" class="card-link">Lire l'article →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c11.title">Les Bons du Trésor canadiens : une option pour les investisseurs prudents ?</div>
+  <div class="card-excerpt" data-i18n="art.c11.excerpt">T-bills, CBIL.TO, TBIL.TO — comment y accéder, leurs avantages fiscaux et leurs limites par rapport aux ETF de croissance.</div>
+  <a href="/articles/bons-tresor-canadiens.html" class="card-link" data-i18n="art.readLink">Lire l'article →</a>
  </div>
  </div>
 
  <div class="article-card" data-tags="carrieres emploi salaire formation etudes liberte">
  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80');">
- <span class="card-category">Carrières</span>
+  <span class="card-category" data-i18n="art.cat.carrieres">Carrières</span>
  </div>
  <div class="card-body">
- <div class="card-date">Mai 2026</div>
- <div class="card-title">Explorateur de carrières au Canada — salaires, formations et programmes</div>
- <div class="card-excerpt">Trouve la profession qui correspond à ton profil. Salaires réels, durée des études, télétravail, perspectives d'emploi — filtre selon tes critères.</div>
- <a href="/carrieres/" class="card-link">Explorer les carrières →</a>
+  <div class="card-date">Mai 2026</div>
+  <div class="card-title" data-i18n="art.c12.title">Explorateur de carrières au Canada — salaires, formations et programmes</div>
+  <div class="card-excerpt" data-i18n="art.c12.excerpt">Trouve la profession qui correspond à ton profil. Salaires réels, durée des études, télétravail, perspectives d'emploi — filtre selon tes critères.</div>
+  <a href="/carrieres/" class="card-link" data-i18n="art.c12.link">Explorer les carrières →</a>
  </div>
  </div>
 
@@ -421,9 +419,9 @@
 
 <!-- CTA -->
 <div class="cta-bottom">
- <h2>Prêt à commencer ?</h2>
- <p>Ouvre ton CÉLI sur Wealthsimple — gratuit, sans commission, sans frais cachés.</p>
- <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener">Ouvrir un compte gratuit →</a>
+ <h2 data-i18n="art.cta.title">Prêt à commencer ?</h2>
+ <p data-i18n="art.cta.body">Ouvre ton CÉLI sur Wealthsimple — gratuit, sans commission, sans frais cachés.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" data-i18n="art.cta.btn" target="_blank" rel="sponsored nofollow noopener">Ouvrir un compte gratuit →</a>
 </div>
 
 <!-- FOOTER -->
@@ -437,14 +435,10 @@
  let activeKeyword = '';
 
  function filterByKeyword(el, keyword) {
- // Update active keyword tag
  document.querySelectorAll('.keyword').forEach(k => k.classList.remove('active'));
  el.classList.add('active');
  activeKeyword = keyword;
-
- // Clear search input
  document.getElementById('searchInput').value = '';
-
  filterArticles();
  }
 
@@ -456,28 +450,27 @@
  let visible = 0;
 
  cards.forEach(card => {
- const tags = card.getAttribute('data-tags') || '';
- const title = card.querySelector('.card-title').textContent.toLowerCase();
- const excerpt = card.querySelector('.card-excerpt').textContent.toLowerCase();
- const combined = tags + ' ' + title + ' ' + excerpt;
+  const tags = card.getAttribute('data-tags') || '';
+  const title = card.querySelector('.card-title').textContent.toLowerCase();
+  const excerpt = card.querySelector('.card-excerpt').textContent.toLowerCase();
+  const combined = tags + ' ' + title + ' ' + excerpt;
 
- if (!query || combined.includes(query)) {
- card.classList.remove('hidden');
- visible++;
- } else {
- card.classList.add('hidden');
- }
+  if (!query || combined.includes(query)) {
+  card.classList.remove('hidden');
+  visible++;
+  } else {
+  card.classList.add('hidden');
+  }
  });
 
- document.getElementById('articleCount').textContent = visible + ' article' + (visible> 1 ? 's' : '');
+ document.getElementById('articleCount').textContent = visible + ' article' + (visible > 1 ? 's' : '');
  document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
  }
 
- // Clear keyword when typing in search
  document.getElementById('searchInput').addEventListener('keyup', function(e) {
- if (this.value.length> 0) {
- document.querySelectorAll('.keyword').forEach(k => k.classList.remove('active'));
- activeKeyword = '';
+ if (this.value.length > 0) {
+  document.querySelectorAll('.keyword').forEach(k => k.classList.remove('active'));
+  activeKeyword = '';
  }
  if (e.key === 'Enter') filterArticles();
  });
