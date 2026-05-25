@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"c:\\\\Users\\\\Admin\\\\Dropbox\\\\17-PRODUITS NUMÉRIQUES\\\\BLOGUE FINANCE\\\\v11\\\\en\" \"c:\\\\Users\\\\Admin\\\\Dropbox\\\\17-PRODUITS NUMÉRIQUES\\\\BLOGUE FINANCE\\\\v11\\\\es\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Admin\\Dropbox\\17-PRODUITS NUMÉRIQUES\\BLOGUE FINANCE\\v11"
+    ]
+  }
+}

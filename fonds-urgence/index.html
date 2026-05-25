@@ -211,10 +211,10 @@
  <a href="/" class="nav-logo">Route vers le Million</a>
  <ul class="nav-links">
  <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
- <li><a href="/celi-reer/">CÉLI &amp; REER</a></li>
- <li><a href="/etf/">ETFs</a></li>
- <li><a href="/outils/">Outils</a></li>
- <li><a href="/articles/">Articles</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
+ <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
  </ul>
  <div style="display:flex;align-items:center;gap:10px;">
  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -231,27 +231,27 @@
  </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
- <a href="/">Accueil</a>
+ <a href="/" data-i18n="nav.accueil">Accueil</a>
  <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
- <a href="/celi-reer/">CÉLI &amp; REER</a>
- <a href="/etf/">ETFs</a>
- <a href="/outils/">Outils</a>
- <a href="/articles/">Tous les articles</a>
- <a href="/fonds-urgence/">Fonds d'urgence</a>
- <a href="/histoire/">Mon parcours</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Outils</a>
+ <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
  <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
  <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
  <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
  <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
  </div>
- <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener">Ouvrir Wealthsimple →</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
 </div>
 
 <div class="page-hero">
  <div class="page-hero-img"></div>
  <div class="page-hero-overlay"></div>
  <div class="page-hero-content">
- <p class="breadcrumb"><a href="/">Accueil</a> &nbsp;/&nbsp; Stratégies</p>
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; Stratégies</p>
  <p class="hero-tag">Épargne · Fonds d'urgence · Intérêts</p>
  <h1>Où mettre son<br><em>fonds d'urgence ?</em><br>Ce que j'ai appris</h1>
  </div>
@@ -399,7 +399,7 @@
  <div class="sidebar-body">
  <h3>Investis le reste</h3>
  <p>Ton fonds d'urgence est constitué ? Mets le reste au travail sur Wealthsimple.</p>
- <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank" rel="sponsored nofollow noopener">Ouvrir Wealthsimple →</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
  <a href="https://eqbank.ca" class="sidebar-btn outline" target="_blank">EQ Bank →</a>
  </div>
  </div>
@@ -420,13 +420,13 @@
 <div class="cta-bottom">
  <h2>Ton fonds d'urgence est prêt ?</h2>
  <p>Le reste va dans ton CÉLI sur Wealthsimple — et tu l'oublies pendant 20 ans.</p>
- <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener">Ouvrir Wealthsimple →</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
  <a href="/celi-reer/" class="cta-btn secondary">Ma stratégie CÉLI →</a>
 </div>
 
 <footer>
- <p><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
- <p>Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
   <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
 </footer>
 
