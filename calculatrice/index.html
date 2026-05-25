@@ -159,7 +159,7 @@
  .main-wrap { padding: 40px 20px 80px; }
  footer { padding: 24px; flex-direction: column; text-align: center; }
  }
- 
+
  /* HAMBURGER */
  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
  .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
@@ -241,9 +241,9 @@
  <div class="page-hero-img"></div>
  <div class="page-hero-overlay"></div>
  <div class="page-hero-content">
- <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; Outils</p>
- <p class="hero-tag">Outil gratuit · Intérêts composés · Québec</p>
- <h1>Calculatrice<br><em>d'intérêts composés</em></h1>
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <span data-i18n="nav.outils">Outils</span></p>
+ <p class="hero-tag" data-i18n="calc.hero.tag">Outil gratuit · Intérêts composés · Québec</p>
+ <h1 data-i18n="calc.hero.title">Calculatrice<br><em>d'intérêts composés</em></h1>
  </div>
 </div>
 
@@ -251,10 +251,10 @@
 
  <!-- FORM -->
  <div class="card">
- <div class="card-title">Vos paramètres</div>
+ <div class="card-title" data-i18n="calc.form.title">Vos paramètres</div>
 
  <div class="field">
- <label>Montant déjà épargné</label>
+ <label data-i18n="calc.label.initial">Montant déjà épargné</label>
  <div class="input-wrap">
  <span class="input-prefix">$</span>
  <input type="number" id="montantInitial" value="1000" min="0" oninput="calculate()"/>
@@ -262,7 +262,7 @@
  </div>
 
  <div class="field">
- <label>Montant ajouté régulièrement</label>
+ <label data-i18n="calc.label.regular">Montant ajouté régulièrement</label>
  <div class="input-wrap">
  <span class="input-prefix">$</span>
  <input type="number" id="montantRegulier" value="50" min="0" oninput="calculate()"/>
@@ -270,48 +270,48 @@
  </div>
 
  <div class="field">
- <label>Fréquence des dépôts</label>
+ <label data-i18n="calc.label.freq">Fréquence des dépôts</label>
  <select id="frequence" onchange="calculate()">
- <option value="52">Chaque semaine</option>
- <option value="104">Deux fois par semaine</option>
- <option value="26" selected>Aux deux semaines</option>
- <option value="12">Chaque mois</option>
+ <option value="52" data-i18n="calc.freq.weekly">Chaque semaine</option>
+ <option value="104" data-i18n="calc.freq.twice">Deux fois par semaine</option>
+ <option value="26" selected data-i18n="calc.freq.biweekly">Aux deux semaines</option>
+ <option value="12" data-i18n="calc.freq.monthly">Chaque mois</option>
  </select>
  </div>
 
  <div class="field">
- <label>Durée de l'investissement (années)</label>
+ <label data-i18n="calc.label.duration">Durée de l'investissement (années)</label>
  <div class="input-wrap">
- <span class="input-prefix" style="font-size:12px;left:12px;">ans</span>
+ <span class="input-prefix" style="font-size:12px;left:12px;" data-i18n="calc.unit.years">ans</span>
  <input type="number" id="duree" value="20" min="1" max="50" oninput="calculate()" style="padding-left:48px;"/>
  </div>
  </div>
 
  <div class="field">
- <label>Type de rendement estimé</label>
+ <label data-i18n="calc.label.return">Type de rendement estimé</label>
  <div class="rendement-group">
  <button class="rendement-btn" onclick="setRendement(4, this)">
  <span class="rate">4%</span>
- <span class="label">Conservateur</span>
+ <span class="label" data-i18n="calc.return.conservative">Conservateur</span>
  </button>
  <button class="rendement-btn active" onclick="setRendement(7, this)">
  <span class="rate">7%</span>
- <span class="label">Modéré</span>
+ <span class="label" data-i18n="calc.return.moderate">Modéré</span>
  </button>
  <button class="rendement-btn" onclick="setRendement(10, this)">
  <span class="rate">10%</span>
- <span class="label">Dynamique</span>
+ <span class="label" data-i18n="calc.return.aggressive">Dynamique</span>
  </button>
  </div>
  </div>
 
  <div class="btn-group">
- <button class="btn-calc" onclick="calculate()">Calculer →</button>
- <button class="btn-reset" onclick="resetForm()">Réinit.</button>
+ <button class="btn-calc" onclick="calculate()" data-i18n="calc.btn.calculate">Calculer →</button>
+ <button class="btn-reset" onclick="resetForm()" data-i18n="calc.btn.reset">Réinit.</button>
  </div>
 
  <div class="info-box" style="margin-top:24px;">
- <p>Cette page a été créée pour vous aider à visualiser le potentiel de vos économies à long terme. Même de <strong>petits montants investis régulièrement</strong> peuvent croître considérablement grâce à la puissance des intérêts composés.</p>
+ <p data-i18n="calc.info1">Cette page a été créée pour vous aider à visualiser le potentiel de vos économies à long terme. Même de <strong>petits montants investis régulièrement</strong> peuvent croître considérablement grâce à la puissance des intérêts composés.</p>
  </div>
  </div>
 
@@ -319,50 +319,50 @@
  <div>
  <div class="results-grid">
  <div class="result-card investi" id="cardInvesti">
- <span class="result-label">Total investi</span>
+ <span class="result-label" data-i18n="calc.res.invested">Total investi</span>
  <span class="result-amount" id="totalInvesti">—</span>
- <span class="result-sub">De votre poche</span>
+ <span class="result-sub" data-i18n="calc.res.invested.sub">De votre poche</span>
  </div>
  <div class="result-card interets" id="cardInterets">
- <span class="result-label">Intérêts gagnés</span>
+ <span class="result-label" data-i18n="calc.res.interest">Intérêts gagnés</span>
  <span class="result-amount" id="totalInterets">—</span>
- <span class="result-sub">Argent gratuit </span>
+ <span class="result-sub" data-i18n="calc.res.interest.sub">Argent gratuit </span>
  </div>
  <div class="result-card total" id="cardTotal">
- <span class="result-label">Montant final</span>
+ <span class="result-label" data-i18n="calc.res.total">Montant final</span>
  <span class="result-amount" id="montantFinal">—</span>
- <span class="result-sub">Estimation</span>
+ <span class="result-sub" data-i18n="calc.res.total.sub">Estimation</span>
  </div>
  </div>
 
  <div class="multiplier-bar" id="multiplierBar">
- <span class="multiplier-text">Votre argent a été multiplié par</span>
+ <span class="multiplier-text" data-i18n="calc.multiplier">Votre argent a été multiplié par</span>
  <span class="multiplier-num" id="multiplierNum">—</span>
  </div>
 
  <div class="chart-wrap" id="chartWrap">
- <div class="chart-title">Évolution de votre épargne année par année</div>
+ <div class="chart-title" data-i18n="calc.chart.title">Évolution de votre épargne année par année</div>
  <div id="chartPlaceholder" class="placeholder">
  <div class="icon"></div>
- <p>Entrez vos paramètres et cliquez sur Calculer</p>
+ <p data-i18n="calc.chart.placeholder">Entrez vos paramètres et cliquez sur Calculer</p>
  </div>
  <canvas id="myChart" style="display:none;"></canvas>
  </div>
 
  <div class="info-box" style="margin-top:20px;">
- <p><strong>Commencer tôt, même avec de petits montants, peut faire une énorme différence.</strong> La constance est souvent plus puissante que le montant investi. Un dépôt de 50$ aux deux semaines pendant 20 ans peut devenir plus de 70 000$ — avec seulement 26 000$ de votre poche.</p>
+ <p data-i18n="calc.info2"><strong>Commencer tôt, même avec de petits montants, peut faire une énorme différence.</strong> La constance est souvent plus puissante que le montant investi. Un dépôt de 50$ aux deux semaines pendant 20 ans peut devenir plus de 70 000$ — avec seulement 26 000$ de votre poche.</p>
  </div>
  </div>
 
 </div>
 
 <div class="cta-bottom">
- <h2>Prêt à commencer ?</h2>
- <p>Ouvre ton CÉLI sur Wealthsimple — gratuit, sans commission, sans frais cachés.</p>
- <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener">Ouvrir un compte gratuit →</a>
+ <h2 data-i18n="calc.cta.title">Prêt à commencer ?</h2>
+ <p data-i18n="calc.cta.body">Ouvre ton CÉLI sur Wealthsimple — gratuit, sans commission, sans frais cachés.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="calc.cta.btn">Ouvrir un compte gratuit →</a>
 </div>
 
-<div class="disclaimer">
+<div class="disclaimer" data-i18n="calc.disclaimer">
  Les calculs présentés sur cette page sont fournis à titre indicatif seulement et ne constituent pas des conseils financiers ou des garanties de rendement. Les rendements passés ne garantissent pas les rendements futurs. Consultez un professionnel pour votre situation spécifique.
 </div>
 
