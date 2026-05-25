@@ -227,16 +227,16 @@
  <div class="page-hero-img"></div>
  <div class="page-hero-overlay"></div>
  <div class="page-hero-content">
- <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/outils/" data-i18n="nav.outils">Outils</a> &nbsp;/&nbsp; Retraite</p>
- <p class="hero-tag">Outil gratuit · Simulation · Retraite</p>
- <h1>Calculatrice de retraite —<br><em>combien aurez-vous ?</em></h1>
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/outils/" data-i18n="nav.outils">Outils</a> &nbsp;/&nbsp; <span data-i18n="calcret.hero.breadcrumb">Retraite</span></p>
+ <p class="hero-tag" data-i18n="calcret.hero.tag">Outil gratuit · Simulation · Retraite</p>
+ <h1 data-i18n="calcret.hero.title">Calculatrice de retraite —<br><em>combien aurez-vous ?</em></h1>
  </div>
 </div>
 
 <!-- INTRO -->
 <div class="intro-section">
- <p>Combien faut-il épargner pour prendre sa retraite confortablement ? Cette calculatrice vous permet d'estimer votre capital futur et le revenu mensuel que vous pourriez en tirer, en tenant compte des intérêts composés, de l'inflation et de votre horizon de placement.</p>
- <p>Ajustez les paramètres ci-dessous pour obtenir une simulation personnalisée. Les résultats se mettent à jour instantanément.</p>
+ <p data-i18n="calcret.intro.p1">Combien faut-il épargner pour prendre sa retraite confortablement ? Cette calculatrice vous permet d'estimer votre capital futur et le revenu mensuel que vous pourriez en tirer, en tenant compte des intérêts composés, de l'inflation et de votre horizon de placement.</p>
+ <p data-i18n="calcret.intro.p2">Ajustez les paramètres ci-dessous pour obtenir une simulation personnalisée. Les résultats se mettent à jour instantanément.</p>
 </div>
 
 <!-- CALCULATOR -->
@@ -244,26 +244,26 @@
 
  <!-- INPUTS -->
  <div class="calc-inputs">
- <h2>Vos paramètres</h2>
+ <h2 data-i18n="calc.form.title">Vos paramètres</h2>
 
  <div class="field">
- <label for="inp-age">Age actuel</label>
+ <label for="inp-age" data-i18n="calcret.label.age">Age actuel</label>
  <div class="field-row">
  <input type="number" id="inp-age" value="35" min="18" max="99" step="1" oninput="calculate()"/>
- <span class="field-unit">ans</span>
+ <span class="field-unit" data-i18n="calc.unit.years">ans</span>
  </div>
  </div>
 
  <div class="field">
- <label for="inp-age-ret">Age de retraite visé</label>
+ <label for="inp-age-ret" data-i18n="calcret.label.ageRet">Age de retraite visé</label>
  <div class="field-row">
  <input type="number" id="inp-age-ret" value="65" min="19" max="100" step="1" oninput="calculate()"/>
- <span class="field-unit">ans</span>
+ <span class="field-unit" data-i18n="calc.unit.years">ans</span>
  </div>
  </div>
 
  <div class="field">
- <label for="inp-epargne">Épargne actuelle</label>
+ <label for="inp-epargne" data-i18n="calcret.label.epargne">Épargne actuelle</label>
  <div class="field-row">
  <input type="number" id="inp-epargne" value="10000" min="0" step="100" oninput="calculate()"/>
  <span class="field-unit">$</span>
@@ -271,15 +271,15 @@
  </div>
 
  <div class="field">
- <label for="inp-cotisation">Cotisation mensuelle</label>
+ <label for="inp-cotisation" data-i18n="calcret.label.cotisation">Cotisation mensuelle</label>
  <div class="field-row">
  <input type="number" id="inp-cotisation" value="500" min="0" step="50" oninput="calculate()"/>
- <span class="field-unit">$/mois</span>
+ <span class="field-unit" data-i18n="calcret.unit.perMonth">$/mois</span>
  </div>
  </div>
 
  <div class="field">
- <label for="inp-rendement">Rendement annuel attendu</label>
+ <label for="inp-rendement" data-i18n="calcret.label.rendement">Rendement annuel attendu</label>
  <div class="field-row">
  <input type="number" id="inp-rendement" value="7" min="0" max="20" step="0.1" oninput="calculate()"/>
  <span class="field-unit">%</span>
@@ -287,7 +287,7 @@
  </div>
 
  <div class="field">
- <label for="inp-inflation">Inflation annuelle</label>
+ <label for="inp-inflation" data-i18n="calcret.label.inflation">Inflation annuelle</label>
  <div class="field-row">
  <input type="number" id="inp-inflation" value="2" min="0" max="10" step="0.1" oninput="calculate()"/>
  <span class="field-unit">%</span>
@@ -295,50 +295,50 @@
  </div>
 
  <div class="field">
- <label for="inp-retrait">Taux de retrait à la retraite</label>
+ <label for="inp-retrait" data-i18n="calcret.label.retrait">Taux de retrait à la retraite</label>
  <div class="field-row">
  <input type="number" id="inp-retrait" value="4" min="1" max="10" step="0.1" oninput="calculate()"/>
- <span class="field-unit">%/an</span>
+ <span class="field-unit" data-i18n="calcret.unit.perYear">%/an</span>
  </div>
  </div>
  </div>
 
  <!-- RESULTS -->
  <div class="calc-results">
- <h2>Résultats</h2>
+ <h2 data-i18n="calcret.results.title">Résultats</h2>
 
  <div class="result-card primary">
- <span class="result-label">Capital à la retraite (dollars futurs)</span>
+ <span class="result-label" data-i18n="calcret.res.capital">Capital à la retraite (dollars futurs)</span>
  <span class="result-value" id="res-capital">—</span>
  <span class="result-sub" id="res-annees">— années d'accumulation</span>
  </div>
 
  <div class="result-card">
- <span class="result-label">Capital ajusté pour l'inflation (dollars d'aujourd'hui)</span>
+ <span class="result-label" data-i18n="calcret.res.capitalReel">Capital ajusté pour l'inflation (dollars d'aujourd'hui)</span>
  <span class="result-value" id="res-capital-reel">—</span>
  </div>
 
  <div class="results-grid-2">
  <div class="result-card">
- <span class="result-label">Revenu mensuel</span>
+ <span class="result-label" data-i18n="calcret.res.revenuMensuel">Revenu mensuel</span>
  <span class="result-value" id="res-revenu" style="font-size:22px;">—</span>
- <span class="result-sub">dollars futurs</span>
+ <span class="result-sub" data-i18n="calcret.res.futurs">dollars futurs</span>
  </div>
  <div class="result-card">
- <span class="result-label">Revenu mensuel réel</span>
+ <span class="result-label" data-i18n="calcret.res.revenuReel">Revenu mensuel réel</span>
  <span class="result-value" id="res-revenu-reel" style="font-size:22px;">—</span>
- <span class="result-sub">dollars d'aujourd'hui</span>
+ <span class="result-sub" data-i18n="calcret.res.aujourdhui">dollars d'aujourd'hui</span>
  </div>
  </div>
 
  <div class="proportion-wrap">
- <span class="proportion-label">Cotisations vs intérêts générés</span>
+ <span class="proportion-label" data-i18n="calcret.res.proportion">Cotisations vs intérêts générés</span>
  <div class="proportion-bar">
  <div class="proportion-fill" id="prop-fill"></div>
  </div>
  <div class="proportion-legend">
- <span>Cotisations : <strong id="prop-cotisations">—</strong></span>
- <span>Intérêts : <strong id="prop-interets">—</strong></span>
+ <span><span data-i18n="calcret.prop.cotisations">Cotisations</span> : <strong id="prop-cotisations">—</strong></span>
+ <span><span data-i18n="calcret.prop.interets">Intérêts</span> : <strong id="prop-interets">—</strong></span>
  </div>
  </div>
  </div>
@@ -347,7 +347,7 @@
 
 <!-- CHART -->
 <div class="chart-section">
- <h2>Croissance du portefeuille année par année</h2>
+ <h2 data-i18n="calcret.chart.title">Croissance du portefeuille année par année</h2>
  <div class="chart-container">
  <canvas id="retraiteChart" aria-label="Graphique de croissance du portefeuille"></canvas>
  </div>
@@ -355,31 +355,31 @@
 
 <!-- INTERPRET -->
 <div class="interpret-section">
- <h2>Comment interpréter ces résultats</h2>
+ <h2 data-i18n="calcret.interpret.title">Comment interpréter ces résultats</h2>
 
- <h3>Capital nominal et capital réel</h3>
- <p>Le capital nominal est la valeur brute de votre portefeuille à la retraite, en dollars futurs. Le capital réel est ce même montant converti en pouvoir d'achat d'aujourd'hui, après avoir tenu compte de l'inflation. C'est ce dernier chiffre qui reflète le mieux ce que vous pourrez réellement vous offrir.</p>
+ <h3 data-i18n="calcret.interpret.h3.1">Capital nominal et capital réel</h3>
+ <p data-i18n="calcret.interpret.p1">Le capital nominal est la valeur brute de votre portefeuille à la retraite, en dollars futurs. Le capital réel est ce même montant converti en pouvoir d'achat d'aujourd'hui, après avoir tenu compte de l'inflation. C'est ce dernier chiffre qui reflète le mieux ce que vous pourrez réellement vous offrir.</p>
 
- <h3>Le taux de retrait</h3>
- <p>Le taux de retrait correspond au pourcentage du capital que vous retirez chaque année à la retraite. La règle des 4 % est souvent citée comme un point de départ : elle suggère qu'un portefeuille bien diversifié peut théoriquement soutenir des retraits annuels de 4 % pendant 30 ans ou plus. Ce n'est pas une garantie — c'est une référence de planification.</p>
+ <h3 data-i18n="calcret.interpret.h3.2">Le taux de retrait</h3>
+ <p data-i18n="calcret.interpret.p2">Le taux de retrait correspond au pourcentage du capital que vous retirez chaque année à la retraite. La règle des 4 % est souvent citée comme un point de départ : elle suggère qu'un portefeuille bien diversifié peut théoriquement soutenir des retraits annuels de 4 % pendant 30 ans ou plus. Ce n'est pas une garantie — c'est une référence de planification.</p>
 
- <h3>Le rendement attendu</h3>
- <p>Le rendement que vous inscrivez a une influence considérable sur les résultats. Les marchés ne progressent pas de façon linéaire : certaines années sont excellentes, d'autres sont négatives. Cette calculatrice suppose un rendement constant, ce qui est une simplification. Les résultats réels dépendront des conditions de marché au fil du temps.</p>
+ <h3 data-i18n="calcret.interpret.h3.3">Le rendement attendu</h3>
+ <p data-i18n="calcret.interpret.p3">Le rendement que vous inscrivez a une influence considérable sur les résultats. Les marchés ne progressent pas de façon linéaire : certaines années sont excellentes, d'autres sont négatives. Cette calculatrice suppose un rendement constant, ce qui est une simplification. Les résultats réels dépendront des conditions de marché au fil du temps.</p>
 
  <div class="note-box">
- <p><strong>Limites de cette simulation :</strong> cette calculatrice ne tient pas compte des impôts sur les retraits (sauf si vous utilisez un CÉLI), des cotisations au Régime de rentes du Québec (RRQ), de la Sécurité de la vieillesse (SV) ni de l'évolution de vos revenus et dépenses dans le temps. Elle est conçue pour donner un ordre de grandeur, pas une projection certifiée.</p>
+ <p data-i18n="calcret.note"><strong>Limites de cette simulation :</strong> cette calculatrice ne tient pas compte des impôts sur les retraits (sauf si vous utilisez un CÉLI), des cotisations au Régime de rentes du Québec (RRQ), de la Sécurité de la vieillesse (SV) ni de l'évolution de vos revenus et dépenses dans le temps. Elle est conçue pour donner un ordre de grandeur, pas une projection certifiée.</p>
  </div>
 </div>
 
 <!-- CTA -->
 <div class="cta-bottom">
- <h2>Prêt à mettre votre plan en action ?</h2>
- <p>Ouvre ton CÉLI sur Wealthsimple et commence à investir selon ta stratégie — gratuit, sans commission.</p>
+ <h2 data-i18n="calcret.cta.title">Prêt à mettre votre plan en action ?</h2>
+ <p data-i18n="calcret.cta.body">Ouvre ton CÉLI sur Wealthsimple et commence à investir selon ta stratégie — gratuit, sans commission.</p>
  <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
- <a href="/outils/" class="cta-btn secondary">Tous les outils →</a>
+ <a href="/outils/" class="cta-btn secondary" data-i18n="calcret.cta.tools">Tous les outils →</a>
 </div>
 
-<p class="disclaimer">Ceci est un outil de simulation à titre informatif et ne constitue pas un conseil financier. Les projections affichées sont basées sur des hypothèses simplifiées et ne garantissent aucun résultat. Consultez un planificateur financier agréé pour des conseils adaptés à votre situation.</p>
+<p class="disclaimer" data-i18n="calcret.disclaimer">Ceci est un outil de simulation à titre informatif et ne constitue pas un conseil financier. Les projections affichées sont basées sur des hypothèses simplifiées et ne garantissent aucun résultat. Consultez un planificateur financier agréé pour des conseils adaptés à votre situation.</p>
 
 <!-- FOOTER -->
 <footer>
@@ -392,8 +392,8 @@
 function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}
 
 function fmt(n) {
- if (isNaN(n) || !isFinite(n) || n < 0) return '0 $';
- return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' $';
+ if (isNaN(n) || !isFinite(n) || n < 0) return '0 $';
+ return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' $';
 }
 
 function fmtM(n) {
@@ -515,8 +515,8 @@ document.addEventListener('DOMContentLoaded', function() {
  callbacks: {
  label: function(ctx) {
  var v = ctx.parsed.y;
- var s = Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
- return ctx.dataset.label + ' : ' + s + ' $';
+ var s = Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+ return ctx.dataset.label + ' : ' + s + ' $';
  }
  }
  }
@@ -526,9 +526,9 @@ document.addEventListener('DOMContentLoaded', function() {
  beginAtZero: true,
  ticks: {
  callback: function(v) {
- if (v >= 1000000) return (v / 1000000).toFixed(1) + 'M $';
- if (v >= 1000) return (v / 1000).toFixed(0) + 'k $';
- return v + ' $';
+ if (v >= 1000000) return (v / 1000000).toFixed(1) + 'M $';
+ if (v >= 1000) return (v / 1000).toFixed(0) + 'k $';
+ return v + ' $';
  },
  font: { family: 'Jost', size: 11 },
  color: '#607848',
@@ -550,5 +550,6 @@ document.addEventListener('DOMContentLoaded', function() {
  calculate();
 });
 </script>
+<script src="/translations.js"></script>
 </body>
 </html>
