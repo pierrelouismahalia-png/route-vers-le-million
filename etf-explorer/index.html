@@ -162,13 +162,13 @@
   <div class="hero-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-tag">Donnees en temps reel</span>
-    <h1>Radar ETF — <em>Canada et Etats-Unis</em></h1>
-    <p>Prix en direct, frais de gestion, dividendes — tous les fonds indiciels populaires pour investisseurs canadiens.</p>
+    <span class="hero-tag" data-i18n="radar.hero.tag">Donnees en temps reel</span>
+    <h1 data-i18n="radar.hero.title">Radar ETF — <em>Canada et Etats-Unis</em></h1>
+    <p data-i18n="radar.hero.sub">Prix en direct, frais de gestion, dividendes — tous les fonds indiciels populaires pour investisseurs canadiens.</p>
   </div>
 </div>
 <div class="live-bar">
-  <div><span class="live-dot"></span><span class="live-text">Donnees en direct — Financial Modeling Prep</span></div>
+  <div><span class="live-dot"></span><span class="live-text" data-i18n="radar.live.text">Donnees en direct — Financial Modeling Prep</span></div>
   <span class="live-update" id="lastUpdate">Chargement en cours...</span>
 </div>
 <div class="controls-bar">
@@ -178,66 +178,66 @@
     </div>
     <div class="selects">
       <select id="regionFilter" onchange="render()">
-        <option value="">Canada + USA</option>
-        <option value="CA">Canada (TSX)</option>
-        <option value="US">Etats-Unis</option>
+        <option value="" data-i18n="radar.region.all">Canada + USA</option>
+        <option value="CA" data-i18n="radar.region.ca">Canada (TSX)</option>
+        <option value="US" data-i18n="radar.region.us">Etats-Unis</option>
       </select>
       <select id="catFilter" onchange="render()">
-        <option value="">Toutes categories</option>
-        <option value="Actions">Actions</option>
-        <option value="Croissance">Croissance</option>
-        <option value="Dividendes">Dividendes</option>
-        <option value="Obligations">Obligations</option>
-        <option value="Sectoriel">Sectoriel</option>
-        <option value="Equilibre">Equilibre</option>
-        <option value="Liquidite">Liquidite</option>
+        <option value="" data-i18n="radar.cat.all">Toutes categories</option>
+        <option value="Actions" data-i18n="radar.cat.actions">Actions</option>
+        <option value="Croissance" data-i18n="radar.cat.croissance">Croissance</option>
+        <option value="Dividendes" data-i18n="radar.cat.dividendes">Dividendes</option>
+        <option value="Obligations" data-i18n="radar.cat.obligations">Obligations</option>
+        <option value="Sectoriel" data-i18n="radar.cat.sectoriel">Sectoriel</option>
+        <option value="Equilibre" data-i18n="radar.cat.equilibre">Equilibre</option>
+        <option value="Liquidite" data-i18n="radar.cat.liquidite">Liquidite</option>
       </select>
       <select id="sortSelect" onchange="render()">
-        <option value="">Tri par defaut</option>
-        <option value="price-desc">Prix decroissant</option>
-        <option value="chg-desc">Meilleurs gains</option>
-        <option value="chg-asc">Plus en baisse</option>
-        <option value="mer-asc">Frais croissants</option>
-        <option value="az">A a Z</option>
+        <option value="" data-i18n="radar.sort.default">Tri par defaut</option>
+        <option value="price-desc" data-i18n="radar.sort.priceDesc">Prix decroissant</option>
+        <option value="chg-desc" data-i18n="radar.sort.chgDesc">Meilleurs gains</option>
+        <option value="chg-asc" data-i18n="radar.sort.chgAsc">Plus en baisse</option>
+        <option value="mer-asc" data-i18n="radar.sort.merAsc">Frais croissants</option>
+        <option value="az" data-i18n="radar.sort.az">A a Z</option>
       </select>
     </div>
   </div>
 </div>
 <div class="chips-bar">
   <div class="chips-inner">
-    <span class="chips-lbl">Filtre rapide</span>
-    <button class="chip active" onclick="setChip(this,&quot;all&quot;)">Tous</button>
-    <button class="chip" onclick="setChip(this,&quot;debutant&quot;)">Debutant</button>
-    <button class="chip" onclick="setChip(this,&quot;faibles-frais&quot;)">Faibles frais</button>
-    <button class="chip" onclick="setChip(this,&quot;dividendes&quot;)">Dividendes</button>
-    <button class="chip" onclick="setChip(this,&quot;tech&quot;)">Technologie</button>
-    <button class="chip" onclick="setChip(this,&quot;obligations&quot;)">Obligations</button>
-    <button class="chip" onclick="setChip(this,&quot;liquidite&quot;)">Liquidite</button>
+    <span class="chips-lbl" data-i18n="radar.filter.lbl">Filtre rapide</span>
+    <button class="chip active" data-i18n="radar.chip.all" onclick="setChip(this,&quot;all&quot;)">Tous</button>
+    <button class="chip" data-i18n="radar.chip.debutant" onclick="setChip(this,&quot;debutant&quot;)">Debutant</button>
+    <button class="chip" data-i18n="radar.chip.frais" onclick="setChip(this,&quot;faibles-frais&quot;)">Faibles frais</button>
+    <button class="chip" data-i18n="radar.chip.dividendes" onclick="setChip(this,&quot;dividendes&quot;)">Dividendes</button>
+    <button class="chip" data-i18n="radar.chip.tech" onclick="setChip(this,&quot;tech&quot;)">Technologie</button>
+    <button class="chip" data-i18n="radar.chip.obl" onclick="setChip(this,&quot;obligations&quot;)">Obligations</button>
+    <button class="chip" data-i18n="radar.chip.liq" onclick="setChip(this,&quot;liquidite&quot;)">Liquidite</button>
   </div>
 </div>
 <div class="results-wrap">
   <div class="results-bar">
-    <div class="results-count"><strong id="shownCount">--</strong> ETFs affiches</div>
+    <div class="results-count"><strong id="shownCount">--</strong> <span data-i18n="radar.results.suffix">ETFs affiches</span></div>
   </div>
   <div class="table-wrap">
     <table>
       <thead><tr>
-        <th>ETF</th><th>Categorie</th><th>Bourse</th><th>Prix</th>
-        <th>Variation</th><th>Haut / Bas 52 sem.</th><th>Frais MER</th><th></th>
+        <th>ETF</th><th data-i18n="radar.th.categorie">Categorie</th><th data-i18n="radar.th.bourse">Bourse</th><th data-i18n="radar.th.prix">Prix</th>
+        <th data-i18n="radar.th.variation">Variation</th><th data-i18n="radar.th.range">Haut / Bas 52 sem.</th><th data-i18n="radar.th.mer">Frais MER</th><th></th>
       </tr></thead>
       <tbody id="tbody"></tbody>
     </table>
   </div>
 </div>
 <div style="background:var(--cream2);text-align:center;padding:60px 48px;border-top:1px solid var(--border);">
-  <p style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--terra);margin-bottom:14px;">Investir sans commission</p>
-  <h2 style="font-family:Playfair Display,serif;font-size:28px;font-weight:400;color:var(--text);margin-bottom:10px;">Achetez ces ETFs gratuitement sur Wealthsimple</h2>
-  <p style="font-size:14px;color:var(--muted);margin-bottom:26px;max-width:380px;margin-left:auto;margin-right:auto;line-height:1.75;">Zero commission, zero frais caches. Ouvre ton CELI en 10 minutes depuis ton telephone.</p>
-  <a href="https://wealthsimple.com/invite/G7ZSVC" style="display:inline-block;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;padding:13px 32px;text-decoration:none;border-radius:2px;" target="_blank" rel="sponsored nofollow noopener">Ouvrir un compte gratuit</a>
+  <p data-i18n="radar.cta.tag" style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--terra);margin-bottom:14px;">Investir sans commission</p>
+  <h2 data-i18n="radar.cta.title" style="font-family:Playfair Display,serif;font-size:28px;font-weight:400;color:var(--text);margin-bottom:10px;">Achetez ces ETFs gratuitement sur Wealthsimple</h2>
+  <p data-i18n="radar.cta.body" style="font-size:14px;color:var(--muted);margin-bottom:26px;max-width:380px;margin-left:auto;margin-right:auto;line-height:1.75;">Zero commission, zero frais caches. Ouvre ton CELI en 10 minutes depuis ton telephone.</p>
+  <a href="https://wealthsimple.com/invite/G7ZSVC" data-i18n="radar.cta.btn" style="display:inline-block;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;padding:13px 32px;text-decoration:none;border-radius:2px;" target="_blank" rel="sponsored nofollow noopener">Ouvrir un compte gratuit</a>
 </div>
 <footer>
   <p><strong style="color:var(--muted);font-weight:400;">Route vers le Million</strong> &nbsp;&middot;&nbsp; <a href="/">route-vers-le-million.blog</a></p>
-  <p>Source : Financial Modeling Prep API &middot; Plateforme educative &middot; Aucun conseil financier</p>
+  <p data-i18n="radar.footer.data">Source : Financial Modeling Prep API &middot; Plateforme educative &middot; Aucun conseil financier</p>
   <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
 </footer>
 <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
