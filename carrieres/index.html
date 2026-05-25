@@ -149,64 +149,64 @@
   <div class="hero-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-tag">Donnees du marche de l'emploi</span>
-    <h1>Trouve ta carriere <em>au Canada</em></h1>
-    <p>Salaires reels, offres actives en ce moment, perspectives — donnees en direct du marche canadien via Adzuna.</p>
+    <span class="hero-tag" data-i18n="car.hero.tag">Donnees du marche de l'emploi</span>
+    <h1 data-i18n="car.hero.title">Trouve ta carriere <em>au Canada</em></h1>
+    <p data-i18n="car.hero.sub">Salaires reels, offres actives en ce moment, perspectives — donnees en direct du marche canadien via Adzuna.</p>
   </div>
 </div>
 <div class="live-bar">
-  <div><span class="live-dot"></span><span class="live-text">Donnees en direct — Adzuna Canada</span></div>
+  <div><span class="live-dot"></span><span class="live-text" data-i18n="car.live.text">Donnees en direct — Adzuna Canada</span></div>
   <span class="live-update" id="lastUpdate">Chargement...</span>
 </div>
 <div class="search-bar">
   <div class="search-inner">
     <input type="text" id="searchInput" placeholder="Rechercher une profession — ex. developpeur, infirmier, comptable..." oninput="applyFilters()">
     <select id="catFilter" onchange="applyFilters()">
-      <option value="">Tous les secteurs</option>
-      <option value="tech">Technologie</option>
-      <option value="finance">Finance</option>
-      <option value="sante">Sante</option>
-      <option value="immigration">Immigration et droit</option>
-      <option value="construction">Construction</option>
-      <option value="admin">Administration</option>
-      <option value="education">Education</option>
-      <option value="creatif">Creatif et design</option>
+      <option value="" data-i18n="car.select.all">Tous les secteurs</option>
+      <option value="tech" data-i18n="car.select.tech">Technologie</option>
+      <option value="finance" data-i18n="car.select.finance">Finance</option>
+      <option value="sante" data-i18n="car.select.sante">Sante</option>
+      <option value="immigration" data-i18n="car.select.imm">Immigration et droit</option>
+      <option value="construction" data-i18n="car.select.const">Construction</option>
+      <option value="admin" data-i18n="car.select.admin">Administration</option>
+      <option value="education" data-i18n="car.select.edu">Education</option>
+      <option value="creatif" data-i18n="car.select.creatif">Creatif et design</option>
     </select>
     <select id="sortSelect" onchange="applyFilters()">
-      <option value="">Tri par defaut</option>
-      <option value="sal-desc">Salaire decroissant</option>
-      <option value="offres-desc">Plus d'offres</option>
-      <option value="az">A a Z</option>
+      <option value="" data-i18n="car.sort.default">Tri par defaut</option>
+      <option value="sal-desc" data-i18n="car.sort.salDesc">Salaire decroissant</option>
+      <option value="offres-desc" data-i18n="car.sort.offres">Plus d'offres</option>
+      <option value="az" data-i18n="car.sort.az">A a Z</option>
     </select>
   </div>
 </div>
 <div class="chips-bar">
   <div class="chips-inner">
-    <span class="chips-lbl">Filtre rapide</span>
-    <button class="chip active" onclick="setChip(this,'all')">Tous</button>
-    <button class="chip" onclick="setChip(this,'teletravail')">Teletravail</button>
-    <button class="chip" onclick="setChip(this,'formation-courte')">Formation courte</button>
-    <button class="chip" onclick="setChip(this,'autonome')">Travail autonome</button>
-    <button class="chip" onclick="setChip(this,'demande')">En forte demande</button>
-    <button class="chip" onclick="setChip(this,'sal-eleve')">Salaire eleve</button>
+    <span class="chips-lbl" data-i18n="car.filter.lbl">Filtre rapide</span>
+    <button class="chip active" data-i18n="car.chip.all" onclick="setChip(this,'all')">Tous</button>
+    <button class="chip" data-i18n="car.chip.teletravail" onclick="setChip(this,'teletravail')">Teletravail</button>
+    <button class="chip" data-i18n="car.chip.formCourte" onclick="setChip(this,'formation-courte')">Formation courte</button>
+    <button class="chip" data-i18n="car.chip.autonome" onclick="setChip(this,'autonome')">Travail autonome</button>
+    <button class="chip" data-i18n="car.chip.demande" onclick="setChip(this,'demande')">En forte demande</button>
+    <button class="chip" data-i18n="car.chip.salEleve" onclick="setChip(this,'sal-eleve')">Salaire eleve</button>
   </div>
 </div>
 <div class="results-wrap">
   <div class="results-bar">
-    <div class="results-count"><strong id="shownCount">--</strong> professions — donnees Adzuna Canada</div>
+    <div class="results-count"><strong id="shownCount">--</strong> <span data-i18n="car.results.suffix">professions — donnees Adzuna Canada</span></div>
   </div>
   <div class="grid" id="careersGrid"></div>
 </div>
 <div style="background:var(--cream2);text-align:center;padding:56px 48px;border-top:1px solid var(--border);">
-  <p style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--terra);margin-bottom:14px;">Investir dans son avenir</p>
-  <h2 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:var(--text);margin-bottom:10px;">Changer de carriere et investir en meme temps</h2>
-  <p style="font-size:14px;color:var(--muted);margin-bottom:24px;max-width:400px;margin-left:auto;margin-right:auto;line-height:1.75;">Chaque augmentation de salaire est une opportunite d'investir davantage. Meme 50$ de plus par mois peut faire une difference enorme sur 20 ans.</p>
-  <a href="/calculatrice/" style="display:inline-block;border:1px solid var(--border);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;color:var(--text);border-radius:2px;margin-right:10px;">Voir la calculatrice</a>
-  <a href="https://wealthsimple.com/invite/G7ZSVC" style="display:inline-block;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;border-radius:2px;" target="_blank" rel="sponsored nofollow noopener">Ouvrir un CELI gratuit</a>
+  <p data-i18n="car.cta.tag" style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--terra);margin-bottom:14px;">Investir dans son avenir</p>
+  <h2 data-i18n="car.cta.title" style="font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:var(--text);margin-bottom:10px;">Changer de carriere et investir en meme temps</h2>
+  <p data-i18n="car.cta.body" style="font-size:14px;color:var(--muted);margin-bottom:24px;max-width:400px;margin-left:auto;margin-right:auto;line-height:1.75;">Chaque augmentation de salaire est une opportunite d'investir davantage. Meme 50$ de plus par mois peut faire une difference enorme sur 20 ans.</p>
+  <a href="/calculatrice/" data-i18n="car.cta.calc" style="display:inline-block;border:1px solid var(--border);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;color:var(--text);border-radius:2px;margin-right:10px;">Voir la calculatrice</a>
+  <a href="https://wealthsimple.com/invite/G7ZSVC" data-i18n="car.cta.celi" style="display:inline-block;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;border-radius:2px;" target="_blank" rel="sponsored nofollow noopener">Ouvrir un CELI gratuit</a>
 </div>
 <footer>
   <p><strong style="color:var(--muted);font-weight:400;">Route vers le Million</strong> &nbsp;&middot;&nbsp; <a href="/">route-vers-le-million.blog</a></p>
-  <p>Donnees : Adzuna Canada API &middot; Plateforme educative &middot; Aucun conseil financier</p>
+  <p data-i18n="car.footer.data">Donnees : Adzuna Canada API &middot; Plateforme educative &middot; Aucun conseil financier</p>
   <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
 </footer>
 <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
