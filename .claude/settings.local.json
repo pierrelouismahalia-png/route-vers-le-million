@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mkdir -p \"c:\\\\Users\\\\Admin\\\\Dropbox\\\\17-PRODUITS NUMÉRIQUES\\\\BLOGUE FINANCE\\\\v11\\\\en\" \"c:\\\\Users\\\\Admin\\\\Dropbox\\\\17-PRODUITS NUMÉRIQUES\\\\BLOGUE FINANCE\\\\v11\\\\es\")"
+      "Bash(mkdir -p \"c:\\\\Users\\\\Admin\\\\Dropbox\\\\17-PRODUITS NUMÉRIQUES\\\\BLOGUE FINANCE\\\\v11\\\\en\" \"c:\\\\Users\\\\Admin\\\\Dropbox\\\\17-PRODUITS NUMÉRIQUES\\\\BLOGUE FINANCE\\\\v11\\\\es\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Admin\\Dropbox\\17-PRODUITS NUMÉRIQUES\\BLOGUE FINANCE\\v11"

@@ -1,0 +1,4 @@
+# Outillage local Cloudflare / Node (non versionne)
+.wrangler/
+node_modules/
+.dev.vars

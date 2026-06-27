@@ -12,7 +12,7 @@
  </script>
  <meta charset="UTF-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>Croissance ou dividendes : quelle stratégie pour la retraite ? — Route vers le Million</title>
+ <title>Pourquoi apprendre la fiscalité des particuliers peut transformer vos finances — Route vers le Million</title>
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
  <style>
  :root {
@@ -41,7 +41,7 @@
 
  /* HERO */
  .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
- .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
  .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
  .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
  .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
@@ -64,6 +64,7 @@
  .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
  .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
  .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
  .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
  .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
  .prose ul li:last-child { border-bottom: none; }
@@ -72,29 +73,15 @@
  .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
  .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
 
- /* QUESTION CARDS */
- .question-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 1.2em 0; display: flex; gap: 20px; align-items: flex-start; }
- .question-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--terra); opacity: 0.5; line-height: 1; flex-shrink: 0; min-width: 44px; }
- .question-body h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
- .question-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
-
  /* HIGHLIGHT BOX */
  .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
  .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
  .highlight-box strong { color: var(--terra); }
 
- /* COMPARE GRID */
- .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 2em 0; }
- .compare-col { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 26px; }
- .compare-col.accent { border-color: var(--terra); }
- .compare-col h4 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 400; color: var(--text); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
- .compare-col.accent h4 { color: var(--terra); }
- .compare-col p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
-
  /* SIDEBAR */
  .sidebar { position: sticky; top: 84px; }
  .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
- .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
  .sidebar-body { padding: 22px; }
  .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
  .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
@@ -128,7 +115,6 @@
  .page-hero-content { padding: 0 24px 40px; }
  .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
  .sidebar { position: static; }
- .compare-grid { grid-template-columns: 1fr; }
  footer { padding: 24px; flex-direction: column; text-align: center; }
  }
 
@@ -166,27 +152,27 @@
  .search-hero { padding: 48px 20px 36px; }
  }
  </style>
- <meta name="description" content="Croissance ou dividendes pour la retraite ? Une analyse honnête pour choisir la stratégie d'investissement adaptée à votre situation, horizon de temps et tolérance au risque."/>
- <meta name="keywords" content="croissance dividendes retraite, ETF croissance dividendes, stratégie investissement Québec, CÉLI dividendes, investissement long terme"/>
+ <meta name="description" content="Apprendre la fiscalité des particuliers permet de réduire légalement ses impôts, d'éviter des erreurs coûteuses et de mieux décider. Plus une formation accessible du Collège Ahuntsic."/>
+ <meta name="keywords" content="fiscalité des particuliers, impôts, déclaration de revenus, éducation financière, crédits, déductions, formation fiscalité, Collège Ahuntsic, revenu imposable"/>
  <meta name="robots" content="index, follow"/>
  <meta name="author" content="Route vers le Million"/>
- <link rel="canonical" href="https://route-vers-le-million.blog/articles/croissance-vs-dividendes/"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/articles/fiscalite-particuliers.html"/>
  <meta property="og:type" content="Article"/>
- <meta property="og:title" content="Croissance ou dividendes : quelle stratégie pour la retraite ? — Route vers le Million"/>
- <meta property="og:description" content="Croissance ou dividendes pour la retraite ? Une analyse honnête pour choisir la stratégie adaptée à votre situation, horizon de temps et tolérance au risque."/>
- <meta property="og:url" content="https://route-vers-le-million.blog/articles/croissance-vs-dividendes/"/>
+ <meta property="og:title" content="Pourquoi apprendre la fiscalité des particuliers peut transformer vos finances — Route vers le Million"/>
+ <meta property="og:description" content="Comprendre la fiscalité des particuliers permet de réduire légalement ses impôts, d'éviter des erreurs coûteuses et de prendre de meilleures décisions financières tout au long de sa vie."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/articles/fiscalite-particuliers.html"/>
  <meta property="og:site_name" content="Route vers le Million"/>
  <meta property="og:locale" content="fr_CA"/>
  <meta name="twitter:card" content="summary_large_image"/>
- <meta name="twitter:title" content="Croissance ou dividendes : quelle stratégie pour la retraite ? — Route vers le Million"/>
- <meta name="twitter:description" content="Croissance ou dividendes pour la retraite ? Une analyse honnête pour choisir la stratégie adaptée à votre situation."/>
+ <meta name="twitter:title" content="Pourquoi apprendre la fiscalité des particuliers peut transformer vos finances"/>
+ <meta name="twitter:description" content="Réduire légalement ses impôts, éviter des erreurs coûteuses et mieux décider grâce à l'éducation fiscale."/>
  <script type="application/ld+json">
  {
  "@context": "https://schema.org",
  "@type": "Article",
- "headline": "Croissance ou dividendes : quelle stratégie privilégier pour la retraite ?",
- "description": "Croissance ou dividendes pour la retraite ? Une analyse honnête pour choisir la stratégie d'investissement adaptée à votre situation, horizon de temps et tolérance au risque.",
- "url": "https://route-vers-le-million.blog/articles/croissance-vs-dividendes/",
+ "headline": "Pourquoi apprendre la fiscalité des particuliers peut transformer vos finances",
+ "description": "Comprendre la fiscalité des particuliers permet de réduire légalement ses impôts, d'éviter des erreurs coûteuses et de prendre de meilleures décisions financières tout au long de sa vie.",
+ "url": "https://route-vers-le-million.blog/articles/fiscalite-particuliers.html",
  "author": {"@type": "Person", "name": "Route vers le Million"},
  "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
  "inLanguage": "fr-CA"
@@ -241,9 +227,9 @@
  <div class="page-hero-img"></div>
  <div class="page-hero-overlay"></div>
  <div class="page-hero-content">
- <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; Stratégie</p>
- <p class="hero-tag">Stratégie · Investissement · Retraite</p>
- <h1>Croissance ou dividendes :<br><em>quelle stratégie pour la retraite ?</em></h1>
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.fiscalite.breadcrumb">Fiscalité</span></p>
+ <p class="hero-tag"><span data-i18n="art.fiscalite.tag">Fiscalité · Éducation financière · Impôts</span></p>
+ <h1><span data-i18n="art.fiscalite.title">Pourquoi apprendre la fiscalité des particuliers peut <em>transformer vos finances</em></span></h1>
  </div>
 </div>
 
@@ -251,119 +237,98 @@
 <div class="article-wrap">
  <article>
  <div class="article-meta">
- <span>Québec, Canada</span>
+ <span data-i18n="art.fiscalite.location">Québec, Canada</span>
  <span>·</span>
- <span>6 min de lecture</span>
+ <span data-i18n="art.fiscalite.readtime">6 min de lecture</span>
  <span>·</span>
- <span>Stratégie · Investissement</span>
+ <span data-i18n="art.fiscalite.category">Fiscalité · Éducation financière</span>
  </div>
 
  <div class="prose">
 
  <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgation&nbsp;: Cet article contient des liens d'affiliation. Si tu t'inscris ou achètes via mes liens, je touche une commission, sans frais supplémentaires pour toi. Mes recommandations restent basées sur mon usage personnel.</div>
 
- <p class="lead">
- "En investissement, la richesse se construit davantage par la constance et la patience que par la recherche de gains rapides. Le temps reste l'élément le plus puissant — encore faut-il choisir une stratégie qu'on est capable de tenir."
+ <p class="lead" data-i18n="art.fiscalite.lead">
+ Comprendre la fiscalité des particuliers permet de réduire légalement ses impôts, d'éviter des erreurs coûteuses et de prendre de meilleures décisions financières tout au long de sa vie.
  </p>
 
- <p>Lorsqu'on commence à investir, une question revient souvent : devrait-on privilégier les placements axés sur la croissance ou ceux qui versent des dividendes ?</p>
+ <p data-i18n="art.fiscalite.p1">Quand on rêve de bâtir sa richesse, on pense spontanément à investir, à multiplier ses sources de revenus ou à décrocher un meilleur salaire. Pourtant, l'une des compétences les plus rentables qui soient reste étrangement négligée : comprendre la fiscalité.</p>
 
- <p>La réalité, c'est qu'il n'existe pas une seule bonne réponse. Une stratégie d'investissement devrait toujours être adaptée à la situation personnelle de chacun : son horizon de temps, sa stabilité financière, ses objectifs et sa tolérance au risque.</p>
+ <p data-i18n="art.fiscalite.p2">Rassurez-vous : apprendre les bases de la fiscalité ne signifie pas devenir comptable. Cela signifie saisir la logique du système fiscal qui encadre chacune de vos décisions d'argent, afin de cesser de le subir et de commencer à l'utiliser à votre avantage.</p>
 
- <h2>Deux approches, deux logiques différentes</h2>
+ <h2 data-i18n="art.fiscalite.h2a">Pourquoi est-ce si important?</h2>
 
- <div class="compare-grid">
- <div class="compare-col accent">
- <h4>Croissance</h4>
- <p>Miser sur des placements dont la valeur augmente significativement avec le temps — souvent des ETF exposés à des secteurs en forte expansion. Le rendement vient principalement de la plus-value à long terme, pas d'un revenu régulier. Plus de potentiel, mais aussi plus de volatilité à court terme.</p>
- </div>
- <div class="compare-col">
- <h4>Dividendes</h4>
- <p>Investir dans des entreprises qui redistribuent une partie de leurs profits régulièrement. On perçoit un revenu sans nécessairement vendre ses placements. Généralement plus stable, mais avec un potentiel de croissance souvent plus modéré sur le long terme.</p>
- </div>
- </div>
+ <p data-i18n="art.fiscalite.h2ap1">Maîtriser les fondements de la fiscalité, c'est se donner le pouvoir de :</p>
 
- <p>Personnellement, lorsque quelqu'un a encore plusieurs années devant soi avant la retraite — par exemple 20 ans ou plus — je crois qu'il peut être stratégique d'avoir une approche davantage axée sur la croissance à long terme.</p>
+ <ul>
+ <li data-i18n="art.fiscalite.li1">Lire et comprendre sa propre déclaration de revenus au lieu de la signer les yeux fermés</li>
+ <li data-i18n="art.fiscalite.li2">Repérer les crédits et déductions auxquels on a réellement droit</li>
+ <li data-i18n="art.fiscalite.li3">Éviter des erreurs qui coûtent cher, parfois pendant des années</li>
+ <li data-i18n="art.fiscalite.li4">Prendre des décisions financières plus éclairées</li>
+ <li data-i18n="art.fiscalite.li5">Dialoguer d'égal à égal avec son comptable</li>
+ </ul>
 
- <p>Pourquoi ? Parce qu'avec le temps, certains ETF et placements plus agressifs ont historiquement offert un potentiel de rendement plus élevé, malgré les fluctuations du marché à court terme. Lorsqu'on n'a pas besoin de cet argent immédiatement, les périodes de baisse deviennent souvent moins importantes dans une vision à long terme.</p>
+ <p data-i18n="art.fiscalite.h2ap2">Le rôle du comptable demeure essentiel. Mais comprendre les bases change la nature même de la relation : vous passez de spectateur à participant. Vous posez les bonnes questions, vous comprenez les réponses, et vous prenez part activement aux décisions qui façonnent votre patrimoine.</p>
 
- <h2>Avant de choisir, posez-vous ces questions</h2>
+ <h2 data-i18n="art.fiscalite.h2b">A-t-on toujours besoin d'un planificateur financier?</h2>
 
- <p>Cependant, une stratégie plus agressive n'est pas faite pour tout le monde. Avant d'investir, il est important de se poser certaines questions :</p>
+ <p data-i18n="art.fiscalite.h2bp1">Les planificateurs financiers jouent un rôle précieux, en particulier pour celles et ceux qui manquent de temps ou qui souhaitent un accompagnement structuré. Sur ce point, ma conviction est simple : mieux vaut être accompagné par un professionnel que de ne rien faire du tout.</p>
 
- <div class="question-card">
- <span class="question-num">01</span>
- <div class="question-body">
- <h4>Ai-je un fonds d'urgence en place ?</h4>
- <p>Avant d'investir de façon agressive, il faut s'assurer de ne pas dépendre de cet argent à court terme. Un fonds d'urgence couvrant 3 à 6 mois de dépenses est la base indispensable.</p>
- </div>
- </div>
+ <p data-i18n="art.fiscalite.h2bp2">Cela dit, l'éducation financière demeure, et de loin, votre meilleur investissement. Aucun conseil externe ne remplace la compréhension de votre propre argent. Plus vous comprenez les mécanismes qui le régissent, plus vous êtes en mesure de décider avec lucidité, non pas une seule fois, mais tout au long de votre vie.</p>
 
- <div class="question-card">
- <span class="question-num">02</span>
- <div class="question-body">
- <h4>Vais-je avoir besoin de cet argent prochainement ?</h4>
- <p>Si vous avez un projet immobilier, un retour aux études ou une dépense importante dans les 3 à 5 prochaines années, une stratégie de croissance plus volatile n'est peut-être pas adaptée à cette partie de votre capital.</p>
- </div>
- </div>
-
- <div class="question-card">
- <span class="question-num">03</span>
- <div class="question-body">
- <h4>Suis-je réellement capable de tolérer les baisses ?</h4>
- <p>Plusieurs investisseurs pensent être confortables avec le risque… jusqu'au moment où leur portefeuille baisse de 30 %. Une bonne stratégie est avant tout une stratégie qu'on est capable de maintenir même durant les périodes les plus difficiles.</p>
- </div>
- </div>
-
- <div class="question-card">
- <span class="question-num">04</span>
- <div class="question-body">
- <h4>Ma situation financière est-elle suffisamment stable ?</h4>
- <p>Revenus variables, dettes à taux élevé, situation professionnelle précaire — autant de facteurs qui devraient influencer le niveau de risque qu'on se permet de prendre avec ses investissements.</p>
- </div>
- </div>
-
- <h2>L'importance du fonds d'urgence</h2>
-
- <p>Investir de façon agressive tout en dépendant de cet argent à court terme peut rapidement devenir stressant et mener à de mauvaises décisions. Si le marché baisse au moment où vous avez besoin de liquidités, vous pourriez vous retrouver à vendre à perte — exactement le scénario qu'on cherche à éviter.</p>
-
- <div class="pullquote">
- <p>"C'est d'ailleurs pourquoi avoir un fonds d'urgence est aussi important. Sans ce filet de sécurité, même la meilleure stratégie peut s'effondrer au premier imprévu."</p>
- </div>
-
- <p>Un fonds d'urgence liquide et accessible — idéalement dans un compte à intérêt élevé — vous permet d'investir avec sérénité, sans toucher à votre portefeuille en cas de coup dur.</p>
-
- <h2>L'attrait des dividendes : stabilité et revenu régulier</h2>
-
- <p>À l'inverse, les placements générant des dividendes peuvent être particulièrement intéressants pour les personnes qui recherchent davantage de stabilité ou un revenu régulier. Les dividendes permettent de recevoir un revenu sans nécessairement vendre ses placements, ce qui peut être rassurant pour plusieurs investisseurs, surtout à l'approche de la retraite.</p>
-
- <p>Lorsque possible, <strong>réinvestir ces dividendes</strong> peut également être très puissant à long terme grâce à l'effet composé. Chaque dividende réinvesti génère lui-même des rendements futurs — un cercle vertueux qui s'amplifie avec les années.</p>
+ <h2 data-i18n="art.fiscalite.h2c">Chaque dollar compte</h2>
 
  <div class="highlight-box">
- <p>Les dividendes ne sont pas réservés aux investisseurs conservateurs. Pour quelqu'un en phase d'accumulation, réinvestir systématiquement les dividendes dans un CÉLI peut accélérer significativement la croissance du portefeuille — <strong>à l'abri de l'impôt</strong>.</p>
+ <p data-i18n="art.fiscalite.h2cp1">On l'oublie facilement, mais une petite différence dans vos décisions d'aujourd'hui peut représenter plusieurs milliers de dollars sur vingt ou trente ans. La fiscalité agit exactement ainsi : discrètement, chaque année, sur ce que vous conservez réellement de ce que vous gagnez. Bien comprise, elle devient un <strong>levier</strong>; ignorée, elle devient un <strong>coût silencieux</strong>.</p>
  </div>
 
- <h2>Ma stratégie personnelle — une travailleuse autonome sans régime de retraite</h2>
+ <h2 data-i18n="art.fiscalite.h2d">Une formation accessible : Collège Ahuntsic – Fiscalité des particuliers (410-002-AH)</h2>
 
- <p>Comme travailleuse autonome, j'ai rapidement compris que je devais bâtir ma propre sécurité financière sans dépendre d'un régime de retraite traditionnel. Ma stratégie personnelle est donc davantage orientée vers la croissance pendant mes années d'accumulation.</p>
+ <p data-i18n="art.fiscalite.h2dp1">Bonne nouvelle : se former n'exige ni fortune ni retour aux études à temps plein. Le Collège Ahuntsic offre une formation de perfectionnement professionnel intitulée Fiscalité des particuliers (410-002-AH), entièrement en ligne.</p>
 
- <p>Mon objectif est de maximiser la croissance de mon portefeuille sur le long terme, tout en restant disciplinée et investie malgré les fluctuations du marché. <strong>Plus tard, à l'approche de la retraite</strong>, il pourrait devenir plus pertinent de transférer une partie de ces investissements vers des placements générant davantage de revenus passifs, comme certains ETF ou actions à dividendes.</p>
+ <p data-i18n="art.fiscalite.h2dp2">Cette formation vous outille notamment pour :</p>
 
- <p>Cette approche permettrait éventuellement de créer un revenu plus stable sans nécessairement toucher au capital principal — ce que certains appellent vivre des intérêts plutôt que du capital.</p>
+ <ul>
+ <li data-i18n="art.fiscalite.sk1">Comprendre le cadre fiscal québécois et canadien</li>
+ <li data-i18n="art.fiscalite.sk2">Préparer une déclaration de revenus à l'aide d'un logiciel spécialisé</li>
+ <li data-i18n="art.fiscalite.sk3">Calculer le revenu net et le revenu imposable</li>
+ <li data-i18n="art.fiscalite.sk4">Comprendre l'imposition des gains en capital</li>
+ <li data-i18n="art.fiscalite.sk5">Connaître les principales déductions et crédits</li>
+ <li data-i18n="art.fiscalite.sk6">Calculer l'impôt à payer et produire une déclaration complète</li>
+ </ul>
 
- <h2>Constance plutôt que spéculation</h2>
+ <h3 data-i18n="art.fiscalite.h3a">Informations pratiques</h3>
 
- <p>Il est également important de rappeler qu'investir ne devrait pas être influencé uniquement par les tendances qu'on voit circuler sur les réseaux sociaux. Plusieurs personnes confondent aujourd'hui investissement à long terme et spéculation. Pourtant, la richesse se construit souvent davantage par la constance, la patience et la discipline que par la recherche de gains rapides.</p>
+ <ul>
+ <li data-i18n="art.fiscalite.inf1"><strong>Durée :</strong> 45 heures</li>
+ <li data-i18n="art.fiscalite.inf2"><strong>Type :</strong> perfectionnement professionnel (formation non créditée, sans reçu aux fins d'impôt)</li>
+ <li data-i18n="art.fiscalite.inf3"><strong>Mode :</strong> en ligne</li>
+ <li data-i18n="art.fiscalite.inf4"><strong>Préalable :</strong> connaissances de base en comptabilité</li>
+ <li data-i18n="art.fiscalite.inf5"><strong>Coût :</strong> 225 $ (taxes incluses) pour les personnes admissibles au financement du gouvernement du Québec; 923,54 $ (taxes incluses) pour les personnes non admissibles</li>
+ <li data-i18n="art.fiscalite.inf6"><strong>Prochaines cohortes (automne 2026) :</strong> groupe 22512, du 8 septembre au 14 décembre 2026 (lundi et mardi, 18 h à 21 h), ou groupe 22551, du 9 septembre au 16 décembre 2026 (mercredi, 18 h à 21 h)</li>
+ </ul>
 
- <p>Une action qui a doublé le mois dernier ne signifie pas qu'elle doublera encore le mois prochain. Un portefeuille diversifié, investi régulièrement sur plusieurs années, offre statistiquement de bien meilleures perspectives qu'une tentative de "timer" le marché.</p>
+ <p data-i18n="art.fiscalite.h2dp3">La priorité est accordée aux personnes répondant aux exigences de Services Québec; vérifiez les conditions d'admissibilité avant de vous inscrire. Comme les cohortes changent d'une session à l'autre, consultez le portail d'inscription pour connaître les groupes actifs.</p>
 
- <h2>Au final : choisir une stratégie qu'on peut tenir</h2>
+ <p data-i18n="art.fiscalite.h2dp4">Page officielle : <a href="https://www.collegeahuntsic.qc.ca/formation-continue/perfectionnement-professionnel/fiscalite" target="_blank" rel="noopener">https://www.collegeahuntsic.qc.ca/formation-continue/perfectionnement-professionnel/fiscalite</a></p>
 
- <p>Il ne s'agit pas seulement de choisir entre croissance ou dividendes. Le plus important est surtout de <strong>bâtir une stratégie réaliste</strong>, adaptée à sa situation et qu'on sera capable de maintenir pendant plusieurs années.</p>
+ <p data-i18n="art.fiscalite.h2dp5">D'autres établissements, comme le Cégep Beauce-Appalaches et le Cégep Montmorency, offrent également des formations comparables, souvent à distance.</p>
 
- <p>Parce qu'en investissement, le temps et la constance restent souvent les éléments les plus puissants.</p>
+ <h2 data-i18n="art.fiscalite.h2e">Essayez notre calculatrice d'intérêts composés</h2>
 
- <p style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Avis : Je ne suis pas planificatrice financière. Cet article partage mon expérience personnelle — pas des conseils financiers officiels. Consultez un professionnel pour votre situation spécifique.</p>
+ <p data-i18n="art.fiscalite.h2ep1">L'éducation financière ne se résume pas à économiser. Elle consiste aussi à saisir une force que l'on sous-estime presque toujours : l'effet du temps sur votre patrimoine.</p>
+
+ <p data-i18n="art.fiscalite.h2ep2">Je vous invite à utiliser notre <a href="/calculatrice/">calculatrice d'intérêts composés</a> pour découvrir, chiffres à l'appui, ce qu'un simple investissement de 20 $ par mois peut devenir au fil des années. Vous pourriez être surpris de constater la puissance de petites habitudes, répétées avec constance.</p>
+
+ <h2 data-i18n="art.fiscalite.h2f">Notre mission</h2>
+
+ <p data-i18n="art.fiscalite.h2fp1">L'objectif de Route vers le Million n'a jamais été de promettre des raccourcis vers la richesse. Notre mission est de partager des ressources fiables, des formations, des outils et des connaissances qui vous aident à prendre de meilleures décisions financières, un pas à la fois.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.fiscalite.h2fp2">Parce que la route vers le million ne se parcourt pas d'un bond. Elle se construit, une décision éclairée après l'autre.</p>
+ </div>
+
+ <p data-i18n="art.fiscalite.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Ce contenu est éducatif et ne constitue pas un conseil fiscal ou financier personnalisé.</p>
 
  </div>
  </article>
@@ -374,20 +339,20 @@
  <div class="sidebar-card">
  <div class="sidebar-img"></div>
  <div class="sidebar-body">
- <h3>Commencer à investir</h3>
- <p>Ouvre ton CÉLI sur Wealthsimple — sans frais, sans commissions, en quelques minutes.</p>
- <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
- <a href="/calculatrice/" class="sidebar-btn secondary">Calculatrice →</a>
+ <h3 data-i18n="sidebar.fiscalite.title">Comprendre l'effet du temps</h3>
+ <p data-i18n="sidebar.fiscalite.desc">Découvrez ce qu'un investissement de 20 $ par mois peut devenir grâce aux intérêts composés.</p>
+ <a href="/calculatrice/" class="sidebar-btn" data-i18n="sidebar.fiscalite.btn">Calculatrice →</a>
+ <a href="/articles/" class="sidebar-btn secondary" data-i18n="sidebar.fiscalite.secondary">Voir les articles →</a>
  </div>
  </div>
 
  <div class="sidebar-info">
- <h4>Mon portfolio actuel</h4>
- <div class="info-row"><span>Capital investi</span><span>200k$</span></div>
- <div class="info-row"><span>ETF principal</span><span>QQC.F</span></div>
- <div class="info-row"><span>CÉLI/an</span><span>7k$</span></div>
- <div class="info-row"><span>Stratégie</span><span>Croissance</span></div>
- <div class="info-row"><span>Objectif</span><span>1M$</span></div>
+ <h4 data-i18n="sidebar.fiscalite.key">La formation en bref</h4>
+ <div class="info-row"><span data-i18n="sidebar.fiscalite.r1">Code</span><span>410-002-AH</span></div>
+ <div class="info-row"><span data-i18n="sidebar.fiscalite.r2">Durée</span><span>45 h</span></div>
+ <div class="info-row"><span data-i18n="sidebar.fiscalite.r3">Mode</span><span data-i18n="sidebar.fiscalite.r3v">En ligne</span></div>
+ <div class="info-row"><span data-i18n="sidebar.fiscalite.r4">Coût admissible</span><span>225 $</span></div>
+ <div class="info-row"><span data-i18n="sidebar.fiscalite.r5">Session</span><span data-i18n="sidebar.fiscalite.r5v">Automne 2026</span></div>
  </div>
 
  </aside>
@@ -396,10 +361,10 @@
 
 <!-- CTA -->
 <div class="cta-bottom">
- <h2>Prêt à passer à l'action ?</h2>
- <p>Ouvre ton CÉLI sur Wealthsimple et commence à investir selon ta stratégie — gratuit, sans commission.</p>
- <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
- <a href="/articles/" class="cta-btn secondary">Voir tous les articles →</a>
+ <h2 data-i18n="art.fiscalite.cta.title">Prêt à passer à l'action?</h2>
+ <p data-i18n="art.fiscalite.cta.desc">Explorez notre calculatrice d'intérêts composés et découvrez ce que de petites habitudes peuvent bâtir avec le temps.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.fiscalite.cta.btn">Essayer la calculatrice →</a>
+ <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
 </div>
 
 <!-- FOOTER -->
@@ -407,7 +372,7 @@
 <footer>
  <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
  <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
-  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
 </footer>
 
 <script src="/translations.js"></script>

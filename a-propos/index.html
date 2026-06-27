@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
  <!-- Google Analytics -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script src="/consent.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
  <script>
  window.dataLayer = window.dataLayer || [];
  function gtag(){dataLayer.push(arguments);}
@@ -154,7 +155,7 @@
 
  <p data-i18n="about.newsletter">Pour ceux qui souhaitent recevoir les nouvelles publications, les résumés de lecture et rester informés des nouveaux articles, n'hésitez pas à vous inscrire à l'infolettre afin de recevoir un courriel lorsqu'un nouveau contenu est publié.</p>
 
- <!-- TODO: Ajouter bouton newsletter ici quand le lien sera disponible -->
+ <div data-newsletter></div>
 
  <p data-i18n="about.closing">J'espère sincèrement que ce blogue vous donnera envie de réfléchir autrement à l'argent et d'avoir des conversations plus ouvertes sur un sujet qui influence énormément nos vies.</p>
 </div>
@@ -167,5 +168,6 @@
 
 <script src="/translations.js"></script>
 <script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
 </body>
 </html>

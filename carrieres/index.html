@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr-CA">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+  <script src="/consent.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L9QEBYDL8R');</script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -204,6 +205,7 @@
   <a href="/calculatrice/" data-i18n="car.cta.calc" style="display:inline-block;border:1px solid var(--border);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;color:var(--text);border-radius:2px;margin-right:10px;">Voir la calculatrice</a>
   <a href="https://wealthsimple.com/invite/G7ZSVC" data-i18n="car.cta.celi" style="display:inline-block;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;border-radius:2px;" target="_blank" rel="sponsored nofollow noopener">Ouvrir un CELI gratuit</a>
 </div>
+<div data-newsletter></div>
 <footer>
   <p><strong style="color:var(--muted);font-weight:400;">Route vers le Million</strong> &nbsp;&middot;&nbsp; <a href="/">route-vers-le-million.blog</a></p>
   <p data-i18n="car.footer.data">Donnees : Adzuna Canada API &middot; Plateforme educative &middot; Aucun conseil financier</p>
@@ -386,5 +388,6 @@ function closeModal(){document.getElementById("modalOverlay").classList.remove("
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
 loadAllData();
 </script>
+<script src="/analytics.js" defer></script>
 </body>
 </html>

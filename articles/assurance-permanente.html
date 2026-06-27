@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Assurance Vie Permanente: Pourquoi tu l'achètes (et si tu devrais vraiment) — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* QUESTION CARDS */
+ .question-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 1.2em 0; display: flex; gap: 20px; align-items: flex-start; }
+ .question-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--terra); opacity: 0.5; line-height: 1; flex-shrink: 0; min-width: 44px; }
+ .question-body h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+ .question-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* COMPARE GRID */
+ .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 2em 0; }
+ .compare-col { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 26px; }
+ .compare-col.accent { border-color: var(--terra); }
+ .compare-col h4 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 400; color: var(--text); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .compare-col.accent h4 { color: var(--terra); }
+ .compare-col p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ .compare-grid { grid-template-columns: 1fr; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+ <meta name="description" content="Assurance vie permanente: pourquoi tu l'achètes et si tu devrais vraiment. Analyse honnête entre assurance permanente et temporaire pour ta stratégie financière."/>
+ <meta name="keywords" content="assurance vie permanente, assurance temporaire, protection financière, investissement assurance, stratégie retraite, CELI REER, planification financière"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/articles/assurance-permanente.html"/>
+ <meta property="og:type" content="Article"/>
+ <meta property="og:title" content="Assurance Vie Permanente: Pourquoi tu l'achètes (et si tu devrais vraiment) — Route vers le Million"/>
+ <meta property="og:description" content="Analyse honnête: assurance permanente vs temporaire. Comprendre la psychologie, les coûts réels, et si c'est vraiment la bonne stratégie pour toi."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/articles/assurance-permanente.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Assurance Vie Permanente: Pourquoi tu l'achètes (et si tu devrais vraiment)"/>
+ <meta name="twitter:description" content="Assurance permanente vs temporaire: analyse complète pour les Québécois."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Assurance Vie Permanente: Pourquoi tu l'achètes (et si tu devrais vraiment)",
+ "description": "Analyse honnête: assurance permanente vs temporaire. Comprendre la psychologie, les coûts réels, et si c'est vraiment la bonne stratégie pour toi.",
+ "url": "https://route-vers-le-million.blog/articles/assurance-permanente.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
+ <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Accueil</a>
+ <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Outils</a>
+ <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.assurance.breadcrumb">Assurance</span></p>
+ <p class="hero-tag"><span data-i18n="art.assurance.tag">Assurance · Investissement · Protection</span></p>
+ <h1><span data-i18n="art.assurance.title">Assurance Vie Permanente:<br><em>Pourquoi tu l'achètes (et si tu devrais vraiment)</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.assurance.location">Québec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.assurance.readtime">8 min de lecture</span>
+ <span>·</span>
+ <span data-i18n="art.assurance.category">Assurance · Stratégie</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgation&nbsp;: Cet article contient des liens d'affiliation. Si tu t'inscris ou achètes via mes liens, je touche une commission, sans frais supplémentaires pour toi. Mes recommandations restent basées sur mon usage personnel.</div>
+
+ <p class="lead" data-i18n="art.assurance.lead">
+ "La vraie question n'est pas si l'assurance permanente est bonne ou mauvaise. La vraie question est: pourquoi tu as besoin d'acheter quelque chose pour avoir la paix d'esprit?"
+ </p>
+
+ <p data-i18n="art.assurance.p1">Tu as 45 ans. Tu gagnes bien. Et soudainement, quelqu'un te parle d'assurance vie permanente comme si c'était la meilleure décision financière de ta vie.</p>
+
+ <p data-i18n="art.assurance.p2">"Protège ta famille. Accumule de la valeur. Laisse un héritage."</p>
+
+ <p data-i18n="art.assurance.p3">Ça sonne beau. Ça sonne sûr. Mais voici la vraie question que personne ne te pose: <strong data-i18n="art.assurance.p3bold">pourquoi tu as VRAIMENT envie d'acheter ça?</strong></p>
+
+ <p data-i18n="art.assurance.p4">Ce n'est pas parce que c'est logique. C'est parce que tu as peur. Et c'est OK. Comprendre cette peur, c'est le début pour prendre une meilleure décision.</p>
+
+ <h2 data-i18n="art.assurance.h2a">La psychologie derrière l'assurance vie permanente</h2>
+
+ <p data-i18n="art.assurance.h2ap1">Avant de parler chiffres, parlons de ce qui se passe dans ta tête quand tu penses à l'assurance vie.</p>
+
+ <h3 data-i18n="art.assurance.h3a">La peur de mourir sans rien laisser</h3>
+
+ <p data-i18n="art.assurance.h3ap1">C'est viscéral. Tu imagines ton décès. Tu penses à ta famille. Et tu te dis: « Je ne peux pas les laisser sans rien. »</p>
+
+ <p data-i18n="art.assurance.h3ap2">C'est une peur très humaine. Et elle est PUISSANTE.</p>
+
+ <p data-i18n="art.assurance.h3ap3">L'assurance vie permanente arrive comme un chevalier blanc: « Ne t'inquiète pas. On va garantir que ton argent arrivera à ta famille, peu importe quoi. »</p>
+
+ <p data-i18n="art.assurance.h3ap4">Et boom. Tu signes.</p>
+
+ <p data-i18n="art.assurance.h3ap5">Mais voici ce qu'on ne te dit pas: <strong data-i18n="art.assurance.h3ap5bold">Cette peur existe parce que tu ne sais pas combien d'argent tu dois vraiment laisser.</strong></p>
+
+ <p data-i18n="art.assurance.h3ap6">Si tu avais un plan clair — « J'ai besoin de $200,000 pour ma famille en cas de décès » — soudainement, tu pourrais évaluer si l'assurance permanente est vraiment la meilleure façon de le faire.</p>
+
+ <h3 data-i18n="art.assurance.h3b">La peur de manquer d'argent à la retraite</h3>
+
+ <p data-i18n="art.assurance.h3bp1">Il y a une autre peur sous-jacente: « Et si je vis trop longtemps? Et si mon argent s'épuise? »</p>
+
+ <p data-i18n="art.assurance.h3bp2">L'assurance permanente te dit: « Garde ton argent. Nous, on va te garantir un versement. »</p>
+
+ <p data-i18n="art.assurance.h3bp3">C'est séduisant. Mais regarde bien ce qui se passe: tu refuses de vivre pleinement aujourd'hui pour une protection qui <em data-i18n="art.assurance.h3bp3em">pourrait</em> ne jamais arriver (tu peux vivre jusqu'à 95 ans et never claim).</p>
+
+ <h3 data-i18n="art.assurance.h3c">La peur de "se tromper"</h3>
+
+ <p data-i18n="art.assurance.h3cp1">Les finances, c'est compliqué. Les placements, ça fluctue. L'assurance permanente offre une certitude: un contrat, un versement garanti, des règles claires.</p>
+
+ <p data-i18n="art.assurance.h3cp2">« Je peux pas me tromper avec ça. »</p>
+
+ <p data-i18n="art.assurance.h3cp3">Sauf que tu <em data-i18n="art.assurance.h3cp3em">peux</em> te tromper. Tu peux payer des primes pendant 30 ans pour un produit qui ne correspond pas à tes vrais besoins.</p>
+
+ <h2 data-i18n="art.assurance.h2b">OK mais concrètement: comment ça marche?</h2>
+
+ <p data-i18n="art.assurance.h2bp1">Oublions la psychologie 5 minutes. Voici les faits.</p>
+
+ <h3 data-i18n="art.assurance.h3d">Assurance temporaire vs permanente</h3>
+
+ <p><strong data-i18n="art.assurance.h3dp1">Assurance temporaire (10, 20, 30 ans):</strong></p>
+ <ul>
+ <li data-i18n="art.assurance.h3dli1">Prime BASSE</li>
+ <li data-i18n="art.assurance.h3dli2">Couverture LIMITÉE au temps choisi</li>
+ <li data-i18n="art.assurance.h3dli3">À la fin? Pas de couverture, plus de prime.</li>
+ <li data-i18n="art.assurance.h3dli4">Exemple: 30 ans à $30/mois = $10,800 total</li>
+ </ul>
+
+ <p><strong data-i18n="art.assurance.h3dp2">Assurance permanente:</strong></p>
+ <ul>
+ <li data-i18n="art.assurance.h3dli5">Prime PLUS HAUTE</li>
+ <li data-i18n="art.assurance.h3dli6">Couverture à VIE</li>
+ <li data-i18n="art.assurance.h3dli7">+ Accumulation de valeur (possiblement)</li>
+ <li data-i18n="art.assurance.h3dli8">Exemple: À vie à $150/mois = $54,000 en 30 ans, puis continue</li>
+ </ul>
+
+ <h3 data-i18n="art.assurance.h3e">Les types de permanente</h3>
+
+ <p><strong data-i18n="art.assurance.h3ep1">1. Assurance vie entière</strong></p>
+ <ul>
+ <li data-i18n="art.assurance.h3eli1">Capital assuré GARANTI</li>
+ <li data-i18n="art.assurance.h3eli2">Valeur de rachat qui croît</li>
+ <li data-i18n="art.assurance.h3eli3">Prime FIXE à vie</li>
+ <li data-i18n="art.assurance.h3eli4">Plus cher que temporaire</li>
+ </ul>
+
+ <p><strong data-i18n="art.assurance.h3ep2">2. Assurance vie universelle</strong></p>
+ <ul>
+ <li data-i18n="art.assurance.h3eli5">Plus flexible</li>
+ <li data-i18n="art.assurance.h3eli6">Valeur de rachat basée sur rendement</li>
+ <li data-i18n="art.assurance.h3eli7">Prime peut varier</li>
+ <li data-i18n="art.assurance.h3eli8">Moins garanti</li>
+ </ul>
+
+ <p><strong data-i18n="art.assurance.h3ep3">3. Assurance avec participation</strong></p>
+ <ul>
+ <li data-i18n="art.assurance.h3eli9">Tu reçois des "dividendes" selon les profits de l'assureur</li>
+ <li data-i18n="art.assurance.h3eli10">Plus complexe</li>
+ <li data-i18n="art.assurance.h3eli11">Plus cher</li>
+ </ul>
+
+ <h2 data-i18n="art.assurance.h2c">Pourquoi c'est attrayant (honnêtement)</h2>
+
+ <p data-i18n="art.assurance.h2cp1">Je vais être juste: il y a de vrais avantages.</p>
+
+ <h3 data-i18n="art.assurance.h3f">1. C'est garanti</h3>
+
+ <p data-i18n="art.assurance.h3fp1">Peu importe si le marché s'écrase. Peu importe si tu meurs à 50 ans ou 95 ans. Le capital est versé.</p>
+
+ <p data-i18n="art.assurance.h3fp2">Psychologiquement? Ça c'est puissant. Tu peux dormir.</p>
+
+ <h3 data-i18n="art.assurance.h3g">2. Tu as une discipline d'épargne forcée</h3>
+
+ <p data-i18n="art.assurance.h3gp1">Tu DOIS payer ta prime. Pas de choix. Pour certaines personnes qui procrastinent, c'est un vrai avantage.</p>
+
+ <h3 data-i18n="art.assurance.h3h">3. Héritage garanti</h3>
+
+ <p data-i18n="art.assurance.h3hp1">Si tu meurs demain, ta famille reçoit le capital assuré. Pas besoin d'attendre la succession. C'est rapide.</p>
+
+ <h3 data-i18n="art.assurance.h3i">4. Accumulation de valeur</h3>
+
+ <p data-i18n="art.assurance.h3ip1">Une partie de ta prime crée une valeur de rachat que tu peux utiliser comme:</p>
+ <ul>
+ <li data-i18n="art.assurance.h3ili1">Garantie pour un prêt</li>
+ <li data-i18n="art.assurance.h3ili2">Source de liquidités</li>
+ <li data-i18n="art.assurance.h3ili3">Complément retraite</li>
+ </ul>
+
+ <h2 data-i18n="art.assurance.h2d">Mais voici les vraies limites</h2>
+
+ <p data-i18n="art.assurance.h2dp1">Et c'est là que ça devient honnête.</p>
+
+ <h3 data-i18n="art.assurance.h3j">Les primes sont ÉLEVÉES</h3>
+
+ <p data-i18n="art.assurance.h3jp1">Une assurance permanente coûte souvent <strong data-i18n="art.assurance.h3jp1bold">3 à 5 fois plus cher</strong> qu'une temporaire.</p>
+
+ <p data-i18n="art.assurance.h3jp2"><strong data-i18n="art.assurance.h3jp2bold">Exemple concret:</strong></p>
+ <ul>
+ <li data-i18n="art.assurance.h3jli1">Assurance temporaire 30 ans: $40/mois</li>
+ <li data-i18n="art.assurance.h3jli2">Assurance permanente: $150-200/mois</li>
+ <li data-i18n="art.assurance.h3jli3">Différence: $110-160/mois × 360 mois = <strong data-i18n="art.assurance.h3jli3bold">$39,600 à $57,600 de différence</strong></li>
+ </ul>
+
+ <p data-i18n="art.assurance.h3jp3">Cette différence, investie ailleurs? À 6% rendement sur 30 ans = <strong data-i18n="art.assurance.h3jp3bold">$155,000 à $228,000.</strong></p>
+
+ <p data-i18n="art.assurance.h3jp4">Oui. C'est du vrai argent que tu laisses sur la table.</p>
+
+ <h3 data-i18n="art.assurance.h3k">Le rendement peut être faible</h3>
+
+ <p data-i18n="art.assurance.h3kp1">La plupart des assurances permanentes visent une sécurité maximale. Donc le rendement interne est conservateur: 2-4% par année.</p>
+
+ <p data-i18n="art.assurance.h3kp2">Compare ça à:</p>
+ <ul>
+ <li data-i18n="art.assurance.h3kli1">Un portefeuille diversifié: 5-7% par année</li>
+ <li data-i18n="art.assurance.h3kli2">Un ETF indice: 6-8% par année</li>
+ </ul>
+
+ <p data-i18n="art.assurance.h3kp3">À long terme (20+ ans), cette différence est ÉNORME.</p>
+
+ <h3 data-i18n="art.assurance.h3l">C'est pas flexible</h3>
+
+ <p data-i18n="art.assurance.h3lp1">Tu signes un contrat. Si tu veux annuler? Tu vas perdre une grosse part de ta valeur accumulée.</p>
+
+ <p data-i18n="art.assurance.h3lp2">Si ta situation change? (Divorce, faillite, changement de santé?) Tu peux être coincé.</p>
+
+ <h3 data-i18n="art.assurance.h3m">Le rendement est opaque</h3>
+
+ <p data-i18n="art.assurance.h3mp1">Contrairement à un CÉLI ou un REER, tu ne vois pas clairement où ton argent va. Les frais sont cachés. Le rendement est averagé.</p>
+
+ <p data-i18n="art.assurance.h3mp2">C'est pas transparent. Et ça, c'est une red flag.</p>
+
+ <h2 data-i18n="art.assurance.h2e">Qui devrait vraiment l'acheter?</h2>
+
+ <p data-i18n="art.assurance.h2ep1">Soyons clairs: il y a des cas où ça a du sens.</p>
+
+ <h3 data-i18n="art.assurance.h3n">Oui, c'est pertinent si tu es:</h3>
+
+ <ul>
+ <li data-i18n="art.assurance.h3nli1"><strong data-i18n="art.assurance.h3nlibold">Propriétaire d'entreprise</strong> avec des besoins successoraux complexes</li>
+ <li data-i18n="art.assurance.h3nli2"><strong data-i18n="art.assurance.h3nli2bold">Professionnel incorporé</strong> qui veut optimiser fiscalement</li>
+ <li data-i18n="art.assurance.h3nli3"><strong data-i18n="art.assurance.h3nli3bold">Famille fortunée</strong> qui a déjà maxé ses REER/CÉLI et cherche d'autres outils</li>
+ <li data-i18n="art.assurance.h3nli4"><strong data-i18n="art.assurance.h3nli4bold">Quelqu'un en santé précaire</strong> qui peut pas avoir d'assurance temporaire standard</li>
+ <li data-i18n="art.assurance.h3nli5"><strong data-i18n="art.assurance.h3nli5bold">Parent qui veut laisser un héritage garanti</strong> (et tu as les moyens de payer les primes sans stress)</li>
+ </ul>
+
+ <h3 data-i18n="art.assurance.h3o">Non, c'est moins pertinent si tu es:</h3>
+
+ <ul>
+ <li data-i18n="art.assurance.h3oli1">Endetté</li>
+ <li data-i18n="art.assurance.h3oli2">Sans fonds d'urgence</li>
+ <li data-i18n="art.assurance.h3oli3">Avec un budget serré</li>
+ <li data-i18n="art.assurance.h3oli4">Jeune (moins de 40 ans) qui doit bâtir ton patrimoine</li>
+ <li data-i18n="art.assurance.h3oli5">Capable d'investir régulièrement</li>
+ </ul>
+
+ <p data-i18n="art.assurance.h3op1">Dans ces cas, ta priorité c'est:</p>
+ <ol style="list-style: decimal; margin-left: 20px;">
+ <li data-i18n="art.assurance.h3oli6">Éliminer les dettes</li>
+ <li data-i18n="art.assurance.h3oli7">Créer un fonds d'urgence (3-6 mois)</li>
+ <li data-i18n="art.assurance.h3oli8">Maximiser CÉLI/REER</li>
+ <li data-i18n="art.assurance.h3oli9">Investir dans un portefeuille diversifié</li>
+ <li data-i18n="art.assurance.h3oli10"><strong data-i18n="art.assurance.h3oli10bold">PUIS</strong> penser assurance</li>
+ </ol>
+
+ <h2 data-i18n="art.assurance.h2f">L'alternative: Ce que personne ne te dit</h2>
+
+ <p data-i18n="art.assurance.h2fp1">Voici ce que tu pourrais faire à la place:</p>
+
+ <p><strong data-i18n="art.assurance.h2fp2">Scénario: Tu as $150/mois à investir</strong></p>
+
+ <h3 data-i18n="art.assurance.h3p">Option A: Assurance permanente</h3>
+ <ul>
+ <li data-i18n="art.assurance.h3pli1">Prime: $150/mois</li>
+ <li data-i18n="art.assurance.h3pli2">Après 30 ans: Valeur accumulée ~$80-120k + capital assuré garanti</li>
+ <li data-i18n="art.assurance.h3pli3">Avantage: Garanti. Discipline.</li>
+ <li data-i18n="art.assurance.h3pli4">Désavantage: Faible rendement. Pas flexible. Coûteux.</li>
+ </ul>
+
+ <h3 data-i18n="art.assurance.h3q">Option B: Assurance temporaire + Investissement</h3>
+ <ul>
+ <li data-i18n="art.assurance.h3qli1">Assurance temporaire 30 ans: $40/mois</li>
+ <li data-i18n="art.assurance.h3qli2">Investissement dans CÉLI/REER: $110/mois</li>
+ <li data-i18n="art.assurance.h3qli3">Après 30 ans: Valeur accumulée ~$180-220k + couverture d'assurance</li>
+ <li data-i18n="art.assurance.h3qli4">Avantage: Plus d'argent. Plus flexible. Transparent.</li>
+ <li data-i18n="art.assurance.h3qli5">Désavantage: Pas garanti. Besoin discipline.</li>
+ </ul>
+
+ <p><strong data-i18n="art.assurance.h2fp3">La différence? Environ $100,000 de plus avec l'option B.</strong></p>
+
+ <p data-i18n="art.assurance.h2fp4">Et oui, tu dois être discipliné. Mais c'est ça, grandir financièrement.</p>
+
+ <h2 data-i18n="art.assurance.h2g">La vraie question à te poser</h2>
+
+ <p data-i18n="art.assurance.h2gp1">Avant de signer quoi que ce soit, pose-toi cette question:</p>
+
+ <p><strong data-i18n="art.assurance.h2gp2">« Combien d'argent ma famille a-t-elle RÉELLEMENT besoin si je meurs demain? »</strong></p>
+
+ <p data-i18n="art.assurance.h2gp3">Pas « combien je veux laisser ». Pas « combien l'assureur suggère ». <strong data-i18n="art.assurance.h2gp3bold">Combien il en faut vraiment?</strong></p>
+
+ <ul>
+ <li data-i18n="art.assurance.h2gpe1">Payer la maison? $300k?</li>
+ <li data-i18n="art.assurance.h2gpe2">Éduquer les enfants? $200k?</li>
+ <li data-i18n="art.assurance.h2gpe3">5 ans de revenu manquant? $400k?</li>
+ <li data-i18n="art.assurance.h2gpe4"><strong data-i18n="art.assurance.h2gpe4bold">Total: $900k?</strong></li>
+ </ul>
+
+ <p data-i18n="art.assurance.h2gp4">OK. Maintenant la question de stratégie:</p>
+
+ <p><strong data-i18n="art.assurance.h2gp5">Est-ce que l'assurance permanente est la meilleure façon d'avoir ce $900k?</strong></p>
+
+ <p data-i18n="art.assurance.h2gp6">Possiblement non. Une combinaison d'assurance temporaire + investissements pourrait te donner le même résultat pour MOINS cher, avec PLUS de flexibilité.</p>
+
+ <h2 data-i18n="art.assurance.h2h">Ce que je recommande (honnêtement)</h2>
+
+ <ol style="list-style: decimal; margin-left: 20px;">
+ <li data-i18n="art.assurance.h2hli1"><strong data-i18n="art.assurance.h2hli1bold">Calcule tes vrais besoins.</strong> Pas ce que l'agent d'assurance dit. Tes vrais besoins.</li>
+ <li data-i18n="art.assurance.h2hli2"><strong data-i18n="art.assurance.h2hli2bold">Obtiens une assurance temporaire.</strong> 30 ans, montant calculé, prime basse. C'est ta base.</li>
+ <li data-i18n="art.assurance.h2hli3"><strong data-i18n="art.assurance.h2hli3bold">Investis la différence.</strong> Dans un CÉLI, un REER, un portefeuille diversifié. Sois discipliné.</li>
+ <li data-i18n="art.assurance.h2hli4"><strong data-i18n="art.assurance.h2hli4bold">Dans 10-15 ans,</strong> réévalue. Si t'as accumulé du patrimoine et tu veux vraiment une assurance permanente pour des raisons fiscales? À ce moment, ça peut faire sens.</li>
+ <li data-i18n="art.assurance.h2hli5"><strong data-i18n="art.assurance.h2hli5bold">Consulte un vrai planificateur financier indépendant.</strong> Pas un agent d'assurance. Quelqu'un qui n'a pas intérêt à te vendre le produit le plus cher.</li>
+ </ol>
+
+ <h2 data-i18n="art.assurance.h2i">Le point psychologique final</h2>
+
+ <p data-i18n="art.assurance.h2ip1">La vraie question n'est pas: « L'assurance permanente c'est bon ou mauvais? »</p>
+
+ <p data-i18n="art.assurance.h2ip2">La vraie question est: <strong data-i18n="art.assurance.h2ip2bold">« Pourquoi j'ai besoin d'acheter quelque chose pour avoir la paix d'esprit? »</strong></p>
+
+ <p data-i18n="art.assurance.h2ip3">Si c'est parce que tu n'as pas de plan clair, pas de fonds d'urgence, pas d'objectifs financiers réalistes? Alors l'assurance permanente ne va pas régler le problème.</p>
+
+ <p data-i18n="art.assurance.h2ip4">Ce qui va régler le problème:</p>
+ <ul>
+ <li data-i18n="art.assurance.h2ipli1">Clarifier tes objectifs</li>
+ <li data-i18n="art.assurance.h2ipli2">Créer un plan financier réaliste</li>
+ <li data-i18n="art.assurance.h2ipli3">Avoir un fonds d'urgence</li>
+ <li data-i18n="art.assurance.h2ipli4">Investir régulièrement</li>
+ <li data-i18n="art.assurance.h2ipli5">Comprendre ta situation réelle</li>
+ </ul>
+
+ <p data-i18n="art.assurance.h2ip5">Et bizarrement? Quand tu fais tout ça? T'as moins besoin d'assurance permanente.</p>
+
+ <h2 data-i18n="art.assurance.h2j">Conclusion</h2>
+
+ <p data-i18n="art.assurance.h2jp1">L'assurance vie permanente n'est pas un piège. Mais ce n'est pas non plus la solution magique qu'on te vend.</p>
+
+ <p data-i18n="art.assurance.h2jp2">C'est un outil. Et comme tous les outils, il faut l'utiliser au bon moment, pour la bonne raison.</p>
+
+ <p data-i18n="art.assurance.h2jp3">Pour la plupart des gens? <strong data-i18n="art.assurance.h2jp3bold">Une assurance temporaire + des investissements réguliers = une meilleure stratégie.</strong></p>
+
+ <p data-i18n="art.assurance.h2jp4">Mais tu dois être discipliné. Tu dois avoir un plan. Tu dois accepter que les placements fluctuent.</p>
+
+ <p data-i18n="art.assurance.h2jp5">Parce que c'est ça, grandir financièrement. Pas payer quelqu'un pour garantir ta paix d'esprit.</p>
+
+ <p data-i18n="art.assurance.h2jp6"><strong data-i18n="art.assurance.h2jp6bold">Ta paix d'esprit, tu la bâtis. Toi.</strong></p>
+
+ <p data-i18n="art.assurance.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Avis : Je ne suis pas planificatrice financière. Cet article partage mon expérience personnelle — pas des conseils financiers officiels. Consultez un professionnel pour votre situation spécifique.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.assurance.title">Planifier ta protection</h3>
+ <p data-i18n="sidebar.assurance.desc">Calcule tes vrais besoins en assurance avec notre calculatrice gratuite.</p>
+ <a href="/calculatrice/" class="sidebar-btn" data-i18n="sidebar.assurance.btn">Calculatrice →</a>
+ <a href="/articles/" class="sidebar-btn secondary" data-i18n="sidebar.assurance.secondary">Voir les articles →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.assurance.key">À retenir</h4>
+ <div class="info-row"><span data-i18n="sidebar.assurance.r1">Temporaire coûte</span><span>$30-50/mois</span></div>
+ <div class="info-row"><span data-i18n="sidebar.assurance.r2">Permanente coûte</span><span>$150-250/mois</span></div>
+ <div class="info-row"><span data-i18n="sidebar.assurance.r3">Différence 30 ans</span><span>$100k+</span></div>
+ <div class="info-row"><span data-i18n="sidebar.assurance.r4">Meilleure approche</span><span>Temporaire+Invest</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.assurance.cta.title">Prêt à créer ton plan?</h2>
+ <p data-i18n="art.assurance.cta.desc">Ouvre ton CÉLI sur Wealthsimple et commence à investir selon ta stratégie — gratuit, sans commission.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+ <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>
