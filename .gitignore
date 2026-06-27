@@ -1,3 +1,6 @@
+# Reglages locaux Claude Code (machine-specifiques)
+.claude/settings.local.json
+
 # Outillage local Cloudflare / Node (non versionne)
 .wrangler/
 node_modules/
