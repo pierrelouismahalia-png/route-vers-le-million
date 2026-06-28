@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Quiz : les frais de placement — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Quiz : les frais de placement" | slug "quiz-frais-de-placement"
+        description "Cinq questions pour tester ce que vous savez des frais de placement : RFG, frais caches, et leur effet sur trente ans."
+   EN : title "Quiz: investment fees" | slug "quiz-investment-fees"
+        description "Five questions to test what you know about investment fees: MER, hidden costs, and their effect over thirty years."
+   ES : title "Cuestionario: las comisiones de inversion" | slug "cuestionario-comisiones-inversion"
+        description "Cinco preguntas para probar lo que sabes sobre las comisiones de inversion: ratio de gastos (TER), costes ocultos y su efecto en treinta anos."
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ --faux: #9a3b3b;
+ --faux-fond: #f6e9e9;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 40vh; min-height: 300px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 44px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 44px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* WRAP */
+ .wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 90px; }
+ .intro { text-align: center; font-size: 16px; color: var(--muted); margin: 0 auto 32px; max-width: 520px; }
+
+ /* QUIZ */
+ .quiz { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+ .quiz__entete { padding: 28px 32px 22px; border-bottom: 1px solid var(--border); }
+ .quiz__surtitre { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--terra); font-weight: 500; margin: 0 0 8px; }
+ .quiz__titre { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; margin: 0; color: var(--text); }
+ .quiz__progres { font-size: 13px; color: var(--muted); margin-top: 14px; }
+ .quiz__barre { height: 4px; background: var(--border); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+ .quiz__barre span { display: block; height: 100%; width: 0; background: var(--terra); transition: width 0.3s ease; }
+ .quiz__corps { padding: 28px 32px 32px; }
+ .question { font-size: 18px; font-weight: 500; margin: 0 0 22px; color: var(--text); }
+ .options { display: flex; flex-direction: column; gap: 12px; }
+ .option { text-align: left; width: 100%; padding: 15px 18px; font-size: 15.5px; line-height: 1.5; color: var(--text); background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; font-family: inherit; transition: border-color 0.15s ease, background-color 0.15s ease; }
+ .option:hover:not(:disabled) { border-color: var(--terra); }
+ .option:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .option:disabled { cursor: default; }
+ .option--juste { border-color: var(--terra); background: var(--cream2); font-weight: 500; }
+ .option--faux { border-color: var(--faux); background: var(--faux-fond); }
+ .explication { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--terra); background: var(--cream2); border-radius: 0 8px 8px 0; font-size: 14.5px; line-height: 1.7; }
+ .explication strong { display: block; margin-bottom: 4px; color: var(--terra); }
+ .actions { margin-top: 24px; display: flex; justify-content: flex-end; }
+ .bouton { padding: 12px 26px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; font-family: inherit; color: #fff; background: var(--terra); border: none; border-radius: 100px; cursor: pointer; transition: background 0.2s; }
+ .bouton:hover { background: var(--terra2); }
+ .bouton:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .bouton--secondaire { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .bilan { text-align: center; padding: 8px 0; }
+ .bilan__score { font-family: 'Playfair Display', serif; font-size: 42px; color: var(--terra); margin: 0 0 6px; }
+ .bilan__libelle { font-size: 16px; color: var(--text); margin: 0 0 8px; font-weight: 500; }
+ .bilan__texte { font-size: 15px; color: var(--muted); margin: 0 auto 26px; max-width: 440px; }
+ .bilan .actions { justify-content: center; }
+ .quiz-cta { text-align: center; margin-top: 28px; }
+ .quiz-cta a { color: var(--terra); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+
+ /* CTA + FOOTER (chrome) */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 56px 24px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; margin: 6px; }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+ .mobile-menu a:last-child { border: none; }
+
+ @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 32px !important; }
+ .quiz__entete, .quiz__corps { padding-left: 20px; padding-right: 20px; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
+ <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Accueil</a>
+ <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Outils</a>
+ <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.quizFrais.breadcrumb">Quiz</span></p>
+ <h1><span data-i18n="art.quizFrais.title">Quiz : les frais de placement</span></h1>
+ </div>
+</div>
+
+<!-- WRAP -->
+<div class="wrap">
+ <p class="intro" data-i18n="art.quizFrais.intro">Cinq questions pour vérifier ce que vous avez retenu de notre article sur les frais de placement.</p>
+
+ <section class="quiz" aria-live="polite">
+ <header class="quiz__entete">
+ <p class="quiz__surtitre" data-i18n="art.quizFrais.surtitre">Testez vos connaissances</p>
+ <h2 class="quiz__titre" data-i18n="art.quizFrais.title">Quiz : les frais de placement</h2>
+ <p class="quiz__progres" id="progres">Question 1 sur 5</p>
+ <div class="quiz__barre"><span id="barre"></span></div>
+ </header>
+ <div class="quiz__corps" id="corps"></div>
+ </section>
+
+ <p class="quiz-cta"><a href="/articles/comprendre-les-frais-de-placement.html" data-i18n="art.quizFrais.cta">Lire l'article complet →</a></p>
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.frais.cta.title">Voyez ce que les frais vous coûtent vraiment</h2>
+ <p data-i18n="art.frais.cta.desc">Notre calculatrice d'intérêts composés vous montre, chiffres à l'appui, l'écart créé par un simple point de pourcentage.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.frais.cta.btn">Essayer la calculatrice →</a>
+ <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+<script>
+(function(){
+ "use strict";
+ var QUIZ = {
+  fr: {
+   progres: "Question {n} sur {t}", suivant: "Question suivante", voir: "Voir mon résultat",
+   recommencer: "Recommencer le quiz", termine: "Terminé", bonne: "Bonne réponse", revoir: "Réponse à revoir",
+   bilan: {
+    haut: { l: "Vous maîtrisez le sujet.", t: "Vous savez exactement où se cachent les frais et comment les évaluer avant d'investir." },
+    moyen: { l: "Bonne compréhension.", t: "Les bases sont acquises. Une relecture des passages sur le repérage des frais consolidera le reste." },
+    bas: { l: "À consolider.", t: "Une seconde lecture de l'article vous aidera à bien distinguer les frais de compte, les frais de fonds et leur effet à long terme." }
+   },
+   questions: [
+    { q: "Sur Wealthsimple en mode autonome, quel frais s'applique lorsque vous achetez ou vendez un ETF?", options: ["Aucune commission", "Une commission fixe à chaque transaction", "Un pourcentage du montant investi"], bonne: 0, explication: "En mode autonome, l'achat et la vente d'ETF se font sans commission. Le véritable coût vient ailleurs : du ratio de frais de gestion propre à chaque fonds." },
+    { q: "Le ratio des frais de gestion d'un fonds est prélevé de quelle manière?", options: ["Une seule fois, au moment de l'achat", "Directement et continuellement à même la valeur du fonds", "Sur votre relevé, comme une facture annuelle bien visible"], bonne: 1, explication: "Le frais est prélevé en continu, avant même que le rendement ne vous soit présenté. Cette invisibilité explique pourquoi tant de gens paient des frais élevés sans s'en apercevoir." },
+    { q: "Pour connaître le ratio de frais exact d'un ETF canadien, quelle est la source la plus fiable?", options: ["Le champ Expense Ratio de Yahoo Finance", "Le montant affiché dans l'application de courtage", "Le site de l'émetteur du fonds ou son aperçu du fonds"], bonne: 2, explication: "Pour plusieurs ETF de la Bourse de Toronto, Yahoo affiche parfois 0,00 %, une donnée manquante et non un fonds gratuit. La donnée officielle se trouve toujours chez l'émetteur." },
+    { q: "Lequel de ces produits affiche généralement le frais le plus élevé?", options: ["Un ETF indiciel à gestion passive", "Un fonds commun de placement géré activement", "Un ETF qui réplique l'indice NASDAQ 100"], bonne: 1, explication: "Les fonds communs gérés activement tournent souvent autour de 2 %, soit plus de vingt fois le coût d'un ETF indiciel, pour un produit qui, statistiquement, ne fait pas mieux que l'indice à long terme." },
+    { q: "Pourquoi un écart de frais qui paraît minuscule devient-il énorme sur trente ans?", options: ["Parce que le taux de frais augmente automatiquement chaque année", "Parce que les frais subissent l'effet des intérêts composés, mais contre vous", "Parce que les frais sont imposés par le gouvernement"], bonne: 1, explication: "Chaque dollar prélevé en frais est un dollar qui ne pourra jamais croître. Répété et composé sur des décennies, un écart d'un point de pourcentage se chiffre en dizaines de milliers de dollars." }
+   ]
+  },
+  en: {
+   progres: "Question {n} of {t}", suivant: "Next question", voir: "See my result",
+   recommencer: "Restart the quiz", termine: "Done", bonne: "Correct answer", revoir: "Answer to review",
+   bilan: {
+    haut: { l: "You have mastered the subject.", t: "You know exactly where fees hide and how to assess them before investing." },
+    moyen: { l: "Good understanding.", t: "The basics are there. Rereading the passages on spotting fees will consolidate the rest." },
+    bas: { l: "To consolidate.", t: "A second read of the article will help you clearly distinguish account fees, fund fees and their long-term effect." }
+   },
+   questions: [
+    { q: "On Wealthsimple in self-directed mode, what fee applies when you buy or sell an ETF?", options: ["No commission", "A fixed commission on each transaction", "A percentage of the amount invested"], bonne: 0, explication: "In self-directed mode, buying and selling ETFs is commission-free. The real cost comes from elsewhere: the management expense ratio specific to each fund." },
+    { q: "How is a fund's management expense ratio charged?", options: ["Once, at the time of purchase", "Directly and continuously from the value of the fund", "On your statement, like a clearly visible annual invoice"], bonne: 1, explication: "The fee is deducted continuously, even before the return is shown to you. This invisibility explains why so many people pay high fees without noticing." },
+    { q: "To know the exact expense ratio of a Canadian ETF, what is the most reliable source?", options: ["The Expense Ratio field on Yahoo Finance", "The amount shown in the brokerage app", "The fund issuer website or its fund facts"], bonne: 2, explication: "For several Toronto Stock Exchange ETFs, Yahoo sometimes shows 0.00%, which is missing data, not a free fund. The official figure is always with the issuer." },
+    { q: "Which of these products generally carries the highest fee?", options: ["A passively managed index ETF", "An actively managed mutual fund", "An ETF that tracks the NASDAQ 100 index"], bonne: 1, explication: "Actively managed mutual funds often hover around 2%, more than twenty times the cost of an index ETF, for a product that statistically does no better than the index over the long term." },
+    { q: "Why does a fee gap that looks tiny become enormous over thirty years?", options: ["Because the fee rate automatically rises each year", "Because fees are subject to compounding, but against you", "Because fees are taxed by the government"], bonne: 1, explication: "Every dollar taken in fees is a dollar that can never grow. Repeated and compounded over decades, a one-percentage-point gap amounts to tens of thousands of dollars." }
+   ]
+  },
+  es: {
+   progres: "Pregunta {n} de {t}", suivant: "Pregunta siguiente", voir: "Ver mi resultado",
+   recommencer: "Reiniciar el cuestionario", termine: "Terminado", bonne: "Respuesta correcta", revoir: "Respuesta a revisar",
+   bilan: {
+    haut: { l: "Dominas el tema.", t: "Sabes exactamente dónde se esconden las comisiones y cómo evaluarlas antes de invertir." },
+    moyen: { l: "Buena comprensión.", t: "Las bases están adquiridas. Releer los pasajes sobre cómo detectar las comisiones consolidará el resto." },
+    bas: { l: "Por consolidar.", t: "Una segunda lectura del artículo te ayudará a distinguir bien las comisiones de cuenta, las del fondo y su efecto a largo plazo." }
+   },
+   questions: [
+    { q: "En Wealthsimple en modo autónomo, ¿qué comisión se aplica cuando compras o vendes un ETF?", options: ["Ninguna comisión", "Una comisión fija en cada transacción", "Un porcentaje del monto invertido"], bonne: 0, explication: "En modo autónomo, la compra y la venta de ETF se hacen sin comisión. El verdadero coste viene de otro lado: del ratio de gastos (TER) propio de cada fondo." },
+    { q: "¿De qué manera se cobra el ratio de gastos de un fondo?", options: ["Una sola vez, en el momento de la compra", "Directa y continuamente del valor del fondo", "En tu estado de cuenta, como una factura anual bien visible"], bonne: 1, explication: "La comisión se descuenta de forma continua, antes incluso de que se te presente la rentabilidad. Esta invisibilidad explica por qué tanta gente paga comisiones elevadas sin darse cuenta." },
+    { q: "Para conocer el ratio de gastos exacto de un ETF canadiense, ¿cuál es la fuente más fiable?", options: ["El campo Expense Ratio de Yahoo Finance", "El monto mostrado en la aplicación de corretaje", "El sitio del emisor del fondo o sus datos fundamentales"], bonne: 2, explication: "Para varios ETF de la Bolsa de Toronto, Yahoo muestra a veces 0,00 %, un dato que falta y no un fondo gratuito. El dato oficial siempre está en el emisor." },
+    { q: "¿Cuál de estos productos presenta generalmente la comisión más alta?", options: ["Un ETF indexado de gestión pasiva", "Un fondo de inversión de gestión activa", "Un ETF que replica el índice NASDAQ 100"], bonne: 1, explication: "Los fondos de gestión activa rondan a menudo el 2 %, más de veinte veces el coste de un ETF indexado, por un producto que estadísticamente no lo hace mejor que el índice a largo plazo." },
+    { q: "¿Por qué una diferencia de comisiones que parece minúscula se vuelve enorme en treinta años?", options: ["Porque la tasa de comisiones aumenta automáticamente cada año", "Porque las comisiones sufren el efecto del interés compuesto, pero en tu contra", "Porque las comisiones las cobra el gobierno"], bonne: 1, explication: "Cada dólar descontado en comisiones es un dólar que nunca podrá crecer. Repetida y compuesta durante décadas, una diferencia de un punto porcentual se cifra en decenas de miles de dólares." }
+   ]
+  }
+ };
+
+ function currentLang() {
+  var l = "";
+  try { l = window.localStorage ? localStorage.getItem("lang") : ""; } catch (e) { l = ""; }
+  if (l === "fr" || l === "en" || l === "es") return l;
+  var n = (navigator.language || "fr").toLowerCase();
+  return n.indexOf("es") === 0 ? "es" : n.indexOf("fr") === 0 ? "fr" : "en";
+ }
+
+ var T, index = 0, score = 0, repondu = false;
+ var corps = document.getElementById("corps");
+ var progres = document.getElementById("progres");
+ var barre = document.getElementById("barre");
+
+ function escapeHtml(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+ }
+
+ function afficherQuestion() {
+  repondu = false;
+  var item = T.questions[index];
+  progres.textContent = T.progres.replace("{n}", index + 1).replace("{t}", T.questions.length);
+  barre.style.width = (index / T.questions.length * 100) + "%";
+  var html = '<p class="question">' + escapeHtml(item.q) + '</p><div class="options">';
+  item.options.forEach(function (opt, i) {
+   html += '<button class="option" data-i="' + i + '">' + escapeHtml(opt) + '</button>';
+  });
+  html += '</div><div id="zone-explication"></div><div class="actions" id="zone-action"></div>';
+  corps.innerHTML = html;
+  corps.querySelectorAll(".option").forEach(function (btn) {
+   btn.addEventListener("click", function () { choisir(parseInt(btn.dataset.i, 10)); });
+  });
+ }
+
+ function choisir(choix) {
+  if (repondu) return;
+  repondu = true;
+  var item = T.questions[index];
+  corps.querySelectorAll(".option").forEach(function (btn, i) {
+   btn.disabled = true;
+   if (i === item.bonne) btn.classList.add("option--juste");
+   if (i === choix && choix !== item.bonne) btn.classList.add("option--faux");
+  });
+  if (choix === item.bonne) score++;
+  var intro = (choix === item.bonne) ? T.bonne : T.revoir;
+  document.getElementById("zone-explication").innerHTML =
+   '<div class="explication"><strong>' + intro + '</strong>' + escapeHtml(item.explication) + '</div>';
+  var dernier = (index === T.questions.length - 1);
+  document.getElementById("zone-action").innerHTML =
+   '<button class="bouton" id="suivant">' + (dernier ? T.voir : T.suivant) + '</button>';
+  document.getElementById("suivant").addEventListener("click", function () {
+   if (dernier) { afficherBilan(); } else { index++; afficherQuestion(); }
+  });
+ }
+
+ function afficherBilan() {
+  barre.style.width = "100%";
+  progres.textContent = T.termine;
+  var b = (score === T.questions.length) ? T.bilan.haut : (score >= 3 ? T.bilan.moyen : T.bilan.bas);
+  corps.innerHTML =
+   '<div class="bilan">' +
+   '<p class="bilan__score">' + score + ' / ' + T.questions.length + '</p>' +
+   '<p class="bilan__libelle">' + b.l + '</p>' +
+   '<p class="bilan__texte">' + b.t + '</p>' +
+   '<div class="actions"><button class="bouton bouton--secondaire" id="recommencer">' + T.recommencer + '</button></div>' +
+   '</div>';
+  document.getElementById("recommencer").addEventListener("click", function () {
+   index = 0; score = 0; afficherQuestion();
+  });
+ }
+
+ function demarrer() {
+  T = QUIZ[currentLang()] || QUIZ.fr;
+  index = 0; score = 0;
+  afficherQuestion();
+ }
+
+ /* Rejouer le quiz dans la nouvelle langue quand on change de langue. */
+ document.querySelectorAll(".lang-btn").forEach(function (btn) {
+  btn.addEventListener("click", function () { setTimeout(demarrer, 0); });
+ });
+
+ demarrer();
+})();
+</script>
+</body>
+</html>
