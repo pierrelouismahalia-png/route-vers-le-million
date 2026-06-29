@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Le jour où j'ai arrêté de courir après l'argent — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Le jour ou j'ai arrete de courir apres l'argent"
+        slug "arrete-de-courir-apres-argent"
+        description "Cesser de courir apres plus de revenus pour batir un systeme d'actifs : investir chaque mois, decider d'avance ou va chaque dollar, et viser un coussin."
+        keywords batir un patrimoine, systeme d'actifs, investir chaque mois, automatiser son epargne, revenu passif, etat d'esprit financier
+   EN : title "The Day I Stopped Chasing Money: Build a System"
+        slug "the-day-i-stopped-chasing-money"
+        description "Stop chasing more income and build a system of assets: invest every month, decide in advance where each dollar goes, and aim for a cushion."
+        keywords build wealth, system of assets, invest every month, automate savings, passive income, money mindset
+   ES : title "El dia que deje de correr tras el dinero"
+        slug "el-dia-que-deje-de-correr-tras-el-dinero"
+        description "Dejar de correr tras mas ingresos para construir un sistema de activos: invertir cada mes, decidir de antemano a donde va cada dolar, y buscar un colchon."
+        keywords construir patrimonio, sistema de activos, invertir cada mes, automatizar el ahorro, ingresos pasivos, mentalidad financiera
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1523289333742-be1143f6b766?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1523289333742-be1143f6b766?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Cesser de courir après plus de revenus pour bâtir un système d'actifs : investir chaque mois, décider d'avance où va chaque dollar, et viser un coussin."/>
+ <meta name="keywords" content="bâtir un patrimoine, système d'actifs, investir chaque mois, automatiser son épargne, revenu passif, état d'esprit financier"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/articles/arrete-de-courir-apres-argent.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Le jour où j'ai arrêté de courir après l'argent — Route vers le Million"/>
+ <meta property="og:description" content="Cesser de courir après plus de revenus pour bâtir un système d'actifs : investir chaque mois, décider d'avance où va chaque dollar, et viser un coussin."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/articles/arrete-de-courir-apres-argent.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1523289333742-be1143f6b766?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Le jour où j'ai arrêté de courir après l'argent"/>
+ <meta name="twitter:description" content="Bâtir un système d'actifs plutôt que courir après plus de revenus : investir chaque mois et décider d'avance où va chaque dollar."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1523289333742-be1143f6b766?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Le jour où j'ai arrêté de courir après l'argent",
+ "description": "Cesser de courir après plus de revenus pour bâtir un système d'actifs : investir chaque mois, décider d'avance où va chaque dollar, et viser un coussin.",
+ "url": "https://route-vers-le-million.blog/articles/arrete-de-courir-apres-argent.html",
+ "author": {"@type": "Person", "name": "Mahalia Pierre Louis"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1523289333742-be1143f6b766?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
+ <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Accueil</a>
+ <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Outils</a>
+ <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.courir.breadcrumb">Réflexions</span></p>
+ <p class="hero-tag"><span data-i18n="art.courir.tag">Réflexions · Patrimoine · État d'esprit</span></p>
+ <h1><span data-i18n="art.courir.title">Le jour où j'ai arrêté de <em>courir après l'argent</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.courir.location">Québec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.courir.readtime">5 min de lecture</span>
+ <span>·</span>
+ <span data-i18n="art.courir.category">Réflexions · Patrimoine</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgation&nbsp;: Cet article contient des liens d'affiliation. Si tu t'inscris ou achètes via mes liens, je touche une commission, sans frais supplémentaires pour toi. Mes recommandations restent basées sur mon usage personnel.</div>
+
+ <p class="lead" data-i18n="art.courir.lead">Pendant longtemps, ma réponse à chaque difficulté financière tenait en un mot : plus. Plus de clients, plus de contrats, plus d'heures facturées. Je travaillais déjà beaucoup, et la solution que j'envisageais consistait toujours à en faire davantage.</p>
+
+ <p data-i18n="art.courir.p1">Ce qui a changé n'est pas mon revenu. C'est ma façon de réfléchir.</p>
+
+ <p data-i18n="art.courir.p2">J'ai fini par remarquer une chose chez les gens qui bâtissent réellement un patrimoine : ils ne cherchent pas seulement à gagner plus. Ils construisent un système. Leur sécurité ne repose pas sur une seule source de revenus qu'il faut sans cesse alimenter, mais sur un ensemble d'éléments qui finissent par tenir debout ensemble.</p>
+
+ <p data-i18n="art.courir.p3">J'ai donc cessé de mesurer mon progrès à mon nombre d'heures travaillées, et j'ai commencé à le mesurer à mes actifs.</p>
+
+ <h2 data-i18n="art.courir.h2a">Un système, pas une course</h2>
+
+ <p data-i18n="art.courir.p4">Concrètement, voici ce que ça donne aujourd'hui. MDPL Immigration fonctionne depuis plus de dix ans et reste ma base. Mais je n'en dépends plus de la même manière. J'approfondis une expertise précise, notamment du côté des audiences, qui me positionne pour recevoir des dossiers d'autres professionnels plutôt que de courir uniquement après des clients individuels. J'investis chaque mois, sans exception, que le marché monte ou descende. Et je développe des outils numériques destinés à exister et à générer de la valeur même les jours où je ne travaille pas.</p>
+
+ <p data-i18n="art.courir.p5">Aucun de ces éléments, pris isolément, n'a rien de spectaculaire. Un dossier de plus, un placement mensuel, un projet sur le côté. Mais ils ne sont pas censés impressionner séparément. C'est leur accumulation, répétée sur des années, qui crée un <a href="/articles/levier-sans-dette.html">effet de levier</a>.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.courir.p6">C'est là toute la bascule. Le patrimoine ne naît pas d'une grande décision unique. Il naît de <strong>plusieurs décisions correctes, tenues longtemps</strong>.</p>
+ </div>
+
+ <h2 data-i18n="art.courir.h2b">Décider où va l'argent avant qu'il n'arrive</h2>
+
+ <p data-i18n="art.courir.p7">Ce système repose sur une habitude que j'applique à la lettre : ne jamais laisser un dollar arriver sans savoir où il va.</p>
+
+ <p data-i18n="art.courir.p8">Quand je vends un objet dont je ne me sers plus, par exemple, l'argent ne touche jamais mon portefeuille. Il passe de l'acheteur à mon compte de placement, et j'achète des FNB le jour même. Pas de réflexion, pas de détour. C'est décidé d'avance.</p>
+
+ <p data-i18n="art.courir.p9">Je précise tout de suite que les sommes sont modestes. Ces ventes, accumulées sur une année, me rapportent peut-être entre 500 et 1 000 dollars. Personne ne devient riche en vidant ses placards, et ce n'est pas ce que je prétends ici. Si l'exercice m'intéresse, ce n'est pas pour le montant. C'est pour l'automatisme qu'il entretient.</p>
+
+ <p data-i18n="art.courir.p10">Car le vrai sujet n'est pas la vente. La vente d'objets n'est qu'un cas parmi d'autres. Le remboursement d'impôt annuel en est un autre. Un versement gouvernemental reçu en cours d'année aussi. Pour la plupart de ces rentrées, je ne me pose jamais la question "où est-ce que je vais bien pouvoir mettre ça". La question est déjà réglée avant que l'argent n'arrive. Ce sont des sommes que je n'avais pas inscrites à mon budget courant; je ne me prive donc de rien en les plaçant, puisque je ne comptais pas dessus. C'est l'occasion la plus facile qui soit de faire travailler un capital.</p>
+
+ <p data-i18n="art.courir.p11">La différence est mince à décrire, mais elle change tout en pratique. Un dollar pour lequel on n'a pas de destination prévue trouve presque toujours à se dépenser. Un dollar dont la destination est décidée d'avance, lui, arrive déjà engagé.</p>
+
+ <h2 data-i18n="art.courir.h2c">Ce que ça donne, et ce que ça ne donne pas</h2>
+
+ <p data-i18n="art.courir.p12">Soyons clairs sur les ordres de grandeur. Prenez une <a href="/calculatrice/">calculatrice d'intérêts composés</a> et regardez ce que représentent 20 dollars par mois sur 20 ans. Le résultat est plus intéressant qu'on ne le croit, mais il ne fait pas de vous un millionnaire. Ce genre de constance bâtit plutôt un coussin : de quoi absorber un pépin sans avoir eu l'impression de se serrer la ceinture.</p>
+
+ <p data-i18n="art.courir.p13">Je ne présente donc pas cette habitude comme une stratégie d'enrichissement. C'est une discipline. Je me fixe un objectif d'épargne réaliste et je m'y tiens, non pas au gré de ce qu'il reste à la fin du mois, mais selon une décision prise en amont. C'est la seule chose que je cherche à garder intacte : ce n'est pas l'argent qui décide de son sort en arrivant, c'est moi qui l'ai décidé avant.</p>
+
+ <h2 data-i18n="art.courir.h2d">Ce qui a l'air simple ne l'est pas</h2>
+
+ <p data-i18n="art.courir.p14">Tout cela peut paraître simpliste. Ça ne l'est pas. La journée où j'ai vraiment décidé de faire plus d'argent, je n'ai pas seulement formulé un souhait : j'ai mis des choses en place et j'ai bougé avec intention.</p>
+
+ <p data-i18n="art.courir.p15">J'ai pris en compte mes champs de compétences. J'ai travaillé pendant des mois, en m'appuyant entre autres sur des <a href="/articles/productivite-intelligence-artificielle.html">outils d'intelligence artificielle</a> comme partenaires de réflexion, à structurer un plan précis de ce que je devais faire pour atteindre mon objectif, jusqu'à une formule mathématique pour le chiffrer. Rien d'improvisé. Une démarche réfléchie, tenue dans le temps.</p>
+
+ <p data-i18n="art.courir.p16">La vérité, la voici. Il y a les gens qui se plaignent et qui restent dans leur situation, et il y a les autres, dont je fais partie, qui essaient jusqu'à ce que quelque chose finisse par débloquer. Peut-être que nous n'irons pas tous chercher notre million. Mais nous, au moins, nous avancerons.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.courir.p17">Je ne cherche pas à paraître riche. Je cherche à posséder des actifs qui travaillent à ma place, pendant que je m'occupe du reste.</p>
+ </div>
+
+ <p data-i18n="art.courir.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Cet article est partagé à titre informatif et éducatif. Il relate mon parcours personnel et ne constitue pas un conseil financier personnalisé. Avant toute décision d'investissement, il est recommandé de consulter un professionnel qualifié et d'évaluer votre situation particulière.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.courir.title">Bâtir un coussin</h3>
+ <p data-i18n="sidebar.courir.desc">Voyez ce que 20 $ par mois peuvent devenir au fil des années, avec constance.</p>
+ <a href="/calculatrice/" class="sidebar-btn" data-i18n="sidebar.courir.btn">Calculatrice →</a>
+ <a href="/articles/" class="sidebar-btn secondary" data-i18n="sidebar.courir.secondary">Voir les articles →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.courir.key">Mon système</h4>
+ <div class="info-row"><span data-i18n="sidebar.courir.r1">Base</span><span data-i18n="sidebar.courir.r1v">Entreprise</span></div>
+ <div class="info-row"><span data-i18n="sidebar.courir.r2">Placements</span><span data-i18n="sidebar.courir.r2v">Chaque mois</span></div>
+ <div class="info-row"><span data-i18n="sidebar.courir.r3">Outils</span><span data-i18n="sidebar.courir.r3v">Numériques</span></div>
+ <div class="info-row"><span data-i18n="sidebar.courir.r4">Règle</span><span data-i18n="sidebar.courir.r4v">Décidé d'avance</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.courir.cta.title">Décidez où va votre argent</h2>
+ <p data-i18n="art.courir.cta.desc">Fixez un objectif d'épargne réaliste, automatisez-le, et voyez l'effet de la constance sur la durée.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.courir.cta.btn">Essayer la calculatrice →</a>
+ <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>
