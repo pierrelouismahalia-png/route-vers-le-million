@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>UMAX, QMAX, ZPAY : ces FNB à 13 % expliqués simplement — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "UMAX, QMAX, ZPAY : ces FNB a 13 % expliques simplement"
+        slug "fnb-options-couvertes"
+        description "UMAX, RMAX, EMAX, QMAX, ZPAY : d'ou vient le rendement de 13 % de ces FNB a options couvertes, ce que le taux affiche cache, et pour qui ils existent."
+        keywords FNB options couvertes, UMAX QMAX ZPAY, covered call ETF, rendement 13 pour cent, retour de capital, dividendes mensuels
+   EN : title "UMAX, QMAX, ZPAY: those 13% covered-call ETFs explained"
+        slug "covered-call-etfs-explained"
+        description "UMAX, RMAX, EMAX, QMAX, ZPAY: where the 13% yield of these covered-call ETFs comes from, what the headline rate hides, and who they are for."
+        keywords covered call ETFs, UMAX QMAX ZPAY, high yield ETF, return of capital, monthly dividends, total return
+   ES : title "UMAX, QMAX, ZPAY: esos ETF al 13 % explicados"
+        slug "etf-opciones-cubiertas-explicados"
+        description "UMAX, RMAX, EMAX, QMAX, ZPAY: de donde viene el 13 % de estos ETF de opciones cubiertas, que oculta la tasa anunciada, y para quien existen."
+        keywords ETF opciones cubiertas, UMAX QMAX ZPAY, ETF alto rendimiento, retorno de capital, dividendos mensuales, rendimiento total
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="UMAX, RMAX, EMAX, QMAX, ZPAY : d'où vient le rendement de 13 % de ces FNB à options couvertes, ce que le taux affiché cache, et pour qui ils existent."/>
+ <meta name="keywords" content="FNB options couvertes, UMAX QMAX ZPAY, covered call ETF, rendement 13 pour cent, retour de capital, dividendes mensuels"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/articles/fnb-options-couvertes.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="UMAX, QMAX, ZPAY : ces FNB à 13 % expliqués simplement — Route vers le Million"/>
+ <meta property="og:description" content="D'où vient le rendement de 13 % de ces FNB à options couvertes, ce que le taux affiché cache, et pour qui ils existent."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/articles/fnb-options-couvertes.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="UMAX, QMAX, ZPAY : ces FNB à 13 % expliqués simplement"/>
+ <meta name="twitter:description" content="La mécanique des options couvertes, les cinq fonds du moment, et ce que le rendement affiché ne dit pas."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "UMAX, QMAX, ZPAY... c'est quoi, ces FNB à 13 % qui envahissent vos réseaux sociaux?",
+ "description": "D'où vient le rendement de 13 % de ces FNB à options couvertes, ce que le taux affiché cache, et pour qui ils existent.",
+ "url": "https://route-vers-le-million.blog/articles/fnb-options-couvertes.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
+ <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Accueil</a>
+ <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Outils</a>
+ <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.fnb.breadcrumb">ETF</span></p>
+ <p class="hero-tag"><span data-i18n="art.fnb.tag">ETF · Options couvertes · Revenu</span></p>
+ <h1><span data-i18n="art.fnb.title">UMAX, QMAX, ZPAY... <em>c'est quoi, ces FNB à 13 % qui envahissent vos réseaux sociaux?</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.fnb.location">Québec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.fnb.readtime">7 min de lecture</span>
+ <span>·</span>
+ <span data-i18n="art.fnb.category">ETF · Options couvertes</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgation&nbsp;: Cet article contient des liens d'affiliation. Si tu t'inscris ou achètes via mes liens, je touche une commission, sans frais supplémentaires pour toi. Mes recommandations restent basées sur mon usage personnel.</div>
+
+ <p class="lead" data-i18n="art.fnb.lead">Si vous suivez des comptes de finances personnelles, vous les avez forcément vus passer : des listes de FNB canadiens affichant des rendements de 7 %, 10 %, même 13 % par année, versés chaque mois. Les chiffres sont réels. Mais pour comprendre si ces fonds ont leur place dans votre portefeuille, il faut d'abord comprendre d'où vient cet argent, parce qu'un rendement de 13 % ne tombe jamais du ciel.</p>
+
+ <p data-i18n="art.fnb.p1">Cet article explique, en langage simple, la mécanique derrière ces fonds, puis passe en revue les cinq FNB les plus souvent cités.</p>
+
+ <h2 data-i18n="art.fnb.h2a">D'abord, comprendre la vente d'options couvertes</h2>
+
+ <p data-i18n="art.fnb.p2">Tous ces fonds reposent sur la même stratégie : la vente d'options d'achat couvertes ("covered calls"). Voici l'idée, sans jargon.</p>
+
+ <p data-i18n="art.fnb.p3">Imaginez que vous possédez une maison qui vaut 500 000 $. Un voisin vous offre 5 000 $ aujourd'hui, comptant, en échange d'une promesse : s'il le souhaite, il pourra vous acheter votre maison à 520 000 $ d'ici trois mois. Vous acceptez. Deux scénarios sont possibles.</p>
+
+ <p data-i18n="art.fnb.p4">Si la maison reste autour de 500 000 $, le voisin n'exerce pas son droit — pourquoi paierait-il 520 000 $ pour une maison qui en vaut 500 000? Vous gardez la maison <strong>et</strong> les 5 000 $. Vous venez de générer du revenu sans rien vendre.</p>
+
+ <p data-i18n="art.fnb.p5">Mais si la maison bondit à 600 000 $, le voisin exerce son droit : vous devez la lui vendre à 520 000 $. Vous gardez les 5 000 $ et un profit de 20 000 $... mais vous avez renoncé aux 80 000 $ de hausse supplémentaire.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.fnb.p6">C'est exactement ce que font ces FNB, avec des actions plutôt que des maisons : ils détiennent des titres de grandes entreprises, vendent des promesses de ce genre chaque mois, encaissent les primes, et vous les redistribuent. <strong>Le revenu mensuel est réel; ce que vous sacrifiez, c'est une partie des hausses du marché.</strong> Quand la bourse stagne ou baisse doucement, la stratégie brille. Quand elle monte en flèche, le fonds reste partiellement au sol.</p>
+ </div>
+
+ <h2 data-i18n="art.fnb.h2b">Les cinq fonds du moment, un par un</h2>
+
+ <p data-i18n="art.fnb.p7"><strong>UMAX — Hamilton Utilities YIELD MAXIMIZER (environ 13 % de rendement annualisé).</strong> Malgré son nom, UMAX ne détient pas que des services publics au sens strict : son portefeuille d'une quinzaine de titres canadiens mélange pipelines (Enbridge, TC Energy, Pembina), chemins de fer (CN, CP) et producteurs d'électricité. Ce sont des entreprises stables, peu spectaculaires, à gros dividendes, la matière première idéale pour une stratégie d'options. Son rendement affiché est le plus élevé du groupe, ce qui signifie aussi la couverture d'options la plus agressive : c'est le fonds qui sacrifie le plus de croissance potentielle pour maximiser le versement mensuel.</p>
+
+ <p data-i18n="art.fnb.p8"><strong>RMAX — Hamilton REITs YIELD MAXIMIZER (environ 10,6 %).</strong> Celui-ci détient des fiducies de placement immobilier (FPI ou "REITs") canadiennes et américaines : centres commerciaux, entrepôts industriels, centres de données, immeubles résidentiels, tours de télécommunications. L'immobilier coté verse déjà des distributions généreuses; la couche d'options vient les amplifier. À savoir : les FPI sont sensibles aux taux d'intérêt — quand les taux montent, le secteur souffre, options couvertes ou pas.</p>
+
+ <p data-i18n="art.fnb.p9"><strong>EMAX — Hamilton Energy YIELD MAXIMIZER (environ 10,5 %).</strong> Le même principe appliqué aux grandes sociétés énergétiques nord-américaines, majoritairement américaines. L'énergie est un secteur cyclique et volatil — et paradoxalement, c'est bon pour cette stratégie : plus un secteur est volatil, plus les primes d'options sont élevées. Le revers : quand le pétrole plonge, la valeur du fonds plonge avec lui, et les primes encaissées n'amortissent qu'une fraction de la chute.</p>
+
+ <p data-i18n="art.fnb.p10"><strong>QMAX — Hamilton Technology YIELD MAXIMIZER (environ 10,1 %).</strong> Ici, la stratégie est appliquée aux géants technologiques américains. C'est le cas le plus paradoxal du groupe : on prend le secteur dont tout l'intérêt historique est la croissance explosive... et on vend justement cette croissance contre un revenu mensuel. Détenir QMAX plutôt qu'un FNB technologique classique, c'est accepter de rater une partie des grandes années du secteur en échange de versements réguliers. Pour un investisseur jeune, c'est généralement le pire échange des cinq.</p>
+
+ <p data-i18n="art.fnb.p11"><strong>ZPAY — BMO Fonds de revenu à prime (environ 7,3 %).</strong> Le seul du groupe qui n'est pas de la famille Hamilton, et le plus conservateur. ZPAY utilise une combinaison d'options (ventes d'options d'achat, mais aussi d'options de vente) sur de grandes sociétés américaines de qualité, avec une portion en liquidités. Son rendement est plus modeste, mais sa valeur fluctue moins. C'est le compromis prudent de la liste.</p>
+
+ <h2 data-i18n="art.fnb.h2c">Ce que le rendement affiché ne dit pas</h2>
+
+ <p data-i18n="art.fnb.p12">Trois vérités s'appliquent à tous ces fonds, et elles doivent précéder toute décision.</p>
+
+ <p data-i18n="art.fnb.p13"><strong>Le rendement affiché n'est pas le rendement total.</strong> Un fonds peut verser 13 % pendant que sa valeur unitaire s'effrite de 5 % — votre vrai rendement est la somme des deux. Comparez toujours le rendement <em>total</em> (valeur + distributions) à celui d'un fonds indiciel simple sur la même période. Sur les longues périodes de marché haussier, l'indice gagne presque toujours.</p>
+
+ <p data-i18n="art.fnb.p14"><strong>Une partie des distributions peut être un retour de capital.</strong> Autrement dit, une fraction du montant mensuel que vous recevez est parfois simplement votre propre argent qu'on vous rend. Ce n'est pas malhonnête — c'est même fiscalement avantageux dans un compte non enregistré — mais il faut le savoir : recevoir son propre capital n'est pas un rendement.</p>
+
+ <p data-i18n="art.fnb.p15"><strong>Les frais sont plus élevés qu'un fonds indiciel.</strong> Gérer activement des options coûte cher : attendez-vous à des ratios de frais plusieurs fois supérieurs à ceux d'un FNB indiciel de base. Sur vingt ans, cet écart compose contre vous. Pour bien saisir cet effet, voyez notre article sur les <a href="/articles/comprendre-les-frais-de-placement.html">frais de placement</a>.</p>
+
+ <h2 data-i18n="art.fnb.h2d">Alors, pour qui ces fonds existent-ils?</h2>
+
+ <p data-i18n="art.fnb.p16">Ils ont une clientèle légitime : les investisseurs en phase de <strong>décaissement</strong> — retraités ou semi-retraités qui vivent de leur portefeuille et préfèrent un revenu mensuel prévisible à la croissance maximale. Pour eux, échanger de la hausse future contre du revenu présent est un compromis rationnel.</p>
+
+ <p data-i18n="art.fnb.p17">Si vous êtes en phase d'<strong>accumulation</strong> — vous travaillez, vous investissez chaque mois, votre horizon dépasse dix ans — ces fonds répondent à un besoin que vous n'avez pas. Chaque dollar de distribution est un dollar retiré de la machine à composer, et chaque option vendue est un morceau de votre croissance future cédé à quelqu'un d'autre. Votre outil, c'est le fonds indiciel de croissance, ennuyeux et silencieux, qui ne vous verse rien et vous enrichit quand même. C'est le fond du débat que nous traitons dans <a href="/articles/dividendes-ou-croissance.html">dividendes ou croissance pure</a>, et il rejoint la question du <a href="/articles/combien-etf-avoir.html">nombre d'ETF à détenir</a>.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.fnb.p18">La question à vous poser devant chaque vidéo de ce genre n'est donc pas "quel fonds verse le plus?", mais "suis-je en train de bâtir mon patrimoine, ou d'en vivre?". La réponse choisit le fonds pour vous.</p>
+ </div>
+
+ <p data-i18n="art.fnb.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Cet article est fourni à titre informatif seulement et ne constitue pas un conseil financier personnalisé. Les rendements mentionnés sont ceux affichés par les émetteurs à la date de rédaction et fluctuent constamment. Consultez un professionnel autorisé avant de prendre des décisions de placement.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.fnb.title">Affiché n'est pas total</h3>
+ <p data-i18n="sidebar.fnb.desc">Un gros versement mensuel ne dit rien du rendement réel. Comparez toujours le total.</p>
+ <a href="/calculatrice/" class="sidebar-btn" data-i18n="sidebar.fnb.btn">Calculatrice →</a>
+ <a href="/articles/dividendes-ou-croissance.html" class="sidebar-btn secondary" data-i18n="sidebar.fnb.secondary">Dividendes ou croissance →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.fnb.key">Les cinq fonds</h4>
+ <div class="info-row"><span>UMAX</span><span>~13 %</span></div>
+ <div class="info-row"><span>RMAX</span><span>~10,6 %</span></div>
+ <div class="info-row"><span>EMAX</span><span>~10,5 %</span></div>
+ <div class="info-row"><span>QMAX</span><span>~10,1 %</span></div>
+ <div class="info-row"><span>ZPAY</span><span>~7,3 %</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.fnb.cta.title">Bâtir plutôt que distribuer</h2>
+ <p data-i18n="art.fnb.cta.desc">Voyez ce que la croissance composée bâtit quand rien ne vous distrait du rendement total.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.fnb.cta.btn">Essayer la calculatrice →</a>
+ <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

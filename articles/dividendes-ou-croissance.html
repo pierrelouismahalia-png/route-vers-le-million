@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Dividendes ou croissance pure : comment choisir selon votre étape de vie — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Dividendes ou croissance pure : comment choisir"
+        slug "dividendes-ou-croissance"
+        description "Dividendes eleves ou croissance pure? Le bon choix ne depend pas de la mode, mais de votre etape : accumulation ou decaissement. Le guide pour trancher."
+        keywords dividendes ou croissance, FNB a dividendes, options couvertes, rendement total, phase d'accumulation, phase de decaissement
+   EN : title "Dividends or Pure Growth: How to Choose by Life Stage"
+        slug "dividends-or-pure-growth"
+        description "High dividends or pure growth? The right choice depends not on trends but on your stage: accumulation or decumulation. The guide to decide."
+        keywords dividends vs growth, high dividend ETF, covered calls, total return, accumulation phase, decumulation phase
+   ES : title "Dividendos o crecimiento puro: como elegir por etapa"
+        slug "dividendos-o-crecimiento-puro"
+        description "Dividendos altos o crecimiento puro? La eleccion correcta no depende de la moda sino de tu etapa: acumulacion o retiro. La guia para decidir."
+        keywords dividendos o crecimiento, ETF de dividendos, opciones cubiertas, rendimiento total, fase de acumulacion, fase de retiro
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Dividendes élevés ou croissance pure? Le bon choix ne dépend pas de la mode, mais de votre étape : accumulation ou décaissement. Le guide pour trancher."/>
+ <meta name="keywords" content="dividendes ou croissance, FNB à dividendes, options couvertes, rendement total, phase d'accumulation, phase de décaissement"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/articles/dividendes-ou-croissance.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Dividendes ou croissance pure : comment choisir selon votre étape de vie — Route vers le Million"/>
+ <meta property="og:description" content="Dividendes élevés ou croissance pure? Le bon choix ne dépend pas de la mode, mais de votre étape : accumulation ou décaissement."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/articles/dividendes-ou-croissance.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Dividendes ou croissance pure : comment choisir selon votre étape de vie"/>
+ <meta name="twitter:description" content="La croissance pour bâtir, les dividendes pour vivre : trancher selon votre étape plutôt que selon la mode."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Dividendes ou croissance pure : comment choisir selon votre étape de vie",
+ "description": "Dividendes élevés ou croissance pure? Le bon choix ne dépend pas de la mode, mais de votre étape : accumulation ou décaissement.",
+ "url": "https://route-vers-le-million.blog/articles/dividendes-ou-croissance.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
+ <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Accueil</a>
+ <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Outils</a>
+ <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.div.breadcrumb">Stratégie</span></p>
+ <p class="hero-tag"><span data-i18n="art.div.tag">Stratégie · FNB · Dividendes</span></p>
+ <h1><span data-i18n="art.div.title">Dividendes ou croissance pure : <em>comment choisir selon votre étape de vie</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.div.location">Québec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.div.readtime">6 min de lecture</span>
+ <span>·</span>
+ <span data-i18n="art.div.category">Stratégie · FNB</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgation&nbsp;: Cet article contient des liens d'affiliation. Si tu t'inscris ou achètes via mes liens, je touche une commission, sans frais supplémentaires pour toi. Mes recommandations restent basées sur mon usage personnel.</div>
+
+ <p class="lead" data-i18n="art.div.lead">Vous avez sûrement vu passer ces vidéos sur les réseaux sociaux : "Les 5 FNB canadiens qui versent plus de 10 % de dividendes!" Les chiffres sont réels, les rendements affichés sont vérifiables, et pourtant, pour la majorité des investisseurs qui bâtissent leur patrimoine, ces fonds sont le mauvais outil. Pas parce qu'ils sont mauvais en soi, mais parce qu'ils sont conçus pour une autre étape de vie que la vôtre.</p>
+
+ <p data-i18n="art.div.p1">Voici comment trancher, une fois pour toutes, entre les dividendes et la croissance pure.</p>
+
+ <h2 data-i18n="art.div.h2a">Deux moteurs, deux missions</h2>
+
+ <p data-i18n="art.div.p2">Un FNB de croissance (pensez aux fonds indiciels technologiques ou aux grands indices américains) verse peu ou pas de dividendes. Tout le rendement vient de l'appréciation : les entreprises réinvestissent leurs profits, leur valeur monte, et votre capital compose silencieusement, année après année.</p>
+
+ <p data-i18n="art.div.p3">Un FNB à dividendes élevés fait le chemin inverse : il vous verse du revenu maintenant. Les fonds les plus populaires du moment, ceux qui affichent 10 % à 13 % de rendement, utilisent une stratégie d'options d'achat couvertes ("covered call") : ils vendent le potentiel de hausse de leurs actions contre une prime, qu'ils vous redistribuent chaque mois.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.div.p4">Retenez cette phrase, elle résume tout : <strong>les dividendes élevés paient votre présent avec votre futur.</strong></p>
+ </div>
+
+ <h2 data-i18n="art.div.h2b">Le prix invisible des gros dividendes</h2>
+
+ <p data-i18n="art.div.p5">Un rendement de 13 % semble imbattable. Voici ce que l'étiquette ne dit pas.</p>
+
+ <p data-i18n="art.div.p6"><strong>Le plafonnement de la croissance.</strong> En vendant des options d'achat, le fonds renonce aux fortes hausses. Quand le marché grimpe de 25 %, un fonds à options couvertes en capture une fraction. Or, les marchés montent par à-coups : rater les meilleures semaines coûte très cher sur vingt ans.</p>
+
+ <p data-i18n="art.div.p7"><strong>Le retour de capital.</strong> Une partie des distributions de plusieurs de ces fonds n'est pas du rendement, c'est votre propre argent qu'on vous rend. Le rendement affiché reste techniquement exact, mais votre capital, lui, s'érode ou stagne.</p>
+
+ <p data-i18n="art.div.p8"><strong>Le rendement total raconte une autre histoire.</strong> Comparez toujours le rendement <em>total</em> (croissance plus distributions réinvesties) plutôt que le taux de distribution. Sur dix ans, les grands indices de croissance ont historiquement dominé les stratégies à revenu maximisé, souvent par une marge considérable. Le fonds qui vous verse 13 % pendant que sa valeur fait du surplace perd contre celui qui ne verse rien mais double.</p>
+
+ <h2 data-i18n="art.div.h2c">La vraie question : accumulez-vous ou décaissez-vous?</h2>
+
+ <p data-i18n="art.div.p9">Le choix entre dividendes et croissance ne dépend ni de votre tolérance au risque ni de la mode du moment. Il dépend d'une seule chose : votre étape.</p>
+
+ <p data-i18n="art.div.p10"><strong>En phase d'accumulation</strong> — vous travaillez, vous investissez chaque mois, votre horizon dépasse dix ans — vous n'avez aucun besoin de revenu de placement. Chaque dollar de dividende versé est un dollar qui cesse de composer, et que vous devrez réinvestir vous-même (avec des frictions, des délais, et parfois de l'impôt). La croissance pure est votre moteur : elle compose toute seule, sans intervention, sans tentation de dépenser les distributions.</p>
+
+ <p data-i18n="art.div.p11"><strong>En phase de décaissement</strong> — vous vivez de votre portefeuille, à la retraite ou en semi-retraite — la logique s'inverse. Vous avez besoin d'un revenu régulier sans vendre vos parts au mauvais moment. Les FNB à dividendes, y compris les stratégies d'options couvertes, deviennent alors des outils légitimes : le plafonnement de la croissance vous dérange moins, puisque la stabilité du revenu devient la priorité.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.div.p12">La règle tient en une ligne : la croissance pour bâtir, les dividendes pour vivre.</p>
+ </div>
+
+ <h2 data-i18n="art.div.h2d">L'angle fiscal, rapidement</h2>
+
+ <p data-i18n="art.div.p13">Au Québec, la fiscalité renforce cette logique. Dans un <a href="/articles/celi-reer-compte-non-enregistre.html">CELI</a>, tout est à l'abri, mais chaque dollar de cotisation est précieux : le remplir de croissance maximise l'avantage de l'abri fiscal sur vingt ans. Dans un compte non enregistré, les distributions des fonds à options couvertes sont souvent un mélange fiscal complexe (revenu ordinaire, gains en capital, retour de capital) moins avantageux que le gain en capital différé d'un fonds de croissance qu'on ne vend pas. Et les dividendes de sociétés étrangères, eux, ne bénéficient pas du crédit d'impôt pour dividendes canadiens.</p>
+
+ <p data-i18n="art.div.p14">Autrement dit : même l'impôt vote pour la croissance pendant l'accumulation.</p>
+
+ <h2 data-i18n="art.div.h2e">Le piège psychologique du revenu mensuel</h2>
+
+ <p data-i18n="art.div.p15">Il faut le nommer, parce que c'est le vrai vendeur de ces fonds : recevoir un dépôt chaque mois procure une satisfaction immédiate que la croissance silencieuse ne donnera jamais. C'est du renforcement positif, et c'est exactement pourquoi ces produits sont si populaires sur les réseaux sociaux.</p>
+
+ <p data-i18n="art.div.p16">Mais votre portefeuille n'a pas besoin de vous divertir. Il a besoin de composer. La croissance pure est ennuyeuse pendant vingt ans, puis elle est spectaculaire. Les gros dividendes sont gratifiants chaque mois, puis décevants au bilan final.</p>
+
+ <h2 data-i18n="art.div.h2f">En résumé</h2>
+
+ <ul>
+ <li data-i18n="art.div.li1">Vous êtes à plus de dix ans de vivre de votre portefeuille : croissance pure, distributions minimales, et laissez composer.</li>
+ <li data-i18n="art.div.li2">Vous vivez ou vivrez bientôt de vos placements : les FNB à dividendes deviennent pertinents pour générer un revenu sans vendre.</li>
+ <li data-i18n="art.div.li3">Dans tous les cas, jugez un fonds sur son rendement total, jamais sur son taux de distribution.</li>
+ <li data-i18n="art.div.li4">Méfiez-vous d'un rendement affiché supérieur à 8 % : demandez-vous d'où vient l'argent. Souvent, une partie vient de votre propre poche.</li>
+ </ul>
+
+ <p data-i18n="art.div.p17">Le fonds à 13 % de votre fil d'actualité n'est pas une arnaque. C'est simplement l'outil d'une autre étape de vie, celle que votre portefeuille de croissance est justement en train de vous construire. Pour comprendre la mécanique exacte de ces produits, voyez notre article sur les <a href="/articles/fnb-options-couvertes.html">FNB à options couvertes (UMAX, QMAX, ZPAY...)</a>.</p>
+
+ <p data-i18n="art.div.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Cet article est fourni à titre informatif seulement et ne constitue pas un conseil financier personnalisé. Consultez un professionnel autorisé avant de prendre des décisions de placement.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.div.title">Comparez le rendement total</h3>
+ <p data-i18n="sidebar.div.desc">Voyez ce que la croissance composée bâtit dans le temps, sans distraction mensuelle.</p>
+ <a href="/calculatrice/" class="sidebar-btn" data-i18n="sidebar.div.btn">Calculatrice →</a>
+ <a href="/articles/fnb-options-couvertes.html" class="sidebar-btn secondary" data-i18n="sidebar.div.secondary">Les FNB à 13 % →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.div.key">La règle</h4>
+ <div class="info-row"><span data-i18n="sidebar.div.r1">Accumulation</span><span data-i18n="sidebar.div.r1v">Croissance</span></div>
+ <div class="info-row"><span data-i18n="sidebar.div.r2">Décaissement</span><span data-i18n="sidebar.div.r2v">Dividendes</span></div>
+ <div class="info-row"><span data-i18n="sidebar.div.r3">Juger sur</span><span data-i18n="sidebar.div.r3v">Rendement total</span></div>
+ <div class="info-row"><span data-i18n="sidebar.div.r4">Seuil de vigilance</span><span>8 %+</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.div.cta.title">Laissez la croissance composer</h2>
+ <p data-i18n="art.div.cta.desc">Notre calculatrice d'intérêts composés montre ce que la constance bâtit sur vingt ans.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.div.cta.btn">Essayer la calculatrice →</a>
+ <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

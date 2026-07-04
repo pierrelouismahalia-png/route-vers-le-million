@@ -1,0 +1,76 @@
+=== SUIVI D'INTÉGRATION : 9 ARTICLES TRILINGUES ===
+
+Article 1 : Trouver un investisseur
+  FR : [ ] En cours (Agent)
+  EN : [ ] En cours (Agent)
+  ES : [ ] En cours (Agent)
+  Index FR : [ ] En cours (Agent)
+  Index EN : [ ] En cours (Agent)
+  Index ES : [ ] En cours (Agent)
+
+Article 2 : Le guide ultime du CÉLI
+  FR : [ ] À faire
+  EN : [ ] À faire
+  ES : [ ] À faire
+  Index : [ ] À faire
+
+Article 3 : Les déductions fiscales
+  FR : [ ] À faire
+  EN : [ ] À faire
+  ES : [ ] À faire
+  Index : [ ] À faire
+
+Article 4 : Le guide ultime du SEO
+  FR : [ ] À faire
+  EN : [ ] À faire
+  ES : [ ] À faire
+  Index : [ ] À faire
+
+Article 5 : IA comme levier de productivité
+  VÉRIFIER D'ABORD SI EXISTE
+  FR : [ ] À vérifier
+  EN : [ ] À faire
+  ES : [ ] À faire
+  Index : [ ] À faire
+
+Article 6 : Essai personnel (J'ai arrêté de courir)
+  VÉRIFIER D'ABORD SI EXISTE
+  FR : [ ] À vérifier
+  EN : [ ] À faire
+  ES : [ ] À faire
+  Index : [ ] À faire
+
+Article 7 : Négociation salariale
+  FR : [ ] À faire
+  EN : [ ] À faire
+  ES : [ ] À faire
+  Index : [ ] À faire
+
+Article 8 : CV et ATS
+  FR : [ ] À faire
+  EN : [ ] À faire
+  ES : [ ] À faire
+  Index : [ ] À faire
+
+Article 9 : Buanderie
+  FR : [ ] À faire
+  EN : [ ] À faire
+  ES : [ ] À faire
+  Index : [ ] À faire
+
+=== COMPTEUR D'ARTICLES ===
+Avant : 21 articles
+Après Article 1 : 22
+Après Article 2 : 23
+Après Article 3 : 24
+Après Article 4 : 25
+Après Article 5 : 26
+Après Article 6 : 27
+Après Article 7 : 28
+Après Article 8 : 29
+Après Article 9 : 30
+
+=== NOTES ===
+- Article 1 : Agent en cours (afbf6d37c8856d93f)
+- Articles 5 & 6 : Vérifier existence avant d'intégrer
+- Tous les autres : À créer
