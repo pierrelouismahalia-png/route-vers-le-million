@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Les emplois payants d'ici 2030 au Québec : les vrais salaires — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Les emplois payants d'ici 2030 au Quebec : les vrais salaires"
+        slug "emplois-payants-2030-quebec"
+        description "Les vrais salaires et perspectives d'emploi selon le Guichet-Emplois du gouvernement, et le chemin de formation reel au Quebec. Pas les listes de TikTok."
+        keywords emplois payants Quebec 2030, salaire Guichet-Emplois, formation courte payante Quebec, reorientation de carriere Quebec
+   EN : title "High-Paying Jobs in Quebec by 2030: The Real Numbers"
+        slug "high-paying-jobs-quebec-2030"
+        description "Real salaries and official job outlooks from the Government of Canada Job Bank, plus the actual training path in Quebec. Not the TikTok lists."
+        keywords high paying jobs Quebec 2030, Job Bank salary, short training programs Quebec, career change Quebec
+   ES : title "Empleos bien pagados en Quebec para 2030: las cifras reales"
+        slug "empleos-bien-pagados-quebec-2030"
+        description "Salarios reales y perspectivas oficiales del Job Bank del gobierno de Canada, y la ruta de formacion real en Quebec. No las listas de TikTok."
+        keywords empleos bien pagados Quebec 2030, salario Job Bank, formacion corta Quebec, cambio de carrera Quebec
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav.site { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); scroll-margin-top: 80px; }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; scroll-margin-top: 80px; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+ .prose p.source { font-size: 13px; color: var(--light); border-top: 1px dashed var(--border); padding-top: 10px; margin-bottom: 2.4em; }
+
+ /* ANCRES */
+ .anchors { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin: 0 0 2.4em; }
+ .anchors h2 { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: var(--terra); margin: 0 0 12px; padding: 0; border: none; }
+ .anchors ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 16px; }
+ .anchors li { border: none; padding: 0; font-size: 14px; }
+ .anchors li::before { content: none; }
+ .anchors a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; }
+ .anchors a:hover { color: var(--terra); border-color: var(--terra); }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; margin: 6px; }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+ .mobile-menu a:last-child { border: none; }
+
+ @media (max-width: 768px) {
+ nav.site { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .cta-bottom { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Les vrais salaires et perspectives d'emploi selon le Guichet-Emplois du gouvernement, et le chemin de formation réel au Québec. Pas les listes de TikTok."/>
+ <meta name="keywords" content="emplois payants Québec 2030, salaire Guichet-Emplois, formation courte payante Québec, réorientation de carrière Québec"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/articles/emplois-payants-2030-quebec.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Les emplois payants d'ici 2030 au Québec : les vrais salaires — Route vers le Million"/>
+ <meta property="og:description" content="Les vrais salaires et perspectives d'emploi selon le Guichet-Emplois du gouvernement, et le chemin de formation réel au Québec. Pas les listes de TikTok."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/articles/emplois-payants-2030-quebec.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Les emplois payants d'ici 2030 au Québec : les vrais salaires"/>
+ <meta name="twitter:description" content="Salaires réels et perspectives officielles du Guichet-Emplois, et le vrai chemin de formation au Québec."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Les professions payantes d'ici 2030 au Québec : les vrais chiffres",
+ "description": "Les vrais salaires et perspectives d'emploi selon le Guichet-Emplois du gouvernement, et le chemin de formation réel au Québec.",
+ "url": "https://route-vers-le-million.blog/articles/emplois-payants-2030-quebec.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site">
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
+ <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Accueil</a>
+ <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Outils</a>
+ <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
+ <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
+ <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.emp.breadcrumb">Carrières</span></p>
+ <p class="hero-tag"><span data-i18n="art.emp.tag">Carrières · Salaires · Formation</span></p>
+ <h1><span data-i18n="art.emp.title">Les professions payantes d'ici 2030 au Québec : <em>les vrais chiffres (pas ceux de TikTok)</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.emp.location">Québec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.emp.readtime">12 min de lecture</span>
+ <span>·</span>
+ <span data-i18n="art.emp.category">Carrières · Données officielles</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgation&nbsp;: Cet article contient des liens d'affiliation. Si tu t'inscris ou achètes via mes liens, je touche une commission, sans frais supplémentaires pour toi. Mes recommandations restent basées sur mon usage personnel.</div>
+
+ <p class="lead" data-i18n="art.emp.lead">Vous les avez vues passer : ces listes de "professions qui pourraient valoir des millions d'ici 2030, et personne n'en parle". Le numéro 9 est toujours le plus fou. La vidéo dure huit minutes, ne cite aucune source, et se termine par un lien vers une formation payante.</p>
+
+ <p data-i18n="art.emp.p1">Voici le problème : l'information que ces créateurs vous vendent au compte-gouttes est publique, gratuite, et mise à jour par le gouvernement du Canada. Elle s'appelle le <a href="https://www.guichetemplois.gc.ca" target="_blank" rel="noopener">Guichet-Emplois</a>. On y trouve, pour chaque profession, les salaires réels au Québec, les perspectives d'emploi officielles, le nombre de personnes en poste et le niveau de scolarité de ceux qui l'exercent.</p>
+
+ <p data-i18n="art.emp.p2">Cet article fait deux choses. Il vous montre comment lire ces fiches par vous-même, pour ne plus jamais dépendre d'un influenceur. Et il applique la méthode à sept professions souvent citées, avec les chiffres officiels et le chemin de formation réel au Québec. Vous verrez que les données contredisent parfois franchement le discours viral.</p>
+
+ <nav class="anchors" aria-label="Sections">
+ <h2 data-i18n="art.emp.anchors.title">Aller directement à</h2>
+ <ul>
+ <li><a href="#lire" data-i18n="art.emp.a1">Lire une fiche</a></li>
+ <li><a href="#fiches" data-i18n="art.emp.a2">Les 7 professions</a></li>
+ <li><a href="#surprise" data-i18n="art.emp.a3">La surprise des données</a></li>
+ <li><a href="#choisir" data-i18n="art.emp.a4">Choisir pour soi</a></li>
+ <li><a href="#faq" data-i18n="art.emp.a5">FAQ</a></li>
+ </ul>
+ </nav>
+
+ <h2 id="lire" data-i18n="art.emp.h2.lire">Comment lire une fiche du Guichet-Emplois</h2>
+
+ <p data-i18n="art.emp.lire1">Le Guichet-Emplois est le service d'information sur le marché du travail du gouvernement du Canada. Vous y cherchez une profession, vous choisissez votre province, et vous obtenez quatre informations qui valent plus que n'importe quelle vidéo.</p>
+
+ <ul>
+ <li data-i18n="art.emp.lireli1"><strong>Les salaires (bas, médian, élevé).</strong> Ce n'est pas une moyenne marketing : le "bas" correspond aux personnes en début de carrière, le "élevé" aux plus expérimentées. Regardez toujours la fourchette complète, jamais le chiffre du haut isolément.</li>
+ <li data-i18n="art.emp.lireli2"><strong>Les perspectives d'emploi</strong>, classées <strong>Bonnes</strong>, <strong>Modérées</strong> ou <strong>Limitées</strong>, sur une période de trois ans, et déclinées par région. C'est la donnée la plus importante, et c'est celle que les listes virales ignorent toujours.</li>
+ <li data-i18n="art.emp.lireli3"><strong>Le nombre de personnes en poste</strong> au Québec. Utile pour jauger la taille réelle du bassin : une profession de 4 000 personnes ne s'ouvre pas comme une profession de 70 000.</li>
+ <li data-i18n="art.emp.lireli4"><strong>La scolarité des gens en poste.</strong> Elle révèle la vraie porte d'entrée. Si un tiers des titulaires ont un diplôme collégial, le baccalauréat n'est pas obligatoire, quoi qu'en dise l'offre d'emploi.</li>
+ </ul>
+
+ <div class="highlight-box">
+ <p data-i18n="art.emp.lire2">Le réflexe à prendre : ouvrez la fiche de la profession, puis sélectionnez <strong>votre région</strong>. Les perspectives varient énormément d'une région à l'autre. Une profession "limitée" à Montréal peut être "bonne" en Abitibi, et l'inverse est tout aussi vrai. C'est gratuit et cela prend deux minutes.</p>
+ </div>
+
+ <h2 id="fiches" data-i18n="art.emp.h2.fiches">Les sept professions, avec les vrais chiffres</h2>
+
+ <p data-i18n="art.emp.fiches0">Voici les données officielles, telles quelles. Les salaires sont horaires et concernent le Québec. Chaque fiche indique sa source et la date des données. Rien n'est estimé ni arrondi par nos soins.</p>
+
+ <h3 id="cyber" data-i18n="art.emp.f1.h">1. Analyste en cybersécurité (CNP 21220)</h3>
+ <p data-i18n="art.emp.f1.role">Ces personnes protègent les systèmes et les données d'une organisation : surveillance des menaces, réponse aux incidents, tests d'intrusion, conformité. Elles travaillent en entreprise, en cabinet-conseil et dans le secteur public.</p>
+ <p data-i18n="art.emp.f1.sal"><strong>Salaire au Québec :</strong> entre 30,67 $/h et 71,43 $/h selon l'expérience. Un poste de gestion en cybersécurité atteint un salaire médian d'environ 67,55 $/h, soit près de 140 500 $ par année.</p>
+ <p data-i18n="art.emp.f1.persp"><strong>Perspectives officielles :</strong> <strong>Bonnes</strong> au Québec pour 2025-2027. Environ 7 350 personnes occupent ce poste. La croissance prévue devrait créer plusieurs postes.</p>
+ <p data-i18n="art.emp.f1.form"><strong>Formation au Québec :</strong> l'AEC en cybersécurité (généralement 16 à 24 mois) dans des établissements comme le Collège de Rosemont ou le Cégep de Sherbrooke; le DEC en informatique (3 ans); ou un baccalauréat ou certificat universitaire (Polytechnique, ÉTS, universités). Préalable habituel de l'AEC : le DES, avec une base en informatique. Vérifiez les préalables exacts auprès de l'établissement.</p>
+ <p data-i18n="art.emp.f1.verite"><strong>Vérité terrain :</strong> la scolarité des gens en poste est révélatrice : 33 % détiennent une attestation ou un diplôme collégial, 28 % un baccalauréat, 27 % un diplôme supérieur. Le collégial est donc une vraie porte d'entrée. À Montréal, le bilinguisme ajoute couramment 5 000 à 10 000 $ au salaire. Enfin, on entre rarement directement par un poste "cyber" : le chemin passe souvent par le soutien TI, l'analyse de fraude ou la conformité.</p>
+ <p class="source" data-i18n="art.emp.f1.src">Source : Guichet-Emplois, fiche CNP 21220 (Québec). Salaires mis à jour le 19 novembre 2025; perspectives mises à jour le 10 décembre 2025.</p>
+
+ <h3 id="infirmiere" data-i18n="art.emp.f2.h">2. Infirmière autorisée / infirmier autorisé (CNP 31301)</h3>
+ <p data-i18n="art.emp.f2.role">Évaluation, soins, coordination : le personnel infirmier autorisé assure la prise en charge clinique des patients en hôpital, en CHSLD, en clinique et à domicile.</p>
+ <p data-i18n="art.emp.f2.sal"><strong>Salaire au Québec :</strong> entre 27,00 $/h et 50,00 $/h. Pour une infirmière praticienne spécialisée (IPS), la fourchette monte de 40,00 $/h à 66,26 $/h.</p>
+ <p data-i18n="art.emp.f2.persp"><strong>Perspectives officielles :</strong> <strong>Modérées</strong> au Québec pour la période 2024-2026. Environ 70 500 personnes occupent ce poste, ce qui en fait l'un des plus grands bassins de la province.</p>
+ <p data-i18n="art.emp.f2.form"><strong>Formation au Québec :</strong> le DEC en soins infirmiers (3 ans, dans les cégeps publics, donc à coût très faible) ou le baccalauréat en sciences infirmières (cheminement intégré ou 3 ans après le DEC). L'IPS exige une maîtrise. Préalables du DEC : le DES avec les préalables de sciences. Le permis de l'OIIQ est obligatoire pour exercer.</p>
+ <p data-i18n="art.emp.f2.verite"><strong>Vérité terrain :</strong> le salaire est largement encadré par les conventions collectives, ce qui limite la négociation individuelle mais protège le plancher. La progression réelle passe par la spécialisation (IPS) ou le secteur privé. À noter : 42 % des titulaires ont un diplôme collégial et 45 % un baccalauréat, les deux voies coexistent donc vraiment.</p>
+ <p class="source" data-i18n="art.emp.f2.src">Source : Guichet-Emplois, fiche CNP 31301 (Québec). Salaires mis à jour le 19 novembre 2025.</p>
+
+ <h3 id="electricien" data-i18n="art.emp.f3.h">3. Électricien / électricienne (CNP 72200)</h3>
+ <p data-i18n="art.emp.f3.role">Installation, entretien et réparation des systèmes électriques, en construction résidentielle, commerciale ou industrielle.</p>
+ <p data-i18n="art.emp.f3.sal"><strong>Salaire au Québec :</strong> consultez la fiche CNP 72200 du Guichet-Emplois pour la fourchette à jour de votre région; les salaires du métier sont largement encadrés par les conventions de la construction.</p>
+ <p data-i18n="art.emp.f3.persp"><strong>Perspectives officielles :</strong> <strong>Limitées</strong> au Québec pour 2025-2027. Un certain nombre de travailleurs expérimentés cherchent déjà un emploi dans cette profession.</p>
+ <p data-i18n="art.emp.f3.form"><strong>Formation au Québec :</strong> le DEP en électricité (environ 1 800 heures, soit près de 18 mois; vérifiez la durée exacte sur Inforoute FPT), puis l'apprentissage encadré par la CCQ, avec un nombre d'heures à compléter avant d'obtenir le certificat de qualification.</p>
+ <p data-i18n="art.emp.f3.verite"><strong>Vérité terrain :</strong> 78 % des personnes en poste détiennent un diplôme d'école de métier. Ce n'est pas un mauvais métier : c'est un métier que tout le monde recommande depuis cinq ans, et le bassin s'est rempli. Les perspectives varient fortement selon la région : vérifiez la vôtre avant de vous inscrire.</p>
+ <p class="source" data-i18n="art.emp.f3.src">Source : Guichet-Emplois, fiche CNP 72200 (Québec). Perspectives mises à jour le 10 décembre 2025; salaires mis à jour le 19 novembre 2025.</p>
+
+ <h3 id="donnees" data-i18n="art.emp.f4.h">4. Analyste de bases de données et de données (CNP 21223)</h3>
+ <p data-i18n="art.emp.f4.role">Ces personnes conçoivent, développent et gèrent des solutions de gestion de données; elles définissent les règles, les procédures et les modèles de données. On les trouve en cabinet-conseil et dans les services informatiques des secteurs privé et public.</p>
+ <p data-i18n="art.emp.f4.sal"><strong>Salaire au Québec :</strong> entre 22,00 $/h et 55,00 $/h. À l'échelle du Canada, la fourchette va de 25,00 $/h à 61,03 $/h : le Québec paie donc un peu moins que la moyenne canadienne.</p>
+ <p data-i18n="art.emp.f4.persp"><strong>Perspectives officielles :</strong> <strong>Limitées</strong> au Québec pour 2025-2027. Environ 4 850 personnes occupent ce poste. Parmi les facteurs retenus : un certain nombre de travailleurs expérimentés sont déjà à la recherche d'un emploi dans cette profession.</p>
+ <p data-i18n="art.emp.f4.form"><strong>Formation au Québec :</strong> la profession exige généralement un diplôme universitaire (baccalauréat, maîtrise ou doctorat), souvent en informatique, en statistique ou en mathématiques. Un DEC en informatique complété par un certificat universitaire en science des données est une voie fréquente. Vérifiez les exigences réelles dans les offres d'emploi de votre région.</p>
+ <p data-i18n="art.emp.f4.verite"><strong>Vérité terrain :</strong> voilà exactement le genre de profession que les listes virales adorent, et dont les données officielles disent l'inverse. Le bassin est petit (4 850 personnes), l'exigence universitaire est réelle, et des candidats expérimentés cherchent déjà. Ce n'est pas une porte d'entrée facile.</p>
+ <p class="source" data-i18n="art.emp.f4.src">Source : Guichet-Emplois, fiche CNP 21223 (Québec), consultée en juillet 2026.</p>
+
+ <h3 id="dev" data-i18n="art.emp.f5.h">5. Développeur / développeuse de logiciels (CNP 21232)</h3>
+ <p data-i18n="art.emp.f5.role">Conception, écriture, test et maintenance de logiciels et d'applications web. C'est le métier le plus recherché du groupe des technologies de l'information.</p>
+ <p data-i18n="art.emp.f5.sal"><strong>Salaire au Québec :</strong> entre 29,00 $/h et 68,13 $/h. Dans la région de la Capitale-Nationale, le salaire médian est de 45,67 $/h.</p>
+ <p data-i18n="art.emp.f5.persp"><strong>Perspectives officielles :</strong> <strong>Bonnes</strong> au Québec pour la période 2024-2026. La croissance d'emploi prévue devrait entraîner la création de plusieurs postes, et quelques postes se libéreront par des départs à la retraite.</p>
+ <p data-i18n="art.emp.f5.form"><strong>Formation au Québec :</strong> le DEC en techniques de l'informatique (3 ans, cégeps publics) est la voie la plus directe; le baccalauréat en génie logiciel ou en informatique (ÉTS, Polytechnique, universités) ouvre les postes plus spécialisés. Des AEC en développement web existent aussi, sur 12 à 18 mois selon l'établissement.</p>
+ <p data-i18n="art.emp.f5.verite"><strong>Vérité terrain, et elle est importante :</strong> les perspectives ne sont pas uniformes dans le secteur des TI. Pour le groupe voisin des <strong>spécialistes en informatique (CNP 21222)</strong>, environ 53 550 personnes au Québec, les perspectives sont seulement <strong>Modérées</strong> pour 2025-2027, et le Guichet-Emplois précise que l'utilisation croissante de l'intelligence artificielle et les défis qui en découlent <em>pourraient modérer la demande</em>. Autrement dit : "travailler en TI" ne garantit rien; c'est le poste précis qui compte. Nous abordons cette transformation dans notre article sur <a href="/articles/productivite-intelligence-artificielle.html">l'IA comme levier de productivité</a>.</p>
+ <p class="source" data-i18n="art.emp.f5.src">Sources : Guichet-Emplois, fiches CNP 21232 et CNP 21222 (Québec), consultées en juillet 2026.</p>
+
+ <h3 id="prepose" data-i18n="art.emp.f6.h">6. Préposé / préposée aux bénéficiaires (CNP 33102)</h3>
+ <p data-i18n="art.emp.f6.role">Soins de base aux patients, aide au personnel infirmier et médical : hygiène, mobilisation, alimentation, accompagnement. En hôpital, en CHSLD, en résidence pour aînés.</p>
+ <p data-i18n="art.emp.f6.sal"><strong>Salaire au Québec :</strong> entre 20,00 $/h et 27,92 $/h. La fourchette canadienne est comparable (19,00 $/h à 28,84 $/h). Les écarts régionaux existent : dans le Nord-du-Québec, la fourchette monte jusqu'à 38,97 $/h.</p>
+ <p data-i18n="art.emp.f6.persp"><strong>Perspectives officielles :</strong> <strong>Bonnes</strong> au Québec pour la période 2024-2026. Environ 68 450 personnes occupent ce poste. La demande est élevée, portée par le vieillissement de la population, les besoins en soins de longue durée et les priorités gouvernementales en santé.</p>
+ <p data-i18n="art.emp.f6.form"><strong>Formation au Québec :</strong> c'est la formation la plus courte de cette liste. Le DEP en assistance à la personne en établissement et à domicile mène directement à l'emploi; des attestations (AEP) plus courtes existent aussi. Vérifiez la durée exacte sur Inforoute FPT et auprès du centre de formation professionnelle de votre région.</p>
+ <p data-i18n="art.emp.f6.verite"><strong>Vérité terrain :</strong> c'est le seul métier de la liste où une formation courte donne accès à des perspectives officiellement bonnes. Le compromis est net et il faut le dire : le salaire plafonne bas (moins de 28 $/h en haut de fourchette), et le travail est physiquement et émotionnellement exigeant. C'est une porte d'entrée rapide dans le réseau de la santé, souvent utilisée comme tremplin vers le DEC en soins infirmiers.</p>
+ <p class="source" data-i18n="art.emp.f6.src">Source : Guichet-Emplois, fiche CNP 33102 (Québec). Salaires mis à jour en novembre 2025.</p>
+
+ <h3 id="technologue" data-i18n="art.emp.f7.h">7. Technologue en génie électrique et électronique (CNP 22310)</h3>
+ <p data-i18n="art.emp.f7.role">Soutien technique à la conception, aux essais, à la production et à l'exploitation de matériel et de systèmes électriques et électroniques. On les trouve chez les services publics d'électricité, en télécommunications, en fabrication, en génie-conseil et dans le secteur public.</p>
+ <p data-i18n="art.emp.f7.sal"><strong>Salaire au Québec :</strong> entre 25,00 $/h et 52,00 $/h.</p>
+ <p data-i18n="art.emp.f7.persp"><strong>Perspectives officielles :</strong> <strong>Modérées</strong> au Québec pour 2025-2027. Environ 10 000 personnes occupent ce poste. Quelques postes seront créés, plusieurs se libéreront par des départs à la retraite, mais un certain nombre de travailleurs expérimentés cherchent déjà un emploi.</p>
+ <p data-i18n="art.emp.f7.form"><strong>Formation au Québec :</strong> le DEC en technologie du génie électrique (3 ans, cégeps publics) est la voie standard, avec des spécialisations en automatisation, en électronique industrielle ou en réseaux. Vérifiez les programmes offerts près de chez vous auprès du SRAM et des cégeps.</p>
+ <p data-i18n="art.emp.f7.verite"><strong>Vérité terrain :</strong> après plusieurs années de recul dû à la concurrence internationale, le secteur devrait renouer avec la croissance grâce à la diversification vers de nouveaux marchés. C'est un métier de technicien bien payé sans passage obligé par l'université, mais les perspectives restent moyennes : ce n'est pas le raccourci que promettent les vidéos.</p>
+ <p class="source" data-i18n="art.emp.f7.src">Source : Guichet-Emplois, fiche CNP 22310 (Québec), consultée en juillet 2026.</p>
+
+ <h2 id="surprise" data-i18n="art.emp.h2.surprise">La surprise des vraies données</h2>
+
+ <p data-i18n="art.emp.surp1">Si vous n'aviez qu'une chose à retenir de cet exercice, ce serait celle-ci : <strong>deux des professions les plus recommandées sur les réseaux sociaux affichent des perspectives officiellement limitées au Québec.</strong></p>
+
+ <p data-i18n="art.emp.surp2">L'électricien, d'abord. C'est le métier vedette de toutes les listes "métiers en or". Perspectives : <strong>limitées</strong> pour 2025-2027, notamment parce que des travailleurs expérimentés cherchent déjà un emploi. Le paradoxe est cruel : c'est justement parce que tout le monde le recommande que le bassin s'est rempli.</p>
+
+ <p data-i18n="art.emp.surp3">L'analyste de données, ensuite. Le métier "du futur" par excellence dans les vidéos. Perspectives : <strong>limitées</strong> également, avec un bassin québécois de seulement 4 850 personnes et une exigence universitaire bien réelle. Pendant ce temps, le préposé aux bénéficiaires, jamais mentionné dans ces listes parce qu'il ne fait pas rêver, affiche des perspectives <strong>bonnes</strong> avec la formation la plus courte du lot.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.emp.surp4">Une profession n'est pas payante parce qu'elle est populaire. Elle est payante quand la demande dépasse l'offre de candidats. Ce sont deux choses différentes, et une seule est mesurée par le gouvernement.</p>
+ </div>
+
+ <h2 id="choisir" data-i18n="art.emp.h2.choisir">Comment choisir pour soi (et non pour l'algorithme)</h2>
+
+ <p data-i18n="art.emp.chois1">Il n'existe pas de profession magique. Il existe une profession qui vous convient, à vous, dans votre région, avec votre situation. Quatre critères, dans cet ordre.</p>
+
+ <ul>
+ <li data-i18n="art.emp.choisli1"><strong>Les perspectives dans VOTRE région.</strong> Pas au Québec en général : dans votre région. C'est la première chose à vérifier, et la plus souvent négligée.</li>
+ <li data-i18n="art.emp.choisli2"><strong>La durée et le coût de la formation.</strong> Un DEP de 18 mois au public et un baccalauréat de quatre ans ne représentent ni le même investissement ni le même risque. Comptez aussi le revenu que vous ne gagnez pas pendant vos études.</li>
+ <li data-i18n="art.emp.choisli3"><strong>La compatibilité avec votre vie.</strong> Horaires de nuit, travail physique, déplacements, bilinguisme exigé. Un salaire élevé dans des conditions que vous ne tiendrez pas trois ans n'est pas un bon salaire.</li>
+ <li data-i18n="art.emp.choisli4"><strong>La porte d'entrée réelle.</strong> Regardez la scolarité des gens en poste, pas ce qu'exige l'offre d'emploi idéale. Elle révèle souvent qu'un chemin plus court existe.</li>
+ </ul>
+
+ <p data-i18n="art.emp.chois2">Et surtout : un meilleur salaire ne construit rien à lui seul. Ce qui bâtit un patrimoine, c'est l'écart entre ce que vous gagnez et ce que vous dépensez, placé avec constance. Notre <a href="/calculatrice/">calculatrice d'intérêts composés</a> le montre en quelques secondes. Vous pouvez aussi explorer d'autres professions avec notre <a href="/carrieres/">explorateur de carrières</a>.</p>
+
+ <h2 id="faq" data-i18n="art.emp.h2.faq">Questions fréquentes</h2>
+
+ <h3 data-i18n="art.emp.q1">Où trouver ces données par moi-même?</h3>
+ <p data-i18n="art.emp.r1">Sur <a href="https://www.guichetemplois.gc.ca" target="_blank" rel="noopener">guichetemplois.gc.ca</a> : cherchez la profession, choisissez le Québec puis votre région, et consultez les onglets Salaires et Perspectives d'emploi. Pour les programmes de formation professionnelle, consultez Inforoute FPT; pour les DEC et les AEC, les sites des cégeps et du SRAM; pour les baccalauréats, les sites des universités.</p>
+
+ <h3 data-i18n="art.emp.q2">Les salaires affichés sont-ils garantis?</h3>
+ <p data-i18n="art.emp.r2">Non. Ce sont des fourchettes observées, qui varient selon la région, l'expérience, le secteur et l'employeur. Le "haut de fourchette" correspond à des personnes chevronnées, pas à un premier emploi.</p>
+
+ <h3 data-i18n="art.emp.q3">Faut-il fuir les professions aux perspectives limitées?</h3>
+ <p data-i18n="art.emp.r3">Pas nécessairement. Une perspective limitée signifie que la concurrence est plus forte, pas qu'il n'y a aucun emploi. Si le métier vous passionne et que vous êtes prêt à vous démarquer, il reste viable. Mais entrez-y en le sachant, pas en croyant à une pénurie qui n'existe pas.</p>
+
+ <p data-i18n="art.emp.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Contenu éducatif seulement. Les salaires et les perspectives varient selon la région, l'expérience et l'employeur, et les données évoluent. Vérifiez toujours la fiche à jour de la profession sur le Guichet-Emplois, et les durées et préalables des programmes auprès des établissements. Cet article ne constitue pas un conseil d'orientation professionnelle personnalisé.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.emp.title">Explorez les carrières</h3>
+ <p data-i18n="sidebar.emp.desc">Salaires, durée des études, perspectives : filtrez les professions selon vos critères.</p>
+ <a href="/carrieres/" class="sidebar-btn" data-i18n="sidebar.emp.btn">Explorateur →</a>
+ <a href="/calculatrice/" class="sidebar-btn secondary" data-i18n="sidebar.emp.secondary">Calculatrice →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.emp.key">Perspectives officielles</h4>
+ <div class="info-row"><span data-i18n="sidebar.emp.r1">Cybersécurité</span><span data-i18n="sidebar.emp.r1v">Bonnes</span></div>
+ <div class="info-row"><span data-i18n="sidebar.emp.r2">Développeur</span><span data-i18n="sidebar.emp.r2v">Bonnes</span></div>
+ <div class="info-row"><span data-i18n="sidebar.emp.r3">Préposé</span><span data-i18n="sidebar.emp.r3v">Bonnes</span></div>
+ <div class="info-row"><span data-i18n="sidebar.emp.r4">Électricien</span><span data-i18n="sidebar.emp.r4v">Limitées</span></div>
+ <div class="info-row"><span data-i18n="sidebar.emp.r5">Analyste données</span><span data-i18n="sidebar.emp.r5v">Limitées</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.emp.cta.title">Un meilleur salaire, puis un meilleur système</h2>
+ <p data-i18n="art.emp.cta.desc">Gagner plus ne suffit pas. Voyez ce que l'écart placé avec constance peut bâtir avec le temps.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.emp.cta.btn">Essayer la calculatrice →</a>
+ <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>
