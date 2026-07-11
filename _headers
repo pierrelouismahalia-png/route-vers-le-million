@@ -1,0 +1,19 @@
+# Route vers le Million - en-tetes HTTP (Cloudflare Pages)
+#
+# But : empecher l'indexation des domaines de previsualisation Cloudflare,
+# qui creent des doublons du site avec le domaine principal.
+# Les regles ci-dessous utilisent des URL absolues : elles ne s'appliquent
+# QUE sur les hotes indiques. Le domaine principal
+# (route-vers-le-million.blog) n'est jamais affecte et reste indexable.
+
+# Domaine de production Cloudflare Pages : projet.pages.dev
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+# Deploiements de previsualisation : branche.projet.pages.dev
+https://:branch.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+# Domaine Workers, le cas echeant : sous-domaine.workers.dev
+https://:sub.workers.dev/*
+  X-Robots-Tag: noindex, nofollow

@@ -1,0 +1,9 @@
+# Route vers le Million - robots.txt
+# Tout est explorable. La page de remerciement de l'infolettre porte une
+# balise meta robots noindex : elle doit rester explorable pour que Google
+# puisse LIRE ce noindex. On ne la bloque donc pas ici.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://route-vers-le-million.blog/sitemap.xml
