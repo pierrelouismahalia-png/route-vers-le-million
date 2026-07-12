@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Investment Fees: The MER That Decides Your Wealth — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Frais de placement : le coût qui décide de votre richesse"
+        slug "comprendre-les-frais-de-placement"
+        description "Frais de placement, RFG (MER) et frais cachés des fonds : ou les trouver, comment les comparer et pourquoi quelques dixiemes de pourcentage changent tout."
+        keywords frais de placement, ratio des frais de gestion (RFG), frais de gestion FNB, MER fonds communs, frais caches des fonds
+   EN : title "Investment Fees: The MER That Decides Your Wealth"
+        slug "understanding-investment-fees"
+        description "Investment fees and the management expense ratio (MER): where to find them, how to compare them, and why a few tenths of a percent change everything."
+        keywords management expense ratio, MER, ETF fees Canada, mutual fund fees, low-cost index funds, how fees affect returns
+   ES : title "Comisiones de inversión: el coste que decide tu riqueza"
+        slug "comprender-las-comisiones-de-inversion"
+        description "Comisiones de los fondos, ratio de gastos (TER) y costes ocultos: donde encontrarlos, como compararlos y por que unas decimas de punto lo cambian todo."
+        keywords comisiones de los fondos de inversion, ratio de gastos (TER), comisiones ETF, fondos indexados de bajo coste, gestion activa vs pasiva
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ /* TABLE */
+ .prose table { width: 100%; border-collapse: collapse; margin: 2em 0; font-size: 14px; }
+ .prose th, .prose td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+ .prose thead th { font-family: 'Playfair Display', serif; font-weight: 400; color: var(--terra); font-size: 13px; letter-spacing: 0.5px; border-bottom: 2px solid var(--border); }
+ .prose tbody tr:last-child td { border-bottom: none; }
+ .prose th:last-child, .prose td:last-child { text-align: right; font-family: 'Playfair Display', serif; color: var(--terra); }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Investment fees and the management expense ratio (MER): where to find them, how to compare them, and why a few tenths of a percent change everything."/>
+ <meta name="keywords" content="management expense ratio, MER, ETF fees Canada, mutual fund fees, low-cost index funds, how fees affect returns"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/articles/understanding-investment-fees.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/comprendre-les-frais-de-placement.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/understanding-investment-fees.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/comprender-las-comisiones-de-inversion.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/comprendre-les-frais-de-placement.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Investment Fees: The MER That Decides Your Wealth — Route vers le Million"/>
+ <meta property="og:description" content="Investment fees and the management expense ratio (MER): where to find them, how to compare them, and why a few tenths of a percent change everything."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/en/articles/understanding-investment-fees.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="en_CA"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Investment Fees: The MER That Decides Your Wealth"/>
+ <meta name="twitter:description" content="Investment fees and the management expense ratio (MER): where to find them, how to compare them, and why a few tenths of a percent change everything."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Investment Fees: The MER That Decides Your Wealth",
+ "description": "Investment fees and the management expense ratio (MER): where to find them, how to compare them, and why a few tenths of a percent change everything.",
+ "url": "https://route-vers-le-million.blog/en/articles/understanding-investment-fees.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "en-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/en/articles/understanding-investment-fees.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/understanding-investment-fees.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/comprender-las-comisiones-de-inversion.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/en/articles/understanding-investment-fees.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/understanding-investment-fees.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/comprender-las-comisiones-de-inversion.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <a href="/en/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.frais.breadcrumb">Investing</span></p>
+ <p class="hero-tag"><span data-i18n="art.frais.tag">Investing · ETFs · Fees</span></p>
+ <h1><span data-i18n="art.frais.title">Investment Fees: What They Are, Where to Find Them, and <em>Why They Decide Your Wealth</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.frais.location">Quebec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.frais.readtime">7 min read</span>
+ <span>·</span>
+ <span data-i18n="art.frais.category">Investing · ETFs</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Disclosure: This article contains affiliate links. If you sign up or purchase through my links, I earn a commission at no extra cost to you. My recommendations are based on my personal use.</div>
+
+ <p class="lead" data-i18n="art.frais.lead">We talk a lot about returns, stock picking and market timing. We rarely talk about fees. That is unfortunate, because fees are one of the few factors you control entirely, and their effect on your long-term wealth is enormous.</p>
+
+ <p data-i18n="art.frais.p1">An investor cannot guarantee the return on their investments, but they can, for certain, reduce what they pay to hold them. This article explains what investment fees really are, when you pay them, where to find the information to decide knowingly, and why a gap that looks tiny becomes enormous over time.</p>
+
+ <h2 data-i18n="art.frais.h2a">What are investment fees?</h2>
+
+ <p data-i18n="art.frais.p2">When you invest, several types of fees may apply, and it is essential not to confuse them.</p>
+
+ <p data-i18n="art.frais.p3">The first is the <strong>account management fee</strong>, charged by the platform that holds your investments. On some traditional platforms, this fee can eat away an annual percentage of your assets. On a low-cost platform such as Wealthsimple, in self-directed mode, this fee is zero, and buying or selling ETFs is commission-free. This is one of the great advantages of that model.</p>
+
+ <p data-i18n="art.frais.p4">The second, and the most important to understand, is the <strong>management expense ratio (MER)</strong> specific to each fund. It is the annual cost of running the fund itself: management, administration, operating expenses. This percentage applies to the value of your investment in that fund, every year, whether the market rises or falls.</p>
+
+ <p data-i18n="art.frais.p5">The distinction is crucial. You can have no account fees at all and still pay fund fees. These are two different levels, and both matter.</p>
+
+ <h2 data-i18n="art.frais.h2b">When do you pay these fees? The trap of invisibility</h2>
+
+ <p data-i18n="art.frais.p6">Here is what makes fund fees so insidious: you never see them go by. The management expense ratio does not appear on your statement as a line of expense. There is no invoice, no visible withdrawal. The fee is deducted directly and continuously from the value of the fund, even before the return is shown to you. In other words, the return you see displayed is already net of these fees.</p>
+
+ <p data-i18n="art.frais.p7">This invisibility is precisely what makes so many people pay high fees without realizing it. People do not protest an expense they cannot see. That is why a savvy investor must actively seek out the information, rather than wait for it to come to them.</p>
+
+ <h2 data-i18n="art.frais.h2c">Where to find the information to decide</h2>
+
+ <p data-i18n="art.frais.p8">Before buying an ETF, you can and should know its expense ratio. Here is where to find it reliably.</p>
+
+ <p data-i18n="art.frais.p9">The safest source is always the <strong>fund issuer website</strong>: Vanguard, Invesco, BMO, iShares and the others publish the expense ratio of each of their products, along with the "Fund Facts" document that details it. That is the official figure.</p>
+
+ <p data-i18n="art.frais.p10"><strong>Yahoo Finance</strong> is handy for a quick check: you search the fund ticker, and the "Expense Ratio" field shows the fee. One important warning, however, because it will save you a mistake: for several ETFs listed on the Toronto Stock Exchange, Yahoo sometimes shows a ratio of "0.00%". This is not a free fund, it is simply missing data. Never rely on it for a Canadian fund: go back and check on the issuer website.</p>
+
+ <p data-i18n="art.frais.p11">On <strong>Wealthsimple</strong>, each ETF page presents the fund basic information. It is a good starting point, but for the exact expense ratio, the safest habit remains to confirm it with the issuer or in the fund facts.</p>
+
+ <p data-i18n="art.frais.p12">The golden rule: never buy a fund without knowing its expense ratio. It is public information, free, and available in seconds. Ignoring it means agreeing to pay a price you did not even look at.</p>
+
+ <h2 data-i18n="art.frais.h2d">Low fees in practice: the example of my portfolio</h2>
+
+ <p data-i18n="art.frais.p13">To make this concrete, here are the actual expense ratios of two of my own ETFs, chosen precisely for their low cost. They serve as a benchmark for what is considered low.</p>
+
+ <ul>
+ <li data-i18n="art.frais.li1">My health-sector ETF, whose ticker is <strong>VHT</strong>, has an expense ratio of about <strong>0.09%</strong>. That is extremely low: for $10,000 invested, it amounts to barely $9 per year.</li>
+ <li data-i18n="art.frais.li2">My technology ETF, <strong>QQC.F</strong>, which tracks the NASDAQ 100 index, sits around <strong>0.21%</strong>, or about $21 per year for $10,000 invested. It is slightly higher than the previous one, which is normal for this type of fund, but it remains very reasonable.</li>
+ </ul>
+
+ <p data-i18n="art.frais.p14">What makes these two funds inexpensive is that they are passively managed, also called index investing. Concretely, the fund simply copies an already established list of companies, called an index: the U.S. health sector for VHT, the hundred largest non-financial companies on the NASDAQ for QQC.F. No one tries to pick the winners or to beat the market. The fund simply replicates the index. Because this requires very little human work, the fees stay minimal.</p>
+
+ <h2 data-i18n="art.frais.h2e">What high fees look like</h2>
+
+ <p data-i18n="art.frais.p15">To gauge what is low, you have to know what high looks like. In Canada, it is mainly <strong>actively managed mutual funds</strong> that rank among the most expensive in the world. A mutual fund is a basket of securities, a bit like an ETF, but when it is actively managed, professional managers themselves choose the stocks to buy and sell, in the hope of beating the market. It is that constant human work you pay for. These funds, long sold over the counter at traditional banking institutions, carry expense ratios that frequently hover around <strong>2%</strong>. For $10,000 invested, that is about $200 per year, versus $9 for my health fund. That is more than twenty times more expensive, for a product that, statistically, does no better than the index over the long term.</p>
+
+ <p data-i18n="art.frais.p16">Between the two extremes, some products carry intermediate fees higher than classic index ETFs: covered call funds, highly specialized thematic funds, or leveraged funds. They can have their uses, but their higher cost must be justified by what they actually deliver.</p>
+
+ <h2 data-i18n="art.frais.h2f">When you deliberately choose to pay more: my example</h2>
+
+ <p data-i18n="art.frais.p17">To be completely transparent, my own portfolio does not contain only very low-cost funds. I also hold a banking-sector ETF, whose ticker is <strong>ZWB</strong>, and its expense ratio is around <strong>0.71%</strong>, nearly eight times that of my health fund. At first glance, this may seem to contradict my fee-hunting principle. In reality, it is a deliberate choice, and it is precisely the kind of decision this article invites you to make knowingly.</p>
+
+ <p data-i18n="art.frais.p18">A banking ETF is simply a fund that holds bank stocks; in the case of ZWB, the large Canadian banks. But this fund does not merely hold them: it also uses a strategy called covered calls. In simple terms, the fund sells other investors the right to buy its bank shares at a price set in advance, and it collects a sum in exchange for that right. This sum, paid out regularly, generates a high monthly income, around 4.6% per year in my case. It is exactly this income that the higher fees finance, because this strategy requires continuous active management.</p>
+
+ <p data-i18n="art.frais.p19">The trade-off, which you must know, is twofold: by selling that right, you cap part of the upside potential if bank stocks rise sharply, and over a very long horizon, a simple low-cost index banking ETF generally tends to deliver a better total return. In other words, I pay more for an income stream, not to beat the market.</p>
+
+ <p data-i18n="art.frais.p20">The lesson, then, is not that every high fee is to be avoided. It is that a high fee must be a conscious choice, justified by a precise goal that the product actually fulfills. Paying 0.71% without knowing why is a mistake. Paying 0.71% while knowing exactly what you are buying in return is a decision. The difference between the two is information.</p>
+
+ <h2 data-i18n="art.frais.h2g">The table that sums it all up</h2>
+
+ <p data-i18n="art.frais.p21">To see at a glance the real gap between low and high fees, here is a comparison based on a $10,000 investment. The last column shows what each product costs you every year, in fees alone.</p>
+
+ <div data-i18n="art.frais.table"><table><thead><tr><th>Product</th><th>Ticker</th><th>Type</th><th>Expense ratio</th><th>Annual cost per $10,000</th></tr></thead><tbody><tr><td>Index health ETF</td><td>VHT</td><td>Passive management</td><td>about 0.09%</td><td>about $9</td></tr><tr><td>NASDAQ 100 ETF</td><td>QQC.F</td><td>Passive management</td><td>about 0.21%</td><td>about $21</td></tr><tr><td>Covered call banking ETF</td><td>ZWB</td><td>Active management</td><td>about 0.71%</td><td>about $71</td></tr><tr><td>Actively managed mutual fund</td><td>(varies)</td><td>Active management</td><td>about 2.00%</td><td>about $200</td></tr></tbody></table></div>
+
+ <p data-i18n="art.frais.p22">The gap looks modest over a single year. But remember that this drag repeats every year and compounds: the $200 of the mutual fund, compared with the $9 of the health ETF, becomes a difference of tens of thousands of dollars over a few decades.</p>
+
+ <h2 data-i18n="art.frais.h2h">Why a few tenths of a percent change a life</h2>
+
+ <p data-i18n="art.frais.p23">Here is the heart of the matter. A fee gap seems trivial in the moment. The difference between 0.20% and 2% feels abstract. But fees are subject to compounding exactly like your savings, except that they work against you. Every dollar taken in fees is a dollar that can never grow or generate future returns. Year after year, this drag compounds, and the gap widens dramatically.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.frais.p24">Take an illustrative example. Imagine $50,000 invested for 30 years, with a gross return of 7% per year. With a low-cost fund whose expense ratio is 0.20%, your investment could grow to about $360,000. With a fund whose expense ratio is 2%, the same investment, subject to the same gross return, would reach only about $216,000. The gap exceeds <strong>$140,000</strong>, solely because of fees. You did nothing different, you invested the same amount in the same market. The only difference is the fees, and they cost you more than your initial stake.</p>
+ </div>
+
+ <p data-i18n="art.frais.p25">It is exactly the same mechanism that turns a small amount saved regularly into a surprising sum: time amplifies everything. To see this force concretely, I invite you to use our <a href="/calculatrice/">compound interest calculator</a> and compare two identical scenarios while changing only the fee rate. The result speaks louder than any argument. This logic, incidentally, connects to another frequent question, that of <a href="/en/articles/how-many-etfs-should-you-own.html">how many ETFs to hold</a>.</p>
+
+ <h2 data-i18n="art.frais.h2i">In summary</h2>
+
+ <p data-i18n="art.frais.p26">Fees are the only variable in your return that you control entirely. You cannot order the market to rise, but you can choose not to overpay to take part in it. Understand the difference between account fees and fund fees. Always look up the expense ratio before buying, preferably on the issuer website, without relying on the misleading zeros of some aggregators. Know that below 0.30%, you are generally in very reasonable territory, and that around 2%, you pay a price hard to justify. And never forget that over the long road, it is the small repeated leaks that sink the great ships. A few tenths of a percent today are tens of thousands of dollars tomorrow.</p>
+
+ <p data-i18n="art.frais.quizlink">Want to check what you have learned? Take our <a href="/en/articles/quiz-investment-fees.html">quiz on investment fees</a>.</p>
+
+ <p data-i18n="art.frais.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">This article is strictly educational and does not constitute financial or investment advice. Expense ratios change over time; always verify the current figure with the fund issuer. It is recommended to consult a qualified professional before making any decision affecting your investments.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.frais.title">Measure the impact of fees</h3>
+ <p data-i18n="sidebar.frais.desc">Compare two identical scenarios while changing only the fee rate. The gap is surprising.</p>
+ <a href="/calculatrice/" class="sidebar-btn" data-i18n="sidebar.frais.btn">Calculator →</a>
+ <a href="/en/articles/" class="sidebar-btn secondary" data-i18n="sidebar.frais.secondary">View the articles →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.frais.key">Fee benchmarks</h4>
+ <div class="info-row"><span data-i18n="sidebar.frais.r1">Very reasonable</span><span>&lt; 0,30 %</span></div>
+ <div class="info-row"><span data-i18n="sidebar.frais.r2">Hard to justify</span><span>~ 2 %</span></div>
+ <div class="info-row"><span>VHT</span><span>0,09 %</span></div>
+ <div class="info-row"><span>QQC.F</span><span>0,21 %</span></div>
+ <div class="info-row"><span>ZWB</span><span>0,71 %</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.frais.cta.title">See what fees really cost you</h2>
+ <p data-i18n="art.frais.cta.desc">Our compound interest calculator shows you, figures in hand, the gap created by a single percentage point.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.frais.cta.btn">Try the calculator →</a>
+ <a href="/en/articles/" class="cta-btn secondary" data-i18n="art.readMore">View all articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

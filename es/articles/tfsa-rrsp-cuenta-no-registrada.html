@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <script>try{localStorage.setItem('lang','es');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>TFSA, RRSP y cuenta no registrada: en qué orden — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "CELI, REER, compte non enregistré : quoi remplir avant"
+        slug "celi-reer-compte-non-enregistre"
+        description "CELI, REER et compte non enregistre : ce qui les distingue, quoi detenir dans chacun et dans quel ordre cotiser pour optimiser son epargne au Quebec en 2026."
+        keywords CELI REER compte non enregistre, CELI ou REER, ordre de cotisation, repartition de l'emplacement des actifs, plafond CELI 2026, plafond REER 2026
+   EN : title "TFSA, RRSP and Non-Registered: What Order to Fill"
+        slug "tfsa-rrsp-non-registered-account"
+        description "TFSA, RRSP and non-registered accounts: what truly sets them apart, what to hold in each, and the order to contribute to optimize your savings."
+        keywords TFSA RRSP non-registered account, TFSA vs RRSP, asset location Canada, contribution order, TFSA contribution limit 2026, RRSP contribution limit 2026
+   ES : title "TFSA, RRSP y cuenta no registrada: en qué orden"
+        slug "tfsa-rrsp-cuenta-no-registrada"
+        description "TFSA, RRSP y cuenta no registrada: que las distingue, que tener en cada una y en que orden aportar para optimizar tu ahorro en Canada."
+        keywords TFSA RRSP cuenta no registrada, TFSA vs RRSP, ubicacion de activos, orden de aportacion, limite TFSA 2026, limite RRSP 2026
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+ .prose ol { margin: 0 0 1.6em 22px; padding: 0; }
+ .prose ol li { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 0.8em; padding-left: 6px; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="TFSA, RRSP y cuenta no registrada: que las distingue, que tener en cada una y en que orden aportar para optimizar tu ahorro en Canada."/>
+ <meta name="keywords" content="TFSA RRSP cuenta no registrada, TFSA vs RRSP, ubicacion de activos, orden de aportacion, limite TFSA 2026, limite RRSP 2026"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/es/articles/tfsa-rrsp-cuenta-no-registrada.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/celi-reer-compte-non-enregistre.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/tfsa-rrsp-non-registered-account.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/tfsa-rrsp-cuenta-no-registrada.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/celi-reer-compte-non-enregistre.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="TFSA, RRSP y cuenta no registrada: en qué orden — Route vers le Million"/>
+ <meta property="og:description" content="TFSA, RRSP y cuenta no registrada: que las distingue, que tener en cada una y en que orden aportar para optimizar tu ahorro en Canada."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/es/articles/tfsa-rrsp-cuenta-no-registrada.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="es_ES"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="TFSA, RRSP y cuenta no registrada: en qué orden"/>
+ <meta name="twitter:description" content="TFSA, RRSP y cuenta no registrada: que las distingue, que tener en cada una y en que orden aportar para optimizar tu ahorro en Canada."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "TFSA, RRSP y cuenta no registrada: en qué orden",
+ "description": "TFSA, RRSP y cuenta no registrada: que las distingue, que tener en cada una y en que orden aportar para optimizar tu ahorro en Canada.",
+ "url": "https://route-vers-le-million.blog/es/articles/tfsa-rrsp-cuenta-no-registrada.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "es-ES"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Herramientas</a></li>
+ <li><a href="/es/articles/" data-i18n="nav.articles">Artículos</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/es/articles/tfsa-rrsp-cuenta-no-registrada.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/tfsa-rrsp-non-registered-account.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/tfsa-rrsp-cuenta-no-registrada.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Inicio</a>
+ <a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Herramientas</a>
+ <a href="/es/articles/" data-i18n="nav.allArticles">Todos los artículos</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fondo de emergencia</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mi trayectoria</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/es/articles/tfsa-rrsp-cuenta-no-registrada.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/tfsa-rrsp-non-registered-account.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/tfsa-rrsp-cuenta-no-registrada.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Abrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Inicio</a> &nbsp;/&nbsp; <a href="/es/articles/" data-i18n="nav.articles">Artículos</a> &nbsp;/&nbsp; <span data-i18n="art.comptes.breadcrumb">TFSA y RRSP</span></p>
+ <p class="hero-tag"><span data-i18n="art.comptes.tag">TFSA · RRSP · Cuenta no registrada</span></p>
+ <h1><span data-i18n="art.comptes.title">Las tres cuentas que dominar cuando ya ahorras: <em>TFSA, RRSP y cuenta no registrada</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.comptes.location">Quebec, Canadá</span>
+ <span>·</span>
+ <span data-i18n="art.comptes.readtime">7 min de lectura</span>
+ <span>·</span>
+ <span data-i18n="art.comptes.category">TFSA y RRSP · Fiscalidad</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgación: Este artículo contiene enlaces de afiliados. Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. Mis recomendaciones están basadas en mi uso personal.</div>
+
+ <p class="lead" data-i18n="art.comptes.lead">La mayoría de los artículos sobre el TFSA y el RRSP se dirigen a alguien que nunca ha abierto una cuenta de inversión. Este se dirige a la otra persona: la que ya aporta, que entiende lo básico, y que ahora se pregunta cómo orquestar sus tres cuentas para no dejar dinero sobre la mesa.</p>
+
+ <p data-i18n="art.comptes.p1">Porque cuando se ahorra en serio, la verdadera pregunta ya no es "cuál abrir", sino "cuál llenar primero, con qué y en qué orden". Es una cuestión de secuencia e interacciones, y ahí se juega la diferencia entre un ahorro correcto y un ahorro optimizado. Estas son las tres cuentas, lo que las distingue de verdad, y el momento en que cada una cobra todo su sentido.</p>
+
+ <h2 data-i18n="art.comptes.h2a">El TFSA: la flexibilidad absoluta, libre de impuestos</h2>
+
+ <p data-i18n="art.comptes.p2">El TFSA (cuenta de ahorro libre de impuestos) es la más versátil de las tres. Aportas con dinero ya gravado, pero a cambio, todo lo que ocurre después en su interior escapa al impuesto: el crecimiento, los dividendos, las ganancias de capital, y sobre todo los retiros. Nunca le debes un centavo al Estado por lo que tu TFSA genera.</p>
+
+ <p data-i18n="art.comptes.p3">Para 2026, el límite anual es de 7 000 $. Si eras elegible desde el lanzamiento del programa en 2009 y nunca has aportado, tus derechos acumulados alcanzan 109 000 $. Los derechos no utilizados se trasladan indefinidamente, y es un punto que los ahorradores avanzados aprovechan: un TFSA puede superar ampliamente su límite anual aparente una vez considerados los derechos acumulados.</p>
+
+ <p data-i18n="art.comptes.p4">La particularidad más útil del TFSA es la mecánica de los retiros. Cuando retiras una suma, ese monto se añade a tus derechos de aportación, pero solo a partir del 1 de enero siguiente. Así, puedes retirar 10 000 $ este año y volver a aportarlos el año próximo, además del nuevo límite. Cuidado, sin embargo, con la trampa clásica: volver a aportar el monto retirado en el mismo año civil, cuando tus derechos ya están maximizados, constituye un exceso de aportación sujeto a una penalización del 1 % por mes.</p>
+
+ <p data-i18n="art.comptes.p5"><strong>Cuándo privilegiarla.</strong> El TFSA brilla cuando importa la flexibilidad: un objetivo a mediano plazo, un colchón de seguridad que quieres hacer crecer, o simplemente el crecimiento a muy largo plazo sin ninguna merma fiscal a la salida. Es también la cuenta de elección si prevés una tasa impositiva alta en la jubilación, ya que los retiros nunca se gravan y no afectan tus prestaciones gubernamentales calculadas según el ingreso.</p>
+
+ <h2 data-i18n="art.comptes.h2b">El RRSP: un diferimiento de impuestos, no un regalo</h2>
+
+ <p data-i18n="art.comptes.p6">El RRSP (plan registrado de ahorro para la jubilación) funciona al revés del TFSA. Aportas con dinero antes de impuestos: cada dólar aportado reduce tu ingreso imponible del año, lo que genera un reembolso o una reducción de impuesto. El crecimiento está al abrigo del impuesto mientras los fondos permanezcan en la cuenta. Pero en el momento del retiro, todo se grava como un ingreso ordinario.</p>
+
+ <p data-i18n="art.comptes.p7">Esta es la matización que los ahorradores experimentados integran y que los principiantes a menudo pasan por alto: el RRSP no borra el impuesto, lo difiere. Su ventaja real solo existe si tu tasa impositiva marginal al aportar es más alta que la que tendrás al retirar. Aportar a una tasa alta hoy, retirar a una tasa más baja en la jubilación: ese es el arbitraje ganador. Aportar a una tasa baja para retirar a una tasa equivalente o superior anula en gran medida el interés.</p>
+
+ <p data-i18n="art.comptes.p8">Para 2026, puedes aportar hasta el 18 % de tu ingreso ganado del año anterior, sin superar el límite de 33 810 $. La fecha límite para el año fiscal 2025 es el 2 de marzo de 2026. Existe una tolerancia de 2 000 $ de exceso de aportación sin penalización, pero esos 2 000 $ no son deducibles. Puedes aportar hasta el 31 de diciembre del año en que cumples 71 años, tras lo cual la cuenta debe convertirse.</p>
+
+ <p data-i18n="art.comptes.p9"><strong>Cuándo privilegiarlo.</strong> El RRSP cobra todo su sentido cuando tu ingreso es alto y esperas razonablemente un ingreso menor en la jubilación. Se vuelve aún más ventajoso en un caso concreto ligado a las inversiones estadounidenses: en virtud del convenio fiscal entre Canadá y los Estados Unidos, los dividendos pagados por valores estadounidenses mantenidos en un RRSP escapan a la retención en origen del 15 %. Esa misma ventaja no existe en el TFSA, donde esta retención se aplica sin poder recuperarse. La matización, para los puristas: esta ventaja vale sobre todo para los valores cotizados directamente en los Estados Unidos, y mucho menos para los fondos canadienses que encapsulan un índice estadounidense, donde la retención puede aplicarse aguas arriba sin importar la cuenta.</p>
+
+ <h2 data-i18n="art.comptes.h2c">La cuenta no registrada: sin límite, pero imponible</h2>
+
+ <p data-i18n="art.comptes.p10">La cuenta no registrada no tiene ni límite de aportación, ni ventaja fiscal a la entrada, ni abrigo a la salida. Es una cuenta de inversión ordinaria: pones lo que quieres, cuando quieres, pero el fisco sigue cada ingreso que genera. Por esta razón, muchos la descuidan. Es un error en cuanto se ahorra en serio, porque se vuelve indispensable una vez llenas las dos cuentas registradas.</p>
+
+ <p data-i18n="art.comptes.p11">Donde la cuenta no registrada exige finura es en el tratamiento fiscal diferenciado de los tipos de ingreso. No todos los rendimientos se gravan de la misma forma aquí, y eso determina qué conviene tener en ella:</p>
+
+ <ul>
+ <li data-i18n="art.comptes.li1"><strong>Las ganancias de capital</strong> solo son imponibles en un 50 % de su valor, y únicamente cuando se realizan, es decir, en la venta. Es el ingreso más ventajoso para alojar aquí.</li>
+ <li data-i18n="art.comptes.li2"><strong>Los dividendos canadienses elegibles</strong> se benefician de un crédito fiscal por dividendos que reduce su carga fiscal. Reciben un trato relativamente bueno en esta cuenta.</li>
+ <li data-i18n="art.comptes.li3"><strong>Los intereses y los dividendos extranjeros</strong> se gravan a la tasa plena, como un salario. Son los ingresos que conviene evitar alojar en la cuenta no registrada cuando es posible.</li>
+ </ul>
+
+ <p data-i18n="art.comptes.p12"><strong>Cuándo privilegiarla.</strong> La cuenta no registrada es el receptáculo natural de todo lo que desborda una vez maximizados el TFSA y el RRSP. Es también el buen lugar para las inversiones de fuerte crecimiento que piensas conservar mucho tiempo sin venderlas, ya que el impuesto sobre la ganancia de capital solo se debe en la realización y a una tasa de inclusión ventajosa.</p>
+
+ <h2 data-i18n="art.comptes.h2d">El arte de la distribución: qué poner dónde</h2>
+
+ <p data-i18n="art.comptes.p13">Aquí es donde el ahorrador experimentado se distingue de verdad. Una vez que se poseen las tres cuentas, el reflejo ya no es solo "cuánto aporto", sino "qué inversión va en qué cuenta". Se llama ubicación de activos (asset location), y el principio es simple: colocar cada tipo de ingreso allí donde se grave menos.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.comptes.p14">La lógica general, a adaptar a cada situación: alojar los ingresos más gravados, como los intereses, al abrigo en las cuentas registradas; conservar en el RRSP los valores estadounidenses que pagan dividendos, para aprovechar la exención de retención; reservar el TFSA para las inversiones con mayor potencial de crecimiento, ya que la ganancia será enteramente libre de impuestos; y guardar en la cuenta no registrada lo que genera ganancias de capital o dividendos canadienses, mejor tratados fiscalmente fuera de un abrigo. La elección precisa de los fondos, y de sus comisiones, es el tema de nuestros artículos sobre las <a href="/es/articles/comprender-las-comisiones-de-inversion.html">comisiones de inversión</a> y el <a href="/es/articles/cuantos-etf-tener.html">número de ETF que conviene tener</a>.</p>
+ </div>
+
+ <h2 data-i18n="art.comptes.h2e">El orden de prioridad, en la práctica</h2>
+
+ <p data-i18n="art.comptes.p15">Para resumir la secuencia que siguen en general los ahorradores que optimizan, teniendo en cuenta que cada situación modifica este orden:</p>
+
+ <ol>
+ <li data-i18n="art.comptes.o1"><strong>Primero, captar toda ventaja gratuita.</strong> Si un empleador iguala tus aportaciones a un plan de jubilación, es un rendimiento inmediato garantizado que ninguna cuenta personal superará. Se empieza ahí.</li>
+ <li data-i18n="art.comptes.o2"><strong>Luego, arbitrar entre TFSA y RRSP según la tasa impositiva.</strong> Ingreso alto hoy y más bajo en la jubilación: el RRSP toma la delantera. Ingreso modesto o flexibilidad buscada: el TFSA pasa primero.</li>
+ <li data-i18n="art.comptes.o3"><strong>Maximizar la segunda de las dos</strong> una vez llena la prioritaria.</li>
+ <li data-i18n="art.comptes.o4"><strong>Hacer desbordar el excedente en la cuenta no registrada,</strong> alojando allí las inversiones más eficientes fiscalmente.</li>
+ </ol>
+
+ <h2 data-i18n="art.comptes.h2f">En resumen</h2>
+
+ <p data-i18n="art.comptes.p16">El TFSA, el RRSP y la cuenta no registrada no son tres variantes de una misma cosa: son tres herramientas de comportamientos fiscales opuestos, concebidas para usos diferentes. El TFSA ofrece libertad y ausencia de impuesto a la salida. El RRSP ofrece un diferimiento que solo es ventajoso bajo ciertas condiciones de ingreso. La cuenta no registrada ofrece una capacidad ilimitada al precio de una tributación que hay que gestionar con inteligencia. Dominarlas juntas es dejar de ver tres cuentas aisladas para ver un solo sistema, donde cada dólar se coloca allí donde trabaja de la forma más eficiente. Es precisamente lo que separa a quien ahorra de quien optimiza.</p>
+
+ <p data-i18n="art.comptes.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Este artículo tiene una finalidad estrictamente educativa y no constituye un consejo financiero o fiscal personalizado. Las reglas fiscales comportan numerosas excepciones y cada situación es única. Se recomienda consultar a un profesional cualificado antes de tomar una decisión que afecte a tus finanzas. Los límites citados son los del año fiscal 2026.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.comptes.title">Visualiza el crecimiento</h3>
+ <p data-i18n="sidebar.comptes.desc">Mira en qué pueden convertirse tus aportaciones al abrigo del impuesto, gracias al interés compuesto.</p>
+ <a href="/calculatrice/" class="sidebar-btn" data-i18n="sidebar.comptes.btn">Calculadora →</a>
+ <a href="/es/articles/" class="sidebar-btn secondary" data-i18n="sidebar.comptes.secondary">Ver los artículos →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.comptes.key">Límites 2026</h4>
+ <div class="info-row"><span data-i18n="sidebar.comptes.r1">TFSA (anual)</span><span data-i18n="sidebar.comptes.r1v">7 000 $</span></div>
+ <div class="info-row"><span data-i18n="sidebar.comptes.r2">TFSA (acumulado)</span><span data-i18n="sidebar.comptes.r2v">109 000 $</span></div>
+ <div class="info-row"><span data-i18n="sidebar.comptes.r3">RRSP (máx.)</span><span data-i18n="sidebar.comptes.r3v">33 810 $</span></div>
+ <div class="info-row"><span data-i18n="sidebar.comptes.r4">Fecha límite RRSP</span><span data-i18n="sidebar.comptes.r4v">2 de marzo de 2026</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.comptes.cta.title">¿Listo para optimizar tu ahorro?</h2>
+ <p data-i18n="art.comptes.cta.desc">Usa nuestra calculadora de interés compuesto para visualizar el crecimiento de tus cuentas en el tiempo.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.comptes.cta.btn">Probar la calculadora →</a>
+ <a href="/es/articles/" class="cta-btn secondary" data-i18n="art.readMore">Ver todos los artículos →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finanzas personales · Québec, Canadá</p>
+ <p data-i18n="footer.disclaimer">Solo con fines informativos — no constituye asesoramiento financiero oficial.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contiene enlaces de afiliados (Wealthsimple, Tangerine, Borrowell, Amazon). Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. — <a href="/es/divulgacion.html" style="color:inherit;text-decoration:underline;">Más información →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

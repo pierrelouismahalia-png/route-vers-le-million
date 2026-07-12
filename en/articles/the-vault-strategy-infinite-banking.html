@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>The Vault Strategy: Behind Become Your Own Banker — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "La strategie du coffre : derriere devenez votre propre banquier"
+        slug "strategie-du-coffre"
+        description "Infinite banking, le coffre, devenir sa propre banque : le vrai nom, le mecanisme de l'assurance vie entiere avec participation, un exemple chiffre et les couts caches."
+        keywords infinite banking Canada, devenir sa propre banque, assurance vie entiere avec participation, valeur de rachat, avance sur police, strategie du coffre
+   EN : title "The Vault Strategy: Behind Become Your Own Banker"
+        slug "the-vault-strategy-infinite-banking"
+        description "Infinite banking, the vault, becoming your own bank: the real name, how participating whole life insurance works, a worked example and the hidden costs."
+        keywords infinite banking Canada, become your own bank, participating whole life insurance, cash surrender value, policy loan
+   ES : title "La estrategia de la caja fuerte: detras de se tu propio banco"
+        slug "estrategia-de-la-caja-fuerte"
+        description "Infinite banking, la caja fuerte, ser tu propio banco: el verdadero nombre, como funciona el seguro de vida entera con participacion, un ejemplo y los costes ocultos."
+        keywords infinite banking Canada, ser tu propio banco, seguro de vida entera con participacion, valor de rescate, prestamo sobre poliza
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ --warn: #9a3b3b;
+ --warn-bg: #f6e9e9;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ nav.site { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); scroll-margin-top: 80px; }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; scroll-margin-top: 80px; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ .anchors { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin: 0 0 2.4em; }
+ .anchors h2 { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: var(--terra); margin: 0 0 12px; padding: 0; border: none; }
+ .anchors ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 16px; }
+ .anchors li { border: none; padding: 0; font-size: 14px; }
+ .anchors li::before { content: none; }
+ .anchors a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; }
+ .anchors a:hover { color: var(--terra); border-color: var(--terra); }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+ .signal-box { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 2em 0; }
+ .signal-box h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--terra); margin-bottom: 12px; }
+ .signal-box ul { margin: 0 0 1em 0; }
+ .signal-box p { font-size: 15px; margin: 0; }
+
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; margin-bottom: 10px; }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 14px; color: var(--terra); text-align: right; }
+
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; margin: 6px; }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+ .mobile-menu a:last-child { border: none; }
+
+ @media (max-width: 768px) {
+ nav.site { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .cta-bottom { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Infinite banking, the vault, becoming your own bank: the real name, how participating whole life insurance works, a worked example and the hidden costs."/>
+ <meta name="keywords" content="infinite banking Canada, become your own bank, participating whole life insurance, cash surrender value, policy loan"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/articles/the-vault-strategy-infinite-banking.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/strategie-du-coffre.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/the-vault-strategy-infinite-banking.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/estrategia-de-la-caja-fuerte.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/strategie-du-coffre.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="The Vault Strategy: Behind Become Your Own Banker — Route vers le Million"/>
+ <meta property="og:description" content="Infinite banking, the vault, becoming your own bank: the real name, how participating whole life insurance works, a worked example and the hidden costs."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/en/articles/the-vault-strategy-infinite-banking.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="en_CA"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="The Vault Strategy: Behind Become Your Own Banker"/>
+ <meta name="twitter:description" content="Infinite banking, the vault, becoming your own bank: the real name, how participating whole life insurance works, a worked example and the hidden costs."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "The Vault Strategy: Behind Become Your Own Banker",
+ "description": "Infinite banking, the vault, becoming your own bank: the real name, how participating whole life insurance works, a worked example and the hidden costs.",
+ "url": "https://route-vers-le-million.blog/en/articles/the-vault-strategy-infinite-banking.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "en-CA"
+ }
+ </script>
+</head>
+<body>
+
+<nav class="site">
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/en/articles/the-vault-strategy-infinite-banking.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/the-vault-strategy-infinite-banking.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/estrategia-de-la-caja-fuerte.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/en/articles/the-vault-strategy-infinite-banking.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/the-vault-strategy-infinite-banking.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/estrategia-de-la-caja-fuerte.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <a href="/en/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.coffre.breadcrumb">Strategy</span></p>
+ <p class="hero-tag"><span data-i18n="art.coffre.tag">Strategy · Insurance · Taxation</span></p>
+ <h1><span data-i18n="art.coffre.title">The Vault Strategy: <em>what hides behind "become your own banker"</em></span></h1>
+ </div>
+</div>
+
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.coffre.location">Quebec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.coffre.readtime">10 min read</span>
+ <span>·</span>
+ <span data-i18n="art.coffre.category">Strategy · Insurance</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Disclosure: This article contains affiliate links. If you sign up or purchase through my links, I earn a commission at no extra cost to you. My recommendations are based on my personal use.</div>
+
+ <p class="lead" data-i18n="art.coffre.lead">The pitch is always the same: "The rich do not leave their money at the bank. They put it in a vault that grows tax-sheltered, and they borrow from themselves." Then comes a screenshot, an impressive figure, and an invitation to book a call.</p>
+
+ <p data-i18n="art.coffre.p1">This "vault" really exists. It has a name, an origin, a precise mechanism, genuine advantages and costs the videos carefully keep quiet about. This article sells you nothing: it explains. You will decide afterward.</p>
+
+ <nav class="anchors" aria-label="Sections">
+ <h2 data-i18n="art.coffre.anchors.title">Jump to</h2>
+ <ul>
+ <li><a href="#nom" data-i18n="art.coffre.a1">The real name</a></li>
+ <li><a href="#fonctionne" data-i18n="art.coffre.a2">How it works</a></li>
+ <li><a href="#oublie" data-i18n="art.coffre.a3">What the videos leave out</a></li>
+ <li><a href="#exemple" data-i18n="art.coffre.a4">Worked example</a></li>
+ <li><a href="#pourqui" data-i18n="art.coffre.a5">Who it suits</a></li>
+ <li><a href="#signaux" data-i18n="art.coffre.a6">Warning signs</a></li>
+ <li><a href="#faq" data-i18n="art.coffre.a7">FAQ</a></li>
+ </ul>
+ </nav>
+
+ <h2 id="nom" data-i18n="art.coffre.h2.nom">The real name: the infinite banking concept</h2>
+
+ <p data-i18n="art.coffre.n1">The strategy is called <strong>infinite banking</strong>. It was popularized in the United States by Nelson Nash, in his book <em>Becoming Your Own Banker</em>, then adapted to the Canadian context.</p>
+
+ <p data-i18n="art.coffre.n2">The tool at the heart of the strategy is neither a bank account nor an investment in the usual sense. It is an insurance product: <strong>participating whole life insurance</strong>. Everything else flows from that, and this is why naming it changes everything.</p>
+
+ <h2 id="fonctionne" data-i18n="art.coffre.h2.fonctionne">How it works, in detail</h2>
+
+ <h3 data-i18n="art.coffre.h3.vieentiere">Participating whole life insurance</h3>
+
+ <p data-i18n="art.coffre.f1">Unlike term insurance, which covers a defined period and is worth nothing at expiry, whole life insurance covers your entire life. Premiums are fixed, the death benefit is guaranteed, and a <strong>cash surrender value</strong> accumulates inside the policy. To this are added <strong>participations</strong>, often called dividends, paid by the insurer according to its results.</p>
+
+ <p data-i18n="art.coffre.f2">The growth of this cash value happens tax-sheltered inside the policy, within the tax limits set in Canada for so-called exempt policies. It is this point that feeds the image of the "tax-sheltered vault".</p>
+
+ <h3 data-i18n="art.coffre.h3.acces">How you access the money</h3>
+
+ <p data-i18n="art.coffre.f3">This is where the idea of "borrowing from yourself" is born. You do not cash out your cash value: you <strong>borrow against it</strong>. Two routes exist. The <strong>policy loan</strong> is a loan granted by the insurer itself, secured by the cash value. The <strong>bank loan secured by the policy</strong> goes through a financial institution, with the policy as collateral.</p>
+
+ <p data-i18n="art.coffre.f4">The appeal is real, and it should not be denied: the borrowed money does not interrupt the growth of the cash value, which keeps compounding on the full amount. Hence the seductive formula: you use the money while leaving it at work.</p>
+
+ <h2 id="oublie" data-i18n="art.coffre.h2.oublie">What the videos leave out</h2>
+
+ <p data-i18n="art.coffre.ob0">Here is the part that never appears in sixty-second videos. It does not cancel the strategy, but it completely changes the assessment one can make of it.</p>
+
+ <ul>
+ <li data-i18n="art.coffre.ob1">In the <strong>early years</strong>, a large share of the premiums goes to fees and to the advisor commission. That is precisely what explains why this product is so actively sold.</li>
+ <li data-i18n="art.coffre.ob2">The <strong>cash value in the early years is often lower than the total premiums paid</strong>. In other words, you are at an accounting loss for several years.</li>
+ <li data-i18n="art.coffre.ob3"><strong>Policy loans bear interest.</strong> "Borrowing from yourself" is not free: the insurer or the bank charges a rate.</li>
+ <li data-i18n="art.coffre.ob4">A <strong>policy abandoned early is a net loss</strong>, sometimes a heavy one. The commitment is very long term.</li>
+ <li data-i18n="art.coffre.ob5"><strong>Surrendering the policy, and certain loans, can trigger tax consequences.</strong> The shelter is not absolute.</li>
+ </ul>
+
+ <h2 id="exemple" data-i18n="art.coffre.h2.exemple">Worked example</h2>
+
+ <p data-i18n="art.coffre.ex1">Take a typical profile: an annual premium of <strong>$10,000</strong>, paid for <strong>twenty years</strong>, or $200,000 of premiums in total.</p>
+
+ <p data-i18n="art.coffre.ex2">The realistic unfolding looks like this. In the first three to five years, the cash value is low, clearly below the premiums already paid, because fees and commissions are concentrated at the start of the contract. Afterward, the cash value grows more steadily, supported by participations. In parallel, and from day one, a <strong>guaranteed death benefit</strong> exists, often well above the total premiums paid.</p>
+
+ <p data-i18n="art.coffre.ex3">Now compare with the same sum, $10,000 a year, invested in an index portfolio inside a TFSA. The expected long-term return of a diversified portfolio is generally higher than the growth of a cash value, which is conservative by construction. On the other hand, the TFSA pays no death benefit, offers no guarantee, and carries none of the insurance features of the policy.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.coffre.ex4">This is the point the videos systematically skip: participating whole life insurance is an <strong>insurance product with a conservative savings component</strong>. It is not a wealth machine, and it is not meant to be. Comparing it to a growth portfolio is like comparing a seatbelt to an engine: both are useful, but they do not do the same job.</p>
+ </div>
+
+ <div class="pullquote">
+ <p data-i18n="art.coffre.ex5">The right question is not "does it pay more than an ETF?". It is: "do I have a permanent insurance need, and are my free tax shelters already full?"</p>
+ </div>
+
+ <h2 id="pourqui" data-i18n="art.coffre.h2.pourqui">Who it can suit, and for whom it is questionable</h2>
+
+ <h3 data-i18n="art.coffre.h3.convient">It can suit you if</h3>
+ <ul>
+ <li data-i18n="art.coffre.cv1">Your income is high and stable, and you can sustain fixed premiums for decades.</li>
+ <li data-i18n="art.coffre.cv2">Your TFSA and RRSP are <strong>already maximized</strong>.</li>
+ <li data-i18n="art.coffre.cv3">You have a <strong>permanent insurance need</strong>: estate planning, estate freeze, protecting wealth to be transferred.</li>
+ <li data-i18n="art.coffre.cv4">You are a business owner and the policy can be held by the corporation, which changes the tax analysis.</li>
+ <li data-i18n="art.coffre.cv5">Your horizon is very long, and you will not need to surrender the policy along the way.</li>
+ </ul>
+
+ <h3 data-i18n="art.coffre.h3.discutable">It is questionable if</h3>
+ <ul>
+ <li data-i18n="art.coffre.dc1">Your registered accounts are not yet maximized.</li>
+ <li data-i18n="art.coffre.dc2">Your budget is variable: the premiums are not, and abandoning the policy is costly.</li>
+ <li data-i18n="art.coffre.dc3">You buy the policy only because a video promised a "vault" and passive income.</li>
+ <li data-i18n="art.coffre.dc4">You have no real need for permanent insurance, only a need to save.</li>
+ </ul>
+
+ <p data-i18n="art.coffre.pq1">The sequencing rule is simple and rarely contradicted: the TFSA and RRSP offer <strong>free</strong> tax shelters, with no acquisition fees and no commission. Filling them first is not dogma, it is arithmetic. We detail this sequence in our article on the <a href="/en/articles/tfsa-rrsp-non-registered-account.html">three accounts to master</a>.</p>
+
+ <h2 id="signaux" data-i18n="art.coffre.h2.signaux">Recognizing the social media pitch</h2>
+
+ <div class="signal-box">
+ <h4 data-i18n="art.coffre.sig.h">Warning signs: they are selling you a product, not a strategy</h4>
+ <ul>
+ <li data-i18n="art.coffre.sig1"><strong>Unverifiable</strong> income: screenshots, flattering illustrations, figures with no context.</li>
+ <li data-i18n="art.coffre.sig2">An <strong>artificial urgency</strong>: "the longer you wait, the more the premium rises with age".</li>
+ <li data-i18n="art.coffre.sig3">A <strong>discovery call or a paid course</strong> at the end. The free content is the bait.</li>
+ <li data-i18n="art.coffre.sig4">A promise of <strong>passive income with no risk</strong>, and the word "fees" that never appears.</li>
+ <li data-i18n="art.coffre.sig5"><strong>The signal specific to this product:</strong> commissions on whole life insurance rank among the highest in the financial industry. An unusual enthusiasm for one precise product always deserves the same question.</li>
+ </ul>
+ <p data-i18n="art.coffre.sig6">Who is paid, and how much? Asking this question is not distrust. It is due diligence.</p>
+ </div>
+
+ <h2 id="faq" data-i18n="art.coffre.h2.faq">Frequently asked questions</h2>
+
+ <h3 data-i18n="art.coffre.q1">Is it a scam?</h3>
+ <p data-i18n="art.coffre.r1">No. It is a legitimate, regulated insurance product, sold by certified advisors. The problem is not the product: it is the gap between what it really is and what some videos promise of it.</p>
+
+ <h3 data-i18n="art.coffre.q2">What is the difference from term insurance?</h3>
+ <p data-i18n="art.coffre.r2">Term insurance covers a defined period (10, 20 or 30 years), costs far less, and accumulates no cash value. Whole life covers your entire life, costs considerably more, and accumulates a cash value. We compare the two in detail in our article on <a href="/en/articles/permanent-life-insurance.html">permanent life insurance</a>.</p>
+
+ <h3 data-i18n="art.coffre.q3">Do I pay tax on policy loans?</h3>
+ <p data-i18n="art.coffre.r3">A policy loan is a loan, not a withdrawal: that is precisely its appeal. But certain situations can trigger tax consequences, depending on the amount, the structure and how the policy evolves. A tax specialist must validate your case.</p>
+
+ <h3 data-i18n="art.coffre.q4">Can I cancel my policy?</h3>
+ <p data-i18n="art.coffre.r4">Yes, but an early surrender is generally a net loss, because fees and commissions are concentrated in the first years. Surrender can also carry tax consequences. It is a very long-term commitment, and it must be approached as such.</p>
+
+ <h3 data-i18n="art.coffre.q5">Why do the TFSA and RRSP come first?</h3>
+ <p data-i18n="art.coffre.r5">Because they offer a tax shelter with no acquisition fees, no commission and no premium commitment. At comparable tax advantage, the product without fees wins. It is as simple as that, and it is why almost all independent financial planners recommend this order.</p>
+
+ <p data-i18n="art.coffre.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Educational content only. This article does not constitute personalized financial, tax or insurance advice, and neither recommends nor discourages any product. Participating whole life insurance is a very long-term commitment whose early abandonment can cause a significant loss. Consult a financial planner (Pl. Fin.) and a tax specialist before acting.</p>
+
+ </div>
+ </article>
+
+ <aside class="sidebar">
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.coffre.title">Insurance, not investment</h3>
+ <p data-i18n="sidebar.coffre.desc">An insurance product with a conservative savings component. Comparing it to a growth portfolio is misleading.</p>
+ <a href="/en/articles/permanent-life-insurance.html" class="sidebar-btn" data-i18n="sidebar.coffre.btn">Permanent vs term →</a>
+ <a href="/en/articles/tfsa-rrsp-non-registered-account.html" class="sidebar-btn secondary" data-i18n="sidebar.coffre.secondary">The order of accounts →</a>
+ </div>
+ </div>
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.coffre.key">In brief</h4>
+ <div class="info-row"><span data-i18n="sidebar.coffre.r1">Real name</span><span data-i18n="sidebar.coffre.r1v">Infinite banking</span></div>
+ <div class="info-row"><span data-i18n="sidebar.coffre.r2">Tool</span><span data-i18n="sidebar.coffre.r2v">Whole life</span></div>
+ <div class="info-row"><span data-i18n="sidebar.coffre.r3">Access</span><span data-i18n="sidebar.coffre.r3v">Policy loan</span></div>
+ <div class="info-row"><span data-i18n="sidebar.coffre.r4">Fees</span><span data-i18n="sidebar.coffre.r4v">Front-loaded</span></div>
+ <div class="info-row"><span data-i18n="sidebar.coffre.r5">Sequence</span><span data-i18n="sidebar.coffre.r5v">TFSA/RRSP first</span></div>
+ </div>
+ </aside>
+</div>
+
+<div class="cta-bottom">
+ <h2 data-i18n="art.coffre.cta.title">Fill the free shelters first</h2>
+ <p data-i18n="art.coffre.cta.desc">TFSA, RRSP, non-registered account: the order in which you fill them matters more than any product.</p>
+ <a href="/en/articles/tfsa-rrsp-non-registered-account.html" class="cta-btn" data-i18n="art.coffre.cta.btn">The order of accounts →</a>
+ <a href="/en/articles/" class="cta-btn secondary" data-i18n="art.readMore">View all articles →</a>
+</div>
+
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

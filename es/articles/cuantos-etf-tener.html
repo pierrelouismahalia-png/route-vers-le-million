@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <script>try{localStorage.setItem('lang','es');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>¿Cuántos ETF tener? El número no es la pregunta — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Combien d'ETF faut-il avoir? Le nombre n'est pas la question"
+        slug "combien-etf-avoir"
+        description "Combien d'ETF (FNB) faut-il detenir? Chevauchement, fausse diversification, ETF tout-en-un et frais : un cadre simple pour decider du bon nombre."
+        keywords combien d'ETF avoir, chevauchement ETF (FNB), ETF tout-en-un, diversification FNB, FNB sectoriels frais
+   EN : title "How Many ETFs Should You Own? Number Isn't the Point"
+        slug "how-many-etfs-should-you-own"
+        description "How many ETFs should you own? Overlap, false diversification, all-in-one ETFs and fees: a simple framework to decide the right number for you."
+        keywords how many ETFs should I own, ETF overlap, all-in-one ETF Canada, ETF diversification, sector ETF fees
+   ES : title "¿Cuántos ETF tener? El número no es la pregunta"
+        slug "cuantos-etf-tener"
+        description "¿Cuantos ETF conviene tener? Solapamiento, falsa diversificacion, ETF todo en uno y comisiones: un marco simple para decidir el numero adecuado."
+        keywords cuantos ETF tener, solapamiento de ETF, ETF todo en uno, diversificacion con ETF, comisiones ETF sectoriales
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+ .prose ol { margin: 0 0 1.6em 22px; padding: 0; }
+ .prose ol li { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 0.8em; padding-left: 6px; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="¿Cuantos ETF conviene tener? Solapamiento, falsa diversificacion, ETF todo en uno y comisiones: un marco simple para decidir el numero adecuado."/>
+ <meta name="keywords" content="cuantos ETF tener, solapamiento de ETF, ETF todo en uno, diversificacion con ETF, comisiones ETF sectoriales"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/es/articles/cuantos-etf-tener.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/combien-etf-avoir.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/how-many-etfs-should-you-own.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/cuantos-etf-tener.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/combien-etf-avoir.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="¿Cuántos ETF tener? El número no es la pregunta — Route vers le Million"/>
+ <meta property="og:description" content="¿Cuantos ETF conviene tener? Solapamiento, falsa diversificacion, ETF todo en uno y comisiones: un marco simple para decidir el numero adecuado."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/es/articles/cuantos-etf-tener.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="es_ES"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="¿Cuántos ETF tener? El número no es la pregunta"/>
+ <meta name="twitter:description" content="¿Cuantos ETF conviene tener? Solapamiento, falsa diversificacion, ETF todo en uno y comisiones: un marco simple para decidir el numero adecuado."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "¿Cuántos ETF tener? El número no es la pregunta",
+ "description": "¿Cuantos ETF conviene tener? Solapamiento, falsa diversificacion, ETF todo en uno y comisiones: un marco simple para decidir el numero adecuado.",
+ "url": "https://route-vers-le-million.blog/es/articles/cuantos-etf-tener.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "es-ES"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Herramientas</a></li>
+ <li><a href="/es/articles/" data-i18n="nav.articles">Artículos</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/es/articles/cuantos-etf-tener.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/how-many-etfs-should-you-own.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/cuantos-etf-tener.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Inicio</a>
+ <a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Herramientas</a>
+ <a href="/es/articles/" data-i18n="nav.allArticles">Todos los artículos</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fondo de emergencia</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mi trayectoria</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/es/articles/cuantos-etf-tener.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/how-many-etfs-should-you-own.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/cuantos-etf-tener.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Abrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Inicio</a> &nbsp;/&nbsp; <a href="/es/articles/" data-i18n="nav.articles">Artículos</a> &nbsp;/&nbsp; <span data-i18n="art.nbEtf.breadcrumb">ETF</span></p>
+ <p class="hero-tag"><span data-i18n="art.nbEtf.tag">ETF · Diversificación · Estrategia</span></p>
+ <h1><span data-i18n="art.nbEtf.title">¿Cuántos ETF tener? <em>El número no es la pregunta</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.nbEtf.location">Quebec, Canadá</span>
+ <span>·</span>
+ <span data-i18n="art.nbEtf.readtime">6 min de lectura</span>
+ <span>·</span>
+ <span data-i18n="art.nbEtf.category">ETF · Estrategia</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgación: Este artículo contiene enlaces de afiliados. Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. Mis recomendaciones están basadas en mi uso personal.</div>
+
+ <p class="lead" data-i18n="art.nbEtf.lead">Cuando empiezas a invertir en serio, una pregunta vuelve sin cesar: ¿hay que tener varios ETF, o basta con uno solo? La buena pregunta nunca es "cuántos tener", sino "qué aporta realmente cada ETF adicional a mi cartera".</p>
+
+ <p data-i18n="art.nbEtf.p1">La respuesta instintiva de mucha gente es acumularlos, por miedo a faltar diversificación. Suele ser un error. Si un nuevo ETF no aporta nada que no tengas ya, no es diversificación: es redundancia. Este artículo propone la reflexión que conviene hacer antes de añadir un fondo, la verdad sobre las comisiones que a menudo se entiende al revés, y un marco simple para determinar el número que conviene a tu situación.</p>
+
+ <h2 data-i18n="art.nbEtf.h2a">Un solo ETF no es una cartera concentrada</h2>
+
+ <p data-i18n="art.nbEtf.p2">La primera idea que corregir es la que hace cundir el pánico entre los principiantes: "si solo tengo un ETF, no estoy diversificado". Es falso. Un ETF no es una acción. Es una cesta. Un solo ETF ampliamente diversificado puede contener cientos, incluso miles de empresas repartidas en varios países y varios sectores. Tener ese fondo único ya significa poseer un fragmento de casi toda la economía mundial.</p>
+
+ <p data-i18n="art.nbEtf.p3">Dicho de otro modo, la diversificación no se mide por el número de ETF que tienes, sino por el número de valores subyacentes a los que estás expuesto. Se puede estar perfectamente diversificado con un solo fondo, y terriblemente concentrado con cinco fondos que tienen todos los mismos gigantes tecnológicos.</p>
+
+ <h2 data-i18n="art.nbEtf.h2b">La trampa del solapamiento: la falsa diversificación</h2>
+
+ <p data-i18n="art.nbEtf.p4">Aquí es donde se encuentra el verdadero riesgo de multiplicar los ETF, y no es el que se cree. Cuando tienes varios ETF, a menudo se solapan. Un fondo tecnológico, un fondo de acciones estadounidenses y un fondo mundial contienen todos, en distinto grado, las mismas grandes capitalizaciones. Crees repartir tu riesgo entre tres fondos, pero en realidad refuerzas tu exposición a las mismas pocas empresas.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.nbEtf.p5">Es lo que se llama falsa diversificación: la sensación de estar protegido, sin la protección real. La cartera parece variada en el estado de cuenta, pero si esas empresas comunes tropiezan, los tres fondos se hunden juntos. La regla a recordar es simple: <strong>cada ETF que añades solo vale la pena si te expone a algo que no posees todavía.</strong> Una región ausente, una clase de activos ausente, un segmento de mercado ausente. Si solo duplica lo que ya tienes, añade complejidad sin añadir protección.</p>
+ </div>
+
+ <h2 data-i18n="art.nbEtf.h2c">La verdad sobre las comisiones: no es el número lo que cuenta</h2>
+
+ <p data-i18n="art.nbEtf.p6">Muchos inversores evitan multiplicar los ETF pensando que evitan comisiones. La intención es excelente, pero el razonamiento merece precisarse, porque apunta al lado equivocado.</p>
+
+ <p data-i18n="art.nbEtf.p7">Tener varios ETF no multiplica tus comisiones. En una plataforma de bajo coste como Wealthsimple, en modo autónomo, la compra y la venta de ETF se hacen sin comisión de transacción. Y la comisión de gestión propia de cada fondo, el ratio de gastos, solo se aplica a la parte de tu dinero invertida en ese fondo concreto. Tres ETF no acumulan, pues, tres veces sus comisiones: pagas una media ponderada de sus costes respectivos. Se podría muy bien tener cinco fondos baratos por menos que un solo fondo caro.</p>
+
+ <p data-i18n="art.nbEtf.p8">El factor determinante, pues, no es el número de ETF, sino el ratio de gastos de cada uno. Y aquí se impone un matiz importante para quien invierte por sector: los ETF sectoriales, los que se centran únicamente en la salud, la tecnología o los servicios financieros, presentan casi siempre comisiones más altas que los grandes ETF indexados que cubren todo el mercado. El verdadero ahorro de comisiones no viene de tener pocos ETF, viene de elegir ETF con un ratio de gastos bajo. Para profundizar en este punto, consulta nuestro artículo sobre las <a href="/es/articles/comprender-las-comisiones-de-inversion.html">comisiones de inversión</a>.</p>
+
+ <h2 data-i18n="art.nbEtf.h2d">Por qué unos pocos dólares de comisiones lo cambian todo</h2>
+
+ <p data-i18n="art.nbEtf.p9">Si hay algo que asimilar a fondo, es que las comisiones actúan exactamente como el ahorro, pero en sentido inverso. El mismo efecto de composición que hace crecer tus inversiones año tras año hace crecer también el coste de las comisiones que pagas. Un porcentaje que hoy parece minúsculo se convierte, en dos o tres décadas, en una suma considerable restada a tu patrimonio final.</p>
+
+ <p data-i18n="art.nbEtf.p10">Una diferencia de apenas un punto porcentual de comisiones al año, aplicada durante veinte o treinta años a una cartera que crece, no representa unos pocos cientos de dólares. Puede representar decenas de miles de dólares de rentabilidad perdida, porque cada dólar descontado en comisiones es también un dólar que nunca podrá componerse para ti. Es precisamente el mismo mecanismo que convierte un modesto 20 $ al mes en una suma asombrosa con el tiempo: la constancia y la duración lo amplifican todo, lo bueno y lo malo.</p>
+
+ <p data-i18n="art.nbEtf.p11">Para visualizar concretamente esta fuerza, te invito a utilizar nuestra <a href="/calculatrice/">calculadora de interés compuesto</a> y a comparar dos escenarios idénticos cambiando solo la tasa de comisiones. La diferencia te sorprenderá.</p>
+
+ <p data-i18n="art.nbEtf.p12">Por eso un inversor serio vigila las comisiones en todo: comisiones de gestión de cuenta, ratios de gastos de los fondos, comisiones de transacción. No por avaricia, sino porque sabe que en un horizonte largo, esas pequeñas fugas acaban costando una fortuna.</p>
+
+ <h2 data-i18n="art.nbEtf.h2e">Dos filosofías válidas, que elegir con conciencia</h2>
+
+ <p data-i18n="art.nbEtf.p13">Existen dos grandes maneras de estructurar una cartera de ETF, y ambas son defendibles. Lo importante es saber cuál se adopta y por qué.</p>
+
+ <p data-i18n="art.nbEtf.p14">La primera es el enfoque del fondo único todo en uno. Un solo ETF ampliamente diversificado, de muy bajo coste, que contiene el mercado mundial y se reequilibra automáticamente. Es la expresión más pura de la simplicidad y de la minimización de comisiones. Ya no piensas en la distribución: el fondo se encarga. Es la opción ideal para quien quiere invertir sin seguir activamente sus inversiones.</p>
+
+ <p data-i18n="art.nbEtf.p15">La segunda es el enfoque por convicción, por sector o por tema. Eliges deliberadamente los segmentos en los que crees, los ponderas tú mismo, y asumes una cartera más concentrada, más activa, y a menudo algo más cara. Es una elección legítima, pero hay que reconocerla por lo que es: no es una estrategia pasiva de minimización de comisiones, es una apuesta meditada sobre ciertas partes de la economía. Quien invierte por sector no busca replicar el mercado, busca batirlo en los segmentos que ha elegido. Eso exige convicción y una tolerancia al hecho de que esos sectores pueden tener un rendimiento inferior durante años.</p>
+
+ <p data-i18n="art.nbEtf.p16">Ninguna de las dos es superior en términos absolutos. Responden a temperamentos y a objetivos diferentes.</p>
+
+ <h2 data-i18n="art.nbEtf.h2f">El marco de reflexión: tres preguntas antes de añadir un ETF</h2>
+
+ <p data-i18n="art.nbEtf.p17">En lugar de buscar un número mágico, hazte estas tres preguntas cada vez que pienses en añadir un fondo:</p>
+
+ <ol>
+ <li data-i18n="art.nbEtf.q1"><strong>¿Este ETF me expone a algo que no poseo ya?</strong> Si sus valores coinciden en gran medida con los de mis fondos actuales, no aporta diversificación, solo redundancia.</li>
+ <li data-i18n="art.nbEtf.q2"><strong>¿Su ratio de gastos está justificado por lo que añade?</strong> Un fondo más caro debe ofrecer una exposición realmente única para merecer su lugar.</li>
+ <li data-i18n="art.nbEtf.q3"><strong>¿Soy capaz de seguir y comprender lo que tengo?</strong> Una cartera que ya no se comprende es una cartera que se acaba gestionando mal. La simplicidad tiene un valor en sí misma.</li>
+ </ol>
+
+ <p data-i18n="art.nbEtf.p18">Si un nuevo ETF no pasa estos tres filtros, probablemente no merece ser añadido.</p>
+
+ <h2 data-i18n="art.nbEtf.h2g">En resumen</h2>
+
+ <p data-i18n="art.nbEtf.p19">El número correcto de ETF no es una cifra universal. Es el número mínimo que te da la exposición que quieres, sin duplicación inútil y sin comisiones superfluas. Para muchos, ese número es asombrosamente pequeño, porque un solo fondo bien elegido ya logra muchísimo.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.nbEtf.p20">Lo que importa no es poseer muchos para tranquilizarse, sino comprender con precisión lo que aporta cada uno, vigilar sus comisiones como un guardián, y recordar que en el largo camino, cada dólar ahorrado en comisiones es un dólar más que trabaja para ti.</p>
+ </div>
+
+ <p data-i18n="art.nbEtf.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Este artículo tiene una finalidad estrictamente educativa y no constituye un consejo financiero o de inversión personalizado. Cada situación es única y conlleva un nivel de riesgo propio. Se recomienda consultar a un profesional cualificado antes de tomar una decisión que afecte a tus inversiones.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.nbEtf.title">El efecto de las comisiones en el tiempo</h3>
+ <p data-i18n="sidebar.nbEtf.desc">Compara dos carteras idénticas cambiando solo la tasa de comisiones. La diferencia sorprende.</p>
+ <a href="/calculatrice/" class="sidebar-btn" data-i18n="sidebar.nbEtf.btn">Calculadora →</a>
+ <a href="/es/articles/comprender-las-comisiones-de-inversion.html" class="sidebar-btn secondary" data-i18n="sidebar.nbEtf.secondary">Comisiones de inversión →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.nbEtf.key">Para recordar</h4>
+ <div class="info-row"><span data-i18n="sidebar.nbEtf.r1">Diversificación</span><span data-i18n="sidebar.nbEtf.r1v">Valores subyacentes</span></div>
+ <div class="info-row"><span data-i18n="sidebar.nbEtf.r2">Riesgo real</span><span data-i18n="sidebar.nbEtf.r2v">Solapamiento</span></div>
+ <div class="info-row"><span data-i18n="sidebar.nbEtf.r3">Comisiones</span><span data-i18n="sidebar.nbEtf.r3v">El ratio, no el número</span></div>
+ <div class="info-row"><span data-i18n="sidebar.nbEtf.r4">Simplicidad</span><span data-i18n="sidebar.nbEtf.r4v">Tiene valor</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.nbEtf.cta.title">¿Cuánto te cuestan de verdad tus comisiones?</h2>
+ <p data-i18n="art.nbEtf.cta.desc">Nuestra calculadora de interés compuesto destaca la diferencia que crea un solo punto porcentual de comisiones.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.nbEtf.cta.btn">Probar la calculadora →</a>
+ <a href="/es/articles/" class="cta-btn secondary" data-i18n="art.readMore">Ver todos los artículos →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finanzas personales · Québec, Canadá</p>
+ <p data-i18n="footer.disclaimer">Solo con fines informativos — no constituye asesoramiento financiero oficial.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contiene enlaces de afiliados (Wealthsimple, Tangerine, Borrowell, Amazon). Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. — <a href="/es/divulgacion.html" style="color:inherit;text-decoration:underline;">Más información →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

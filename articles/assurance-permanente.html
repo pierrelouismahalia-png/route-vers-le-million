@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+ <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
  <!-- Google Analytics -->
  <script src="/consent.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
@@ -13,6 +14,21 @@
  <meta charset="UTF-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  <title>Assurance Vie Permanente: Pourquoi tu l'achètes (et si tu devrais vraiment) — Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Assurance vie permanente : pourquoi tu l'achètes (et si tu devrais vraiment)"
+        slug "assurance-permanente"
+        description "Assurance vie permanente ou temporaire : analyse honnête des coûts, de la valeur de rachat et des cas où elle se justifie réellement."
+        keywords assurance vie permanente, assurance vie temporaire, valeur de rachat, assurance vie Québec, coût assurance vie
+   EN : title "Permanent Life Insurance: Why You Buy It (and Whether You Really Should)"
+        slug "permanent-life-insurance"
+        description "Permanent versus term life insurance: an honest look at the costs, the cash surrender value, and the cases where it is genuinely justified."
+        keywords permanent life insurance, term life insurance, cash surrender value, life insurance Canada, cost of life insurance
+   ES : title "Seguro de vida permanente: por qué lo compras (y si realmente deberías)"
+        slug "seguro-de-vida-permanente"
+        description "Seguro de vida permanente o temporal: un análisis honesto de los costes, del valor de rescate y de los casos en los que realmente se justifica."
+        keywords seguro de vida permanente, seguro de vida temporal, valor de rescate, seguro de vida Canadá, coste del seguro de vida
+ -->
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
  <style>
  :root {
@@ -171,6 +187,10 @@
  <meta name="robots" content="index, follow"/>
  <meta name="author" content="Route vers le Million"/>
  <link rel="canonical" href="https://route-vers-le-million.blog/articles/assurance-permanente.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/assurance-permanente.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/permanent-life-insurance.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/seguro-de-vida-permanente.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/assurance-permanente.html"/>
  <meta property="og:type" content="Article"/>
  <meta property="og:title" content="Assurance Vie Permanente: Pourquoi tu l'achètes (et si tu devrais vraiment) — Route vers le Million"/>
  <meta property="og:description" content="Analyse honnête: assurance permanente vs temporaire. Comprendre la psychologie, les coûts réels, et si c'est vraiment la bonne stratégie pour toi."/>
@@ -210,11 +230,11 @@
  <span></span><span></span><span></span>
  </button>
  <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
- <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+ <a class="lang-btn" data-lang="fr" href="/articles/assurance-permanente.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+ <a class="lang-btn" data-lang="en" href="/en/articles/permanent-life-insurance.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+ <a class="lang-btn" data-lang="es" href="/es/articles/seguro-de-vida-permanente.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
  </div>
  <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
  </div>
@@ -229,9 +249,9 @@
  <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
  <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
  <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
- <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
- <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
- <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+ <a class="lang-btn" data-lang="fr" href="/articles/assurance-permanente.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/permanent-life-insurance.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/seguro-de-vida-permanente.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
  </div>
  <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
 </div>
@@ -455,7 +475,7 @@
  <li data-i18n="art.assurance.h3oli7">Créer un fonds d'urgence (3-6 mois)</li>
  <li data-i18n="art.assurance.h3oli8">Maximiser CÉLI/REER</li>
  <li data-i18n="art.assurance.h3oli9">Investir dans un portefeuille diversifié</li>
- <li data-i18n="art.assurance.h3oli10"><strong data-i18n="art.assurance.h3oli10bold">PUIS</strong> penser assurance</li>
+ <li data-i18n="art.assurance.h3oli10"><strong>PUIS</strong> penser assurance</li>
  </ol>
 
  <h2 data-i18n="art.assurance.h2f">L'alternative: Ce que personne ne te dit</h2>
@@ -512,7 +532,7 @@
  <li data-i18n="art.assurance.h2hli1"><strong data-i18n="art.assurance.h2hli1bold">Calcule tes vrais besoins.</strong> Pas ce que l'agent d'assurance dit. Tes vrais besoins.</li>
  <li data-i18n="art.assurance.h2hli2"><strong data-i18n="art.assurance.h2hli2bold">Obtiens une assurance temporaire.</strong> 30 ans, montant calculé, prime basse. C'est ta base.</li>
  <li data-i18n="art.assurance.h2hli3"><strong data-i18n="art.assurance.h2hli3bold">Investis la différence.</strong> Dans un CÉLI, un REER, un portefeuille diversifié. Sois discipliné.</li>
- <li data-i18n="art.assurance.h2hli4"><strong data-i18n="art.assurance.h2hli4bold">Dans 10-15 ans,</strong> réévalue. Si t'as accumulé du patrimoine et tu veux vraiment une assurance permanente pour des raisons fiscales? À ce moment, ça peut faire sens.</li>
+ <li data-i18n="art.assurance.h2hli4"><strong>Dans 10-15 ans,</strong> réévalue. Si t'as accumulé du patrimoine et tu veux vraiment une assurance permanente pour des raisons fiscales? À ce moment, ça peut faire sens.</li>
  <li data-i18n="art.assurance.h2hli5"><strong data-i18n="art.assurance.h2hli5bold">Consulte un vrai planificateur financier indépendant.</strong> Pas un agent d'assurance. Quelqu'un qui n'a pas intérêt à te vendre le produit le plus cher.</li>
  </ol>
 
