@@ -145,6 +145,10 @@ function Fix-Switcher([string]$s, [string]$base) {
     $pat = '<button class="lang-btn" data-lang="' + $L + '" onclick="setLang\(''' + $L + '''\)(;toggleMenu\(\))?" style="([^"]*)">([^<]*)</button>'
     $rep = '<a class="lang-btn" data-lang="' + $L + '" href="' + $href + '" style="$2text-decoration:none;">$3</a>'
     $s = [regex]::Replace($s, $pat, $rep)
+    # Idempotence : reajuste aussi les liens deja convertis (slug modifie, page copiee).
+    $pat2 = '<a class="lang-btn" data-lang="' + $L + '" href="[^"]*"'
+    $rep2 = '<a class="lang-btn" data-lang="' + $L + '" href="' + $href + '"'
+    $s = [regex]::Replace($s, $pat2, $rep2)
   }
   return $s
 }

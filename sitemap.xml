@@ -27,42 +27,47 @@
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/arrete-de-courir-apres-argent.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/assurance-permanente.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/bons-tresor-canadiens.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/celi-reer-compte-non-enregistre.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/combien-etf-avoir.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/comprendre-les-frais-de-placement.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/articles/cote-de-credit-expliquee.html</loc>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/croissance-vs-dividendes.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/dividendes-ou-croissance.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -72,22 +77,27 @@
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/fiscalite-particuliers.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/fnb-options-couvertes.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/articles/formations-cegep-levier-financier.html</loc>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/levier-sans-dette.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/productivite-intelligence-artificielle.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -101,12 +111,27 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://route-vers-le-million.blog/articles/vendre-articles-usages-quebec.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://route-vers-le-million.blog/en/articles/canadian-treasury-bills.html</loc>
     <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://route-vers-le-million.blog/en/articles/college-continuing-education-financial-leverage.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://route-vers-le-million.blog/en/articles/covered-call-etfs-explained.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/en/articles/credit-score-explained.html</loc>
     <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
@@ -157,6 +182,11 @@
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/en/articles/quiz-investment-fees.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/en/articles/selling-used-items-quebec.html</loc>
     <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
@@ -246,7 +276,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://route-vers-le-million.blog/es/articles/formacion-continua-cegep-palanca-financiera.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://route-vers-le-million.blog/es/articles/productividad-inteligencia-artificial.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/es/articles/puntaje-de-credito-explicado.html</loc>
     <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
@@ -257,6 +297,11 @@
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/es/articles/tfsa-rrsp-cuenta-no-registrada.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/es/articles/vender-articulos-usados-quebec.html</loc>
     <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>

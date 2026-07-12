@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <script>try{localStorage.setItem('lang','es');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Vender lo que ya no usas: mi sistema, mis plataformas y la seguridad — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Vendre ce qu'on n'utilise plus : mon systeme, mes plateformes, la securite"
+        slug "vendre-articles-usages-quebec"
+        description "Ou vendre ses vetements et articles usages au Quebec de facon securitaire? Mon systeme par plateforme, et pourquoi j'ai abandonne Facebook Marketplace."
+        keywords vendre articles usages Quebec, Poshmark Canada, consignation vetements, fraude Facebook Marketplace, desencombrement, revenus d'appoint
+   EN : title "Selling What You No Longer Use: My System, My Platforms, and Safety"
+        slug "selling-used-items-quebec"
+        description "Where can you safely sell used clothing and items in Quebec? My platform-by-platform system, and why I walked away from Facebook Marketplace."
+        keywords sell used items Canada, Poshmark Canada, consignment clothing, Facebook Marketplace scams, decluttering, side income
+   ES : title "Vender lo que ya no usas: mi sistema, mis plataformas y la seguridad"
+        slug "vender-articulos-usados-quebec"
+        description "Donde vender ropa y articulos usados en Quebec de forma segura? Mi sistema plataforma por plataforma, y por que abandone Facebook Marketplace."
+        keywords vender articulos usados, Poshmark Canada, consignacion de ropa, estafas Facebook Marketplace, desapego, ingresos extra
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Donde vender ropa y articulos usados en Quebec de forma segura? Mi sistema plataforma por plataforma, y por que abandone Facebook Marketplace."/>
+ <meta name="keywords" content="vender articulos usados, Poshmark Canada, consignacion de ropa, estafas Facebook Marketplace, desapego, ingresos extra"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/es/articles/vender-articulos-usados-quebec.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/vendre-articles-usages-quebec.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/selling-used-items-quebec.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/vender-articulos-usados-quebec.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/vendre-articles-usages-quebec.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Vender lo que ya no usas: mi sistema, mis plataformas y la seguridad — Route vers le Million"/>
+ <meta property="og:description" content="Donde vender ropa y articulos usados en Quebec de forma segura? Mi sistema plataforma por plataforma, y por que abandone Facebook Marketplace."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/es/articles/vender-articulos-usados-quebec.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="es_ES"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Vender lo que ya no usas: mi sistema, mis plataformas y la seguridad"/>
+ <meta name="twitter:description" content="Donde vender ropa y articulos usados en Quebec de forma segura? Mi sistema plataforma por plataforma, y por que abandone Facebook Marketplace."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Vender lo que ya no usas: mi sistema, mis plataformas y la seguridad",
+ "description": "Donde vender ropa y articulos usados en Quebec de forma segura? Mi sistema plataforma por plataforma, y por que abandone Facebook Marketplace.",
+ "url": "https://route-vers-le-million.blog/es/articles/vender-articulos-usados-quebec.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "es-ES"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Herramientas</a></li>
+ <li><a href="/es/articles/" data-i18n="nav.articles">Artículos</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/articles/vendre-articles-usages-quebec.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/selling-used-items-quebec.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/vender-articulos-usados-quebec.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Inicio</a>
+ <a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Herramientas</a>
+ <a href="/es/articles/" data-i18n="nav.allArticles">Todos los artículos</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fondo de emergencia</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mi trayectoria</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/articles/vendre-articles-usages-quebec.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/selling-used-items-quebec.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/vender-articulos-usados-quebec.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Abrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Inicio</a> &nbsp;/&nbsp; <a href="/es/articles/" data-i18n="nav.articles">Artículos</a> &nbsp;/&nbsp; <span data-i18n="art.vendre.breadcrumb">Ingresos</span></p>
+ <p class="hero-tag"><span data-i18n="art.vendre.tag">Ingresos · Desapego · Seguridad</span></p>
+ <h1><span data-i18n="art.vendre.title">Vender lo que ya no usas: <em>mi sistema, mis plataformas y la cuestión de la seguridad</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.vendre.location">Quebec, Canadá</span>
+ <span>·</span>
+ <span data-i18n="art.vendre.readtime">7 min de lectura</span>
+ <span>·</span>
+ <span data-i18n="art.vendre.category">Ingresos · Reflexión</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgación: Este artículo contiene enlaces de afiliados. Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. Mis recomendaciones están basadas en mi uso personal.</div>
+
+ <p class="lead" data-i18n="art.vendre.lead">Abre tu armario y mira honestamente: ¿cuántas prendas no te has puesto en un año? ¿Cuántos objetos en tus alacenas esperan un "por si acaso" que nunca llega?</p>
+
+ <p data-i18n="art.vendre.p1">Guardamos esas cosas por razones que no tienen nada de financiero. Está el apego al precio pagado — ese abrigo costó 300 $, y desprenderse de él daría la impresión de perder ese dinero, cuando en realidad el dinero se gastó hace mucho. Está el famoso "podría servir". Y está simplemente la inercia: vender exige un esfuerzo, guardar no exige ninguno.</p>
+
+ <p data-i18n="art.vendre.p2">El resultado es que la mayoría de los hogares están sentados sobre unos cientos, a veces unos miles de dólares en objetos dormidos. Dinero inmovilizado que no rinde nada, en cosas que pierden valor cada año. Es el mismo mecanismo descrito en nuestro artículo sobre <a href="/es/articles/dinero-que-duerme-en-tu-casa.html">el dinero que duerme en el patrimonio de una casa</a>, pero a escala de un armario.</p>
+
+ <p data-i18n="art.vendre.p3">Desde hace algunos años he desarrollado un sistema para revender lo que ya no uso. No un proyecto paralelo espectacular — un simple reflejo de mantenimiento financiero, como se mantiene una casa. Así es como lo hago, plataforma por plataforma, y sobre todo cómo lo hago de forma segura, porque es el aspecto del que nadie habla lo suficiente.</p>
+
+ <h2 data-i18n="art.vendre.h2a">El principio básico: la plataforma adecuada para el artículo adecuado</h2>
+
+ <p data-i18n="art.vendre.p4">Mi primer error, en su momento, fue ponerlo todo en el mismo sitio. Un artículo de lujo y un jersey de 15 $ no se venden de la misma manera, ni al mismo ritmo, ni al mismo tipo de comprador. Con el tiempo llegué a una clasificación en tres categorías.</p>
+
+ <h3 data-i18n="art.vendre.h3a">Los artículos de lujo: la consignación en tienda</h3>
+
+ <p data-i18n="art.vendre.p5">Para mis piezas de mayor valor — bolsos, abrigos, artículos de marca — recurro a una tienda de consignación. El principio de una tienda especializada es que atrae a una clientela que busca precisamente ese tipo de artículo y que está dispuesta a pagar el precio justo por lo auténtico.</p>
+
+ <p data-i18n="art.vendre.p6">La ventaja es doble: no tengo que gestionar la transacción yo misma (nada de encuentros con desconocidos, ni negociación, ni riesgo de billetes falsos), y el artículo lo pone en valor gente que se dedica a ello profesionalmente. La contrapartida es la paciencia: la tienda se lleva su parte, y el artículo puede tardar en encontrar comprador.</p>
+
+ <p data-i18n="art.vendre.p7">Para el lujo, ese compromiso vale la pena. Un bolso de diseñador vendido a la ligera en una plataforma generalista atrae sobre todo a cazadores de gangas — y a estafadores.</p>
+
+ <h3 data-i18n="art.vendre.h3b">Los artículos en buen estado: la venta en línea, con paciencia</h3>
+
+ <p data-i18n="art.vendre.p8">Para la ropa y los accesorios todavía en buen estado pero sin etiqueta de lujo, uso <strong>Poshmark.ca</strong>. La plataforma gestiona el pago y el envío mediante una etiqueta prepagada, lo que resuelve de golpe el problema de la seguridad: ningún encuentro, ningún intercambio de dinero en persona, y el comprador no conoce tu dirección.</p>
+
+ <p data-i18n="art.vendre.p9">Este modelo exige, eso sí, constancia: fotografiar, describir, responder preguntas, enviar. Es un pequeño trabajo. Conviene a los artículos que merecen la pena esperar al comprador adecuado.</p>
+
+ <h3 data-i18n="art.vendre.h3c">Cuando quieres el dinero ahora: aceptar recibir menos</h3>
+
+ <p data-i18n="art.vendre.p10">También existen servicios como <strong>Retyche</strong>, que funcionan de otra manera: ofrecen menos dinero por tus artículos, pero la diferencia es que el pago puede ser inmediato — sin esperar a que aparezca un comprador.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.vendre.box">Quiero ser transparente sobre lo que representa esa elección, porque es un arbitraje financiero clásico: <strong>cambias precio por liquidez</strong>. Es exactamente la misma lógica que en la inversión — el dinero disponible de inmediato tiene una prima, y esa prima la pagas tú, en forma de precio reducido.</p>
+ </div>
+
+ <p data-i18n="art.vendre.p11">¿Es una mala elección? No necesariamente. Si vacías un armario entero y la idea de gestionar treinta anuncios te desanima hasta el punto de no hacer nada, recibir el 60 % del valor de inmediato supera al 100 % del valor jamás. La peor venta es la que no se hace.</p>
+
+ <h2 data-i18n="art.vendre.h2b">Por qué abandoné Facebook Marketplace</h2>
+
+ <p data-i18n="art.vendre.p12">Hay que hablar ahora del elefante en la habitación, porque es la plataforma que todo el mundo usa por defecto.</p>
+
+ <p data-i18n="art.vendre.p13">Vendí mucho tiempo en Facebook Marketplace. Lo dejé. La razón es sencilla: el volumen de intentos de fraude llegó a ser tal que el tiempo perdido separando a los compradores reales de los estafadores ya no compensaba los pocos dólares adicionales.</p>
+
+ <p data-i18n="art.vendre.p14">Los esquemas son siempre los mismos: la falsa transferencia Interac con una captura de pantalla manipulada, el comprador que "envía un transportista" y pide tus datos bancarios, el pago de más que te piden reembolsar, o simplemente la cita en la que la persona intenta marcharse con el artículo sin pagar el importe acordado.</p>
+
+ <p data-i18n="art.vendre.p15">No es que la plataforma sea mala en sí — los precios allí son a menudo los mejores, precisamente porque no hay un intermediario que se lleve su parte. Pero la ausencia de intermediario es también la ausencia de protección. Cada cual debe valorar si ese compromiso le conviene.</p>
+
+ <h3 data-i18n="art.vendre.h3d">Si te empeñas en la venta en persona: las reglas no negociables</h3>
+
+ <p data-i18n="art.vendre.p16">Para quienes siguen con la venta local — y es una opción legítima, sobre todo para objetos demasiado grandes para enviar — estas son las reglas que considero no negociables:</p>
+
+ <ul>
+ <li data-i18n="art.vendre.r1"><strong>Quedad delante de una comisaría de policía.</strong> Varios cuerpos policiales de Quebec toleran o fomentan el uso de su aparcamiento para los intercambios entre particulares. Un comprador honesto no tiene ningún problema con ese lugar de encuentro; un estafador, en cambio, encontrará de pronto una excusa. Es un filtro de una eficacia notable.</li>
+ <li data-i18n="art.vendre.r2"><strong>Solo efectivo, verificado en el momento</strong>, o transferencia Interac confirmada en tu aplicación bancaria — nunca sobre la base de una captura de pantalla.</li>
+ <li data-i18n="art.vendre.r3"><strong>No des nunca tu dirección</strong> para un artículo transportable. El punto de encuentro neutro existe justamente para eso.</li>
+ <li data-i18n="art.vendre.r4"><strong>Desconfía de todo escenario complicado.</strong> Un comprador de verdad quiere ver el artículo, pagar y marcharse. Cualquier historia de transportista, de reembolso o de tercera persona es una señal de alarma.</li>
+ </ul>
+
+ <h2 data-i18n="art.vendre.h2c">El cálculo, porque es lo que siempre hacemos aquí</h2>
+
+ <p data-i18n="art.vendre.p17">Seamos honestos con los órdenes de magnitud: vender los artículos usados nunca sustituirá a un salario. Una limpieza seria del armario suele reportar unos cientos de dólares. Es modesto.</p>
+
+ <p data-i18n="art.vendre.p18">Pero sigamos la lógica hasta el final. Supongamos que una vez al año haces la selección y recoges 400 $ — una cifra realista para un hogar medio. En lugar de dejar que ese importe se diluya en el presupuesto corriente, lo depositas en tu CÉLI, invertido con un rendimiento medio del 7 %.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.vendre.pull">"Después de 20 años de este simple ritual anual: alrededor de 17 500 $. Generados por objetos que, de otro modo, habrían seguido durmiendo en los armarios perdiendo su valor."</p>
+ </div>
+
+ <p data-i18n="art.vendre.p19">El desapego no es una estrategia de enriquecimiento — pero es una palanca real, y probablemente la más accesible de todas: no exige capital inicial, ni competencia particular, ni tolerancia al riesgo.</p>
+
+ <h2 data-i18n="art.vendre.h2d">En resumen: mi sistema en una página</h2>
+
+ <ul>
+ <li data-i18n="art.vendre.s1"><strong>Artículos de lujo</strong> — tienda de consignación especializada: seguridad máxima, paciencia necesaria</li>
+ <li data-i18n="art.vendre.s2"><strong>Buen estado, valor medio</strong> — Poshmark.ca: sin encuentros, pago protegido, exige constancia</li>
+ <li data-i18n="art.vendre.s3"><strong>Necesidad de liquidez inmediata</strong> — un servicio de recompra como Retyche: menos dinero, pero de inmediato, un arbitraje asumido</li>
+ <li data-i18n="art.vendre.s4"><strong>Venta en persona</strong> — únicamente delante de una comisaría, efectivo verificado o transferencia confirmada, jamás tu dirección</li>
+ </ul>
+
+ <p data-i18n="art.vendre.p20">Y el producto de cada venta toma el camino del CÉLI antes de tener tiempo de desaparecer en el día a día. El objetivo no es convertirse en revendedor. Es dejar de permitir que el valor duerma — y transformar una simple limpieza de primavera en un gesto financiero.</p>
+
+ <p data-i18n="art.vendre.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Contenido informativo basado en mi experiencia personal — no es asesoramiento financiero oficial. Las políticas, tarifas y condiciones de las plataformas mencionadas pueden cambiar; verifica directamente con cada una antes de vender. No tengo ningún vínculo de afiliación con las plataformas de reventa citadas.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.vendre.title">Adónde va el producto de las ventas</h3>
+ <p data-i18n="sidebar.vendre.desc">Al CÉLI, antes de tener tiempo de diluirse en el presupuesto corriente.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ <a href="/es/articles/dinero-que-duerme-en-tu-casa.html" class="sidebar-btn secondary" data-i18n="sidebar.vendre.secondary">El dinero que duerme →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.vendre.key">La plataforma adecuada</h4>
+ <div class="info-row"><span data-i18n="sidebar.vendre.r1">Lujo</span><span data-i18n="sidebar.vendre.r1v">Consignación</span></div>
+ <div class="info-row"><span data-i18n="sidebar.vendre.r2">Buen estado</span><span data-i18n="sidebar.vendre.r2v">Poshmark</span></div>
+ <div class="info-row"><span data-i18n="sidebar.vendre.r3">Liquidez</span><span data-i18n="sidebar.vendre.r3v">Retyche</span></div>
+ <div class="info-row"><span data-i18n="sidebar.vendre.r4">En persona</span><span data-i18n="sidebar.vendre.r4v">Comisaría</span></div>
+ <div class="info-row"><span data-i18n="sidebar.vendre.r5">En 20 años</span><span>17 500 $</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.vendre.cta.title">400 $ al año, durante 20 años</h2>
+ <p data-i18n="art.vendre.cta.desc">Descubre en qué puede convertirse el producto de una simple selección anual una vez invertido en un CÉLI.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.vendre.cta.btn">Probar la calculadora →</a>
+ <a href="/es/articles/" class="cta-btn secondary" data-i18n="art.readMore">Ver todos los artículos →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finanzas personales · Québec, Canadá</p>
+ <p data-i18n="footer.disclaimer">Solo con fines informativos — no constituye asesoramiento financiero oficial.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contiene enlaces de afiliados (Wealthsimple, Tangerine, Borrowell, Amazon). Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. — <a href="/es/divulgacion.html" style="color:inherit;text-decoration:underline;">Más información →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

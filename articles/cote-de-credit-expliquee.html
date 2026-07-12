@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>La cote de crédit : le chiffre qui vous coûte des dizaines de milliers de dollars — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "La cote de credit : le chiffre qui vous coute des dizaines de milliers de dollars"
+        slug "cote-de-credit-expliquee"
+        description "Comment fonctionne la cote de credit au Canada, les cinq facteurs qui la determinent, les mythes a oublier, et le calcul concret de ce qu'elle vous coute sur une hypotheque."
+        keywords cote de credit, Equifax, TransUnion, pointage de credit Canada, utilisation du credit, ameliorer sa cote de credit
+   EN : title "Your Credit Score: The Number That Costs You Tens of Thousands"
+        slug "credit-score-explained"
+        description "How the credit score works in Canada, the five factors that determine it, the myths to forget, and a concrete calculation of what it costs you on a mortgage."
+        keywords credit score, Equifax, TransUnion, credit score Canada, credit utilization, how to improve your credit score
+   ES : title "El puntaje de credito: la cifra que te cuesta decenas de miles de dolares"
+        slug "puntaje-de-credito-explicado"
+        description "Como funciona el puntaje de credito en Canada, los cinco factores que lo determinan, los mitos que hay que olvidar, y el calculo concreto de lo que te cuesta en una hipoteca."
+        keywords puntaje de credito, Equifax, TransUnion, score crediticio Canada, uso del credito, mejorar el puntaje de credito
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* QUESTION CARDS */
+ .question-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 1.2em 0; display: flex; gap: 20px; align-items: flex-start; }
+ .question-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--terra); opacity: 0.5; line-height: 1; flex-shrink: 0; min-width: 44px; }
+ .question-body h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+ .question-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Comment fonctionne la cote de crédit au Canada, les cinq facteurs qui la déterminent, les mythes à oublier, et le calcul concret de ce qu'elle vous coûte sur une hypothèque."/>
+ <meta name="keywords" content="cote de crédit, Equifax, TransUnion, pointage de crédit Canada, utilisation du crédit, améliorer sa cote de crédit"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/articles/cote-de-credit-expliquee.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/cote-de-credit-expliquee.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/credit-score-explained.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/puntaje-de-credito-explicado.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/cote-de-credit-expliquee.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="La cote de crédit : le chiffre qui vous coûte des dizaines de milliers de dollars — Route vers le Million"/>
+ <meta property="og:description" content="Comment fonctionne la cote de crédit au Canada, les cinq facteurs qui la déterminent, les mythes à oublier, et le calcul concret de ce qu'elle vous coûte sur une hypothèque."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/articles/cote-de-credit-expliquee.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="La cote de crédit : le chiffre qui vous coûte des dizaines de milliers de dollars"/>
+ <meta name="twitter:description" content="Les cinq facteurs, les trois mythes, et ce qu'un point de pourcentage de plus sur une hypothèque coûte réellement : plus de 62 000 $."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "La cote de crédit : le chiffre qui vous coûte (ou vous économise) des dizaines de milliers de dollars",
+ "description": "Comment fonctionne la cote de crédit au Canada, les cinq facteurs qui la déterminent, les mythes à oublier, et le calcul concret de ce qu'elle vous coûte sur une hypothèque.",
+ "url": "https://route-vers-le-million.blog/articles/cote-de-credit-expliquee.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
+ <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/articles/cote-de-credit-expliquee.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/credit-score-explained.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/puntaje-de-credito-explicado.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Accueil</a>
+ <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Outils</a>
+ <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/articles/cote-de-credit-expliquee.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/credit-score-explained.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/puntaje-de-credito-explicado.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.cote.breadcrumb">Cote de crédit</span></p>
+ <p class="hero-tag"><span data-i18n="art.cote.tag">Cote de crédit · Budget · Emprunt</span></p>
+ <h1><span data-i18n="art.cote.title">La cote de crédit : <em>le chiffre qui vous coûte des dizaines de milliers de dollars</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.cote.location">Québec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.cote.readtime">9 min de lecture</span>
+ <span>·</span>
+ <span data-i18n="art.cote.category">Cote de crédit · Budget</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgation&nbsp;: Cet article contient des liens d'affiliation. Si tu t'inscris ou achètes via mes liens, je touche une commission, sans frais supplémentaires pour toi. Mes recommandations restent basées sur mon usage personnel.</div>
+
+ <p class="lead" data-i18n="art.cote.lead">Il existe un chiffre, quelque part dans une base de données, qui influence le taux de votre hypothèque, l'approbation de votre bail, votre limite de carte de crédit, parfois même votre prime d'assurance. Un chiffre qui peut vous coûter — ou vous économiser — des dizaines de milliers de dollars au fil d'une vie.</p>
+
+ <p data-i18n="art.cote.p1">Et pourtant, la majorité des gens ne l'ont jamais consulté. Beaucoup en ont même peur : peur de le regarder, peur que le simple fait de le vérifier le fasse baisser, peur de découvrir un mauvais résultat qu'on ne saurait pas réparer.</p>
+
+ <p data-i18n="art.cote.p2">Cette relation d'évitement est compréhensible. La cote de crédit ressemble à une note d'examen qu'on ne se souvient pas d'avoir passé, attribuée selon des règles que personne ne nous a enseignées. Mais l'évitement a un coût réel — et la bonne nouvelle, c'est que le fonctionnement est beaucoup plus simple qu'on le croit, et que la cote se répare et s'entretient comme n'importe quoi d'autre.</p>
+
+ <h2 data-i18n="art.cote.h2a">C'est quoi, exactement?</h2>
+
+ <p data-i18n="art.cote.p3">Au Canada, la cote de crédit est un nombre entre <strong>300 et 900</strong>, calculé par deux agences privées : <strong>Equifax</strong> et <strong>TransUnion</strong>. Chaque fois que vous empruntez — carte de crédit, prêt auto, marge, hypothèque — vos prêteurs rapportent votre comportement à ces agences : payez-vous à temps, combien devez-vous, depuis combien de temps.</p>
+
+ <p data-i18n="art.cote.p4">La cote résume tout cela en un seul chiffre, qui répond à une question que se posent les prêteurs : quelle est la probabilité que cette personne rembourse?</p>
+
+ <ul>
+ <li data-i18n="art.cote.li1"><strong>760 et plus</strong> : excellent — les meilleures conditions vous sont accessibles</li>
+ <li data-i18n="art.cote.li2"><strong>660 à 759</strong> : bon à très bon — la plupart des produits sont accessibles à de bonnes conditions</li>
+ <li data-i18n="art.cote.li3"><strong>560 à 659</strong> : passable — approbations possibles, mais à des taux moins avantageux</li>
+ <li data-i18n="art.cote.li4"><strong>Moins de 560</strong> : difficile — les prêteurs traditionnels hésitent</li>
+ </ul>
+
+ <p data-i18n="art.cote.p5">Les deux agences peuvent afficher des chiffres légèrement différents pour la même personne : elles ne reçoivent pas exactement les mêmes informations et n'utilisent pas exactement la même formule. C'est normal, et ce n'est pas une erreur.</p>
+
+ <h2 data-i18n="art.cote.h2b">Les cinq facteurs qui déterminent votre cote</h2>
+
+ <p data-i18n="art.cote.p6">La formule exacte est propriétaire, mais les grandes composantes sont connues, et leur poids approximatif aussi.</p>
+
+ <div class="question-card">
+ <span class="question-num">01</span>
+ <div class="question-body">
+ <h4 data-i18n="art.cote.f1Title">L'historique de paiement (environ 35 %)</h4>
+ <p data-i18n="art.cote.f1Text">Le facteur le plus lourd, et de loin. Payez-vous vos comptes à temps? Un seul paiement en retard de plus de 30 jours peut rester au dossier pendant six ans. À l'inverse, des années de paiements ponctuels construisent une cote solide — même avec des soldes modestes.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">02</span>
+ <div class="question-body">
+ <h4 data-i18n="art.cote.f2Title">L'utilisation du crédit (environ 30 %)</h4>
+ <p data-i18n="art.cote.f2Text">C'est le ratio entre ce que vous devez et ce qui vous est disponible. Une carte avec une limite de 5 000 $ et un solde de 4 500 $ signale un ménage sous pression, même si les paiements sont à temps. La règle généralement citée : rester sous 30 % d'utilisation. Sous 10 %, c'est encore mieux.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">03</span>
+ <div class="question-body">
+ <h4 data-i18n="art.cote.f3Title">L'ancienneté du dossier (environ 15 %)</h4>
+ <p data-i18n="art.cote.f3Text">Plus vos comptes sont vieux, mieux c'est. C'est pourquoi fermer sa plus ancienne carte de crédit — un réflexe qu'on croit responsable — peut paradoxalement nuire : on efface de l'historique.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">04</span>
+ <div class="question-body">
+ <h4 data-i18n="art.cote.f4Title">Les nouvelles demandes (environ 10 %)</h4>
+ <p data-i18n="art.cote.f4Text">Chaque demande de crédit déclenche une vérification par le prêteur (une "enquête dure"), qui gruge quelques points temporairement. Plusieurs demandes rapprochées signalent une situation précaire.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">05</span>
+ <div class="question-body">
+ <h4 data-i18n="art.cote.f5Title">La variété des types de crédit (environ 10 %)</h4>
+ <p data-i18n="art.cote.f5Text">Un dossier qui montre qu'on gère bien à la fois du crédit renouvelable (carte) et du crédit à tempérament (prêt auto) inspire un peu plus confiance qu'un dossier mono-produit.</p>
+ </div>
+ </div>
+
+ <h2 data-i18n="art.cote.h2c">Les trois mythes qui font le plus de dégâts</h2>
+
+ <div class="highlight-box">
+ <p data-i18n="art.cote.myth1"><strong>Mythe 1 : "Vérifier ma cote la fait baisser."</strong> Faux, et c'est le mythe le plus coûteux parce qu'il entretient l'évitement. Consulter sa propre cote est une "enquête douce" : elle n'a aucun impact. Ce sont les demandes de crédit faites par des prêteurs qui grugent des points. Vous pouvez vérifier votre cote chaque semaine sans conséquence.</p>
+ </div>
+
+ <div class="highlight-box">
+ <p data-i18n="art.cote.myth2"><strong>Mythe 2 : "Il faut garder un solde sur sa carte pour bâtir du crédit."</strong> Faux, et ce mythe coûte des intérêts à 20 % pour rien. Ce qui bâtit le crédit, c'est l'utilisation de la carte suivie du paiement à temps. Payer le solde au complet chaque mois construit exactement le même historique — gratuitement.</p>
+ </div>
+
+ <div class="highlight-box">
+ <p data-i18n="art.cote.myth3"><strong>Mythe 3 : "Une mauvaise cote, c'est permanent."</strong> Faux. La plupart des éléments négatifs disparaissent du dossier après six ou sept ans, et la cote réagit aux bons comportements bien avant cela. Quelqu'un qui redresse ses paiements et réduit son utilisation voit généralement des progrès en quelques mois, pas en quelques années.</p>
+ </div>
+
+ <h2 data-i18n="art.cote.h2d">Comment consulter sa cote gratuitement</h2>
+
+ <p data-i18n="art.cote.p7">Il n'y a plus aucune raison de payer ni de rester dans le flou. Au Canada :</p>
+
+ <ul>
+ <li data-i18n="art.cote.li5"><strong>Borrowell</strong> donne accès gratuitement à votre cote et votre dossier Equifax, avec mise à jour régulière</li>
+ <li data-i18n="art.cote.li6"><strong>Credit Karma</strong> fait la même chose pour TransUnion</li>
+ <li data-i18n="art.cote.li7">Plusieurs institutions financières affichent maintenant votre cote directement dans leur application</li>
+ </ul>
+
+ <p data-i18n="art.cote.p8">Consulter les deux agences vaut la peine une fois par année, pour une raison qu'on néglige : <strong>les erreurs de dossier existent</strong>. Un compte qui ne vous appartient pas, un paiement marqué en retard à tort, une fraude d'identité qui commence. Repérer une erreur tôt et la contester auprès de l'agence peut faire remonter une cote injustement plombée.</p>
+
+ <h2 data-i18n="art.cote.h2e">Le calcul : ce que la cote coûte réellement</h2>
+
+ <p data-i18n="art.cote.p9">Rendons cela concret avec le scénario où la cote pèse le plus lourd : l'hypothèque.</p>
+
+ <p data-i18n="art.cote.p10">Deux ménages achètent la même propriété avec une hypothèque de 350 000 $, amortie sur 25 ans. Le premier a un excellent dossier et obtient les meilleures conditions; le deuxième, avec un dossier moyen, se voit offrir un taux supérieur d'un point de pourcentage — un écart réaliste entre un dossier fort et un dossier faible, particulièrement si ce dernier doit passer par un prêteur alternatif.</p>
+
+ <p data-i18n="art.cote.p11">À titre illustratif, avec un écart de 5 % contre 6 % :</p>
+
+ <ul>
+ <li data-i18n="art.cote.li8">Ménage A : environ <strong>2 046 $ par mois</strong></li>
+ <li data-i18n="art.cote.li9">Ménage B : environ <strong>2 255 $ par mois</strong></li>
+ </ul>
+
+ <p data-i18n="art.cote.p12">Différence : environ <strong>209 $ par mois</strong>. Sur 25 ans : <strong>plus de 62 000 $</strong>.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.cote.pull">"Soixante-deux mille dollars. Pas pour une maison plus grande, pas pour un meilleur quartier — pour le même prêt, différencié uniquement par un chiffre dans une base de données."</p>
+ </div>
+
+ <p data-i18n="art.cote.p13">Et l'hypothèque n'est qu'un exemple : le même mécanisme s'applique, en plus petit, au prêt auto, à la marge de crédit, et à chaque renouvellement. C'est ce qui fait de la cote de crédit un des rares leviers financiers <strong>gratuits</strong> : l'entretenir ne demande aucun capital, seulement des habitudes. C'est d'ailleurs exactement l'idée développée dans notre article sur <a href="/articles/levier-sans-dette.html">le levier sans la dette</a>.</p>
+
+ <h2 data-i18n="art.cote.h2f">Le plan d'entretien, en cinq habitudes</h2>
+
+ <ul>
+ <li data-i18n="art.cote.h1"><strong>Automatisez au moins le paiement minimum</strong> de chaque compte. Le retard de 30 jours est l'ennemi numéro un, et il arrive le plus souvent par oubli, pas par manque d'argent.</li>
+ <li data-i18n="art.cote.h2"><strong>Gardez l'utilisation sous 30 %</strong> de vos limites — idéalement moins. Si vos limites sont basses, demander une augmentation (sans dépenser plus) améliore mécaniquement le ratio.</li>
+ <li data-i18n="art.cote.h3"><strong>Ne fermez pas vos vieilles cartes</strong> sans raison. Une vieille carte sans frais annuels, utilisée pour une petite dépense récurrente payée automatiquement, travaille pour votre ancienneté.</li>
+ <li data-i18n="art.cote.h4"><strong>Espacez les demandes de crédit.</strong> Regroupez les magasinages de taux (auto, hypothèque) sur une courte période — les agences traitent généralement les demandes rapprochées de même nature comme une seule.</li>
+ <li data-i18n="art.cote.h5"><strong>Vérifiez votre dossier une fois par année</strong> sur les deux agences, et contestez toute erreur par écrit.</li>
+ </ul>
+
+ <p data-i18n="art.cote.p14">Rien dans cette liste ne demande de revenus élevés ni de connaissances avancées. C'est probablement l'optimisation financière avec le meilleur ratio effort/impact qui existe — bien avant de chercher <a href="/articles/combien-etf-avoir.html">le meilleur ETF</a> ou le placement parfait.</p>
+
+ <p data-i18n="art.cote.p15">Parce qu'avant de faire fructifier son argent, il y a une étape que beaucoup sautent : arrêter d'en donner inutilement aux prêteurs.</p>
+
+ <p data-i18n="art.cote.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Contenu informatif uniquement — pas des conseils financiers officiels. Les taux et l'exemple hypothécaire sont illustratifs; les écarts réels varient selon le prêteur, le profil et le marché. Les fourchettes de cotes et les pondérations des facteurs sont approximatives et peuvent différer selon l'agence. Consultez un professionnel pour votre situation spécifique.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.cote.title">Connaître sa cote</h3>
+ <p data-i18n="sidebar.cote.desc">Borrowell donne accès gratuitement à votre cote et à votre dossier Equifax.</p>
+ <a href="https://borrowell.com" class="sidebar-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="sidebar.cote.btn">Voir ma cote →</a>
+ <a href="/articles/levier-sans-dette.html" class="sidebar-btn secondary" data-i18n="sidebar.cote.secondary">Le levier sans dette →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.cote.key">Les cinq facteurs</h4>
+ <div class="info-row"><span data-i18n="sidebar.cote.r1">Historique de paiement</span><span>35 %</span></div>
+ <div class="info-row"><span data-i18n="sidebar.cote.r2">Utilisation du crédit</span><span>30 %</span></div>
+ <div class="info-row"><span data-i18n="sidebar.cote.r3">Ancienneté</span><span>15 %</span></div>
+ <div class="info-row"><span data-i18n="sidebar.cote.r4">Nouvelles demandes</span><span>10 %</span></div>
+ <div class="info-row"><span data-i18n="sidebar.cote.r5">Variété du crédit</span><span>10 %</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.cote.cta.title">Un levier qui ne coûte rien</h2>
+ <p data-i18n="art.cote.cta.desc">Entretenir sa cote ne demande aucun capital. Voyez ce que les autres leviers gratuits peuvent bâtir.</p>
+ <a href="/articles/levier-sans-dette.html" class="cta-btn" data-i18n="art.cote.cta.btn">Lire le levier sans dette →</a>
+ <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>
