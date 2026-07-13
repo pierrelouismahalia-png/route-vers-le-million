@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>How Much Do You Need to Retire? An Estimate in 8 Questions — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Combien vous faut-il pour la retraite ? Une estimation en 8 questions" | slug "combien-pour-la-retraite"
+        description "Huit questions sur votre vie d'aujourd'hui pour estimer l'ordre de grandeur de votre objectif de retraite. Règle du 4 %, inflation, RRQ et PSV. Résultat en fourchette."
+   EN : title "How Much Do You Need to Retire? An Estimate in 8 Questions" | slug "retirement-number"
+        description "Eight questions about your life today to estimate the order of magnitude of your retirement goal. The 4 % rule, inflation, QPP and OAS. Result given as a range."
+   ES : title "¿Cuánto necesitas para jubilarte? Una estimación en 8 preguntas" | slug "cuanto-para-jubilarte"
+        description "Ocho preguntas sobre tu vida actual para estimar el orden de magnitud de tu objetivo de jubilación. Regla del 4 %, inflación, RRQ y PSV. Resultado en forma de rango." -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ --faux: #9a3b3b;
+ --faux-fond: #f6e9e9;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 40vh; min-height: 300px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 44px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 44px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* WRAP */
+ .wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 90px; }
+ .intro { text-align: center; font-size: 16px; color: var(--muted); margin: 0 auto 32px; max-width: 520px; }
+
+ /* QUIZ */
+ .quiz { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+ .quiz__entete { padding: 28px 32px 22px; border-bottom: 1px solid var(--border); }
+ .quiz__surtitre { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--terra); font-weight: 500; margin: 0 0 8px; }
+ .quiz__titre { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; margin: 0; color: var(--text); }
+ .quiz__progres { font-size: 13px; color: var(--muted); margin-top: 14px; }
+ .quiz__barre { height: 4px; background: var(--border); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+ .quiz__barre span { display: block; height: 100%; width: 0; background: var(--terra); transition: width 0.3s ease; }
+ .quiz__corps { padding: 28px 32px 32px; }
+ .question { font-size: 18px; font-weight: 500; margin: 0 0 22px; color: var(--text); }
+ .options { display: flex; flex-direction: column; gap: 12px; }
+ .option { text-align: left; width: 100%; padding: 15px 18px; font-size: 15.5px; line-height: 1.5; color: var(--text); background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; font-family: inherit; transition: border-color 0.15s ease, background-color 0.15s ease; }
+ .option:hover:not(:disabled) { border-color: var(--terra); }
+ .option:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .option:disabled { cursor: default; }
+ .option--juste { border-color: var(--terra); background: var(--cream2); font-weight: 500; }
+ .option--faux { border-color: var(--faux); background: var(--faux-fond); }
+ .explication { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--terra); background: var(--cream2); border-radius: 0 8px 8px 0; font-size: 14.5px; line-height: 1.7; }
+ .explication strong { display: block; margin-bottom: 4px; color: var(--terra); }
+ .actions { margin-top: 24px; display: flex; justify-content: flex-end; }
+ .bouton { padding: 12px 26px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; font-family: inherit; color: #fff; background: var(--terra); border: none; border-radius: 100px; cursor: pointer; transition: background 0.2s; }
+ .bouton:hover { background: var(--terra2); }
+ .bouton:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .bouton--secondaire { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .bilan { text-align: center; padding: 8px 0; }
+ .bilan__score { font-family: 'Playfair Display', serif; font-size: 42px; color: var(--terra); margin: 0 0 6px; }
+ .bilan__libelle { font-size: 16px; color: var(--text); margin: 0 0 8px; font-weight: 500; }
+ .bilan__texte { font-size: 15px; color: var(--muted); margin: 0 auto 26px; max-width: 440px; }
+ .bilan .actions { justify-content: center; }
+ /* Ce quiz affiche une fourchette, pas un score du type "8 / 10" : le texte est
+    long, il faut le laisser respirer. Et les notes conditionnelles se lisent a
+    gauche, meme dans un bilan centre. */
+ .bilan__score { font-size: 30px; line-height: 1.35; margin-bottom: 10px; }
+ .bilan .explication { text-align: left; margin-top: 16px; }
+ .bilan__texte { max-width: 520px; }
+ .quiz-cta { text-align: center; margin-top: 28px; }
+ .quiz-cta a { color: var(--terra); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+
+ /* CTA + FOOTER (chrome) */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 56px 24px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; margin: 6px; }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+ .mobile-menu a:last-child { border: none; }
+
+ @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 32px !important; }
+ .quiz__entete, .quiz__corps { padding-left: 20px; padding-right: 20px; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/quizzes/retirement-number/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/quiz/combien-pour-la-retraite/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/quizzes/retirement-number/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/cuestionarios/cuanto-para-jubilarte/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/quiz/combien-pour-la-retraite/"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/en/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/en/etfs/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/en/tools/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ <li><a href="/en/best-offers/" data-i18n="nav.offres">Offers</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/quiz/combien-pour-la-retraite/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/retirement-number/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/cuanto-para-jubilarte/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/en/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/en/etfs/" data-i18n="nav.etf">ETFs</a>
+ <a href="/en/tools/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/en/best-offers/" data-i18n="nav.offres">Offers</a>
+ <a href="/en/emergency-fund/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/en/my-story/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/quiz/combien-pour-la-retraite/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/retirement-number/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/cuanto-para-jubilarte/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/en/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <a href="/en/quizzes/" data-i18n="nav.quiz">Quizzes</a></p>
+ <h1><span data-i18n="art.quizRetraite.title">How much do you need to retire?</span></h1>
+ </div>
+</div>
+
+<!-- WRAP -->
+<div class="wrap">
+ <p class="intro" data-i18n="art.quizRetraite.intro">Eight questions about your life today to estimate the order of magnitude of your retirement goal. This is not a financial projection: it is a starting point for reflection, based on recognized rules of thumb and the Quebec context (QPP, OAS). For a precise number, the calculator takes over at the end.</p>
+
+ <section class="quiz" aria-live="polite">
+ <header class="quiz__entete">
+ <p class="quiz__surtitre" data-i18n="art.quizRetraite.surtitre">An estimate in 8 questions</p>
+ <h2 class="quiz__titre" data-i18n="art.quizRetraite.title">How much do you need to retire?</h2>
+ <p class="quiz__progres" id="progres">Question 1 sur 5</p>
+ <div class="quiz__barre"><span id="barre"></span></div>
+ </header>
+ <div class="quiz__corps" id="corps"></div>
+ </section>
+
+ <p class="quiz-cta"><a href="/en/retirement-calculator/" data-i18n="art.quizRetraite.cta">Retirement calculator →</a></p>
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.quizRetraite.ctaTitle">A range, not a promise</h2>
+ <p data-i18n="art.quizRetraite.ctaDesc">This estimate gives an order of magnitude. For a number built on your real amounts, the retirement calculator takes over.</p>
+ <a href="/en/calculator/" class="cta-btn" data-i18n="art.quizRetraite.ctaBtn">Open the calculator →</a>
+ <a href="/en/articles/" class="cta-btn secondary" data-i18n="art.readMore">View all articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+<script>
+window.QUIZ_DATA = {
+ mode: "calcul",
+
+ /* Formule reprise telle quelle du devis :
+      n                    = max(R - age, 0)
+      depenses_auj         = D x 12 x L x S
+      depenses_infl        = depenses_auj x 1.02^n
+      prestations_infl     = G x facteur_rrq x 1.02^n
+      besoin_net           = max(depenses_infl - prestations_infl, 0)
+      capital_central      = besoin_net x 25 x E      (regle du 4 %)
+      capital_min / max    = central x 0.8 / x 1.2, arrondis au 10 000 le plus proche
+      capital_central < 100 000  ->  message [resultat_faible] */
+ calcul: function (v) {
+  var n = Math.max(v.R - v.age, 0);
+  var infl = Math.pow(1.02, n);
+  var depenses = v.D * 12 * v.L * v.S * infl;
+  var prestations = v.G * v.rrq * infl;
+  var besoin = Math.max(depenses - prestations, 0);
+  var central = besoin * 25 * v.E;
+  var r10 = function (x) { return Math.round(x / 10000) * 10000; };
+  return { faible: central < 100000, min: r10(central * 0.8), max: r10(central * 1.2) };
+ },
+
+ fr: {
+  ui: { progres: "Question {n} sur {t}", suivant: "Question suivante", voir: "Voir mon estimation", recommencer: "Recommencer le quiz", termine: "Terminé", bonne: "", revoir: "" },
+  bilan: {
+   plage: "{min} $ à {max} $",
+   resultatTitre: "Votre ordre de grandeur",
+   resultat: "Selon vos réponses, votre objectif de retraite se situe dans l'ordre de grandeur de {min} $ à {max} $ en capital d'investissement, en dollars de votre année de retraite, en plus des prestations gouvernementales.",
+   faibleTitre: "Bonne nouvelle",
+   faible: "Selon vos réponses, les prestations gouvernementales et votre régime couvrent l'essentiel de votre style de vie visé. Votre capital personnel sert alors de coussin, pour les imprévus, les projets et la liberté de choix. Un objectif de l'ordre de 100 000 $ à 250 000 $ est un point de départ raisonnable à valider avec la calculatrice.",
+   methodeTitre: "Comment ce chiffre est construit",
+   methode: "Cette estimation part de vos dépenses actuelles, les ajuste selon votre logement et votre style de vie visé, applique une inflation de 2 % par année jusqu'à votre retraite, soustrait une estimation prudente des prestations gouvernementales (RRQ et PSV), puis multiplie le manque à combler par 25 : la règle du 4 %, qui suppose qu'un portefeuille diversifié peut soutenir un retrait annuel d'environ 4 %. Votre régime d'employeur, s'il y a lieu, réduit le capital personnel requis.",
+   notes: {
+    note_locataire: "Point d'attention important : comme locataire, votre loyer continuera d'augmenter avec l'inflation toute votre retraite, contrairement au propriétaire dont l'hypothèque est payée. C'est le facteur le plus sous-estimé dans la planification des locataires, et il justifie de viser le haut de votre fourchette.",
+    note_proprio_paye: "Une hypothèque payée est l'un des plus grands réducteurs de coût de la retraite, mais prévoyez quand même taxes, assurances et entretien, qui suivent l'inflation.",
+    note_retraite_60: "Retraite à 60 ans : votre RRQ sera réduite d'environ 36 % de façon permanente par rapport à 65 ans, et votre capital devra durer plus longtemps. C'est faisable, mais c'est le scénario le plus exigeant, et il mérite un calcul précis.",
+    note_regime: "Votre régime à prestations déterminées porte une grande partie du fardeau : votre vrai chiffre dépend surtout de sa rente projetée. Votre relevé annuel de régime est la pièce maîtresse de votre calcul.",
+    note_autonome: "Sans régime d'employeur, vous êtes l'unique architecte de votre retraite, comme moi. Ce n'est pas un désavantage insurmontable : c'est une raison de plus d'automatiser l'épargne et de commencer maintenant."
+   },
+   textes: {
+    texte_jamais: "Vous venez de faire ce que la majorité des gens repoussent toute leur vie : mettre un ordre de grandeur sur l'avenir. Un chiffre imparfait qu'on connaît bat un chiffre parfait qu'on évite.",
+    texte_vague: "Vous aviez une intuition, maintenant vous avez une fourchette. La prochaine étape est de la préciser avec vos vrais chiffres.",
+    texte_deja: "Comparez cette fourchette à votre calcul existant : si les deux concordent, votre plan tient la route; s'ils divergent, l'écart mérite d'être compris."
+   },
+   liens: [
+    { href: "/calculatrice-retraite/", t: "Précisez votre chiffre" },
+    { href: "/quiz/profil-investisseur/", t: "Quel type d'investisseur êtes-vous?" },
+    { href: "/articles/croissance-vs-dividendes.html", t: "Croissance ou dividendes?" }
+   ],
+   avertissement: "Cette estimation est un outil de réflexion basé sur des règles générales (règle du 4 %, inflation de 2 %, prestations gouvernementales approximatives), pas une projection financière ni un conseil. Les montants de RRQ et de PSV varient selon votre historique de cotisations. Consultez un professionnel pour une planification personnalisée."
+  },
+  questions: [
+   { q: "Environ combien votre ménage dépense-t-il par mois, tout inclus (logement, épicerie, transport, loisirs)?", options: [
+    { t: "Moins de 2 500 $", v: { D: 2000 } },
+    { t: "2 500 $ à 4 000 $", v: { D: 3250 } },
+    { t: "4 000 $ à 6 000 $", v: { D: 5000 } },
+    { t: "Plus de 6 000 $", v: { D: 7000 } }
+   ] },
+   { q: "À la retraite, votre situation de logement sera probablement :", options: [
+    { t: "Propriétaire, hypothèque entièrement payée", v: { L: 0.85 }, note: "note_proprio_paye" },
+    { t: "Propriétaire, hypothèque encore en cours", v: { L: 1.0 } },
+    { t: "Locataire", v: { L: 1.05 }, note: "note_locataire" }
+   ] },
+   { q: "La retraite que vous imaginez ressemble à :", options: [
+    { t: "Une vie plus simple qu'aujourd'hui : moins de dépenses, plus de temps", v: { S: 0.80 } },
+    { t: "Sensiblement la même vie qu'aujourd'hui", v: { S: 1.0 } },
+    { t: "Une vie plus active : voyages, projets, loisirs", v: { S: 1.15 } }
+   ] },
+   { q: "Votre âge actuel :", options: [
+    { t: "Moins de 35 ans", v: { age: 32 } },
+    { t: "35 à 44 ans", v: { age: 40 } },
+    { t: "45 à 54 ans", v: { age: 50 } },
+    { t: "55 ans et plus", v: { age: 58 } }
+   ] },
+   { q: "Vous aimeriez prendre votre retraite vers :", options: [
+    { t: "60 ans", v: { R: 60, rrq: 0.7 }, note: "note_retraite_60" },
+    { t: "65 ans", v: { R: 65, rrq: 1.0 } },
+    { t: "67 ans ou plus", v: { R: 67, rrq: 1.1 } }
+   ] },
+   { q: "À la retraite, vous serez probablement :", options: [
+    { t: "Seul ou seule", v: { G: 18000 } },
+    { t: "En couple", v: { G: 36000 } }
+   ] },
+   { q: "Avez-vous un régime de retraite d'employeur?", options: [
+    { t: "Oui, un régime généreux (fonds de pension, prestations déterminées)", v: { E: 0.60 }, note: "note_regime" },
+    { t: "Oui, un régime modeste (cotisations de l'employeur, REER collectif)", v: { E: 0.80 } },
+    { t: "Non, je bâtis tout moi-même (incluant les travailleurs autonomes)", v: { E: 1.0 }, note: "note_autonome" }
+   ] },
+   { q: "Soyez honnête : aviez-vous déjà calculé votre objectif de retraite avant aujourd'hui?", options: [
+    { t: "Jamais", v: {}, texte: "texte_jamais" },
+    { t: "Vaguement, de tête", v: {}, texte: "texte_vague" },
+    { t: "Oui, avec de vrais chiffres", v: {}, texte: "texte_deja" }
+   ] }
+  ]
+ },
+
+ en: {
+  ui: { progres: "Question {n} of {t}", suivant: "Next question", voir: "See my estimate", recommencer: "Restart the quiz", termine: "Finished", bonne: "", revoir: "" },
+  bilan: {
+   plage: "${min} to ${max}",
+   resultatTitre: "Your order of magnitude",
+   resultat: "Based on your answers, your retirement goal is in the order of ${min} to ${max} in investment capital, in dollars of your retirement year, on top of government benefits.",
+   faibleTitre: "Good news",
+   faible: "Based on your answers, government benefits and your plan cover most of your target lifestyle. Your personal capital then acts as a cushion, for the unexpected, for projects, and for freedom of choice. A goal in the range of $100,000 to $250,000 is a reasonable starting point to validate with the calculator.",
+   methodeTitre: "How this number is built",
+   methode: "This estimate starts from your current spending, adjusts it for your housing and target lifestyle, applies 2 % annual inflation until retirement, subtracts a conservative estimate of government benefits (QPP and OAS), then multiplies the gap by 25: the 4 % rule, which assumes a diversified portfolio can sustain a yearly withdrawal of about 4 %. Your employer plan, if any, reduces the personal capital required.",
+   notes: {
+    note_locataire: "Important caveat: as a renter, your rent will keep rising with inflation throughout retirement, unlike an owner whose mortgage is paid off. It is the most underestimated factor in renters' planning, and it justifies aiming for the top of your range.",
+    note_proprio_paye: "A paid-off mortgage is one of retirement's biggest cost reducers, but still budget for taxes, insurance and maintenance, which follow inflation.",
+    note_retraite_60: "Retiring at 60: your QPP will be permanently reduced by about 36 % compared to 65, and your capital must last longer. It is doable, but it is the most demanding scenario, and it deserves a precise calculation.",
+    note_regime: "Your defined-benefit plan carries much of the load: your real number depends mostly on its projected pension. Your annual plan statement is the key document for your calculation.",
+    note_autonome: "Without an employer plan, you are the sole architect of your retirement, like me. It is not an insurmountable disadvantage: it is one more reason to automate your savings and start now."
+   },
+   textes: {
+    texte_jamais: "You just did what most people postpone their whole lives: putting an order of magnitude on the future. An imperfect number you know beats a perfect number you avoid.",
+    texte_vague: "You had an intuition, now you have a range. The next step is refining it with your real numbers.",
+    texte_deja: "Compare this range with your existing calculation: if they match, your plan holds; if they diverge, the gap is worth understanding."
+   },
+   liens: [
+    { href: "/en/retirement-calculator/", t: "Refine your number" },
+    { href: "/en/quizzes/investor-profile/", t: "What type of investor are you?" },
+    { href: "/en/articles/growth-vs-dividends.html", t: "Growth or dividends?" }
+   ],
+   avertissement: "This estimate is a reflection tool based on general rules (4 % rule, 2 % inflation, approximate government benefits), not a financial projection or advice. QPP and OAS amounts vary with your contribution history. Consult a professional for personalized planning."
+  },
+  questions: [
+   { q: "Roughly how much does your household spend per month, all included (housing, groceries, transport, leisure)?", options: [
+    { t: "Less than $2,500", v: { D: 2000 } },
+    { t: "$2,500 to $4,000", v: { D: 3250 } },
+    { t: "$4,000 to $6,000", v: { D: 5000 } },
+    { t: "More than $6,000", v: { D: 7000 } }
+   ] },
+   { q: "In retirement, your housing situation will likely be:", options: [
+    { t: "Owner, mortgage fully paid", v: { L: 0.85 }, note: "note_proprio_paye" },
+    { t: "Owner, still paying a mortgage", v: { L: 1.0 } },
+    { t: "Renter", v: { L: 1.05 }, note: "note_locataire" }
+   ] },
+   { q: "The retirement you picture looks like:", options: [
+    { t: "A simpler life than today: fewer expenses, more time", v: { S: 0.80 } },
+    { t: "Broadly the same life as today", v: { S: 1.0 } },
+    { t: "A more active life: travel, projects, hobbies", v: { S: 1.15 } }
+   ] },
+   { q: "Your current age:", options: [
+    { t: "Under 35", v: { age: 32 } },
+    { t: "35 to 44", v: { age: 40 } },
+    { t: "45 to 54", v: { age: 50 } },
+    { t: "55 and over", v: { age: 58 } }
+   ] },
+   { q: "You would like to retire around:", options: [
+    { t: "Age 60", v: { R: 60, rrq: 0.7 }, note: "note_retraite_60" },
+    { t: "Age 65", v: { R: 65, rrq: 1.0 } },
+    { t: "67 or later", v: { R: 67, rrq: 1.1 } }
+   ] },
+   { q: "In retirement, you will likely be:", options: [
+    { t: "Single", v: { G: 18000 } },
+    { t: "In a couple", v: { G: 36000 } }
+   ] },
+   { q: "Do you have an employer pension plan?", options: [
+    { t: "Yes, a generous one (defined benefit pension)", v: { E: 0.60 }, note: "note_regime" },
+    { t: "Yes, a modest one (employer contributions, group RRSP)", v: { E: 0.80 } },
+    { t: "No, I am building it all myself (including self-employed)", v: { E: 1.0 }, note: "note_autonome" }
+   ] },
+   { q: "Be honest: had you ever calculated your retirement goal before today?", options: [
+    { t: "Never", v: {}, texte: "texte_jamais" },
+    { t: "Vaguely, in my head", v: {}, texte: "texte_vague" },
+    { t: "Yes, with real numbers", v: {}, texte: "texte_deja" }
+   ] }
+  ]
+ },
+
+ es: {
+  ui: { progres: "Pregunta {n} de {t}", suivant: "Siguiente pregunta", voir: "Ver mi estimación", recommencer: "Reiniciar el cuestionario", termine: "Terminado", bonne: "", revoir: "" },
+  bilan: {
+   plage: "{min} $ a {max} $",
+   resultatTitre: "Tu orden de magnitud",
+   resultat: "Según tus respuestas, tu objetivo de jubilación está en el orden de {min} $ a {max} $ en capital de inversión, en dólares de tu año de jubilación, además de las prestaciones gubernamentales.",
+   faibleTitre: "Buena noticia",
+   faible: "Según tus respuestas, las prestaciones gubernamentales y tu plan cubren la mayor parte de tu estilo de vida deseado. Tu capital personal actúa entonces como colchón, para imprevistos, proyectos y libertad de elección. Un objetivo del orden de 100 000 $ a 250 000 $ es un punto de partida razonable para validar con la calculadora.",
+   methodeTitre: "Cómo se construye esta cifra",
+   methode: "Esta estimación parte de tus gastos actuales, los ajusta según tu vivienda y estilo de vida deseado, aplica una inflación del 2 % anual hasta tu jubilación, resta una estimación prudente de las prestaciones gubernamentales (RRQ y PSV), y multiplica la diferencia por 25: la regla del 4 %, que supone que un portafolio diversificado puede sostener un retiro anual de alrededor del 4 %. Tu plan de empleador, si existe, reduce el capital personal requerido.",
+   notes: {
+    note_locataire: "Punto de atención importante: como inquilino, tu alquiler seguirá subiendo con la inflación durante toda tu jubilación, a diferencia del propietario con hipoteca pagada. Es el factor más subestimado en la planificación de los inquilinos, y justifica apuntar a la parte alta de tu rango.",
+    note_proprio_paye: "Una hipoteca pagada es uno de los mayores reductores de costos de la jubilación, pero presupuesta igualmente impuestos, seguros y mantenimiento, que siguen la inflación.",
+    note_retraite_60: "Jubilarse a los 60: tu RRQ se reducirá permanentemente alrededor del 36 % respecto a los 65, y tu capital deberá durar más tiempo. Es factible, pero es el escenario más exigente, y merece un cálculo preciso.",
+    note_regime: "Tu plan de prestación definida carga gran parte del peso: tu cifra real depende sobre todo de su pensión proyectada. Tu estado de cuenta anual del plan es la pieza clave de tu cálculo.",
+    note_autonome: "Sin plan de empleador, eres el único arquitecto de tu jubilación, como yo. No es una desventaja insuperable: es una razón más para automatizar el ahorro y empezar ahora."
+   },
+   textes: {
+    texte_jamais: "Acabas de hacer lo que la mayoría pospone toda su vida: ponerle un orden de magnitud al futuro. Una cifra imperfecta que conoces vale más que una cifra perfecta que evitas.",
+    texte_vague: "Tenías una intuición, ahora tienes un rango. El siguiente paso es afinarlo con tus cifras reales.",
+    texte_deja: "Compara este rango con tu cálculo existente: si coinciden, tu plan se sostiene; si divergen, la diferencia merece entenderse."
+   },
+   liens: [
+    { href: "/es/calculadora-jubilacion/", t: "Afina tu cifra" },
+    { href: "/es/cuestionarios/perfil-de-inversor/", t: "¿Qué tipo de inversor eres?" },
+    { href: "/es/articles/crecimiento-vs-dividendos.html", t: "¿Crecimiento o dividendos?" }
+   ],
+   avertissement: "Esta estimación es una herramienta de reflexión basada en reglas generales (regla del 4 %, inflación del 2 %, prestaciones gubernamentales aproximadas), no es una proyección financiera ni un consejo. Los montos de RRQ y PSV varían según tu historial de contribuciones. Consulta a un profesional para una planificación personalizada."
+  },
+  questions: [
+   { q: "¿Aproximadamente cuánto gasta tu hogar al mes, todo incluido (vivienda, comida, transporte, ocio)?", options: [
+    { t: "Menos de 2 500 $", v: { D: 2000 } },
+    { t: "2 500 $ a 4 000 $", v: { D: 3250 } },
+    { t: "4 000 $ a 6 000 $", v: { D: 5000 } },
+    { t: "Más de 6 000 $", v: { D: 7000 } }
+   ] },
+   { q: "En la jubilación, tu situación de vivienda probablemente será:", options: [
+    { t: "Propietario, hipoteca totalmente pagada", v: { L: 0.85 }, note: "note_proprio_paye" },
+    { t: "Propietario, aún pagando hipoteca", v: { L: 1.0 } },
+    { t: "Inquilino", v: { L: 1.05 }, note: "note_locataire" }
+   ] },
+   { q: "La jubilación que imaginas se parece a:", options: [
+    { t: "Una vida más simple que hoy: menos gastos, más tiempo", v: { S: 0.80 } },
+    { t: "Prácticamente la misma vida que hoy", v: { S: 1.0 } },
+    { t: "Una vida más activa: viajes, proyectos, ocio", v: { S: 1.15 } }
+   ] },
+   { q: "Tu edad actual:", options: [
+    { t: "Menos de 35", v: { age: 32 } },
+    { t: "35 a 44", v: { age: 40 } },
+    { t: "45 a 54", v: { age: 50 } },
+    { t: "55 o más", v: { age: 58 } }
+   ] },
+   { q: "Te gustaría jubilarte alrededor de:", options: [
+    { t: "60 años", v: { R: 60, rrq: 0.7 }, note: "note_retraite_60" },
+    { t: "65 años", v: { R: 65, rrq: 1.0 } },
+    { t: "67 o más", v: { R: 67, rrq: 1.1 } }
+   ] },
+   { q: "En la jubilación, probablemente estarás:", options: [
+    { t: "Solo o sola", v: { G: 18000 } },
+    { t: "En pareja", v: { G: 36000 } }
+   ] },
+   { q: "¿Tienes un plan de pensiones de tu empleador?", options: [
+    { t: "Sí, uno generoso (pensión de prestación definida)", v: { E: 0.60 }, note: "note_regime" },
+    { t: "Sí, uno modesto (aportes del empleador, REER colectivo)", v: { E: 0.80 } },
+    { t: "No, lo construyo todo yo (incluye trabajadores autónomos)", v: { E: 1.0 }, note: "note_autonome" }
+   ] },
+   { q: "Sé honesto: ¿habías calculado tu objetivo de jubilación antes de hoy?", options: [
+    { t: "Nunca", v: {}, texte: "texte_jamais" },
+    { t: "Vagamente, de memoria", v: {}, texte: "texte_vague" },
+    { t: "Sí, con cifras reales", v: {}, texte: "texte_deja" }
+   ] }
+  ]
+ }
+};
+</script>
+<script src="/quiz.js" defer></script>
+</body>
+</html>

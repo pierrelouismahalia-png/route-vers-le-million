@@ -23,6 +23,17 @@
                   bilan.profils[<id>] = { nom, l, t }. En cas d'egalite, on affiche
                   bilan.defaut.
 
+  mode "calcul" : aucune bonne reponse non plus. Chaque option porte "v", un objet
+                  de variables versees dans un accumulateur, et facultativement
+                  "note" (identifiant d'une note conditionnelle) ou "texte"
+                  (identifiant d'un texte de fin). A la derniere question, le moteur
+                  appelle QUIZ_DATA.calcul(vars), qui doit renvoyer
+                  { faible: <bool>, min: <nombre>, max: <nombre> }.
+                  Le resultat est TOUJOURS une fourchette, jamais un chiffre unique.
+                  Le bilan attend : bilan.plage ("{min} ... {max}"), bilan.resultatTitre,
+                  bilan.resultat, bilan.methode, bilan.faibleTitre, bilan.faible,
+                  bilan.notes{}, bilan.textes{}, bilan.liens[], bilan.avertissement.
+
   La langue affichee est celle de la page : le verrou de langue ecrit dans
   localStorage avant le chargement des scripts, donc l'URL fait foi.
 */
@@ -39,6 +50,8 @@
   var DATA = window.QUIZ_DATA;
   var MODE = DATA.mode || "score";
   var T, index = 0, score = 0, points = {}, repondu = false;
+  var vars = {}, notes = [], texteCle = null;
+  var LOCALE = { fr: "fr-CA", en: "en-CA", es: "es-ES" };
 
   function currentLang() {
     var l;
@@ -90,6 +103,17 @@
         btn.disabled = true;
         if (i === choix) { btn.classList.add("option--juste"); }
       });
+    } else if (MODE === "calcul") {
+      var opt = item.options[choix];
+      if (opt.v) {
+        Object.keys(opt.v).forEach(function (k) { vars[k] = opt.v[k]; });
+      }
+      if (opt.note && notes.indexOf(opt.note) === -1) { notes.push(opt.note); }
+      if (opt.texte) { texteCle = opt.texte; }
+      boutons.forEach(function (btn, i) {
+        btn.disabled = true;
+        if (i === choix) { btn.classList.add("option--juste"); }
+      });
     } else {
       boutons.forEach(function (btn, i) {
         btn.disabled = true;
@@ -132,17 +156,57 @@
     return { entete: p.nom, l: p.l, t: p.t };
   }
 
+  // Mode calcul : le resultat est une fourchette, jamais un chiffre unique.
+  function bilanCalcul() {
+    var lang = currentLang();
+    var r = DATA.calcul(vars);
+
+    function fmt(n) {
+      try { return Math.round(n).toLocaleString(LOCALE[lang]); }
+      catch (e) { return String(Math.round(n)); }
+    }
+
+    if (r.faible) {
+      return { entete: "", l: T.bilan.faibleTitre, t: T.bilan.faible };
+    }
+    var plage = T.bilan.plage.replace("{min}", fmt(r.min)).replace("{max}", fmt(r.max));
+    return {
+      entete: plage,
+      l: T.bilan.resultatTitre,
+      t: T.bilan.resultat.replace("{min}", fmt(r.min)).replace("{max}", fmt(r.max))
+    };
+  }
+
   function afficherBilan() {
     if (progres) { progres.textContent = T.ui.termine; }
     if (barre) { barre.style.width = "100%"; }
 
-    var b = (MODE === "profil") ? bilanProfil() : bilanScore();
+    var b = (MODE === "profil") ? bilanProfil()
+          : (MODE === "calcul") ? bilanCalcul()
+          : bilanScore();
 
-    var html =
-      '<div class="bilan">' +
-      '<p class="bilan__score">' + escapeHtml(b.entete) + '</p>' +
-      '<p class="bilan__libelle">' + escapeHtml(b.l) + '</p>' +
-      '<p class="bilan__texte">' + escapeHtml(b.t) + '</p>';
+    var html = '<div class="bilan">';
+    if (b.entete) { html += '<p class="bilan__score">' + escapeHtml(b.entete) + '</p>'; }
+    html += '<p class="bilan__libelle">' + escapeHtml(b.l) + '</p>' +
+            '<p class="bilan__texte">' + escapeHtml(b.t) + '</p>';
+
+    if (MODE === "calcul") {
+      // Transparence de la methode, puis les notes conditionnelles retenues,
+      // puis le texte de fin choisi a la derniere question.
+      if (T.bilan.methode) {
+        html += '<div class="explication"><strong>' + escapeHtml(T.bilan.methodeTitre) + '</strong>' +
+                escapeHtml(T.bilan.methode) + '</div>';
+      }
+      notes.forEach(function (k) {
+        if (T.bilan.notes && T.bilan.notes[k]) {
+          html += '<div class="explication">' + escapeHtml(T.bilan.notes[k]) + '</div>';
+        }
+      });
+      if (texteCle && T.bilan.textes && T.bilan.textes[texteCle]) {
+        html += '<p class="bilan__texte" style="margin-top:22px;">' +
+                escapeHtml(T.bilan.textes[texteCle]) + '</p>';
+      }
+    }
 
     if (T.bilan.avertissement) {
       html += '<p class="bilan__texte">' + escapeHtml(T.bilan.avertissement) + '</p>';
@@ -160,13 +224,17 @@
     corps.innerHTML = html;
 
     document.getElementById("recommencer").addEventListener("click", function () {
-      index = 0; score = 0; points = {}; afficherQuestion();
+      reinit(); afficherQuestion();
     });
+  }
+
+  function reinit() {
+    index = 0; score = 0; points = {}; vars = {}; notes = []; texteCle = null;
   }
 
   function demarrer() {
     T = DATA[currentLang()] || DATA.fr;
-    index = 0; score = 0; points = {};
+    reinit();
     afficherQuestion();
   }
 
