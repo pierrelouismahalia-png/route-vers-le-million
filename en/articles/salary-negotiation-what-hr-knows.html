@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Negotiating Your Salary: What HR Students Are Taught — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Negocier son salaire : ce qu'on enseigne aux etudiants en RH"
+        slug "negocier-salaire-secrets-rh"
+        description "Echelles salariales, remuneration globale, equite interne, ancrage : ce que les programmes de ressources humaines enseignent reellement sur la remuneration, vu de l'autre cote de la table."
+        keywords negocier son salaire, echelle salariale, remuneration globale, equite interne, Guichet-Emplois, augmentation de salaire Quebec
+   EN : title "Negotiating Your Salary: What HR Students Are Taught"
+        slug "salary-negotiation-what-hr-knows"
+        description "Salary bands, total compensation, internal equity, anchoring: what human resources programs actually teach about pay, seen from the other side of the table."
+        keywords negotiate your salary, salary band, total compensation, internal equity, Job Bank Canada, asking for a raise
+   ES : title "Negociar el salario: lo que se ensena a los estudiantes de RR. HH."
+        slug "negociar-el-salario-secretos-rh"
+        description "Bandas salariales, remuneracion global, equidad interna, anclaje: lo que los programas de recursos humanos ensenan realmente sobre la retribucion, visto desde el otro lado de la mesa."
+        keywords negociar el salario, banda salarial, remuneracion global, equidad interna, aumento de sueldo, entrevista de trabajo
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* QUESTION CARDS */
+ .question-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 1.2em 0; display: flex; gap: 20px; align-items: flex-start; }
+ .question-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--terra); opacity: 0.5; line-height: 1; flex-shrink: 0; min-width: 44px; }
+ .question-body h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+ .question-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Salary bands, total compensation, internal equity, anchoring: what human resources programs actually teach about pay, seen from the other side of the table."/>
+ <meta name="keywords" content="negotiate your salary, salary band, total compensation, internal equity, Job Bank Canada, asking for a raise"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/articles/salary-negotiation-what-hr-knows.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/negocier-salaire-secrets-rh.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/salary-negotiation-what-hr-knows.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/negociar-el-salario-secretos-rh.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/negocier-salaire-secrets-rh.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Negotiating Your Salary: What HR Students Are Taught — Route vers le Million"/>
+ <meta property="og:description" content="Salary bands, total compensation, internal equity, anchoring: what human resources programs actually teach about pay, seen from the other side of the table."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/en/articles/salary-negotiation-what-hr-knows.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="en_CA"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Negotiating Your Salary: What HR Students Are Taught"/>
+ <meta name="twitter:description" content="Salary bands, total compensation, internal equity, anchoring: what human resources programs actually teach about pay, seen from the other side of the table."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Negotiating Your Salary: What HR Students Are Taught",
+ "description": "Salary bands, total compensation, internal equity, anchoring: what human resources programs actually teach about pay, seen from the other side of the table.",
+ "url": "https://route-vers-le-million.blog/en/articles/salary-negotiation-what-hr-knows.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "en-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/articles/negocier-salaire-secrets-rh.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/salary-negotiation-what-hr-knows.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/negociar-el-salario-secretos-rh.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/articles/negocier-salaire-secrets-rh.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/salary-negotiation-what-hr-knows.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/negociar-el-salario-secretos-rh.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <a href="/en/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.salaire.breadcrumb">Careers</span></p>
+ <p class="hero-tag"><span data-i18n="art.salaire.tag">Careers · Income · Negotiation</span></p>
+ <h1><span data-i18n="art.salaire.title">Negotiating your salary: <em>what HR students are taught</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.salaire.location">Quebec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.salaire.readtime">9 min read</span>
+ <span>·</span>
+ <span data-i18n="art.salaire.category">Careers · Income</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Disclosure: This article contains affiliate links. If you sign up or purchase through my links, I earn a commission at no extra cost to you. My recommendations are based on my personal use.</div>
+
+ <p class="lead" data-i18n="art.salaire.lead">There is a fifteen-minute conversation that can be worth tens of thousands of dollars over a career, and most people never have it. Not for lack of intelligence — out of discomfort.</p>
+
+ <p data-i18n="art.salaire.p1">We tell ourselves we are lucky to have the job, that pushing would look ungrateful, that "it just is not done." So we accept the first number, say thank you, and go back to work.</p>
+
+ <p data-i18n="art.salaire.p2">I went back to school as an adult, and I am currently taking a course on entering the labour market. What struck me is how many perfectly simple things are taught there — things that people studying business administration with a human resources focus know by heart, but that the rest of the world has never heard. Salary negotiation is not an innate talent, nor a brutal test of wills: it is a mechanism, with rules known to only one side of the table.</p>
+
+ <p data-i18n="art.salaire.p3">This article levels the two sides. Here is what the person across from you learned in school — and how to use it. If going back to school intrigues you, I wrote about it at length in <a href="/en/articles/college-continuing-education-financial-leverage.html">my article on continuing education at college</a>.</p>
+
+ <h2 data-i18n="art.salaire.h2a">What HR knows and you do not</h2>
+
+ <div class="question-card">
+ <span class="question-num">01</span>
+ <div class="question-body">
+ <h4 data-i18n="art.salaire.f1Title">There is almost always a salary band, and the band is what you negotiate</h4>
+ <p data-i18n="art.salaire.f1Text">In most organizations with any structure, the position you want already has a band: a minimum, a maximum, and steps in between. The recruiter is not pulling a number out of thin air; they are placing you somewhere inside a range that existed before you applied.</p>
+ </div>
+ </div>
+
+ <p data-i18n="art.salaire.p4">Practical consequence: the real negotiation is not about "how much," but about <strong>where you land within the band</strong>. And it is perfectly legitimate to ask: "What is the salary band for this position?" The question shocks no human resources professional — they spend their days in those bands. What surprises them is how few candidates ask.</p>
+
+ <div class="question-card">
+ <span class="question-num">02</span>
+ <div class="question-body">
+ <h4 data-i18n="art.salaire.f2Title">Salary is only part of the package: total compensation</h4>
+ <p data-i18n="art.salaire.f2Text">The first concept taught in any compensation course. Base salary, plus vacation, the pension plan with or without an employer contribution, insurance, bonuses, remote work, a training budget, flexible hours.</p>
+ </div>
+ </div>
+
+ <p data-i18n="art.salaire.p5">The employer thinks in terms of the total envelope. The average candidate fixates on salary and ignores the rest. That asymmetry is costly in both directions: people sometimes turn down an offer that was better overall for $2,000 of base salary, and sometimes accept a "good salary" stripped of thousands of dollars in benefits they had elsewhere.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.salaire.box1">And above all: <strong>when the salary is frozen, the envelope is not.</strong> An extra week of vacation, a salary review moved up to six months, a training budget — these cost the employer less than a raise, which carries forward into future years and into internal equity. They are therefore often easier to obtain. HR knows this. Now so do you.</p>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">03</span>
+ <div class="question-body">
+ <h4 data-i18n="art.salaire.f3Title">Your request will be compared internally, not just to the market</h4>
+ <p data-i18n="art.salaire.f3Text">Another basic notion of the trade: internal equity. Before granting you an amount, the employer checks what colleagues in the same position earn. A request that would create an indefensible internal gap will be refused even if the market justifies it.</p>
+ </div>
+ </div>
+
+ <p data-i18n="art.salaire.p6">And conversely, an argument grounded in what the organization already pays is very hard to reject. In Quebec, the Pay Equity Act governs part of these comparisons. The practical lesson: your negotiation is not played out against the market alone, but against a grid you cannot see. All the more reason to ask about the band.</p>
+
+ <h2 data-i18n="art.salaire.h2b">The three classic rules, seen from the inside</h2>
+
+ <p data-i18n="art.salaire.p7">You may have heard them before. Here is what they are worth once you know what happens backstage.</p>
+
+ <h3 data-i18n="art.salaire.h3a">Rule 1 — Come with local data, not impressions</h3>
+
+ <p data-i18n="art.salaire.p8">This is the most solid of the three, and it is exactly how HR works: they rely on salary surveys. You can do the same, for free. <strong>Job Bank</strong> publishes low, median and high ranges by occupation and by region; professional orders and industry associations publish their own surveys; and postings for comparable roles in your city give you the current pulse. It is the same source I used to put numbers on <a href="/en/articles/high-paying-jobs-quebec-2030.html">the high-paying jobs of 2030 in Quebec</a>.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.salaire.pull1">"Saying you think you are worth more is an opinion. Saying the regional median for the role is a given figure according to Job Bank, and that your experience places you above it, is a case file."</p>
+ </div>
+
+ <p data-i18n="art.salaire.p9">Facing a professional who works with data, only data carries weight.</p>
+
+ <h3 data-i18n="art.salaire.h3b">Rule 2 — Ask for about 10 % above your target</h3>
+
+ <p data-i18n="art.salaire.p10">The principle behind this rule is taught in negotiation under the name <strong>anchoring</strong>: the first serious number placed on the table pulls the whole discussion toward it. Asking slightly above your target creates room to "concede" while landing exactly where you meant to — and the employer, for their part, feels they negotiated.</p>
+
+ <p data-i18n="art.salaire.p11">Two guardrails HR knows about. First, the gap must remain <strong>defensible with your data</strong>: 10 % above a documented target, yes; 30 % above the top of the band, no — you simply remove yourself from the process. Second, you must be able to justify the figure if asked where it comes from. Anchoring works when it is credible.</p>
+
+ <h3 data-i18n="art.salaire.h3c">Rule 3 — "Let the employer name the first number": the most debated rule</h3>
+
+ <p data-i18n="art.salaire.p12">Honesty requires saying it: there is no consensus on this one, even among specialists.</p>
+
+ <p data-i18n="art.salaire.p13">The case for: you avoid underselling yourself. If the band went higher than you would have dared to ask, you have just found that out at no cost. This is especially true when you do not know the market for the role well.</p>
+
+ <p data-i18n="art.salaire.p14">The case against, drawn from the same anchoring theory as rule 2: the first number structures the discussion. Leaving it to the other side means letting them set the anchor — potentially a low one.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.salaire.box2">The practical synthesis I take away: <strong>if you have done your homework, speaking first with a documented figure works in your favour. If you are flying blind, let it come to you.</strong> And in every case, there is an elegant way out: "Before we talk numbers, could you tell me the band planned for this position?" You get the information without setting an anchor or receiving one.</p>
+ </div>
+
+ <h2 data-i18n="art.salaire.h2c">Negotiation does not end at hiring</h2>
+
+ <p data-i18n="art.salaire.p15">Two more things, rarely said outside a classroom.</p>
+
+ <p data-i18n="art.salaire.p16"><strong>Timing matters as much as the argument.</strong> You negotiate at the offer, never during the interview. Until the employer has chosen you, you have no leverage; the moment they have chosen you, they have invested time and compared candidates, and restarting the process is expensive for them. That is precisely the moment when fifteen minutes of discomfort pay the most.</p>
+
+ <p data-i18n="art.salaire.p17"><strong>The employer knows what losing you costs.</strong> Human resources programs teach that replacing an employee typically costs a significant fraction of their annual salary: posting, recruiting, training, lost productivity. At the salary review, a strong performer who shows up with documented achievements and market data is not asking for a favour: they are offering the employer a way to avoid paying for a replacement.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.salaire.pull2">"The people who never ask are unknowingly funding the raises of those who do."</p>
+ </div>
+
+ <h2 data-i18n="art.salaire.h2d">The math, as always</h2>
+
+ <p data-i18n="art.salaire.p18">Let us put a number on the discomfort avoided.</p>
+
+ <p data-i18n="art.salaire.p19">Two people accept the same position. The first takes the offer as it stands; the second negotiates — fifteen minutes, data in hand — and gets $3,000 more. Nothing heroic: that is often the gap between two steps of the same band.</p>
+
+ <p data-i18n="art.salaire.p20">Those $3,000 are not a one-time gain: future raises, calculated as percentages, apply to the negotiated base. And if the second person simply invests that annual difference in their TFSA at a 7 % average return, after a 25-year career the gap becomes about <strong>$190,000</strong>.</p>
+
+ <p data-i18n="art.salaire.p21">One hundred and ninety thousand dollars. For a conversation most people avoid because it is uncomfortable for a quarter of an hour. It is, very precisely, <a href="/en/articles/financial-leverage-without-debt.html">leverage without debt</a>: no capital required, only preparation.</p>
+
+ <h2 data-i18n="art.salaire.h2e">In summary</h2>
+
+ <ul>
+ <li data-i18n="art.salaire.s1"><strong>Ask about the band.</strong> It almost always exists, and nobody takes offence at the question.</li>
+ <li data-i18n="art.salaire.s2"><strong>Come with Job Bank figures</strong>, not with an impression. Only data carries weight.</li>
+ <li data-i18n="art.salaire.s3"><strong>Think envelope, not salary.</strong> When the base is frozen, vacation, training and an earlier review are not.</li>
+ <li data-i18n="art.salaire.s4"><strong>Choose your moment:</strong> at the offer, never during the interview.</li>
+ </ul>
+
+ <p data-i18n="art.salaire.p22">On the other side of the table, nothing is improvised: there is a band, a total envelope, an internal equity grid and market data. Negotiation is not a confrontation — it is the moment you demonstrate that you speak the same language. The person across from you learned all of this in school. Now so have you.</p>
+
+ <p data-i18n="art.salaire.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Informational content based on general compensation principles and on my experience — not professional human resources advice, nor financial advice. Every employment situation is different. The calculation presented is illustrative.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.salaire.title">$3,000 more, invested</h3>
+ <p data-i18n="sidebar.salaire.desc">See what an annual salary difference becomes in a TFSA over 25 years.</p>
+ <a href="/calculatrice/" class="sidebar-btn" data-i18n="sidebar.salaire.btn">Calculator →</a>
+ <a href="/en/articles/high-paying-jobs-quebec-2030.html" class="sidebar-btn secondary" data-i18n="sidebar.salaire.secondary">High-paying jobs 2030 →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.salaire.key">What they already know</h4>
+ <div class="info-row"><span data-i18n="sidebar.salaire.r1">Salary band</span><span data-i18n="sidebar.salaire.r1v">It exists</span></div>
+ <div class="info-row"><span data-i18n="sidebar.salaire.r2">Compensation</span><span data-i18n="sidebar.salaire.r2v">Total package</span></div>
+ <div class="info-row"><span data-i18n="sidebar.salaire.r3">Comparison</span><span data-i18n="sidebar.salaire.r3v">Internal equity</span></div>
+ <div class="info-row"><span data-i18n="sidebar.salaire.r4">Timing</span><span data-i18n="sidebar.salaire.r4v">At the offer</span></div>
+ <div class="info-row"><span data-i18n="sidebar.salaire.r5">Over 25 years</span><span>190 000 $</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.salaire.cta.title">Fifteen minutes, $190,000</h2>
+ <p data-i18n="art.salaire.cta.desc">See what $3,000 more per year, invested in a TFSA, becomes over a career.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.salaire.cta.btn">Try the calculator →</a>
+ <a href="/en/articles/" class="cta-btn secondary" data-i18n="art.readMore">View all articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>
