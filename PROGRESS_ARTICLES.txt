@@ -1,6 +1,6 @@
 === ROUTE VERS LE MILLION - ETAT DU SITE ===
-Derniere mise a jour : 13 juillet 2026
-Dernier commit deploye : 8e6095d
+Derniere mise a jour : 13 juillet 2026 (quiz-calculateur inclus)
+Dernier commit deploye : 82ad835
 Sitemap resoumis dans Search Console : oui
 
 Ce fichier remplace l'ancien plan d'integration (9 articles), devenu caduc :
@@ -10,18 +10,18 @@ diverge du plan. Il decrit desormais l'etat livre, pas une intention.
 
 === VOLUMETRIE ===
 
-  Pages HTML                136
-  URL au sitemap            135
+  Pages HTML                139
+  URL au sitemap            138
   Articles (FR)              21
   Pages de section (FR)      17   accueil, celi-reer, etf, outils, calculatrice,
                                   calculatrice-retraite, etf-explorer, fonds-urgence,
                                   histoire, wealthsimple, die-with-zero, economie,
                                   reflexion, lire-apprendre, carrieres, a-propos,
                                   meilleures-offres
-  Quiz                        4   + 1 page d'atterrissage /quiz/
-  Pages EN                   45
-  Pages ES                   45
-  Cles de traduction      2 577   par langue, symetriques (fr = en = es)
+  Quiz                        5   + 1 page d'atterrissage /quiz/
+  Pages EN                   46
+  Pages ES                   46
+  Cles de traduction      2 586   par langue, symetriques (fr = en = es)
 
   Le site est integralement trilingue. Aucune page n'est en attente de traduction.
 
@@ -39,11 +39,11 @@ diverge du plan. Il decrit desormais l'etat livre, pas une intention.
       JavaScript sur l'URL francaise, donc invisibles pour Google
 
   En place aujourd'hui :
-    - sitemap.xml         135 URL, lastmod tire de l'historique git
+    - sitemap.xml         138 URL, lastmod tire de l'historique git
     - robots.txt          tout explorable, pointe vers le sitemap
     - _headers            X-Robots-Tag: noindex sur *.pages.dev et *.workers.dev
                           uniquement. Le domaine principal n'est jamais affecte.
-    - canonical           sur les 135 pages indexables, tous resolus vers un fichier reel
+    - canonical           sur les 138 pages indexables, tous resolus vers un fichier reel
     - hreflang            4 balises reciproques par page, x-default vers le francais
     - _redirects          redirection 301 active, dans les trois langues, de
                           /articles/quiz-frais-de-placement.html
@@ -76,11 +76,27 @@ diverge du plan. Il decrit desormais l'etat livre, pas une intention.
     Regenere sitemap.xml a partir des canonicals reels. Exclut les pages noindex.
 
   quiz.js
-    Moteur de quiz partage, deux modes :
+    Moteur de quiz partage, trois modes :
       "score"  : corrige et explique chaque reponse, bilan par paliers
       "profil" : aucune bonne reponse, cumul de points par profil, profil par
                  defaut en cas d'egalite
+      "calcul" : chaque option verse des variables dans un accumulateur et peut
+                 declencher une note conditionnelle. A la derniere question, le
+                 moteur appelle la fonction calcul() fournie par la page, qui
+                 renvoie { faible, min, max }. Le resultat est toujours une
+                 fourchette, jamais un chiffre unique. Sous un seuil, un message
+                 dedie remplace la fourchette : un "0 $" brut serait trompeur.
     Reprend exactement les classes CSS du quiz d'origine, sans styles inventes.
+
+    Les 5 quiz :
+      /quiz/combien-pour-la-retraite/  calcul  (8 questions)
+      /quiz/abc-des-etf/               score   (20 questions)
+      /quiz/profil-investisseur/       profil  (8 questions)
+      /quiz/cote-de-credit/            score   (10 questions)
+      /quiz/frais-de-placement/        score   (5 questions, moteur inline, voir phase 2)
+
+    Prefixe des URL traduites : /en/quizzes/ et /es/cuestionarios/. Ne pas le
+    changer sans redirections : ces URL sont declarees dans le sitemap soumis.
 
   Rappel technique : PowerShell 5.1 lit les .ps1 sans BOM en ANSI. Tout script
   contenant des accents doit etre enregistre avec un BOM UTF-8, sinon le HTML
