@@ -1,76 +1,113 @@
-=== SUIVI D'INTÉGRATION : 9 ARTICLES TRILINGUES ===
+=== ROUTE VERS LE MILLION - ETAT DU SITE ===
+Derniere mise a jour : 13 juillet 2026
+Dernier commit deploye : 8e6095d
+Sitemap resoumis dans Search Console : oui
 
-Article 1 : Trouver un investisseur
-  FR : [ ] En cours (Agent)
-  EN : [ ] En cours (Agent)
-  ES : [ ] En cours (Agent)
-  Index FR : [ ] En cours (Agent)
-  Index EN : [ ] En cours (Agent)
-  Index ES : [ ] En cours (Agent)
+Ce fichier remplace l'ancien plan d'integration (9 articles), devenu caduc :
+plusieurs de ces articles n'ont jamais ete crees, et le contenu reel du site a
+diverge du plan. Il decrit desormais l'etat livre, pas une intention.
 
-Article 2 : Le guide ultime du CÉLI
-  FR : [ ] À faire
-  EN : [ ] À faire
-  ES : [ ] À faire
-  Index : [ ] À faire
 
-Article 3 : Les déductions fiscales
-  FR : [ ] À faire
-  EN : [ ] À faire
-  ES : [ ] À faire
-  Index : [ ] À faire
+=== VOLUMETRIE ===
 
-Article 4 : Le guide ultime du SEO
-  FR : [ ] À faire
-  EN : [ ] À faire
-  ES : [ ] À faire
-  Index : [ ] À faire
+  Pages HTML                136
+  URL au sitemap            135
+  Articles (FR)              21
+  Pages de section (FR)      17   accueil, celi-reer, etf, outils, calculatrice,
+                                  calculatrice-retraite, etf-explorer, fonds-urgence,
+                                  histoire, wealthsimple, die-with-zero, economie,
+                                  reflexion, lire-apprendre, carrieres, a-propos,
+                                  meilleures-offres
+  Quiz                        4   + 1 page d'atterrissage /quiz/
+  Pages EN                   45
+  Pages ES                   45
+  Cles de traduction      2 577   par langue, symetriques (fr = en = es)
 
-Article 5 : IA comme levier de productivité
-  VÉRIFIER D'ABORD SI EXISTE
-  FR : [ ] À vérifier
-  EN : [ ] À faire
-  ES : [ ] À faire
-  Index : [ ] À faire
+  Le site est integralement trilingue. Aucune page n'est en attente de traduction.
 
-Article 6 : Essai personnel (J'ai arrêté de courir)
-  VÉRIFIER D'ABORD SI EXISTE
-  FR : [ ] À vérifier
-  EN : [ ] À faire
-  ES : [ ] À faire
-  Index : [ ] À faire
 
-Article 7 : Négociation salariale
-  FR : [ ] À faire
-  EN : [ ] À faire
-  ES : [ ] À faire
-  Index : [ ] À faire
+=== SEO ET INDEXATION ===
 
-Article 8 : CV et ATS
-  FR : [ ] À faire
-  EN : [ ] À faire
-  ES : [ ] À faire
-  Index : [ ] À faire
+  Point de depart : 3 pages indexees sur environ 24 articles.
+  Causes identifiees et corrigees :
+    - aucun sitemap.xml ni robots.txt n'existait
+    - 8 pages n'avaient aucun canonical
+    - deux articles (bons-tresor-canadiens, croissance-vs-dividendes) avaient un
+      canonical pointant vers une URL repertoire inexistante : ils se declaraient
+      doublons d'une page qui n'existait pas
+    - les contenus EN et ES n'avaient aucune URL propre : ils etaient injectes par
+      JavaScript sur l'URL francaise, donc invisibles pour Google
 
-Article 9 : Buanderie
-  FR : [ ] À faire
-  EN : [ ] À faire
-  ES : [ ] À faire
-  Index : [ ] À faire
+  En place aujourd'hui :
+    - sitemap.xml         135 URL, lastmod tire de l'historique git
+    - robots.txt          tout explorable, pointe vers le sitemap
+    - _headers            X-Robots-Tag: noindex sur *.pages.dev et *.workers.dev
+                          uniquement. Le domaine principal n'est jamais affecte.
+    - canonical           sur les 135 pages indexables, tous resolus vers un fichier reel
+    - hreflang            4 balises reciproques par page, x-default vers le francais
+    - _redirects          redirection 301 active, dans les trois langues, de
+                          /articles/quiz-frais-de-placement.html
+                          vers /quiz/frais-de-placement/
+                          (l'ancienne URL etait deja indexee : le referencement
+                          acquis est transfere, pas perdu)
 
-=== COMPTEUR D'ARTICLES ===
-Avant : 21 articles
-Après Article 1 : 22
-Après Article 2 : 23
-Après Article 3 : 24
-Après Article 4 : 25
-Après Article 5 : 26
-Après Article 6 : 27
-Après Article 7 : 28
-Après Article 8 : 29
-Après Article 9 : 30
+  Une seule page porte un noindex : /merci-infolettre/ (page de remerciement de
+  l'infolettre). C'est voulu. Elle reste explorable pour que Google puisse lire
+  ce noindex, et elle est exclue du sitemap.
 
-=== NOTES ===
-- Article 1 : Agent en cours (afbf6d37c8856d93f)
-- Articles 5 & 6 : Vérifier existence avant d'intégrer
-- Tous les autres : À créer
+
+=== OUTILS DE GENERATION ===
+
+  tools/gen-i18n-pages.ps1
+    Genere les pages EN et ES a partir du fichier FR reel et de translations.js.
+    Ne fabrique aucun gabarit : il part du HTML existant, remplace le contenu de
+    chaque element data-i18n, puis reecrit le head (title, description, Open Graph,
+    Twitter, JSON-LD, canonical, hreflang) et les liens internes.
+    Gere quatre familles d'URL :
+      accueil    /                  -> /en/              | /es/
+      section    /celi-reer/        -> /en/tfsa-rrsp/    | /es/celi-reer/
+      article    /articles/x.html   -> /en/articles/y.html
+      quiz       /quiz/x/           -> /en/quizzes/y/    | /es/cuestionarios/y/
+    Une page sans bloc "METADONNEES SEO PAR LANGUE" complet est ignoree, jamais
+    generee a moitie. C'est ce qui protege a-propos, dont les versions EN et ES
+    sont ecrites a la main.
+
+  tools/gen-sitemap.ps1
+    Regenere sitemap.xml a partir des canonicals reels. Exclut les pages noindex.
+
+  quiz.js
+    Moteur de quiz partage, deux modes :
+      "score"  : corrige et explique chaque reponse, bilan par paliers
+      "profil" : aucune bonne reponse, cumul de points par profil, profil par
+                 defaut en cas d'egalite
+    Reprend exactement les classes CSS du quiz d'origine, sans styles inventes.
+
+  Rappel technique : PowerShell 5.1 lit les .ps1 sans BOM en ANSI. Tout script
+  contenant des accents doit etre enregistre avec un BOM UTF-8, sinon le HTML
+  genere sort en mojibake.
+
+
+=== PHASE 2 - REPORTE ===
+
+  1. Migrer le moteur du quiz sur les frais de placement vers quiz.js
+     quiz/frais-de-placement/index.html conserve encore son moteur JavaScript
+     integre, herite de sa version d'origine. Il fonctionne et son URL est
+     indexee. Le migrer maintenant aurait ete un risque gratuit juste avant la
+     soumission du sitemap. A faire a froid : restructurer ses donnees au format
+     QUIZ_DATA (ui / bilan.paliers / questions) et supprimer le script inline.
+
+  2. Page "Ou j'en suis"
+     Devis a venir. Rien n'est commence.
+
+  NOTE : la traduction des pages de section, longtemps prevue en phase 2, est
+  FAITE. Les 17 pages de section et l'accueil sont en ligne en anglais et en
+  espagnol depuis les commits 59a648c et b2b72ad. Il ne reste rien a traduire.
+
+
+=== A SURVEILLER APRES CHAQUE DEPLOIEMENT ===
+
+  - curl -I https://route-vers-le-million.blog/ ne doit PAS renvoyer de
+    X-Robots-Tag, alors que l'URL .pages.dev doit en avoir un.
+  - Depuis /en/, cliquer FR doit mener a / (et inversement). Le selecteur de
+    langue navigue vers de vraies URL, il ne bascule plus le texte sur place.
+  - Resoumettre le sitemap apres tout ajout de pages.
