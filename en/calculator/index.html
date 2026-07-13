@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
- <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
  <!-- Google Analytics -->
  <script src="/consent.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
@@ -13,7 +13,7 @@
  </script>
  <meta charset="UTF-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>Calculatrice d'intérêts composés — Route vers le Million</title>
+ <title>Compound Interest Calculator — Route vers le Million</title>
  <!--
    METADONNEES SEO PAR LANGUE
    FR : title "Calculatrice d'intérêts composés"
@@ -29,21 +29,23 @@
         description "Descubre en qué puede convertirse una aportación regular con el tiempo. Capital inicial, aportación mensual, rendimiento y horizonte: el cálculo se hace ante tus ojos."
         keywords calculadora de interés compuesto, simulador de ahorro, rendimiento CÉLI, proyección de inversión, ahorro mensual
  -->
- <meta name="description" content="Calculez la puissance des intérêts composés. Visualisez la croissance de votre épargne avec cette calculatrice interactive gratuite — Québec, Canada."/>
- <meta name="keywords" content="calculatrice intérêts composés, calculatrice épargne Québec, CÉLI calculateur, investissement Canada"/>
+ <meta name="description" content="See what a regular contribution can become over time. Starting capital, monthly contribution, return and horizon: the math happens in front of you."/>
+ <meta name="keywords" content="compound interest calculator, savings simulator, TFSA return, investment projection, monthly savings"/>
  <meta name="robots" content="index, follow"/>
  <meta name="author" content="Route vers le Million"/>
- <link rel="canonical" href="https://route-vers-le-million.blog/calculatrice/"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/calculator/"/>
  <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/calculatrice/"/>
  <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/calculator/"/>
  <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/calculadora/"/>
  <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/calculatrice/"/>
  <meta property="og:type" content="website"/>
- <meta property="og:title" content="Calculatrice d'intérêts composés — Route vers le Million"/>
- <meta property="og:description" content="Visualisez la puissance des intérêts composés. Outil gratuit pour calculer la croissance de votre épargne au Québec."/>
- <meta property="og:url" content="https://route-vers-le-million.blog/calculatrice/"/>
+ <meta property="og:title" content="Compound Interest Calculator — Route vers le Million"/>
+ <meta property="og:description" content="See what a regular contribution can become over time. Starting capital, monthly contribution, return and horizon: the math happens in front of you."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/en/calculator/"/>
  <meta property="og:site_name" content="Route vers le Million"/>
- <meta property="og:locale" content="fr_CA"/>
+ <meta property="og:locale" content="en_CA"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
  <style>
@@ -219,13 +221,13 @@
 <body>
 
 <nav>
- <a href="/" class="nav-logo">Route vers le Million</a>
+ <a href="/en/" class="nav-logo">Route vers le Million</a>
  <ul class="nav-links">
- <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
- <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
- <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
- <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
- <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/en/etfs/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
  </ul>
  <div style="display:flex;align-items:center;gap:10px;">
  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -242,29 +244,29 @@
  </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
- <a href="/" data-i18n="nav.accueil">Accueil</a>
- <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
- <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
- <a href="/etf/" data-i18n="nav.etf">ETFs</a>
- <a href="/outils/" data-i18n="nav.outils">Outils</a>
- <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
- <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
- <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <a href="/en/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/en/etfs/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/en/emergency-fund/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">My journey</a>
  <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
  <a class="lang-btn" data-lang="fr" href="/calculatrice/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
  <a class="lang-btn" data-lang="en" href="/en/calculator/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
  <a class="lang-btn" data-lang="es" href="/es/calculadora/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
  </div>
- <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
 </div>
 
 <div class="page-hero">
  <div class="page-hero-img"></div>
  <div class="page-hero-overlay"></div>
  <div class="page-hero-content">
- <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <span data-i18n="nav.outils">Outils</span></p>
- <p class="hero-tag" data-i18n="calc.hero.tag">Outil gratuit · Intérêts composés · Québec</p>
- <h1 data-i18n="calc.hero.title">Calculatrice<br><em>d'intérêts composés</em></h1>
+ <p class="breadcrumb"><a href="/en/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <span data-i18n="nav.outils">Tools</span></p>
+ <p class="hero-tag" data-i18n="calc.hero.tag">Free tool · Compound interest · Quebec</p>
+ <h1 data-i18n="calc.hero.title">Compound interest<br><em>calculator</em></h1>
  </div>
 </div>
 
@@ -272,10 +274,10 @@
 
  <!-- FORM -->
  <div class="card">
- <div class="card-title" data-i18n="calc.form.title">Vos paramètres</div>
+ <div class="card-title" data-i18n="calc.form.title">Your parameters</div>
 
  <div class="field">
- <label data-i18n="calc.label.initial">Montant déjà épargné</label>
+ <label data-i18n="calc.label.initial">Amount already saved</label>
  <div class="input-wrap">
  <span class="input-prefix">$</span>
  <input type="number" id="montantInitial" value="1000" min="0" oninput="calculate()"/>
@@ -283,7 +285,7 @@
  </div>
 
  <div class="field">
- <label data-i18n="calc.label.regular">Montant ajouté régulièrement</label>
+ <label data-i18n="calc.label.regular">Regular contribution amount</label>
  <div class="input-wrap">
  <span class="input-prefix">$</span>
  <input type="number" id="montantRegulier" value="50" min="0" oninput="calculate()"/>
@@ -291,48 +293,48 @@
  </div>
 
  <div class="field">
- <label data-i18n="calc.label.freq">Fréquence des dépôts</label>
+ <label data-i18n="calc.label.freq">Contribution frequency</label>
  <select id="frequence" onchange="calculate()">
- <option value="52" data-i18n="calc.freq.weekly">Chaque semaine</option>
- <option value="104" data-i18n="calc.freq.twice">Deux fois par semaine</option>
- <option value="26" selected data-i18n="calc.freq.biweekly">Aux deux semaines</option>
- <option value="12" data-i18n="calc.freq.monthly">Chaque mois</option>
+ <option value="52" data-i18n="calc.freq.weekly">Every week</option>
+ <option value="104" data-i18n="calc.freq.twice">Twice per week</option>
+ <option value="26" selected data-i18n="calc.freq.biweekly">Every two weeks</option>
+ <option value="12" data-i18n="calc.freq.monthly">Every month</option>
  </select>
  </div>
 
  <div class="field">
- <label data-i18n="calc.label.duration">Durée de l'investissement (années)</label>
+ <label data-i18n="calc.label.duration">Investment duration (years)</label>
  <div class="input-wrap">
- <span class="input-prefix" style="font-size:12px;left:12px;" data-i18n="calc.unit.years">ans</span>
+ <span class="input-prefix" style="font-size:12px;left:12px;" data-i18n="calc.unit.years">yr</span>
  <input type="number" id="duree" value="20" min="1" max="50" oninput="calculate()" style="padding-left:48px;"/>
  </div>
  </div>
 
  <div class="field">
- <label data-i18n="calc.label.return">Type de rendement estimé</label>
+ <label data-i18n="calc.label.return">Estimated return type</label>
  <div class="rendement-group">
  <button class="rendement-btn" onclick="setRendement(4, this)">
  <span class="rate">4%</span>
- <span class="label" data-i18n="calc.return.conservative">Conservateur</span>
+ <span class="label" data-i18n="calc.return.conservative">Conservative</span>
  </button>
  <button class="rendement-btn active" onclick="setRendement(7, this)">
  <span class="rate">7%</span>
- <span class="label" data-i18n="calc.return.moderate">Modéré</span>
+ <span class="label" data-i18n="calc.return.moderate">Moderate</span>
  </button>
  <button class="rendement-btn" onclick="setRendement(10, this)">
  <span class="rate">10%</span>
- <span class="label" data-i18n="calc.return.aggressive">Dynamique</span>
+ <span class="label" data-i18n="calc.return.aggressive">Aggressive</span>
  </button>
  </div>
  </div>
 
  <div class="btn-group">
- <button class="btn-calc" onclick="calculate()" data-i18n="calc.btn.calculate">Calculer →</button>
- <button class="btn-reset" onclick="resetForm()" data-i18n="calc.btn.reset">Réinit.</button>
+ <button class="btn-calc" onclick="calculate()" data-i18n="calc.btn.calculate">Calculate →</button>
+ <button class="btn-reset" onclick="resetForm()" data-i18n="calc.btn.reset">Reset</button>
  </div>
 
  <div class="info-box" style="margin-top:24px;">
- <p data-i18n="calc.info1">Cette page a été créée pour vous aider à visualiser le potentiel de vos économies à long terme. Même de <strong>petits montants investis régulièrement</strong> peuvent croître considérablement grâce à la puissance des intérêts composés.</p>
+ <p data-i18n="calc.info1">This page was created to help you visualize the potential of your savings over the long term. Even <strong>small amounts invested regularly</strong> can grow considerably thanks to the power of compound interest.</p>
  </div>
  </div>
 
@@ -340,58 +342,56 @@
  <div>
  <div class="results-grid">
  <div class="result-card investi" id="cardInvesti">
- <span class="result-label" data-i18n="calc.res.invested">Total investi</span>
+ <span class="result-label" data-i18n="calc.res.invested">Total invested</span>
  <span class="result-amount" id="totalInvesti">—</span>
- <span class="result-sub" data-i18n="calc.res.invested.sub">De votre poche</span>
+ <span class="result-sub" data-i18n="calc.res.invested.sub">From your pocket</span>
  </div>
  <div class="result-card interets" id="cardInterets">
- <span class="result-label" data-i18n="calc.res.interest">Intérêts gagnés</span>
+ <span class="result-label" data-i18n="calc.res.interest">Interest earned</span>
  <span class="result-amount" id="totalInterets">—</span>
- <span class="result-sub" data-i18n="calc.res.interest.sub">Argent gratuit </span>
+ <span class="result-sub" data-i18n="calc.res.interest.sub">Free money </span>
  </div>
  <div class="result-card total" id="cardTotal">
- <span class="result-label" data-i18n="calc.res.total">Montant final</span>
+ <span class="result-label" data-i18n="calc.res.total">Final amount</span>
  <span class="result-amount" id="montantFinal">—</span>
- <span class="result-sub" data-i18n="calc.res.total.sub">Estimation</span>
+ <span class="result-sub" data-i18n="calc.res.total.sub">Estimate</span>
  </div>
  </div>
 
  <div class="multiplier-bar" id="multiplierBar">
- <span class="multiplier-text" data-i18n="calc.multiplier">Votre argent a été multiplié par</span>
+ <span class="multiplier-text" data-i18n="calc.multiplier">Your money has been multiplied by</span>
  <span class="multiplier-num" id="multiplierNum">—</span>
  </div>
 
  <div class="chart-wrap" id="chartWrap">
- <div class="chart-title" data-i18n="calc.chart.title">Évolution de votre épargne année par année</div>
+ <div class="chart-title" data-i18n="calc.chart.title">Your savings growth year by year</div>
  <div id="chartPlaceholder" class="placeholder">
  <div class="icon"></div>
- <p data-i18n="calc.chart.placeholder">Entrez vos paramètres et cliquez sur Calculer</p>
+ <p data-i18n="calc.chart.placeholder">Enter your parameters and click Calculate</p>
  </div>
  <canvas id="myChart" style="display:none;"></canvas>
  </div>
 
  <div class="info-box" style="margin-top:20px;">
- <p data-i18n="calc.info2"><strong>Commencer tôt, même avec de petits montants, peut faire une énorme différence.</strong> La constance est souvent plus puissante que le montant investi. Un dépôt de 50$ aux deux semaines pendant 20 ans peut devenir plus de 70 000$ — avec seulement 26 000$ de votre poche.</p>
+ <p data-i18n="calc.info2"><strong>Starting early, even with small amounts, can make an enormous difference.</strong> Consistency is often more powerful than the amount invested. A $50 contribution every two weeks for 20 years can become over $70,000 — with only $26,000 from your pocket.</p>
  </div>
  </div>
 
 </div>
 
 <div class="cta-bottom">
- <h2 data-i18n="calc.cta.title">Prêt à commencer ?</h2>
- <p data-i18n="calc.cta.body">Ouvre ton CÉLI sur Wealthsimple — gratuit, sans commission, sans frais cachés.</p>
- <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="calc.cta.btn">Ouvrir un compte gratuit →</a>
+ <h2 data-i18n="calc.cta.title">Ready to start?</h2>
+ <p data-i18n="calc.cta.body">Open your TFSA on Wealthsimple — free, no commission, no hidden fees.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="calc.cta.btn">Open a free account →</a>
 </div>
 
-<div class="disclaimer" data-i18n="calc.disclaimer">
- Les calculs présentés sur cette page sont fournis à titre indicatif seulement et ne constituent pas des conseils financiers ou des garanties de rendement. Les rendements passés ne garantissent pas les rendements futurs. Consultez un professionnel pour votre situation spécifique.
-</div>
+<div class="disclaimer" data-i18n="calc.disclaimer">The calculations presented on this page are for illustrative purposes only and do not constitute financial advice or guarantees of return. Past returns do not guarantee future returns. Consult a professional for your specific situation.</div>
 
 <div data-newsletter></div>
 <footer>
- <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
- <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
-  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
 </footer>
 
 <script>

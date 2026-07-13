@@ -61,13 +61,38 @@ foreach ($ln in [System.IO.File]::ReadAllLines((Join-Path $Root 'translations.js
 }
 Write-Host ("Dictionnaire : fr={0} en={1} es={2} cles" -f $DICT.fr.Count, $DICT.en.Count, $DICT.es.Count)
 
-# ---------------------------------------------------------------- 2. metadonnees SEO
-$SEO = @{}
+# ---------------------------------------------------------------- 2. sources et metadonnees SEO
+#
+# Trois familles de pages, avec des schemas d'URL differents :
+#   kind=article  articles/<nom>.html    -> /articles/<nom>.html      | /<L>/articles/<slug>.html
+#   kind=artindex articles/index.html    -> /articles/               | /<L>/articles/
+#   kind=home     index.html             -> /                        | /<L>/
+#   kind=section  <dir>/index.html       -> /<dir>/                  | /<L>/<slug>/
+#
+# Une page sans bloc "METADONNEES SEO PAR LANGUE" complet est ignoree : sans
+# titre ni description par langue, la page generee serait inexploitable.
+$SKIP = @('en', 'es', 'articles', 'merci-infolettre')
+
+$SOURCES = @()
 foreach ($f in (Get-ChildItem (Join-Path $Root 'articles') -Filter *.html | Sort-Object Name)) {
-  $h = Read-Text $f.FullName
+  $kind = if ($f.BaseName -eq 'index') { 'artindex' } else { 'article' }
+  $SOURCES += [pscustomobject]@{ id = $f.BaseName; kind = $kind; path = $f.FullName }
+}
+$SOURCES += [pscustomobject]@{ id = 'home'; kind = 'home'; path = (Join-Path $Root 'index.html') }
+foreach ($d in (Get-ChildItem $Root -Directory | Sort-Object Name)) {
+  if ($SKIP -contains $d.Name) { continue }
+  $p = Join-Path $d.FullName 'index.html'
+  if (Test-Path $p) { $SOURCES += [pscustomobject]@{ id = $d.Name; kind = 'section'; path = $p } }
+}
+
+$SEO  = @{}
+$KIND = @{}
+$SRC  = @{}
+foreach ($s in $SOURCES) {
+  $h = Read-Text $s.path
   $e = @{}
   foreach ($L in 'FR', 'EN', 'ES') {
-    # Tolere le separateur "|" entre les champs et l'absence de "keywords".
+    # Tolere le separateur "|" entre les champs, l'absence de "keywords" et un slug vide.
     $rx = "(?s)$L\s*:\s*title\s+`"(.*?)`"\s*\|?\s*slug\s+`"(.*?)`"\s*\|?\s*description\s+`"(.*?)`"(?:\s*\|?\s*keywords\s+([^\r\n]*))?"
     if ($h -match $rx) {
       $kw = ''
@@ -78,26 +103,32 @@ foreach ($f in (Get-ChildItem (Join-Path $Root 'articles') -Filter *.html | Sort
       }
     }
   }
-  if ($e.Count -eq 3) { $SEO[$f.BaseName] = $e }
-  else { Write-Host ("  IGNORE (bloc SEO par langue absent ou incomplet) : {0}" -f $f.BaseName) -ForegroundColor Yellow }
+  if ($e.Count -eq 3) { $SEO[$s.id] = $e; $KIND[$s.id] = $s.kind; $SRC[$s.id] = $s.path }
+  else { Write-Host ("  IGNORE (bloc SEO par langue absent ou incomplet) : {0}" -f $s.id) -ForegroundColor Yellow }
 }
-Write-Host ("Articles avec metadonnees completes : {0}" -f $SEO.Count)
+Write-Host ("Pages avec metadonnees completes : {0}" -f $SEO.Count)
 
 # ---------------------------------------------------------------- 3. URL
-function Get-Url([string]$base, [string]$lang) {
-  if (-not $SEO.ContainsKey($base)) { throw ("Get-Url : base inconnue [{0}] (lang={1})" -f $base, $lang) }
-  if ($base -eq 'index') {
-    if ($lang -eq 'fr') { return "$Site/articles/" }
-    return "$Site/$lang/articles/"
+function Get-Path([string]$base, [string]$lang) {
+  if (-not $SEO.ContainsKey($base)) { throw ("base inconnue [{0}] (lang={1})" -f $base, $lang) }
+  $k = $KIND[$base]
+  $slug = $SEO[$base][$lang].slug
+  switch ($k) {
+    'home'     { if ($lang -eq 'fr') { return '/' }          else { return "/$lang/" } }
+    'artindex' { if ($lang -eq 'fr') { return '/articles/' } else { return "/$lang/articles/" } }
+    'article'  { if ($lang -eq 'fr') { return "/articles/$base.html" } else { return "/$lang/articles/$slug.html" } }
+    'section'  { if ($lang -eq 'fr') { return "/$base/" }    else { return "/$lang/$slug/" } }
   }
-  if ($lang -eq 'fr') { return "$Site/articles/$base.html" }
-  return "$Site/$lang/articles/$($SEO[$base][$lang].slug).html"
+  throw ("kind inconnu [{0}] pour {1}" -f $k, $base)
 }
 
+function Get-Url([string]$base, [string]$lang) { return $Site + (Get-Path $base $lang) }
+
 function Get-OutPath([string]$base, [string]$lang) {
-  if ($lang -eq 'fr') { return (Join-Path $Root "articles\$base.html") }
-  if ($base -eq 'index') { return (Join-Path $Root "$lang\articles\index.html") }
-  return (Join-Path $Root "$lang\articles\$($SEO[$base][$lang].slug).html")
+  if ($lang -eq 'fr') { return $SRC[$base] }
+  $p = (Get-Path $base $lang).Trim('/')          # ex. "en/tfsa-rrsp" ou "en/articles/x.html"
+  if ($p -like '*.html') { return (Join-Path $Root ($p -replace '/', '\')) }
+  return (Join-Path $Root (($p -replace '/', '\') + '\index.html'))
 }
 
 # ---------------------------------------------------------------- 4. transformations
@@ -120,20 +151,34 @@ function Apply-I18n([string]$html, [string]$lang) {
 }
 
 # Reecrit les liens internes vers les URL de la langue cible.
+# Toute page absente de $SEO (pas encore traduite) garde son lien francais :
+# mieux vaut un lien vers une page qui existe qu'un lien mort.
 function Fix-Links([string]$s, [string]$lang) {
   if ($lang -eq 'fr') { return $s }
+
+  # Du plus specifique au plus general : les articles et sections avant "/".
+  $map = @{}
   foreach ($b in $SEO.Keys) {
-    if ($b -eq 'index') { continue }
-    $to = "/$lang/articles/$($SEO[$b][$lang].slug).html"
-    $s = $s.Replace('href="/articles/' + $b + '.html"', 'href="' + $to + '"')
+    $from = Get-Path $b 'fr'
+    $to   = Get-Path $b $lang
+    if ($from -ne '/') { $map[$from] = $to }   # l'accueil est traite en dernier
   }
-  $s = $s.Replace('href="/articles/"', 'href="/' + $lang + '/articles/"')
+  foreach ($from in ($map.Keys | Sort-Object { $_.Length } -Descending)) {
+    $s = $s.Replace('href="' + $from + '"', 'href="' + $map[$from] + '"')
+  }
+
+  # Pages hors generateur, deja traduites a la main.
   if ($lang -eq 'en') {
     $s = $s.Replace('href="/a-propos/"', 'href="/en/about/"')
     $s = $s.Replace('href="/divulgation.html"', 'href="/en/disclosure.html"')
   } else {
     $s = $s.Replace('href="/a-propos/"', 'href="/es/sobre-mi/"')
     $s = $s.Replace('href="/divulgation.html"', 'href="/es/divulgacion.html"')
+  }
+
+  # L'accueil en dernier : href="/" est un suffixe de tous les autres liens.
+  if ($SEO.ContainsKey('home')) {
+    $s = $s.Replace('href="/"', 'href="/' + $lang + '/"')
   }
   return $s
 }
@@ -174,7 +219,7 @@ function Set-Alternates([string]$s, [string]$base, [string]$lang) {
 function Build-Page([string]$base, [string]$lang) {
   # NB : ne jamais nommer cette variable $seo. Les noms de variables PowerShell
   # sont insensibles a la casse : $seo masquerait le dictionnaire global $SEO.
-  $src  = Read-Text (Join-Path $Root "articles\$base.html")
+  $src  = Read-Text $SRC[$base]
   $meta = $SEO[$base][$lang]
   $url  = Get-Url $base $lang
   $ttl  = $meta.title + $SUFF
@@ -210,7 +255,8 @@ function Build-Page([string]$base, [string]$lang) {
   # JSON-LD
   $o = Rx $o '"headline":\s*"[^"]*"'    ('"headline": "' + $meta.title + '"')
   $o = Rx $o '"description":\s*"[^"]*"' ('"description": "' + $meta.desc + '"')
-  $o = Rx $o '"url":\s*"https://route-vers-le-million\.blog/articles/[^"]*"' ('"url": "' + $url + '"')
+  # Exige un chemin apres le domaine : l'URL de l'editeur (domaine nu) n'est pas touchee.
+  $o = Rx $o '"url":\s*"https://route-vers-le-million\.blog/[^"]*"' ('"url": "' + $url + '"')
   $o = Rx $o '"inLanguage":\s*"[^"]*"'  ('"inLanguage": "' + $JSONLANG[$lang] + '"')
 
   $o = Set-Alternates $o $base $lang

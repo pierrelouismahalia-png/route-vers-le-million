@@ -7,17 +7,17 @@
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/en/articles/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/es/articles/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -97,7 +97,7 @@
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/articles/negocier-salaire-secrets-rh.html</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -192,7 +192,7 @@
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/en/articles/salary-negotiation-what-hr-knows.html</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -292,7 +292,7 @@
   </url>
   <url>
     <loc>https://route-vers-le-million.blog/es/articles/negociar-el-salario-secretos-rh.html</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -371,8 +371,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://route-vers-le-million.blog/en/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://route-vers-le-million.blog/en/about/</loc>
     <lastmod>2026-07-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/en/calculator/</loc>
+    <lastmod>2026-07-13</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -381,8 +391,48 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://route-vers-le-million.blog/en/emergency-fund/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/en/etfs/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/en/tfsa-rrsp/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/es/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/es/calculadora/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/es/celi-reer/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://route-vers-le-million.blog/es/divulgacion.html</loc>
     <lastmod>2026-07-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/es/etf/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://route-vers-le-million.blog/es/fondo-de-emergencia/</loc>
+    <lastmod>2026-07-13</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
