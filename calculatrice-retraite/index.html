@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-CA">
 <head>
+ <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
  <!-- Google Analytics -->
  <script src="/consent.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
@@ -13,6 +14,20 @@
  <meta charset="UTF-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  <title>Calculatrice de retraite gratuite - Combien épargner? | Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Calculatrice de retraite : combien épargner ?"
+        slug "calculatrice-retraite"
+        description "Combien faut-il accumuler pour vivre la retraite voulue ? Entrez votre âge, votre épargne et votre objectif : la projection se fait sous vos yeux."
+        keywords calculatrice de retraite, combien épargner pour la retraite, projection retraite, REER, rente
+   EN : title "Retirement Calculator: How Much Should You Save?"
+        slug "retirement-calculator"
+        description "How much do you need to accumulate for the retirement you want? Enter your age, your savings and your goal: the projection happens in front of you."
+        keywords retirement calculator, how much to save for retirement, retirement projection, RRSP, annuity
+   ES : title "Calculadora de jubilación: ¿cuánto ahorrar?"
+        slug "calculadora-jubilacion"
+        description "¿Cuánto hay que acumular para vivir la jubilación deseada? Introduce tu edad, tu ahorro y tu objetivo: la proyección se hace ante tus ojos."
+        keywords calculadora de jubilación, cuánto ahorrar para la jubilación, proyección de jubilación, REER, renta -->
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
  <style>
@@ -157,6 +172,10 @@
  <meta name="robots" content="index, follow"/>
  <meta name="author" content="Route vers le Million"/>
  <link rel="canonical" href="https://route-vers-le-million.blog/calculatrice-retraite/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/calculatrice-retraite/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/retirement-calculator/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/calculadora-jubilacion/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/calculatrice-retraite/"/>
  <meta property="og:type" content="website"/>
  <meta property="og:title" content="Calculatrice de retraite gratuite - Combien épargner? | Route vers le Million"/>
  <meta property="og:description" content="Calculez combien vous aurez à la retraite et quel revenu attendre. Outil gratuit pour Québécois. CÉLI, REER, indépendance financière."/>
@@ -197,11 +216,11 @@
  <span></span><span></span><span></span>
  </button>
  <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
- <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+ <a class="lang-btn" data-lang="fr" href="/calculatrice-retraite/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+ <a class="lang-btn" data-lang="en" href="/en/retirement-calculator/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+ <a class="lang-btn" data-lang="es" href="/es/calculadora-jubilacion/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
  </div>
  <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
  </div>
@@ -216,9 +235,9 @@
  <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
  <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
  <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
- <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
- <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
- <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+ <a class="lang-btn" data-lang="fr" href="/calculatrice-retraite/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/retirement-calculator/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/calculadora-jubilacion/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
  </div>
  <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
 </div>

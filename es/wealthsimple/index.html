@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <script>try{localStorage.setItem('lang','es');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Por qué dejé mi banco por Wealthsimple — Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Pourquoi j'ai quitté ma banque pour Wealthsimple"
+        slug "wealthsimple"
+        description "Comparatif des courtiers canadiens et impact réel des frais sur les petits montants. Pourquoi j'ai transféré mon CÉLI, et ce que ça m'a fait économiser."
+        keywords Wealthsimple, courtier en ligne Canada, frais de courtage, transfert CÉLI, Questrade, investir sans commission
+   EN : title "Why I Left My Bank for Wealthsimple"
+        slug "wealthsimple"
+        description "A comparison of Canadian brokers and the real impact of fees on small amounts. Why I moved my TFSA, and what it saved me."
+        keywords Wealthsimple, online broker Canada, brokerage fees, TFSA transfer, Questrade, commission-free investing
+   ES : title "Por qué dejé mi banco por Wealthsimple"
+        slug "wealthsimple"
+        description "Comparativa de los corredores canadienses y el impacto real de las comisiones en los importes pequeños. Por qué transferí mi CÉLI, y lo que me ahorró."
+        keywords Wealthsimple, corredor en línea Canadá, comisiones de corretaje, transferencia CÉLI, Questrade, invertir sin comisiones -->
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ .page-hero { position: relative; height: 52vh; min-height: 380px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose strong { color: var(--text); font-weight: 500; }
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* COMPARISON TABLE */
+ .compare-table { width: 100%; border-collapse: collapse; margin: 2em 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+ .compare-table th { background: var(--text); color: #fff; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; padding: 16px 20px; text-align: left; }
+ .compare-table td { padding: 14px 20px; font-size: 14px; border-bottom: 1px solid var(--border); background: var(--white); color: var(--text); }
+ .compare-table tr:last-child td { border: none; }
+ .compare-table tr.highlight td { background: rgba(45,74,26,0.08); }
+ .compare-table .good { color: #4A8A3A; font-weight: 500; }
+ .compare-table .bad { color: #C44A2A; }
+ .compare-table .neutral { color: var(--muted); }
+ .compare-table .winner { background: rgba(45,74,26,0.12) !important; }
+ .compare-table .winner td:first-child { border-left: 3px solid var(--terra); }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* MATH EXAMPLE */
+ .math-box { background: var(--text); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .math-box h4 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--terra); margin-bottom: 16px; }
+ .math-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+ .math-row:last-child { border: none; padding-top: 12px; }
+ .math-row span:first-child { font-size: 14px; color: rgba(255,255,255,0.6); }
+ .math-row span:last-child { font-size: 14px; color: #fff; font-weight: 500; }
+ .math-row.total span { color: var(--terra); font-size: 16px; font-weight: 600; }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 160px; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+ .sidebar-btn:hover { background: var(--terra2); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+ <meta name="description" content="Comparativa de los corredores canadienses y el impacto real de las comisiones en los importes pequeños. Por qué transferí mi CÉLI, y lo que me ahorró."/>
+ <meta name="keywords" content="Wealthsimple, corredor en línea Canadá, comisiones de corretaje, transferencia CÉLI, Questrade, invertir sin comisiones -->"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/es/wealthsimple/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/wealthsimple/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/wealthsimple/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/wealthsimple/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/wealthsimple/"/>
+ <meta property="og:type" content="Article"/>
+ <meta property="og:title" content="Por qué dejé mi banco por Wealthsimple — Route vers le Million"/>
+ <meta property="og:description" content="Comparativa de los corredores canadienses y el impacto real de las comisiones en los importes pequeños. Por qué transferí mi CÉLI, y lo que me ahorró."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/es/wealthsimple/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="es_ES"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Por qué dejé mi banco por Wealthsimple"/>
+ <meta name="twitter:description" content="Comparativa de los corredores canadienses y el impacto real de las comisiones en los importes pequeños. Por qué transferí mi CÉLI, y lo que me ahorró."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Por qué dejé mi banco por Wealthsimple",
+ "description": "Comparativa de los corredores canadienses y el impacto real de las comisiones en los importes pequeños. Por qué transferí mi CÉLI, y lo que me ahorró.",
+ "url": "https://route-vers-le-million.blog/es/wealthsimple/",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "es-ES"
+ }
+ </script>
+</head>
+<body>
+
+<nav>
+ <a href="/es/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a></li>
+ <li><a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a></li>
+ <li><a href="/es/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/es/herramientas/" data-i18n="nav.outils">Herramientas</a></li>
+ <li><a href="/es/articles/" data-i18n="nav.articles">Artículos</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/wealthsimple/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/wealthsimple/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/wealthsimple/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/es/" data-i18n="nav.accueil">Inicio</a>
+ <a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a>
+ <a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a>
+ <a href="/es/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/es/herramientas/" data-i18n="nav.outils">Herramientas</a>
+ <a href="/es/articles/" data-i18n="nav.allArticles">Todos los artículos</a>
+ <a href="/es/fondo-de-emergencia/" data-i18n="nav.fondsUrgence">Fondo de emergencia</a>
+ <a href="/es/mi-historia/" data-i18n="nav.monParcours">Mi trayectoria</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/wealthsimple/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/wealthsimple/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/wealthsimple/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Abrir Wealthsimple →</a>
+</div>
+
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/es/" data-i18n="nav.accueil">Inicio</a> &nbsp;/&nbsp; <span data-i18n="ws.hero.breadcrumb">Herramientas &amp; Plataformas</span></p>
+ <p class="hero-tag" data-i18n="ws.hero.tag">Plataformas · Corretaje · Comisiones</p>
+ <h1 data-i18n="ws.hero.title">Por qué dejé mi banco<br>por <em>Wealthsimple</em></h1>
+ </div>
+</div>
+
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="ws.meta.location"> Quebec, Canadá</span>
+ <span>·</span>
+ <span data-i18n="ws.meta.readTime"> 5 min de lectura</span>
+ <span>·</span>
+ <span data-i18n="ws.meta.tags">Plataformas · Comisiones · Corretaje</span>
+ </div>
+
+ <div class="prose">
+
+ <p class="lead" data-i18n="ws.lead">"Al principio, pensaba que los bancos tradicionales eran automáticamente la mejor opción. Hasta que me di cuenta de que las comisiones se comían una parte importante de mis pequeñas inversiones."</p>
+
+ <p data-i18n="ws.p1">Al principio, invertía con RBC y otras instituciones financieras tradicionales. Honestamente, no conocía bien las diferencias entre las plataformas de corretaje en ese momento. En mi mente, los "bancos de verdad" eran automáticamente la mejor opción.</p>
+
+ <p data-i18n="ws.p2">Con el tiempo, me di cuenta de que a menudo había <strong>comisiones de transacción</strong>. Y cuando se empieza a invertir con pequeñas cantidades, esas comisiones pueden volverse muy desalentadoras.</p>
+
+ <h2 data-i18n="ws.h2.fees">El problema de las comisiones en pequeñas cantidades</h2>
+
+ <p data-i18n="ws.p3">Alguien que invierte 1 000 $ de golpe sentirá menos el impacto de una comisión de 9,99 $. Pero cuando se empieza con 50 $ o 60 $ cada vez, esa misma comisión ocupa un lugar enorme.</p>
+
+ <div class="math-box">
+ <h4 data-i18n="ws.math.title">El impacto real de las comisiones en 50 $</h4>
+ <div class="math-row">
+ <span data-i18n="ws.math.row1">Cantidad invertida</span>
+ <span>50,00 $</span>
+ </div>
+ <div class="math-row">
+ <span data-i18n="ws.math.row2">Comisión banco tradicional</span>
+ <span style="color:#F5A090">- 9,99 $</span>
+ </div>
+ <div class="math-row">
+ <span data-i18n="ws.math.row3">Cantidad realmente invertida</span>
+ <span>40,01 $</span>
+ </div>
+ <div class="math-row total">
+ <span data-i18n="ws.math.total.label">Pérdida inmediata en comisiones</span>
+ <span data-i18n="ws.math.total.val">20% de tu dinero </span>
+ </div>
+ </div>
+
+ <div class="pullquote">
+ <p data-i18n="ws.pullquote">"Lo más importante es empezar a invertir, incluso con pequeñas cantidades. Incluso 50 $ pueden duplicarse y más en varios años."</p>
+ </div>
+
+ <p data-i18n="ws.p4">Esa es principalmente la razón por la que elegí Wealthsimple. <strong>El hecho de que generalmente no haya comisión en las transacciones</strong> me ayudó mucho a mantener la constancia en mis inversiones.</p>
+
+ <h2 data-i18n="ws.h2.compare">Comparativa de plataformas en Canadá</h2>
+
+ <table class="compare-table">
+ <thead>
+ <tr>
+ <th data-i18n="ws.th.courtier">Corredor</th>
+ <th data-i18n="ws.th.actions">Acciones</th>
+ <th>ETFs</th>
+ <th data-i18n="ws.th.notes">Notas</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Placements directs TD</td>
+ <td class="bad">9,99 $/transaction</td>
+ <td class="neutral" data-i18n="ws.td.td.etf">Algunos gratuitos</td>
+ <td class="neutral" data-i18n="ws.td.td.notes">Comisiones si saldo bajo</td>
+ </tr>
+ <tr>
+ <td>RBC Direct Investing</td>
+ <td class="bad">9,95 $/transaction</td>
+ <td class="bad" data-i18n="ws.td.rbc.etf">Comisiones similares</td>
+ <td class="neutral" data-i18n="ws.td.rbc.notes">Condiciones de saldo</td>
+ </tr>
+ <tr>
+ <td>Disnat (Desjardins)</td>
+ <td class="good" data-i18n="ws.td.online">0 $ en línea</td>
+ <td class="good" data-i18n="ws.td.online">0 $ en línea</td>
+ <td class="neutral" data-i18n="ws.td.disnat.notes">Comisiones por inactividad</td>
+ </tr>
+ <tr>
+ <td>Questrade</td>
+ <td class="neutral" data-i18n="ws.td.qtr.actions">Algunas gratuitas</td>
+ <td class="good" data-i18n="ws.td.qtr.etf">ETF sin comisión</td>
+ <td class="neutral" data-i18n="ws.td.qtr.notes">Comisiones administrativas</td>
+ </tr>
+ <tr class="winner">
+ <td><strong>Wealthsimple </strong></td>
+ <td class="good"><strong>0 $</strong></td>
+ <td class="good"><strong>0 $</strong></td>
+ <td class="good" data-i18n="ws.td.ws.notes">Simple y accesible</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <h2 data-i18n="ws.h2.why">Por qué Wealthsimple para pequeños inversores</h2>
+
+ <p data-i18n="ws.p5">Cuando alguien ahorra dinero regularmente — por ejemplo 50 $ cada dos semanas — las comisiones marcan una <strong>enorme diferencia a largo plazo</strong>.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="ws.highlight">Hace aproximadamente dos años, decidí abandonar progresivamente las plataformas bancarias tradicionales para centralizar mis inversiones en Wealthsimple. Para alguien que empieza, que quiere invertir poco a poco y mantener las cosas simples, <strong>es personalmente una plataforma que recomiendo</strong>.</p>
+ </div>
+
+ <p data-i18n="ws.p6">En resumen, Wealthsimple ha hecho que invertir sea mucho más accesible, sobre todo porque podía invertir regularmente sin sentir que las comisiones se "comían" mis pequeñas cantidades.</p>
+
+ <p style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;" data-i18n="ws.disclaimer"> No soy asesora financiera. Este artículo comparte mi experiencia personal. El enlace de Wealthsimple es un enlace de referencia — recibes un bono al registrarte.</p>
+
+ </div>
+ </article>
+
+ <aside class="sidebar">
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="ws.sidebar.title">Abre tu cuenta</h3>
+ <p data-i18n="ws.sidebar.body">Empieza con Wealthsimple — gratis, sin comisión, sin comisiones ocultas.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Abrir Wealthsimple →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="ws.sidebar.statsTitle">En cifras</h4>
+ <div class="info-row"><span data-i18n="ws.sidebar.commission">Comisión</span><span>0 $</span></div>
+ <div class="info-row"><span data-i18n="ws.sidebar.minimum">Mínimo</span><span>1 $</span></div>
+ <div class="info-row"><span data-i18n="ws.sidebar.celi">CELI incluido</span><span>✓</span></div>
+ <div class="info-row"><span data-i18n="ws.sidebar.reer">REER incluido</span><span>✓</span></div>
+ <div class="info-row"><span data-i18n="ws.sidebar.etfs">ETFs disponibles</span><span>✓</span></div>
+ </div>
+ </aside>
+
+</div>
+
+<div class="cta-bottom">
+ <h2 data-i18n="ws.cta.title">¿Listo para dejar de pagar comisiones?</h2>
+ <p data-i18n="ws.cta.body">Abre tu cuenta Wealthsimple gratis — y empieza a invertir con tan solo 50 $.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="ws.cta.btn">Abrir una cuenta gratuita →</a>
+</div>
+
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finanzas personales · Québec, Canadá</p>
+ <p data-i18n="footer.disclaimer">Solo con fines informativos — no constituye asesoramiento financiero oficial.</p>
+  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contiene enlaces de afiliados (Wealthsimple, Tangerine, Borrowell, Amazon). Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. — <a href="/es/divulgacion.html" style="color:inherit;text-decoration:underline;">Más información →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>My Honest Reflections on Money — Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Mes réflexions honnêtes sur l'argent"
+        slug "reflexion"
+        description "Ce que personne ne dit sur l'argent : la honte, la peur de manquer, la comparaison. Des réflexions sans filtre, tirées de mon propre parcours."
+        keywords réflexions sur l'argent, psychologie de l'argent, honte financière, rapport à l'argent, finances personnelles
+   EN : title "My Honest Reflections on Money"
+        slug "reflections"
+        description "What nobody says about money: the shame, the fear of running out, the comparison. Unfiltered reflections drawn from my own journey."
+        keywords reflections on money, psychology of money, financial shame, relationship with money, personal finance
+   ES : title "Mis reflexiones honestas sobre el dinero"
+        slug "reflexiones"
+        description "Lo que nadie dice sobre el dinero: la vergüenza, el miedo a que falte, la comparación. Reflexiones sin filtro, sacadas de mi propio recorrido."
+        keywords reflexiones sobre el dinero, psicología del dinero, vergüenza financiera, relación con el dinero, finanzas personales -->
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ .page-hero { position: relative; height: 52vh; min-height: 380px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=80') center 40%/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.85) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose strong { color: var(--text); font-weight: 500; }
+
+ .pullquote { background: var(--white); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; border: 1px solid var(--border); }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* INSIGHT CARDS */
+ .insight-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 2em 0; }
+ .insight-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; display: flex; gap: 20px; align-items: flex-start; }
+ .insight-icon { font-size: 28px; flex-shrink: 0; }
+ .insight-body h4 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--text); margin-bottom: 6px; }
+ .insight-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* HIGHLIGHT */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.8; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* DIVIDER */
+ .divider { display: flex; align-items: center; gap: 16px; margin: 2.4em 0; }
+ .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+ .divider span { font-size: 12px; color: var(--light); letter-spacing: 3px; }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 160px; background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; margin-bottom: 10px; }
+ .sidebar-btn.outline { background: transparent; color: var(--terra); border: 1px solid var(--terra); }
+
+ .sidebar-values { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-values h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .value-item { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--text); }
+ .value-item:last-child { border: none; }
+ .value-item::before { content: "→ "; color: var(--terra); }
+
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; margin: 6px; }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+ <meta name="description" content="What nobody says about money: the shame, the fear of running out, the comparison. Unfiltered reflections drawn from my own journey."/>
+ <meta name="keywords" content="reflections on money, psychology of money, financial shame, relationship with money, personal finance"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/reflections/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/reflexion/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/reflections/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/reflexiones/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/reflexion/"/>
+ <meta property="og:type" content="Article"/>
+ <meta property="og:title" content="My Honest Reflections on Money — Route vers le Million"/>
+ <meta property="og:description" content="What nobody says about money: the shame, the fear of running out, the comparison. Unfiltered reflections drawn from my own journey."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/en/reflections/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="en_CA"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="My Honest Reflections on Money"/>
+ <meta name="twitter:description" content="What nobody says about money: the shame, the fear of running out, the comparison. Unfiltered reflections drawn from my own journey."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "My Honest Reflections on Money",
+ "description": "What nobody says about money: the shame, the fear of running out, the comparison. Unfiltered reflections drawn from my own journey.",
+ "url": "https://route-vers-le-million.blog/en/reflections/",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "en-CA"
+ }
+ </script>
+</head>
+<body>
+
+<nav>
+ <a href="/en/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/en/etfs/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/en/tools/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/reflexion/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/reflections/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/reflexiones/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/en/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/en/etfs/" data-i18n="nav.etf">ETFs</a>
+ <a href="/en/tools/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/en/emergency-fund/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/en/my-story/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/reflexion/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/reflections/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/reflexiones/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/en/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <span data-i18n="reflex.hero.breadcrumb">Reflections</span></p>
+ <p class="hero-tag" data-i18n="reflex.hero.tag">Reflections · Mindset · Journey</p>
+ <h1 data-i18n="reflex.hero.title">My honest reflections<br>on <em>money and investing</em></h1>
+ </div>
+</div>
+
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="ws.meta.location"> Quebec, Canada</span>
+ <span>·</span>
+ <span data-i18n="reflex.meta.readTime"> 6 min read</span>
+ <span>·</span>
+ <span data-i18n="reflex.meta.tags">Mindset · Income · Journey</span>
+ </div>
+
+ <div class="prose">
+
+ <p class="lead" data-i18n="reflex.lead">"There's no single model for success. Everyone moves at their own pace. The important thing is to start somewhere."</p>
+
+ <p data-i18n="reflex.p1">My reflections come largely from my personal experience. Some people may recognize themselves completely in my journey, others less so — and that's perfectly normal. But I genuinely believe that everyone can take a small part of my story and adapt it to their own reality.</p>
+
+ <h2 data-i18n="reflex.h2.education">Education and skills — my first lever</h2>
+
+ <p data-i18n="reflex.p2">One thing I find particularly important is <strong>education and developing your skills</strong>. Not everyone wants to become an entrepreneur, and that's not necessarily the right path for everyone. But today, in 2026, I believe it has become essential to find ways to increase your income or develop expertise that opens more doors.</p>
+
+ <div class="insight-grid">
+ <div class="insight-card">
+ <span class="insight-icon"></span>
+ <div class="insight-body">
+ <h4 data-i18n="reflex.insight1.title">Going back to school — an investment in itself</h4>
+ <p data-i18n="reflex.insight1.desc">Myself, after several years as a consultant, I asked: what could open even more possibilities for me? That's what pushed me to consider an IT college certificate — to acquire new skills and offer more services.</p>
+ </div>
+ </div>
+ <div class="insight-card">
+ <span class="insight-icon"></span>
+ <div class="insight-body">
+ <h4 data-i18n="reflex.insight2.title">A specialized skill changes everything</h4>
+ <p data-i18n="reflex.insight2.desc">People who hold a professional license or offer specialized services often manage to earn a higher income. Insurance, finance, technology, consulting — these are the skills that give more financial flexibility.</p>
+ </div>
+ </div>
+ </div>
+
+ <h2 data-i18n="reflex.h2.small">Even $20 can make a difference</h2>
+
+ <p data-i18n="reflex.p3">We often tend to underestimate small amounts. But when you develop <strong>the habit of saving regularly</strong>, even modestly, it can change many things in the long run — obviously, when your financial situation allows it.</p>
+
+ <div class="pullquote">
+ <p data-i18n="reflex.pullquote">"I prefer to work hard now while I have the energy, so I can be more at ease later."</p>
+ </div>
+
+ <h2 data-i18n="reflex.h2.income">Multiple income streams — my reality</h2>
+
+ <p data-i18n="reflex.p4">Today, I think having a <strong>single income source</strong> can be difficult for many people, especially with today's cost of living. When you're on your own or don't have a very high salary, saving can become a real challenge.</p>
+
+ <p data-i18n="reflex.p5">What helped me a lot was <strong>offering services alongside my main job</strong>. I've worked for employers, but I've also developed my own projects and worked with my own clients. This allowed me to supplement my income while maintaining a certain quality of life.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="reflex.highlight">I'm not saying it's easy. It takes time, energy and discipline. But I've always had this mindset: <strong>work hard now to be more at ease later.</strong> And invest every extra dollar earned — even $20 — rather than spending it.</p>
+ </div>
+
+ <div class="divider"><span>· · ·</span></div>
+
+ <h2 data-i18n="reflex.h2.wealth">What I learned about wealth</h2>
+
+ <div class="insight-grid">
+ <div class="insight-card">
+ <span class="insight-icon"></span>
+ <div class="insight-body">
+ <h4 data-i18n="reflex.insight3.title">Time is the real capital</h4>
+ <p data-i18n="reflex.insight3.desc">Money invested early is worth much more than money invested late. Every year you wait costs tens of thousands of dollars in the long run.</p>
+ </div>
+ </div>
+ <div class="insight-card">
+ <span class="insight-icon"></span>
+ <div class="insight-body">
+ <h4 data-i18n="reflex.insight4.title">Start small, stay consistent</h4>
+ <p data-i18n="reflex.insight4.desc">$50 every two weeks for 20 years can become more than $100,000. It's not the amount that matters — it's the consistency.</p>
+ </div>
+ </div>
+ <div class="insight-card">
+ <span class="insight-icon"></span>
+ <div class="insight-body">
+ <h4 data-i18n="reflex.insight5.title">Mindset first</h4>
+ <p data-i18n="reflex.insight5.desc">See every expense as a conscious choice. Every dollar not invested today is several dollars lost in 20 years.</p>
+ </div>
+ </div>
+ </div>
+
+ <h2 data-i18n="reflex.h2.final">In the end</h2>
+
+ <p data-i18n="reflex.p6">I believe there is no single model for success. Everyone moves at their own pace. The important thing is to <strong>start somewhere</strong>, stay consistent and gradually build a life that brings more stability, freedom and peace of mind.</p>
+
+ <p data-i18n="reflex.p7">This blog is my journey — imperfect, honest, human. If a single idea here helps you take one step toward a better financial situation, that's all I hope for.</p>
+
+ <p style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;" data-i18n="reflex.disclaimer"> I am not a financial advisor. This article shares my personal experience and reflections — not official financial advice.</p>
+
+ </div>
+ </article>
+
+ <aside class="sidebar">
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="reflex.sidebar.title">Start investing</h3>
+ <p data-i18n="reflex.sidebar.body">Even with $50. Wealthsimple — free, no commission.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+ <a href="/en/die-with-zero/" class="sidebar-btn outline" data-i18n="reflex.sidebar.readBtn">Read: Die With Zero →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-values">
+ <h4 data-i18n="reflex.sidebar.valuesTitle">My financial values</h4>
+ <div class="value-item" data-i18n="reflex.val1">Start small, stay consistent</div>
+ <div class="value-item" data-i18n="reflex.val2">Invest before spending</div>
+ <div class="value-item" data-i18n="reflex.val3">Develop your skills</div>
+ <div class="value-item" data-i18n="reflex.val4">Diversify your income</div>
+ <div class="value-item" data-i18n="reflex.val5">Think very long term</div>
+ <div class="value-item" data-i18n="reflex.val6">Live below your means</div>
+ </div>
+ </aside>
+
+</div>
+
+<div class="cta-bottom">
+ <h2 data-i18n="reflex.cta.title">Your first step today</h2>
+ <p data-i18n="reflex.cta.body">Open a TFSA on Wealthsimple and invest what you can — even $20.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+ <a href="/en/my-story/" class="cta-btn secondary" data-i18n="reflex.cta.histoireBtn">My full journey →</a>
+</div>
+
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

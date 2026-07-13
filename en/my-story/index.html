@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>My Story: How I Saved $200,000 — Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Mon histoire : comment j'ai économisé 200 000 $"
+        slug "histoire"
+        description "Mère célibataire très jeune, sans famille aisée : le parcours qui m'a menée de la précarité à un patrimoine de 200 000 $, sans salaire exceptionnel."
+        keywords mon parcours financier, économiser 200 000 $, mère célibataire finances, liberté financière Québec, épargne
+   EN : title "My Story: How I Saved $200,000"
+        slug "my-story"
+        description "A young single mother, with no family money: the path that took me from precariousness to $200,000 in assets, without an exceptional salary."
+        keywords my financial journey, saving $200,000, single mother finances, financial independence, saving
+   ES : title "Mi historia: cómo ahorré 200 000 $"
+        slug "mi-historia"
+        description "Madre soltera muy joven, sin familia acomodada: el camino que me llevó de la precariedad a un patrimonio de 200 000 $, sin un salario excepcional."
+        keywords mi trayectoria financiera, ahorrar 200 000 $, madre soltera finanzas, libertad financiera, ahorro -->
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV — identique au site principal */
+ nav {
+ position: sticky; top: 0; z-index: 100;
+ background: var(--white);
+ border-bottom: 1px solid var(--border);
+ padding: 0 56px;
+ display: flex; align-items: center; justify-content: space-between;
+ height: 64px;
+ }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; letter-spacing: 0.5px; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+ .nav-cta:hover { background: var(--terra2); }
+
+ /* PAGE HERO */
+ .page-hero {
+ position: relative;
+ height: 55vh;
+ min-height: 380px;
+ overflow: hidden;
+ border-radius: 0 0 var(--radius) var(--radius);
+ }
+ .page-hero-img {
+ position: absolute; inset: 0;
+ background: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=80') center 30%/cover no-repeat;
+ }
+ .page-hero-overlay {
+ position: absolute; inset: 0;
+ background: linear-gradient(to top, rgba(15,25,8,0.72) 0%, rgba(15,25,8,0.15) 60%, transparent 100%);
+ }
+ .page-hero-content {
+ position: relative; z-index: 1;
+ height: 100%;
+ display: flex; flex-direction: column; justify-content: flex-end;
+ padding: 0 80px 56px;
+ }
+ .breadcrumb {
+ font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+ color: rgba(255,255,255,0.55); margin-bottom: 14px;
+ }
+ .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
+ .breadcrumb a:hover { color: #fff; }
+ .page-hero h1 {
+ font-family: 'Playfair Display', serif;
+ font-size: clamp(32px, 4vw, 54px);
+ font-weight: 400; color: #fff; line-height: 1.15;
+ }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* ARTICLE */
+ .article-wrap {
+ max-width: 820px;
+ margin: 0 auto;
+ padding: 72px 40px 100px;
+ display: grid;
+ grid-template-columns: 1fr 280px;
+ gap: 64px;
+ align-items: start;
+ }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.5em; }
+ .prose p.lead {
+ font-family: 'Playfair Display', serif;
+ font-size: 21px; font-weight: 400; font-style: italic;
+ color: var(--text); line-height: 1.6;
+ padding: 0 0 0 20px;
+ border-left: 3px solid var(--terra);
+ margin-bottom: 2em;
+ }
+ .prose h2 {
+ font-family: 'Playfair Display', serif;
+ font-size: 24px; font-weight: 400;
+ color: var(--text); margin: 2.4em 0 0.8em;
+ padding-bottom: 10px;
+ border-bottom: 1px solid var(--border);
+ }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose em { color: var(--muted); }
+
+ .pullquote {
+ background: var(--white); border: 1px solid var(--border);
+ border-radius: var(--radius); padding: 28px 32px; margin: 2em 0;
+ }
+ .pullquote p {
+ font-family: 'Playfair Display', serif;
+ font-size: 19px; font-style: italic; font-weight: 400;
+ color: var(--text); line-height: 1.6; margin: 0;
+ }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+
+ .sidebar-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-radius: var(--radius);
+ overflow: hidden;
+ margin-bottom: 20px;
+ }
+
+ .sidebar-img {
+ height: 200px;
+ background: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=400&q=80') center/cover no-repeat;
+ }
+
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 {
+ font-family: 'Playfair Display', serif;
+ font-size: 16px; font-weight: 400;
+ color: var(--text); margin-bottom: 8px;
+ }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+
+ .sidebar-btn {
+ display: block; text-align: center;
+ background: var(--terra); color: #fff;
+ font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+ padding: 12px 20px; text-decoration: none; border-radius: 100px;
+ transition: background 0.2s;
+ }
+ .sidebar-btn:hover { background: var(--terra2); }
+
+ .sidebar-stats {
+ background: var(--cream2);
+ border: 1px solid var(--border);
+ border-radius: var(--radius);
+ padding: 22px;
+ }
+ .sidebar-stats h4 {
+ font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+ color: var(--terra); margin-bottom: 16px;
+ }
+ .stat-row {
+ display: flex; justify-content: space-between; align-items: baseline;
+ padding: 10px 0; border-bottom: 1px solid var(--border);
+ }
+ .stat-row:last-child { border: none; }
+ .stat-row span:first-child { font-size: 13px; color: var(--muted); }
+ .stat-row span:last-child {
+ font-family: 'Playfair Display', serif;
+ font-size: 18px; color: var(--terra);
+ }
+
+ /* CTA BOTTOM */
+ .cta-bottom {
+ background: var(--white);
+ border-top: 1px solid var(--border);
+ padding: 64px 56px;
+ text-align: center;
+ }
+ .cta-bottom h2 {
+ font-family: 'Playfair Display', serif;
+ font-size: 30px; font-weight: 400;
+ color: var(--text); margin-bottom: 10px;
+ }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 400px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+ .cta-btn:hover { background: var(--terra2); }
+
+ /* FOOTER */
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+ 
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .stats-band { grid-template-columns: 1fr !important; }
+ .featured { grid-template-columns: 1fr !important; }
+ .about-band { grid-template-columns: 1fr !important; }
+ .grid { grid-template-columns: 1fr !important; }
+ .main-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 80px !important; }
+ .results-grid { grid-template-columns: 1fr !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ .two-buckets, .compare-grid, .tips-grid, .ressources-grid, .criteria-grid, .portfolio-grid, .projection-grid, .disclaimer-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ .hero-content { padding: 0 20px 48px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ .disclaimer-banner { padding: 12px 20px; }
+ .search-hero { padding: 48px 20px 36px; }
+ }
+ </style>
+ <meta name="description" content="A young single mother, with no family money: the path that took me from precariousness to $200,000 in assets, without an exceptional salary."/>
+ <meta name="keywords" content="my financial journey, saving $200,000, single mother finances, financial independence, saving"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/my-story/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/histoire/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/my-story/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/mi-historia/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/histoire/"/>
+ <meta property="og:type" content="Article"/>
+ <meta property="og:title" content="My Story: How I Saved $200,000 — Route vers le Million"/>
+ <meta property="og:description" content="A young single mother, with no family money: the path that took me from precariousness to $200,000 in assets, without an exceptional salary."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/en/my-story/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="en_CA"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="My Story: How I Saved $200,000"/>
+ <meta name="twitter:description" content="A young single mother, with no family money: the path that took me from precariousness to $200,000 in assets, without an exceptional salary."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "My Story: How I Saved $200,000",
+ "description": "A young single mother, with no family money: the path that took me from precariousness to $200,000 in assets, without an exceptional salary.",
+ "url": "https://route-vers-le-million.blog/en/my-story/",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "en-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/en/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/en/etfs/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/en/tools/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/histoire/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/my-story/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/mi-historia/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/en/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/en/etfs/" data-i18n="nav.etf">ETFs</a>
+ <a href="/en/tools/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/en/emergency-fund/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/en/my-story/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/histoire/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/my-story/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/mi-historia/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/en/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <span data-i18n="histoire.hero.breadcrumb">My Story</span></p>
+ <h1 data-i18n="histoire.hero.title">I don't have all<br><em>the answers.</em></h1>
+ </div>
+</div>
+
+<!-- ARTICLE + SIDEBAR -->
+<div class="article-wrap">
+
+ <article class="prose">
+
+ <p class="lead" data-i18n="histoire.lead">"This blog doesn't exist to give lessons. It exists to connect with people who, like me, have an unconventional path and a deep desire to do better financially."</p>
+
+ <p data-i18n="histoire.p1">I'm not a financial planner or an investment expert. I'm simply a curious woman, passionate about personal finance, who decided to share her journey, her thoughts, and her trial and errors.</p>
+
+ <p data-i18n="histoire.p2">I didn't come from a wealthy family. I was a single mom at a very young age. I had no <em>handout</em>, no magic shortcut, no big head start in life. For a long time, I truly believed money was for other people. For me, having $20,000 in savings would already have been something huge.</p>
+
+ <p data-i18n="histoire.p3"><strong>And yet.</strong></p>
+
+ <h2 data-i18n="histoire.h2.debut">How I Started</h2>
+
+ <p data-i18n="histoire.p4">At a certain point in my life, I was working as a consultant while taking on a few small contracts on the side under my own name. Honestly, I had no grand plan. I simply wanted to make ends meet.</p>
+
+ <p data-i18n="histoire.p5">I built my own website with very little resources. I learned SEO, online marketing, social media. And gradually, clients started coming.</p>
+
+ <p data-i18n="histoire.p6">Then one day, I realized something that completely changed my perspective: <strong>the income from my small contracts was exceeding my main salary.</strong></p>
+
+ <div class="pullquote">
+ <p data-i18n="histoire.pullquote">"I was living below my means. And that's how, gradually, I managed to save $100,000 since the pandemic."</p>
+ </div>
+
+ <h2 data-i18n="histoire.h2.montant">What That Amount Changed</h2>
+
+ <p data-i18n="histoire.p7">That amount completely transformed the way I see money. Not just from a financial standpoint, but mentally too. I understood that money wasn't something to fear or reserved for an elite.</p>
+
+ <p data-i18n="histoire.p8">So I started listening to podcasts, reading finance books, and joining an investment book club. <strong>TFSA, RRSP, ETFs, compound interest</strong> — words no one had ever explained to me in school.</p>
+
+ <h2 data-i18n="histoire.h2.ecole">What School Never Taught Me</h2>
+
+ <p data-i18n="histoire.p9">Today, what fascinates me isn't just saving. It's understanding how to build real financial freedom. I deeply believe it's possible for ordinary people to become more financially solid, even without an extraordinary income.</p>
+
+ <p data-i18n="histoire.p10">I also believe strongly in the power of small amounts invested with discipline. Whether through self-employment, extra income, or a few hundred dollars a month in passive income — everything becomes powerful when you invest consistently over many years.</p>
+
+ <h2 data-i18n="histoire.h2.recommencer">Don't Be Afraid to Start Over</h2>
+
+ <p data-i18n="histoire.p11">I know what it's like to go to school with a child to care for, to work, to be exhausted. I know what it feels like to think you're behind everyone else.</p>
+
+ <p data-i18n="histoire.p12">But sometimes, <strong>accepting temporary hardship to build something more solid completely changes a life.</strong></p>
+
+ <p data-i18n="histoire.p13">This blog is my financial lab. I'll be sharing my ideas, my reflections, my successes, my mistakes, and my financial adventures.</p>
+
+ <p data-i18n="histoire.p14">And if some of you see yourselves in this… <strong>Welcome to my madness.</strong></p>
+
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="histoire.sidebar.title">Open Your TFSA</h3>
+ <p data-i18n="histoire.sidebar.body">It's what I use. Free, simple, no hidden fees.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-stats">
+ <h4 data-i18n="histoire.sidebar.stats.title">My Journey in Numbers</h4>
+ <div class="stat-row">
+ <span data-i18n="histoire.sidebar.saved">Saved</span>
+ <span>200k$</span>
+ </div>
+ <div class="stat-row">
+ <span data-i18n="histoire.sidebar.since">Since</span>
+ <span>2020</span>
+ </div>
+ <div class="stat-row">
+ <span data-i18n="histoire.sidebar.projection">Projection age 65</span>
+ <span>3M$</span>
+ </div>
+ <div class="stat-row">
+ <span data-i18n="histoire.sidebar.celi">TFSA / year</span>
+ <span>7k$</span>
+ </div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="histoire.cta.title">Ready to start your journey?</h2>
+ <p data-i18n="histoire.cta.body">Open your TFSA on Wealthsimple — free and no hidden fees.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="histoire.cta.btn">Open an account →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

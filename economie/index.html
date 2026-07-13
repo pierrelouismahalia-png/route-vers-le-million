@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+ <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
  <!-- Google Analytics -->
  <script src="/consent.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
@@ -13,6 +14,20 @@
  <meta charset="UTF-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  <title>Comment économiser 10 000 $ — Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Comment économiser 10 000 $ : gagner plus, pas se priver"
+        slug "economie"
+        description "Je ne crois pas à se serrer la ceinture. Je crois à aller chercher plus d'argent, et à comprendre comment le garder. Les métiers et les leviers qui le permettent."
+        keywords économiser 10 000 $, augmenter ses revenus, métiers payants Québec, DEP, travailleur autonome, épargne
+   EN : title "How to Save $10,000: Earn More, Don't Deprive Yourself"
+        slug "saving-money"
+        description "I do not believe in tightening the belt. I believe in going out and earning more, and understanding how to keep it. The trades and levers that make it possible."
+        keywords save $10,000, increase your income, high-paying trades, vocational diploma, self-employed, saving
+   ES : title "Cómo ahorrar 10 000 $: ganar más, no privarse"
+        slug "ahorrar-dinero"
+        description "No creo en apretarse el cinturón. Creo en salir a ganar más dinero, y en entender cómo conservarlo. Los oficios y las palancas que lo permiten."
+        keywords ahorrar 10 000 $, aumentar los ingresos, oficios bien pagados, formación profesional, autónomo, ahorro -->
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
  <style>
  :root {
@@ -163,6 +178,10 @@
  <meta name="robots" content="index, follow"/>
  <meta name="author" content="Route vers le Million"/>
  <link rel="canonical" href="https://route-vers-le-million.blog/economie/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/economie/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/saving-money/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/ahorrar-dinero/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/economie/"/>
  <meta property="og:type" content="Article"/>
  <meta property="og:title" content="Comment économiser 10 000 $ — Route vers le Million"/>
  <meta property="og:description" content="Mes trucs concrets pour économiser 10 000$. Se payer en premier, augmenter ses revenus, formations courtes au Québec."/>
@@ -201,11 +220,11 @@
  <span></span><span></span><span></span>
  </button>
  <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
- <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+ <a class="lang-btn" data-lang="fr" href="/economie/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+ <a class="lang-btn" data-lang="en" href="/en/saving-money/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+ <a class="lang-btn" data-lang="es" href="/es/ahorrar-dinero/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
  </div>
  <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
  </div>
@@ -220,9 +239,9 @@
  <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
  <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
  <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
- <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
- <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
- <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+ <a class="lang-btn" data-lang="fr" href="/economie/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/saving-money/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/ahorrar-dinero/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
  </div>
  <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
 </div>
@@ -319,12 +338,12 @@
  <table class="formation-table">
  <thead><tr><th data-i18n="eco.th.formation">Formation</th><th data-i18n="eco.th.type">Type</th><th data-i18n="eco.th.bizType">Entreprise possible</th></tr></thead>
  <tbody>
- <tr><td>Plomberie</td><td><span class="badge">DEP</span></td><td>Plombier autonome / entrepreneur</td></tr>
- <tr><td>Électricité</td><td><span class="badge">DEP</span></td><td>Électricien autonome</td></tr>
- <tr><td>Peinture en bâtiment</td><td><span class="badge">DEP</span></td><td>Entreprise de peinture</td></tr>
- <tr><td>Charpenterie-menuiserie</td><td><span class="badge">DEP</span></td><td>Entrepreneur en rénovation</td></tr>
- <tr><td>Pose de revêtements de sol</td><td><span class="badge">DEP</span></td><td>Entrepreneur en planchers</td></tr>
- <tr><td>Toiture</td><td><span class="badge">DEP</span></td><td>Entreprise de couverture</td></tr>
+ <tr><td data-i18n="eco.t1.f">Plomberie</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t1.b">Plombier autonome / entrepreneur</td></tr>
+ <tr><td data-i18n="eco.t2.f">Électricité</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t2.b">Électricien autonome</td></tr>
+ <tr><td data-i18n="eco.t3.f">Peinture en bâtiment</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t3.b">Entreprise de peinture</td></tr>
+ <tr><td data-i18n="eco.t4.f">Charpenterie-menuiserie</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t4.b">Entrepreneur en rénovation</td></tr>
+ <tr><td data-i18n="eco.t5.f">Pose de revêtements de sol</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t5.b">Entrepreneur en planchers</td></tr>
+ <tr><td data-i18n="eco.t6.f">Toiture</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t6.b">Entreprise de couverture</td></tr>
  </tbody>
  </table>
  </div>
@@ -337,10 +356,10 @@
  <table class="formation-table">
  <thead><tr><th data-i18n="eco.th.formation">Formation</th><th data-i18n="eco.th.type">Type</th><th data-i18n="eco.th.bizType">Entreprise possible</th></tr></thead>
  <tbody>
- <tr><td>Coiffure</td><td><span class="badge">DEP</span></td><td>Salon de coiffure</td></tr>
- <tr><td>Esthétique</td><td><span class="badge">DEP</span></td><td>Institut de beauté / spa</td></tr>
- <tr><td>Manucure</td><td><span class="badge">DEP</span></td><td>Studio d'ongles</td></tr>
- <tr><td>Épilation à la cire</td><td><span class="badge">ASP</span></td><td>Studio d'épilation</td></tr>
+ <tr><td data-i18n="eco.t7.f">Coiffure</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t7.b">Salon de coiffure</td></tr>
+ <tr><td data-i18n="eco.t8.f">Esthétique</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t8.b">Institut de beauté / spa</td></tr>
+ <tr><td data-i18n="eco.t9.f">Manucure</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t9.b">Studio d'ongles</td></tr>
+ <tr><td data-i18n="eco.t10.f">Épilation à la cire</td><td><span class="badge">ASP</span></td><td data-i18n="eco.t10.b">Studio d'épilation</td></tr>
  </tbody>
  </table>
  </div>
@@ -353,9 +372,9 @@
  <table class="formation-table">
  <thead><tr><th data-i18n="eco.th.formation">Formation</th><th data-i18n="eco.th.type">Type</th><th data-i18n="eco.th.bizType">Entreprise possible</th></tr></thead>
  <tbody>
- <tr><td>Cuisine</td><td><span class="badge">DEP</span></td><td>Traiteur / chef à domicile</td></tr>
- <tr><td>Pâtisserie</td><td><span class="badge">DEP</span></td><td>Boulangerie / commandes spéciales</td></tr>
- <tr><td>Gestion d'un établissement de restauration</td><td><span class="badge">ASP</span></td><td>Restaurant / café</td></tr>
+ <tr><td data-i18n="eco.t11.f">Cuisine</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t11.b">Traiteur / chef à domicile</td></tr>
+ <tr><td data-i18n="eco.t12.f">Pâtisserie</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t12.b">Boulangerie / commandes spéciales</td></tr>
+ <tr><td data-i18n="eco.t13.f">Gestion d'un établissement de restauration</td><td><span class="badge">ASP</span></td><td data-i18n="eco.t13.b">Restaurant / café</td></tr>
  </tbody>
  </table>
  </div>
@@ -368,10 +387,10 @@
  <table class="formation-table">
  <thead><tr><th data-i18n="eco.th.formation">Formation</th><th data-i18n="eco.th.type">Type</th><th data-i18n="eco.th.bizType">Entreprise possible</th></tr></thead>
  <tbody>
- <tr><td>Techniques de l'informatique</td><td><span class="badge">AEC</span></td><td>Consultant TI / soutien informatique</td></tr>
- <tr><td>Développement de sites Web</td><td><span class="badge">AEC</span></td><td>Agence Web / freelance</td></tr>
- <tr><td>Sécurité informatique</td><td><span class="badge">AEC</span></td><td>Firme en cybersécurité</td></tr>
- <tr><td>Développement d'applications mobiles</td><td><span class="badge">AEC</span></td><td>Studio d'apps</td></tr>
+ <tr><td data-i18n="eco.t14.f">Techniques de l'informatique</td><td><span class="badge">AEC</span></td><td data-i18n="eco.t14.b">Consultant TI / soutien informatique</td></tr>
+ <tr><td data-i18n="eco.t15.f">Développement de sites Web</td><td><span class="badge">AEC</span></td><td data-i18n="eco.t15.b">Agence Web / freelance</td></tr>
+ <tr><td data-i18n="eco.t16.f">Sécurité informatique</td><td><span class="badge">AEC</span></td><td data-i18n="eco.t16.b">Firme en cybersécurité</td></tr>
+ <tr><td data-i18n="eco.t17.f">Développement d'applications mobiles</td><td><span class="badge">AEC</span></td><td data-i18n="eco.t17.b">Studio d'apps</td></tr>
  </tbody>
  </table>
  </div>
@@ -384,10 +403,10 @@
  <table class="formation-table">
  <thead><tr><th data-i18n="eco.th.formation">Formation</th><th data-i18n="eco.th.type">Type</th><th data-i18n="eco.th.bizType">Entreprise possible</th></tr></thead>
  <tbody>
- <tr><td>Comptabilité et gestion</td><td><span class="badge">AEC</span></td><td>Cabinet comptable / tenue de livres</td></tr>
- <tr><td>Gestion de la paie</td><td><span class="badge">AEC</span></td><td>Service de paie externalisé</td></tr>
- <tr><td>Planification financière</td><td><span class="badge">AEC</span></td><td>Conseiller financier — Examen AMF</td></tr>
- <tr><td>Techniques administratives</td><td><span class="badge">AEC</span></td><td>Services administratifs aux entreprises</td></tr>
+ <tr><td data-i18n="eco.t18.f">Comptabilité et gestion</td><td><span class="badge">AEC</span></td><td data-i18n="eco.t18.b">Cabinet comptable / tenue de livres</td></tr>
+ <tr><td data-i18n="eco.t19.f">Gestion de la paie</td><td><span class="badge">AEC</span></td><td data-i18n="eco.t19.b">Service de paie externalisé</td></tr>
+ <tr><td data-i18n="eco.t20.f">Planification financière</td><td><span class="badge">AEC</span></td><td data-i18n="eco.t20.b">Conseiller financier — Examen AMF</td></tr>
+ <tr><td data-i18n="eco.t21.f">Techniques administratives</td><td><span class="badge">AEC</span></td><td data-i18n="eco.t21.b">Services administratifs aux entreprises</td></tr>
  </tbody>
  </table>
  </div>
@@ -400,9 +419,9 @@
  <table class="formation-table">
  <thead><tr><th data-i18n="eco.th.formation">Formation</th><th data-i18n="eco.th.type">Type</th><th data-i18n="eco.th.bizType">Entreprise possible</th></tr></thead>
  <tbody>
- <tr><td>Aménagement paysager</td><td><span class="badge">DEP</span></td><td>Entrepreneur paysagiste</td></tr>
- <tr><td>Horticulture et jardinerie</td><td><span class="badge">DEP</span></td><td>Jardinage / paysagement</td></tr>
- <tr><td>Arboriculture-élagage</td><td><span class="badge">DEP</span></td><td>Entreprise d'émondage</td></tr>
+ <tr><td data-i18n="eco.t22.f">Aménagement paysager</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t22.b">Entrepreneur paysagiste</td></tr>
+ <tr><td data-i18n="eco.t23.f">Horticulture et jardinerie</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t23.b">Jardinage / paysagement</td></tr>
+ <tr><td data-i18n="eco.t24.f">Arboriculture-élagage</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t24.b">Entreprise d'émondage</td></tr>
  </tbody>
  </table>
  </div>
@@ -415,9 +434,9 @@
  <table class="formation-table">
  <thead><tr><th data-i18n="eco.th.formation">Formation</th><th data-i18n="eco.th.type">Type</th><th data-i18n="eco.th.bizType">Entreprise possible</th></tr></thead>
  <tbody>
- <tr><td>Graphisme</td><td><span class="badge">AEC</span></td><td>Studio de design graphique</td></tr>
- <tr><td>Photographie</td><td><span class="badge">DEP</span></td><td>Studio photo / événementiel</td></tr>
- <tr><td>Design d'intérieur</td><td><span class="badge">AEC</span></td><td>Cabinet de design</td></tr>
+ <tr><td data-i18n="eco.t25.f">Graphisme</td><td><span class="badge">AEC</span></td><td data-i18n="eco.t25.b">Studio de design graphique</td></tr>
+ <tr><td data-i18n="eco.t26.f">Photographie</td><td><span class="badge">DEP</span></td><td data-i18n="eco.t26.b">Studio photo / événementiel</td></tr>
+ <tr><td data-i18n="eco.t27.f">Design d'intérieur</td><td><span class="badge">AEC</span></td><td data-i18n="eco.t27.b">Cabinet de design</td></tr>
  </tbody>
  </table>
  </div>

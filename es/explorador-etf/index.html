@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <script>try{localStorage.setItem('lang','es');}catch(e){}</script>
+  <script src="/consent.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-L9QEBYDL8R");</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Radar de ETF: Canadá y Estados Unidos en tiempo real — Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Radar ETF : Canada et États-Unis en temps réel"
+        slug "etf-explorer"
+        description "Comparez les ETF canadiens et américains : frais de gestion, rendement, secteur. Les données à jour pour choisir en connaissance de cause."
+        keywords radar ETF, comparateur ETF Canada, frais de gestion ETF, RFG, FNB, investir en ETF
+   EN : title "ETF Radar: Canada and the United States in Real Time"
+        slug "etf-explorer"
+        description "Compare Canadian and American ETFs: management fees, performance, sector. Up-to-date data so you can choose with full knowledge."
+        keywords ETF radar, ETF comparison Canada, ETF management fees, MER, investing in ETFs
+   ES : title "Radar de ETF: Canadá y Estados Unidos en tiempo real"
+        slug "explorador-etf"
+        description "Compara los ETF canadienses y estadounidenses: comisiones de gestión, rendimiento, sector. Datos actualizados para elegir con conocimiento de causa."
+        keywords radar de ETF, comparador de ETF, comisiones de gestión ETF, ratio de gastos, invertir en ETF -->
+  <meta name="description" content="Compara los ETF canadienses y estadounidenses: comisiones de gestión, rendimiento, sector. Datos actualizados para elegir con conocimiento de causa."/>
+  <meta name="robots" content="index, follow"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/es/explorador-etf/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/etf-explorer/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/etf-explorer/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/explorador-etf/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/etf-explorer/"/>
+  <meta property="og:type" content="WebPage"/>
+  <meta property="og:locale" content="es_ES"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bg:#F5F0E8;--cream2:#E8DCC8;--white:#FFFFFF;--border:#D8CCBA;--text:#2C1A0A;--muted:#9A8A78;--light:#A0B480;--terra:#2D4A1A;--up:#2D6A2D;--down:#8B2020;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:"Jost",sans-serif;font-size:15px;line-height:1.7;}
+    nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);padding:0 56px;display:flex;align-items:center;justify-content:space-between;height:62px;}
+    .nav-logo{font-family:"Playfair Display",serif;font-size:16px;font-weight:400;letter-spacing:1px;color:var(--text);text-decoration:none;}
+    .nav-links{display:flex;gap:32px;list-style:none;}
+    .nav-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--text);}
+    .nav-cta{font-size:11px;letter-spacing:2px;text-transform:uppercase;background:var(--terra);color:#fff;padding:10px 22px;text-decoration:none;border-radius:100px;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s;}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+    .mobile-menu{display:none;position:fixed;top:62px;left:0;right:0;background:var(--white);border-bottom:2px solid var(--border);padding:20px 24px 28px;z-index:99;flex-direction:column;box-shadow:0 8px 32px rgba(15,25,8,.12);}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{display:block;padding:13px 0;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);transition:color .2s;}
+    .mobile-menu a:last-child{border:none;}
+    .page-hero{position:relative;height:48vh;min-height:320px;display:flex;align-items:flex-end;overflow:hidden;}
+    .hero-img{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,25,8,.82) 0%,rgba(15,25,8,.15) 60%,transparent 100%);}
+    .hero-content{position:relative;z-index:1;padding:0 80px 56px;max-width:740px;}
+    .hero-tag{display:inline-block;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.22);padding:5px 14px;border-radius:2px;margin-bottom:16px;}
+    .hero-content h1{font-family:"Playfair Display",serif;font-size:clamp(26px,4vw,48px);font-weight:400;color:#fff;line-height:1.15;margin-bottom:10px;}
+    .hero-content h1 em{font-style:italic;}
+    .hero-content p{font-size:14px;color:rgba(255,255,255,.62);max-width:460px;}
+    .live-bar{background:var(--terra);padding:10px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+    .live-dot{width:7px;height:7px;background:#6fcf6f;border-radius:50%;animation:blink 2s ease-in-out infinite;display:inline-block;margin-right:8px;}
+    @keyframes blink{0%,100%{opacity:1;}50%{opacity:.4;}}
+    .live-text{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.85);}
+    .live-update{font-size:11px;color:rgba(255,255,255,.5);letter-spacing:1px;}
+    .controls-bar{background:var(--cream2);border-bottom:1px solid var(--border);padding:24px 56px;}
+    .controls-inner{max-width:1200px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+    .search-wrap{flex:1;min-width:200px;}
+    .search-wrap input{width:100%;padding:11px 16px;border:1px solid var(--border);background:var(--white);font-family:"Jost",sans-serif;font-size:14px;color:var(--text);outline:none;border-radius:2px;transition:border-color .2s;}
+    .search-wrap input:focus{border-color:var(--terra);}
+    .search-wrap input::placeholder{color:var(--muted);}
+    .selects{display:flex;gap:8px;flex-wrap:wrap;}
+    .selects select{padding:10px 14px;border:1px solid var(--border);background:var(--white);font-family:"Jost",sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);outline:none;border-radius:2px;cursor:pointer;}
+    .chips-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:13px 56px;}
+    .chips-inner{max-width:1200px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+    .chips-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+    .chip{padding:5px 14px;border:1px solid var(--border);background:transparent;font-family:"Jost",sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);cursor:pointer;border-radius:100px;transition:all .2s;}
+    .chip:hover{color:var(--text);border-color:var(--text);}
+    .chip.active{background:var(--terra);color:#fff;border-color:var(--terra);}
+    .results-wrap{max-width:1200px;margin:0 auto;padding:36px 56px 100px;}
+    .results-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;border-bottom:1px solid var(--border);padding-bottom:12px;flex-wrap:wrap;gap:8px;}
+    .results-count{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
+    .results-count strong{color:var(--terra);}
+    .table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:4px;background:var(--white);}
+    table{width:100%;border-collapse:collapse;font-size:13px;}
+    thead{background:var(--bg);border-bottom:2px solid var(--border);}
+    th{padding:11px 14px;text-align:left;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:400;white-space:nowrap;cursor:pointer;user-select:none;}
+    th:hover{color:var(--text);}
+    td{padding:13px 14px;border-bottom:1px solid var(--border);vertical-align:middle;}
+    tr:last-child td{border-bottom:none;}
+    tr:hover td{background:rgba(245,240,232,.5);cursor:pointer;}
+    .etf-ticker{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:2px;}
+    .etf-name{font-family:"Playfair Display",serif;font-size:14px;font-weight:400;color:var(--text);line-height:1.3;}
+    .cat-pill{font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:100px;border:1px solid var(--border);color:var(--muted);white-space:nowrap;}
+    .region-ca{font-size:9px;letter-spacing:1px;padding:3px 8px;border-radius:2px;font-weight:500;background:rgba(45,74,26,.1);color:var(--terra);}
+    .region-us{font-size:9px;letter-spacing:1px;padding:3px 8px;border-radius:2px;font-weight:500;background:rgba(44,26,10,.07);color:var(--muted);}
+    .price-main{font-family:"Playfair Display",serif;font-size:15px;color:var(--text);}
+    .price-cur{font-size:10px;color:var(--muted);margin-left:2px;}
+    .chg-pos{color:var(--up);font-size:12px;font-weight:500;}
+    .chg-neg{color:var(--down);font-size:12px;font-weight:500;}
+    .chg-neu{color:var(--muted);font-size:12px;}
+    .mer-val{font-size:12px;color:var(--text);}
+    .mer-low{color:var(--up);}
+    .na{color:var(--muted);font-size:11px;}
+    .skel{height:13px;background:var(--cream2);border-radius:2px;animation:sk 1.4s ease-in-out infinite;}
+    @keyframes sk{0%,100%{opacity:1;}50%{opacity:.35;}}
+    .detail-btn{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--terra);background:none;border:1px solid var(--border);padding:5px 12px;border-radius:2px;cursor:pointer;font-family:"Jost",sans-serif;transition:all .2s;white-space:nowrap;}
+    .detail-btn:hover{border-color:var(--terra);}
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(44,26,10,.45);z-index:200;overflow-y:auto;}
+    .modal-overlay.open{display:block;}
+    .modal-wrap{display:flex;align-items:flex-start;justify-content:center;min-height:100%;padding:40px 20px;}
+    .modal{background:var(--white);max-width:680px;width:100%;border-radius:4px;position:relative;animation:mIn .25s ease;margin:auto;}
+    @keyframes mIn{from{transform:translateY(14px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+    .modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:var(--bg);border:1px solid var(--border);cursor:pointer;font-size:13px;color:var(--muted);display:flex;align-items:center;justify-content:center;}
+    .m-head{padding:32px 32px 0;}
+    .m-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);margin-bottom:6px;}
+    .m-title{font-family:"Playfair Display",serif;font-size:22px;font-weight:400;color:var(--text);line-height:1.25;margin-bottom:18px;}
+    .m-prices{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin:0 32px 20px;border-radius:2px;overflow:hidden;}
+    .m-price-item{background:var(--bg);padding:14px;text-align:center;}
+    .m-price-lbl{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;}
+    .m-price-val{font-family:"Playfair Display",serif;font-size:18px;display:block;}
+    .m-body{padding:0 32px 32px;}
+    .m-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:22px;}
+    .m-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px;background:var(--bg);border:1px solid var(--border);padding:16px;border-radius:2px;}
+    .m-item{font-size:11px;color:var(--muted);}
+    .m-item span{color:var(--text);font-weight:500;display:block;margin-top:2px;}
+    .m-section{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--terra);margin-bottom:12px;padding-bottom:7px;border-bottom:1px solid var(--border);}
+    .holdings-list{display:flex;flex-direction:column;gap:6px;margin-bottom:22px;}
+    .holding-row{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--bg);border:1px solid var(--border);border-radius:2px;font-size:12px;}
+    .h-ticker{font-weight:600;color:var(--terra);letter-spacing:1px;min-width:50px;}
+    .h-name{color:var(--muted);flex:1;}
+    .h-bar{height:3px;background:var(--terra);border-radius:100px;min-width:8px;}
+    .h-pct{color:var(--text);font-weight:500;}
+    .ws-btn{display:block;text-align:center;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px;text-decoration:none;border-radius:2px;margin-top:18px;}
+    .m-disclaimer{font-size:11px;color:var(--muted);line-height:1.7;padding:13px 16px;border-top:1px solid var(--border);background:var(--cream2);border-radius:0 0 4px 4px;}
+    footer{background:var(--cream2);border-top:1px solid var(--border);padding:24px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+    footer p{font-size:11px;color:var(--light);letter-spacing:1px;}
+    footer a{color:var(--muted);text-decoration:none;}
+    @media(max-width:1024px){.results-wrap,.controls-bar,.chips-bar,.live-bar{padding-left:24px;padding-right:24px;}}
+    @media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none !important;}.hamburger{display:flex;}.hero-content{padding:0 20px 40px !important;}.controls-bar,.chips-bar,.live-bar{padding:16px 20px;}.results-wrap{padding:20px 16px 80px;}.m-prices{grid-template-columns:repeat(2,1fr);}.m-head{padding:24px 20px 0;}.m-body{padding:0 20px 24px;}.m-grid{grid-template-columns:1fr;}footer{padding:18px 20px;flex-direction:column;text-align:center;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/es/" class="nav-logo">Route vers le Million</a>
+  <ul class="nav-links">
+    <li><a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a></li>
+    <li><a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a></li>
+    <li><a href="/es/etf/" data-i18n="nav.etf">ETFs</a></li>
+    <li><a href="/es/herramientas/" class="active" data-i18n="nav.outils">Herramientas</a></li>
+    <li><a href="/es/articles/" data-i18n="nav.articles">Artículos</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+    <a class="lang-btn" data-lang="fr" href="/etf-explorer/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+    <span style="color:var(--border);font-size:10px;">·</span>
+    <a class="lang-btn" data-lang="en" href="/en/etf-explorer/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+    <span style="color:var(--border);font-size:10px;">·</span>
+    <a class="lang-btn" data-lang="es" href="/es/explorador-etf/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+    </div>
+    <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple</a>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/es/" data-i18n="nav.accueil">Inicio</a>
+  <a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a>
+  <a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a>
+  <a href="/es/etf/" data-i18n="nav.etf">ETFs</a>
+  <a href="/es/herramientas/" style="color:var(--terra);font-weight:500;" data-i18n="nav.outils">Herramientas</a>
+  <a href="/es/articles/" data-i18n="nav.allArticles">Todos los artículos</a>
+  <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+    <a class="lang-btn" data-lang="fr" href="/etf-explorer/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+    <a class="lang-btn" data-lang="en" href="/en/etf-explorer/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+    <a class="lang-btn" data-lang="es" href="/es/explorador-etf/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+  </div>
+  <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Abrir Wealthsimple →</a>
+</div>
+<div class="page-hero">
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-tag" data-i18n="radar.hero.tag">Datos en tiempo real</span>
+    <h1 data-i18n="radar.hero.title">Radar ETF — <em>Canadá y Estados Unidos</em></h1>
+    <p data-i18n="radar.hero.sub">Precios en directo, comisiones de gestión, dividendos — todos los fondos índice populares para inversores canadienses.</p>
+  </div>
+</div>
+<div class="live-bar">
+  <div><span class="live-dot"></span><span class="live-text" data-i18n="radar.live.text">Datos en directo — Financial Modeling Prep</span></div>
+  <span class="live-update" id="lastUpdate">Chargement en cours...</span>
+</div>
+<div class="controls-bar">
+  <div class="controls-inner">
+    <div class="search-wrap">
+      <input type="text" id="searchInput" placeholder="Rechercher — ex. VFV, SPY, dividendes, technologie..." oninput="render()">
+    </div>
+    <div class="selects">
+      <select id="regionFilter" onchange="render()">
+        <option value="" data-i18n="radar.region.all">Canadá + EE.UU.</option>
+        <option value="CA" data-i18n="radar.region.ca">Canadá (TSX)</option>
+        <option value="US" data-i18n="radar.region.us">Estados Unidos</option>
+      </select>
+      <select id="catFilter" onchange="render()">
+        <option value="" data-i18n="radar.cat.all">Todas las categorías</option>
+        <option value="Actions" data-i18n="radar.cat.actions">Acciones</option>
+        <option value="Croissance" data-i18n="radar.cat.croissance">Crecimiento</option>
+        <option value="Dividendes" data-i18n="radar.cat.dividendes">Dividendos</option>
+        <option value="Obligations" data-i18n="radar.cat.obligations">Bonos</option>
+        <option value="Sectoriel" data-i18n="radar.cat.sectoriel">Sectorial</option>
+        <option value="Equilibre" data-i18n="radar.cat.equilibre">Equilibrado</option>
+        <option value="Liquidite" data-i18n="radar.cat.liquidite">Liquidez</option>
+      </select>
+      <select id="sortSelect" onchange="render()">
+        <option value="" data-i18n="radar.sort.default">Orden predeterminado</option>
+        <option value="price-desc" data-i18n="radar.sort.priceDesc">Precio descendente</option>
+        <option value="chg-desc" data-i18n="radar.sort.chgDesc">Mejores ganancias</option>
+        <option value="chg-asc" data-i18n="radar.sort.chgAsc">Mayores caídas</option>
+        <option value="mer-asc" data-i18n="radar.sort.merAsc">Comisiones ascendentes</option>
+        <option value="az" data-i18n="radar.sort.az">A a Z</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="chips-bar">
+  <div class="chips-inner">
+    <span class="chips-lbl" data-i18n="radar.filter.lbl">Filtro rápido</span>
+    <button class="chip active" data-i18n="radar.chip.all" onclick="setChip(this,&quot;all&quot;)">Todos</button>
+    <button class="chip" data-i18n="radar.chip.debutant" onclick="setChip(this,&quot;debutant&quot;)">Principiante</button>
+    <button class="chip" data-i18n="radar.chip.frais" onclick="setChip(this,&quot;faibles-frais&quot;)">Bajas comisiones</button>
+    <button class="chip" data-i18n="radar.chip.dividendes" onclick="setChip(this,&quot;dividendes&quot;)">Dividendos</button>
+    <button class="chip" data-i18n="radar.chip.tech" onclick="setChip(this,&quot;tech&quot;)">Tecnología</button>
+    <button class="chip" data-i18n="radar.chip.obl" onclick="setChip(this,&quot;obligations&quot;)">Bonos</button>
+    <button class="chip" data-i18n="radar.chip.liq" onclick="setChip(this,&quot;liquidite&quot;)">Liquidez</button>
+  </div>
+</div>
+<div class="results-wrap">
+  <div class="results-bar">
+    <div class="results-count"><strong id="shownCount">--</strong> <span data-i18n="radar.results.suffix">ETFs mostrados</span></div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th>ETF</th><th data-i18n="radar.th.categorie">Categoría</th><th data-i18n="radar.th.bourse">Bolsa</th><th data-i18n="radar.th.prix">Precio</th>
+        <th data-i18n="radar.th.variation">Variación</th><th data-i18n="radar.th.range">Máx. / Mín. 52 sem.</th><th data-i18n="radar.th.mer">Comisión MER</th><th></th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</div>
+<div style="background:var(--cream2);text-align:center;padding:60px 48px;border-top:1px solid var(--border);">
+  <p data-i18n="radar.cta.tag" style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--terra);margin-bottom:14px;">Invertir sin comisiones</p>
+  <h2 data-i18n="radar.cta.title" style="font-family:Playfair Display,serif;font-size:28px;font-weight:400;color:var(--text);margin-bottom:10px;">Compra estos ETFs gratis en Wealthsimple</h2>
+  <p data-i18n="radar.cta.body" style="font-size:14px;color:var(--muted);margin-bottom:26px;max-width:380px;margin-left:auto;margin-right:auto;line-height:1.75;">Cero comisiones, cero tarifas ocultas. Abre tu CELI en 10 minutos desde tu teléfono.</p>
+  <a href="https://wealthsimple.com/invite/G7ZSVC" data-i18n="radar.cta.btn" style="display:inline-block;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;padding:13px 32px;text-decoration:none;border-radius:2px;" target="_blank" rel="sponsored nofollow noopener">Abrir una cuenta gratis</a>
+</div>
+<div data-newsletter></div>
+<footer>
+  <p><strong style="color:var(--muted);font-weight:400;">Route vers le Million</strong> &nbsp;&middot;&nbsp; <a href="/es/">route-vers-le-million.blog</a></p>
+  <p data-i18n="radar.footer.data">Fuente: Financial Modeling Prep API · Plataforma educativa · Sin consejos financieros</p>
+  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contiene enlaces de afiliados (Wealthsimple, Tangerine, Borrowell, Amazon). Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. — <a href="/es/divulgacion.html" style="color:inherit;text-decoration:underline;">Más información →</a></p>
+</footer>
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal-wrap"><div class="modal" id="modalBox">
+    <button class="modal-close" onclick="closeModal()">&#10005;</button>
+    <div id="modalContent"></div>
+  </div></div>
+</div>
+<script>
+const FMP="2yY73KEy4FqHSc4vr8YvGN3FQ9VBjROw";
+const CACHE="rvm_etf_v3";
+const TTL=15*60*1000;
+const DB=[
+  {t:"VFV.TO",n:"Vanguard S&P 500 Index ETF",r:"CA",c:"Actions",mer:0.09,d:true,div:false,tech:false,obl:false,liq:false,desc:"Replique l'indice S&P 500 en dollars canadiens. L'un des ETFs les plus populaires au Canada pour l'exposition au marche americain.",h:[{t:"AAPL",n:"Apple Inc.",p:7.2},{t:"MSFT",n:"Microsoft Corp.",p:6.8},{t:"NVDA",n:"NVIDIA Corp.",p:6.1},{t:"AMZN",n:"Amazon.com",p:3.6},{t:"META",n:"Meta Platforms",p:2.5}]},
+  {t:"XEQT.TO",n:"iShares Core Equity ETF Portfolio",r:"CA",c:"Actions",mer:0.20,d:true,div:false,tech:false,obl:false,liq:false,desc:"Portefeuille mondial 100% actions en une seule transaction. Diversification complete Canada, USA, international.",h:[{t:"XUU",n:"iShares Core S&P U.S.",p:45.2},{t:"XEF",n:"iShares MSCI EAFE",p:24.1},{t:"XIC",n:"iShares Core TSX",p:24.0},{t:"XEC",n:"iShares MSCI EM",p:6.7}]},
+  {t:"XGRO.TO",n:"iShares Core Growth ETF Portfolio",r:"CA",c:"Equilibre",mer:0.20,d:true,div:false,tech:false,obl:false,liq:false,desc:"Portefeuille 80% actions / 20% obligations. Ideal pour horizon de 10 ans et plus.",h:[{t:"XUU",n:"iShares Core S&P U.S.",p:36.0},{t:"XIC",n:"iShares Core TSX",p:19.0},{t:"XBB",n:"iShares Canadian Bond",p:16.0},{t:"XEF",n:"iShares MSCI EAFE",p:19.0}]},
+  {t:"XBAL.TO",n:"iShares Core Balanced ETF Portfolio",r:"CA",c:"Equilibre",mer:0.20,d:true,div:false,tech:false,obl:false,liq:false,desc:"Portefeuille 60% actions / 40% obligations. Pour investisseurs recherchant un equilibre croissance-stabilite.",h:[{t:"XUU",n:"iShares Core S&P U.S.",p:27.0},{t:"XBB",n:"iShares Canadian Bond",p:28.0},{t:"XIC",n:"iShares Core TSX",p:14.0},{t:"XEF",n:"iShares MSCI EAFE",p:14.0}]},
+  {t:"XIU.TO",n:"iShares S&P/TSX 60 Index ETF",r:"CA",c:"Actions",mer:0.18,d:false,div:false,tech:false,obl:false,liq:false,desc:"Les 60 plus grandes entreprises canadiennes. Le plus ancien ETF du Canada — lance en 1990.",h:[{t:"RY",n:"Banque Royale du Canada",p:7.8},{t:"TD",n:"Banque TD",p:6.5},{t:"CNR",n:"CN Rail",p:4.9},{t:"BN",n:"Brookfield Corp.",p:4.6},{t:"ENB",n:"Enbridge Inc.",p:4.1}]},
+  {t:"XIC.TO",n:"iShares Core S&P/TSX Capped Composite",r:"CA",c:"Actions",mer:0.06,d:false,div:false,tech:false,obl:false,liq:false,desc:"L'ensemble du marche boursier canadien. MER parmi les plus bas au Canada.",h:[{t:"RY",n:"Banque Royale",p:6.5},{t:"TD",n:"Banque TD",p:5.4},{t:"SHOP",n:"Shopify Inc.",p:4.8},{t:"CNR",n:"CN Rail",p:3.8},{t:"BN",n:"Brookfield",p:3.7}]},
+  {t:"VDY.TO",n:"Vanguard FTSE Canadian High Dividend Yield",r:"CA",c:"Dividendes",mer:0.22,d:false,div:true,tech:false,obl:false,liq:false,desc:"Entreprises canadiennes a dividendes eleves. Revenus passifs reguliers — banques, pipelines, energie.",h:[{t:"RY",n:"Banque Royale",p:15.2},{t:"TD",n:"Banque TD",p:12.8},{t:"ENB",n:"Enbridge",p:9.4},{t:"BMO",n:"Banque de Montreal",p:8.1},{t:"BNS",n:"Banque Scotia",p:7.3}]},
+  {t:"ZWB.TO",n:"BMO Covered Call Canadian Banks ETF",r:"CA",c:"Dividendes",mer:0.72,d:false,div:true,tech:false,obl:false,liq:false,desc:"Banques canadiennes avec strategie d'options couvertes. Dividende mensuel eleve.",h:[{t:"RY",n:"Banque Royale",p:20.2},{t:"TD",n:"Banque TD",p:18.8},{t:"BMO",n:"Banque de Montreal",p:16.1},{t:"BNS",n:"Banque Scotia",p:15.3},{t:"CM",n:"CIBC",p:14.7}]},
+  {t:"CDZ.TO",n:"iShares S&P/TSX Canadian Dividend Aristocrats",r:"CA",c:"Dividendes",mer:0.66,d:false,div:true,tech:false,obl:false,liq:false,desc:"Entreprises canadiennes ayant augmente leurs dividendes pendant 5 annees consecutives.",h:[{t:"ENB",n:"Enbridge",p:6.1},{t:"TRP",n:"TC Energy",p:5.8},{t:"BCE",n:"BCE Inc.",p:5.2},{t:"T",n:"Telus",p:4.9},{t:"FTS",n:"Fortis Inc.",p:4.5}]},
+  {t:"TEC.TO",n:"TD Global Technology Leaders Index ETF",r:"CA",c:"Sectoriel",mer:0.39,d:false,div:false,tech:true,obl:false,liq:false,desc:"Les plus grandes entreprises technologiques mondiales. Forte exposition a l'intelligence artificielle.",h:[{t:"NVDA",n:"NVIDIA Corp.",p:12.4},{t:"AAPL",n:"Apple Inc.",p:11.8},{t:"MSFT",n:"Microsoft",p:10.9},{t:"AVGO",n:"Broadcom",p:5.6},{t:"META",n:"Meta Platforms",p:4.8}]},
+  {t:"XBB.TO",n:"iShares Core Canadian Bond Market ETF",r:"CA",c:"Obligations",mer:0.10,d:false,div:true,tech:false,obl:true,liq:false,desc:"L'ensemble du marche obligataire canadien. Protection en periode de volatilite boursiere.",h:[{t:"GOV",n:"Obligations federales Canada",p:42.1},{t:"PROV",n:"Obligations provinciales",p:26.3},{t:"CORP",n:"Obligations corporatives",p:18.6}]},
+  {t:"VAB.TO",n:"Vanguard Canadian Aggregate Bond Index ETF",r:"CA",c:"Obligations",mer:0.09,d:false,div:true,tech:false,obl:true,liq:false,desc:"Obligations canadiennes diversifiees avec des frais tres bas. Alternative a XBB.",h:[{t:"GOV",n:"Obligations federales Canada",p:40.5},{t:"PROV",n:"Obligations provinciales",p:27.8},{t:"CORP",n:"Obligations corporatives",p:19.2}]},
+  {t:"CASH.TO",n:"Horizons High Interest Savings ETF",r:"CA",c:"Liquidite",mer:0.13,d:false,div:true,tech:false,obl:false,liq:true,desc:"Equivalent a un compte d'epargne a interet eleve en format ETF. Zero risque de marche.",h:[{t:"HISA",n:"Depots bancaires a interet eleve",p:100.0}]},
+  {t:"PSA.TO",n:"Purpose High Interest Savings ETF",r:"CA",c:"Liquidite",mer:0.15,d:false,div:true,tech:false,obl:false,liq:true,desc:"ETF de liquidite offrant un rendement similaire a un compte d'epargne a interet eleve.",h:[{t:"HISA",n:"Depots bancaires",p:100.0}]},
+  {t:"HXT.TO",n:"Horizons S&P/TSX 60 Index ETF",r:"CA",c:"Actions",mer:0.03,d:false,div:false,tech:false,obl:false,liq:false,desc:"L'ETF canadien le moins cher — replication synthetique. Fiscalement avantageux hors CELI.",h:[{t:"RY",n:"Banque Royale",p:7.8},{t:"TD",n:"Banque TD",p:6.5},{t:"CNR",n:"CN Rail",p:4.9},{t:"BN",n:"Brookfield",p:4.6}]},
+  {t:"ZEB.TO",n:"BMO Equal Weight Banks Index ETF",r:"CA",c:"Sectoriel",mer:0.28,d:false,div:true,tech:false,obl:false,liq:false,desc:"Les 6 grandes banques canadiennes a ponderation egale. Exposition pure au secteur bancaire.",h:[{t:"RY",n:"Banque Royale",p:16.7},{t:"TD",n:"Banque TD",p:16.7},{t:"BMO",n:"Banque de Montreal",p:16.7},{t:"BNS",n:"Banque Scotia",p:16.7},{t:"CM",n:"CIBC",p:16.7}]},
+  {t:"XEI.TO",n:"iShares S&P/TSX Composite High Dividend",r:"CA",c:"Dividendes",mer:0.22,d:false,div:true,tech:false,obl:false,liq:false,desc:"Actions canadiennes a rendement de dividende eleve. Revenus mensuels distribues.",h:[{t:"ENB",n:"Enbridge",p:8.4},{t:"TRP",n:"TC Energy",p:7.1},{t:"SU",n:"Suncor Energy",p:6.8},{t:"PPL",n:"Pembina Pipeline",p:5.9}]},
+  {t:"ZRE.TO",n:"BMO Equal Weight REITs Index ETF",r:"CA",c:"Dividendes",mer:0.61,d:false,div:true,tech:false,obl:false,liq:false,desc:"Fonds de placement immobilier canadiens a ponderation egale. Immobilier sans propriete.",h:[{t:"GRT.UN",n:"Granite REIT",p:7.2},{t:"CAR.UN",n:"Canadian Apartment REIT",p:6.8},{t:"REI.UN",n:"RioCan REIT",p:6.4}]},
+  {t:"SPY",n:"SPDR S&P 500 ETF Trust",r:"US",c:"Actions",mer:0.09,d:true,div:false,tech:false,obl:false,liq:false,desc:"Le plus grand et plus liquide ETF au monde. Replique les 500 plus grandes entreprises americaines.",h:[{t:"AAPL",n:"Apple Inc.",p:7.2},{t:"MSFT",n:"Microsoft",p:6.8},{t:"NVDA",n:"NVIDIA",p:6.1},{t:"AMZN",n:"Amazon",p:3.6},{t:"META",n:"Meta",p:2.5}]},
+  {t:"QQQ",n:"Invesco QQQ Trust",r:"US",c:"Croissance",mer:0.20,d:false,div:false,tech:true,obl:false,liq:false,desc:"Les 100 plus grandes entreprises du Nasdaq. Forte concentration en technologie et croissance.",h:[{t:"AAPL",n:"Apple Inc.",p:9.1},{t:"MSFT",n:"Microsoft",p:8.8},{t:"NVDA",n:"NVIDIA",p:8.2},{t:"AMZN",n:"Amazon",p:5.4},{t:"AVGO",n:"Broadcom",p:4.1}]},
+  {t:"VTI",n:"Vanguard Total Stock Market ETF",r:"US",c:"Actions",mer:0.03,d:true,div:false,tech:false,obl:false,liq:false,desc:"L'ensemble du marche boursier americain — plus de 3 600 entreprises. MER ultra-faible.",h:[{t:"AAPL",n:"Apple Inc.",p:6.8},{t:"MSFT",n:"Microsoft",p:6.3},{t:"NVDA",n:"NVIDIA",p:5.6},{t:"AMZN",n:"Amazon",p:3.2}]},
+  {t:"VOO",n:"Vanguard S&P 500 ETF",r:"US",c:"Actions",mer:0.03,d:true,div:false,tech:false,obl:false,liq:false,desc:"Alternative a SPY avec des frais inferieurs. Favori des epargnants a long terme.",h:[{t:"AAPL",n:"Apple Inc.",p:7.2},{t:"MSFT",n:"Microsoft",p:6.8},{t:"NVDA",n:"NVIDIA",p:6.1},{t:"AMZN",n:"Amazon",p:3.6}]},
+  {t:"IVV",n:"iShares Core S&P 500 ETF",r:"US",c:"Actions",mer:0.03,d:true,div:false,tech:false,obl:false,liq:false,desc:"Troisieme grand ETF S&P 500 — frais identiques a VOO. Tres liquide.",h:[{t:"AAPL",n:"Apple Inc.",p:7.2},{t:"MSFT",n:"Microsoft",p:6.8},{t:"NVDA",n:"NVIDIA",p:6.1}]},
+  {t:"VEA",n:"Vanguard FTSE Developed Markets ETF",r:"US",c:"Actions",mer:0.05,d:false,div:false,tech:false,obl:false,liq:false,desc:"Marches developpes hors USA — Europe, Japon, Australie, Canada. Diversification internationale.",h:[{t:"SAP",n:"SAP SE",p:1.8},{t:"ASML",n:"ASML Holding",p:1.6},{t:"ROG",n:"Roche Holding",p:1.4}]},
+  {t:"VWO",n:"Vanguard FTSE Emerging Markets ETF",r:"US",c:"Actions",mer:0.08,d:false,div:false,tech:false,obl:false,liq:false,desc:"Marches emergents — Inde, Chine, Bresil, Taiwan. Potentiel de croissance a long terme.",h:[{t:"TSM",n:"Taiwan Semiconductor",p:5.8},{t:"BABA",n:"Alibaba Group",p:3.2}]},
+  {t:"VGT",n:"Vanguard Information Technology ETF",r:"US",c:"Sectoriel",mer:0.10,d:false,div:false,tech:true,obl:false,liq:false,desc:"Le secteur technologique americain pur. NVIDIA, Apple, Microsoft, Broadcom.",h:[{t:"AAPL",n:"Apple Inc.",p:17.2},{t:"MSFT",n:"Microsoft",p:16.8},{t:"NVDA",n:"NVIDIA",p:15.1},{t:"AVGO",n:"Broadcom",p:5.6}]},
+  {t:"XLK",n:"Technology Select Sector SPDR Fund",r:"US",c:"Sectoriel",mer:0.09,d:false,div:false,tech:true,obl:false,liq:false,desc:"Technologie du S&P 500. Concentration elevee sur les mega-caps tech americaines.",h:[{t:"AAPL",n:"Apple Inc.",p:22.4},{t:"MSFT",n:"Microsoft",p:21.8},{t:"NVDA",n:"NVIDIA",p:15.6}]},
+  {t:"SCHD",n:"Schwab US Dividend Equity ETF",r:"US",c:"Dividendes",mer:0.06,d:false,div:true,tech:false,obl:false,liq:false,desc:"Actions americaines a dividendes de qualite et croissance durable. MER tres bas.",h:[{t:"LMT",n:"Lockheed Martin",p:4.8},{t:"CVX",n:"Chevron",p:4.6},{t:"ABBV",n:"AbbVie",p:4.5},{t:"KO",n:"Coca-Cola",p:4.2}]},
+  {t:"JEPI",n:"JPMorgan Equity Premium Income ETF",r:"US",c:"Dividendes",mer:0.35,d:false,div:true,tech:false,obl:false,liq:false,desc:"Actions S&P 500 avec strategie d'options couvertes. Dividende mensuel eleve — environ 7 a 9% par an.",h:[{t:"MSFT",n:"Microsoft",p:1.9},{t:"AMZN",n:"Amazon",p:1.8},{t:"NVDA",n:"NVIDIA",p:1.7}]},
+  {t:"JEPQ",n:"JPMorgan Nasdaq Equity Premium Income ETF",r:"US",c:"Dividendes",mer:0.35,d:false,div:true,tech:true,obl:false,liq:false,desc:"Nasdaq 100 avec strategie d'options couvertes. Dividende mensuel eleve sur les actions technologiques.",h:[{t:"MSFT",n:"Microsoft",p:8.2},{t:"AAPL",n:"Apple",p:8.0},{t:"NVDA",n:"NVIDIA",p:7.8}]},
+  {t:"AGG",n:"iShares Core US Aggregate Bond ETF",r:"US",c:"Obligations",mer:0.03,d:false,div:true,tech:false,obl:true,liq:false,desc:"L'ensemble du marche obligataire americain. Reference mondiale pour les obligations.",h:[{t:"T-BOND",n:"Bons du Tresor americain",p:43.2},{t:"AGENCY",n:"Agences federales",p:26.1}]},
+  {t:"BND",n:"Vanguard Total Bond Market ETF",r:"US",c:"Obligations",mer:0.03,d:false,div:true,tech:false,obl:true,liq:false,desc:"Marche obligataire americain complet a frais ultra-bas. Alternative a AGG avec Vanguard.",h:[{t:"T-BOND",n:"Bons du Tresor americain",p:44.1},{t:"CORP",n:"Obligations corporatives",p:23.9}]},
+  {t:"GLD",n:"SPDR Gold Shares",r:"US",c:"Sectoriel",mer:0.40,d:false,div:false,tech:false,obl:false,liq:false,desc:"L'or physique en format ETF. Protection contre l'inflation et les periodes d'incertitude.",h:[{t:"GOLD",n:"Or physique en coffres",p:100.0}]},
+  {t:"XLF",n:"Financial Select Sector SPDR Fund",r:"US",c:"Sectoriel",mer:0.09,d:false,div:true,tech:false,obl:false,liq:false,desc:"Banques et services financiers americains — JPMorgan, Berkshire, Visa, Mastercard.",h:[{t:"BRK.B",n:"Berkshire Hathaway",p:13.2},{t:"JPM",n:"JPMorgan Chase",p:12.8},{t:"V",n:"Visa Inc.",p:8.4}]},
+  {t:"VYM",n:"Vanguard High Dividend Yield ETF",r:"US",c:"Dividendes",mer:0.06,d:false,div:true,tech:false,obl:false,liq:false,desc:"Actions americaines a dividendes eleves. MER tres bas, excellent pour revenus passifs.",h:[{t:"JPM",n:"JPMorgan Chase",p:4.2},{t:"ABBV",n:"AbbVie",p:3.8},{t:"XOM",n:"Exxon Mobil",p:3.6}]},
+  {t:"QYLD",n:"Global X NASDAQ 100 Covered Call ETF",r:"US",c:"Dividendes",mer:0.60,d:false,div:true,tech:true,obl:false,liq:false,desc:"Nasdaq 100 avec options couvertes. Dividende mensuel tres eleve — environ 12 a 15% — mais croissance limitee.",h:[{t:"AAPL",n:"Apple Inc.",p:9.1},{t:"MSFT",n:"Microsoft",p:8.8},{t:"NVDA",n:"NVIDIA",p:8.2}]}
+];
+let liveData={};
+let chip="all";
+function toggleMenu(){document.getElementById("mobileMenu").classList.toggle("open");document.getElementById("hamburger").classList.toggle("open");}
+async function fetchData(){
+  const cached=sessionStorage.getItem(CACHE);
+  if(cached){try{const {d,ts}=JSON.parse(cached);if(Date.now()-ts<TTL){liveData=d;showUpdate(ts);render();return;}}catch(e){}}
+  showSkel();
+  const tickers=DB.map(e=>e.t).join(",");
+  try{
+    const res=await fetch("https://financialmodelingprep.com/api/v3/quote/"+tickers+"?apikey="+FMP);
+    if(!res.ok)throw new Error();
+    const arr=await res.json();
+    if(Array.isArray(arr)){arr.forEach(q=>{liveData[q.symbol]=q;});sessionStorage.setItem(CACHE,JSON.stringify({d:liveData,ts:Date.now()}));showUpdate(Date.now());}
+  }catch(e){document.getElementById("lastUpdate").textContent="Donnees statiques uniquement";}
+  render();
+}
+function showUpdate(ts){const d=new Date(ts);document.getElementById("lastUpdate").textContent="Actualise : "+d.toLocaleTimeString("fr-CA",{hour:"2-digit",minute:"2-digit"});}
+function showSkel(){document.getElementById("tbody").innerHTML=Array(8).fill("<tr><td><div class='skel' style='width:120px;margin-bottom:5px'></div><div class='skel' style='width:70px;height:10px'></div></td><td><div class='skel' style='width:70px'></div></td><td><div class='skel' style='width:30px'></div></td><td><div class='skel' style='width:55px'></div></td><td><div class='skel' style='width:55px'></div></td><td><div class='skel' style='width:80px'></div></td><td><div class='skel' style='width:35px'></div></td><td><div class='skel' style='width:55px'></div></td></tr>").join("");}
+function getFiltered(){
+  const q=document.getElementById("searchInput").value.toLowerCase();
+  const reg=document.getElementById("regionFilter").value;
+  const cat=document.getElementById("catFilter").value;
+  const sort=document.getElementById("sortSelect").value;
+  let res=DB.filter(e=>{
+    if(q&&!e.t.toLowerCase().includes(q)&&!e.n.toLowerCase().includes(q)&&!e.c.toLowerCase().includes(q)&&!e.desc.toLowerCase().includes(q))return false;
+    if(reg&&e.r!==reg)return false;
+    if(cat&&e.c!==cat)return false;
+    if(chip==="debutant"&&!e.d)return false;
+    if(chip==="faibles-frais"&&e.mer>0.15)return false;
+    if(chip==="dividendes"&&!e.div)return false;
+    if(chip==="tech"&&!e.tech)return false;
+    if(chip==="obligations"&&!e.obl)return false;
+    if(chip==="liquidite"&&!e.liq)return false;
+    return true;
+  });
+  const lv=t=>liveData[t]||{};
+  if(sort==="price-desc")res.sort((a,b)=>(lv(b.t).price||0)-(lv(a.t).price||0));
+  else if(sort==="chg-desc")res.sort((a,b)=>(lv(b.t).changesPercentage||0)-(lv(a.t).changesPercentage||0));
+  else if(sort==="chg-asc")res.sort((a,b)=>(lv(a.t).changesPercentage||0)-(lv(b.t).changesPercentage||0));
+  else if(sort==="mer-asc")res.sort((a,b)=>a.mer-b.mer);
+  else if(sort==="az")res.sort((a,b)=>a.t.localeCompare(b.t));
+  return res;
+}
+function setChip(el,f){document.querySelectorAll(".chip").forEach(c=>c.classList.remove("active"));el.classList.add("active");chip=f;render();}
+function fp(p,r){if(!p)return"<span class='na'>--</span>";return"<span class='price-main'>"+p.toFixed(2)+"</span><span class='price-cur'>"+(r==="CA"?"CAD":"USD")+"</span>";}
+function fc(pct){if(pct===undefined||pct===null)return"<span class='na'>--</span>";const cls=pct>0?"chg-pos":pct<0?"chg-neg":"chg-neu";const s=pct>0?"+":"";return"<span class='"+cls+"'>"+s+pct.toFixed(2)+"%</span>";}
+function fm(m){const cls=m<=0.10?" mer-low":"";return"<span class='mer-val"+cls+"'>"+(m*100).toFixed(2)+"%</span>";}
+function render(){
+  const res=getFiltered();
+  document.getElementById("shownCount").textContent=res.length;
+  if(!res.length){document.getElementById("tbody").innerHTML="<tr><td colspan='8' style='text-align:center;padding:48px;color:var(--muted)'>Aucun ETF trouve avec ces criteres.</td></tr>";return;}
+  document.getElementById("tbody").innerHTML=res.map(e=>{
+    const l=liveData[e.t]||{};
+    const rng=(!l.yearLow&&!l.yearHigh)?"<span class='na'>--</span>":"<span style='font-size:12px;color:var(--muted)'>"+(l.yearLow?l.yearLow.toFixed(2):"--")+" / "+(l.yearHigh?l.yearHigh.toFixed(2):"--")+"</span>";
+    return"<tr onclick="openModal('"+e.t+"')"><td><span class='etf-ticker'>"+e.t+"</span><span class='etf-name'>"+e.n+"</span></td><td><span class='cat-pill'>"+e.c+"</span></td><td><span class='"+(e.r==="CA"?"region-ca":"region-us")+"'>"+(e.r==="CA"?"TSX":"NYSE")+"</span></td><td>"+fp(l.price,e.r)+"</td><td>"+fc(l.changesPercentage)+"</td><td>"+rng+"</td><td>"+fm(e.mer)+"</td><td><button class='detail-btn'>Details</button></td></tr>";
+  }).join("");
+}
+function openModal(ticker){
+  const e=DB.find(x=>x.t===ticker);if(!e)return;
+  const l=liveData[e.t]||{};
+  const pct=l.changesPercentage;
+  const cls=pct>0?"chg-pos":pct<0?"chg-neg":"chg-neu";
+  const s=pct>0?"+":"";
+  document.getElementById("modalContent").innerHTML=
+    "<div class='m-head'><div class='m-tag'>"+e.c+" — "+(e.r==="CA"?"Bourse de Toronto (TSX)":"NYSE / NASDAQ")+"</div>"+
+    "<div class='m-title'>"+e.n+"<br><span style='font-size:14px;color:var(--terra);letter-spacing:2px'>"+e.t+"</span></div></div>"+
+    "<div class='m-prices'>"+
+    "<div class='m-price-item'><span class='m-price-lbl'>Prix actuel</span><span class='m-price-val' style='color:var(--text)'>"+(l.price?l.price.toFixed(2)+" "+(e.r==="CA"?"$CA":"$US"):"--")+"</span></div>"+
+    "<div class='m-price-item'><span class='m-price-lbl'>Variation</span><span class='m-price-val "+cls+"'>"+(pct!=null?s+pct.toFixed(2)+"%":"--")+"</span></div>"+
+    "<div class='m-price-item'><span class='m-price-lbl'>Bas 52 sem.</span><span class='m-price-val' style='color:var(--down);font-size:16px'>"+(l.yearLow?l.yearLow.toFixed(2):"--")+"</span></div>"+
+    "<div class='m-price-item'><span class='m-price-lbl'>Haut 52 sem.</span><span class='m-price-val' style='color:var(--up);font-size:16px'>"+(l.yearHigh?l.yearHigh.toFixed(2):"--")+"</span></div></div>"+
+    "<div class='m-body'><p class='m-desc'>"+e.desc+"</p>"+
+    "<div class='m-grid'>"+
+    "<div class='m-item'>Frais de gestion (MER)<span>"+(e.mer*100).toFixed(2)+"%"+(e.mer<=0.10?" — Tres faibles":"")+"</span></div>"+
+    "<div class='m-item'>Dividende<span>"+(e.div?"Oui — revenus reguliers":"Non — croissance uniquement")+"</span></div>"+
+    "<div class='m-item'>Ouverture<span>"+(l.open?l.open.toFixed(2):"--")+"</span></div>"+
+    "<div class='m-item'>Cloture precedente<span>"+(l.previousClose?l.previousClose.toFixed(2):"--")+"</span></div>"+
+    "<div class='m-item'>Recommande debutant<span>"+(e.d?"Oui":"Non")+"</span></div>"+
+    "<div class='m-item'>Bourse<span>"+(e.r==="CA"?"Toronto Stock Exchange (TSX)":"NYSE / NASDAQ")+"</span></div></div>"+
+    "<div class='m-section'>Principales composantes</div>"+
+    "<div class='holdings-list'>"+e.h.map(h=>"<div class='holding-row'><span class='h-ticker'>"+h.t+"</span><span class='h-name'>"+h.n+"</span><div class='h-bar' style='width:"+Math.max(h.p*4,8)+"px'></div><span class='h-pct'>"+h.p.toFixed(1)+"%</span></div>").join("")+"</div>"+
+    "<a href='https://wealthsimple.com/invite/G7ZSVC' class='ws-btn' target='_blank' rel='sponsored nofollow noopener'>Acheter "+e.t+" sans commission sur Wealthsimple</a></div>"+
+    "<div class='m-disclaimer'>Les donnees sont fournies par Financial Modeling Prep a titre informatif uniquement. Elles ne constituent pas un conseil en placement. Les performances passees ne garantissent pas les rendements futurs.</div>";
+  document.getElementById("modalOverlay").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closeModal(){document.getElementById("modalOverlay").classList.remove("open");document.body.style.overflow="";}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+fetchData();
+</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

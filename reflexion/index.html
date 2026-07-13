@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+ <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
  <!-- Google Analytics -->
  <script src="/consent.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
@@ -13,6 +14,20 @@
  <meta charset="UTF-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  <title>Mes réflexions honnêtes sur l'argent — Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Mes réflexions honnêtes sur l'argent"
+        slug "reflexion"
+        description "Ce que personne ne dit sur l'argent : la honte, la peur de manquer, la comparaison. Des réflexions sans filtre, tirées de mon propre parcours."
+        keywords réflexions sur l'argent, psychologie de l'argent, honte financière, rapport à l'argent, finances personnelles
+   EN : title "My Honest Reflections on Money"
+        slug "reflections"
+        description "What nobody says about money: the shame, the fear of running out, the comparison. Unfiltered reflections drawn from my own journey."
+        keywords reflections on money, psychology of money, financial shame, relationship with money, personal finance
+   ES : title "Mis reflexiones honestas sobre el dinero"
+        slug "reflexiones"
+        description "Lo que nadie dice sobre el dinero: la vergüenza, el miedo a que falte, la comparación. Reflexiones sin filtro, sacadas de mi propio recorrido."
+        keywords reflexiones sobre el dinero, psicología del dinero, vergüenza financiera, relación con el dinero, finanzas personales -->
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
  <style>
  :root {
@@ -150,6 +165,10 @@
  <meta name="robots" content="index, follow"/>
  <meta name="author" content="Route vers le Million"/>
  <link rel="canonical" href="https://route-vers-le-million.blog/reflexion/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/reflexion/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/reflections/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/reflexiones/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/reflexion/"/>
  <meta property="og:type" content="Article"/>
  <meta property="og:title" content="Mes réflexions honnêtes sur l'argent — Route vers le Million"/>
  <meta property="og:description" content="Réflexions personnelles sur l'argent, l'investissement et la liberté financière. Mentalité, revenus multiples au Québec."/>
@@ -188,11 +207,11 @@
  <span></span><span></span><span></span>
  </button>
  <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
- <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+ <a class="lang-btn" data-lang="fr" href="/reflexion/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+ <a class="lang-btn" data-lang="en" href="/en/reflections/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+ <a class="lang-btn" data-lang="es" href="/es/reflexiones/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
  </div>
  <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
  </div>
@@ -207,9 +226,9 @@
  <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
  <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
  <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
- <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
- <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
- <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+ <a class="lang-btn" data-lang="fr" href="/reflexion/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/reflections/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/reflexiones/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
  </div>
  <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
 </div>

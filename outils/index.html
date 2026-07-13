@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-CA">
 <head>
+ <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
  <!-- Google Analytics -->
  <script src="/consent.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
@@ -13,6 +14,20 @@
  <meta charset="UTF-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  <title>Outils financiers gratuits - Calculatrices et simulateurs | Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Outils financiers gratuits : calculatrices et simulateurs"
+        slug "outils"
+        description "Calculatrice d'intérêts composés, simulateur de retraite, radar ETF, veille des salaires : les outils que j'utilise, gratuits et sans inscription."
+        keywords outils financiers gratuits, calculatrice intérêts composés, simulateur de retraite, radar ETF, finances personnelles Québec
+   EN : title "Free Financial Tools: Calculators and Simulators"
+        slug "tools"
+        description "Compound interest calculator, retirement simulator, ETF radar, salary tracker: the tools I use, free and with no sign-up."
+        keywords free financial tools, compound interest calculator, retirement simulator, ETF radar, personal finance Canada
+   ES : title "Herramientas financieras gratuitas: calculadoras y simuladores"
+        slug "herramientas"
+        description "Calculadora de interés compuesto, simulador de jubilación, radar de ETF, seguimiento de salarios: las herramientas que uso, gratis y sin registro."
+        keywords herramientas financieras gratuitas, calculadora de interés compuesto, simulador de jubilación, radar de ETF, finanzas personales -->
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
  <style>
  :root {
@@ -109,6 +124,10 @@
  <meta name="robots" content="index, follow"/>
  <meta name="author" content="Route vers le Million"/>
  <link rel="canonical" href="https://route-vers-le-million.blog/outils/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/outils/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/tools/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/herramientas/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/outils/"/>
  <meta property="og:type" content="website"/>
  <meta property="og:title" content="Outils financiers gratuits - Calculatrices et simulateurs | Route vers le Million"/>
  <meta property="og:description" content="Outils gratuits pour gérer vos finances au Québec: calculatrice d'intérêts composés, explorateur d'ETF, calculatrice de retraite, explorateur de carrières."/>
@@ -147,11 +166,11 @@
  <span></span><span></span><span></span>
  </button>
  <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
- <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+ <a class="lang-btn" data-lang="fr" href="/outils/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+ <a class="lang-btn" data-lang="en" href="/en/tools/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+ <a class="lang-btn" data-lang="es" href="/es/herramientas/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
  </div>
  <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
  </div>
@@ -166,9 +185,9 @@
  <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
  <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
  <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
- <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
- <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
- <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+ <a class="lang-btn" data-lang="fr" href="/outils/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/tools/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/herramientas/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
  </div>
  <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
 </div>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+  <script src="/consent.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L9QEBYDL8R');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers in Canada: Real-Time Salaries and Job Postings — Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Carrières au Canada : salaires et offres en temps réel"
+        slug "carrieres"
+        description "Les salaires réels et les offres d'emploi en direct, par profession et par région, pour décider avec des données plutôt qu'avec des impressions."
+        keywords carrières Canada, salaires par profession, offres d'emploi Québec, Guichet-Emplois, marché du travail
+   EN : title "Careers in Canada: Real-Time Salaries and Job Postings"
+        slug "careers"
+        description "Real salaries and live job postings, by occupation and by region, so you can decide with data rather than impressions."
+        keywords careers Canada, salaries by occupation, job postings, Job Bank, labour market
+   ES : title "Carreras en Canadá: salarios y ofertas en tiempo real"
+        slug "carreras"
+        description "Los salarios reales y las ofertas de empleo en directo, por profesión y por región, para decidir con datos y no con impresiones."
+        keywords carreras Canadá, salarios por profesión, ofertas de empleo, mercado laboral, Guichet-Emplois -->
+  <meta name="description" content="Real salaries and live job postings, by occupation and by region, so you can decide with data rather than impressions."/>
+  <meta name="robots" content="index, follow"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/careers/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/carrieres/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/careers/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/carreras/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/carrieres/"/>
+  <meta property="og:type" content="WebPage"/>
+  <meta property="og:locale" content="en_CA"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bg:#F5F0E8;--cream2:#E8DCC8;--white:#FFFFFF;--border:#D8CCBA;--text:#2C1A0A;--muted:#9A8A78;--light:#A0B480;--terra:#2D4A1A;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-size:15px;line-height:1.7;}
+    nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);padding:0 56px;display:flex;align-items:center;justify-content:space-between;height:62px;}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;letter-spacing:1px;color:var(--text);text-decoration:none;}
+    .nav-links{display:flex;gap:32px;list-style:none;}
+    .nav-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--text);}
+    .nav-cta{font-size:11px;letter-spacing:2px;text-transform:uppercase;background:var(--terra);color:#fff;padding:10px 22px;text-decoration:none;border-radius:100px;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s;}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+    .mobile-menu{display:none;position:fixed;top:62px;left:0;right:0;background:var(--white);border-bottom:2px solid var(--border);padding:20px 24px 28px;z-index:99;flex-direction:column;box-shadow:0 8px 32px rgba(15,25,8,.12);}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{display:block;padding:13px 0;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);}
+    .mobile-menu a:last-child{border:none;}
+    .page-hero{position:relative;height:50vh;min-height:340px;display:flex;align-items:flex-end;overflow:hidden;}
+    .hero-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,25,8,.80) 0%,rgba(15,25,8,.12) 60%,transparent 100%);}
+    .hero-content{position:relative;z-index:1;padding:0 80px 60px;max-width:760px;}
+    .hero-tag{display:inline-block;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.22);padding:5px 14px;border-radius:2px;margin-bottom:16px;}
+    .hero-content h1{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,50px);font-weight:400;color:#fff;line-height:1.15;margin-bottom:12px;}
+    .hero-content h1 em{font-style:italic;}
+    .hero-content p{font-size:14px;color:rgba(255,255,255,.62);max-width:480px;}
+    .live-bar{background:var(--terra);padding:10px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+    .live-dot{width:7px;height:7px;background:#6fcf6f;border-radius:50%;animation:blink 2s ease-in-out infinite;display:inline-block;margin-right:8px;}
+    @keyframes blink{0%,100%{opacity:1;}50%{opacity:.4;}}
+    .live-text{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.85);}
+    .live-update{font-size:11px;color:rgba(255,255,255,.5);}
+    .search-bar{background:var(--cream2);border-bottom:1px solid var(--border);padding:24px 56px;}
+    .search-inner{max-width:1100px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;}
+    .search-inner input{flex:1;min-width:220px;padding:12px 18px;border:1px solid var(--border);background:var(--white);font-family:'Jost',sans-serif;font-size:14px;color:var(--text);outline:none;border-radius:2px;}
+    .search-inner input:focus{border-color:var(--terra);}
+    .search-inner input::placeholder{color:var(--muted);}
+    .search-inner select{padding:11px 14px;border:1px solid var(--border);background:var(--white);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);outline:none;border-radius:2px;cursor:pointer;}
+    .chips-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:13px 56px;}
+    .chips-inner{max-width:1100px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+    .chips-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+    .chip{padding:5px 14px;border:1px solid var(--border);background:transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);cursor:pointer;border-radius:100px;transition:all .2s;}
+    .chip:hover{color:var(--text);border-color:var(--text);}
+    .chip.active{background:var(--terra);color:#fff;border-color:var(--terra);}
+    .results-wrap{max-width:1100px;margin:0 auto;padding:36px 56px 100px;}
+    .results-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;border-bottom:1px solid var(--border);padding-bottom:12px;flex-wrap:wrap;gap:8px;}
+    .results-count{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
+    .results-count strong{color:var(--terra);}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .card{border:1px solid var(--border);background:var(--white);border-radius:4px;overflow:hidden;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;cursor:pointer;}
+    .card:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(46,28,14,.1);}
+    .card-img{height:150px;background-size:cover;background-position:center;position:relative;flex-shrink:0;}
+    .card-cat{position:absolute;top:10px;left:10px;background:var(--terra);color:#fff;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 9px;border-radius:100px;}
+    .card-live-badge{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;font-size:9px;padding:3px 8px;border-radius:2px;letter-spacing:.5px;}
+    .card-body{padding:18px;flex:1;display:flex;flex-direction:column;}
+    .card-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:var(--text);line-height:1.3;margin-bottom:12px;}
+    .card-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:12px;border-radius:2px;overflow:hidden;}
+    .stat{background:var(--bg);padding:9px 10px;text-align:center;}
+    .stat-lbl{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);display:block;}
+    .stat-val{font-family:'Playfair Display',serif;font-size:15px;color:var(--terra);display:block;margin-top:1px;}
+    .card-desc{font-size:12px;color:var(--muted);line-height:1.65;flex:1;margin-bottom:12px;}
+    .card-btn{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--terra);border:none;background:none;cursor:pointer;font-family:'Jost',sans-serif;border-bottom:1px solid var(--border);padding-bottom:2px;align-self:flex-start;}
+    .skel{background:var(--cream2);border-radius:2px;animation:sk 1.4s ease-in-out infinite;}
+    @keyframes sk{0%,100%{opacity:1;}50%{opacity:.35;}}
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(44,26,10,.45);z-index:200;overflow-y:auto;}
+    .modal-overlay.open{display:block;}
+    .modal-wrap{display:flex;align-items:flex-start;justify-content:center;min-height:100%;padding:40px 20px;}
+    .modal{background:var(--white);max-width:680px;width:100%;border-radius:4px;position:relative;animation:mIn .25s ease;margin:auto;}
+    @keyframes mIn{from{transform:translateY(14px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+    .modal-close{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;background:var(--bg);border:1px solid var(--border);cursor:pointer;font-size:13px;color:var(--muted);display:flex;align-items:center;justify-content:center;}
+    .m-head{padding:28px 28px 0;}
+    .m-tag-line{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);margin-bottom:6px;}
+    .m-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;color:var(--text);line-height:1.25;margin-bottom:18px;}
+    .m-salary-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin:0 28px 20px;border-radius:2px;overflow:hidden;}
+    .m-sal{background:var(--bg);padding:16px;text-align:center;}
+    .m-sal-lbl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;}
+    .m-sal-val{font-family:'Playfair Display',serif;font-size:22px;display:block;color:var(--terra);}
+    .m-body{padding:0 28px 28px;}
+    .m-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:20px;}
+    .m-section{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--terra);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+    .jobs-list{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;max-height:320px;overflow-y:auto;}
+    .job-row{border:1px solid var(--border);padding:12px 14px;border-radius:2px;background:var(--bg);}
+    .job-title{font-size:13px;color:var(--text);font-weight:500;margin-bottom:2px;}
+    .job-company{font-size:11px;color:var(--muted);}
+    .job-meta{display:flex;gap:12px;margin-top:6px;flex-wrap:wrap;}
+    .job-meta span{font-size:10px;letter-spacing:.5px;color:var(--muted);}
+    .job-salary{color:var(--terra);font-weight:500;}
+    .job-link{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--terra);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:1px;margin-top:6px;display:inline-block;}
+    .ws-btn{display:block;text-align:center;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px;text-decoration:none;border-radius:2px;margin-top:16px;}
+    .m-disclaimer{font-size:11px;color:var(--muted);line-height:1.7;padding:12px 14px;border-top:1px solid var(--border);background:var(--cream2);border-radius:0 0 4px 4px;}
+    footer{background:var(--cream2);border-top:1px solid var(--border);padding:22px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+    footer p{font-size:11px;color:var(--light);letter-spacing:1px;}
+    footer a{color:var(--muted);text-decoration:none;}
+    @media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr);}.results-wrap,.search-bar,.chips-bar,.live-bar{padding-left:24px;padding-right:24px;}}
+    @media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none !important;}.hamburger{display:flex;}.hero-content{padding:0 20px 40px !important;}.search-bar,.chips-bar,.live-bar{padding:14px 20px;}.results-wrap{padding:20px 16px 80px;}.grid{grid-template-columns:1fr;}.m-salary-row{grid-template-columns:1fr 1fr;}.m-head{padding:22px 18px 0;}.m-body{padding:0 18px 24px;}.m-salary-row{margin:0 18px 18px;}footer{padding:16px 20px;flex-direction:column;text-align:center;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/en/" class="nav-logo">Route vers le Million</a>
+  <ul class="nav-links">
+    <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+    <li><a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+    <li><a href="/en/etfs/" data-i18n="nav.etf">ETFs</a></li>
+    <li><a href="/en/tools/" class="active" data-i18n="nav.outils">Tools</a></li>
+    <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+    <a class="lang-btn" data-lang="fr" href="/carrieres/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+    <span style="color:var(--border);font-size:10px;">·</span>
+    <a class="lang-btn" data-lang="en" href="/en/careers/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+    <span style="color:var(--border);font-size:10px;">·</span>
+    <a class="lang-btn" data-lang="es" href="/es/carreras/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+    </div>
+    <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple</a>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/en/" data-i18n="nav.accueil">Home</a>
+  <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+  <a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+  <a href="/en/etfs/" data-i18n="nav.etf">ETFs</a>
+  <a href="/en/tools/" style="color:var(--terra);font-weight:500;" data-i18n="nav.outils">Tools</a>
+  <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+  <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+    <a class="lang-btn" data-lang="fr" href="/carrieres/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+    <a class="lang-btn" data-lang="en" href="/en/careers/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+    <a class="lang-btn" data-lang="es" href="/es/carreras/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+  </div>
+  <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+<div class="page-hero">
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-tag" data-i18n="car.hero.tag">Job Market Data</span>
+    <h1 data-i18n="car.hero.title">Find your career <em>in Canada</em></h1>
+    <p data-i18n="car.hero.sub">Real salaries, currently active listings, prospects — live data from the Canadian market via Adzuna.</p>
+  </div>
+</div>
+<div class="live-bar">
+  <div><span class="live-dot"></span><span class="live-text" data-i18n="car.live.text">Live data — Adzuna Canada</span></div>
+  <span class="live-update" id="lastUpdate">Chargement...</span>
+</div>
+<div class="search-bar">
+  <div class="search-inner">
+    <input type="text" id="searchInput" placeholder="Rechercher une profession — ex. developpeur, infirmier, comptable..." oninput="applyFilters()">
+    <select id="catFilter" onchange="applyFilters()">
+      <option value="" data-i18n="car.select.all">All sectors</option>
+      <option value="tech" data-i18n="car.select.tech">Technology</option>
+      <option value="finance" data-i18n="car.select.finance">Finance</option>
+      <option value="sante" data-i18n="car.select.sante">Health</option>
+      <option value="immigration" data-i18n="car.select.imm">Immigration and law</option>
+      <option value="construction" data-i18n="car.select.const">Construction</option>
+      <option value="admin" data-i18n="car.select.admin">Administration</option>
+      <option value="education" data-i18n="car.select.edu">Education</option>
+      <option value="creatif" data-i18n="car.select.creatif">Creative and design</option>
+    </select>
+    <select id="sortSelect" onchange="applyFilters()">
+      <option value="" data-i18n="car.sort.default">Default sort</option>
+      <option value="sal-desc" data-i18n="car.sort.salDesc">Salary descending</option>
+      <option value="offres-desc" data-i18n="car.sort.offres">Most listings</option>
+      <option value="az" data-i18n="car.sort.az">A to Z</option>
+    </select>
+  </div>
+</div>
+<div class="chips-bar">
+  <div class="chips-inner">
+    <span class="chips-lbl" data-i18n="car.filter.lbl">Quick filter</span>
+    <button class="chip active" data-i18n="car.chip.all" onclick="setChip(this,'all')">All</button>
+    <button class="chip" data-i18n="car.chip.teletravail" onclick="setChip(this,'teletravail')">Remote work</button>
+    <button class="chip" data-i18n="car.chip.formCourte" onclick="setChip(this,'formation-courte')">Short training</button>
+    <button class="chip" data-i18n="car.chip.autonome" onclick="setChip(this,'autonome')">Freelance</button>
+    <button class="chip" data-i18n="car.chip.demande" onclick="setChip(this,'demande')">High demand</button>
+    <button class="chip" data-i18n="car.chip.salEleve" onclick="setChip(this,'sal-eleve')">High salary</button>
+  </div>
+</div>
+<div class="results-wrap">
+  <div class="results-bar">
+    <div class="results-count"><strong id="shownCount">--</strong> <span data-i18n="car.results.suffix">professions — Adzuna Canada data</span></div>
+  </div>
+  <div class="grid" id="careersGrid"></div>
+</div>
+<div style="background:var(--cream2);text-align:center;padding:56px 48px;border-top:1px solid var(--border);">
+  <p data-i18n="car.cta.tag" style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--terra);margin-bottom:14px;">Investing in your future</p>
+  <h2 data-i18n="car.cta.title" style="font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:var(--text);margin-bottom:10px;">Change careers and invest at the same time</h2>
+  <p data-i18n="car.cta.body" style="font-size:14px;color:var(--muted);margin-bottom:24px;max-width:400px;margin-left:auto;margin-right:auto;line-height:1.75;">Every salary increase is an opportunity to invest more. Even $50 more per month can make a huge difference over 20 years.</p>
+  <a href="/en/calculator/" data-i18n="car.cta.calc" style="display:inline-block;border:1px solid var(--border);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;color:var(--text);border-radius:2px;margin-right:10px;">See the calculator</a>
+  <a href="https://wealthsimple.com/invite/G7ZSVC" data-i18n="car.cta.celi" style="display:inline-block;background:var(--terra);color:#fff;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;border-radius:2px;" target="_blank" rel="sponsored nofollow noopener">Open a free TFSA</a>
+</div>
+<div data-newsletter></div>
+<footer>
+  <p><strong style="color:var(--muted);font-weight:400;">Route vers le Million</strong> &nbsp;&middot;&nbsp; <a href="/en/">route-vers-le-million.blog</a></p>
+  <p data-i18n="car.footer.data">Data: Adzuna Canada API · Educational platform · No financial advice</p>
+  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal-wrap"><div class="modal" id="modalBox">
+    <button class="modal-close" onclick="closeModal()">&#10005;</button>
+    <div id="modalContent"></div>
+  </div></div>
+</div>
+<script>
+const AZ_ID="86b54a35";
+const AZ_KEY="2e434014271c732b439b2dbe0a314db2";
+const CACHE_KEY="rvm_careers_v2";
+const TTL=30*60*1000;
+
+// Career profiles — enriched with context, images, and Adzuna query keywords
+const CAREERS=[
+  {id:1,title:"Developpeur web",cat:"tech",img:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",query:"web developer",teletravail:true,autonome:true,demande:true,formation:"AEC — 1 an",salEleve:true,desc:"Conception et developpement de sites web et applications. Acces rapide a l'emploi avec une formation courte."},
+  {id:2,title:"Consultant en immigration (RCCI)",cat:"immigration",img:"https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?auto=format&fit=crop&w=600&q=80",query:"immigration consultant",teletravail:true,autonome:true,demande:true,formation:"Accreditation CISR",salEleve:false,desc:"Accompagnement des particuliers et entreprises dans les demarches d'immigration canadienne. Accreditation CISR requise."},
+  {id:3,title:"Infirmier auxiliaire",cat:"sante",img:"https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=600&q=80",query:"licensed practical nurse",teletravail:false,autonome:false,demande:true,formation:"DEP — 18 mois",salEleve:false,desc:"Prodiguer des soins de base aux patients sous supervision. Formation courte avec placement quasi garanti."},
+  {id:4,title:"Comptable (CPA)",cat:"finance",img:"https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80",query:"accountant CPA",teletravail:true,autonome:true,demande:true,formation:"BAC — 4 ans",salEleve:true,desc:"Gestion des finances d'entreprises et de particuliers. Le titre CPA est l'une des meilleures garanties d'employabilite au Canada."},
+  {id:5,title:"Analyste en cybersecurite",cat:"tech",img:"https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80",query:"cybersecurity analyst",teletravail:true,autonome:false,demande:true,formation:"BAC — 3 a 4 ans",salEleve:true,desc:"Protection des systemes informatiques contre les cybermenaces. Secteur en explosion mondiale."},
+  {id:6,title:"Plombier",cat:"construction",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80",query:"plumber",teletravail:false,autonome:true,demande:true,formation:"DEP — 2 ans",salEleve:false,desc:"Installation et entretien des systemes de plomberie. Possibilite de lancer sa propre entreprise rapidement."},
+  {id:7,title:"Designer UX/UI",cat:"creatif",img:"https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80",query:"UX UI designer",teletravail:true,autonome:true,demande:true,formation:"AEC — 1 an",salEleve:false,desc:"Conception d'interfaces numeriques intuitives et esthetiques. Carriere accessible avec un bon portfolio."},
+  {id:8,title:"Analyste de donnees",cat:"tech",img:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",query:"data analyst",teletravail:true,autonome:true,demande:true,formation:"BAC — 3 ans",salEleve:true,desc:"Analyse de donnees pour aider les organisations a prendre de meilleures decisions. Present dans tous les secteurs."},
+  {id:9,title:"Electricien",cat:"construction",img:"https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",query:"electrician",teletravail:false,autonome:true,demande:true,formation:"DEP — 18 mois",salEleve:false,desc:"Installation et entretien des systemes electriques. Penurie nationale — placement quasi immediat."},
+  {id:10,title:"Conseiller financier",cat:"finance",img:"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80",query:"financial advisor",teletravail:true,autonome:true,demande:false,formation:"BAC — 3 ans",salEleve:true,desc:"Aide aux clients pour planifier leur avenir financier. Revenu mixte salaire et commissions."},
+  {id:11,title:"Enseignant",cat:"education",img:"https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80",query:"teacher",teletravail:false,autonome:false,demande:true,formation:"BAC — 4 ans",salEleve:false,desc:"Enseignement au primaire ou au secondaire. Securite d'emploi, retraite avantageuse et penurie partout au Canada."},
+  {id:12,title:"Camionneur classe 1",cat:"construction",img:"https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80",query:"truck driver class 1",teletravail:false,autonome:true,demande:true,formation:"Permis — 3 mois",salEleve:false,desc:"Transport de marchandises a travers le Canada. Formation tres courte et placement quasi immediat."},
+  {id:13,title:"Specialiste marketing numerique",cat:"creatif",img:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",query:"digital marketing specialist",teletravail:true,autonome:true,demande:true,formation:"AEC — 1 an",salEleve:false,desc:"Gestion de la presence numerique des entreprises. SEO, publicite en ligne, reseaux sociaux."},
+  {id:14,title:"Ingenieur logiciel",cat:"tech",img:"https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?auto=format&fit=crop&w=600&q=80",query:"software engineer",teletravail:true,autonome:true,demande:true,formation:"BAC — 4 ans",salEleve:true,desc:"Conception de logiciels et systemes complexes. Un des meilleurs salaires disponibles au Canada."},
+  {id:15,title:"Technicien en radiologie",cat:"sante",img:"https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=600&q=80",query:"radiologic technologist",teletravail:false,autonome:false,demande:true,formation:"DEC — 3 ans",salEleve:false,desc:"Realisation d'examens d'imagerie medicale. Emploi stable en milieu hospitalier."},
+  {id:16,title:"Comptable en management (CMA)",cat:"finance",img:"https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80",query:"management accountant",teletravail:true,autonome:false,demande:false,formation:"BAC — 4 ans",salEleve:true,desc:"Analyse financiere strategique pour les entreprises. Axe sur les decisions de gestion plutot que la comptabilite traditionnelle."},
+  {id:17,title:"Travailleur social",cat:"sante",img:"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",query:"social worker",teletravail:true,autonome:false,demande:true,formation:"BAC — 3 ans",salEleve:false,desc:"Accompagnement des individus et familles en difficulte. Secteur en fort besoin de personnel."},
+  {id:18,title:"Technicien en informatique",cat:"tech",img:"https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?auto=format&fit=crop&w=600&q=80",query:"IT technician",teletravail:true,autonome:false,demande:false,formation:"DEC — 3 ans",salEleve:false,desc:"Installation et maintenance des systemes informatiques. Present dans tous les secteurs d'activite."},
+];
+
+let liveData={};
+let chip="all";
+
+function toggleMenu(){document.getElementById("mobileMenu").classList.toggle("open");document.getElementById("hamburger").classList.toggle("open");}
+
+function fmt(n){if(!n)return"--";if(n>=1000)return Math.round(n/1000)+"k $";return n+" $";}
+
+function showSkeletons(){
+  document.getElementById("careersGrid").innerHTML=Array(6).fill(
+    "<div class='card' style='pointer-events:none'><div class='card-img' style='background:#e8dcc8'></div><div class='card-body'><div class='skel' style='width:60%;height:18px;margin-bottom:10px'></div><div class='card-stats'><div class='stat'><div class='skel' style='width:60px;height:14px;margin:0 auto'></div></div><div class='stat'><div class='skel' style='width:60px;height:14px;margin:0 auto'></div></div></div><div class='skel' style='height:40px'></div></div></div>"
+  ).join("");
+}
+
+async function fetchAdzuna(career){
+  const url=`https://api.adzuna.com/v1/api/jobs/ca/search/1?app_id=${AZ_ID}&app_key=${AZ_KEY}&what=${encodeURIComponent(career.query)}&results_per_page=5&content-type=application/json`;
+  try{
+    const r=await fetch(url);if(!r.ok)return null;
+    const d=await r.json();
+    const jobs=d.results||[];
+    const count=d.count||0;
+    let salMin=0,salMax=0,salCount=0;
+    jobs.forEach(j=>{
+      if(j.salary_min&&j.salary_max){salMin+=j.salary_min;salMax+=j.salary_max;salCount++;}
+    });
+    return{
+      count,
+      avgMin:salCount?Math.round(salMin/salCount):0,
+      avgMax:salCount?Math.round(salMax/salCount):0,
+      jobs:jobs.slice(0,4).map(j=>({title:j.title,company:j.company&&j.company.display_name?j.company.display_name:"",location:j.location&&j.location.display_name?j.location.display_name:"Canada",salMin:j.salary_min||0,salMax:j.salary_max||0,url:j.redirect_url||"#"}))
+    };
+  }catch(e){return null;}
+}
+
+async function loadAllData(){
+  // Check cache
+  const cached=sessionStorage.getItem(CACHE_KEY);
+  if(cached){
+    try{
+      const {d,ts}=JSON.parse(cached);
+      if(Date.now()-ts<TTL){liveData=d;showUpdate(ts);applyFilters();return;}
+    }catch(e){}
+  }
+  showSkeletons();
+  // Fetch in parallel batches of 3 to respect rate limits
+  const batch=async(items)=>{
+    for(const c of items){
+      const r=await fetchAdzuna(c);
+      if(r)liveData[c.id]=r;
+      await new Promise(res=>setTimeout(res,300));
+    }
+  };
+  const mid=Math.ceil(CAREERS.length/2);
+  await Promise.all([batch(CAREERS.slice(0,mid)),batch(CAREERS.slice(mid))]);
+  sessionStorage.setItem(CACHE_KEY,JSON.stringify({d:liveData,ts:Date.now()}));
+  showUpdate(Date.now());
+  applyFilters();
+}
+
+function showUpdate(ts){
+  const d=new Date(ts);
+  document.getElementById("lastUpdate").textContent="Actualise : "+d.toLocaleTimeString("fr-CA",{hour:"2-digit",minute:"2-digit"});
+}
+
+function getFiltered(){
+  const q=document.getElementById("searchInput").value.toLowerCase();
+  const cat=document.getElementById("catFilter").value;
+  const sort=document.getElementById("sortSelect").value;
+  let res=CAREERS.filter(c=>{
+    if(q&&!c.title.toLowerCase().includes(q)&&!c.desc.toLowerCase().includes(q))return false;
+    if(cat&&c.cat!==cat)return false;
+    if(chip==="teletravail"&&!c.teletravail)return false;
+    if(chip==="formation-courte"&&!["AEC — 1 an","DEP — 18 mois","DEP — 2 ans","Permis — 3 mois"].includes(c.formation))return false;
+    if(chip==="autonome"&&!c.autonome)return false;
+    if(chip==="demande"&&!c.demande)return false;
+    if(chip==="sal-eleve"&&!c.salEleve)return false;
+    return true;
+  });
+  if(sort==="sal-desc")res.sort((a,b)=>{const la=liveData[a.id]||{};const lb=liveData[b.id]||{};return(lb.avgMax||0)-(la.avgMax||0);});
+  else if(sort==="offres-desc")res.sort((a,b)=>{const la=liveData[a.id]||{};const lb=liveData[b.id]||{};return(lb.count||0)-(la.count||0);});
+  else if(sort==="az")res.sort((a,b)=>a.title.localeCompare(b.title,"fr"));
+  return res;
+}
+
+function setChip(el,f){document.querySelectorAll(".chip").forEach(c=>c.classList.remove("active"));el.classList.add("active");chip=f;applyFilters();}
+
+function applyFilters(){
+  const res=getFiltered();
+  document.getElementById("shownCount").textContent=res.length;
+  if(!res.length){document.getElementById("careersGrid").innerHTML="<div style='grid-column:1/-1;text-align:center;padding:48px;color:var(--muted)'>Aucune profession trouvee avec ces criteres.</div>";return;}
+  document.getElementById("careersGrid").innerHTML=res.map(c=>{
+    const l=liveData[c.id]||{};
+    const sal=l.avgMax?fmt(l.avgMax):"Chargement...";
+    const offres=l.count!==undefined?l.count+" offres actives":"Chargement...";
+    return`<div class="card" onclick="openModal(${c.id})">
+      <div class="card-img" style="background-image:url('${c.img}')">
+        <span class="card-cat">${c.cat}</span>
+        ${l.count?`<span class="card-live-badge">${l.count} offres</span>`:""}
+      </div>
+      <div class="card-body">
+        <div class="card-title">${c.title}</div>
+        <div class="card-stats">
+          <div class="stat"><span class="stat-lbl">Salaire max moy.</span><span class="stat-val">${sal}</span></div>
+          <div class="stat"><span class="stat-lbl">Offres actives</span><span class="stat-val">${l.count!==undefined?l.count:"..."}</span></div>
+        </div>
+        <div class="card-desc">${c.desc}</div>
+        <button class="card-btn">Voir les offres</button>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function openModal(id){
+  const c=CAREERS.find(x=>x.id===id);if(!c)return;
+  const l=liveData[c.id]||{};
+  const jobs=l.jobs||[];
+  document.getElementById("modalContent").innerHTML=
+    "<div class='m-head'><div class='m-tag-line'>"+c.cat+" — Canada</div>"+
+    "<div class='m-title'>"+c.title+"</div></div>"+
+    "<div class='m-salary-row'>"+
+    "<div class='m-sal'><span class='m-sal-lbl'>Salaire min. moyen</span><span class='m-sal-val'>"+(l.avgMin?fmt(l.avgMin):"--")+"</span></div>"+
+    "<div class='m-sal'><span class='m-sal-lbl'>Salaire max. moyen</span><span class='m-sal-val'>"+(l.avgMax?fmt(l.avgMax):"--")+"</span></div>"+
+    "</div>"+
+    "<div class='m-body'>"+
+    "<p class='m-desc'>"+c.desc+"</p>"+
+    "<div style='display:grid;grid-template-columns:1fr 1fr;gap:10px;background:var(--bg);border:1px solid var(--border);padding:14px;border-radius:2px;margin-bottom:18px;font-size:11px;'>"+
+    "<div style='color:var(--muted)'>Formation requise<span style='color:var(--text);font-weight:500;display:block;margin-top:2px'>"+c.formation+"</span></div>"+
+    "<div style='color:var(--muted)'>Offres actives au Canada<span style='color:var(--terra);font-weight:500;display:block;margin-top:2px'>"+(l.count!==undefined?l.count+" offres":"--")+"</span></div>"+
+    "<div style='color:var(--muted)'>Teletravail<span style='color:var(--text);font-weight:500;display:block;margin-top:2px'>"+(c.teletravail?"Possible":"Non applicable")+"</span></div>"+
+    "<div style='color:var(--muted)'>Travail autonome<span style='color:var(--text);font-weight:500;display:block;margin-top:2px'>"+(c.autonome?"Possible":"Non applicable")+"</span></div>"+
+    "</div>"+
+    (jobs.length?"<div class='m-section'>Offres d'emploi actives — Adzuna Canada</div><div class='jobs-list'>"+
+    jobs.map(j=>"<div class='job-row'><div class='job-title'>"+j.title+"</div><div class='job-company'>"+j.company+"</div><div class='job-meta'><span>"+j.location+"</span>"+(j.salMin&&j.salMax?"<span class='job-salary'>"+fmt(j.salMin)+" — "+fmt(j.salMax)+"</span>":"")+"</div><a href='"+j.url+"' target='_blank' rel='noopener' class='job-link'>Voir l'offre</a></div>").join("")+
+    "</div>":"<div style='padding:16px;background:var(--bg);border:1px solid var(--border);border-radius:2px;font-size:12px;color:var(--muted);margin-bottom:18px'>Les offres d'emploi sont en cours de chargement ou non disponibles pour ce titre.</div>")+
+    "<a href='https://wealthsimple.com/invite/G7ZSVC' class='ws-btn' target='_blank' rel='sponsored nofollow noopener'>Ouvrir un CELI et investir davantage</a></div>"+
+    "<div class='m-disclaimer'>Donnees salariales et offres d'emploi fournies par Adzuna Canada. Les salaires affiches representent des moyennes basees sur les offres actives et peuvent varier selon l'experience et la region.</div>";
+  document.getElementById("modalOverlay").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+
+function closeModal(){document.getElementById("modalOverlay").classList.remove("open");document.body.style.overflow="";}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+loadAllData();
+</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

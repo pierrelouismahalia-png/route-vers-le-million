@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Retirement Calculator: How Much Should You Save? — Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Calculatrice de retraite : combien épargner ?"
+        slug "calculatrice-retraite"
+        description "Combien faut-il accumuler pour vivre la retraite voulue ? Entrez votre âge, votre épargne et votre objectif : la projection se fait sous vos yeux."
+        keywords calculatrice de retraite, combien épargner pour la retraite, projection retraite, REER, rente
+   EN : title "Retirement Calculator: How Much Should You Save?"
+        slug "retirement-calculator"
+        description "How much do you need to accumulate for the retirement you want? Enter your age, your savings and your goal: the projection happens in front of you."
+        keywords retirement calculator, how much to save for retirement, retirement projection, RRSP, annuity
+   ES : title "Calculadora de jubilación: ¿cuánto ahorrar?"
+        slug "calculadora-jubilacion"
+        description "¿Cuánto hay que acumular para vivir la jubilación deseada? Introduce tu edad, tu ahorro y tu objetivo: la proyección se hace ante tus ojos."
+        keywords calculadora de jubilación, cuánto ahorrar para la jubilación, proyección de jubilación, REER, renta -->
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover, .nav-links a.active { color: var(--text); }
+ .nav-links a.active { border-bottom: 2px solid var(--terra); padding-bottom: 2px; }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+ .nav-cta:hover { background: var(--terra2); }
+
+ /* HERO */
+ .page-hero { position: relative; height: 44vh; min-height: 320px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.85) 0%, rgba(15,25,8,0.15) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 52px; max-width: 800px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--light); margin-bottom: 12px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 3.5vw, 44px); font-weight: 400; color: #fff; line-height: 1.2; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* INTRO */
+ .intro-section { max-width: 720px; margin: 0 auto; padding: 56px 40px 0; }
+ .intro-section p { font-size: 16px; line-height: 1.85; color: var(--text); margin-bottom: 1.2em; }
+
+ /* CALCULATOR */
+ .calc-wrap { max-width: 1020px; margin: 0 auto; padding: 48px 40px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+
+ /* INPUTS */
+ .calc-inputs { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; }
+ .calc-inputs h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--text); margin-bottom: 28px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+
+ .field { margin-bottom: 22px; }
+ .field:last-child { margin-bottom: 0; }
+ .field label { display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+ .field-row { display: flex; align-items: center; gap: 12px; }
+ .field input[type="number"] { flex: 1; background: var(--cream); border: 1px solid var(--border); border-radius: 8px; padding: 11px 16px; font-size: 16px; font-family: 'Jost', sans-serif; color: var(--text); outline: none; transition: border-color 0.2s; min-height: 44px; }
+ .field input[type="number"]:focus { border-color: var(--terra); }
+ .field-unit { font-size: 13px; color: var(--muted); white-space: nowrap; min-width: 20px; }
+
+ /* RESULTS */
+ .calc-results { display: flex; flex-direction: column; gap: 12px; }
+ .calc-results h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--text); margin-bottom: 4px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+
+ .result-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; }
+ .result-card.primary { border-color: var(--terra); background: var(--terra); }
+ .result-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; display: block; }
+ .result-card.primary .result-label { color: rgba(255,255,255,0.65); }
+ .result-value { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--terra); line-height: 1.1; display: block; }
+ .result-card.primary .result-value { color: #fff; font-size: 36px; }
+ .result-sub { font-size: 12px; color: var(--light); margin-top: 4px; display: block; }
+ .result-card.primary .result-sub { color: rgba(255,255,255,0.55); }
+
+ .results-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+ /* PROPORTION BAR */
+ .proportion-wrap { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; }
+ .proportion-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; display: block; }
+ .proportion-bar { height: 8px; background: var(--cream2); border-radius: 100px; overflow: hidden; margin-bottom: 10px; }
+ .proportion-fill { height: 100%; background: var(--terra); border-radius: 100px; transition: width 0.5s ease; width: 50%; }
+ .proportion-legend { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); }
+ .proportion-legend span strong { color: var(--text); }
+
+ /* CHART */
+ .chart-section { max-width: 1020px; margin: 0 auto; padding: 40px 40px 0; }
+ .chart-section h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--text); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+ .chart-container { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; height: 320px; position: relative; }
+
+ /* INTERPRET */
+ .interpret-section { max-width: 720px; margin: 0 auto; padding: 56px 40px 0; }
+ .interpret-section h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 28px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+ .interpret-section h3 { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 400; color: var(--text); margin: 28px 0 10px; }
+ .interpret-section p { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 1em; }
+
+ .note-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 40px 0 0; }
+ .note-box p { font-size: 14px; color: var(--text); line-height: 1.75; margin: 0; }
+ .note-box strong { color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; margin-top: 64px; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ .disclaimer { max-width: 720px; margin: 0 auto; padding: 24px 40px 48px; font-size: 13px; color: var(--light); line-height: 1.7; font-style: italic; text-align: center; }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .intro-section { padding: 40px 20px 0; }
+ .calc-wrap { grid-template-columns: 1fr !important; padding: 32px 20px 0; }
+ .results-grid-2 { grid-template-columns: 1fr; }
+ .chart-section { padding: 32px 20px 0; }
+ .interpret-section { padding: 40px 20px 0; }
+ .note-box { margin: 32px 0 0; }
+ .cta-bottom { padding: 48px 20px; }
+ .disclaimer { padding: 20px 20px 40px; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="How much do you need to accumulate for the retirement you want? Enter your age, your savings and your goal: the projection happens in front of you."/>
+ <meta name="keywords" content="retirement calculator, how much to save for retirement, retirement projection, RRSP, annuity"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/retirement-calculator/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/calculatrice-retraite/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/retirement-calculator/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/calculadora-jubilacion/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/calculatrice-retraite/"/>
+ <meta property="og:type" content="website"/>
+ <meta property="og:title" content="Retirement Calculator: How Much Should You Save? — Route vers le Million"/>
+ <meta property="og:description" content="How much do you need to accumulate for the retirement you want? Enter your age, your savings and your goal: the projection happens in front of you."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/en/retirement-calculator/"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="en_CA"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Retirement Calculator: How Much Should You Save?"/>
+ <meta name="twitter:description" content="How much do you need to accumulate for the retirement you want? Enter your age, your savings and your goal: the projection happens in front of you."/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Calculatrice de retraite",
+ "description": "How much do you need to accumulate for the retirement you want? Enter your age, your savings and your goal: the projection happens in front of you.",
+ "url": "https://route-vers-le-million.blog/en/retirement-calculator/",
+ "applicationCategory": "FinanceApplication",
+ "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "inLanguage": "en-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/en/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/en/etfs/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/en/tools/" class="active" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/calculatrice-retraite/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/retirement-calculator/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/calculadora-jubilacion/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/en/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/en/etfs/" data-i18n="nav.etf">ETFs</a>
+ <a href="/en/tools/" style="color:var(--terra);font-weight:500;" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/en/emergency-fund/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/en/my-story/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/calculatrice-retraite/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/retirement-calculator/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/calculadora-jubilacion/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/en/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <a href="/en/tools/" data-i18n="nav.outils">Tools</a> &nbsp;/&nbsp; <span data-i18n="calcret.hero.breadcrumb">Retirement</span></p>
+ <p class="hero-tag" data-i18n="calcret.hero.tag">Free tool · Simulation · Retirement</p>
+ <h1 data-i18n="calcret.hero.title">Retirement calculator —<br><em>how much will you have?</em></h1>
+ </div>
+</div>
+
+<!-- INTRO -->
+<div class="intro-section">
+ <p data-i18n="calcret.intro.p1">How much do you need to save to retire comfortably? This calculator lets you estimate your future capital and the monthly income you could draw from it, taking into account compound interest, inflation, and your investment horizon.</p>
+ <p data-i18n="calcret.intro.p2">Adjust the parameters below for a personalized simulation. Results update instantly.</p>
+</div>
+
+<!-- CALCULATOR -->
+<div class="calc-wrap">
+
+ <!-- INPUTS -->
+ <div class="calc-inputs">
+ <h2 data-i18n="calc.form.title">Your parameters</h2>
+
+ <div class="field">
+ <label for="inp-age" data-i18n="calcret.label.age">Current age</label>
+ <div class="field-row">
+ <input type="number" id="inp-age" value="35" min="18" max="99" step="1" oninput="calculate()"/>
+ <span class="field-unit" data-i18n="calc.unit.years">yr</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-age-ret" data-i18n="calcret.label.ageRet">Target retirement age</label>
+ <div class="field-row">
+ <input type="number" id="inp-age-ret" value="65" min="19" max="100" step="1" oninput="calculate()"/>
+ <span class="field-unit" data-i18n="calc.unit.years">yr</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-epargne" data-i18n="calcret.label.epargne">Current savings</label>
+ <div class="field-row">
+ <input type="number" id="inp-epargne" value="10000" min="0" step="100" oninput="calculate()"/>
+ <span class="field-unit">$</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-cotisation" data-i18n="calcret.label.cotisation">Monthly contribution</label>
+ <div class="field-row">
+ <input type="number" id="inp-cotisation" value="500" min="0" step="50" oninput="calculate()"/>
+ <span class="field-unit" data-i18n="calcret.unit.perMonth">$/month</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-rendement" data-i18n="calcret.label.rendement">Expected annual return</label>
+ <div class="field-row">
+ <input type="number" id="inp-rendement" value="7" min="0" max="20" step="0.1" oninput="calculate()"/>
+ <span class="field-unit">%</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-inflation" data-i18n="calcret.label.inflation">Annual inflation</label>
+ <div class="field-row">
+ <input type="number" id="inp-inflation" value="2" min="0" max="10" step="0.1" oninput="calculate()"/>
+ <span class="field-unit">%</span>
+ </div>
+ </div>
+
+ <div class="field">
+ <label for="inp-retrait" data-i18n="calcret.label.retrait">Withdrawal rate at retirement</label>
+ <div class="field-row">
+ <input type="number" id="inp-retrait" value="4" min="1" max="10" step="0.1" oninput="calculate()"/>
+ <span class="field-unit" data-i18n="calcret.unit.perYear">%/yr</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- RESULTS -->
+ <div class="calc-results">
+ <h2 data-i18n="calcret.results.title">Results</h2>
+
+ <div class="result-card primary">
+ <span class="result-label" data-i18n="calcret.res.capital">Retirement nest egg (future dollars)</span>
+ <span class="result-value" id="res-capital">—</span>
+ <span class="result-sub" id="res-annees">— années d'accumulation</span>
+ </div>
+
+ <div class="result-card">
+ <span class="result-label" data-i18n="calcret.res.capitalReel">Inflation-adjusted capital (today's dollars)</span>
+ <span class="result-value" id="res-capital-reel">—</span>
+ </div>
+
+ <div class="results-grid-2">
+ <div class="result-card">
+ <span class="result-label" data-i18n="calcret.res.revenuMensuel">Monthly income</span>
+ <span class="result-value" id="res-revenu" style="font-size:22px;">—</span>
+ <span class="result-sub" data-i18n="calcret.res.futurs">future dollars</span>
+ </div>
+ <div class="result-card">
+ <span class="result-label" data-i18n="calcret.res.revenuReel">Real monthly income</span>
+ <span class="result-value" id="res-revenu-reel" style="font-size:22px;">—</span>
+ <span class="result-sub" data-i18n="calcret.res.aujourdhui">today's dollars</span>
+ </div>
+ </div>
+
+ <div class="proportion-wrap">
+ <span class="proportion-label" data-i18n="calcret.res.proportion">Contributions vs generated interest</span>
+ <div class="proportion-bar">
+ <div class="proportion-fill" id="prop-fill"></div>
+ </div>
+ <div class="proportion-legend">
+ <span><span data-i18n="calcret.prop.cotisations">Contributions</span> : <strong id="prop-cotisations">—</strong></span>
+ <span><span data-i18n="calcret.prop.interets">Interest</span> : <strong id="prop-interets">—</strong></span>
+ </div>
+ </div>
+ </div>
+
+</div>
+
+<!-- CHART -->
+<div class="chart-section">
+ <h2 data-i18n="calcret.chart.title">Portfolio growth year by year</h2>
+ <div class="chart-container">
+ <canvas id="retraiteChart" aria-label="Graphique de croissance du portefeuille"></canvas>
+ </div>
+</div>
+
+<!-- INTERPRET -->
+<div class="interpret-section">
+ <h2 data-i18n="calcret.interpret.title">How to interpret these results</h2>
+
+ <h3 data-i18n="calcret.interpret.h3.1">Nominal capital and real capital</h3>
+ <p data-i18n="calcret.interpret.p1">The nominal capital is the gross value of your portfolio at retirement, in future dollars. The real capital is that same amount converted to today's purchasing power, after accounting for inflation. It's this last figure that best reflects what you'll actually be able to afford.</p>
+
+ <h3 data-i18n="calcret.interpret.h3.2">The withdrawal rate</h3>
+ <p data-i18n="calcret.interpret.p2">The withdrawal rate is the percentage of capital you withdraw each year in retirement. The 4% rule is often cited as a starting point: it suggests a well-diversified portfolio can theoretically support annual withdrawals of 4% for 30 years or more. This is not a guarantee — it's a planning benchmark.</p>
+
+ <h3 data-i18n="calcret.interpret.h3.3">The expected return</h3>
+ <p data-i18n="calcret.interpret.p3">The return you enter has a considerable influence on the results. Markets don't progress linearly: some years are excellent, others are negative. This calculator assumes a constant return, which is a simplification. Actual results will depend on market conditions over time.</p>
+
+ <div class="note-box">
+ <p data-i18n="calcret.note"><strong>Limits of this simulation:</strong> this calculator does not account for taxes on withdrawals (unless you use a TFSA), QPP contributions, Old Age Security (OAS), or changes in your income and expenses over time. It is designed to give a rough order of magnitude, not a certified projection.</p>
+ </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="calcret.cta.title">Ready to put your plan into action?</h2>
+ <p data-i18n="calcret.cta.body">Open your TFSA on Wealthsimple and start investing according to your strategy — free, no commission.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+ <a href="/en/tools/" class="cta-btn secondary" data-i18n="calcret.cta.tools">All tools →</a>
+</div>
+
+<p class="disclaimer" data-i18n="calcret.disclaimer">This is a simulation tool for informational purposes only and does not constitute financial advice. The projections shown are based on simplified assumptions and do not guarantee any outcome. Consult a certified financial planner for advice tailored to your situation.</p>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+  <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}
+
+function fmt(n) {
+ if (isNaN(n) || !isFinite(n) || n < 0) return '0 $';
+ return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' $';
+}
+
+function fmtM(n) {
+ return fmt(n) + '/mois';
+}
+
+var retraiteChart = null;
+
+function calculate() {
+ var age = Math.max(18, Math.min(99, parseInt(document.getElementById('inp-age').value) || 35));
+ var ageRet = Math.max(age + 1, Math.min(100, parseInt(document.getElementById('inp-age-ret').value) || 65));
+ var epargne = Math.max(0, parseFloat(document.getElementById('inp-epargne').value) || 0);
+ var cotisation = Math.max(0, parseFloat(document.getElementById('inp-cotisation').value) || 0);
+ var rendement = Math.max(0, Math.min(20, parseFloat(document.getElementById('inp-rendement').value) || 0));
+ var inflation = Math.max(0, Math.min(10, parseFloat(document.getElementById('inp-inflation').value) || 0));
+ var tauxRetrait = Math.max(1, Math.min(10, parseFloat(document.getElementById('inp-retrait').value) || 4));
+
+ var annees = ageRet - age;
+ var n = annees * 12;
+ var r = rendement / 100 / 12;
+
+ var fv;
+ if (r === 0) {
+ fv = epargne + cotisation * n;
+ } else {
+ fv = epargne * Math.pow(1 + r, n) + cotisation * (Math.pow(1 + r, n) - 1) / r;
+ }
+
+ var capitalReel = fv / Math.pow(1 + inflation / 100, annees);
+ var revenuMensuel = fv * tauxRetrait / 100 / 12;
+ var revenuReel = capitalReel * tauxRetrait / 100 / 12;
+ var totalCotisations = epargne + cotisation * n;
+ var totalInterets = Math.max(0, fv - totalCotisations);
+ var pctCotisations = fv > 0 ? Math.round(totalCotisations / fv * 100) : 100;
+
+ document.getElementById('res-capital').textContent = fmt(fv);
+ document.getElementById('res-annees').textContent = annees + ' année' + (annees > 1 ? 's' : '') + ' d’accumulation';
+ document.getElementById('res-capital-reel').textContent = fmt(capitalReel);
+ document.getElementById('res-revenu').textContent = fmt(revenuMensuel);
+ document.getElementById('res-revenu-reel').textContent = fmt(revenuReel);
+ document.getElementById('prop-fill').style.width = Math.min(100, pctCotisations) + '%';
+ document.getElementById('prop-cotisations').textContent = fmt(totalCotisations);
+ document.getElementById('prop-interets').textContent = fmt(totalInterets);
+
+ updateChart(age, ageRet, epargne, cotisation, r, inflation);
+}
+
+function updateChart(age, ageRet, epargne, cotisation, r, inflation) {
+ var labels = [];
+ var dataNominal = [];
+ var dataReel = [];
+
+ for (var a = age; a <= ageRet; a++) {
+ var ans = a - age;
+ var nm = ans * 12;
+ var fv;
+ if (r === 0) {
+ fv = epargne + cotisation * nm;
+ } else {
+ fv = epargne * Math.pow(1 + r, nm) + cotisation * (Math.pow(1 + r, nm) - 1) / r;
+ }
+ var reel = fv / Math.pow(1 + (inflation || 0) / 100, ans);
+ labels.push(a + ' ans');
+ dataNominal.push(Math.round(fv));
+ dataReel.push(Math.round(reel));
+ }
+
+ if (!retraiteChart) return;
+
+ retraiteChart.data.labels = labels;
+ retraiteChart.data.datasets[0].data = dataNominal;
+ retraiteChart.data.datasets[1].data = dataReel;
+ retraiteChart.update('none');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+ var ctx = document.getElementById('retraiteChart').getContext('2d');
+ retraiteChart = new Chart(ctx, {
+ type: 'line',
+ data: {
+ labels: [],
+ datasets: [
+ {
+ label: 'Capital nominal',
+ data: [],
+ borderColor: '#2D4A1A',
+ backgroundColor: 'rgba(45,74,26,0.08)',
+ fill: true,
+ tension: 0.4,
+ borderWidth: 2,
+ pointRadius: 0,
+ pointHoverRadius: 4
+ },
+ {
+ label: 'Capital ajusté inflation',
+ data: [],
+ borderColor: '#A0B480',
+ backgroundColor: 'rgba(160,180,128,0.05)',
+ fill: true,
+ tension: 0.4,
+ borderWidth: 1.5,
+ borderDash: [6, 4],
+ pointRadius: 0,
+ pointHoverRadius: 4
+ }
+ ]
+ },
+ options: {
+ responsive: true,
+ maintainAspectRatio: false,
+ interaction: { mode: 'index', intersect: false },
+ plugins: {
+ legend: {
+ position: 'top',
+ align: 'end',
+ labels: { font: { family: 'Jost', size: 12 }, color: '#607848', boxWidth: 20, padding: 16 }
+ },
+ tooltip: {
+ callbacks: {
+ label: function(ctx) {
+ var v = ctx.parsed.y;
+ var s = Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+ return ctx.dataset.label + ' : ' + s + ' $';
+ }
+ }
+ }
+ },
+ scales: {
+ y: {
+ beginAtZero: true,
+ ticks: {
+ callback: function(v) {
+ if (v >= 1000000) return (v / 1000000).toFixed(1) + 'M $';
+ if (v >= 1000) return (v / 1000).toFixed(0) + 'k $';
+ return v + ' $';
+ },
+ font: { family: 'Jost', size: 11 },
+ color: '#607848',
+ maxTicksLimit: 6
+ },
+ grid: { color: 'rgba(200,212,176,0.3)' }
+ },
+ x: {
+ ticks: {
+ maxTicksLimit: 8,
+ font: { family: 'Jost', size: 11 },
+ color: '#607848'
+ },
+ grid: { display: false }
+ }
+ }
+ }
+ });
+ calculate();
+});
+</script>
+<script src="/translations.js"></script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

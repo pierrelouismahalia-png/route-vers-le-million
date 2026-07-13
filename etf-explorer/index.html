@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr-CA">
 <head>
+ <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
   <script src="/consent.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-L9QEBYDL8R");</script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Radar ETF Canada et USA en temps reel | Route vers le Million</title>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Radar ETF : Canada et États-Unis en temps réel"
+        slug "etf-explorer"
+        description "Comparez les ETF canadiens et américains : frais de gestion, rendement, secteur. Les données à jour pour choisir en connaissance de cause."
+        keywords radar ETF, comparateur ETF Canada, frais de gestion ETF, RFG, FNB, investir en ETF
+   EN : title "ETF Radar: Canada and the United States in Real Time"
+        slug "etf-explorer"
+        description "Compare Canadian and American ETFs: management fees, performance, sector. Up-to-date data so you can choose with full knowledge."
+        keywords ETF radar, ETF comparison Canada, ETF management fees, MER, investing in ETFs
+   ES : title "Radar de ETF: Canadá y Estados Unidos en tiempo real"
+        slug "explorador-etf"
+        description "Compara los ETF canadienses y estadounidenses: comisiones de gestión, rendimiento, sector. Datos actualizados para elegir con conocimiento de causa."
+        keywords radar de ETF, comparador de ETF, comisiones de gestión ETF, ratio de gastos, invertir en ETF -->
   <meta name="description" content="Explorez les ETFs canadiens et americains en temps reel. Prix, variation, frais de gestion, dividendes."/>
   <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://route-vers-le-million.blog/etf-explorer/"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/etf-explorer/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/etf-explorer/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/etf-explorer/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/explorador-etf/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/etf-explorer/"/>
   <meta property="og:type" content="WebPage"/>
   <meta property="og:locale" content="fr_CA"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -136,11 +155,11 @@
   <div style="display:flex;align-items:center;gap:10px;">
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
-    <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">FR</button>
+    <a class="lang-btn" data-lang="fr" href="/etf-explorer/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
     <span style="color:var(--border);font-size:10px;">·</span>
-    <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">EN</button>
+    <a class="lang-btn" data-lang="en" href="/en/etf-explorer/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
     <span style="color:var(--border);font-size:10px;">·</span>
-    <button class="lang-btn" data-lang="es" onclick="setLang('es')" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;">ES</button>
+    <a class="lang-btn" data-lang="es" href="/es/explorador-etf/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
     </div>
     <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple</a>
   </div>
@@ -153,9 +172,9 @@
   <a href="/outils/" style="color:var(--terra);font-weight:500;" data-i18n="nav.outils">Outils</a>
   <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
   <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
-    <button class="lang-btn" data-lang="fr" onclick="setLang('fr');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">FR</button>
-    <button class="lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">EN</button>
-    <button class="lang-btn" data-lang="es" onclick="setLang('es');toggleMenu()" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">ES</button>
+    <a class="lang-btn" data-lang="fr" href="/etf-explorer/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+    <a class="lang-btn" data-lang="en" href="/en/etf-explorer/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+    <a class="lang-btn" data-lang="es" href="/es/explorador-etf/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
   </div>
   <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
 </div>
