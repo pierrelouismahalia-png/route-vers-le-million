@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Escaping Poverty: The 97% Formula — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Sortir de la pauvreté : la formule à 97 %"
+        slug "formule-sortir-pauvrete-statistiques"
+        description "La success sequence : trois facteurs associés à 97 % de chances d'échapper à la pauvreté, validés au Canada. Ce que la recherche dit vraiment, ses critiques, et pourquoi penser en probabilités change tout."
+        keywords success sequence, sortir de la pauvreté, Brookings Institution, Institut Fraser, pensée probabiliste, mobilité sociale
+   EN : title "Escaping Poverty: The 97% Formula"
+        slug "success-sequence-poverty-probabilities"
+        description "The success sequence: three factors linked to a 97% chance of escaping poverty, confirmed in Canada. What the research really says, its critics, and why thinking in probabilities changes everything."
+        keywords success sequence, escaping poverty, Brookings Institution, Fraser Institute, probabilistic thinking, social mobility
+   ES : title "Salir de la pobreza: la fórmula del 97 %"
+        slug "formula-salir-de-la-pobreza"
+        description "La success sequence: tres factores asociados a un 97 % de probabilidades de escapar de la pobreza, validados en Canadá. Lo que la investigación dice realmente, sus críticas, y por qué pensar en probabilidades lo cambia todo."
+        keywords success sequence, salir de la pobreza, Brookings Institution, Instituto Fraser, pensamiento probabilístico, movilidad social
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ /* TABLE */
+ .prose table { width: 100%; border-collapse: collapse; margin: 2em 0; font-size: 14px; }
+ .prose th, .prose td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+ .prose thead th { font-family: 'Playfair Display', serif; font-weight: 400; color: var(--terra); font-size: 13px; letter-spacing: 0.5px; border-bottom: 2px solid var(--border); }
+ .prose tbody tr:last-child td { border-bottom: none; }
+
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* QUESTION CARDS */
+ .question-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 1.2em 0; display: flex; gap: 20px; align-items: flex-start; }
+ .question-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--terra); opacity: 0.5; line-height: 1; flex-shrink: 0; min-width: 44px; }
+ .question-body h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+ .question-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="The success sequence: three factors linked to a 97% chance of escaping poverty, confirmed in Canada. What the research really says, its critics, and why thinking in probabilities changes everything."/>
+ <meta name="keywords" content="success sequence, escaping poverty, Brookings Institution, Fraser Institute, probabilistic thinking, social mobility"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/articles/success-sequence-poverty-probabilities.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/formule-sortir-pauvrete-statistiques.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/success-sequence-poverty-probabilities.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/formula-salir-de-la-pobreza.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/formule-sortir-pauvrete-statistiques.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Escaping Poverty: The 97% Formula — Route vers le Million"/>
+ <meta property="og:description" content="The success sequence: three factors linked to a 97% chance of escaping poverty, confirmed in Canada. What the research really says, its critics, and why thinking in probabilities changes everything."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/en/articles/success-sequence-poverty-probabilities.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="en_CA"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Escaping Poverty: The 97% Formula"/>
+ <meta name="twitter:description" content="The success sequence: three factors linked to a 97% chance of escaping poverty, confirmed in Canada. What the research really says, its critics, and why thinking in probabilities changes everything."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Escaping Poverty: The 97% Formula",
+ "description": "The success sequence: three factors linked to a 97% chance of escaping poverty, confirmed in Canada. What the research really says, its critics, and why thinking in probabilities changes everything.",
+ "url": "https://route-vers-le-million.blog/en/articles/success-sequence-poverty-probabilities.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "en-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/en/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/en/etfs/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/en/tools/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ <li><a href="/en/quizzes/" data-i18n="nav.quiz">Quizzes</a></li>
+ <li><a href="/en/best-offers/" data-i18n="nav.offres">Offers</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/articles/formule-sortir-pauvrete-statistiques.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/success-sequence-poverty-probabilities.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/formula-salir-de-la-pobreza.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/en/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/en/etfs/" data-i18n="nav.etf">ETFs</a>
+ <a href="/en/tools/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/en/quizzes/" data-i18n="nav.quiz">Quizzes</a>
+ <a href="/en/best-offers/" data-i18n="nav.offres">Offers</a>
+ <a href="/en/emergency-fund/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/en/my-story/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/articles/formule-sortir-pauvrete-statistiques.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/success-sequence-poverty-probabilities.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/formula-salir-de-la-pobreza.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/en/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <a href="/en/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.succes.breadcrumb">Reflection</span></p>
+ <p class="hero-tag"><span data-i18n="art.succes.tag">Reflection · Economics · Probabilities</span></p>
+ <h1><span data-i18n="art.succes.title">Escaping poverty: the 97 % formula — <em>and why I think in probabilities</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.succes.location">Quebec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.succes.readtime">9 min read</span>
+ <span>·</span>
+ <span data-i18n="art.succes.category">Reflection · Economics</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Disclosure: This article contains affiliate links. If you sign up or purchase through my links, I earn a commission at no extra cost to you. My recommendations are based on my personal use.</div>
+
+ <p class="lead" data-i18n="art.succes.lead">I believe in statistics. Not the way you believe in a magic recipe — the way you believe in the weather forecast: they do not tell me what will happen to me, they tell me what happens most often to people in my situation.</p>
+
+ <p data-i18n="art.succes.p1">I will start by telling you how I think, because everything in this article follows from it. I have always approached my financial life this way: I do not control the outcome, but I control the factors I put in place. Each factor added reduces the risk. That, at bottom, is what social science is: identifying what statistically improves people's circumstances, then consciously stacking those elements on your side.</p>
+
+ <p data-i18n="art.succes.p2">So when I came across one of the most debated pieces of research in social policy — a three-step formula linked to a 97 % chance of escaping poverty — it spoke to me directly. Not because it promises anything. Because it puts numbers on exactly what I have always believed: you do not choose your cards, but you do choose part of how you play them.</p>
+
+ <h2 data-i18n="art.succes.h2a">The success sequence: three factors, one striking number</h2>
+
+ <p data-i18n="art.succes.p3">In the late 2000s, two researchers at the Brookings Institution, Ron Haskins and Isabel Sawhill, analyzed life paths and poverty in the United States. Their finding, which became famous as the <strong>success sequence</strong>, comes down to three steps:</p>
+
+ <ul>
+ <li data-i18n="art.succes.li1">Finish at least high school</li>
+ <li data-i18n="art.succes.li2">Work full time</li>
+ <li data-i18n="art.succes.li3">Wait until you are in a stable partnership — in the study, married — before having children</li>
+ </ul>
+
+ <p data-i18n="art.succes.p4">The associated figures are striking. Among American millennials who followed these three steps, <strong>97 % are not poor</strong> in adulthood. In the updated Brookings version, only 2.4 % of people who follow the sequence live below the poverty line, and more than 70 % reach at least the middle class.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.succes.box1"><strong>A university degree is not required.</strong> Among those with only a high school diploma who work full time and had their children after settling into a partnership, 95 % escape poverty. The sequence is not a story about a bachelor's degree; it is a story about foundations laid in the right order.</p>
+ </div>
+
+ <p data-i18n="art.succes.p5"><strong>The order of the steps carries weight.</strong> According to follow-up analyses, having children after marrying rather than before doubles the chances of reaching a middle or higher income, and reduces the probability of ending up in poverty by about 60 %. This is not a judgment on families — it is an observation about finances: a child is the largest expense of a lifetime, and welcoming one with two stable incomes rather than a single precarious one mathematically changes what follows.</p>
+
+ <h2 data-i18n="art.succes.h2b">And in Canada? The same finding, only stronger</h2>
+
+ <p data-i18n="art.succes.p6">This is the part that interested me most, because American studies do not always transfer here. Yet the Fraser Institute applied the same tests to Canadian data, in a report titled The Causes of Poverty, and the result is even clearer: <strong>fewer than 1 % of Canadians</strong> who finished high school, work full time and had their children within a stable framework live in poverty.</p>
+
+ <p data-i18n="art.succes.p7">In other words: in a country like ours, with its social safety net, its affordable colleges and its labour market, the sequence works at least as well as south of the border. For someone living in Quebec, the factors are not only identified — they are more accessible than almost anywhere: high school is free, <a href="/en/articles/college-continuing-education-financial-leverage.html">continuing education costs a few dozen dollars</a>, and subsidized childcare makes full-time work possible for many parents.</p>
+
+ <h2 data-i18n="art.succes.h2c">Now, the honesty: what this research does not say</h2>
+
+ <p data-i18n="art.succes.p8">If I presented these figures without their criticisms, I would be doing exactly what I hold against viral financial content. So here are the two serious objections.</p>
+
+ <div class="question-card">
+ <span class="question-num">01</span>
+ <div class="question-body">
+ <h4 data-i18n="art.succes.k1Title">Correlation is not causation</h4>
+ <p data-i18n="art.succes.k1Text">People able to follow the sequence often already benefit from favourable conditions: health, family stability, the absence of a major crisis. Is it the sequence that protects them from poverty, or would the same advantages that let them follow it have protected them anyway? The research cannot fully settle this. Part of the 97 % measures the sequence; another part measures the luck of having been able to follow it.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">02</span>
+ <div class="question-body">
+ <h4 data-i18n="art.succes.k2Title">Work does most of the work</h4>
+ <p data-i18n="art.succes.k2Text">Analyses have noted that full-time employment alone explains most of the statistical effect. That is not surprising: the very definition of poverty is insufficient income, and a full-time job is income. The other two factors add less than the headlines suggest.</p>
+ </div>
+ </div>
+
+ <p data-i18n="art.succes.p9">And I would add my own reservation: the sequence describes groups, never individuals. A single mother who had her children young is not condemned by a statistic, and someone who ticked all three boxes is not immune to illness, separation or layoff. <strong>Probabilities are not verdicts.</strong></p>
+
+ <h2 data-i18n="art.succes.h2d">Why I believe in it anyway: probabilistic thinking</h2>
+
+ <p data-i18n="art.succes.p10">Here is where my way of thinking takes over again, because the criticisms, valid as they are, do not change the practical conclusion.</p>
+
+ <p data-i18n="art.succes.p11">Even if the sequence is only partly causal, each factor, taken on its own, reduces a real risk: a diploma widens access to employment; a full-time job is, by definition, the antidote to a lack of income; children planned within a stable situation avoid the single largest cause of financial collapse. You can debate the exact weight of each factor — you cannot debate their direction.</p>
+
+ <p data-i18n="art.succes.p12">And that is exactly how I think about investing, insurance, <a href="/en/emergency-fund/">the emergency fund</a> and continuing education: none of these acts guarantees anything. Each loads the dice a little more in my favour. An emergency fund does not prevent job loss — it prevents it from becoming a catastrophe. Diversifying does not prevent crashes — it prevents a single holding from sinking me.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.succes.pull1">"Social science and personal finance are, at bottom, saying the same thing: you do not control events, you control your exposure to events."</p>
+ </div>
+
+ <p data-i18n="art.succes.p13">The real lesson of the success sequence is therefore not to follow those three steps in order — for many of us, those steps are behind us, in an order we can no longer change. The lesson is the method: identify the factors that statistically improve the circumstances of people in our situation, and stack them deliberately.</p>
+
+ <h2 data-i18n="art.succes.h2e">The adult version of the sequence, for someone living in Quebec</h2>
+
+ <p data-i18n="art.succes.p14">Because my readers are not 18, here is how I translate this logic for someone aged 40 or 50 who wants to reduce their financial risk starting now. Each element is a documented factor, not a promise:</p>
+
+ <ul>
+ <li data-i18n="art.succes.s1"><strong>Full-time income remains factor number one</strong> — protecting it (up-to-date skills, employability) and, where possible, <a href="/en/articles/salary-negotiation-what-hr-knows.html">increasing it</a>, comes before any investment strategy.</li>
+ <li data-i18n="art.succes.s2"><strong>Continuing education is the accessible version of the diploma</strong> — in Quebec it sometimes costs $30, and it acts on the same lever: access to better income.</li>
+ <li data-i18n="art.succes.s3"><strong>The emergency fund plays the role of the stable framework</strong> — it absorbs the shocks that statistically tip households over: breakdowns, job loss, separation.</li>
+ <li data-i18n="art.succes.s4"><strong>Big decisions are planned according to their real financial weight</strong> — a child, a house, a return to school: none of this is a bad choice, but each is better navigated prepared than improvised.</li>
+ <li data-i18n="art.succes.s5"><strong>Regular investing turns stability into wealth</strong> — the sequence gets you out of poverty; compounding does the rest of the journey.</li>
+ </ul>
+
+ <p data-i18n="art.succes.p15">None of these five lines guarantees an outcome. Together, they shift the probabilities massively — and probabilities, over a whole lifetime, are just about all we have. It is the same logic as <a href="/en/articles/financial-leverage-without-debt.html">leverage without debt</a>: stacking advantages that cost nothing.</p>
+
+ <h2 data-i18n="art.succes.h2f">What I take away</h2>
+
+ <p data-i18n="art.succes.p16">The success sequence appealed to me not because it gives a recipe, but because it validates a stance: treating your financial life like a risk manager, not a lottery player. The 97 % is not a promise made to me. It is proof that the factors exist, that they are identifiable, and that most of them are within reach of someone living here, in Quebec, with the tools we have.</p>
+
+ <p data-i18n="art.succes.p17">You do not choose your starting cards. But every factor you put in place is a card you add to your hand — and the research says that the hand, factor by factor, eventually tilts.</p>
+
+ <p data-i18n="art.succes.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Informational content and personal reflection — not financial advice, and not a judgment on anyone's life path. The statistics cited (Brookings Institution, Institute for Family Studies, Fraser Institute) describe group trends and predict no individual outcome. Consult a professional for your specific situation.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.succes.title">Stacking the factors</h3>
+ <p data-i18n="sidebar.succes.desc">Continuing education is the most accessible factor in Quebec, and often the cheapest.</p>
+ <a href="/en/articles/college-continuing-education-financial-leverage.html" class="sidebar-btn" data-i18n="sidebar.succes.btn">Continuing education →</a>
+ <a href="/en/emergency-fund/" class="sidebar-btn secondary" data-i18n="sidebar.succes.secondary">The emergency fund →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.succes.key">The three factors</h4>
+ <div class="info-row"><span data-i18n="sidebar.succes.r1">High school finished</span><span data-i18n="sidebar.succes.r1v">Factor 1</span></div>
+ <div class="info-row"><span data-i18n="sidebar.succes.r2">Full-time work</span><span data-i18n="sidebar.succes.r2v">Factor 2</span></div>
+ <div class="info-row"><span data-i18n="sidebar.succes.r3">Children after partnership</span><span data-i18n="sidebar.succes.r3v">Factor 3</span></div>
+ <div class="info-row"><span data-i18n="sidebar.succes.r4">In the United States</span><span>97 %</span></div>
+ <div class="info-row"><span data-i18n="sidebar.succes.r5">In Canada</span><span data-i18n="sidebar.succes.r5v">More than 99 %</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.succes.cta.title">The most accessible factor</h2>
+ <p data-i18n="art.succes.cta.desc">In Quebec, continuing education sometimes costs $30 and acts on lever number one: income.</p>
+ <a href="/en/articles/college-continuing-education-financial-leverage.html" class="cta-btn" data-i18n="art.succes.cta.btn">Read the article →</a>
+ <a href="/en/articles/" class="cta-btn secondary" data-i18n="art.readMore">View all articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

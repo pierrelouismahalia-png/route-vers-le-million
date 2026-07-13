@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Meilleures offres — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Meilleures offres"
+        slug "meilleures-offres"
+        description "Les produits financiers que j'utilise réellement et que je recommande : Wealthsimple, vérification de cote de crédit gratuite, et mes lectures. Liens d'affiliation divulgués."
+        keywords meilleures offres, Wealthsimple bonus, Borrowell cote de crédit gratuite, livres finances personnelles, liens d'affiliation
+   EN : title "Best Offers"
+        slug "best-offers"
+        description "The financial products I actually use and recommend: Wealthsimple, free credit score checks, and my reading list. Affiliate links disclosed."
+        keywords best offers, Wealthsimple bonus, Borrowell free credit score, personal finance books, affiliate links
+   ES : title "Mejores ofertas"
+        slug "mejores-ofertas"
+        description "Los productos financieros que realmente uso y recomiendo: Wealthsimple, verificación gratuita del puntaje de crédito, y mis lecturas. Enlaces de afiliación divulgados."
+        keywords mejores ofertas, bono Wealthsimple, Borrowell puntaje de crédito gratis, libros de finanzas personales, enlaces de afiliación
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ /* TABLE */
+ .prose table { width: 100%; border-collapse: collapse; margin: 2em 0; font-size: 14px; }
+ .prose th, .prose td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+ .prose thead th { font-family: 'Playfair Display', serif; font-weight: 400; color: var(--terra); font-size: 13px; letter-spacing: 0.5px; border-bottom: 2px solid var(--border); }
+ .prose tbody tr:last-child td { border-bottom: none; }
+
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* QUESTION CARDS */
+ .question-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 1.2em 0; display: flex; gap: 20px; align-items: flex-start; }
+ .question-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--terra); opacity: 0.5; line-height: 1; flex-shrink: 0; min-width: 44px; }
+ .question-body h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+ .question-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Les produits financiers que j'utilise réellement et que je recommande : Wealthsimple, vérification de cote de crédit gratuite, et mes lectures. Liens d'affiliation divulgués."/>
+ <meta name="keywords" content="meilleures offres, Wealthsimple bonus, Borrowell cote de crédit gratuite, livres finances personnelles, liens d'affiliation"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/meilleures-offres/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/meilleures-offres/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/best-offers/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/mejores-ofertas/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/meilleures-offres/"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Meilleures offres — Route vers le Million"/>
+ <meta property="og:description" content="Les produits financiers que j'utilise réellement et que je recommande : Wealthsimple, vérification de cote de crédit gratuite, et mes lectures. Liens d'affiliation divulgués."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/articles/formule-sortir-pauvrete-statistiques.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Meilleures offres"/>
+ <meta name="twitter:description" content="Ce que j'utilise vraiment : Wealthsimple, Borrowell, et trois livres. Aucune entreprise ne paie pour figurer ici."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "headline": "Meilleures offres : ce que j'utilise vraiment",
+ "description": "Les produits financiers que j'utilise réellement et que je recommande : Wealthsimple, vérification de cote de crédit gratuite, et mes lectures. Liens d'affiliation divulgués.",
+ "url": "https://route-vers-le-million.blog/articles/formule-sortir-pauvrete-statistiques.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
+ <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ <li><a href="/quiz/" data-i18n="nav.quiz">Quiz</a></li>
+ <li><a href="/meilleures-offres/" data-i18n="nav.offres">Offres</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/meilleures-offres/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/best-offers/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/mejores-ofertas/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Accueil</a>
+ <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Outils</a>
+ <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
+ <a href="/quiz/" data-i18n="nav.quiz">Quiz</a>
+ <a href="/meilleures-offres/" data-i18n="nav.offres">Offres</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/meilleures-offres/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/best-offers/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/mejores-ofertas/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <span data-i18n="offres.breadcrumb">Offres</span></p>
+ <p class="hero-tag"><span data-i18n="offres.tag">Produits · Transparence · Divulgation</span></p>
+ <h1><span data-i18n="offres.title">Mes meilleures offres : <em>ce que j'utilise vraiment</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="prose">
+
+ <p class="lead" data-i18n="offres.lead">Cette page regroupe les produits et services financiers que j'utilise réellement, ou que j'ai évalués sérieusement, et pour lesquels je peux vous obtenir un avantage à l'inscription.</p>
+
+ <div class="disclosure-box" data-i18n="offres.disclosure"><strong>Divulgation complète, avant toute chose :</strong> les liens marqués d'un astérisque (*) sont des liens d'affiliation. Si vous vous inscrivez ou achetez via ces liens, je reçois une commission, sans aucun coût supplémentaire pour vous — c'est le fournisseur qui la paie. Je ne recommande rien que je n'utiliserais pas moi-même, et aucune entreprise ne paie pour figurer ici. C'est une des façons dont ce blogue reste gratuit.</div>
+
+ <h2 data-i18n="offres.h2a">Investissement</h2>
+
+ <div class="highlight-box">
+ <p data-i18n="offres.ws1"><strong>Wealthsimple*</strong> — la plateforme où je détiens mon propre CÉLI. C'est ici que j'achète mes ETF, sans commission de transaction et sans solde minimum. L'application est simple au point où c'est par elle que je recommande de commencer quand quelqu'un me dit qu'il ne sait pas par où investir.</p>
+ </div>
+
+ <p data-i18n="offres.ws2"><strong>L'offre : obtenez un bonus de 25 $ en ouvrant votre premier compte et en y déposant au moins 1 $ dans les 30 premiers jours.</strong></p>
+
+ <p><a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="offres.wsBtn">Ouvrir un compte Wealthsimple* →</a></p>
+
+ <p data-i18n="offres.ws3">Ce que j'y détiens réellement : mon CÉLI, incluant QQC.F. Mon portfolio est visible dans mes articles — la transparence fait partie du contrat.</p>
+
+ <p data-i18n="offres.ws4">Articles reliés : <a href="/articles/dividendes-ou-croissance.html">Dividendes ou croissance</a> · <a href="/articles/combien-etf-avoir.html">Combien d'ETF faut-il avoir?</a> · <a href="/etf-explorer/">Radar ETF</a></p>
+
+ <h2 data-i18n="offres.h2b">Cote de crédit</h2>
+
+ <p data-i18n="offres.cc1"><strong>Vérifiez votre cote gratuitement.</strong> Au Canada, il n'y a plus aucune raison de payer pour connaître sa cote, ni de rester dans le flou.</p>
+
+ <ul>
+ <li data-i18n="offres.cc2"><strong>Borrowell*</strong> vous donne accès gratuitement à votre cote et à votre dossier Equifax, avec mises à jour régulières.</li>
+ <li data-i18n="offres.cc3"><strong>Credit Karma</strong> fait l'équivalent pour TransUnion. Pas de lien d'affiliation ici, volontairement — je le recommande quand même, parce que consulter les deux agences une fois par année permet de repérer les erreurs de dossier.</li>
+ </ul>
+
+ <p><a href="https://borrowell.com/refer-a-friend/free-credit-score?utm_campaign=Refer5&amp;utm_medium=web&amp;utm_source=refer2022-1072589" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="offres.ccBtn">Voir ma cote gratuitement* →</a></p>
+
+ <div class="highlight-box">
+ <p data-i18n="offres.cc4">Rappel important : consulter votre propre cote est une <strong>enquête douce</strong> — cela n'a aucun impact sur votre pointage. C'est le mythe le plus coûteux en finances personnelles.</p>
+ </div>
+
+ <p data-i18n="offres.cc5">Article relié : <a href="/articles/cote-de-credit-expliquee.html">La cote de crédit, le chiffre qui vous coûte des dizaines de milliers de dollars</a></p>
+
+ <h2 data-i18n="offres.h2c">Lectures qui ont changé ma façon de voir l'argent</h2>
+
+ <p data-i18n="offres.li1">Trois livres, trois angles complémentaires : pourquoi accumuler, comment pensent ceux qui y arrivent réellement, et l'état d'esprit pour bâtir à partir de rien.</p>
+
+ <p data-i18n="offres.li2"><strong>Die With Zero, de Bill Perkins*</strong> — le livre qui m'a fait repenser l'objectif même de l'accumulation. Épargner, oui, mais pour quoi, et pour quand? Une lecture qui dérange au bon endroit.</p>
+
+ <p><a href="https://amzn.to/42vDg0y" class="cta-btn secondary" target="_blank" rel="sponsored nofollow noopener" data-i18n="offres.amz1">Voir sur Amazon* →</a></p>
+
+ <p data-i18n="offres.li3">Article relié : <a href="/die-with-zero/">mon article sur Die With Zero</a></p>
+
+ <p data-i18n="offres.li4"><strong>The Millionaire Next Door, de Thomas J. Stanley et William D. Danko*</strong> — l'étude classique sur les vrais millionnaires américains : pas ceux des réseaux sociaux, ceux d'à côté, frugaux, discrets, constants. La démonstration par les données que la richesse se construit exactement comme ce blogue le raconte.</p>
+
+ <p><a href="https://amzn.to/4dbHyiA" class="cta-btn secondary" target="_blank" rel="sponsored nofollow noopener" data-i18n="offres.amz2">Voir sur Amazon* →</a></p>
+
+ <p data-i18n="offres.li5"><strong>Start With Yourself, d'Emma Grede*</strong> — par la cofondatrice de Good American et partenaire fondatrice de Skims : décrocheuse de l'est de Londres devenue une des femmes d'affaires les plus accomplies de sa génération. Un livre sur l'état d'esprit, sur le fait de démonter les vieilles idées héritées à propos de l'argent, de l'ambition et du travail. Celui que je recommande aux entrepreneures qui me lisent.</p>
+
+ <p><a href="https://amzn.to/4dlH1dX" class="cta-btn secondary" target="_blank" rel="sponsored nofollow noopener" data-i18n="offres.amz3">Voir sur Amazon* →</a></p>
+
+ <!-- A VENIR : decommenter a l'activation de chaque programme d'affiliation.
+      Ne pas publier tant que les offres et les liens ne sont pas confirmes.
+
+ <h2>Comptes d'epargne a interet eleve</h2>
+ <p><strong>Tangerine*</strong> - description et offre a jour au moment de l'activation.</p>
+ <p><strong>EQ Bank*</strong> - description et offre a jour au moment de l'activation.</p>
+
+ <h2>Cartes de credit</h2>
+ <p>Section a construire une fois les programmes d'affiliation cartes actives. Les recommandations
+    suivront la meme regle : seulement des cartes que je recommanderais sans commission, organisees
+    par besoin (rebatir son credit, remises, voyage) et non par commission versee.</p>
+ -->
+
+ <h2 data-i18n="offres.h2d">Ce que vous ne trouverez pas ici</h2>
+
+ <p data-i18n="offres.end1">Pas de cryptomonnaie miracle, pas de formation à 2 000 $, pas de produit que je n'ai pas moi-même examiné. Cette page grandira lentement, au rythme où je teste des choses — c'est voulu.</p>
+
+ <p data-i18n="offres.end2">Si vous utilisez un de ces liens : merci. Concrètement, c'est ce qui paie l'hébergement, les outils du site et le café des soirées d'écriture. Et si vous préférez vous inscrire sans passer par mes liens, aucun problème — les articles restent gratuits pour tout le monde, dans tous les cas.</p>
+
+ <p data-i18n="offres.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Les offres et bonis mentionnés sont ceux en vigueur au moment de la mise à jour de cette page et peuvent changer sans préavis; vérifiez les conditions directement chez le fournisseur. Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="offres.sb.title">La divulgation en entier</h3>
+ <p data-i18n="offres.sb.desc">Comment ce blogue gagne de l'argent, et ce que cela change (ou non) à ce que j'écris.</p>
+ <a href="/divulgation.html" class="sidebar-btn" data-i18n="offres.sb.btn">Lire la divulgation →</a>
+ <a href="/articles/" class="sidebar-btn secondary" data-i18n="nav.allArticles">Tous les articles →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="offres.sb.key">Mes règles</h4>
+ <div class="info-row"><span data-i18n="offres.sb.r1">Produits testés</span><span data-i18n="offres.sb.r1v">Seulement</span></div>
+ <div class="info-row"><span data-i18n="offres.sb.r2">Placement payé</span><span data-i18n="offres.sb.r2v">Jamais</span></div>
+ <div class="info-row"><span data-i18n="offres.sb.r3">Coût pour vous</span><span data-i18n="offres.sb.r3v">Aucun</span></div>
+ <div class="info-row"><span data-i18n="offres.sb.r4">Liens affiliés</span><span data-i18n="offres.sb.r4v">Marqués (*)</span></div>
+ <div class="info-row"><span data-i18n="offres.sb.r5">Articles</span><span data-i18n="offres.sb.r5v">Gratuits</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="offres.cta.title">Commencer par la base</h2>
+ <p data-i18n="offres.cta.desc">Avant de choisir un produit, il vaut la peine de comprendre ce qu'on achète. L'explication complète des indices et des ETF est ici.</p>
+ <a href="/articles/indice-boursier-explication.html" class="cta-btn" data-i18n="offres.cta.btn">Comprendre les indices et les ETF →</a>
+ <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Qu'est-ce qu'un indice boursier ? L'explication complète — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Qu'est-ce qu'un indice boursier ? L'explication complète"
+        slug "indice-boursier-explication"
+        description "Action, indice, ETF : le fil conducteur expliqué du début à la fin, les dix grands indices à connaître, et les cinq critères pour départager deux ETF équivalents."
+        keywords indice boursier, S&amp;P 500, Nasdaq-100, ETF, FNB, MER, choisir un ETF, TSX
+   EN : title "What Is a Stock Index? The Complete Explanation"
+        slug "what-is-a-stock-index"
+        description "Stock, index, ETF: the whole thread explained from start to finish, the ten major indexes to know, and the five criteria for choosing between equivalent ETFs."
+        keywords stock index, S&amp;P 500, Nasdaq-100, ETF, MER, how to choose an ETF, TSX
+   ES : title "¿Qué es un índice bursátil? La explicación completa"
+        slug "que-es-un-indice-bursatil"
+        description "Acción, índice, ETF: el hilo conductor explicado de principio a fin, los diez grandes índices que hay que conocer, y los cinco criterios para elegir entre ETF equivalentes."
+        keywords índice bursátil, S&amp;P 500, Nasdaq-100, ETF, ratio de gastos, cómo elegir un ETF, TSX
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ /* TABLE */
+ .prose table { width: 100%; border-collapse: collapse; margin: 2em 0; font-size: 14px; }
+ .prose th, .prose td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+ .prose thead th { font-family: 'Playfair Display', serif; font-weight: 400; color: var(--terra); font-size: 13px; letter-spacing: 0.5px; border-bottom: 2px solid var(--border); }
+ .prose tbody tr:last-child td { border-bottom: none; }
+
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* QUESTION CARDS */
+ .question-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 1.2em 0; display: flex; gap: 20px; align-items: flex-start; }
+ .question-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--terra); opacity: 0.5; line-height: 1; flex-shrink: 0; min-width: 44px; }
+ .question-body h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+ .question-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Action, indice, ETF : le fil conducteur expliqué du début à la fin, les dix grands indices à connaître, et les cinq critères pour départager deux ETF équivalents."/>
+ <meta name="keywords" content="indice boursier, S<meta name="keywords" content="frais de placement, ratio des frais de gestion, RFG, frais de gestion FNB, MER fonds communs, frais cachés des fonds, ETF à faible coût"/>amp;P 500, Nasdaq-100, ETF, FNB, MER, choisir un ETF, TSX"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/articles/indice-boursier-explication.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/indice-boursier-explication.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/what-is-a-stock-index.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/que-es-un-indice-bursatil.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/indice-boursier-explication.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Qu'est-ce qu'un indice boursier ? L'explication complète — Route vers le Million"/>
+ <meta property="og:description" content="Action, indice, ETF : le fil conducteur expliqué du début à la fin, les dix grands indices à connaître, et les cinq critères pour départager deux ETF équivalents."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/articles/indice-boursier-explication.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Qu'est-ce qu'un indice boursier ? L'explication complète"/>
+ <meta name="twitter:description" content="Un indice est un thermomètre, pas un placement. Le fil complet : action, indice, ETF. Et les cinq critères qui départagent deux fonds identiques."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Qu'est-ce qu'un indice boursier ? L'explication complète, du début à la fin",
+ "description": "Action, indice, ETF : le fil conducteur expliqué du début à la fin, les dix grands indices à connaître, et les cinq critères pour départager deux ETF équivalents.",
+ "url": "https://route-vers-le-million.blog/articles/indice-boursier-explication.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "fr-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
+ <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ <li><a href="/quiz/" data-i18n="nav.quiz">Quiz</a></li>
+ <li><a href="/meilleures-offres/" data-i18n="nav.offres">Offres</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/articles/indice-boursier-explication.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/what-is-a-stock-index.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/que-es-un-indice-bursatil.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Accueil</a>
+ <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Outils</a>
+ <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
+ <a href="/quiz/" data-i18n="nav.quiz">Quiz</a>
+ <a href="/meilleures-offres/" data-i18n="nav.offres">Offres</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/articles/indice-boursier-explication.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/what-is-a-stock-index.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/que-es-un-indice-bursatil.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.indice.breadcrumb">Investissement</span></p>
+ <p class="hero-tag"><span data-i18n="art.indice.tag">Investissement · ETF · Bases</span></p>
+ <h1><span data-i18n="art.indice.title">Qu'est-ce qu'un indice boursier? <em>L'explication complète, du début à la fin</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.indice.location">Québec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.indice.readtime">10 min de lecture</span>
+ <span>·</span>
+ <span data-i18n="art.indice.category">Investissement · ETF</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgation&nbsp;: Cet article contient des liens d'affiliation. Si tu t'inscris ou achètes via mes liens, je touche une commission, sans frais supplémentaires pour toi. Mes recommandations restent basées sur mon usage personnel.</div>
+
+ <p class="lead" data-i18n="art.indice.lead">La plupart des explications sur la bourse ont un défaut : elles commencent au milieu de l'histoire. On vous parle du S&amp;P 500 avant de vous avoir dit ce qu'est un indice. On vous recommande des ETF avant d'avoir expliqué ce qu'ils contiennent.</p>
+
+ <p data-i18n="art.indice.p1">Résultat : beaucoup de gens investissent, parfois depuis des années, sans vraiment comprendre ce qu'ils possèdent. J'en sais quelque chose. Pendant un bon moment, je hochais la tête quand on me parlait des indices, alors que je n'aurais pas su expliquer clairement la différence entre une action, un indice et un ETF.</p>
+
+ <p data-i18n="art.indice.p2">Cet article reprend donc l'histoire du tout début, sans présumer d'aucune connaissance préalable. À la fin, vous saurez non seulement ce qu'est un indice boursier, mais surtout comment utiliser cette information pour choisir un placement de façon éclairée.</p>
+
+ <h2 data-i18n="art.indice.h2a">Étape 1 : au commencement, il y avait les actions</h2>
+
+ <p data-i18n="art.indice.p3">Une <strong>action</strong>, c'est une part de propriété d'une entreprise. Acheter une action d'Apple, c'est devenir propriétaire d'une infime portion d'Apple. Si l'entreprise prend de la valeur, votre part aussi. Si elle décline, votre part également.</p>
+
+ <p data-i18n="art.indice.p4">Pendant longtemps, investir signifiait exactement cela : choisir des entreprises une par une. Avec 1 000 $, il fallait décider — Apple, Coca-Cola ou Bell Canada? La limite de cette approche est évidente : on parie sur une seule entreprise. Un mauvais choix peut coûter très cher, et même les gestionnaires professionnels se trompent régulièrement dans cet exercice.</p>
+
+ <h2 data-i18n="art.indice.h2b">Étape 2 : quelqu'un invente une liste</h2>
+
+ <p data-i18n="art.indice.p5">Les investisseurs se sont un jour posé une question simple : comment savoir si le marché américain va bien dans son ensemble, sans examiner des centaines d'entreprises une par une? La réponse a été de créer une liste. C'est exactement ce qu'est un <strong>indice boursier</strong> : une liste d'entreprises, accompagnée d'un calcul qui suit leur valeur combinée jour après jour.</p>
+
+ <p data-i18n="art.indice.p6">Le S&amp;P 500, par exemple, est la liste des 500 plus grandes entreprises américaines. Quand on entend que le S&amp;P 500 a gagné 1 % aujourd'hui, cela signifie que, dans l'ensemble, ces 500 entreprises valent 1 % de plus que la veille.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.indice.pull1">"Un indice est une liste avec un calcul. On ne peut pas l'acheter. C'est un thermomètre, pas un placement. Le thermomètre indique la température; il ne réchauffe pas la pièce."</p>
+ </div>
+
+ <h2 data-i18n="art.indice.h2c">Étape 3 : le problème, puis l'invention qui a tout changé</h2>
+
+ <p data-i18n="art.indice.p7">Naturellement, les investisseurs ont voulu posséder les entreprises de la liste. Mais acheter 500 actions différentes, une par une, est pratiquement impossible pour un particulier : il faudrait un capital considérable et un temps de gestion énorme.</p>
+
+ <p data-i18n="art.indice.p8">C'est ici que des sociétés d'investissement comme Vanguard et BlackRock ont eu l'idée qui a démocratisé la bourse : acheter les 500 entreprises elles-mêmes, regrouper le tout dans un grand fonds, puis découper ce fonds en millions de petites parts accessibles à tous. Ces parts, ce sont les <strong>ETF</strong> (ou FNB en français : fonds négociés en bourse).</p>
+
+ <p data-i18n="art.indice.p9">Le fil conducteur complet se résume ainsi :</p>
+
+ <ul>
+ <li data-i18n="art.indice.li1">Les <strong>actions</strong> existent (Apple, Microsoft, etc.)</li>
+ <li data-i18n="art.indice.li2">Quelqu'un crée une <strong>liste</strong> de ces actions et en suit la valeur : c'est l'<strong>indice</strong></li>
+ <li data-i18n="art.indice.li3">Une société achète réellement toutes les actions de la liste et les regroupe dans un fonds</li>
+ <li data-i18n="art.indice.li4">Ce fonds est découpé en parts qu'on peut acheter dans son compte de courtage : c'est l'<strong>ETF</strong></li>
+ </ul>
+
+ <p data-i18n="art.indice.p10">Quand quelqu'un affirme avoir acheté le S&amp;P 500, c'est un raccourci de langage. Ce qu'il a réellement acheté, c'est une part d'un ETF qui détient les 500 entreprises de la liste.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.indice.box1">L'ETF fonctionne comme un <strong>photocopieur</strong>. L'indice indique qu'Apple représente 7 % de la liste, et l'ETF reproduit cette proportion. L'indice retire une entreprise? L'ETF la retire aussi. L'investisseur n'a rien à gérer : la copie se fait automatiquement.</p>
+ </div>
+
+ <h2 data-i18n="art.indice.h2d">Une précision importante : il ne s'agit pas d'intérêts</h2>
+
+ <p data-i18n="art.indice.p11">Avant d'aller plus loin, une clarification de vocabulaire qui évite bien des confusions. Un ETF ne verse pas un taux d'intérêt comme un compte d'épargne. L'argent se gagne de deux façons :</p>
+
+ <ul>
+ <li data-i18n="art.indice.li5"><strong>La croissance</strong> : la valeur des parts augmente quand les entreprises de la liste prennent de la valeur. Ce gain ne se matérialise qu'à la vente.</li>
+ <li data-i18n="art.indice.li6"><strong>Les dividendes</strong> : certaines entreprises redistribuent une partie de leurs profits à leurs actionnaires, et l'ETF transfère ces montants aux détenteurs de parts, généralement chaque mois ou chaque trimestre.</li>
+ </ul>
+
+ <p data-i18n="art.indice.p12">Certains indices regroupent surtout des entreprises de croissance, qui réinvestissent leurs profits; d'autres, surtout des entreprises à dividendes, qui les redistribuent. Cette distinction devient déterminante au moment de choisir, et c'est tout le propos de notre article sur <a href="/articles/dividendes-ou-croissance.html">les dividendes et la croissance pure</a>. On parle donc de <strong>rendement</strong>, jamais d'intérêt garanti : certaines années sont positives, d'autres négatives.</p>
+
+ <h2 data-i18n="art.indice.h2e">Les dix grands indices à connaître</h2>
+
+ <p data-i18n="art.indice.p13">Il existe des dizaines de milliers d'indices dans le monde. En pratique, une dizaine suffit à comprendre l'essentiel, et trois ou quatre suffisent à bâtir un portefeuille complet.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.indice.box2">Les rendements indiqués ci-dessous sont des <strong>moyennes annualisées historiques approximatives</strong>, sur de longues périodes, dividendes réinvestis, avant frais et inflation. Ils varient selon la période mesurée et ne garantissent absolument rien pour l'avenir.</p>
+ </div>
+
+ <div data-i18n="art.indice.table"><table><thead><tr><th>Indice</th><th>Ce qu'il regroupe</th><th>Profil dominant</th><th>Rendement annuel moyen historique</th><th>ETF connus qui le suivent</th></tr></thead><tbody><tr><td>S&amp;P 500</td><td>Les 500 plus grandes entreprises américaines</td><td>Croissance, avec une part de dividendes</td><td>environ 10 %</td><td>VOO, IVV, SPY, XUS.TO, VFV.TO</td></tr><tr><td>Nasdaq-100</td><td>Les 100 plus grandes entreprises non financières du Nasdaq, très concentré en technologie</td><td>Croissance forte, volatilité forte</td><td>environ 13 %, avec des baisses parfois brutales</td><td>QQQ, QQC.F</td></tr><tr><td>Dow Jones</td><td>30 grandes entreprises américaines établies</td><td>Équilibré, entreprises matures</td><td>environ 8 à 10 %</td><td>DIA</td></tr><tr><td>Russell 2000</td><td>2 000 petites entreprises américaines</td><td>Croissance plus risquée</td><td>environ 8 à 9 %</td><td>IWM</td></tr><tr><td>S&amp;P/TSX Composite</td><td>Les principales entreprises canadiennes : banques, énergie, télécoms</td><td>Dividendes généreux, croissance modérée</td><td>environ 7 à 8 %</td><td>XIC.TO, VCN.TO</td></tr><tr><td>S&amp;P/TSX 60</td><td>Les 60 plus grandes entreprises canadiennes</td><td>Dividendes, stabilité</td><td>environ 7 à 8 %</td><td>XIU.TO</td></tr><tr><td>MSCI World</td><td>Environ 1 500 grandes entreprises des pays développés</td><td>Équilibré, très diversifié</td><td>environ 8 à 9 %</td><td>XWD.TO</td></tr><tr><td>FTSE All-World</td><td>Des milliers d'entreprises du monde entier, pays émergents inclus</td><td>Équilibré, diversification maximale</td><td>environ 8 %</td><td>VT, et la logique derrière XEQT et VEQT</td></tr><tr><td>STOXX Europe 600</td><td>600 grandes entreprises européennes</td><td>Dividendes, croissance modérée</td><td>environ 6 à 7 %</td><td>Divers ETF européens</td></tr><tr><td>Nikkei 225</td><td>225 grandes entreprises japonaises</td><td>Très variable selon la période</td><td>Historiquement irrégulier : décennies difficiles de 1990 à 2010, forte reprise depuis</td><td>EWJ</td></tr></tbody></table></div>
+
+ <p data-i18n="art.indice.p14"><strong>Le marché canadien est un marché de dividendes.</strong> Nos indices sont dominés par les banques, les pipelines et les télécommunications, des entreprises matures qui redistribuent leurs profits. C'est ce qui explique l'abondance d'ETF canadiens de dividendes.</p>
+
+ <p data-i18n="art.indice.p15"><strong>Le Nasdaq-100 est la locomotive de croissance.</strong> Peu de dividendes, mais historiquement la plus forte progression sur de longues périodes, au prix de corrections parfois sévères en cours de route. En 2022, par exemple, il a reculé d'environ 33 % avant de se redresser. C'est le rendement le plus élevé du tableau, mais aussi le trajet le plus mouvementé.</p>
+
+ <p data-i18n="art.indice.p16">Le Nikkei illustre l'autre leçon, moins souvent racontée : un grand indice peut stagner pendant des décennies. La diversification géographique n'est pas un détail théorique.</p>
+
+ <h2 data-i18n="art.indice.h2f">Comment faire un choix éclairé</h2>
+
+ <p data-i18n="art.indice.p17">C'est ici que l'information devient une décision. Le raisonnement se fait toujours dans cet ordre, et jamais dans l'autre : <strong>d'abord l'objectif, ensuite l'indice, ensuite seulement l'ETF.</strong></p>
+
+ <p data-i18n="art.indice.p18">Beaucoup de gens font l'inverse : ils entendent parler d'un ETF sur les réseaux sociaux et l'achètent sans savoir quelle liste il reproduit. C'est acheter une maison sans connaître le quartier.</p>
+
+ <h3 data-i18n="art.indice.h3a">Étape A — L'objectif détermine le profil</h3>
+
+ <ul>
+ <li data-i18n="art.indice.li7"><strong>Horizon de 15 à 20 ans ou plus, objectif de croissance :</strong> les indices de croissance (S&amp;P 500, Nasdaq-100) ont historiquement offert les meilleurs rendements à long terme, en échange d'une volatilité qu'il faut être capable de tolérer sans vendre en panique.</li>
+ <li data-i18n="art.indice.li8"><strong>Besoin d'un revenu régulier ou retraite qui approche :</strong> les indices à dividendes (TSX 60, ETF de dividendes canadiens) versent des montants réguliers sans qu'on ait à vendre ses parts.</li>
+ <li data-i18n="art.indice.li9"><strong>Recherche de simplicité et de diversification maximale :</strong> les indices mondiaux (MSCI World, FTSE All-World) répartissent le capital sur des milliers d'entreprises et des dizaines de pays en un seul placement.</li>
+ </ul>
+
+ <h3 data-i18n="art.indice.h3b">Étape B — Trouver les ETF qui suivent l'indice choisi</h3>
+
+ <p data-i18n="art.indice.p19">Supposons que le choix se porte sur le S&amp;P 500. Plusieurs sociétés offrent un ETF qui le reproduit : VOO, IVV, SPY, XUS.TO, VFV.TO. Tous détiennent essentiellement les mêmes 500 entreprises. Comment les départager?</p>
+
+ <h3 data-i18n="art.indice.h3c">Étape C — Les cinq critères qui départagent des ETF équivalents</h3>
+
+ <div class="question-card">
+ <span class="question-num">01</span>
+ <div class="question-body">
+ <h4 data-i18n="art.indice.c1Title">Les frais de gestion (MER)</h4>
+ <p data-i18n="art.indice.c1Text">C'est le pourcentage prélevé chaque année par l'émetteur. À indice égal, c'est le critère le plus important, parce que c'est le seul coût garanti et récurrent. Entre 0,10 % et 0,60 %, la différence paraît négligeable — le calcul en fin d'article montre qu'elle ne l'est pas.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">02</span>
+ <div class="question-body">
+ <h4 data-i18n="art.indice.c2Title">La devise et la conversion</h4>
+ <p data-i18n="art.indice.c2Text">Un ETF coté en dollars canadiens (VFV.TO, XUS.TO, QQC.F) évite les frais de conversion CAD-USD à chaque transaction. Un ETF coté en USD (VOO) affiche souvent un MER légèrement inférieur, mais la conversion gruge une partie de cet avantage, surtout pour de petits montants réguliers. Pour des achats mensuels automatiques dans un CÉLI, la version canadienne est généralement plus pratique.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">03</span>
+ <div class="question-body">
+ <h4 data-i18n="art.indice.c3Title">La couverture de devise</h4>
+ <p data-i18n="art.indice.c3Text">Certains ETF canadiens neutralisent les fluctuations du dollar américain, d'autres non. La couverture ajoute des frais et, sur un horizon de 15 à 20 ans, les fluctuations de devise tendent à s'équilibrer. Personnellement, sur un long horizon, je considère que l'avantage de frais d'une version non couverte compense l'exposition au risque de change.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">04</span>
+ <div class="question-body">
+ <h4 data-i18n="art.indice.c4Title">Le traitement des dividendes</h4>
+ <p data-i18n="art.indice.c4Text">Certains ETF versent les dividendes en argent, d'autres offrent le réinvestissement automatique. En phase d'accumulation, le réinvestissement automatique maximise l'effet des intérêts composés sans effort ni oubli.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">05</span>
+ <div class="question-body">
+ <h4 data-i18n="art.indice.c5Title">La taille et l'ancienneté du fonds</h4>
+ <p data-i18n="art.indice.c5Text">Un ETF établi, avec un actif sous gestion important, se négocie avec des écarts de prix minimes et présente peu de risque d'être fermé par son émetteur. Entre un fonds de 10 milliards et un fonds de 50 millions lancé l'an dernier, le premier offre une tranquillité supplémentaire.</p>
+ </div>
+ </div>
+
+ <p data-i18n="art.indice.p20">Un mot sur l'émetteur lui-même : Vanguard, BlackRock (iShares), BMO ou Invesco sont tous des acteurs solides et réglementés. À frais et structure équivalents, l'émetteur est rarement le facteur décisif — ce sont les cinq critères ci-dessus qui font la différence réelle.</p>
+
+ <p data-i18n="art.indice.p21">Toutes ces informations sont publiques et gratuites : la page officielle de chaque ETF présente l'indice suivi, la liste complète des titres détenus, le MER, la politique de distribution et l'historique de rendement. Quinze minutes de lecture suffisent pour comparer deux fonds sérieusement — moins de temps qu'on en passe à comparer deux forfaits cellulaires. Notre <a href="/etf-explorer/">radar ETF</a> permet d'ailleurs de faire une bonne partie de cette comparaison directement.</p>
+
+ <h2 data-i18n="art.indice.h2g">Le calcul qui rend tout cela concret</h2>
+
+ <p data-i18n="art.indice.p22">Deux investisseurs placent chacun 10 000 $, puis ajoutent 3 000 $ par année, dans un ETF qui suit le même indice, avec le même rendement brut de 7 % par année. Une seule différence : les frais.</p>
+
+ <ul>
+ <li data-i18n="art.indice.li10">Investisseur A : MER de 0,10 %, soit un rendement net d'environ 6,9 %</li>
+ <li data-i18n="art.indice.li11">Investisseur B : MER de 0,60 %, soit un rendement net d'environ 6,4 %</li>
+ </ul>
+
+ <p data-i18n="art.indice.p23">Après 25 ans, A termine avec environ <strong>250 000 $</strong>, et B avec environ <strong>231 000 $</strong>.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.indice.pull2">"Dix-neuf mille dollars de différence. Pour le même indice, les mêmes entreprises, le même risque. La seule variable était une demi-décimale de frais que la plupart des gens ne regardent jamais."</p>
+ </div>
+
+ <p data-i18n="art.indice.p24">C'est précisément pourquoi l'ordre du raisonnement compte : l'indice détermine ce qu'on possède, mais le choix de l'ETF détermine ce qu'on garde. C'est aussi tout le sujet de notre article sur <a href="/articles/comprendre-les-frais-de-placement.html">les frais de placement</a>.</p>
+
+ <h2 data-i18n="art.indice.h2h">En résumé</h2>
+
+ <p data-i18n="art.indice.p25">Une action, c'est une entreprise. Un indice, c'est une liste d'entreprises accompagnée d'un thermomètre. Un ETF, c'est un panier réel, rempli en copiant la liste, découpé en parts qu'on peut acheter dans un CÉLI ou un REER en quelques minutes.</p>
+
+ <p data-i18n="art.indice.p26">Le travail de l'investisseur se résume à trois décisions : quel profil correspond à son objectif et son horizon, quel indice incarne ce profil, et quel ETF reproduit cet indice au meilleur coût. Tout le reste — sélectionner les entreprises, ajuster les proportions, remplacer celles qui quittent la liste — se fait automatiquement. Reste une question pratique : <a href="/articles/combien-etf-avoir.html">combien d'ETF faut-il réellement avoir?</a></p>
+
+ <p data-i18n="art.indice.p27">Il m'a fallu du temps avant que l'ensemble devienne clair. Si cet article vous a épargné ce détour, il aura fait son travail.</p>
+
+ <p data-i18n="art.indice.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Contenu informatif uniquement — pas des conseils financiers officiels. Je ne suis pas planificatrice financière. Les rendements historiques mentionnés sont des approximations à long terme et ne garantissent pas les rendements futurs. Consultez un professionnel pour votre situation spécifique.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.indice.title">Comparer les ETF</h3>
+ <p data-i18n="sidebar.indice.desc">Le radar ETF affiche les frais, le secteur et le rendement des principaux fonds canadiens et américains.</p>
+ <a href="/etf-explorer/" class="sidebar-btn" data-i18n="sidebar.indice.btn">Ouvrir le radar ETF →</a>
+ <a href="/articles/comprendre-les-frais-de-placement.html" class="sidebar-btn secondary" data-i18n="sidebar.indice.secondary">Les frais de placement →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.indice.key">Le fil conducteur</h4>
+ <div class="info-row"><span data-i18n="sidebar.indice.r1">Action</span><span data-i18n="sidebar.indice.r1v">Une entreprise</span></div>
+ <div class="info-row"><span data-i18n="sidebar.indice.r2">Indice</span><span data-i18n="sidebar.indice.r2v">Une liste</span></div>
+ <div class="info-row"><span data-i18n="sidebar.indice.r3">ETF</span><span data-i18n="sidebar.indice.r3v">Un panier réel</span></div>
+ <div class="info-row"><span data-i18n="sidebar.indice.r4">Le critère clé</span><span data-i18n="sidebar.indice.r4v">Les frais</span></div>
+ <div class="info-row"><span data-i18n="sidebar.indice.r5">Sur 25 ans</span><span>19 000 $</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.indice.cta.title">Testez vos bases en 20 questions</h2>
+ <p data-i18n="art.indice.cta.desc">Actions, indices, ETF, frais et comptes : le quiz de l'ABC des ETF vérifie ce que vous venez de lire.</p>
+ <a href="/quiz/abc-des-etf/" class="cta-btn" data-i18n="art.indice.cta.btn">Faire le quiz →</a>
+ <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

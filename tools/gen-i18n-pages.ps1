@@ -84,6 +84,14 @@ foreach ($d in (Get-ChildItem $Root -Directory | Sort-Object Name)) {
   $p = Join-Path $d.FullName 'index.html'
   if (Test-Path $p) { $SOURCES += [pscustomobject]@{ id = $d.Name; kind = 'section'; path = $p } }
 }
+# Les quiz vivent un niveau plus bas : quiz/<nom>/index.html -> /quiz/<slug>/ | /<L>/quiz/<slug>/
+$qroot = Join-Path $Root 'quiz'
+if (Test-Path $qroot) {
+  foreach ($d in (Get-ChildItem $qroot -Directory | Sort-Object Name)) {
+    $p = Join-Path $d.FullName 'index.html'
+    if (Test-Path $p) { $SOURCES += [pscustomobject]@{ id = 'quiz/' + $d.Name; kind = 'quiz'; path = $p } }
+  }
+}
 
 $SEO  = @{}
 $KIND = @{}
@@ -118,6 +126,11 @@ function Get-Path([string]$base, [string]$lang) {
     'artindex' { if ($lang -eq 'fr') { return '/articles/' } else { return "/$lang/articles/" } }
     'article'  { if ($lang -eq 'fr') { return "/articles/$base.html" } else { return "/$lang/articles/$slug.html" } }
     'section'  { if ($lang -eq 'fr') { return "/$base/" }    else { return "/$lang/$slug/" } }
+    'quiz'     {
+      # Le prefixe /quiz/ est lui-meme traduit : il suit le slug de la section quiz.
+      $racine = if ($SEO.ContainsKey('quiz')) { $SEO['quiz'][$lang].slug } else { 'quiz' }
+      if ($lang -eq 'fr') { return "/quiz/$slug/" } else { return "/$lang/$racine/$slug/" }
+    }
   }
   throw ("kind inconnu [{0}] pour {1}" -f $k, $base)
 }

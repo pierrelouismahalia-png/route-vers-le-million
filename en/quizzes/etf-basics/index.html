@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>ETF Basics: Test Your Knowledge in 20 Questions — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "L'ABC des ETF : testez vos bases en 20 questions" | slug "abc-des-etf"
+        description "Vingt questions pour vérifier vos fondations : actions, indices, ETF, frais et comptes. Chaque réponse vient avec son explication."
+   EN : title "ETF Basics: Test Your Knowledge in 20 Questions" | slug "etf-basics"
+        description "Twenty questions to check your foundations: stocks, indexes, ETFs, fees and accounts. Every answer comes with an explanation."
+   ES : title "El ABC de los ETF: pon a prueba tus bases en 20 preguntas" | slug "abc-de-los-etf"
+        description "Veinte preguntas para verificar tus bases: acciones, índices, ETF, comisiones y cuentas. Cada respuesta incluye su explicación." -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ --faux: #9a3b3b;
+ --faux-fond: #f6e9e9;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 40vh; min-height: 300px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 44px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 44px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* WRAP */
+ .wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 90px; }
+ .intro { text-align: center; font-size: 16px; color: var(--muted); margin: 0 auto 32px; max-width: 520px; }
+
+ /* QUIZ */
+ .quiz { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+ .quiz__entete { padding: 28px 32px 22px; border-bottom: 1px solid var(--border); }
+ .quiz__surtitre { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--terra); font-weight: 500; margin: 0 0 8px; }
+ .quiz__titre { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; margin: 0; color: var(--text); }
+ .quiz__progres { font-size: 13px; color: var(--muted); margin-top: 14px; }
+ .quiz__barre { height: 4px; background: var(--border); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+ .quiz__barre span { display: block; height: 100%; width: 0; background: var(--terra); transition: width 0.3s ease; }
+ .quiz__corps { padding: 28px 32px 32px; }
+ .question { font-size: 18px; font-weight: 500; margin: 0 0 22px; color: var(--text); }
+ .options { display: flex; flex-direction: column; gap: 12px; }
+ .option { text-align: left; width: 100%; padding: 15px 18px; font-size: 15.5px; line-height: 1.5; color: var(--text); background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; font-family: inherit; transition: border-color 0.15s ease, background-color 0.15s ease; }
+ .option:hover:not(:disabled) { border-color: var(--terra); }
+ .option:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .option:disabled { cursor: default; }
+ .option--juste { border-color: var(--terra); background: var(--cream2); font-weight: 500; }
+ .option--faux { border-color: var(--faux); background: var(--faux-fond); }
+ .explication { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--terra); background: var(--cream2); border-radius: 0 8px 8px 0; font-size: 14.5px; line-height: 1.7; }
+ .explication strong { display: block; margin-bottom: 4px; color: var(--terra); }
+ .actions { margin-top: 24px; display: flex; justify-content: flex-end; }
+ .bouton { padding: 12px 26px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; font-family: inherit; color: #fff; background: var(--terra); border: none; border-radius: 100px; cursor: pointer; transition: background 0.2s; }
+ .bouton:hover { background: var(--terra2); }
+ .bouton:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .bouton--secondaire { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .bilan { text-align: center; padding: 8px 0; }
+ .bilan__score { font-family: 'Playfair Display', serif; font-size: 42px; color: var(--terra); margin: 0 0 6px; }
+ .bilan__libelle { font-size: 16px; color: var(--text); margin: 0 0 8px; font-weight: 500; }
+ .bilan__texte { font-size: 15px; color: var(--muted); margin: 0 auto 26px; max-width: 440px; }
+ .bilan .actions { justify-content: center; }
+ .quiz-cta { text-align: center; margin-top: 28px; }
+ .quiz-cta a { color: var(--terra); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+
+ /* CTA + FOOTER (chrome) */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 56px 24px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; margin: 6px; }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+ .mobile-menu a:last-child { border: none; }
+
+ @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 32px !important; }
+ .quiz__entete, .quiz__corps { padding-left: 20px; padding-right: 20px; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/quizzes/etf-basics/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/quiz/abc-des-etf/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/quizzes/etf-basics/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/cuestionarios/abc-de-los-etf/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/quiz/abc-des-etf/"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/en/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/en/etfs/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/en/tools/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ <li><a href="/en/best-offers/" data-i18n="nav.offres">Offers</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/quiz/abc-des-etf/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/etf-basics/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/abc-de-los-etf/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/en/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/en/etfs/" data-i18n="nav.etf">ETFs</a>
+ <a href="/en/tools/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/en/best-offers/" data-i18n="nav.offres">Offers</a>
+ <a href="/en/emergency-fund/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/en/my-story/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/quiz/abc-des-etf/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/etf-basics/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/abc-de-los-etf/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/en/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <a href="/en/quizzes/" data-i18n="nav.quiz">Quizzes</a></p>
+ <h1><span data-i18n="art.quizEtf.title">ETF Basics: test your knowledge in 20 questions</span></h1>
+ </div>
+</div>
+
+<!-- WRAP -->
+<div class="wrap">
+ <p class="intro" data-i18n="art.quizEtf.intro">Twenty questions to check your foundations: stocks, indexes, ETFs, fees and accounts. Every answer comes with an explanation.</p>
+
+ <section class="quiz" aria-live="polite">
+ <header class="quiz__entete">
+ <p class="quiz__surtitre" data-i18n="art.quizEtf.surtitre">Test your knowledge</p>
+ <h2 class="quiz__titre" data-i18n="art.quizEtf.title">ETF Basics: test your knowledge in 20 questions</h2>
+ <p class="quiz__progres" id="progres">Question 1 sur 5</p>
+ <div class="quiz__barre"><span id="barre"></span></div>
+ </header>
+ <div class="quiz__corps" id="corps"></div>
+ </section>
+
+ <p class="quiz-cta"><a href="/en/articles/what-is-a-stock-index.html" data-i18n="art.quizEtf.cta">Read the full explanation →</a></p>
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.quizEtf.ctaTitle">Understand before you invest</h2>
+ <p data-i18n="art.quizEtf.ctaDesc">The full article picks the thread up from the start: stock, index, ETF, and the five criteria that separate two identical funds.</p>
+ <a href="/en/calculator/" class="cta-btn" data-i18n="art.quizEtf.ctaBtn">Read the article →</a>
+ <a href="/en/articles/" class="cta-btn secondary" data-i18n="art.readMore">View all articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+<script>
+window.QUIZ_DATA = {
+ mode: "score",
+ fr: {
+  ui: { progres: "Question {n} sur {t}", suivant: "Question suivante", voir: "Voir mon résultat", recommencer: "Recommencer le quiz", termine: "Terminé", bonne: "Bonne réponse", revoir: "Réponse à revoir" },
+  bilan: {
+   paliers: [
+    { min: 17, l: "Bases solides.", t: "Vous êtes prêt pour la suite : le choix éclairé d'un ETF." },
+    { min: 12, l: "Bonnes bases, quelques angles morts.", t: "Relisez les explications des questions manquées." },
+    { min: 0,  l: "Parfait point de départ.", t: "L'article complet reprend tout du début, sans jargon." }
+   ],
+   liens: [
+    { href: "/articles/indice-boursier-explication.html", t: "L'explication complète" },
+    { href: "/etf-explorer/", t: "Radar ETF" },
+    { href: "/articles/comprendre-les-frais-de-placement.html", t: "Les frais de placement" },
+    { href: "/articles/combien-etf-avoir.html", t: "Combien d'ETF avoir" }
+   ]
+  },
+  questions: [
+   { q: "Qu'est-ce qu'une action?", options: ["Un prêt consenti à une entreprise", "Une part de propriété d'une entreprise", "Un compte d'épargne offert par une banque", "Une garantie de rendement annuel"], bonne: 1, explication: "Acheter une action, c'est devenir propriétaire d'une petite partie de l'entreprise. Si elle prend de la valeur, votre part aussi, et inversement." },
+   { q: "Qu'est-ce qu'un indice boursier?", options: ["Un fonds qu'on peut acheter en bourse", "Une liste d'entreprises dont on suit la valeur combinée", "Le taux d'intérêt fixé par la Banque du Canada", "Le prix d'une action individuelle"], bonne: 1, explication: "Un indice est une liste avec un calcul, un thermomètre du marché. Le S&P 500, par exemple, suit les 500 plus grandes entreprises américaines." },
+   { q: "Peut-on acheter directement un indice comme le S&P 500?", options: ["Oui, auprès de n'importe quel courtier", "Oui, mais seulement aux États-Unis", "Non : un indice est une mesure; on achète un ETF qui le reproduit", "Non, les indices sont réservés aux institutions"], bonne: 2, explication: "L'indice est le thermomètre, pas le placement. Ce qu'on achète, c'est un ETF qui détient les entreprises de la liste." },
+   { q: "Qu'est-ce qu'un ETF (FNB)?", options: ["Un panier de titres découpé en parts négociées en bourse", "Une action d'une seule grande entreprise", "Un compte enregistré du gouvernement", "Un prêt hypothécaire titrisé"], bonne: 0, explication: "Une société d'investissement achète des dizaines, centaines ou milliers de titres, les regroupe dans un fonds, et le découpe en parts que n'importe qui peut acheter comme une action." },
+   { q: "Au Canada, FNB veut dire :", options: ["Fonds national bancaire", "Fonds négocié en bourse", "Fiducie non boursière", "Fonds à négociation bloquée"], bonne: 1, explication: "FNB, fonds négocié en bourse, est simplement le terme français pour ETF, exchange-traded fund. C'est le même produit." },
+   { q: "Comment un ETF indiciel choisit-il les entreprises qu'il détient?", options: ["Un gestionnaire sélectionne ses favorites chaque semaine", "Il copie la liste et les proportions de l'indice qu'il suit", "Il achète uniquement les entreprises les moins chères", "Par tirage au sort réglementé"], bonne: 1, explication: "L'ETF indiciel fonctionne comme un photocopieur : l'indice dit qu'Apple pèse 7 %, l'ETF reproduit. Aucune sélection humaine au quotidien." },
+   { q: "Que représente le MER (ratio des frais de gestion)?", options: ["Le rendement moyen espéré du fonds", "Le pourcentage prélevé chaque année pour gérer le fonds", "La commission payée à chaque transaction", "L'impôt retenu sur les dividendes"], bonne: 1, explication: "Le MER est prélevé automatiquement, chaque année, que le fonds monte ou descende. C'est le seul coût garanti d'un placement, d'où son importance." },
+   { q: "Sur 25 ans, un écart de frais de 0,5 % par année entre deux ETF identiques est :", options: ["Négligeable, quelques centaines de dollars", "Important : des dizaines de milliers de dollars sur un portefeuille typique", "Nul, car les frais sont remboursés à la vente", "Impossible à estimer"], bonne: 1, explication: "Les frais se composent comme les rendements, mais contre vous. Sur 10 000 $ plus 3 000 $ par année pendant 25 ans, 0,5 % d'écart représente environ 19 000 $." },
+   { q: "Le principal avantage d'un ETF par rapport à l'achat d'une seule action est :", options: ["Un rendement garanti plus élevé", "La diversification : une entreprise en difficulté a un impact limité", "L'absence totale de risque", "L'exonération d'impôt automatique"], bonne: 1, explication: "Avec des centaines d'entreprises dans le panier, aucune ne peut couler le portefeuille à elle seule. La diversification réduit le risque, elle ne l'élimine pas." },
+   { q: "Le S&P 500 regroupe :", options: ["Les 500 plus grandes entreprises américaines", "500 entreprises technologiques mondiales", "Les 500 plus grandes entreprises du monde", "500 obligations du gouvernement américain"], bonne: 0, explication: "C'est l'indice de référence du marché américain. Son rendement annuel moyen historique tourne autour de 10 % sur de longues périodes, sans aucune garantie pour l'avenir." },
+   { q: "Le Nasdaq-100 est reconnu pour :", options: ["Sa stabilité et ses dividendes élevés", "Sa forte concentration en technologie : croissance élevée, volatilité élevée", "Ses obligations gouvernementales", "Ses entreprises exclusivement canadiennes"], bonne: 1, explication: "Historiquement l'indice le plus performant des grands indices, environ 13 % par année en moyenne, mais au prix de baisses parfois brutales : environ -33 % en 2022, par exemple." },
+   { q: "Le marché boursier canadien (indices S&P/TSX) est surtout reconnu pour :", options: ["Ses entreprises technologiques en forte croissance", "Ses banques, énergie et télécoms qui versent des dividendes généreux", "Son absence totale de volatilité", "Ses entreprises exclusivement minières"], bonne: 1, explication: "Le marché canadien est un marché de dividendes : dominé par des entreprises matures qui redistribuent leurs profits. Croissance plus modérée, revenu plus régulier." },
+   { q: "Un investisseur en ETF gagne de l'argent de deux façons. Lesquelles?", options: ["La croissance de la valeur des parts et les dividendes", "Les intérêts garantis et les primes d'assurance", "Les frais de gestion et les commissions", "Les subventions gouvernementales et les remises"], bonne: 0, explication: "La valeur des parts monte quand les entreprises du panier prennent de la valeur, gain réalisé à la vente, et certaines entreprises versent des dividendes que l'ETF vous redistribue." },
+   { q: "Un ETF verse-t-il un taux d'intérêt comme un compte d'épargne?", options: ["Oui, fixé chaque année par l'émetteur", "Oui, garanti par le gouvernement", "Non : on parle de rendement, qui varie et peut être négatif", "Seulement dans un CÉLI"], bonne: 2, explication: "Certaines années sont positives, d'autres négatives. Confondre rendement et intérêt garanti est une des erreurs de vocabulaire les plus répandues chez les débutants." },
+   { q: "Où un particulier peut-il acheter un ETF au Canada?", options: ["Uniquement par un planificateur financier", "Par un compte de courtage (Wealthsimple, Questrade), y compris dans un CÉLI ou un REER", "À la Banque du Canada", "Uniquement à la bourse de New York"], bonne: 1, explication: "Un compte de courtage en ligne suffit, souvent sans commission. L'ETF s'achète et se vend comme une action, directement dans vos comptes enregistrés." },
+   { q: "Quel est l'avantage de détenir ses ETF dans un CÉLI?", options: ["Les gains et retraits sont libres d'impôt", "Le gouvernement double les cotisations", "Le rendement y est garanti", "Il n'y a aucun avantage"], bonne: 0, explication: "Croissance et dividendes s'y accumulent à l'abri de l'impôt, et les retraits ne sont pas imposés. Le CÉLI est l'enveloppe, l'ETF est le contenu : deux choses distinctes." },
+   { q: "Quel est le bon ordre de raisonnement pour choisir un placement indiciel?", options: ["ETF vu sur les réseaux sociaux, puis achat, puis vérification plus tard", "Objectif, puis indice qui y correspond, puis ETF qui le suit au meilleur coût", "Le ticker le plus court d'abord", "Le fonds avec la meilleure publicité"], bonne: 1, explication: "La plupart des gens font l'inverse : ils achètent l'ETF entendu quelque part sans savoir quelle liste il reproduit. L'indice détermine ce qu'on possède; l'ETF détermine ce qu'on garde." },
+   { q: "Pour un Canadien qui investit de petits montants chaque mois, un ETF coté en dollars canadiens (VFV.TO) plutôt qu'en dollars américains (VOO) permet surtout :", options: ["D'éviter les frais de conversion de devise à chaque achat", "D'obtenir un rendement supérieur garanti", "D'éliminer tout risque de marché", "De doubler les dividendes"], bonne: 0, explication: "Les deux détiennent essentiellement les mêmes entreprises. La version canadienne évite la conversion CAD-USD à chaque transaction, un coût qui gruge surtout les petits achats réguliers." },
+   { q: "Un ETF a rendu 15 % par année depuis 5 ans. Que peut-on en conclure pour les 5 prochaines années?", options: ["Il rendra environ 15 % par année", "Rien : les rendements passés ne garantissent pas les rendements futurs", "Il rendra au moins 10 %", "Il est trop tard pour y investir"], bonne: 1, explication: "L'historique renseigne sur le comportement passé d'un indice, jamais sur son avenir. Une action qui a doublé le mois dernier ne doublera pas nécessairement le mois prochain : même logique pour les fonds." },
+   { q: "Une entreprise de l'indice fait faillite ou est retirée de la liste. Que fait un ETF indiciel?", options: ["Le fonds ferme et rembourse les investisseurs", "Il suit l'indice : le titre est remplacé automatiquement, l'impact est dilué par la diversification", "Les investisseurs doivent vendre manuellement", "L'ETF garde le titre pour toujours"], bonne: 1, explication: "C'est le photocopieur en action : l'indice met sa liste à jour, l'ETF suit, sans intervention de votre part. Et parmi des centaines de titres, un seul cas pèse peu." }
+  ]
+ },
+ en: {
+  ui: { progres: "Question {n} of {t}", suivant: "Next question", voir: "See my result", recommencer: "Restart the quiz", termine: "Finished", bonne: "Correct", revoir: "Worth reviewing" },
+  bilan: {
+   paliers: [
+    { min: 17, l: "Solid foundations.", t: "You are ready for the next step: choosing an ETF wisely." },
+    { min: 12, l: "Good foundations, a few blind spots.", t: "Review the explanations for the questions you missed." },
+    { min: 0,  l: "A perfect starting point.", t: "The full article covers everything from scratch, jargon-free." }
+   ],
+   liens: [
+    { href: "/en/articles/what-is-a-stock-index.html", t: "The complete explanation" },
+    { href: "/en/etf-explorer/", t: "ETF radar" },
+    { href: "/en/articles/understanding-investment-fees.html", t: "Investment fees" },
+    { href: "/en/articles/how-many-etfs-should-you-own.html", t: "How many ETFs to own" }
+   ]
+  },
+  questions: [
+   { q: "What is a stock?", options: ["A loan made to a company", "A share of ownership in a company", "A savings account offered by a bank", "A guaranteed annual return"], bonne: 1, explication: "Buying a stock means owning a small piece of the company. If it gains value, so does your share, and vice versa." },
+   { q: "What is a stock index?", options: ["A fund you can buy on the market", "A list of companies whose combined value is tracked", "The interest rate set by the Bank of Canada", "The price of a single stock"], bonne: 1, explication: "An index is a list with a calculation, a market thermometer. The S&P 500, for example, tracks the 500 largest U.S. companies." },
+   { q: "Can you directly buy an index like the S&P 500?", options: ["Yes, through any broker", "Yes, but only in the United States", "No: an index is a measure; you buy an ETF that replicates it", "No, indexes are reserved for institutions"], bonne: 2, explication: "The index is the thermometer, not the investment. What you buy is an ETF that holds the companies on the list." },
+   { q: "What is an ETF?", options: ["A basket of securities divided into shares traded on an exchange", "A stock of a single large company", "A government registered account", "A securitized mortgage"], bonne: 0, explication: "An investment firm buys dozens, hundreds or thousands of securities, pools them into a fund, and divides it into shares anyone can buy like a stock." },
+   { q: "In Canada, the French acronym FNB stands for:", options: ["National banking fund", "Exchange-traded fund", "Non-listed trust", "Locked-trading fund"], bonne: 1, explication: "FNB, fonds negocie en bourse, is simply the French term for ETF. Same product." },
+   { q: "How does an index ETF choose the companies it holds?", options: ["A manager picks favourites every week", "It copies the list and weights of the index it tracks", "It only buys the cheapest companies", "By regulated random draw"], bonne: 1, explication: "An index ETF works like a photocopier: the index says Apple is 7 %, the ETF replicates it. No day-to-day human stock picking." },
+   { q: "What does the MER (management expense ratio) represent?", options: ["The fund's expected average return", "The percentage charged each year to manage the fund", "The commission paid on each trade", "The tax withheld on dividends"], bonne: 1, explication: "The MER is deducted automatically every year, whether the fund goes up or down. It is the only guaranteed cost of an investment, hence its importance." },
+   { q: "Over 25 years, a 0.5 % annual fee gap between two identical ETFs is:", options: ["Negligible, a few hundred dollars", "Significant: tens of thousands of dollars on a typical portfolio", "Zero, since fees are refunded at sale", "Impossible to estimate"], bonne: 1, explication: "Fees compound like returns, but against you. On $10,000 plus $3,000 a year for 25 years, a 0.5 % gap represents about $19,000." },
+   { q: "The main advantage of an ETF over buying a single stock is:", options: ["A higher guaranteed return", "Diversification: one struggling company has limited impact", "The total absence of risk", "Automatic tax exemption"], bonne: 1, explication: "With hundreds of companies in the basket, no single one can sink the portfolio. Diversification reduces risk, it does not eliminate it." },
+   { q: "The S&P 500 groups together:", options: ["The 500 largest U.S. companies", "500 global technology companies", "The world's 500 largest companies", "500 U.S. government bonds"], bonne: 0, explication: "It is the benchmark index of the U.S. market. Its historical average annual return is around 10 % over long periods, with no guarantee for the future." },
+   { q: "The Nasdaq-100 is known for:", options: ["Its stability and high dividends", "Its heavy tech concentration: high growth, high volatility", "Its government bonds", "Its exclusively Canadian companies"], bonne: 1, explication: "Historically the best performer among major indexes, about 13 % per year on average, but at the cost of sometimes brutal drops: around -33 % in 2022, for example." },
+   { q: "The Canadian stock market (S&P/TSX indexes) is mostly known for:", options: ["Its fast-growing tech companies", "Its banks, energy and telecoms paying generous dividends", "Its total absence of volatility", "Its exclusively mining companies"], bonne: 1, explication: "The Canadian market is a dividend market: dominated by mature companies that redistribute profits. More moderate growth, steadier income." },
+   { q: "An ETF investor makes money in two ways. Which ones?", options: ["Growth in share value and dividends", "Guaranteed interest and insurance premiums", "Management fees and commissions", "Government grants and rebates"], bonne: 0, explication: "Share value rises when the basket's companies gain value, realized when you sell, and some companies pay dividends that the ETF passes on to you." },
+   { q: "Does an ETF pay an interest rate like a savings account?", options: ["Yes, set annually by the issuer", "Yes, guaranteed by the government", "No: we talk about returns, which vary and can be negative", "Only inside a TFSA"], bonne: 2, explication: "Some years are positive, others negative. Confusing returns with guaranteed interest is one of the most common beginner vocabulary mistakes." },
+   { q: "Where can an individual buy an ETF in Canada?", options: ["Only through a financial planner", "Through a brokerage account (Wealthsimple, Questrade), including inside a TFSA or RRSP", "At the Bank of Canada", "Only on the New York Stock Exchange"], bonne: 1, explication: "An online brokerage account is enough, often commission-free. An ETF is bought and sold like a stock, directly inside your registered accounts." },
+   { q: "What is the advantage of holding ETFs inside a TFSA?", options: ["Gains and withdrawals are tax-free", "The government doubles contributions", "Returns are guaranteed inside it", "There is no advantage"], bonne: 0, explication: "Growth and dividends accumulate tax-sheltered, and withdrawals are not taxed. The TFSA is the envelope, the ETF is the content: two distinct things." },
+   { q: "What is the right order of reasoning to choose an index investment?", options: ["ETF seen on social media, then buy, then check later", "Goal, then the matching index, then the ETF tracking it at the best cost", "Shortest ticker first", "The fund with the best advertising"], bonne: 1, explication: "Most people do the opposite: they buy an ETF they heard about without knowing which list it replicates. The index determines what you own; the ETF determines what you keep." },
+   { q: "For a Canadian investing small amounts monthly, a Canadian-dollar ETF (VFV.TO) rather than a U.S.-dollar one (VOO) mainly:", options: ["Avoids currency conversion fees on every purchase", "Gets a guaranteed higher return", "Eliminates all market risk", "Doubles the dividends"], bonne: 0, explication: "Both hold essentially the same companies. The Canadian version avoids CAD-USD conversion on every trade, a cost that mostly eats into small regular purchases." },
+   { q: "An ETF has returned 15 % per year for 5 years. What can we conclude for the next 5 years?", options: ["It will return about 15 % per year", "Nothing: past returns do not guarantee future returns", "It will return at least 10 %", "It is too late to invest in it"], bonne: 1, explication: "History tells you about an index's past behaviour, never its future. A stock that doubled last month will not necessarily double next month: same logic for funds." },
+   { q: "A company in the index goes bankrupt or is removed from the list. What does an index ETF do?", options: ["The fund closes and refunds investors", "It follows the index: the security is replaced automatically, the impact is diluted by diversification", "Investors must sell manually", "The ETF keeps the security forever"], bonne: 1, explication: "That is the photocopier at work: the index updates its list, the ETF follows, with no action on your part. And among hundreds of holdings, a single case weighs little." }
+  ]
+ },
+ es: {
+  ui: { progres: "Pregunta {n} de {t}", suivant: "Siguiente pregunta", voir: "Ver mi resultado", recommencer: "Reiniciar el cuestionario", termine: "Terminado", bonne: "Respuesta correcta", revoir: "Respuesta a repasar" },
+  bilan: {
+   paliers: [
+    { min: 17, l: "Bases sólidas.", t: "Estás listo para el siguiente paso: elegir un ETF con criterio." },
+    { min: 12, l: "Buenas bases, algunos puntos ciegos.", t: "Repasa las explicaciones de las preguntas falladas." },
+    { min: 0,  l: "Un punto de partida perfecto.", t: "El artículo completo lo explica todo desde cero, sin jerga." }
+   ],
+   liens: [
+    { href: "/es/articles/que-es-un-indice-bursatil.html", t: "La explicación completa" },
+    { href: "/es/explorador-etf/", t: "Radar de ETF" },
+    { href: "/es/articles/comprender-las-comisiones-de-inversion.html", t: "Las comisiones de inversión" },
+    { href: "/es/articles/cuantos-etf-tener.html", t: "Cuántos ETF tener" }
+   ]
+  },
+  questions: [
+   { q: "¿Qué es una acción?", options: ["Un préstamo otorgado a una empresa", "Una parte de propiedad de una empresa", "Una cuenta de ahorro ofrecida por un banco", "Una garantía de rendimiento anual"], bonne: 1, explication: "Comprar una acción es volverse propietario de una pequeña parte de la empresa. Si gana valor, tu parte también, y viceversa." },
+   { q: "¿Qué es un índice bursátil?", options: ["Un fondo que se puede comprar en bolsa", "Una lista de empresas cuyo valor combinado se sigue", "La tasa de interés fijada por el Banco de Canadá", "El precio de una acción individual"], bonne: 1, explication: "Un índice es una lista con un cálculo, un termómetro del mercado. El S&P 500, por ejemplo, sigue las 500 empresas más grandes de Estados Unidos." },
+   { q: "¿Se puede comprar directamente un índice como el S&P 500?", options: ["Sí, a través de cualquier corredor", "Sí, pero solo en Estados Unidos", "No: un índice es una medida; se compra un ETF que lo replica", "No, los índices están reservados a las instituciones"], bonne: 2, explication: "El índice es el termómetro, no la inversión. Lo que se compra es un ETF que posee las empresas de la lista." },
+   { q: "¿Qué es un ETF?", options: ["Una canasta de títulos dividida en partes que se negocian en bolsa", "Una acción de una sola gran empresa", "Una cuenta registrada del gobierno", "Una hipoteca titulizada"], bonne: 0, explication: "Una sociedad de inversión compra decenas, cientos o miles de títulos, los agrupa en un fondo y lo divide en partes que cualquiera puede comprar como una acción." },
+   { q: "En Canadá, la sigla francesa FNB significa:", options: ["Fondo nacional bancario", "Fondo negociado en bolsa", "Fideicomiso no bursátil", "Fondo de negociación bloqueada"], bonne: 1, explication: "FNB, fonds negocie en bourse, es simplemente el término francés para ETF. Es el mismo producto." },
+   { q: "¿Cómo elige un ETF indexado las empresas que posee?", options: ["Un gestor elige sus favoritas cada semana", "Copia la lista y las proporciones del índice que sigue", "Solo compra las empresas más baratas", "Por sorteo regulado"], bonne: 1, explication: "Un ETF indexado funciona como una fotocopiadora: el índice dice que Apple pesa un 7 %, el ETF lo reproduce. Sin selección humana cotidiana." },
+   { q: "¿Qué representa el MER (ratio de gastos de gestión)?", options: ["El rendimiento promedio esperado del fondo", "El porcentaje cobrado cada año por gestionar el fondo", "La comisión pagada en cada transacción", "El impuesto retenido sobre los dividendos"], bonne: 1, explication: "El MER se deduce automáticamente cada año, suba o baje el fondo. Es el único costo garantizado de una inversión, de ahí su importancia." },
+   { q: "En 25 años, una diferencia de comisiones del 0,5 % anual entre dos ETF idénticos es:", options: ["Insignificante, unos cientos de dólares", "Importante: decenas de miles de dólares en un portafolio típico", "Nula, porque las comisiones se reembolsan al vender", "Imposible de estimar"], bonne: 1, explication: "Las comisiones se componen como los rendimientos, pero en tu contra. Sobre 10 000 $ más 3 000 $ al año durante 25 años, un 0,5 % de diferencia representa unos 19 000 $." },
+   { q: "La principal ventaja de un ETF frente a comprar una sola acción es:", options: ["Un rendimiento garantizado más alto", "La diversificación: una empresa en dificultades tiene un impacto limitado", "La ausencia total de riesgo", "La exención fiscal automática"], bonne: 1, explication: "Con cientos de empresas en la canasta, ninguna puede hundir el portafolio por sí sola. La diversificación reduce el riesgo, no lo elimina." },
+   { q: "El S&P 500 agrupa:", options: ["Las 500 empresas más grandes de Estados Unidos", "500 empresas tecnológicas mundiales", "Las 500 empresas más grandes del mundo", "500 bonos del gobierno estadounidense"], bonne: 0, explication: "Es el índice de referencia del mercado estadounidense. Su rendimiento anual promedio histórico ronda el 10 % en períodos largos, sin ninguna garantía para el futuro." },
+   { q: "El Nasdaq-100 es conocido por:", options: ["Su estabilidad y sus altos dividendos", "Su fuerte concentración tecnológica: alto crecimiento, alta volatilidad", "Sus bonos gubernamentales", "Sus empresas exclusivamente canadienses"], bonne: 1, explication: "Históricamente el índice con mejor rendimiento entre los grandes, alrededor del 13 % anual en promedio, pero al precio de caídas a veces brutales: alrededor de -33 % en 2022, por ejemplo." },
+   { q: "El mercado bursátil canadiense (índices S&P/TSX) es conocido sobre todo por:", options: ["Sus empresas tecnológicas de rápido crecimiento", "Sus bancos, energía y telecomunicaciones que pagan dividendos generosos", "Su ausencia total de volatilidad", "Sus empresas exclusivamente mineras"], bonne: 1, explication: "El mercado canadiense es un mercado de dividendos: dominado por empresas maduras que redistribuyen sus ganancias. Crecimiento más moderado, ingreso más regular." },
+   { q: "Un inversor en ETF gana dinero de dos maneras. ¿Cuáles?", options: ["El crecimiento del valor de las partes y los dividendos", "Los intereses garantizados y las primas de seguro", "Las comisiones de gestión y las transacciones", "Las subvenciones gubernamentales y los reembolsos"], bonne: 0, explication: "El valor de las partes sube cuando las empresas de la canasta ganan valor, ganancia realizada al vender, y algunas empresas pagan dividendos que el ETF te redistribuye." },
+   { q: "¿Un ETF paga una tasa de interés como una cuenta de ahorro?", options: ["Sí, fijada cada año por el emisor", "Sí, garantizada por el gobierno", "No: se habla de rendimiento, que varía y puede ser negativo", "Solo dentro de un CÉLI"], bonne: 2, explication: "Algunos años son positivos, otros negativos. Confundir rendimiento con interés garantizado es uno de los errores de vocabulario más comunes entre principiantes." },
+   { q: "¿Dónde puede un particular comprar un ETF en Canadá?", options: ["Solo a través de un planificador financiero", "A través de una cuenta de corretaje (Wealthsimple, Questrade), incluso dentro de un CÉLI o un REER", "En el Banco de Canadá", "Solo en la bolsa de Nueva York"], bonne: 1, explication: "Basta una cuenta de corretaje en línea, a menudo sin comisiones. Un ETF se compra y se vende como una acción, directamente en tus cuentas registradas." },
+   { q: "¿Cuál es la ventaja de mantener tus ETF dentro de un CÉLI?", options: ["Las ganancias y los retiros están libres de impuestos", "El gobierno duplica las contribuciones", "El rendimiento está garantizado dentro de ella", "No hay ninguna ventaja"], bonne: 0, explication: "El crecimiento y los dividendos se acumulan protegidos de impuestos, y los retiros no se gravan. El CÉLI es el sobre, el ETF es el contenido: dos cosas distintas." },
+   { q: "¿Cuál es el orden correcto de razonamiento para elegir una inversión indexada?", options: ["ETF visto en redes sociales, luego compra, luego verificación después", "Objetivo, luego el índice correspondiente, luego el ETF que lo sigue al mejor costo", "El ticker más corto primero", "El fondo con la mejor publicidad"], bonne: 1, explication: "La mayoría hace lo contrario: compra el ETF que escuchó en alguna parte sin saber qué lista reproduce. El índice determina lo que posees; el ETF determina lo que conservas." },
+   { q: "Para un canadiense que invierte pequeños montos cada mes, un ETF en dólares canadienses (VFV.TO) en lugar de dólares estadounidenses (VOO) permite sobre todo:", options: ["Evitar las comisiones de conversión de divisa en cada compra", "Obtener un rendimiento superior garantizado", "Eliminar todo riesgo de mercado", "Duplicar los dividendos"], bonne: 0, explication: "Ambos poseen esencialmente las mismas empresas. La versión canadiense evita la conversión CAD-USD en cada transacción, un costo que afecta sobre todo a las compras pequeñas y regulares." },
+   { q: "Un ETF rindió 15 % anual durante 5 años. ¿Qué se puede concluir para los próximos 5 años?", options: ["Rendirá alrededor del 15 % anual", "Nada: los rendimientos pasados no garantizan los futuros", "Rendirá al menos 10 %", "Es demasiado tarde para invertir en él"], bonne: 1, explication: "El historial informa sobre el comportamiento pasado de un índice, nunca sobre su futuro. Una acción que se duplicó el mes pasado no necesariamente se duplicará el próximo: misma lógica para los fondos." },
+   { q: "Una empresa del índice quiebra o es retirada de la lista. ¿Qué hace un ETF indexado?", options: ["El fondo cierra y reembolsa a los inversores", "Sigue el índice: el título se reemplaza automáticamente y el impacto se diluye por la diversificación", "Los inversores deben vender manualmente", "El ETF conserva el título para siempre"], bonne: 1, explication: "Es la fotocopiadora en acción: el índice actualiza su lista, el ETF la sigue, sin intervención de tu parte. Y entre cientos de títulos, un solo caso pesa poco." }
+  ]
+ }
+};
+</script>
+<script src="/quiz.js" defer></script>
+</body>
+</html>

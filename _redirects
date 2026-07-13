@@ -1,0 +1,9 @@
+# Route vers le Million - redirections (Cloudflare Pages)
+#
+# Le quiz sur les frais de placement vivait dans /articles/. Il fait desormais
+# partie de la section /quiz/. L'ancienne URL est deja indexee par Google :
+# une redirection permanente (301) transfere le referencement acquis.
+
+/articles/quiz-frais-de-placement.html   /quiz/frais-de-placement/   301
+/en/articles/quiz-investment-fees.html   /en/quizzes/investment-fees/   301
+/es/articles/cuestionario-comisiones-inversion.html   /es/cuestionarios/comisiones-inversion/   301

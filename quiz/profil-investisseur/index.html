@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Quel type d'investisseur êtes-vous ? — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Quel type d'investisseur êtes-vous ?" | slug "profil-investisseur"
+        description "Huit questions, aucune bonne réponse : seulement la vôtre. Un point de départ de réflexion sur votre tolérance au risque et votre horizon."
+   EN : title "What Type of Investor Are You?" | slug "investor-profile"
+        description "Eight questions, no right answers, only yours. A starting point for reflection on your risk tolerance and your time horizon."
+   ES : title "¿Qué tipo de inversor eres?" | slug "perfil-de-inversor"
+        description "Ocho preguntas, sin respuestas correctas, solo la tuya. Un punto de partida para reflexionar sobre tu tolerancia al riesgo y tu horizonte." -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ --faux: #9a3b3b;
+ --faux-fond: #f6e9e9;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 40vh; min-height: 300px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 44px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 44px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* WRAP */
+ .wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 90px; }
+ .intro { text-align: center; font-size: 16px; color: var(--muted); margin: 0 auto 32px; max-width: 520px; }
+
+ /* QUIZ */
+ .quiz { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+ .quiz__entete { padding: 28px 32px 22px; border-bottom: 1px solid var(--border); }
+ .quiz__surtitre { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--terra); font-weight: 500; margin: 0 0 8px; }
+ .quiz__titre { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; margin: 0; color: var(--text); }
+ .quiz__progres { font-size: 13px; color: var(--muted); margin-top: 14px; }
+ .quiz__barre { height: 4px; background: var(--border); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+ .quiz__barre span { display: block; height: 100%; width: 0; background: var(--terra); transition: width 0.3s ease; }
+ .quiz__corps { padding: 28px 32px 32px; }
+ .question { font-size: 18px; font-weight: 500; margin: 0 0 22px; color: var(--text); }
+ .options { display: flex; flex-direction: column; gap: 12px; }
+ .option { text-align: left; width: 100%; padding: 15px 18px; font-size: 15.5px; line-height: 1.5; color: var(--text); background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; font-family: inherit; transition: border-color 0.15s ease, background-color 0.15s ease; }
+ .option:hover:not(:disabled) { border-color: var(--terra); }
+ .option:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .option:disabled { cursor: default; }
+ .option--juste { border-color: var(--terra); background: var(--cream2); font-weight: 500; }
+ .option--faux { border-color: var(--faux); background: var(--faux-fond); }
+ .explication { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--terra); background: var(--cream2); border-radius: 0 8px 8px 0; font-size: 14.5px; line-height: 1.7; }
+ .explication strong { display: block; margin-bottom: 4px; color: var(--terra); }
+ .actions { margin-top: 24px; display: flex; justify-content: flex-end; }
+ .bouton { padding: 12px 26px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; font-family: inherit; color: #fff; background: var(--terra); border: none; border-radius: 100px; cursor: pointer; transition: background 0.2s; }
+ .bouton:hover { background: var(--terra2); }
+ .bouton:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .bouton--secondaire { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .bilan { text-align: center; padding: 8px 0; }
+ .bilan__score { font-family: 'Playfair Display', serif; font-size: 42px; color: var(--terra); margin: 0 0 6px; }
+ .bilan__libelle { font-size: 16px; color: var(--text); margin: 0 0 8px; font-weight: 500; }
+ .bilan__texte { font-size: 15px; color: var(--muted); margin: 0 auto 26px; max-width: 440px; }
+ .bilan .actions { justify-content: center; }
+ .quiz-cta { text-align: center; margin-top: 28px; }
+ .quiz-cta a { color: var(--terra); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+
+ /* CTA + FOOTER (chrome) */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 56px 24px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; margin: 6px; }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+ .mobile-menu a:last-child { border: none; }
+
+ @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 32px !important; }
+ .quiz__entete, .quiz__corps { padding-left: 20px; padding-right: 20px; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <link rel="canonical" href="https://route-vers-le-million.blog/quiz/profil-investisseur/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/quiz/profil-investisseur/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/quizzes/investor-profile/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/cuestionarios/perfil-de-inversor/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/quiz/profil-investisseur/"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
+ <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
+ <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
+ <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ <li><a href="/meilleures-offres/" data-i18n="nav.offres">Offres</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/quiz/profil-investisseur/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/investor-profile/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/perfil-de-inversor/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" data-i18n="nav.accueil">Accueil</a>
+ <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
+ <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
+ <a href="/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/outils/" data-i18n="nav.outils">Outils</a>
+ <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
+ <a href="/meilleures-offres/" data-i18n="nav.offres">Offres</a>
+ <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
+ <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/quiz/profil-investisseur/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/investor-profile/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/perfil-de-inversor/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/quiz/" data-i18n="nav.quiz">Quiz</a></p>
+ <h1><span data-i18n="art.quizProfil.title">Quel type d'investisseur êtes-vous?</span></h1>
+ </div>
+</div>
+
+<!-- WRAP -->
+<div class="wrap">
+ <p class="intro" data-i18n="art.quizProfil.intro">Huit questions, aucune bonne réponse : seulement la vôtre. Ce quiz est un point de départ de réflexion, pas une recommandation de placement.</p>
+
+ <section class="quiz" aria-live="polite">
+ <header class="quiz__entete">
+ <p class="quiz__surtitre" data-i18n="art.quizProfil.surtitre">Testez vos connaissances</p>
+ <h2 class="quiz__titre" data-i18n="art.quizProfil.title">Quel type d'investisseur êtes-vous?</h2>
+ <p class="quiz__progres" id="progres">Question 1 sur 5</p>
+ <div class="quiz__barre"><span id="barre"></span></div>
+ </header>
+ <div class="quiz__corps" id="corps"></div>
+ </section>
+
+ <p class="quiz-cta"><a href="/articles/croissance-vs-dividendes.html" data-i18n="art.quizProfil.cta">Croissance ou dividendes →</a></p>
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.quizProfil.ctaTitle">Voyez ce que les frais vous coûtent vraiment</h2>
+ <p data-i18n="art.quizProfil.ctaDesc">Notre calculatrice d'intérêts composés vous montre, chiffres à l'appui, l'écart créé par un simple point de pourcentage.</p>
+ <a href="/calculatrice/" class="cta-btn" data-i18n="art.quizProfil.ctaBtn">Essayer la calculatrice →</a>
+ <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+<script>
+window.QUIZ_DATA = {
+ mode: "profil",
+ fr: {
+  ui: { progres: "Question {n} sur {t}", suivant: "Question suivante", voir: "Voir mon profil", recommencer: "Recommencer le quiz", termine: "Terminé", bonne: "", revoir: "" },
+  bilan: {
+   defaut: "E",
+   avertissement: "Ce quiz est un outil de réflexion, pas une recommandation de placement. Consultez un professionnel pour votre situation.",
+   profils: {
+    P: { nom: "Prudent", l: "Votre priorité est la protection du capital.", t: "Horizon court, tolérance limitée aux baisses, ou fondations encore à compléter. Les placements stables (CPG, fonds du marché monétaire, bons du Trésor) et la construction du fonds d'urgence sont votre point de départ logique. La prudence n'est pas un défaut, c'est une phase." },
+    E: { nom: "Équilibré", l: "Vous cherchez le milieu : de la croissance, sans renoncer à la stabilité.", t: "Les indices mondiaux très diversifiés et une répartition entre croissance et dividendes correspondent typiquement à ce profil. Votre plus grand risque n'est pas le marché, c'est de changer de stratégie à chaque manchette." },
+    C: { nom: "Croissance", l: "Horizon long, fondations en place, tolérance réelle aux secousses.", t: "Vous êtes dans la position où la volatilité se transforme en alliée. Les indices de croissance ont historiquement récompensé ceux qui restent investis à travers les baisses : la discipline est votre seul vrai travail. Attention au piège classique de ce profil : confondre croissance et spéculation." }
+   },
+   liens: [
+    { href: "/articles/bons-tresor-canadiens.html", t: "Bons du Trésor" },
+    { href: "/fonds-urgence/", t: "Fonds d'urgence" },
+    { href: "/articles/indice-boursier-explication.html", t: "Les indices boursiers" },
+    { href: "/articles/croissance-vs-dividendes.html", t: "Croissance ou dividendes" }
+   ]
+  },
+  questions: [
+   { q: "Quand aurez-vous besoin de l'argent que vous investissez?", options: [{ t: "D'ici 5 ans", p: "P" }, { t: "Dans 5 à 15 ans", p: "E" }, { t: "Dans plus de 15 ans", p: "C" }] },
+   { q: "Votre portefeuille recule de 30 % en quelques mois. Votre réaction la plus probable :", options: [{ t: "Je vends, je ne dors plus", p: "P" }, { t: "Je n'aime pas ça, mais je ne touche à rien", p: "E" }, { t: "J'achète davantage pendant que c'est bas", p: "C" }] },
+   { q: "Avez-vous un fonds d'urgence (3 à 6 mois de dépenses) déjà en place?", options: [{ t: "Non, pas encore", p: "P" }, { t: "Partiellement", p: "E" }, { t: "Oui, complet et liquide", p: "C" }] },
+   { q: "Votre revenu est :", options: [{ t: "Variable ou incertain", p: "P" }, { t: "Stable, avec peu de marge", p: "E" }, { t: "Stable, avec une bonne capacité d'épargne", p: "C" }] },
+   { q: "Ce qui vous ferait le plus mal :", options: [{ t: "Perdre une partie de mon capital", p: "P" }, { t: "Les deux également", p: "E" }, { t: "Manquer des années de croissance par excès de prudence", p: "C" }] },
+   { q: "Votre priorité pour cet argent :", options: [{ t: "Le protéger", p: "P" }, { t: "Un équilibre entre revenu et croissance", p: "E" }, { t: "Le faire croître au maximum sur le long terme", p: "C" }] },
+   { q: "Votre expérience en placement :", options: [{ t: "Je débute", p: "P" }, { t: "Quelques années, surtout des fonds diversifiés", p: "E" }, { t: "Plusieurs années, j'ai déjà traversé des baisses", p: "C" }] },
+   { q: "Un revenu régulier tiré de vos placements (dividendes), c'est :", options: [{ t: "Essentiel pour moi", p: "P" }, { t: "Un plus appréciable", p: "E" }, { t: "Secondaire : je préfère que tout soit réinvesti", p: "C" }] }
+  ]
+ },
+ en: {
+  ui: { progres: "Question {n} of {t}", suivant: "Next question", voir: "See my profile", recommencer: "Restart the quiz", termine: "Finished", bonne: "", revoir: "" },
+  bilan: {
+   defaut: "E",
+   avertissement: "This quiz is a reflection tool, not investment advice. Consult a professional for your situation.",
+   profils: {
+    P: { nom: "Cautious", l: "Your priority is capital protection.", t: "Short horizon, limited tolerance for drops, or foundations still to complete. Stable investments (GICs, money market funds, Treasury bills) and building your emergency fund are your logical starting point. Caution is not a flaw, it is a phase." },
+    E: { nom: "Balanced", l: "You are looking for the middle ground: growth, without giving up stability.", t: "Broadly diversified global indexes and a mix of growth and dividends typically match this profile. Your biggest risk is not the market, it is changing strategy with every headline." },
+    C: { nom: "Growth", l: "Long horizon, foundations in place, real tolerance for turbulence.", t: "You are in the position where volatility becomes an ally. Growth indexes have historically rewarded those who stay invested through downturns: discipline is your only real job. Watch out for this profile's classic trap: confusing growth with speculation." }
+   },
+   liens: [
+    { href: "/en/articles/canadian-treasury-bills.html", t: "Treasury bills" },
+    { href: "/en/emergency-fund/", t: "Emergency fund" },
+    { href: "/en/articles/what-is-a-stock-index.html", t: "Stock indexes" },
+    { href: "/en/articles/growth-vs-dividends.html", t: "Growth or dividends" }
+   ]
+  },
+  questions: [
+   { q: "When will you need the money you are investing?", options: [{ t: "Within 5 years", p: "P" }, { t: "In 5 to 15 years", p: "E" }, { t: "In more than 15 years", p: "C" }] },
+   { q: "Your portfolio drops 30 % in a few months. Your most likely reaction:", options: [{ t: "I sell, I cannot sleep anymore", p: "P" }, { t: "I do not like it, but I do not touch anything", p: "E" }, { t: "I buy more while it is low", p: "C" }] },
+   { q: "Do you already have an emergency fund (3 to 6 months of expenses)?", options: [{ t: "No, not yet", p: "P" }, { t: "Partially", p: "E" }, { t: "Yes, complete and liquid", p: "C" }] },
+   { q: "Your income is:", options: [{ t: "Variable or uncertain", p: "P" }, { t: "Stable, with little margin", p: "E" }, { t: "Stable, with good saving capacity", p: "C" }] },
+   { q: "What would hurt you the most:", options: [{ t: "Losing part of my capital", p: "P" }, { t: "Both equally", p: "E" }, { t: "Missing years of growth by being too cautious", p: "C" }] },
+   { q: "Your priority for this money:", options: [{ t: "Protecting it", p: "P" }, { t: "A balance of income and growth", p: "E" }, { t: "Growing it as much as possible long term", p: "C" }] },
+   { q: "Your investing experience:", options: [{ t: "I am just starting", p: "P" }, { t: "A few years, mostly diversified funds", p: "E" }, { t: "Several years, I have been through downturns", p: "C" }] },
+   { q: "Regular income from your investments (dividends) is:", options: [{ t: "Essential for me", p: "P" }, { t: "A nice bonus", p: "E" }, { t: "Secondary: I would rather have everything reinvested", p: "C" }] }
+  ]
+ },
+ es: {
+  ui: { progres: "Pregunta {n} de {t}", suivant: "Siguiente pregunta", voir: "Ver mi perfil", recommencer: "Reiniciar el cuestionario", termine: "Terminado", bonne: "", revoir: "" },
+  bilan: {
+   defaut: "E",
+   avertissement: "Este cuestionario es una herramienta de reflexión, no una recomendación de inversión. Consulta a un profesional para tu situación.",
+   profils: {
+    P: { nom: "Prudente", l: "Tu prioridad es proteger el capital.", t: "Horizonte corto, tolerancia limitada a las caídas o bases aún por completar. Las inversiones estables (GIC, fondos del mercado monetario, Bonos del Tesoro) y la construcción del fondo de emergencia son tu punto de partida lógico. La prudencia no es un defecto, es una fase." },
+    E: { nom: "Equilibrado", l: "Buscas el punto medio: crecimiento sin renunciar a la estabilidad.", t: "Los índices mundiales muy diversificados y una repartición entre crecimiento y dividendos corresponden típicamente a este perfil. Tu mayor riesgo no es el mercado, es cambiar de estrategia con cada titular." },
+    C: { nom: "Crecimiento", l: "Horizonte largo, bases establecidas, tolerancia real a las turbulencias.", t: "Estás en la posición donde la volatilidad se convierte en aliada. Los índices de crecimiento históricamente han recompensado a quienes permanecen invertidos durante las caídas: la disciplina es tu único trabajo real. Cuidado con la trampa clásica de este perfil: confundir crecimiento con especulación." }
+   },
+   liens: [
+    { href: "/es/articles/bonos-del-tesoro-canadienses.html", t: "Bonos del Tesoro" },
+    { href: "/es/fondo-de-emergencia/", t: "Fondo de emergencia" },
+    { href: "/es/articles/que-es-un-indice-bursatil.html", t: "Los índices bursátiles" },
+    { href: "/es/articles/crecimiento-vs-dividendos.html", t: "Crecimiento o dividendos" }
+   ]
+  },
+  questions: [
+   { q: "¿Cuándo necesitarás el dinero que inviertes?", options: [{ t: "Dentro de 5 años", p: "P" }, { t: "En 5 a 15 años", p: "E" }, { t: "En más de 15 años", p: "C" }] },
+   { q: "Tu portafolio cae 30 % en pocos meses. Tu reacción más probable:", options: [{ t: "Vendo, ya no duermo", p: "P" }, { t: "No me gusta, pero no toco nada", p: "E" }, { t: "Compro más mientras está bajo", p: "C" }] },
+   { q: "¿Ya tienes un fondo de emergencia (3 a 6 meses de gastos)?", options: [{ t: "No, todavía no", p: "P" }, { t: "Parcialmente", p: "E" }, { t: "Sí, completo y líquido", p: "C" }] },
+   { q: "Tu ingreso es:", options: [{ t: "Variable o incierto", p: "P" }, { t: "Estable, con poco margen", p: "E" }, { t: "Estable, con buena capacidad de ahorro", p: "C" }] },
+   { q: "Lo que más te dolería:", options: [{ t: "Perder parte de mi capital", p: "P" }, { t: "Ambas por igual", p: "E" }, { t: "Perder años de crecimiento por exceso de prudencia", p: "C" }] },
+   { q: "Tu prioridad para este dinero:", options: [{ t: "Protegerlo", p: "P" }, { t: "Un equilibrio entre ingreso y crecimiento", p: "E" }, { t: "Hacerlo crecer al máximo a largo plazo", p: "C" }] },
+   { q: "Tu experiencia en inversión:", options: [{ t: "Estoy empezando", p: "P" }, { t: "Algunos años, sobre todo fondos diversificados", p: "E" }, { t: "Varios años, ya he pasado por caídas", p: "C" }] },
+   { q: "Un ingreso regular de tus inversiones (dividendos) es:", options: [{ t: "Esencial para mí", p: "P" }, { t: "Un plus apreciable", p: "E" }, { t: "Secundario: prefiero que todo se reinvierta", p: "C" }] }
+  ]
+ }
+};
+</script>
+<script src="/quiz.js" defer></script>
+</body>
+</html>

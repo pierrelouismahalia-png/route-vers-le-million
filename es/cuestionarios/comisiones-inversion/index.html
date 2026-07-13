@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="es">
 <head>
- <script>try{localStorage.setItem('lang','fr');}catch(e){}</script>
+ <script>try{localStorage.setItem('lang','es');}catch(e){}</script>
  <!-- Google Analytics -->
  <script src="/consent.js"></script>
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
@@ -13,17 +13,16 @@
  </script>
  <meta charset="UTF-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>Quiz : les frais de placement — Route vers le Million</title>
+ <title>Cuestionario: las comisiones de inversión — Route vers le Million</title>
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
  <!--
    METADONNEES SEO PAR LANGUE
-   FR : title "Quiz : les frais de placement" | slug "quiz-frais-de-placement"
-        description "Cinq questions pour tester ce que vous savez des frais de placement : RFG, frais caches, et leur effet sur trente ans."
-   EN : title "Quiz: investment fees" | slug "quiz-investment-fees"
+   FR : title "Quiz : les frais de placement" | slug "frais-de-placement"
+        description "Cinq questions pour tester ce que vous savez des frais de placement : RFG, frais cachés, et leur effet sur trente ans."
+   EN : title "Quiz: Investment Fees" | slug "investment-fees"
         description "Five questions to test what you know about investment fees: MER, hidden costs, and their effect over thirty years."
-   ES : title "Cuestionario: las comisiones de inversion" | slug "cuestionario-comisiones-inversion"
-        description "Cinco preguntas para probar lo que sabes sobre las comisiones de inversion: ratio de gastos (TER), costes ocultos y su efecto en treinta anos."
- -->
+   ES : title "Cuestionario: las comisiones de inversión" | slug "comisiones-inversion"
+        description "Cinco preguntas para probar lo que sabes sobre las comisiones de inversión: ratio de gastos (TER), costes ocultos y su efecto en treinta años." -->
  <style>
  :root {
  --cream: #F5F0E8;
@@ -128,53 +127,57 @@
  footer { padding: 20px 24px; flex-direction: column; text-align: center; }
  }
  </style>
- <link rel="canonical" href="https://route-vers-le-million.blog/articles/quiz-frais-de-placement.html"/>
- <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/quiz-frais-de-placement.html"/>
- <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/quiz-investment-fees.html"/>
- <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/cuestionario-comisiones-inversion.html"/>
- <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/quiz-frais-de-placement.html"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/es/cuestionarios/comisiones-inversion/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/quiz/frais-de-placement/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/quizzes/investment-fees/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/cuestionarios/comisiones-inversion/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/quiz/frais-de-placement/"/>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
- <a href="/" class="nav-logo">Route vers le Million</a>
+ <a href="/es/" class="nav-logo">Route vers le Million</a>
  <ul class="nav-links">
- <li><a href="/a-propos/" data-i18n="nav.about">À PROPOS</a></li>
- <li><a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a></li>
- <li><a href="/etf/" data-i18n="nav.etf">ETFs</a></li>
- <li><a href="/outils/" data-i18n="nav.outils">Outils</a></li>
- <li><a href="/articles/" data-i18n="nav.articles">Articles</a></li>
+ <li><a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a></li>
+ <li><a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a></li>
+ <li><a href="/es/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/es/herramientas/" data-i18n="nav.outils">Herramientas</a></li>
+ <li><a href="/es/articles/" data-i18n="nav.articles">Artículos</a></li>
+ <li><a href="/es/cuestionarios/" data-i18n="nav.quiz">Cuestionarios</a></li>
+ <li><a href="/es/mejores-ofertas/" data-i18n="nav.offres">Ofertas</a></li>
  </ul>
  <div style="display:flex;align-items:center;gap:10px;">
  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
  <span></span><span></span><span></span>
  </button>
  <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
- <a class="lang-btn" data-lang="fr" href="/articles/quiz-frais-de-placement.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="fr" href="/quiz/frais-de-placement/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <a class="lang-btn" data-lang="en" href="/en/articles/quiz-investment-fees.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/investment-fees/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
  <span style="color:var(--border);font-size:10px;">·</span>
- <a class="lang-btn" data-lang="es" href="/es/articles/cuestionario-comisiones-inversion.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/comisiones-inversion/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
  </div>
  <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
  </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
- <a href="/" data-i18n="nav.accueil">Accueil</a>
- <a href="/a-propos/" data-i18n="nav.about">À PROPOS</a>
- <a href="/celi-reer/" data-i18n="nav.celiReer">CÉLI &amp; REER</a>
- <a href="/etf/" data-i18n="nav.etf">ETFs</a>
- <a href="/outils/" data-i18n="nav.outils">Outils</a>
- <a href="/articles/" data-i18n="nav.allArticles">Tous les articles</a>
- <a href="/fonds-urgence/" data-i18n="nav.fondsUrgence">Fonds d'urgence</a>
- <a href="/histoire/" data-i18n="nav.monParcours">Mon parcours</a>
+ <a href="/es/" data-i18n="nav.accueil">Inicio</a>
+ <a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a>
+ <a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a>
+ <a href="/es/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/es/herramientas/" data-i18n="nav.outils">Herramientas</a>
+ <a href="/es/articles/" data-i18n="nav.allArticles">Todos los artículos</a>
+ <a href="/es/cuestionarios/" data-i18n="nav.quiz">Cuestionarios</a>
+ <a href="/es/mejores-ofertas/" data-i18n="nav.offres">Ofertas</a>
+ <a href="/es/fondo-de-emergencia/" data-i18n="nav.fondsUrgence">Fondo de emergencia</a>
+ <a href="/es/mi-historia/" data-i18n="nav.monParcours">Mi trayectoria</a>
  <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
- <a class="lang-btn" data-lang="fr" href="/articles/quiz-frais-de-placement.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
- <a class="lang-btn" data-lang="en" href="/en/articles/quiz-investment-fees.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
- <a class="lang-btn" data-lang="es" href="/es/articles/cuestionario-comisiones-inversion.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ <a class="lang-btn" data-lang="fr" href="/quiz/frais-de-placement/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/investment-fees/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/comisiones-inversion/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
  </div>
- <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Ouvrir Wealthsimple →</a>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Abrir Wealthsimple →</a>
 </div>
 
 <!-- HERO -->
@@ -182,42 +185,42 @@
  <div class="page-hero-img"></div>
  <div class="page-hero-overlay"></div>
  <div class="page-hero-content">
- <p class="breadcrumb"><a href="/" data-i18n="nav.accueil">Accueil</a> &nbsp;/&nbsp; <a href="/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.quizFrais.breadcrumb">Quiz</span></p>
- <h1><span data-i18n="art.quizFrais.title">Quiz : les frais de placement</span></h1>
+ <p class="breadcrumb"><a href="/es/" data-i18n="nav.accueil">Inicio</a> &nbsp;/&nbsp; <a href="/es/articles/" data-i18n="nav.articles">Artículos</a> &nbsp;/&nbsp; <span data-i18n="art.quizFrais.breadcrumb">Cuestionario</span></p>
+ <h1><span data-i18n="art.quizFrais.title">Cuestionario: las comisiones de inversión</span></h1>
  </div>
 </div>
 
 <!-- WRAP -->
 <div class="wrap">
- <p class="intro" data-i18n="art.quizFrais.intro">Cinq questions pour vérifier ce que vous avez retenu de notre article sur les frais de placement.</p>
+ <p class="intro" data-i18n="art.quizFrais.intro">Cinco preguntas para comprobar lo que retuviste de nuestro artículo sobre las comisiones de inversión.</p>
 
  <section class="quiz" aria-live="polite">
  <header class="quiz__entete">
- <p class="quiz__surtitre" data-i18n="art.quizFrais.surtitre">Testez vos connaissances</p>
- <h2 class="quiz__titre" data-i18n="art.quizFrais.title">Quiz : les frais de placement</h2>
+ <p class="quiz__surtitre" data-i18n="art.quizFrais.surtitre">Pon a prueba tus conocimientos</p>
+ <h2 class="quiz__titre" data-i18n="art.quizFrais.title">Cuestionario: las comisiones de inversión</h2>
  <p class="quiz__progres" id="progres">Question 1 sur 5</p>
  <div class="quiz__barre"><span id="barre"></span></div>
  </header>
  <div class="quiz__corps" id="corps"></div>
  </section>
 
- <p class="quiz-cta"><a href="/articles/comprendre-les-frais-de-placement.html" data-i18n="art.quizFrais.cta">Lire l'article complet →</a></p>
+ <p class="quiz-cta"><a href="/es/articles/comprender-las-comisiones-de-inversion.html" data-i18n="art.quizFrais.cta">Leer el artículo completo →</a></p>
 </div>
 
 <!-- CTA -->
 <div class="cta-bottom">
- <h2 data-i18n="art.frais.cta.title">Voyez ce que les frais vous coûtent vraiment</h2>
- <p data-i18n="art.frais.cta.desc">Notre calculatrice d'intérêts composés vous montre, chiffres à l'appui, l'écart créé par un simple point de pourcentage.</p>
- <a href="/calculatrice/" class="cta-btn" data-i18n="art.frais.cta.btn">Essayer la calculatrice →</a>
- <a href="/articles/" class="cta-btn secondary" data-i18n="art.readMore">Voir tous les articles →</a>
+ <h2 data-i18n="art.frais.cta.title">Mira lo que las comisiones te cuestan de verdad</h2>
+ <p data-i18n="art.frais.cta.desc">Nuestra calculadora de interés compuesto te muestra, con cifras, la diferencia que crea un solo punto porcentual.</p>
+ <a href="/es/calculadora/" class="cta-btn" data-i18n="art.frais.cta.btn">Probar la calculadora →</a>
+ <a href="/es/articles/" class="cta-btn secondary" data-i18n="art.readMore">Ver todos los artículos →</a>
 </div>
 
 <!-- FOOTER -->
 <div data-newsletter></div>
 <footer>
- <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finances personnelles · Québec, Canada</p>
- <p data-i18n="footer.disclaimer">Contenu informatif uniquement — pas des conseils financiers officiels.</p>
- <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contient des liens d'affiliation (Wealthsimple, Tangerine, Borrowell, Amazon). Si tu t'inscris ou achètes via mes liens, je reçois une commission sans frais supplémentaires pour toi. — <a href="/divulgation.html" style="color:inherit;text-decoration:underline;">En savoir plus →</a></p>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finanzas personales · Québec, Canadá</p>
+ <p data-i18n="footer.disclaimer">Solo con fines informativos — no constituye asesoramiento financiero oficial.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contiene enlaces de afiliados (Wealthsimple, Tangerine, Borrowell, Amazon). Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. — <a href="/es/divulgacion.html" style="color:inherit;text-decoration:underline;">Más información →</a></p>
 </footer>
 
 <script src="/translations.js"></script>

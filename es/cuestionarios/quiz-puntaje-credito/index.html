@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <script>try{localStorage.setItem('lang','es');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Puntaje de crédito: ¿verdad o mito? — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Cote de crédit : vérité ou mythe ?" | slug "cote-de-credit"
+        description "Dix affirmations qu'on entend partout sur la cote de crédit. Départagez le vrai du faux : les mythes coûtent cher."
+   EN : title "Credit Score: Fact or Myth?" | slug "credit-score-quiz"
+        description "Ten statements you hear everywhere about credit scores. Sort fact from fiction: myths are expensive."
+   ES : title "Puntaje de crédito: ¿verdad o mito?" | slug "quiz-puntaje-credito"
+        description "Diez afirmaciones que se escuchan en todas partes sobre el puntaje de crédito. Distingue lo verdadero de lo falso: los mitos cuestan caro." -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ --faux: #9a3b3b;
+ --faux-fond: #f6e9e9;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 40vh; min-height: 300px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 44px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 44px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* WRAP */
+ .wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 90px; }
+ .intro { text-align: center; font-size: 16px; color: var(--muted); margin: 0 auto 32px; max-width: 520px; }
+
+ /* QUIZ */
+ .quiz { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+ .quiz__entete { padding: 28px 32px 22px; border-bottom: 1px solid var(--border); }
+ .quiz__surtitre { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--terra); font-weight: 500; margin: 0 0 8px; }
+ .quiz__titre { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; margin: 0; color: var(--text); }
+ .quiz__progres { font-size: 13px; color: var(--muted); margin-top: 14px; }
+ .quiz__barre { height: 4px; background: var(--border); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+ .quiz__barre span { display: block; height: 100%; width: 0; background: var(--terra); transition: width 0.3s ease; }
+ .quiz__corps { padding: 28px 32px 32px; }
+ .question { font-size: 18px; font-weight: 500; margin: 0 0 22px; color: var(--text); }
+ .options { display: flex; flex-direction: column; gap: 12px; }
+ .option { text-align: left; width: 100%; padding: 15px 18px; font-size: 15.5px; line-height: 1.5; color: var(--text); background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; font-family: inherit; transition: border-color 0.15s ease, background-color 0.15s ease; }
+ .option:hover:not(:disabled) { border-color: var(--terra); }
+ .option:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .option:disabled { cursor: default; }
+ .option--juste { border-color: var(--terra); background: var(--cream2); font-weight: 500; }
+ .option--faux { border-color: var(--faux); background: var(--faux-fond); }
+ .explication { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--terra); background: var(--cream2); border-radius: 0 8px 8px 0; font-size: 14.5px; line-height: 1.7; }
+ .explication strong { display: block; margin-bottom: 4px; color: var(--terra); }
+ .actions { margin-top: 24px; display: flex; justify-content: flex-end; }
+ .bouton { padding: 12px 26px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; font-family: inherit; color: #fff; background: var(--terra); border: none; border-radius: 100px; cursor: pointer; transition: background 0.2s; }
+ .bouton:hover { background: var(--terra2); }
+ .bouton:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .bouton--secondaire { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .bilan { text-align: center; padding: 8px 0; }
+ .bilan__score { font-family: 'Playfair Display', serif; font-size: 42px; color: var(--terra); margin: 0 0 6px; }
+ .bilan__libelle { font-size: 16px; color: var(--text); margin: 0 0 8px; font-weight: 500; }
+ .bilan__texte { font-size: 15px; color: var(--muted); margin: 0 auto 26px; max-width: 440px; }
+ .bilan .actions { justify-content: center; }
+ .quiz-cta { text-align: center; margin-top: 28px; }
+ .quiz-cta a { color: var(--terra); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+
+ /* CTA + FOOTER (chrome) */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 56px 24px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; margin: 6px; }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+ .mobile-menu a:last-child { border: none; }
+
+ @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 32px !important; }
+ .quiz__entete, .quiz__corps { padding-left: 20px; padding-right: 20px; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <link rel="canonical" href="https://route-vers-le-million.blog/es/cuestionarios/quiz-puntaje-credito/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/quiz/cote-de-credit/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/quizzes/credit-score-quiz/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/cuestionarios/quiz-puntaje-credito/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/quiz/cote-de-credit/"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/es/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a></li>
+ <li><a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a></li>
+ <li><a href="/es/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/es/herramientas/" data-i18n="nav.outils">Herramientas</a></li>
+ <li><a href="/es/articles/" data-i18n="nav.articles">Artículos</a></li>
+ <li><a href="/es/mejores-ofertas/" data-i18n="nav.offres">Ofertas</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/quiz/cote-de-credit/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/credit-score-quiz/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/quiz-puntaje-credito/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/es/" data-i18n="nav.accueil">Inicio</a>
+ <a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a>
+ <a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a>
+ <a href="/es/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/es/herramientas/" data-i18n="nav.outils">Herramientas</a>
+ <a href="/es/articles/" data-i18n="nav.allArticles">Todos los artículos</a>
+ <a href="/es/mejores-ofertas/" data-i18n="nav.offres">Ofertas</a>
+ <a href="/es/fondo-de-emergencia/" data-i18n="nav.fondsUrgence">Fondo de emergencia</a>
+ <a href="/es/mi-historia/" data-i18n="nav.monParcours">Mi trayectoria</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/quiz/cote-de-credit/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/credit-score-quiz/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/quiz-puntaje-credito/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Abrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/es/" data-i18n="nav.accueil">Inicio</a> &nbsp;/&nbsp; <a href="/es/cuestionarios/" data-i18n="nav.quiz">Cuestionarios</a></p>
+ <h1><span data-i18n="art.quizCote.title">Puntaje de crédito: ¿verdad o mito?</span></h1>
+ </div>
+</div>
+
+<!-- WRAP -->
+<div class="wrap">
+ <p class="intro" data-i18n="art.quizCote.intro">Diez afirmaciones que se escuchan en todas partes sobre el puntaje de crédito. Distingue lo verdadero de lo falso: los mitos cuestan caro.</p>
+
+ <section class="quiz" aria-live="polite">
+ <header class="quiz__entete">
+ <p class="quiz__surtitre" data-i18n="art.quizCote.surtitre">Diez afirmaciones que distinguir</p>
+ <h2 class="quiz__titre" data-i18n="art.quizCote.title">Puntaje de crédito: ¿verdad o mito?</h2>
+ <p class="quiz__progres" id="progres">Question 1 sur 5</p>
+ <div class="quiz__barre"><span id="barre"></span></div>
+ </header>
+ <div class="quiz__corps" id="corps"></div>
+ </section>
+
+ <p class="quiz-cta"><a href="/es/articles/puntaje-de-credito-explicado.html" data-i18n="art.quizCote.cta">Leer el artículo completo →</a></p>
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.quizCote.ctaTitle">Una palanca que no cuesta nada</h2>
+ <p data-i18n="art.quizCote.ctaDesc">Mantener tu puntaje no exige ningún capital, solo hábitos. El plan en cinco puntos está en el artículo.</p>
+ <a href="/es/calculadora/" class="cta-btn" data-i18n="art.quizCote.ctaBtn">Leer el artículo →</a>
+ <a href="/es/articles/" class="cta-btn secondary" data-i18n="art.readMore">Ver todos los artículos →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finanzas personales · Québec, Canadá</p>
+ <p data-i18n="footer.disclaimer">Solo con fines informativos — no constituye asesoramiento financiero oficial.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contiene enlaces de afiliados (Wealthsimple, Tangerine, Borrowell, Amazon). Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. — <a href="/es/divulgacion.html" style="color:inherit;text-decoration:underline;">Más información →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+<script>
+window.QUIZ_DATA = {
+ mode: "score",
+ fr: {
+  ui: { progres: "Question {n} sur {t}", suivant: "Question suivante", voir: "Voir mon résultat", recommencer: "Recommencer le quiz", termine: "Terminé", bonne: "Bonne réponse", revoir: "Réponse à revoir" },
+  bilan: {
+   paliers: [
+    { min: 9, l: "Vous connaissez la mécanique mieux que la majorité.", t: "Le plan d'entretien en cinq habitudes vous attend dans l'article." },
+    { min: 5, l: "Quelques mythes vous ont eu.", t: "Et ce sont exactement ceux qui coûtent cher. L'article complet les démonte un par un." },
+    { min: 0, l: "Bonne nouvelle : tout ceci s'apprend en une lecture.", t: "La cote se répare avec des habitudes simples. Commencez par l'article." }
+   ],
+   liens: [
+    { href: "/articles/cote-de-credit-expliquee.html", t: "L'article complet" },
+    { href: "/meilleures-offres/", t: "Vérifier ma cote gratuitement" }
+   ]
+  },
+  questions: [
+   { q: "Vérifier sa propre cote de crédit la fait baisser.", options: ["Vérité", "Mythe"], bonne: 1, explication: "Consulter sa propre cote est une enquête douce, sans aucun impact. Seules les demandes de crédit faites par des prêteurs, les enquêtes dures, grugent quelques points." },
+   { q: "Au Canada, la cote de crédit va de 300 à 900.", options: ["Vérité", "Mythe"], bonne: 0, explication: "Deux agences la calculent : Equifax et TransUnion. Leurs chiffres peuvent différer légèrement pour la même personne, et c'est normal." },
+   { q: "Il faut garder un solde sur sa carte de crédit pour bâtir son crédit.", options: ["Vérité", "Mythe"], bonne: 1, explication: "Ce qui bâtit le crédit, c'est utiliser la carte et payer à temps. Payer le solde au complet chaque mois construit le même historique, sans payer 20 % d'intérêts pour rien." },
+   { q: "L'historique de paiement est le facteur qui pèse le plus dans la cote.", options: ["Vérité", "Mythe"], bonne: 0, explication: "Environ 35 % de la cote. Un seul retard de plus de 30 jours peut rester au dossier pendant six ans : automatiser au moins le paiement minimum est la protection la plus simple." },
+   { q: "Fermer sa plus vieille carte de crédit améliore la cote.", options: ["Vérité", "Mythe"], bonne: 1, explication: "C'est souvent l'inverse : on efface de l'ancienneté et on réduit le crédit disponible, ce qui augmente le taux d'utilisation. Une vieille carte sans frais peut travailler pour vous." },
+   { q: "Utiliser plus de 30 % de sa limite de crédit peut nuire à la cote, même en payant à temps.", options: ["Vérité", "Mythe"], bonne: 0, explication: "Le taux d'utilisation compte pour environ 30 % de la cote. Un solde élevé par rapport à la limite signale une pression financière, indépendamment de la ponctualité." },
+   { q: "Une mauvaise cote de crédit est permanente.", options: ["Vérité", "Mythe"], bonne: 1, explication: "La plupart des éléments négatifs disparaissent après six ou sept ans, et la cote réagit aux bons comportements bien avant, souvent en quelques mois." },
+   { q: "Les dossiers de crédit peuvent contenir des erreurs, et on peut les contester.", options: ["Vérité", "Mythe"], bonne: 0, explication: "Comptes inconnus, retards inscrits à tort, débuts de fraude d'identité : vérifier ses deux dossiers une fois par année permet de repérer et contester ces erreurs auprès des agences." },
+   { q: "Vérifier sa cote gratuitement au Canada, c'est possible.", options: ["Vérité", "Mythe"], bonne: 0, explication: "Des services comme Borrowell (Equifax) et Credit Karma (TransUnion) donnent accès gratuitement à la cote et au dossier, avec mises à jour régulières. Il n'y a plus de raison de payer ni de rester dans le flou." },
+   { q: "La différence entre une bonne et une mauvaise cote peut représenter des dizaines de milliers de dollars sur une hypothèque.", options: ["Vérité", "Mythe"], bonne: 0, explication: "À titre illustratif, sur une hypothèque de 350 000 $ amortie sur 25 ans, un écart d'un point de pourcentage de taux représente environ 209 $ par mois, soit plus de 62 000 $ au total. La cote est un levier gratuit : l'entretenir ne demande que des habitudes." }
+  ]
+ },
+ en: {
+  ui: { progres: "Question {n} of {t}", suivant: "Next question", voir: "See my result", recommencer: "Restart the quiz", termine: "Finished", bonne: "Correct", revoir: "Worth reviewing" },
+  bilan: {
+   paliers: [
+    { min: 9, l: "You know the mechanics better than most.", t: "The five-habit maintenance plan awaits you in the article." },
+    { min: 5, l: "A few myths got you.", t: "And those are exactly the expensive ones. The full article takes them apart one by one." },
+    { min: 0, l: "Good news: all of this can be learned in one read.", t: "Your score can be repaired with simple habits. Start with the article." }
+   ],
+   liens: [
+    { href: "/en/articles/credit-score-explained.html", t: "The full article" },
+    { href: "/en/best-offers/", t: "Check my score for free" }
+   ]
+  },
+  questions: [
+   { q: "Checking your own credit score lowers it.", options: ["Fact", "Myth"], bonne: 1, explication: "Checking your own score is a soft inquiry, with zero impact. Only credit applications made by lenders, the hard inquiries, shave off a few points." },
+   { q: "In Canada, credit scores range from 300 to 900.", options: ["Fact", "Myth"], bonne: 0, explication: "Two bureaus calculate it: Equifax and TransUnion. Their numbers can differ slightly for the same person, and that is normal." },
+   { q: "You need to carry a balance on your credit card to build credit.", options: ["Fact", "Myth"], bonne: 1, explication: "What builds credit is using the card and paying on time. Paying the balance in full each month builds the same history, without paying 20 % interest for nothing." },
+   { q: "Payment history is the heaviest factor in your score.", options: ["Fact", "Myth"], bonne: 0, explication: "About 35 % of the score. A single payment more than 30 days late can stay on file for six years: automating at least the minimum payment is the simplest protection." },
+   { q: "Closing your oldest credit card improves your score.", options: ["Fact", "Myth"], bonne: 1, explication: "It is often the opposite: you erase history length and reduce available credit, which raises your utilization rate. An old no-fee card can work in your favour." },
+   { q: "Using more than 30 % of your credit limit can hurt your score, even if you pay on time.", options: ["Fact", "Myth"], bonne: 0, explication: "Utilization accounts for about 30 % of the score. A high balance relative to your limit signals financial pressure, regardless of punctuality." },
+   { q: "A bad credit score is permanent.", options: ["Fact", "Myth"], bonne: 1, explication: "Most negative items disappear after six or seven years, and the score responds to good behaviour well before that, often within months." },
+   { q: "Credit files can contain errors, and you can dispute them.", options: ["Fact", "Myth"], bonne: 0, explication: "Unknown accounts, wrongly recorded late payments, early identity fraud: checking both files once a year lets you spot and dispute these errors with the bureaus." },
+   { q: "Checking your score for free in Canada is possible.", options: ["Fact", "Myth"], bonne: 0, explication: "Services like Borrowell (Equifax) and Credit Karma (TransUnion) give free access to your score and file, with regular updates. There is no reason left to pay or stay in the dark." },
+   { q: "The difference between a good and a bad score can represent tens of thousands of dollars on a mortgage.", options: ["Fact", "Myth"], bonne: 0, explication: "As an illustration, on a $350,000 mortgage amortized over 25 years, a one-percentage-point rate gap represents about $209 a month, more than $62,000 in total. Your score is a free lever: maintaining it only takes habits." }
+  ]
+ },
+ es: {
+  ui: { progres: "Pregunta {n} de {t}", suivant: "Siguiente pregunta", voir: "Ver mi resultado", recommencer: "Reiniciar el cuestionario", termine: "Terminado", bonne: "Respuesta correcta", revoir: "Respuesta a repasar" },
+  bilan: {
+   paliers: [
+    { min: 9, l: "Conoces la mecánica mejor que la mayoría.", t: "El plan de mantenimiento en cinco hábitos te espera en el artículo." },
+    { min: 5, l: "Algunos mitos te atraparon.", t: "Y son exactamente los que cuestan caro. El artículo completo los desmonta uno por uno." },
+    { min: 0, l: "Buena noticia: todo esto se aprende en una lectura.", t: "El puntaje se repara con hábitos simples. Empieza por el artículo." }
+   ],
+   liens: [
+    { href: "/es/articles/puntaje-de-credito-explicado.html", t: "El artículo completo" },
+    { href: "/es/mejores-ofertas/", t: "Ver mi puntaje gratis" }
+   ]
+  },
+  questions: [
+   { q: "Consultar tu propio puntaje de crédito lo hace bajar.", options: ["Verdad", "Mito"], bonne: 1, explication: "Consultar tu propio puntaje es una consulta blanda, sin ningún impacto. Solo las solicitudes de crédito hechas por prestamistas, las consultas duras, restan algunos puntos." },
+   { q: "En Canadá, el puntaje de crédito va de 300 a 900.", options: ["Verdad", "Mito"], bonne: 0, explication: "Dos agencias lo calculan: Equifax y TransUnion. Sus cifras pueden diferir ligeramente para la misma persona, y es normal." },
+   { q: "Hay que mantener un saldo en la tarjeta de crédito para construir crédito.", options: ["Verdad", "Mito"], bonne: 1, explication: "Lo que construye el crédito es usar la tarjeta y pagar a tiempo. Pagar el saldo completo cada mes construye el mismo historial, sin pagar 20 % de interés por nada." },
+   { q: "El historial de pagos es el factor que más pesa en el puntaje.", options: ["Verdad", "Mito"], bonne: 0, explication: "Alrededor del 35 % del puntaje. Un solo retraso de más de 30 días puede permanecer en el expediente durante seis años: automatizar al menos el pago mínimo es la protección más simple." },
+   { q: "Cerrar tu tarjeta de crédito más antigua mejora el puntaje.", options: ["Verdad", "Mito"], bonne: 1, explication: "Suele ser lo contrario: borras antigüedad y reduces el crédito disponible, lo que aumenta la tasa de utilización. Una tarjeta antigua sin cargos puede trabajar a tu favor." },
+   { q: "Usar más del 30 % de tu límite de crédito puede perjudicar el puntaje, incluso pagando a tiempo.", options: ["Verdad", "Mito"], bonne: 0, explication: "La tasa de utilización representa alrededor del 30 % del puntaje. Un saldo alto respecto al límite señala presión financiera, independientemente de la puntualidad." },
+   { q: "Un mal puntaje de crédito es permanente.", options: ["Verdad", "Mito"], bonne: 1, explication: "La mayoría de los elementos negativos desaparecen después de seis o siete años, y el puntaje responde a los buenos comportamientos mucho antes, a menudo en pocos meses." },
+   { q: "Los expedientes de crédito pueden contener errores, y se pueden disputar.", options: ["Verdad", "Mito"], bonne: 0, explication: "Cuentas desconocidas, retrasos registrados por error, inicios de fraude de identidad: verificar tus dos expedientes una vez al año permite detectar y disputar estos errores ante las agencias." },
+   { q: "Consultar tu puntaje gratis en Canadá es posible.", options: ["Verdad", "Mito"], bonne: 0, explication: "Servicios como Borrowell (Equifax) y Credit Karma (TransUnion) dan acceso gratuito al puntaje y al expediente, con actualizaciones regulares. Ya no hay razón para pagar ni quedarse a ciegas." },
+   { q: "La diferencia entre un buen y un mal puntaje puede representar decenas de miles de dólares en una hipoteca.", options: ["Verdad", "Mito"], bonne: 0, explication: "A modo ilustrativo, en una hipoteca de 350 000 $ amortizada en 25 años, una diferencia de un punto porcentual de tasa representa unos 209 $ al mes, más de 62 000 $ en total. El puntaje es una palanca gratuita: mantenerlo solo requiere hábitos." }
+  ]
+ }
+};
+</script>
+<script src="/quiz.js" defer></script>
+</body>
+</html>
