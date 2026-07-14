@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <script>try{localStorage.setItem('lang','es');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>El REER viene con un manual de salida: el plan de retiro explicado — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Le REER vient avec un mode d'emploi de sortie : le plan de décaissement expliqué"
+        slug "plan-de-decaissement-explique"
+        description "Le REER n'est pas un piège : c'est de l'impôt reporté avec un mode d'emploi de sortie que personne n'enseigne. Ordre des retraits, FERR, RRQ, PSV, CÉLI, et la facture au décès."
+        keywords plan de décaissement, REER, FERR, retraits obligatoires, RRQ, récupération PSV, CÉLI succession, impôt au décès
+   EN : title "Your RRSP Comes With an Exit Manual: The Withdrawal Plan Explained"
+        slug "rrsp-withdrawal-plan-explained"
+        description "The RRSP is not a trap: it is deferred tax with an exit manual nobody teaches. Order of withdrawals, RRIF, QPP, OAS, TFSA, and the bill at death."
+        keywords withdrawal plan, RRSP, RRIF, mandatory withdrawals, QPP, OAS clawback, TFSA estate, tax at death
+   ES : title "El REER viene con un manual de salida: el plan de retiro explicado"
+        slug "plan-de-retiro-reer-explicado"
+        description "El REER no es una trampa: es impuesto diferido con un manual de salida que nadie enseña. Orden de los retiros, FERR, RRQ, PSV, CÉLI, y la factura al fallecer."
+        keywords plan de retiro, REER, FERR, retiros obligatorios, RRQ, recuperación PSV, CÉLI sucesión, impuesto al fallecer
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ /* TABLE */
+ .prose table { width: 100%; border-collapse: collapse; margin: 2em 0; font-size: 14px; }
+ .prose th, .prose td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+ .prose thead th { font-family: 'Playfair Display', serif; font-weight: 400; color: var(--terra); font-size: 13px; letter-spacing: 0.5px; border-bottom: 2px solid var(--border); }
+ .prose tbody tr:last-child td { border-bottom: none; }
+
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* QUESTION CARDS */
+ .question-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 1.2em 0; display: flex; gap: 20px; align-items: flex-start; }
+ .question-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--terra); opacity: 0.5; line-height: 1; flex-shrink: 0; min-width: 44px; }
+ .question-body h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+ .question-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="El REER no es una trampa: es impuesto diferido con un manual de salida que nadie enseña. Orden de los retiros, FERR, RRQ, PSV, CÉLI, y la factura al fallecer."/>
+ <meta name="keywords" content="plan de retiro, REER, FERR, retiros obligatorios, RRQ, recuperación PSV, CÉLI sucesión, impuesto al fallecer"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/es/articles/plan-de-retiro-reer-explicado.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/plan-de-decaissement-explique.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/rrsp-withdrawal-plan-explained.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/plan-de-retiro-reer-explicado.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/plan-de-decaissement-explique.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="El REER viene con un manual de salida: el plan de retiro explicado — Route vers le Million"/>
+ <meta property="og:description" content="El REER no es una trampa: es impuesto diferido con un manual de salida que nadie enseña. Orden de los retiros, FERR, RRQ, PSV, CÉLI, y la factura al fallecer."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/es/articles/plan-de-retiro-reer-explicado.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="es_ES"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="El REER viene con un manual de salida: el plan de retiro explicado"/>
+ <meta name="twitter:description" content="El REER no es una trampa: es impuesto diferido con un manual de salida que nadie enseña. Orden de los retiros, FERR, RRQ, PSV, CÉLI, y la factura al fallecer."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "El REER viene con un manual de salida: el plan de retiro explicado",
+ "description": "El REER no es una trampa: es impuesto diferido con un manual de salida que nadie enseña. Orden de los retiros, FERR, RRQ, PSV, CÉLI, y la factura al fallecer.",
+ "url": "https://route-vers-le-million.blog/es/articles/plan-de-retiro-reer-explicado.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "es-ES"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/es/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a></li>
+ <li><a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a></li>
+ <li><a href="/es/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/es/herramientas/" data-i18n="nav.outils">Herramientas</a></li>
+ <li><a href="/es/articles/" data-i18n="nav.articles">Artículos</a></li>
+ <li><a href="/es/cuestionarios/" data-i18n="nav.quiz">Cuestionarios</a></li>
+ <li><a href="/es/mejores-ofertas/" data-i18n="nav.offres">Ofertas</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/articles/plan-de-decaissement-explique.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/rrsp-withdrawal-plan-explained.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/plan-de-retiro-reer-explicado.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/es/" data-i18n="nav.accueil">Inicio</a>
+ <a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a>
+ <a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a>
+ <a href="/es/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/es/herramientas/" data-i18n="nav.outils">Herramientas</a>
+ <a href="/es/articles/" data-i18n="nav.allArticles">Todos los artículos</a>
+ <a href="/es/cuestionarios/" data-i18n="nav.quiz">Cuestionarios</a>
+ <a href="/es/mejores-ofertas/" data-i18n="nav.offres">Ofertas</a>
+ <a href="/es/fondo-de-emergencia/" data-i18n="nav.fondsUrgence">Fondo de emergencia</a>
+ <a href="/es/mi-historia/" data-i18n="nav.monParcours">Mi trayectoria</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/articles/plan-de-decaissement-explique.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/rrsp-withdrawal-plan-explained.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/plan-de-retiro-reer-explicado.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Abrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/es/" data-i18n="nav.accueil">Inicio</a> &nbsp;/&nbsp; <a href="/es/articles/" data-i18n="nav.articles">Artículos</a> &nbsp;/&nbsp; <span data-i18n="art.decaissement.breadcrumb">Jubilación</span></p>
+ <p class="hero-tag"><span data-i18n="art.decaissement.tag">Jubilación · CÉLI y REER · Fiscalidad</span></p>
+ <h1><span data-i18n="art.decaissement.title">El REER viene con un manual de salida: <em>el plan de retiro explicado</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.decaissement.location">Quebec, Canadá</span>
+ <span>·</span>
+ <span data-i18n="art.decaissement.readtime">10 min de lectura</span>
+ <span>·</span>
+ <span data-i18n="art.decaissement.category">Jubilación · CÉLI y REER</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Divulgación: Este artículo contiene enlaces de afiliados. Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. Mis recomendaciones están basadas en mi uso personal.</div>
+
+ <p class="lead" data-i18n="art.decaissement.lead">Pasamos décadas aprendiendo a meter el dinero en las cuentas correctas. Luego, un día, hay que sacarlo. Y ahí, silencio — como si jubilarse consistiera simplemente en abrir el grifo.</p>
+
+ <p data-i18n="art.decaissement.p1">Aporta a tu REER, maximiza tu CÉLI, automatiza, deja que componga. Esa es la fase de acumulación, y todo el contenido de finanzas personales — el mío incluido — habla de ella largamente.</p>
+
+ <p data-i18n="art.decaissement.p2">Pero la salida tiene sus propias reglas, y son implacables con quienes las ignoran. La diferencia entre un retiro improvisado y uno planificado se cifra habitualmente en decenas, a veces cientos de miles de dólares — no en rendimiento, en impuestos. Un plan de retiro es exactamente eso: <strong>la estrategia que determina en qué orden, a qué ritmo y en qué momento se saca el dinero de cada cuenta, para que el fisco se lleve lo menos posible a lo largo de toda una vida, y al fallecer.</strong></p>
+
+ <h2 data-i18n="art.decaissement.h2a">El golpe que lo hace entender: la factura del último día</h2>
+
+ <p data-i18n="art.decaissement.p3">Empecemos por el escenario que circula mucho ahora mismo, porque es exacto y despierta.</p>
+
+ <p data-i18n="art.decaissement.p4">Trabajaste toda tu vida y construiste un REER de 2 000 000 $. Falleces, sin cónyuge sobreviviente. Lo que prevé la ley: la totalidad del REER se considera retirada en el año de tu fallecimiento. Los 2 M$ se suman de golpe a tu ingreso de ese año. En Quebec, pasados unos 250 000 $ de ingreso, la tasa marginal combinada ronda el 53 % — así que sobre ese bloque, cerca de un millón de dólares puede irse en impuestos antes de que tus herederos vean un centavo.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.decaissement.pull1">"El REER no es impuesto evitado — es impuesto diferido. La deducción recibida a la entrada era un adelanto del gobierno; la factura llega a la salida."</p>
+ </div>
+
+ <p data-i18n="art.decaissement.p5">Toda la cuestión del retiro consiste en elegir cuándo y a qué tasa se paga: en tramos razonables durante años de ingreso bajo, o en un solo bloque a la tasa máxima, el peor día posible. Y no, la conclusión no es que el REER no sirva para nada. Vuelvo sobre ello más abajo, porque ese atajo cuesta tan caro como la ignorancia contraria.</p>
+
+ <h2 data-i18n="art.decaissement.h2b">Las piezas del rompecabezas</h2>
+
+ <p data-i18n="art.decaissement.p6">Un plan de retiro orquesta cuatro o cinco fuentes que no obedecen a las mismas reglas.</p>
+
+ <div class="question-card">
+ <span class="question-num">01</span>
+ <div class="question-body">
+ <h4 data-i18n="art.decaissement.s1Title">El REER, que se convierte en FERR</h4>
+ <p data-i18n="art.decaissement.s1Text">A más tardar al final del año en que cumples 71 años, el REER debe convertirse en un fondo registrado de ingresos de jubilación (FERR), que impone un retiro mínimo obligatorio cada año, un porcentaje que aumenta con la edad. Cada retiro es ingreso imponible. Traducción: a partir de los 72 años, el gobierno fuerza el grifo abierto, necesites el dinero o no.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">02</span>
+ <div class="question-body">
+ <h4 data-i18n="art.decaissement.s2Title">El CÉLI</h4>
+ <p data-i18n="art.decaissement.s2Text">Los retiros están libres de impuestos, no cuentan como ingreso y — punto crucial para la sucesión — el CÉLI se transmite sin impuestos. Es la cuenta más valiosa a la salida, exactamente lo contrario de su reputación de pequeña cuenta de ahorro.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">03</span>
+ <div class="question-body">
+ <h4 data-i18n="art.decaissement.s3Title">La RRQ</h4>
+ <p data-i18n="art.decaissement.s3Text">Solicitable entre los 60 y los 72 años. Pedirla a los 60 la reduce de forma permanente en torno a un 36 %; aplazarla más allá de los 65 la incrementa cada mes, hasta alrededor de un 42 % más a los 70, de por vida e indexada.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">04</span>
+ <div class="question-body">
+ <h4 data-i18n="art.decaissement.s4Title">La pensión de la Seguridad de la Vejez (PSV)</h4>
+ <p data-i18n="art.decaissement.s4Text">Federal, a partir de los 65 años, aplazable hasta los 70 para una bonificación. Su trampa: la recuperación. Más allá de un umbral de ingreso (en torno a los 90 000 $, indexado cada año), cada dólar de ingreso adicional se come la PSV. Retiros del FERR mal calibrados pueden literalmente fundir esta pensión.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">05</span>
+ <div class="question-body">
+ <h4 data-i18n="art.decaissement.s5Title">La cuenta no registrada</h4>
+ <p data-i18n="art.decaissement.s5Text">Si la hay, con sus plusvalías gravadas a la mitad y sus dividendos con trato particular. Si la distinción entre estos tres sobres aún no está clara, nuestro artículo sobre el CÉLI, el REER y la cuenta no registrada la retoma desde el principio.</p>
+ </div>
+ </div>
+
+ <p data-i18n="art.decaissement.p7">Cinco fuentes, cinco regímenes fiscales, una sola declaración de la renta al año. Por eso el orden de los retiros no es un detalle. Nuestro artículo sobre <a href="/es/articles/tfsa-rrsp-cuenta-no-registrada.html">el CÉLI, el REER y la cuenta no registrada</a> explica qué hace cada sobre, tanto a la entrada como a la salida.</p>
+
+ <h2 data-i18n="art.decaissement.h2c">Las grandes maniobras de un plan de retiro</h2>
+
+ <p data-i18n="art.decaissement.p8">Cada situación es única — es el terreno por excelencia donde un planificador se gana sus honorarios — pero las palancas recurrentes se entienden muy bien.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.decaissement.box1"><strong>1. Vaciar el REER antes de lo que se piensa, voluntariamente.</strong> La intuición dice no tocar el REER mientras no se necesite. La fiscalidad dice a menudo lo contrario: entre la jubilación y los 71 años, mucha gente atraviesa años de ingreso bajo, la ventana dorada para retirar del REER al 25 o 35 % de impuesto en lugar de dejar crecer una masa que saldrá por la fuerza, o en bloque al fallecer al 53 %. Pagar un poco de impuesto ahora para evitar mucho más después: es contraintuitivo, y es el corazón del retiro planificado.</p>
+ </div>
+
+ <p data-i18n="art.decaissement.p9"><strong>2. Guardar el CÉLI para el final.</strong> Puesto que crece y se transmite libre de impuestos, cada año que el CÉLI permanece intacto es un año de crecimiento que el fisco nunca tocará. Algunos van más lejos: los retiros excedentes del REER de los primeros años sirven para volver a aportar al CÉLI. Se desplaza el dinero de la cuenta con factura hacia la cuenta sin factura.</p>
+
+ <p data-i18n="art.decaissement.p10"><strong>3. Jugar con el reloj de las pensiones.</strong> Aplazar la RRQ, y a veces la PSV, mientras se vive del REER combina dos efectos: se vacía la cuenta con factura durante los años flojos, y se incrementan de por vida rentas gubernamentales indexadas — la única renta garantizada e indexada que la mayoría tendrá jamás.</p>
+
+ <p data-i18n="art.decaissement.p11"><strong>4. Vigilar los umbrales.</strong> El umbral de recuperación de la PSV, los tramos impositivos, el crédito por edad: un plan de retiro alisa los ingresos año tras año para mantenerse por debajo de las líneas que salen caras, en lugar de alternar años grandes y años pequeños.</p>
+
+ <p data-i18n="art.decaissement.p12"><strong>5. Los amortiguadores sucesorios.</strong> El traspaso al cónyuge: al primer fallecimiento, el REER o el FERR pasa al cónyuge sobreviviente sin impuesto inmediato, la factura se aplaza al segundo fallecimiento, lo que la pospone sin anularla. Y <a href="/es/articles/seguro-de-vida-permanente.html">el seguro de vida</a> puede calibrarse para cubrir la factura fiscal final, si transmitir intacto es una prioridad.</p>
+
+ <p data-i18n="art.decaissement.p13">Por último, la regla más simple de todas: el dinero gastado en vida — viajes, ayudar a los hijos cuando lo necesitan, proyectos — se grava una sola vez, a la tasa que uno eligió. Es el argumento fiscal detrás de la filosofía de <a href="/es/die-with-zero/">Die With Zero</a>: sacar el dinero según un plan es también darse permiso para vivirlo.</p>
+
+ <h2 data-i18n="art.decaissement.h2d">Devolvamos el REER a su lugar</h2>
+
+ <p data-i18n="art.decaissement.p14">Cada vez que este tema circula, vuelve la misma conclusión apresurada: entonces el REER no sirve para nada. Es falso, y ese error cuesta tan caro como el otro.</p>
+
+ <p data-i18n="art.decaissement.p15">Para la mayoría de los asalariados, el REER sigue siendo un excelente vehículo: la deducción a la entrada, sobre todo cuando la tasa marginal en carrera es alta; el crecimiento protegido durante décadas; y — el punto que el atajo olvida — un retiro bien planificado saca ese dinero a tasas <strong>inferiores</strong> a la de la deducción recibida. Aportar con una tasa marginal del 40 % y retirar al 28 % es una ganancia neta, no una trampa. El escenario catastrófico del 53 % solo golpea al dinero que nunca se planificó sacar.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.decaissement.pull2">"La verdadera lección no es evitar el REER. Es que el REER viene con un manual de salida, y ese manual vale dinero."</p>
+ </div>
+
+ <p data-i18n="art.decaissement.p16">La planificación del retiro no está reservada a los ricos. Es para quien quiera que su dinero llegue de verdad a su vida y a sus seres queridos, en lugar de al último aviso de liquidación.</p>
+
+ <h2 data-i18n="art.decaissement.h2e">El cálculo, como siempre</h2>
+
+ <p data-i18n="art.decaissement.p17">Versión simplificada e ilustrativa, para sentir el orden de magnitud. Dos personas solas llegan a la jubilación con 500 000 $ en su REER, sin ninguna otra fuente imponible importante.</p>
+
+ <ul>
+ <li data-i18n="art.decaissement.li1"><strong>Sin plan:</strong> la primera apenas lo toca, vive de sus otros activos y deja crecer el FERR hasta su fallecimiento. El saldo, digamos aún unos 500 000 $, sale en bloque en su última declaración: gran parte cruza los tramos superiores, y el impuesto sobre ese bloque puede rondar los 200 000 $ y más.</li>
+ <li data-i18n="art.decaissement.li2"><strong>Con plan:</strong> la segunda retira unos 30 000 $ al año desde el inicio de la jubilación, gravados en tramos de en torno al 27 a 32 %, vuelve a aportar el excedente al CÉLI y aplaza su RRQ a los 68 años para incrementarla. En conjunto, el mismo medio millón sale pagando aproximadamente entre 140 000 $ y 150 000 $ de impuestos — y lo que queda al fallecer duerme en un CÉLI que se transmite sin factura.</li>
+ </ul>
+
+ <p data-i18n="art.decaissement.p18">Una diferencia del orden de <strong>50 000 $ a 80 000 $</strong>, sobre un patrimonio idéntico, con los mismos rendimientos. La única diferencia: el orden y el ritmo de los retiros. Es el rendimiento más seguro que existe — no depende de ningún mercado, solo del calendario.</p>
+
+ <h2 data-i18n="art.decaissement.h2f">Por dónde empezar, concretamente</h2>
+
+ <ul>
+ <li data-i18n="art.decaissement.e1"><strong>Conocer tus cifras:</strong> el estado de cuenta de la RRQ (el importe proyectado según la edad de solicitud), una estimación de la PSV, saldos por tipo de cuenta. Es la materia prima.</li>
+ <li data-i18n="art.decaissement.e2"><strong>Estimar tus gastos de jubilación:</strong> <a href="/es/cuestionarios/cuanto-para-jubilarte/">nuestro cuestionario de jubilación</a> da el orden de magnitud en ocho preguntas, y <a href="/es/calculadora-jubilacion/">la calculadora</a> precisa el resto.</li>
+ <li data-i18n="art.decaissement.e3"><strong>Detectar tu ventana floja:</strong> los años entre el final del trabajo y los 71 en que el ingreso será bajo. Ahí es donde se juega el plan.</li>
+ <li data-i18n="art.decaissement.e4"><strong>Consultar, de verdad, esta vez.</strong> Rara vez lo digo tan directamente: el retiro planificado es el terreno donde un planificador financiero o un fiscalista independiente, pagado a honorarios y no a comisión, se amortiza varias veces. Las reglas fiscales cambian, las situaciones familiares varían, y un error en el orden de los retiros no se corrige retroactivamente.</li>
+ </ul>
+
+ <p data-i18n="art.decaissement.p19">La acumulación te exigió disciplina durante treinta años. El retiro exige otra cosa: un plan, una vez, bien hecho. Es la última optimización de la ruta — y para mucha gente, la más rentable de todas.</p>
+
+ <p data-i18n="art.decaissement.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Contenido informativo únicamente — no es asesoramiento fiscal ni financiero. Las tasas, umbrales y porcentajes citados (tasas marginales, reducción o bonificación de la RRQ, umbral de recuperación de la PSV, mínimos del FERR) son aproximados, cambian con regularidad y varían según las situaciones; verifica los valores vigentes con Retraite Québec, la Agencia de Ingresos de Canadá y Revenu Québec. El retiro planificado es precisamente el terreno donde consultar a un profesional cualificado vale su coste.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.decaissement.title">¿Cuánto necesitas?</h3>
+ <p data-i18n="sidebar.decaissement.desc">Antes de planificar la salida, hay que conocer el objetivo. Ocho preguntas bastan para el orden de magnitud.</p>
+ <a href="/es/cuestionarios/cuanto-para-jubilarte/" class="sidebar-btn" data-i18n="sidebar.decaissement.btn">Hacer el cuestionario →</a>
+ <a href="/es/calculadora-jubilacion/" class="sidebar-btn secondary" data-i18n="sidebar.decaissement.secondary">Calculadora de jubilación →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.decaissement.key">Las fechas que cuentan</h4>
+ <div class="info-row"><span data-i18n="sidebar.decaissement.r1">RRQ, lo antes posible</span><span>60</span></div>
+ <div class="info-row"><span data-i18n="sidebar.decaissement.r2">PSV, lo antes posible</span><span>65</span></div>
+ <div class="info-row"><span data-i18n="sidebar.decaissement.r3">Aplazamiento máximo</span><span>70</span></div>
+ <div class="info-row"><span data-i18n="sidebar.decaissement.r4">REER se vuelve FERR</span><span>71</span></div>
+ <div class="info-row"><span data-i18n="sidebar.decaissement.r5">Retiros obligatorios</span><span>72</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.decaissement.cta.title">La salida también se planifica</h2>
+ <p data-i18n="art.decaissement.cta.desc">Antes del orden de los retiros, hace falta el objetivo. Nuestro cuestionario de jubilación da el orden de magnitud en ocho preguntas.</p>
+ <a href="/es/cuestionarios/cuanto-para-jubilarte/" class="cta-btn" data-i18n="art.decaissement.cta.btn">Hacer el cuestionario →</a>
+ <a href="/es/articles/" class="cta-btn secondary" data-i18n="art.readMore">Ver todos los artículos →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finanzas personales · Québec, Canadá</p>
+ <p data-i18n="footer.disclaimer">Solo con fines informativos — no constituye asesoramiento financiero oficial.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contiene enlaces de afiliados (Wealthsimple, Tangerine, Borrowell, Amazon). Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. — <a href="/es/divulgacion.html" style="color:inherit;text-decoration:underline;">Más información →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

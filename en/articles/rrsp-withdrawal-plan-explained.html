@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Your RRSP Comes With an Exit Manual: The Withdrawal Plan Explained — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Le REER vient avec un mode d'emploi de sortie : le plan de décaissement expliqué"
+        slug "plan-de-decaissement-explique"
+        description "Le REER n'est pas un piège : c'est de l'impôt reporté avec un mode d'emploi de sortie que personne n'enseigne. Ordre des retraits, FERR, RRQ, PSV, CÉLI, et la facture au décès."
+        keywords plan de décaissement, REER, FERR, retraits obligatoires, RRQ, récupération PSV, CÉLI succession, impôt au décès
+   EN : title "Your RRSP Comes With an Exit Manual: The Withdrawal Plan Explained"
+        slug "rrsp-withdrawal-plan-explained"
+        description "The RRSP is not a trap: it is deferred tax with an exit manual nobody teaches. Order of withdrawals, RRIF, QPP, OAS, TFSA, and the bill at death."
+        keywords withdrawal plan, RRSP, RRIF, mandatory withdrawals, QPP, OAS clawback, TFSA estate, tax at death
+   ES : title "El REER viene con un manual de salida: el plan de retiro explicado"
+        slug "plan-de-retiro-reer-explicado"
+        description "El REER no es una trampa: es impuesto diferido con un manual de salida que nadie enseña. Orden de los retiros, FERR, RRQ, PSV, CÉLI, y la factura al fallecer."
+        keywords plan de retiro, REER, FERR, retiros obligatorios, RRQ, recuperación PSV, CÉLI sucesión, impuesto al fallecer
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ /* TABLE */
+ .prose table { width: 100%; border-collapse: collapse; margin: 2em 0; font-size: 14px; }
+ .prose th, .prose td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+ .prose thead th { font-family: 'Playfair Display', serif; font-weight: 400; color: var(--terra); font-size: 13px; letter-spacing: 0.5px; border-bottom: 2px solid var(--border); }
+ .prose tbody tr:last-child td { border-bottom: none; }
+
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* QUESTION CARDS */
+ .question-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 1.2em 0; display: flex; gap: 20px; align-items: flex-start; }
+ .question-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--terra); opacity: 0.5; line-height: 1; flex-shrink: 0; min-width: 44px; }
+ .question-body h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+ .question-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="The RRSP is not a trap: it is deferred tax with an exit manual nobody teaches. Order of withdrawals, RRIF, QPP, OAS, TFSA, and the bill at death."/>
+ <meta name="keywords" content="withdrawal plan, RRSP, RRIF, mandatory withdrawals, QPP, OAS clawback, TFSA estate, tax at death"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/articles/rrsp-withdrawal-plan-explained.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/plan-de-decaissement-explique.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/rrsp-withdrawal-plan-explained.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/plan-de-retiro-reer-explicado.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/plan-de-decaissement-explique.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Your RRSP Comes With an Exit Manual: The Withdrawal Plan Explained — Route vers le Million"/>
+ <meta property="og:description" content="The RRSP is not a trap: it is deferred tax with an exit manual nobody teaches. Order of withdrawals, RRIF, QPP, OAS, TFSA, and the bill at death."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/en/articles/rrsp-withdrawal-plan-explained.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="en_CA"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="es_ES"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Your RRSP Comes With an Exit Manual: The Withdrawal Plan Explained"/>
+ <meta name="twitter:description" content="The RRSP is not a trap: it is deferred tax with an exit manual nobody teaches. Order of withdrawals, RRIF, QPP, OAS, TFSA, and the bill at death."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Your RRSP Comes With an Exit Manual: The Withdrawal Plan Explained",
+ "description": "The RRSP is not a trap: it is deferred tax with an exit manual nobody teaches. Order of withdrawals, RRIF, QPP, OAS, TFSA, and the bill at death.",
+ "url": "https://route-vers-le-million.blog/en/articles/rrsp-withdrawal-plan-explained.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "en-CA"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/en/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/en/etfs/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/en/tools/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ <li><a href="/en/quizzes/" data-i18n="nav.quiz">Quizzes</a></li>
+ <li><a href="/en/best-offers/" data-i18n="nav.offres">Offers</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/articles/plan-de-decaissement-explique.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/rrsp-withdrawal-plan-explained.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/plan-de-retiro-reer-explicado.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/en/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/en/etfs/" data-i18n="nav.etf">ETFs</a>
+ <a href="/en/tools/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/en/quizzes/" data-i18n="nav.quiz">Quizzes</a>
+ <a href="/en/best-offers/" data-i18n="nav.offres">Offers</a>
+ <a href="/en/emergency-fund/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/en/my-story/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/articles/plan-de-decaissement-explique.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/rrsp-withdrawal-plan-explained.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/plan-de-retiro-reer-explicado.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/en/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <a href="/en/articles/" data-i18n="nav.articles">Articles</a> &nbsp;/&nbsp; <span data-i18n="art.decaissement.breadcrumb">Retirement</span></p>
+ <p class="hero-tag"><span data-i18n="art.decaissement.tag">Retirement · TFSA and RRSP · Taxation</span></p>
+ <h1><span data-i18n="art.decaissement.title">Your RRSP comes with an exit manual: <em>the withdrawal plan explained</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.decaissement.location">Quebec, Canada</span>
+ <span>·</span>
+ <span data-i18n="art.decaissement.readtime">10 min read</span>
+ <span>·</span>
+ <span data-i18n="art.decaissement.category">Retirement · TFSA and RRSP</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="disclosure.articleBox">ⓘ Disclosure: This article contains affiliate links. If you sign up or purchase through my links, I earn a commission at no extra cost to you. My recommendations are based on my personal use.</div>
+
+ <p class="lead" data-i18n="art.decaissement.lead">We spend decades learning how to get money into the right accounts. Then, one day, we have to get it out. And there, silence — as if retirement simply meant opening the tap.</p>
+
+ <p data-i18n="art.decaissement.p1">Contribute to your RRSP, max out your TFSA, automate, let it compound. That is the accumulation phase, and all personal finance content — mine included — talks about it at length.</p>
+
+ <p data-i18n="art.decaissement.p2">Yet the exit has rules of its own, and they are merciless for those who ignore them. The difference between an improvised withdrawal and a planned one routinely runs into tens, sometimes hundreds of thousands of dollars — not in returns, in tax. A withdrawal plan is exactly that: <strong>the strategy that determines in what order, at what pace and at what moment you take money out of each account, so that the tax authorities take as little as possible over a whole lifetime, and at death.</strong></p>
+
+ <h2 data-i18n="art.decaissement.h2a">The shock that makes it click: the final day's bill</h2>
+
+ <p data-i18n="art.decaissement.p3">Let us start with the scenario making the rounds right now, because it is accurate and it wakes people up.</p>
+
+ <p data-i18n="art.decaissement.p4">You worked your whole life and built a $2,000,000 RRSP. You die, with no surviving spouse. What the law provides: the entire RRSP is deemed withdrawn in the year of your death. The $2M is added to that year's income all at once. In Quebec, past roughly $250,000 of income, the combined marginal rate is around 53 % — so on that block, close to a million dollars can go to tax before your heirs see a cent.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.decaissement.pull1">"The RRSP is not tax avoided — it is tax deferred. The deduction you received on the way in was an advance from the government; the bill arrives on the way out."</p>
+ </div>
+
+ <p data-i18n="art.decaissement.p5">The whole question of withdrawal is choosing when and at what rate you pay it: in reasonable slices during low-income years, or in a single block at the top rate, on the worst possible day. And no, the conclusion is not that the RRSP is useless. I come back to that below, because that shortcut costs as much as the opposite ignorance.</p>
+
+ <h2 data-i18n="art.decaissement.h2b">The pieces of the puzzle</h2>
+
+ <p data-i18n="art.decaissement.p6">A withdrawal plan orchestrates four or five sources that do not obey the same rules.</p>
+
+ <div class="question-card">
+ <span class="question-num">01</span>
+ <div class="question-body">
+ <h4 data-i18n="art.decaissement.s1Title">The RRSP, which becomes a RRIF</h4>
+ <p data-i18n="art.decaissement.s1Text">By the end of the year you turn 71 at the latest, the RRSP must be converted into a registered retirement income fund (RRIF), which imposes a mandatory minimum withdrawal every year, a percentage that rises with age. Every withdrawal is taxable income. Translation: from age 72, the government forces the tap open, whether you need the money or not.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">02</span>
+ <div class="question-body">
+ <h4 data-i18n="art.decaissement.s2Title">The TFSA</h4>
+ <p data-i18n="art.decaissement.s2Text">Withdrawals are tax-free, do not count as income, and — crucially for your estate — the TFSA passes on without tax. It is the most precious account on the way out, exactly the opposite of its reputation as a small savings account.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">03</span>
+ <div class="question-body">
+ <h4 data-i18n="art.decaissement.s3Title">The QPP</h4>
+ <p data-i18n="art.decaissement.s3Text">Available between 60 and 72. Claiming it at 60 reduces it permanently by about 36 %; deferring it past 65 increases it every month, up to about 42 % more at 70, for life and indexed.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">04</span>
+ <div class="question-body">
+ <h4 data-i18n="art.decaissement.s4Title">Old Age Security (OAS)</h4>
+ <p data-i18n="art.decaissement.s4Text">Federal, from age 65, deferrable to 70 for an increase. Its trap: the clawback. Beyond an income threshold (somewhere around $90,000, indexed annually), every additional dollar of income eats into OAS. Poorly calibrated RRIF withdrawals can literally melt this pension away.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">05</span>
+ <div class="question-body">
+ <h4 data-i18n="art.decaissement.s5Title">The non-registered account</h4>
+ <p data-i18n="art.decaissement.s5Text">Where applicable, with capital gains taxed at half and dividends given particular treatment. If the distinction between these three envelopes is not yet clear, our article on the TFSA, the RRSP and the non-registered account takes it from the beginning.</p>
+ </div>
+ </div>
+
+ <p data-i18n="art.decaissement.p7">Five sources, five tax regimes, one tax return per year. That is why the order of withdrawals is not a detail. Our article on <a href="/en/articles/tfsa-rrsp-non-registered-account.html">the TFSA, the RRSP and the non-registered account</a> explains what each envelope does, on the way in and on the way out.</p>
+
+ <h2 data-i18n="art.decaissement.h2c">The major moves of a withdrawal plan</h2>
+
+ <p data-i18n="art.decaissement.p8">Every situation is unique — this is the field par excellence where a planner earns their fee — but the recurring levers are easy enough to understand.</p>
+
+ <div class="highlight-box">
+ <p data-i18n="art.decaissement.box1"><strong>1. Draining the RRSP earlier than you think, deliberately.</strong> Intuition says not to touch the RRSP until you need it. Taxation often says the opposite: between retirement and 71, many people go through low-income years, the golden window to withdraw from the RRSP at 25 or 35 % tax rather than let a mass grow that will come out by force, or in a block at death at 53 %. Paying a little tax now to avoid much more later: it is counter-intuitive, and it is the heart of the withdrawal plan.</p>
+ </div>
+
+ <p data-i18n="art.decaissement.p9"><strong>2. Keeping the TFSA for last.</strong> Since it grows and passes on tax-free, every year the TFSA stays intact is a year of growth the tax authorities will never touch. Some go further: excess RRSP withdrawals in the early years are used to recontribute to the TFSA. You move money from the account with a bill to the account without one.</p>
+
+ <p data-i18n="art.decaissement.p10"><strong>3. Playing the pension clock.</strong> Deferring the QPP, and sometimes OAS, while living off the RRSP combines two effects: you drain the account with a bill during the lean years, and you increase, for life, indexed government pensions — the only guaranteed, indexed pension most people will ever have.</p>
+
+ <p data-i18n="art.decaissement.p11"><strong>4. Watching the thresholds.</strong> The OAS clawback threshold, the tax brackets, the age credit: a withdrawal plan smooths income year over year to stay under the lines that cost money, rather than alternating big years and small ones.</p>
+
+ <p data-i18n="art.decaissement.p12"><strong>5. The estate shock absorbers.</strong> The spousal rollover: at the first death, the RRSP or RRIF passes to the surviving spouse with no immediate tax, the bill is deferred to the second death, which postpones it without cancelling it. And <a href="/en/articles/permanent-life-insurance.html">life insurance</a> can be calibrated to cover the final tax bill, if passing everything on intact is a priority.</p>
+
+ <p data-i18n="art.decaissement.p13">Finally, the simplest rule of all: money spent during your lifetime — travel, helping your children while they need it, projects — is taxed once, at a rate you chose. That is the tax argument behind the <a href="/en/die-with-zero/">Die With Zero</a> philosophy: taking your money out according to a plan is also giving yourself permission to live it.</p>
+
+ <h2 data-i18n="art.decaissement.h2d">Putting the RRSP back in its place</h2>
+
+ <p data-i18n="art.decaissement.p14">Every time this subject circulates, the same hasty conclusion returns: so the RRSP is useless. That is false, and that error costs as much as the other one.</p>
+
+ <p data-i18n="art.decaissement.p15">For most employees, the RRSP remains an excellent vehicle: the deduction on the way in, especially when the career marginal rate is high; sheltered growth over decades; and — the point the shortcut forgets — a well-planned withdrawal takes that money out at rates <strong>lower</strong> than the one at which the deduction was received. Contributing at a 40 % marginal rate and withdrawing at 28 % is a net gain, not a trap. The 53 % catastrophe scenario only strikes money you never planned to take out.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.decaissement.pull2">"The real lesson is not to avoid the RRSP. It is that the RRSP comes with an exit manual, and that manual is worth money."</p>
+ </div>
+
+ <p data-i18n="art.decaissement.p16">Withdrawal planning is not reserved for the wealthy. It is for anyone who wants their money to actually reach their life and their loved ones, rather than the final tax assessment.</p>
+
+ <h2 data-i18n="art.decaissement.h2e">The math, as always</h2>
+
+ <p data-i18n="art.decaissement.p17">A simplified, illustrative version, to get a feel for the order of magnitude. Two single people reach retirement with $500,000 in their RRSP and no other large taxable source.</p>
+
+ <ul>
+ <li data-i18n="art.decaissement.li1"><strong>Without a plan:</strong> the first barely touches it, lives off other assets, and lets the RRIF grow until death. The balance, let us say still about $500,000, comes out in a block on the final return: much of it crosses the top brackets, and the tax on that block can approach $200,000 and more.</li>
+ <li data-i18n="art.decaissement.li2"><strong>With a plan:</strong> the second withdraws about $30,000 a year from the start of retirement, taxed in brackets around 27 to 32 %, recontributes the surplus to the TFSA, and defers the QPP to 68 to increase it. Overall, the same half-million comes out paying roughly $140,000 to $150,000 in tax — and what remains at death sits in a TFSA that passes on with no bill.</li>
+ </ul>
+
+ <p data-i18n="art.decaissement.p18">A gap on the order of <strong>$50,000 to $80,000</strong>, on identical wealth, with the same returns. The only difference: the order and pace of withdrawals. It is the safest return there is — it depends on no market, only on the calendar.</p>
+
+ <h2 data-i18n="art.decaissement.h2f">Where to start, concretely</h2>
+
+ <ul>
+ <li data-i18n="art.decaissement.e1"><strong>Know your numbers:</strong> your QPP statement (the projected amount by claiming age), an OAS estimate, balances by account type. That is the raw material.</li>
+ <li data-i18n="art.decaissement.e2"><strong>Estimate your retirement spending:</strong> <a href="/en/quizzes/retirement-number/">our retirement quiz</a> gives the order of magnitude in eight questions, and <a href="/en/retirement-calculator/">the calculator</a> refines the rest.</li>
+ <li data-i18n="art.decaissement.e3"><strong>Spot your lean window:</strong> the years between the end of work and 71 when income will be low. That is where the plan is won.</li>
+ <li data-i18n="art.decaissement.e4"><strong>Consult, for real, this time.</strong> I rarely say it this directly: withdrawal planning is the field where an independent financial planner or tax specialist, paid by fee and not by commission, pays for themselves several times over. Tax rules move, family situations vary, and a mistake in the order of withdrawals cannot be corrected retroactively.</li>
+ </ul>
+
+ <p data-i18n="art.decaissement.p19">Accumulation asked you for discipline over thirty years. Withdrawal asks for something else: a plan, once, done well. It is the last optimization of the road — and for many people, the most profitable of all.</p>
+
+ <p data-i18n="art.decaissement.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Informational content only — not tax or financial advice. The rates, thresholds and percentages cited (marginal rates, QPP reduction or increase, OAS clawback threshold, RRIF minimums) are approximate, change regularly and vary by situation; check the values in force with Retraite Québec, the Canada Revenue Agency and Revenu Québec. Withdrawal planning is precisely the field where consulting a qualified professional is worth the cost.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.decaissement.title">How much do you need?</h3>
+ <p data-i18n="sidebar.decaissement.desc">Before planning the exit, you need to know the target. Eight questions are enough for the order of magnitude.</p>
+ <a href="/en/quizzes/retirement-number/" class="sidebar-btn" data-i18n="sidebar.decaissement.btn">Take the retirement quiz →</a>
+ <a href="/en/retirement-calculator/" class="sidebar-btn secondary" data-i18n="sidebar.decaissement.secondary">Retirement calculator →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.decaissement.key">The dates that matter</h4>
+ <div class="info-row"><span data-i18n="sidebar.decaissement.r1">QPP, earliest</span><span>60</span></div>
+ <div class="info-row"><span data-i18n="sidebar.decaissement.r2">OAS, earliest</span><span>65</span></div>
+ <div class="info-row"><span data-i18n="sidebar.decaissement.r3">Maximum deferral</span><span>70</span></div>
+ <div class="info-row"><span data-i18n="sidebar.decaissement.r4">RRSP becomes RRIF</span><span>71</span></div>
+ <div class="info-row"><span data-i18n="sidebar.decaissement.r5">Mandatory withdrawals</span><span>72</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.decaissement.cta.title">The exit is planned too</h2>
+ <p data-i18n="art.decaissement.cta.desc">Before the order of withdrawals, you need the target. Our retirement quiz gives the order of magnitude in eight questions.</p>
+ <a href="/en/quizzes/retirement-number/" class="cta-btn" data-i18n="art.decaissement.cta.btn">Take the retirement quiz →</a>
+ <a href="/en/articles/" class="cta-btn secondary" data-i18n="art.readMore">View all articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>
