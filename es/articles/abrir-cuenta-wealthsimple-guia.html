@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <script>try{localStorage.setItem('lang','es');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Abrir una cuenta Wealthsimple: la guía sin jerga — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Ouvrir un compte Wealthsimple : le guide sans jargon"
+        slug "ouvrir-compte-wealthsimple-guide"
+        description "Ouvrir un compte Wealthsimple étape par étape : CÉLI, REER ou non enregistré expliqués simplement, quoi acheter dedans pour commencer, et les ETF les plus populaires pour débuter."
+        keywords ouvrir un compte Wealthsimple, CÉLI ou REER, premier compte de placement, VFV.TO, XUS.TO, ETF débutant, bonus Wealthsimple
+   EN : title "Opening a Wealthsimple Account: The Jargon-Free Guide"
+        slug "open-a-wealthsimple-account-guide"
+        description "Opening a Wealthsimple account step by step: TFSA, RRSP or non-registered explained simply, what to buy inside to start, and the most popular ETFs for beginners."
+        keywords open a Wealthsimple account, TFSA or RRSP, first investment account, VFV.TO, XUS.TO, beginner ETF, Wealthsimple bonus
+   ES : title "Abrir una cuenta Wealthsimple: la guía sin jerga"
+        slug "abrir-cuenta-wealthsimple-guia"
+        description "Abrir una cuenta Wealthsimple paso a paso: CÉLI, REER o cuenta no registrada explicados con sencillez, qué comprar dentro para empezar, y los ETF más populares para principiantes."
+        keywords abrir una cuenta Wealthsimple, CÉLI o REER, primera cuenta de inversión, VFV.TO, XUS.TO, ETF principiante, bono Wealthsimple
+ -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 55vh; min-height: 400px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 56px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .hero-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; display: inline-block; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* LAYOUT */
+ .article-wrap { max-width: 880px; margin: 0 auto; padding: 72px 40px 100px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: start; }
+
+ .article-meta { display: flex; gap: 20px; font-size: 12px; color: var(--light); letter-spacing: 1px; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 44px; flex-wrap: wrap; }
+
+ /* DISCLOSURE BOX */
+ .disclosure-box { background: #F5F0E8; border-left: 4px solid #2D4A1A; padding: 14px 18px; font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 2em; border-radius: 0 4px 4px 0; }
+
+ /* PROSE */
+ .prose p { font-size: 16px; line-height: 1.9; color: #1A2E0A; margin-bottom: 1.6em; }
+ .prose p.lead { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 400; font-style: italic; color: var(--text); line-height: 1.65; padding: 0 0 0 22px; border-left: 3px solid var(--terra); margin-bottom: 2.4em; }
+ .prose h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.6em 0 0.9em; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+ .prose h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--text); margin: 2em 0 0.7em; }
+ .prose strong { color: var(--text); font-weight: 500; }
+ .prose a { color: var(--terra); text-decoration: underline; }
+ .prose ul { margin: 0 0 1.6em 0; padding: 0; list-style: none; }
+ .prose ul li { font-size: 16px; line-height: 1.9; color: #1A2E0A; padding: 8px 0 8px 20px; border-bottom: 1px solid var(--border); position: relative; }
+ .prose ul li:last-child { border-bottom: none; }
+ .prose ul li::before { content: '—'; position: absolute; left: 0; color: var(--terra); font-family: 'Playfair Display', serif; }
+
+ /* TABLE */
+ .prose table { width: 100%; border-collapse: collapse; margin: 2em 0; font-size: 14px; }
+ .prose th, .prose td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+ .prose thead th { font-family: 'Playfair Display', serif; font-weight: 400; color: var(--terra); font-size: 13px; letter-spacing: 0.5px; border-bottom: 2px solid var(--border); }
+ .prose tbody tr:last-child td { border-bottom: none; }
+
+
+ .pullquote { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--terra); border-radius: 0 var(--radius) var(--radius) 0; padding: 28px 32px; margin: 2.2em 0; }
+ .pullquote p { font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; color: var(--text); line-height: 1.65; margin: 0; }
+
+ /* QUESTION CARDS */
+ .question-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin: 1.2em 0; display: flex; gap: 20px; align-items: flex-start; }
+ .question-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--terra); opacity: 0.5; line-height: 1; flex-shrink: 0; min-width: 44px; }
+ .question-body h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+ .question-body p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+ /* HIGHLIGHT BOX */
+ .highlight-box { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin: 2em 0; }
+ .highlight-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.75; }
+ .highlight-box strong { color: var(--terra); }
+
+ /* SIDEBAR */
+ .sidebar { position: sticky; top: 84px; }
+ .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+ .sidebar-img { height: 180px; background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=400&q=80') center/cover no-repeat; }
+ .sidebar-body { padding: 22px; }
+ .sidebar-body h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+ .sidebar-body p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+ .sidebar-btn { display: block; text-align: center; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin-bottom: 10px; }
+ .sidebar-btn:hover { background: var(--terra2); }
+ .sidebar-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .sidebar-btn.secondary:hover { background: var(--border); }
+
+ .sidebar-info { background: var(--cream2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+ .sidebar-info h4 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+ .info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+ .info-row:last-child { border: none; }
+ .info-row span:first-child { color: var(--muted); }
+ .info-row span:last-child { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--terra); }
+
+ /* CTA */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 64px 56px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 28px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; transition: background 0.2s; margin: 6px; }
+ .cta-btn:hover { background: var(--terra2); }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ @media (max-width: 768px) {
+ nav { padding: 0 24px; }
+ .nav-links { display: none; }
+ .page-hero-content { padding: 0 24px 40px; }
+ .article-wrap { grid-template-columns: 1fr; padding: 48px 24px 80px; }
+ .sidebar { position: static; }
+ footer { padding: 24px; flex-direction: column; text-align: center; }
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+ .mobile-menu a:last-child { border: none; }
+ .mobile-menu a:hover { color: var(--terra); }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 36px !important; }
+ .article-wrap { grid-template-columns: 1fr !important; padding: 40px 20px 80px !important; }
+ .sidebar { position: static !important; }
+ .articles-grid { grid-template-columns: 1fr !important; }
+ section { padding: 48px 20px !important; }
+ .cta-bottom, .cta-section { padding: 48px 20px !important; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <meta name="description" content="Abrir una cuenta Wealthsimple paso a paso: CÉLI, REER o cuenta no registrada explicados con sencillez, qué comprar dentro para empezar, y los ETF más populares para principiantes."/>
+ <meta name="keywords" content="abrir una cuenta Wealthsimple, CÉLI o REER, primera cuenta de inversión, VFV.TO, XUS.TO, ETF principiante, bono Wealthsimple"keywords" content="ouvrir un compte Wealthsimple, CÉLI ou REER, premier compte de placement, VFV.TO, XUS.TO, ETF débutant, bonus Wealthsimple"/>amp;P 500, Nasdaq-100, ETF, FNB, MER, choisir un ETF, TSX"/>
+ <meta name="robots" content="index, follow"/>
+ <meta name="author" content="Route vers le Million"/>
+ <link rel="canonical" href="https://route-vers-le-million.blog/es/articles/abrir-cuenta-wealthsimple-guia.html"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/articles/ouvrir-compte-wealthsimple-guide.html"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/articles/open-a-wealthsimple-account-guide.html"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/articles/abrir-cuenta-wealthsimple-guia.html"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/articles/ouvrir-compte-wealthsimple-guide.html"/>
+ <meta property="og:type" content="article"/>
+ <meta property="og:title" content="Abrir una cuenta Wealthsimple: la guía sin jerga — Route vers le Million"/>
+ <meta property="og:description" content="Abrir una cuenta Wealthsimple paso a paso: CÉLI, REER o cuenta no registrada explicados con sencillez, qué comprar dentro para empezar, y los ETF más populares para principiantes."/>
+ <meta property="og:url" content="https://route-vers-le-million.blog/es/articles/abrir-cuenta-wealthsimple-guia.html"/>
+ <meta property="og:site_name" content="Route vers le Million"/>
+ <meta property="og:locale" content="es_ES"/>
+ <meta property="og:locale:alternate" content="fr_CA"/>
+ <meta property="og:locale:alternate" content="en_CA"/>
+ <meta property="og:image" content="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+ <meta name="twitter:title" content="Abrir una cuenta Wealthsimple: la guía sin jerga"/>
+ <meta name="twitter:description" content="Abrir una cuenta Wealthsimple paso a paso: CÉLI, REER o cuenta no registrada explicados con sencillez, qué comprar dentro para empezar, y los ETF más populares para principiantes."/>
+ <meta name="twitter:image" content="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80"/>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Abrir una cuenta Wealthsimple: la guía sin jerga",
+ "description": "Abrir una cuenta Wealthsimple paso a paso: CÉLI, REER o cuenta no registrada explicados con sencillez, qué comprar dentro para empezar, y los ETF más populares para principiantes.",
+ "url": "https://route-vers-le-million.blog/es/articles/abrir-cuenta-wealthsimple-guia.html",
+ "author": {"@type": "Person", "name": "Route vers le Million"},
+ "publisher": {"@type": "Organization", "name": "Route vers le Million", "url": "https://route-vers-le-million.blog"},
+ "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+ "inLanguage": "es-ES"
+ }
+ </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/es/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a></li>
+ <li><a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a></li>
+ <li><a href="/es/etf/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/es/herramientas/" data-i18n="nav.outils">Herramientas</a></li>
+ <li><a href="/es/articles/" data-i18n="nav.articles">Artículos</a></li>
+ <li><a href="/es/cuestionarios/" data-i18n="nav.quiz">Cuestionarios</a></li>
+ <li><a href="/es/mejores-ofertas/" data-i18n="nav.offres">Ofertas</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/articles/ouvrir-compte-wealthsimple-guide.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/articles/open-a-wealthsimple-account-guide.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/articles/abrir-cuenta-wealthsimple-guia.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/es/" data-i18n="nav.accueil">Inicio</a>
+ <a href="/es/sobre-mi/" data-i18n="nav.about">SOBRE MÍ</a>
+ <a href="/es/celi-reer/" data-i18n="nav.celiReer">CELI &amp; REER</a>
+ <a href="/es/etf/" data-i18n="nav.etf">ETFs</a>
+ <a href="/es/herramientas/" data-i18n="nav.outils">Herramientas</a>
+ <a href="/es/articles/" data-i18n="nav.allArticles">Todos los artículos</a>
+ <a href="/es/cuestionarios/" data-i18n="nav.quiz">Cuestionarios</a>
+ <a href="/es/mejores-ofertas/" data-i18n="nav.offres">Ofertas</a>
+ <a href="/es/fondo-de-emergencia/" data-i18n="nav.fondsUrgence">Fondo de emergencia</a>
+ <a href="/es/mi-historia/" data-i18n="nav.monParcours">Mi trayectoria</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/articles/ouvrir-compte-wealthsimple-guide.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/articles/open-a-wealthsimple-account-guide.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/articles/abrir-cuenta-wealthsimple-guia.html" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Abrir Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/es/" data-i18n="nav.accueil">Inicio</a> &nbsp;/&nbsp; <a href="/es/articles/" data-i18n="nav.articles">Artículos</a> &nbsp;/&nbsp; <span data-i18n="art.ws.breadcrumb">Wealthsimple</span></p>
+ <p class="hero-tag"><span data-i18n="art.ws.tag">Inversión · Wealthsimple · Empezar</span></p>
+ <h1><span data-i18n="art.ws.title">Abrir tu primera cuenta de inversión: <em>la guía sin jerga</em></span></h1>
+ </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+ <article>
+ <div class="article-meta">
+ <span data-i18n="art.ws.location">Quebec, Canadá</span>
+ <span>·</span>
+ <span data-i18n="art.ws.readtime">8 min de lectura</span>
+ <span>·</span>
+ <span data-i18n="art.ws.category">Inversión · Wealthsimple</span>
+ </div>
+
+ <div class="prose">
+
+ <div class="disclosure-box" data-i18n="art.ws.disclosure"><strong>Divulgación, ante todo:</strong> los enlaces marcados con un asterisco (*) son enlaces de afiliación. Recibo una comisión si los usas, sin coste para ti, y tú recibes un bono de 25 $. Yo misma uso Wealthsimple para mi propio CÉLI; no recomiendo nada que no use.</div>
+
+ <p class="lead" data-i18n="art.ws.lead">Si estás leyendo esto, probablemente ya has entendido el porqué: el interés compuesto, el coste de esperar, todo eso. Queda el cómo, y ahí es donde la gente se bloquea durante meses: ¿qué cuenta? ¿qué plataforma? y una vez abierta la cuenta, ¿qué se compra?</p>
+
+ <p data-i18n="art.ws.p1">Esta guía responde a las tres preguntas, en orden, con sencillez. Al final sabrás exactamente qué hacer — y cada etapa lleva menos tiempo del que se piensa.</p>
+
+ <h2 data-i18n="art.ws.h2a">Etapa 1 — Abrir la cuenta (10 minutos, de verdad)</h2>
+
+ <p data-i18n="art.ws.p2">Wealthsimple es una plataforma canadiense de inversión en línea: sin sucursal, sin cita previa, sin comisión en las transacciones de acciones y ETF, sin importe mínimo. Es la puerta de entrada que recomiendo a los principiantes por una razón sencilla: todo lo que desanima a la gente a invertir — las comisiones, el papeleo, la jerga — se ha eliminado.</p>
+
+ <p data-i18n="art.ws.p3">La apertura se hace en línea o en la aplicación:</p>
+
+ <ul>
+ <li data-i18n="art.ws.li1">Crea tu perfil (correo electrónico, contraseña)</li>
+ <li data-i18n="art.ws.li2">Confirma tu identidad. Como para cualquier cuenta financiera en Canadá, hace falta tu número de seguro social y un documento de identidad. Es normal y está regulado por la ley.</li>
+ <li data-i18n="art.ws.li3">Responde al breve cuestionario sobre tu situación</li>
+ <li data-i18n="art.ws.li4">Elige tu tipo de cuenta. Aquí es donde surge la verdadera pregunta, y es el objeto de la siguiente sección.</li>
+ </ul>
+
+ <p style="text-align:center;margin:2.2em 0;"><a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="cta.wsBonus">Abrir una cuenta Wealthsimple* — bono de 25 $ →</a></p>
+
+ <h2 data-i18n="art.ws.h2b">Etapa 2 — Elegir el tipo de cuenta adecuado</h2>
+
+ <div class="highlight-box">
+ <p data-i18n="art.ws.box1">Esta es la idea que desbloquea a la mayoría: <strong>una cuenta no es una inversión, es un vehículo.</strong> El CÉLI, el REER y la cuenta no registrada son contenedores, con reglas fiscales diferentes. Lo que se pone dentro — ETF, acciones, efectivo — es una decisión aparte, que viene después. Dicho de otro modo: primero se elige el garaje, luego lo que se aparca en él.</p>
+ </div>
+
+ <h3 data-i18n="art.ws.h3a">El CÉLI — empieza aquí</h3>
+
+ <p data-i18n="art.ws.p4">Para la gran mayoría, el primer vehículo que hay que llenar es el <strong>CÉLI</strong> (cuenta de ahorro libre de impuestos). Sus reglas caben en dos líneas: todo lo que tu dinero gana dentro — crecimiento, dividendos — está <strong>libre de impuestos para siempre</strong>, y puedes retirar cuando quieras, sin penalización ni impuesto.</p>
+
+ <p data-i18n="art.ws.p5">Cada año, el gobierno añade derechos de aportación (7 000 $ en 2026), y los derechos no utilizados se acumulan desde que cumpliste 18 años. Flexible, simple, sin trampa: es el punto de partida.</p>
+
+ <h3 data-i18n="art.ws.h3b">El REER — el segundo vehículo, con manual</h3>
+
+ <p data-i18n="art.ws.p6">El <strong>REER</strong> (plan registrado de ahorro para la jubilación) ofrece una ventaja distinta: cada aportación <strong>reduce tu ingreso imponible</strong> del año, es decir, una devolución de impuestos ahora. A cambio, los retiros se gravarán más tarde, idealmente en la jubilación, cuando tu tasa impositiva sea más baja.</p>
+
+ <p data-i18n="art.ws.p7">El REER brilla sobre todo cuando tu ingreso es alto (la deducción vale más) o cuando tu empleador iguala tus aportaciones — en ese caso es dinero gratis, y va incluso antes que el CÉLI. Un detalle que poca gente sabe: el REER viene con un manual de salida que vale decenas de miles de dólares, y le dedico una guía completa, sobre <a href="/es/articles/plan-de-retiro-reer-explicado.html">el plan de retiro</a>.</p>
+
+ <h3 data-i18n="art.ws.h3c">La cuenta no registrada — para más adelante</h3>
+
+ <p data-i18n="art.ws.p8">La <strong>cuenta no registrada</strong> no tiene ninguna ventaja fiscal: las ganancias son imponibles. Solo resulta pertinente cuando el CÉLI y el REER están llenos — un excelente problema, pero no el del primer día.</p>
+
+ <div class="pullquote">
+ <p data-i18n="art.ws.pull1">"El orden simple para la mayoría: primero el CÉLI, luego el REER (o antes, si el empleador iguala), y la cuenta no registrada cuando los dos se desbordan."</p>
+ </div>
+
+ <h2 data-i18n="art.ws.h2c">Etapa 3 — Depositar y automatizar</h2>
+
+ <p data-i18n="art.ws.p9">Una vez abierta la cuenta, vincula tu cuenta bancaria (conexión segura, dos minutos) y haz tu primer depósito. Un dólar basta para activar el bono de 25 $, pero lo importante está en otra parte: <strong>configura de inmediato un depósito automático</strong>, aunque sea modesto. Cincuenta dólares por nómina que salen solos superan a quinientos dólares "cuando me acuerde" — porque nunca nos acordamos, y precisamente por eso existe la automatización.</p>
+
+ <h2 data-i18n="art.ws.h2d">Etapa 4 — Y ahora, ¿qué se compra?</h2>
+
+ <p data-i18n="art.ws.p10">Tu vehículo está aparcado, el depósito se llena automáticamente. Queda la pregunta que paraliza a todo el mundo: ¿qué poner dentro? En Wealthsimple se te abren dos caminos.</p>
+
+ <div class="question-card">
+ <span class="question-num">01</span>
+ <div class="question-body">
+ <h4 data-i18n="art.ws.c1Title">El camino gestionado (el más simple)</h4>
+ <p data-i18n="art.ws.c1Text">Respondes a un cuestionario, y se construye y gestiona automáticamente un portafolio diversificado según tu perfil, con una pequeña comisión de gestión. Cero decisiones que tomar: perfecto si solo quieres que funcione.</p>
+ </div>
+ </div>
+
+ <div class="question-card">
+ <span class="question-num">02</span>
+ <div class="question-body">
+ <h4 data-i18n="art.ws.c2Title">El camino autónomo (el que yo uso)</h4>
+ <p data-i18n="art.ws.c2Text">Compras tú mismo tus ETF, sin comisiones. Exige entender dos o tres nociones — y aquí están.</p>
+ </div>
+ </div>
+
+ <h3 data-i18n="art.ws.h3d">Empezar con el S&amp;P 500: el clásico de los principiantes</h3>
+
+ <p data-i18n="art.ws.p11">El <strong>S&amp;P 500</strong> es la lista de las 500 empresas más grandes de Estados Unidos: Apple, Microsoft, Amazon y compañía. Cuando se oye que el mercado subió, generalmente se habla de él. Históricamente ha rendido de media alrededor del 10 % anual en períodos largos, sin ninguna garantía para el futuro, y comprar un ETF que lo sigue equivale a comprar un pedacito de las 500 empresas de golpe.</p>
+
+ <p data-i18n="art.ws.p12">Los ETF más conocidos que lo reproducen, disponibles en Wealthsimple:</p>
+
+ <ul>
+ <li data-i18n="art.ws.li5"><strong>VFV.TO</strong> y <strong>XUS.TO</strong> — cotizados en dólares canadienses, prácticos para evitar las comisiones de conversión en compras regulares</li>
+ <li data-i18n="art.ws.li6"><strong>VOO</strong> — la versión estadounidense en dólares US, comisiones ligeramente más bajas pero con conversión de divisa que prever</li>
+ </ul>
+
+ <p data-i18n="art.ws.p13">Si quieres entender exactamente qué es un índice, cómo un ETF lo fotocopia, y los cinco criterios para separar dos ETF equivalentes, es el tema de mi guía completa: <a href="/es/articles/que-es-un-indice-bursatil.html">¿Qué es un índice bursátil? La explicación de principio a fin</a>. Es probablemente la lectura más útil antes de tu primera compra.</p>
+
+ <h3 data-i18n="art.ws.h3e">La otra gran familia: los ETF de dividendos</h3>
+
+ <p data-i18n="art.ws.p14">Algunos inversores prefieren inversiones que <strong>pagan un ingreso regular</strong> en lugar de apostar por el crecimiento puro. El mercado canadiense destaca en eso: nuestros bancos, telecomunicaciones y oleoductos redistribuyen generosamente sus ganancias. ETF como <strong>XEI.TO</strong>, <strong>VDY.TO</strong> o <strong>ZWB.TO</strong> agrupan estas empresas y pagan distribuciones regulares, a menudo mensuales.</p>
+
+ <p data-i18n="art.ws.p15">¿Crecimiento o dividendos? No es una cuestión de mejor elección, es una cuestión de horizonte, objetivo y temperamento — y le he dedicado una guía entera: <a href="/es/articles/dividendos-o-crecimiento-puro.html">Dividendos o crecimiento, cómo elegir según tu etapa de vida</a>.</p>
+
+ <h2 data-i18n="art.ws.h2e">El resumen en cinco líneas</h2>
+
+ <ul>
+ <li data-i18n="art.ws.r1"><strong>Abre la cuenta</strong> — 10 minutos, sin mínimo, bono de 25 $ en el primer depósito</li>
+ <li data-i18n="art.ws.r2"><strong>Elige el vehículo</strong> — el CÉLI primero, para la mayoría</li>
+ <li data-i18n="art.ws.r3"><strong>Automatiza</strong> un depósito regular, aunque sea modesto</li>
+ <li data-i18n="art.ws.r4"><strong>Elige el contenido</strong> — portafolio gestionado para la simplicidad, o tus propios ETF: el S&amp;P 500 es el punto de partida clásico, los ETF de dividendos la alternativa de ingresos</li>
+ <li data-i18n="art.ws.r5"><strong>Deja que el tiempo trabaje</strong> — es él quien hace la mayor parte del camino</li>
+ </ul>
+
+ <p data-i18n="art.ws.p16">Y si quieres ver todo lo que uso y recomiendo, está reunido en <a href="/es/mejores-ofertas/">la página de mejores ofertas</a>.</p>
+
+ <p data-i18n="art.ws.footer" style="margin-top: 2em; font-size: 13px; color: var(--light); border-top: 1px solid var(--border); padding-top: 16px;">Divulgación: los enlaces marcados con un asterisco son enlaces de afiliación. Recibo una comisión si los usas, sin coste adicional para ti. Contenido informativo únicamente — no es asesoramiento financiero. Los ETF nombrados son ejemplos extendidos, no recomendaciones personalizadas; los rendimientos pasados no garantizan los futuros. Los topes y reglas de las cuentas registradas cambian: verifica los importes vigentes con la Agencia de Ingresos de Canadá. Consulta a un profesional para tu situación específica.</p>
+
+ </div>
+ </article>
+
+ <!-- SIDEBAR -->
+ <aside class="sidebar">
+
+ <div class="sidebar-card">
+ <div class="sidebar-img"></div>
+ <div class="sidebar-body">
+ <h3 data-i18n="sidebar.ws.title">Bono de 25 $</h3>
+ <p data-i18n="sidebar.ws.desc">Abre tu primera cuenta y deposita al menos 1 $ en los primeros 30 días.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="sidebar-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="sidebar.ws.btn">Abrir una cuenta* →</a>
+ <a href="/es/articles/que-es-un-indice-bursatil.html" class="sidebar-btn secondary" data-i18n="sidebar.ws.secondary">Entender los índices →</a>
+ </div>
+ </div>
+
+ <div class="sidebar-info">
+ <h4 data-i18n="sidebar.ws.key">El orden a seguir</h4>
+ <div class="info-row"><span data-i18n="sidebar.ws.r1">1. El vehículo</span><span data-i18n="sidebar.ws.r1v">CÉLI</span></div>
+ <div class="info-row"><span data-i18n="sidebar.ws.r2">2. El depósito</span><span data-i18n="sidebar.ws.r2v">Automático</span></div>
+ <div class="info-row"><span data-i18n="sidebar.ws.r3">3. El contenido</span><span data-i18n="sidebar.ws.r3v">ETF</span></div>
+ <div class="info-row"><span data-i18n="sidebar.ws.r4">4. El clásico</span><span>S&amp;P 500</span></div>
+ <div class="info-row"><span data-i18n="sidebar.ws.r5">5. El resto</span><span data-i18n="sidebar.ws.r5v">El tiempo</span></div>
+ </div>
+
+ </aside>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.ws.cta.title">Diez minutos, y ya está</h2>
+ <p data-i18n="art.ws.cta.desc">Sin importe mínimo, sin comisión en los ETF, y un bono de 25 $ en el primer depósito.</p>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="cta-btn" target="_blank" rel="sponsored nofollow noopener" data-i18n="cta.wsBonus">Abrir una cuenta Wealthsimple* — bono de 25 $ →</a>
+ <a href="/es/articles/" class="cta-btn secondary" data-i18n="art.readMore">Ver todos los artículos →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Finanzas personales · Québec, Canadá</p>
+ <p data-i18n="footer.disclaimer">Solo con fines informativos — no constituye asesoramiento financiero oficial.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contiene enlaces de afiliados (Wealthsimple, Tangerine, Borrowell, Amazon). Si te registras o compras a través de mis enlaces, recibo una comisión sin costo adicional para ti. — <a href="/es/divulgacion.html" style="color:inherit;text-decoration:underline;">Más información →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+</body>
+</html>

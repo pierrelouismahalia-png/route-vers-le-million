@@ -285,7 +285,10 @@
     if (T.bilan.liens && T.bilan.liens.length) {
       html += '<p class="quiz-cta">';
       T.bilan.liens.forEach(function (lien, i) {
-        html += (i ? ' &middot; ' : '') + '<a href="' + lien.href + '">' + escapeHtml(lien.t) + '</a>';
+        // Un lien de sortie peut etre affilie : il porte alors rel et s'ouvre a part.
+        var attrs = lien.rel ? ' target="_blank" rel="' + lien.rel + '"' : '';
+        html += (i ? ' &middot; ' : '') + '<a href="' + lien.href + '"' + attrs + '>' +
+                escapeHtml(lien.t) + '</a>';
       });
       html += '</p>';
     }
