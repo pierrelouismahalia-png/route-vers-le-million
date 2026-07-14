@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Your Financial Health Score in 10 Questions — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Votre score de santé financière en 10 questions" | slug "sante-financiere"
+        description "Dix questions, un score sur 100, et surtout votre point faible identifié : une santé financière se répare une dimension à la fois."
+   EN : title "Your Financial Health Score in 10 Questions" | slug "financial-health-score"
+        description "Ten questions, a score out of 100, and above all your weak spot identified: financial health gets fixed one dimension at a time."
+   ES : title "Tu puntaje de salud financiera en 10 preguntas" | slug "salud-financiera"
+        description "Diez preguntas, un puntaje sobre 100 y, sobre todo, tu punto débil identificado: la salud financiera se repara una dimensión a la vez." -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ --faux: #9a3b3b;
+ --faux-fond: #f6e9e9;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 40vh; min-height: 300px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 44px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 44px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* WRAP */
+ .wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 90px; }
+ .intro { text-align: center; font-size: 16px; color: var(--muted); margin: 0 auto 32px; max-width: 520px; }
+
+ /* QUIZ */
+ .quiz { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+ .quiz__entete { padding: 28px 32px 22px; border-bottom: 1px solid var(--border); }
+ .quiz__surtitre { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--terra); font-weight: 500; margin: 0 0 8px; }
+ .quiz__titre { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; margin: 0; color: var(--text); }
+ .quiz__progres { font-size: 13px; color: var(--muted); margin-top: 14px; }
+ .quiz__barre { height: 4px; background: var(--border); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+ .quiz__barre span { display: block; height: 100%; width: 0; background: var(--terra); transition: width 0.3s ease; }
+ .quiz__corps { padding: 28px 32px 32px; }
+ .question { font-size: 18px; font-weight: 500; margin: 0 0 22px; color: var(--text); }
+ .options { display: flex; flex-direction: column; gap: 12px; }
+ .option { text-align: left; width: 100%; padding: 15px 18px; font-size: 15.5px; line-height: 1.5; color: var(--text); background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; font-family: inherit; transition: border-color 0.15s ease, background-color 0.15s ease; }
+ .option:hover:not(:disabled) { border-color: var(--terra); }
+ .option:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .option:disabled { cursor: default; }
+ .option--juste { border-color: var(--terra); background: var(--cream2); font-weight: 500; }
+ .option--faux { border-color: var(--faux); background: var(--faux-fond); }
+ .explication { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--terra); background: var(--cream2); border-radius: 0 8px 8px 0; font-size: 14.5px; line-height: 1.7; }
+ .explication strong { display: block; margin-bottom: 4px; color: var(--terra); }
+ .actions { margin-top: 24px; display: flex; justify-content: flex-end; }
+ .bouton { padding: 12px 26px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; font-family: inherit; color: #fff; background: var(--terra); border: none; border-radius: 100px; cursor: pointer; transition: background 0.2s; }
+ .bouton:hover { background: var(--terra2); }
+ .bouton:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .bouton--secondaire { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .bilan { text-align: center; padding: 8px 0; }
+ .bilan__score { font-family: 'Playfair Display', serif; font-size: 42px; color: var(--terra); margin: 0 0 6px; }
+ .bilan__libelle { font-size: 16px; color: var(--text); margin: 0 0 8px; font-weight: 500; }
+ .bilan__texte { font-size: 15px; color: var(--muted); margin: 0 auto 26px; max-width: 440px; }
+ .bilan .actions { justify-content: center; }
+ /* Ici le score est court ("72 / 100") : on garde le grand format d'origine.
+    Le conseil sur la dimension faible, lui, se lit a gauche. */
+ .bilan .explication { text-align: left; margin-top: 16px; }
+ .bilan__texte { max-width: 520px; }
+ .quiz-cta { text-align: center; margin-top: 28px; }
+ .quiz-cta a { color: var(--terra); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+
+ /* CTA + FOOTER (chrome) */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 56px 24px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; margin: 6px; }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+ .mobile-menu a:last-child { border: none; }
+
+ @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 32px !important; }
+ .quiz__entete, .quiz__corps { padding-left: 20px; padding-right: 20px; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/quizzes/financial-health-score/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/quiz/sante-financiere/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/quizzes/financial-health-score/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/cuestionarios/salud-financiera/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/quiz/sante-financiere/"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/en/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/en/etfs/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/en/tools/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ <li><a href="/en/best-offers/" data-i18n="nav.offres">Offers</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/quiz/sante-financiere/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/financial-health-score/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/salud-financiera/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/en/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/en/etfs/" data-i18n="nav.etf">ETFs</a>
+ <a href="/en/tools/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/en/best-offers/" data-i18n="nav.offres">Offers</a>
+ <a href="/en/emergency-fund/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/en/my-story/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/quiz/sante-financiere/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/financial-health-score/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/salud-financiera/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/en/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <a href="/en/quizzes/" data-i18n="nav.quiz">Quizzes</a></p>
+ <h1><span data-i18n="art.quizSante.title">Your financial health score</span></h1>
+ </div>
+</div>
+
+<!-- WRAP -->
+<div class="wrap">
+ <p class="intro" data-i18n="art.quizSante.intro">Ten questions, a score out of 100, and above all your weak spot identified, because financial health gets fixed one dimension at a time. No good or bad people here, just an honest snapshot of today.</p>
+
+ <section class="quiz" aria-live="polite">
+ <header class="quiz__entete">
+ <p class="quiz__surtitre" data-i18n="art.quizSante.surtitre">Ten questions, a score out of 100</p>
+ <h2 class="quiz__titre" data-i18n="art.quizSante.title">Your financial health score</h2>
+ <p class="quiz__progres" id="progres">Question 1 sur 5</p>
+ <div class="quiz__barre"><span id="barre"></span></div>
+ </header>
+ <div class="quiz__corps" id="corps"></div>
+ </section>
+
+ <p class="quiz-cta"><a href="/en/emergency-fund/" data-i18n="art.quizSante.cta">The emergency fund →</a></p>
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.quizSante.ctaTitle">One dimension at a time</h2>
+ <p data-i18n="art.quizSante.ctaDesc">Fixing a single weak spot moves the whole score. Start with the one the test identified.</p>
+ <a href="/en/quizzes/your-road-to-the-million/" class="cta-btn" data-i18n="art.quizSante.ctaBtn">Your road to the million →</a>
+ <a href="/en/articles/" class="cta-btn secondary" data-i18n="art.readMore">View all articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+<script>
+window.QUIZ_DATA = {
+ mode: "composite",
+
+ /* Cinq dimensions, deux questions chacune, 20 points par dimension, 100 au total.
+    L'ordre de cette liste porte la priorite : en cas d'egalite au plus bas score,
+    c'est la premiere dimension declaree qui est retenue. Les fondations d'abord. */
+ dimensions: ["D1", "D2", "D3", "D4", "D5"],
+
+ fr: {
+  ui: { progres: "Question {n} sur {t}", suivant: "Question suivante", voir: "Voir mon score", recommencer: "Refaire le test", termine: "Terminé", bonne: "", revoir: "" },
+  bilan: {
+   paliers: [
+    { min: 71, l: "Fondations solides", t: "Score : {score}/100. Vos fondations sont solides. Votre prochain gain n'est plus dans la défense mais dans l'optimisation : investir mieux, viser plus loin." },
+    { min: 41, l: "En construction", t: "Score : {score}/100. Vous êtes en construction : des morceaux solides, des trous identifiables. La bonne nouvelle : à ce stade, corriger une seule dimension fait bouger tout le score." },
+    { min: 0,  l: "Fondations à bâtir", t: "Score : {score}/100. Vos fondations sont à bâtir, et c'est le meilleur moment pour l'apprendre : tout est réparable, une dimension à la fois. Commencez par votre point faible, pas par tout en même temps." }
+   ],
+   faibleTitre: "Votre point faible",
+   conseils: {
+    D1: { t: "le fonds d'urgence. Sans coussin, chaque imprévu devient une dette. Objectif d'abord modeste : 1 000 $ dans un compte séparé à intérêt élevé, puis trois mois de dépenses.", lien: "/fonds-urgence/", lienT: "Le fonds d'urgence →" },
+    D2: { t: "les dettes. L'intérêt payé est de l'épargne inversée : chaque dollar d'intérêt de carte de crédit annule des années d'intérêts composés. Priorité absolue avant d'investir davantage : éliminer le solde reporté.", lien: "/articles/cote-de-credit-expliquee.html", lienT: "La cote de crédit →" },
+    D3: { t: "l'épargne investie. Épargner sans investir, c'est ramer sans avancer : l'inflation mange le compte d'épargne. La solution tient en un mot, l'automatisation : un virement fixe dès la paie, vers des placements que vous comprenez.", lien: "/articles/indice-boursier-explication.html", lienT: "Comprendre les indices et les ETF →" },
+    D4: { t: "le contrôle. On ne peut pas piloter ce qu'on ne mesure pas. Un mois, un seul, de suivi de chaque dépense change la perception pour toujours. Pas besoin d'un budget parfait : besoin d'un portrait honnête.", lien: "/quiz/combien-pour-la-retraite/", lienT: "Combien vous faut-il pour la retraite? →" },
+    D5: { t: "la protection et le suivi. Cote jamais consultée, proches dans le noir : ce sont les angles morts qui coûtent cher au pire moment. Deux gestes gratuits cette semaine : vérifier votre cote (aucun impact sur elle), et écrire une page qui dit où est quoi, pour vos proches.", lien: "/articles/cote-de-credit-expliquee.html", lienT: "La cote de crédit →" }
+   },
+   liens: [
+    { href: "/quiz/route-vers-le-million/", t: "Fondations solides? La suite : Ta route vers le million" },
+    { href: "/meilleures-offres/", t: "Les outils que j'utilise" }
+   ],
+   avertissement: "Refaites le test dans trois mois : la santé financière se mesure en tendance, pas en photo. Ce score est un outil de réflexion, pas un diagnostic financier. Chaque situation est unique, consultez un professionnel pour des conseils personnalisés."
+  },
+  questions: [
+   { d: "D1", q: "Si vous perdiez votre revenu demain, combien de temps pourriez-vous tenir sans emprunter?", options: [
+    { t: "Moins d'un mois", pts: 0 },
+    { t: "1 à 3 mois", pts: 4 },
+    { t: "3 à 6 mois", pts: 8 },
+    { t: "Plus de 6 mois", pts: 10 }
+   ] },
+   { d: "D1", q: "Votre fonds d'urgence est :", options: [
+    { t: "Inexistant", pts: 0 },
+    { t: "Mélangé à mon compte courant", pts: 4 },
+    { t: "Dans un compte séparé, mais qui ne rapporte rien", pts: 7 },
+    { t: "Dans un compte séparé à intérêt élevé", pts: 10 }
+   ] },
+   { d: "D2", q: "Vos cartes de crédit :", options: [
+    { t: "Je reporte un solde chaque mois et je paie de l'intérêt", pts: 0 },
+    { t: "Je reporte un solde à l'occasion", pts: 4 },
+    { t: "Payées au complet, presque toujours", pts: 8 },
+    { t: "Payées au complet, automatiquement, toujours", pts: 10 }
+   ] },
+   { d: "D2", q: "En excluant l'hypothèque, vos dettes (auto, marge, prêts personnels) représentent :", options: [
+    { t: "Un poids qui gruge chaque paie", pts: 0 },
+    { t: "Un montant gérable mais présent", pts: 5 },
+    { t: "Presque rien", pts: 8 },
+    { t: "Zéro dette hors hypothèque", pts: 10 }
+   ] },
+   { d: "D3", q: "Chaque mois, vous épargnez ou investissez :", options: [
+    { t: "Rien, il ne reste rien", pts: 0 },
+    { t: "Ce qui reste, quand il reste", pts: 3 },
+    { t: "Un montant fixe, manuellement", pts: 7 },
+    { t: "Un montant fixe, automatiquement, dès la paie", pts: 10 }
+   ] },
+   { d: "D3", q: "Votre épargne long terme est :", options: [
+    { t: "Je n'ai pas d'épargne long terme", pts: 0 },
+    { t: "Dans un compte d'épargne ordinaire", pts: 3 },
+    { t: "Investie, mais je ne sais pas trop dans quoi", pts: 6 },
+    { t: "Investie dans des placements que je comprends (CÉLI, REER)", pts: 10 }
+   ] },
+   { d: "D4", q: "Savez-vous combien vous avez dépensé le mois dernier?", options: [
+    { t: "Aucune idée", pts: 0 },
+    { t: "À 500 $ près", pts: 4 },
+    { t: "À 100 $ près", pts: 8 },
+    { t: "Au dollar près, je suis mes dépenses", pts: 10 }
+   ] },
+   { d: "D4", q: "Une dépense imprévue de 1 000 $ arrive demain. Vous :", options: [
+    { t: "Devriez l'emprunter (carte, marge, proche)", pts: 0 },
+    { t: "Pourriez la payer, mais ça ferait très mal", pts: 4 },
+    { t: "La payez du fonds d'urgence, sans drame", pts: 10 }
+   ] },
+   { d: "D5", q: "Votre cote de crédit :", options: [
+    { t: "Je ne l'ai jamais consultée", pts: 0 },
+    { t: "Consultée il y a longtemps", pts: 4 },
+    { t: "Je la vérifie de temps en temps", pts: 8 },
+    { t: "Suivie régulièrement (Borrowell, Credit Karma ou équivalent)", pts: 10 }
+   ] },
+   { d: "D5", q: "Si quelque chose vous arrivait demain, vos proches :", options: [
+    { t: "Ne sauraient ni où est l'argent ni quoi faire", pts: 0 },
+    { t: "Trouveraient l'essentiel, avec difficulté", pts: 5 },
+    { t: "Sauraient l'essentiel (comptes, assurances, personnes-ressources)", pts: 10 }
+   ] }
+  ]
+ },
+
+ en: {
+  ui: { progres: "Question {n} of {t}", suivant: "Next question", voir: "See my score", recommencer: "Retake the test", termine: "Finished", bonne: "", revoir: "" },
+  bilan: {
+   paliers: [
+    { min: 71, l: "Solid foundations", t: "Score: {score}/100. Your foundations are solid. Your next gain is no longer in defence but in optimization: investing better, aiming further." },
+    { min: 41, l: "Under construction", t: "Score: {score}/100. You are under construction: solid pieces, identifiable gaps. Good news: at this stage, fixing a single dimension moves the whole score." },
+    { min: 0,  l: "Foundations to build", t: "Score: {score}/100. Your foundations need building, and this is the best time to learn it: everything is fixable, one dimension at a time. Start with your weak spot, not with everything at once." }
+   ],
+   faibleTitre: "Your weak spot",
+   conseils: {
+    D1: { t: "the emergency fund. Without a cushion, every surprise becomes debt. A modest first goal: $1,000 in a separate high-interest account, then three months of expenses.", lien: "/en/emergency-fund/", lienT: "The emergency fund →" },
+    D2: { t: "debt. Interest paid is savings in reverse: every dollar of credit card interest cancels years of compounding. Absolute priority before investing more: eliminate the carried balance.", lien: "/en/articles/credit-score-explained.html", lienT: "Your credit score →" },
+    D3: { t: "invested savings. Saving without investing is rowing without moving: inflation eats the savings account. The fix is one word, automation: a fixed transfer right off the paycheque, into investments you understand.", lien: "/en/articles/what-is-a-stock-index.html", lienT: "Understanding indexes and ETFs →" },
+    D4: { t: "control. You cannot steer what you do not measure. One month, just one, of tracking every expense changes your perception forever. You do not need a perfect budget: you need an honest picture.", lien: "/en/quizzes/retirement-number/", lienT: "How much do you need to retire? →" },
+    D5: { t: "protection and tracking. Score never checked, loved ones in the dark: these are the blind spots that cost the most at the worst time. Two free actions this week: check your score (zero impact on it), and write a one-page note saying where everything is, for your family.", lien: "/en/articles/credit-score-explained.html", lienT: "Your credit score →" }
+   },
+   liens: [
+    { href: "/en/quizzes/your-road-to-the-million/", t: "Solid foundations? Next up: Your road to the million" },
+    { href: "/en/best-offers/", t: "The tools I use" }
+   ],
+   avertissement: "Retake the test in three months: financial health is measured as a trend, not a snapshot. This score is a reflection tool, not a financial diagnosis. Every situation is unique, consult a professional for personalized advice."
+  },
+  questions: [
+   { d: "D1", q: "If you lost your income tomorrow, how long could you last without borrowing?", options: [
+    { t: "Less than a month", pts: 0 },
+    { t: "1 to 3 months", pts: 4 },
+    { t: "3 to 6 months", pts: 8 },
+    { t: "More than 6 months", pts: 10 }
+   ] },
+   { d: "D1", q: "Your emergency fund is:", options: [
+    { t: "Nonexistent", pts: 0 },
+    { t: "Mixed in with my chequing account", pts: 4 },
+    { t: "In a separate account, but earning nothing", pts: 7 },
+    { t: "In a separate high-interest account", pts: 10 }
+   ] },
+   { d: "D2", q: "Your credit cards:", options: [
+    { t: "I carry a balance every month and pay interest", pts: 0 },
+    { t: "I occasionally carry a balance", pts: 4 },
+    { t: "Paid in full, almost always", pts: 8 },
+    { t: "Paid in full, automatically, always", pts: 10 }
+   ] },
+   { d: "D2", q: "Excluding the mortgage, your debts (car, line of credit, personal loans) represent:", options: [
+    { t: "A weight eating into every paycheque", pts: 0 },
+    { t: "A manageable but present amount", pts: 5 },
+    { t: "Almost nothing", pts: 8 },
+    { t: "Zero non-mortgage debt", pts: 10 }
+   ] },
+   { d: "D3", q: "Each month, you save or invest:", options: [
+    { t: "Nothing, there is nothing left", pts: 0 },
+    { t: "Whatever is left, when there is", pts: 3 },
+    { t: "A fixed amount, manually", pts: 7 },
+    { t: "A fixed amount, automatically, right off the paycheque", pts: 10 }
+   ] },
+   { d: "D3", q: "Your long-term savings are:", options: [
+    { t: "I have no long-term savings", pts: 0 },
+    { t: "In a regular savings account", pts: 3 },
+    { t: "Invested, but I am not sure in what", pts: 6 },
+    { t: "Invested in products I understand (TFSA, RRSP)", pts: 10 }
+   ] },
+   { d: "D4", q: "Do you know how much you spent last month?", options: [
+    { t: "No idea", pts: 0 },
+    { t: "Within $500", pts: 4 },
+    { t: "Within $100", pts: 8 },
+    { t: "To the dollar, I track my spending", pts: 10 }
+   ] },
+   { d: "D4", q: "A $1,000 unexpected expense hits tomorrow. You:", options: [
+    { t: "Would have to borrow it (card, credit line, family)", pts: 0 },
+    { t: "Could pay it, but it would really hurt", pts: 4 },
+    { t: "Pay it from the emergency fund, no drama", pts: 10 }
+   ] },
+   { d: "D5", q: "Your credit score:", options: [
+    { t: "I have never checked it", pts: 0 },
+    { t: "Checked it a long time ago", pts: 4 },
+    { t: "I check it occasionally", pts: 8 },
+    { t: "Tracked regularly (Borrowell, Credit Karma or similar)", pts: 10 }
+   ] },
+   { d: "D5", q: "If something happened to you tomorrow, your loved ones:", options: [
+    { t: "Would not know where the money is or what to do", pts: 0 },
+    { t: "Would find the essentials, with difficulty", pts: 5 },
+    { t: "Would know the essentials (accounts, insurance, key contacts)", pts: 10 }
+   ] }
+  ]
+ },
+
+ es: {
+  ui: { progres: "Pregunta {n} de {t}", suivant: "Siguiente pregunta", voir: "Ver mi puntaje", recommencer: "Repetir el test", termine: "Terminado", bonne: "", revoir: "" },
+  bilan: {
+   paliers: [
+    { min: 71, l: "Bases sólidas", t: "Puntaje: {score}/100. Tus bases son sólidas. Tu próxima ganancia ya no está en la defensa sino en la optimización: invertir mejor, apuntar más lejos." },
+    { min: 41, l: "En construcción", t: "Puntaje: {score}/100. Estás en construcción: piezas sólidas, huecos identificables. La buena noticia: en esta etapa, corregir una sola dimensión mueve todo el puntaje." },
+    { min: 0,  l: "Bases por construir", t: "Puntaje: {score}/100. Tus bases están por construir, y este es el mejor momento para saberlo: todo es reparable, una dimensión a la vez. Empieza por tu punto débil, no por todo a la vez." }
+   ],
+   faibleTitre: "Tu punto débil",
+   conseils: {
+    D1: { t: "el fondo de emergencia. Sin colchón, cada imprevisto se vuelve deuda. Primer objetivo modesto: 1 000 $ en una cuenta separada de alto interés, luego tres meses de gastos.", lien: "/es/fondo-de-emergencia/", lienT: "El fondo de emergencia →" },
+    D2: { t: "las deudas. El interés pagado es ahorro invertido: cada dólar de interés de tarjeta anula años de interés compuesto. Prioridad absoluta antes de invertir más: eliminar el saldo arrastrado.", lien: "/es/articles/puntaje-de-credito-explicado.html", lienT: "El puntaje de crédito →" },
+    D3: { t: "el ahorro invertido. Ahorrar sin invertir es remar sin avanzar: la inflación se come la cuenta de ahorro. La solución es una palabra, automatización: una transferencia fija desde el pago, hacia inversiones que entiendas.", lien: "/es/articles/que-es-un-indice-bursatil.html", lienT: "Entender los índices y los ETF →" },
+    D4: { t: "el control. No puedes dirigir lo que no mides. Un mes, uno solo, de seguimiento de cada gasto cambia la percepción para siempre. No necesitas un presupuesto perfecto: necesitas un retrato honesto.", lien: "/es/cuestionarios/cuanto-para-jubilarte/", lienT: "¿Cuánto necesitas para jubilarte? →" },
+    D5: { t: "la protección y el seguimiento. Puntaje nunca consultado, seres queridos a ciegas: son los puntos ciegos que más cuestan en el peor momento. Dos gestos gratuitos esta semana: verificar tu puntaje (cero impacto en él), y escribir una página que diga dónde está todo, para tu familia.", lien: "/es/articles/puntaje-de-credito-explicado.html", lienT: "El puntaje de crédito →" }
+   },
+   liens: [
+    { href: "/es/cuestionarios/tu-ruta-hacia-el-millon/", t: "¿Bases sólidas? Lo que sigue: Tu ruta hacia el millón" },
+    { href: "/es/mejores-ofertas/", t: "Las herramientas que uso" }
+   ],
+   avertissement: "Repite el test en tres meses: la salud financiera se mide en tendencia, no en foto. Este puntaje es una herramienta de reflexión, no un diagnóstico financiero. Cada situación es única, consulta a un profesional para consejos personalizados."
+  },
+  questions: [
+   { d: "D1", q: "Si perdieras tu ingreso mañana, ¿cuánto tiempo aguantarías sin pedir prestado?", options: [
+    { t: "Menos de un mes", pts: 0 },
+    { t: "1 a 3 meses", pts: 4 },
+    { t: "3 a 6 meses", pts: 8 },
+    { t: "Más de 6 meses", pts: 10 }
+   ] },
+   { d: "D1", q: "Tu fondo de emergencia está:", options: [
+    { t: "Inexistente", pts: 0 },
+    { t: "Mezclado con mi cuenta corriente", pts: 4 },
+    { t: "En una cuenta separada, pero que no genera nada", pts: 7 },
+    { t: "En una cuenta separada de alto interés", pts: 10 }
+   ] },
+   { d: "D2", q: "Tus tarjetas de crédito:", options: [
+    { t: "Arrastro un saldo cada mes y pago intereses", pts: 0 },
+    { t: "Arrastro un saldo ocasionalmente", pts: 4 },
+    { t: "Pagadas en su totalidad, casi siempre", pts: 8 },
+    { t: "Pagadas en su totalidad, automáticamente, siempre", pts: 10 }
+   ] },
+   { d: "D2", q: "Excluyendo la hipoteca, tus deudas (auto, línea de crédito, préstamos) representan:", options: [
+    { t: "Un peso que consume cada pago", pts: 0 },
+    { t: "Un monto manejable pero presente", pts: 5 },
+    { t: "Casi nada", pts: 8 },
+    { t: "Cero deudas fuera de la hipoteca", pts: 10 }
+   ] },
+   { d: "D3", q: "Cada mes, ahorras o inviertes:", options: [
+    { t: "Nada, no queda nada", pts: 0 },
+    { t: "Lo que sobra, cuando sobra", pts: 3 },
+    { t: "Un monto fijo, manualmente", pts: 7 },
+    { t: "Un monto fijo, automáticamente, desde el pago", pts: 10 }
+   ] },
+   { d: "D3", q: "Tus ahorros a largo plazo están:", options: [
+    { t: "No tengo ahorros a largo plazo", pts: 0 },
+    { t: "En una cuenta de ahorro común", pts: 3 },
+    { t: "Invertidos, pero no sé bien en qué", pts: 6 },
+    { t: "Invertidos en productos que entiendo (CÉLI, REER)", pts: 10 }
+   ] },
+   { d: "D4", q: "¿Sabes cuánto gastaste el mes pasado?", options: [
+    { t: "Ni idea", pts: 0 },
+    { t: "Con un margen de 500 $", pts: 4 },
+    { t: "Con un margen de 100 $", pts: 8 },
+    { t: "Al dólar, sigo mis gastos", pts: 10 }
+   ] },
+   { d: "D4", q: "Un gasto imprevisto de 1 000 $ llega mañana. Tú:", options: [
+    { t: "Tendrías que pedirlo prestado (tarjeta, línea, familia)", pts: 0 },
+    { t: "Podrías pagarlo, pero dolería mucho", pts: 4 },
+    { t: "Lo pagas del fondo de emergencia, sin drama", pts: 10 }
+   ] },
+   { d: "D5", q: "Tu puntaje de crédito:", options: [
+    { t: "Nunca lo he consultado", pts: 0 },
+    { t: "Consultado hace mucho tiempo", pts: 4 },
+    { t: "Lo verifico de vez en cuando", pts: 8 },
+    { t: "Seguido regularmente (Borrowell, Credit Karma o similar)", pts: 10 }
+   ] },
+   { d: "D5", q: "Si algo te pasara mañana, tus seres queridos:", options: [
+    { t: "No sabrían dónde está el dinero ni qué hacer", pts: 0 },
+    { t: "Encontrarían lo esencial, con dificultad", pts: 5 },
+    { t: "Sabrían lo esencial (cuentas, seguros, contactos clave)", pts: 10 }
+   ] }
+  ]
+ }
+};
+</script>
+<script src="/quiz.js" defer></script>
+</body>
+</html>

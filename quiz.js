@@ -34,6 +34,22 @@
                   bilan.resultat, bilan.methode, bilan.faibleTitre, bilan.faible,
                   bilan.notes{}, bilan.textes{}, bilan.liens[], bilan.avertissement.
 
+                  Variante a verdicts : calcul() peut aussi renvoyer
+                  { verdict: <cle>, entete: <texte ou vide>, vals: { ... } }.
+                  Le moteur prend alors bilan.verdicts[<cle>] = { l, t } et remplace
+                  dans "t" chaque {cle} par vals[cle], deja formate. Cela permet
+                  plusieurs paliers de lecture au lieu d'une seule fourchette.
+
+  mode "composite" : score sur 100 reparti en dimensions. Chaque question porte "d"
+                  (identifiant de dimension) et chaque option porte "pts". Le moteur
+                  additionne le total et le total par dimension, puis identifie la
+                  dimension la plus faible. En cas d'egalite, la premiere dimension
+                  declaree dans DATA.dimensions l'emporte : l'ordre exprime une
+                  priorite (les fondations d'abord), il n'est pas arbitraire.
+                  Le bilan attend : bilan.paliers [{min, l, t}] (t accepte {score}),
+                  bilan.faibleTitre, bilan.conseils[<dimension>] = { t, lien, lienT },
+                  bilan.liens[], bilan.avertissement.
+
   La langue affichee est celle de la page : le verrou de langue ecrit dans
   localStorage avant le chargement des scripts, donc l'URL fait foi.
 */
@@ -51,6 +67,7 @@
   var MODE = DATA.mode || "score";
   var T, index = 0, score = 0, points = {}, repondu = false;
   var vars = {}, notes = [], texteCle = null;
+  var dims = {};
   var LOCALE = { fr: "fr-CA", en: "en-CA", es: "es-ES" };
 
   function currentLang() {
@@ -114,6 +131,14 @@
         btn.disabled = true;
         if (i === choix) { btn.classList.add("option--juste"); }
       });
+    } else if (MODE === "composite") {
+      var pts = item.options[choix].pts || 0;
+      score += pts;
+      dims[item.d] = (dims[item.d] || 0) + pts;
+      boutons.forEach(function (btn, i) {
+        btn.disabled = true;
+        if (i === choix) { btn.classList.add("option--juste"); }
+      });
     } else {
       boutons.forEach(function (btn, i) {
         btn.disabled = true;
@@ -166,6 +191,17 @@
       catch (e) { return String(Math.round(n)); }
     }
 
+    // Variante a verdicts : plusieurs paliers de lecture, valeurs deja calculees.
+    if (r.verdict) {
+      var v = T.bilan.verdicts[r.verdict];
+      var texte = v.t;
+      Object.keys(r.vals || {}).forEach(function (k) {
+        var val = (typeof r.vals[k] === "number") ? fmt(r.vals[k]) : String(r.vals[k]);
+        texte = texte.split("{" + k + "}").join(val);
+      });
+      return { entete: r.entete || "", l: v.l, t: texte };
+    }
+
     if (r.faible) {
       return { entete: "", l: T.bilan.faibleTitre, t: T.bilan.faible };
     }
@@ -177,12 +213,37 @@
     };
   }
 
+  // Mode composite : un score global, et surtout la dimension la plus faible.
+  // Un score seul ne dit pas quoi faire; la dimension, oui.
+  function bilanComposite() {
+    var palier = null;
+    for (var i = 0; i < T.bilan.paliers.length; i++) {
+      if (score >= T.bilan.paliers[i].min) { palier = T.bilan.paliers[i]; break; }
+    }
+    if (!palier) { palier = T.bilan.paliers[T.bilan.paliers.length - 1]; }
+
+    // Egalite : la premiere dimension declaree gagne. L'ordre porte la priorite.
+    var faible = null, bas = Infinity;
+    DATA.dimensions.forEach(function (d) {
+      var s = dims[d] || 0;
+      if (s < bas) { bas = s; faible = d; }
+    });
+
+    return {
+      entete: String(score) + " / 100",
+      l: palier.l,
+      t: palier.t.split("{score}").join(String(score)),
+      faible: faible
+    };
+  }
+
   function afficherBilan() {
     if (progres) { progres.textContent = T.ui.termine; }
     if (barre) { barre.style.width = "100%"; }
 
     var b = (MODE === "profil") ? bilanProfil()
           : (MODE === "calcul") ? bilanCalcul()
+          : (MODE === "composite") ? bilanComposite()
           : bilanScore();
 
     var html = '<div class="bilan">';
@@ -208,6 +269,16 @@
       }
     }
 
+    if (MODE === "composite" && b.faible) {
+      var c = T.bilan.conseils[b.faible];
+      html += '<div class="explication"><strong>' + escapeHtml(T.bilan.faibleTitre) + '</strong>' +
+              escapeHtml(c.t);
+      if (c.lien) {
+        html += ' <a href="' + c.lien + '">' + escapeHtml(c.lienT) + '</a>';
+      }
+      html += '</div>';
+    }
+
     if (T.bilan.avertissement) {
       html += '<p class="bilan__texte">' + escapeHtml(T.bilan.avertissement) + '</p>';
     }
@@ -229,7 +300,7 @@
   }
 
   function reinit() {
-    index = 0; score = 0; points = {}; vars = {}; notes = []; texteCle = null;
+    index = 0; score = 0; points = {}; vars = {}; notes = []; texteCle = null; dims = {};
   }
 
   function demarrer() {

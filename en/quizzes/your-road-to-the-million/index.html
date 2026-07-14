@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>try{localStorage.setItem('lang','en');}catch(e){}</script>
+ <!-- Google Analytics -->
+ <script src="/consent.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QEBYDL8R"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-L9QEBYDL8R');
+ </script>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Your Road to the Million: Where Does Your Current Pace Lead? — Route vers le Million</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ <!--
+   METADONNEES SEO PAR LANGUE
+   FR : title "Ta route vers le million : où mène ton rythme actuel ?" | slug "route-vers-le-million"
+        description "Six questions, une projection honnête : à votre cadence actuelle, où mène votre route ? Résultat en fourchette. Aucune magie, seulement les intérêts composés."
+   EN : title "Your Road to the Million: Where Does Your Current Pace Lead?" | slug "your-road-to-the-million"
+        description "Six questions, an honest projection: at your current cadence, where does your road lead? Result given as a range. No magic, just compound interest."
+   ES : title "Tu ruta hacia el millón: ¿adónde lleva tu ritmo actual?" | slug "tu-ruta-hacia-el-millon"
+        description "Seis preguntas, una proyección honesta: a tu cadencia actual, ¿adónde lleva tu ruta? Resultado en forma de rango. Sin magia, solo interés compuesto." -->
+ <style>
+ :root {
+ --cream: #F5F0E8;
+ --cream2: #E8DCC8;
+ --white: #FFFFFF;
+ --terra: #2D4A1A;
+ --terra2: #1E3810;
+ --border: #C8D4B0;
+ --text: #1A2E0A;
+ --muted: #607848;
+ --light: #A0B480;
+ --radius: 14px;
+ --faux: #9a3b3b;
+ --faux-fond: #f6e9e9;
+ }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; }
+
+ /* NAV */
+ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 56px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+ .nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--text); text-decoration: none; }
+ .nav-links { display: flex; gap: 32px; list-style: none; }
+ .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+ .nav-links a:hover { color: var(--text); }
+ .nav-cta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--terra); color: #fff; padding: 10px 22px; text-decoration: none; border-radius: 100px; }
+
+ /* HERO */
+ .page-hero { position: relative; height: 40vh; min-height: 300px; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); }
+ .page-hero-img { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; }
+ .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,25,8,0.82) 0%, rgba(15,25,8,0.1) 60%, transparent 100%); }
+ .page-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 44px; max-width: 840px; }
+ .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+ .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+ .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 44px); font-weight: 400; color: #fff; line-height: 1.15; }
+ .page-hero h1 em { font-style: italic; color: #B8D890; }
+
+ /* WRAP */
+ .wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 90px; }
+ .intro { text-align: center; font-size: 16px; color: var(--muted); margin: 0 auto 32px; max-width: 520px; }
+
+ /* QUIZ */
+ .quiz { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+ .quiz__entete { padding: 28px 32px 22px; border-bottom: 1px solid var(--border); }
+ .quiz__surtitre { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--terra); font-weight: 500; margin: 0 0 8px; }
+ .quiz__titre { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; margin: 0; color: var(--text); }
+ .quiz__progres { font-size: 13px; color: var(--muted); margin-top: 14px; }
+ .quiz__barre { height: 4px; background: var(--border); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+ .quiz__barre span { display: block; height: 100%; width: 0; background: var(--terra); transition: width 0.3s ease; }
+ .quiz__corps { padding: 28px 32px 32px; }
+ .question { font-size: 18px; font-weight: 500; margin: 0 0 22px; color: var(--text); }
+ .options { display: flex; flex-direction: column; gap: 12px; }
+ .option { text-align: left; width: 100%; padding: 15px 18px; font-size: 15.5px; line-height: 1.5; color: var(--text); background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; font-family: inherit; transition: border-color 0.15s ease, background-color 0.15s ease; }
+ .option:hover:not(:disabled) { border-color: var(--terra); }
+ .option:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .option:disabled { cursor: default; }
+ .option--juste { border-color: var(--terra); background: var(--cream2); font-weight: 500; }
+ .option--faux { border-color: var(--faux); background: var(--faux-fond); }
+ .explication { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--terra); background: var(--cream2); border-radius: 0 8px 8px 0; font-size: 14.5px; line-height: 1.7; }
+ .explication strong { display: block; margin-bottom: 4px; color: var(--terra); }
+ .actions { margin-top: 24px; display: flex; justify-content: flex-end; }
+ .bouton { padding: 12px 26px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; font-family: inherit; color: #fff; background: var(--terra); border: none; border-radius: 100px; cursor: pointer; transition: background 0.2s; }
+ .bouton:hover { background: var(--terra2); }
+ .bouton:focus-visible { outline: 3px solid var(--cream2); outline-offset: 2px; }
+ .bouton--secondaire { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ .bilan { text-align: center; padding: 8px 0; }
+ .bilan__score { font-family: 'Playfair Display', serif; font-size: 42px; color: var(--terra); margin: 0 0 6px; }
+ .bilan__libelle { font-size: 16px; color: var(--text); margin: 0 0 8px; font-weight: 500; }
+ .bilan__texte { font-size: 15px; color: var(--muted); margin: 0 auto 26px; max-width: 440px; }
+ .bilan .actions { justify-content: center; }
+ /* Ce quiz affiche une fourchette, pas un score du type "8 / 10" : le texte est
+    long, il faut le laisser respirer. Et les notes conditionnelles se lisent a
+    gauche, meme dans un bilan centre. */
+ .bilan__score { font-size: 30px; line-height: 1.35; margin-bottom: 10px; }
+ .bilan .explication { text-align: left; margin-top: 16px; }
+ .bilan__texte { max-width: 520px; }
+ .quiz-cta { text-align: center; margin-top: 28px; }
+ .quiz-cta a { color: var(--terra); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+
+ /* CTA + FOOTER (chrome) */
+ .cta-bottom { background: var(--white); border-top: 1px solid var(--border); padding: 56px 24px; text-align: center; }
+ .cta-bottom h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+ .cta-bottom p { font-size: 15px; color: var(--muted); margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; }
+ .cta-btn { display: inline-block; background: var(--terra); color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 100px; margin: 6px; }
+ .cta-btn.secondary { background: var(--cream2); color: var(--text); border: 1px solid var(--border); }
+ footer { background: var(--white); border-top: 1px solid var(--border); padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+ footer p { font-size: 11px; color: var(--light); letter-spacing: 1px; }
+ footer strong { color: var(--muted); font-weight: 400; }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+ .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+ .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+ .hamburger.open span:nth-child(2) { opacity: 0; }
+ .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+ .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--border); padding: 20px 24px 28px; z-index: 99; flex-direction: column; box-shadow: 0 8px 32px rgba(15,25,8,0.12); }
+ .mobile-menu.open { display: flex; }
+ .mobile-menu a { display: block; padding: 13px 0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+ .mobile-menu a:last-child { border: none; }
+
+ @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+ @media (max-width: 768px) {
+ nav { padding: 0 20px; }
+ .nav-links { display: none !important; }
+ .hamburger { display: flex; }
+ .page-hero-content { padding: 0 20px 32px !important; }
+ .quiz__entete, .quiz__corps { padding-left: 20px; padding-right: 20px; }
+ footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+ }
+ </style>
+ <link rel="canonical" href="https://route-vers-le-million.blog/en/quizzes/your-road-to-the-million/"/>
+ <link rel="alternate" hreflang="fr-CA" href="https://route-vers-le-million.blog/quiz/route-vers-le-million/"/>
+ <link rel="alternate" hreflang="en-CA" href="https://route-vers-le-million.blog/en/quizzes/your-road-to-the-million/"/>
+ <link rel="alternate" hreflang="es" href="https://route-vers-le-million.blog/es/cuestionarios/tu-ruta-hacia-el-millon/"/>
+ <link rel="alternate" hreflang="x-default" href="https://route-vers-le-million.blog/quiz/route-vers-le-million/"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a href="/en/" class="nav-logo">Route vers le Million</a>
+ <ul class="nav-links">
+ <li><a href="/en/about/" data-i18n="nav.about">ABOUT</a></li>
+ <li><a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a></li>
+ <li><a href="/en/etfs/" data-i18n="nav.etf">ETFs</a></li>
+ <li><a href="/en/tools/" data-i18n="nav.outils">Tools</a></li>
+ <li><a href="/en/articles/" data-i18n="nav.articles">Articles</a></li>
+ <li><a href="/en/best-offers/" data-i18n="nav.offres">Offers</a></li>
+ </ul>
+ <div style="display:flex;align-items:center;gap:10px;">
+ <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="lang-switcher-nav" style="display:flex;align-items:center;gap:4px;margin-right:4px;">
+ <a class="lang-btn" data-lang="fr" href="/quiz/route-vers-le-million/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">FR</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/your-road-to-the-million/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">EN</a>
+ <span style="color:var(--border);font-size:10px;">·</span>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/tu-ruta-hacia-el-millon/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:4px 2px;text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" class="nav-cta" target="_blank" rel="sponsored nofollow noopener">Wealthsimple →</a>
+ </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/en/" data-i18n="nav.accueil">Home</a>
+ <a href="/en/about/" data-i18n="nav.about">ABOUT</a>
+ <a href="/en/tfsa-rrsp/" data-i18n="nav.celiReer">TFSA &amp; RRSP</a>
+ <a href="/en/etfs/" data-i18n="nav.etf">ETFs</a>
+ <a href="/en/tools/" data-i18n="nav.outils">Tools</a>
+ <a href="/en/articles/" data-i18n="nav.allArticles">All articles</a>
+ <a href="/en/best-offers/" data-i18n="nav.offres">Offers</a>
+ <a href="/en/emergency-fund/" data-i18n="nav.fondsUrgence">Emergency Fund</a>
+ <a href="/en/my-story/" data-i18n="nav.monParcours">My journey</a>
+ <div style="display:flex;gap:20px;padding:14px 0 6px;justify-content:center;border-top:1px solid var(--border);">
+ <a class="lang-btn" data-lang="fr" href="/quiz/route-vers-le-million/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">FR</a>
+ <a class="lang-btn" data-lang="en" href="/en/quizzes/your-road-to-the-million/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">EN</a>
+ <a class="lang-btn" data-lang="es" href="/es/cuestionarios/tu-ruta-hacia-el-millon/" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;">ES</a>
+ </div>
+ <a href="https://wealthsimple.com/invite/G7ZSVC" style="background:var(--terra);color:#fff;text-align:center;border-radius:100px;margin-top:12px;border:none;" target="_blank" rel="sponsored nofollow noopener" data-i18n="nav.ouvrirWealthsimple">Open Wealthsimple →</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+ <div class="page-hero-img"></div>
+ <div class="page-hero-overlay"></div>
+ <div class="page-hero-content">
+ <p class="breadcrumb"><a href="/en/" data-i18n="nav.accueil">Home</a> &nbsp;/&nbsp; <a href="/en/quizzes/" data-i18n="nav.quiz">Quizzes</a></p>
+ <h1><span data-i18n="art.quizMillion.title">Your road to the million: where does your current pace lead?</span></h1>
+ </div>
+</div>
+
+<!-- WRAP -->
+<div class="wrap">
+ <p class="intro" data-i18n="art.quizMillion.intro">This blog is called Route vers le Million, so let us run your numbers. Six questions, an honest projection, and an answer that belongs to the pace, never to the person: at your current cadence, where does your road lead? No magic, just compound interest.</p>
+
+ <section class="quiz" aria-live="polite">
+ <header class="quiz__entete">
+ <p class="quiz__surtitre" data-i18n="art.quizMillion.surtitre">A projection in 6 questions</p>
+ <h2 class="quiz__titre" data-i18n="art.quizMillion.title">Your road to the million: where does your current pace lead?</h2>
+ <p class="quiz__progres" id="progres">Question 1 sur 5</p>
+ <div class="quiz__barre"><span id="barre"></span></div>
+ </header>
+ <div class="quiz__corps" id="corps"></div>
+ </section>
+
+ <p class="quiz-cta"><a href="/en/calculator/" data-i18n="art.quizMillion.cta">Compound interest calculator →</a></p>
+</div>
+
+<!-- CTA -->
+<div class="cta-bottom">
+ <h2 data-i18n="art.quizMillion.ctaTitle">Pace can change</h2>
+ <p data-i18n="art.quizMillion.ctaDesc">Every extra $100 a month moves the date closer. Play with your real numbers in the calculator.</p>
+ <a href="/en/calculator/" class="cta-btn" data-i18n="art.quizMillion.ctaBtn">Open the calculator →</a>
+ <a href="/en/articles/" class="cta-btn secondary" data-i18n="art.readMore">View all articles →</a>
+</div>
+
+<!-- FOOTER -->
+<div data-newsletter></div>
+<footer>
+ <p data-i18n="footer.tagline"><strong>Route vers le Million</strong> · Personal Finance · Québec, Canada</p>
+ <p data-i18n="footer.disclaimer">For informational purposes only — not official financial advice.</p>
+ <p data-i18n="disclosure.footer" style="flex-basis:100%;font-size:10px;letter-spacing:0;color:var(--muted);margin-top:6px;line-height:1.6;">Route vers le Million contains affiliate links (Wealthsimple, Tangerine, Borrowell, Amazon). If you sign up or buy through my links, I earn a commission at no extra cost to you. — <a href="/en/disclosure.html" style="color:inherit;text-decoration:underline;">Learn more →</a></p>
+</footer>
+
+<script src="/translations.js"></script>
+<script>function toggleMenu(){var m=document.getElementById("mobileMenu");var h=document.getElementById("hamburger");if(m){m.classList.toggle("open");}if(h){h.classList.toggle("open");}}</script>
+<script src="/analytics.js" defer></script>
+<script>
+window.QUIZ_DATA = {
+ mode: "calcul",
+
+ /* Formule reprise telle quelle du devis :
+      n       = max(cible - age, 1)
+      FV(r)   = C x (1+r)^n + M x [ ((1+r/12)^(12n) - 1) / (r/12) ]
+      FV_bas  = FV(r - 0.01)   |   FV_haut = FV(r + 0.01)     arrondis au 10 000
+      age_million : premiere annee ou FV(r) >= 1 000 000
+      M_requis    : mensualite pour atteindre 1 000 000 a l'age cible, arrondie au 25
+
+    Trois paliers, et une regle de redaction : le verdict decrit toujours ou mene
+    LE RYTHME, jamais ce que la personne peut ou ne peut pas. */
+ calcul: function (v) {
+  var n = Math.max(v.cible - v.age, 1);
+  function fv(r, annees) {
+   var rm = r / 12, nm = annees * 12;
+   return v.C * Math.pow(1 + r, annees) + v.M * ((Math.pow(1 + rm, nm) - 1) / rm);
+  }
+  var r10 = function (x) { return Math.round(x / 10000) * 10000; };
+  var r25 = function (x) { return Math.round(x / 25) * 25; };
+
+  var bas = r10(fv(v.r - 0.01, n));
+  var haut = r10(fv(v.r + 0.01, n));
+
+  var ageMillion = null;
+  for (var i = 1; i <= 60; i++) {
+   if (fv(v.r, i) >= 1000000) { ageMillion = v.age + i; break; }
+  }
+
+  var rm = v.r / 12, nm = n * 12;
+  var mReq = (1000000 - v.C * Math.pow(1 + v.r, n)) * rm / (Math.pow(1 + rm, nm) - 1);
+  mReq = mReq > 0 ? r25(mReq) : 0;
+
+  var verdict = (bas >= 1000000) ? "oui" : (haut >= 1000000) ? "proche" : "trajectoire";
+
+  return {
+   verdict: verdict,
+   entete: "",
+   vals: { FV_bas: bas, FV_haut: haut, cible: v.cible, age_million: ageMillion, M_requis: mReq }
+  };
+ },
+
+ fr: {
+  ui: { progres: "Question {n} sur {t}", suivant: "Question suivante", voir: "Voir où mène ma route", recommencer: "Recommencer le quiz", termine: "Terminé", bonne: "", revoir: "" },
+  bilan: {
+   verdicts: {
+    oui: {
+     l: "Votre route franchit le million",
+     t: "À votre rythme actuel, votre route franchit le million, même dans le scénario prudent. Projection : entre {FV_bas} $ et {FV_haut} $ à {cible} ans, avec le cap du million passé vers {age_million} ans. La seule chose qui peut changer cette trajectoire, c'est de s'arrêter, ou de vendre en panique dans une baisse."
+    },
+    proche: {
+     l: "Votre rythme mène dans la zone du million",
+     t: "Votre rythme actuel mène dans la zone du million : entre {FV_bas} $ et {FV_haut} $ à {cible} ans. À cette cadence, le résultat final se joue sur le rendement et la constance. Un rythme d'environ {M_requis} $ par mois transformerait la zone en trajectoire assurée, et l'écart avec votre rythme actuel est souvent plus petit qu'on pense."
+    },
+    trajectoire: {
+     l: "Voici où mène votre rythme",
+     t: "À ce rythme, votre route mène à entre {FV_bas} $ et {FV_haut} $ à {cible} ans. Deux lectures de ce chiffre, toutes les deux vraies. La première : le rythme se change. Chaque tranche de 100 $ de plus par mois rapproche la date, et atteindre le million à {cible} ans demanderait environ {M_requis} $ par mois. La deuxième : {FV_haut} $ n'est pas un échec. Le million est un symbole; le chiffre qui compte, c'est celui qui finance votre vie à vous, et le quiz retraite le calcule."
+    }
+   },
+   methodeTitre: "Comment ce chiffre est construit",
+   methode: "Votre capital actuel et votre épargne mensuelle sont projetés jusqu'à l'âge que vous avez choisi, avec un rendement moyen constant tiré de votre profil de placement. La fourchette correspond à un point de pourcentage de rendement en moins et en plus, parce qu'un rendement exact sur trente ans n'existe pas. Aucune magie, seulement les intérêts composés.",
+   notes: {
+    note_non_investi: "Le facteur qui change tout dans votre cas : votre argent n'est pas encore investi. La différence entre 1,5 % (compte d'épargne) et un portefeuille diversifié est, sur 20 ans et plus, la plus grande décision financière de votre vie, bien avant le montant épargné.",
+    note_prudent: "Votre profil prudent protège votre capital, mais il allonge la route vers le million. Ce n'est ni bien ni mal : assurez-vous simplement que c'est un choix (tolérance au risque, horizon court) et non un simple point de départ jamais revisité.",
+    note_patience: "\"Aussi longtemps qu'il faudra\" est statistiquement la meilleure réponse du quiz : le temps est le seul ingrédient des intérêts composés qu'aucun revenu ne remplace."
+   },
+   textes: {
+    texte_securite: "La sécurité n'attend pas le million : elle commence au fonds d'urgence et grandit à chaque tranche de 100 000 $.",
+    texte_liberte: "La liberté se mesure en années de dépenses couvertes, pas en chiffre rond. Votre fourchette ci-dessus en couvre déjà un certain nombre.",
+    texte_symbole: "Bonne réponse, c'est aussi la mienne. Un symbole qui donne une direction vaut mieux qu'un objectif raisonnable qu'on oublie."
+   },
+   liens: [
+    { href: "/calculatrice/", t: "Jouez avec vos vrais chiffres" },
+    { href: "/quiz/profil-investisseur/", t: "Quel type d'investisseur êtes-vous?" },
+    { href: "/meilleures-offres/", t: "Mes meilleures offres pour investir" }
+   ],
+   avertissement: "Projection illustrative basée sur des rendements moyens constants : les marchés réels fluctuent. Ceci n'est ni une projection financière officielle ni un conseil. Consultez un professionnel pour votre situation."
+  },
+  questions: [
+   { q: "Votre âge actuel :", options: [
+    { t: "Moins de 30 ans", v: { age: 27 } },
+    { t: "30 à 39 ans", v: { age: 35 } },
+    { t: "40 à 49 ans", v: { age: 45 } },
+    { t: "50 à 59 ans", v: { age: 55 } },
+    { t: "60 ans et plus", v: { age: 62 } }
+   ] },
+   { q: "Combien avez-vous déjà d'investi (CÉLI, REER, comptes de placement, en excluant votre maison)?", options: [
+    { t: "Moins de 10 000 $", v: { C: 5000 } },
+    { t: "10 000 $ à 50 000 $", v: { C: 30000 } },
+    { t: "50 000 $ à 150 000 $", v: { C: 100000 } },
+    { t: "150 000 $ à 300 000 $", v: { C: 225000 } },
+    { t: "Plus de 300 000 $", v: { C: 400000 } }
+   ] },
+   { q: "Combien investissez-vous par mois, de façon réaliste et régulière?", options: [
+    { t: "Moins de 100 $", v: { M: 50 } },
+    { t: "100 $ à 300 $", v: { M: 200 } },
+    { t: "300 $ à 600 $", v: { M: 450 } },
+    { t: "600 $ à 1 000 $", v: { M: 800 } },
+    { t: "Plus de 1 000 $", v: { M: 1300 } }
+   ] },
+   { q: "Votre argent est investi de façon :", options: [
+    { t: "Prudente (CPG, épargne, obligations)", v: { r: 0.03 }, note: "note_prudent" },
+    { t: "Équilibrée (fonds diversifiés, mixte)", v: { r: 0.05 } },
+    { t: "Croissance (ETF d'actions, long terme)", v: { r: 0.07 } },
+    { t: "Je ne suis pas encore investi, mon argent dort dans un compte", v: { r: 0.015 }, note: "note_non_investi" }
+   ] },
+   { q: "Jusqu'à quel âge êtes-vous prêt à laisser cet argent croître?", options: [
+    { t: "60 ans", v: { cible: 60 } },
+    { t: "65 ans", v: { cible: 65 } },
+    { t: "70 ans", v: { cible: 70 } },
+    { t: "Aussi longtemps qu'il faudra", v: { cible: 75 }, note: "note_patience" }
+   ] },
+   { q: "Honnêtement, pourquoi le million?", options: [
+    { t: "La sécurité, ne plus jamais m'inquiéter", v: {}, texte: "texte_securite" },
+    { t: "La liberté, choisir mon temps", v: {}, texte: "texte_liberte" },
+    { t: "Le chiffre rond, c'est un symbole", v: {}, texte: "texte_symbole" }
+   ] }
+  ]
+ },
+
+ en: {
+  ui: { progres: "Question {n} of {t}", suivant: "Next question", voir: "See where my road leads", recommencer: "Restart the quiz", termine: "Finished", bonne: "", revoir: "" },
+  bilan: {
+   verdicts: {
+    oui: {
+     l: "Your road crosses the million",
+     t: "At your current pace, your road crosses the million, even in the cautious scenario. Projection: between ${FV_bas} and ${FV_haut} at age {cible}, passing the million mark around age {age_million}. The only things that can change this trajectory are stopping, or panic-selling in a downturn."
+    },
+    proche: {
+     l: "Your pace leads into the million zone",
+     t: "Your current pace leads into the million zone: between ${FV_bas} and ${FV_haut} at age {cible}. At this cadence, the final outcome comes down to returns and consistency. A pace of about ${M_requis} per month would turn the zone into a secured trajectory, and the gap with your current pace is often smaller than people think."
+    },
+    trajectoire: {
+     l: "Here is where your pace leads",
+     t: "At this pace, your road leads to between ${FV_bas} and ${FV_haut} at age {cible}. Two readings of that number, both true. First: pace can change. Every extra $100 a month moves the date closer, and reaching the million at age {cible} would take about ${M_requis} per month. Second: ${FV_haut} is not a failure. The million is a symbol; the number that matters is the one that funds your life, and the retirement quiz calculates it."
+    }
+   },
+   methodeTitre: "How this number is built",
+   methode: "Your current capital and monthly savings are projected to the age you chose, using a constant average return drawn from your investment profile. The range reflects one percentage point of return less and more, because an exact return over thirty years does not exist. No magic, just compound interest.",
+   notes: {
+    note_non_investi: "The game-changing factor in your case: your money is not invested yet. The difference between 1.5 % (savings account) and a diversified portfolio is, over 20 years and more, the biggest financial decision of your life, well ahead of the amount saved.",
+    note_prudent: "Your cautious profile protects your capital but lengthens the road to the million. That is neither good nor bad: just make sure it is a choice (risk tolerance, short horizon) and not a default never revisited.",
+    note_patience: "\"As long as it takes\" is statistically the best answer in this quiz: time is the one compound-interest ingredient no income can replace."
+   },
+   textes: {
+    texte_securite: "Security does not wait for the million: it starts with the emergency fund and grows with every $100,000.",
+    texte_liberte: "Freedom is measured in years of covered expenses, not round numbers. Your range above already covers some.",
+    texte_symbole: "Fair answer, it is mine too. A symbol that gives direction beats a reasonable goal you forget."
+   },
+   liens: [
+    { href: "/en/calculator/", t: "Play with your real numbers" },
+    { href: "/en/quizzes/investor-profile/", t: "What type of investor are you?" },
+    { href: "/en/best-offers/", t: "My best offers to invest" }
+   ],
+   avertissement: "Illustrative projection based on constant average returns: real markets fluctuate. This is neither an official financial projection nor advice. Consult a professional for your situation."
+  },
+  questions: [
+   { q: "Your current age:", options: [
+    { t: "Under 30", v: { age: 27 } },
+    { t: "30 to 39", v: { age: 35 } },
+    { t: "40 to 49", v: { age: 45 } },
+    { t: "50 to 59", v: { age: 55 } },
+    { t: "60 and over", v: { age: 62 } }
+   ] },
+   { q: "How much do you already have invested (TFSA, RRSP, investment accounts, excluding your home)?", options: [
+    { t: "Less than $10,000", v: { C: 5000 } },
+    { t: "$10,000 to $50,000", v: { C: 30000 } },
+    { t: "$50,000 to $150,000", v: { C: 100000 } },
+    { t: "$150,000 to $300,000", v: { C: 225000 } },
+    { t: "More than $300,000", v: { C: 400000 } }
+   ] },
+   { q: "How much do you invest per month, realistically and regularly?", options: [
+    { t: "Less than $100", v: { M: 50 } },
+    { t: "$100 to $300", v: { M: 200 } },
+    { t: "$300 to $600", v: { M: 450 } },
+    { t: "$600 to $1,000", v: { M: 800 } },
+    { t: "More than $1,000", v: { M: 1300 } }
+   ] },
+   { q: "Your money is invested in a way that is:", options: [
+    { t: "Cautious (GICs, savings, bonds)", v: { r: 0.03 }, note: "note_prudent" },
+    { t: "Balanced (diversified funds, mixed)", v: { r: 0.05 } },
+    { t: "Growth (equity ETFs, long term)", v: { r: 0.07 } },
+    { t: "I am not invested yet, my money sits in an account", v: { r: 0.015 }, note: "note_non_investi" }
+   ] },
+   { q: "Until what age are you willing to let this money grow?", options: [
+    { t: "Age 60", v: { cible: 60 } },
+    { t: "Age 65", v: { cible: 65 } },
+    { t: "Age 70", v: { cible: 70 } },
+    { t: "As long as it takes", v: { cible: 75 }, note: "note_patience" }
+   ] },
+   { q: "Honestly, why the million?", options: [
+    { t: "Security, never worrying again", v: {}, texte: "texte_securite" },
+    { t: "Freedom, owning my time", v: {}, texte: "texte_liberte" },
+    { t: "The round number, it is a symbol", v: {}, texte: "texte_symbole" }
+   ] }
+  ]
+ },
+
+ es: {
+  ui: { progres: "Pregunta {n} de {t}", suivant: "Siguiente pregunta", voir: "Ver adónde lleva mi ruta", recommencer: "Reiniciar el cuestionario", termine: "Terminado", bonne: "", revoir: "" },
+  bilan: {
+   verdicts: {
+    oui: {
+     l: "Tu ruta cruza el millón",
+     t: "A tu ritmo actual, tu ruta cruza el millón, incluso en el escenario prudente. Proyección: entre {FV_bas} $ y {FV_haut} $ a los {cible} años, pasando el millón alrededor de los {age_million} años. Lo único que puede cambiar esta trayectoria es detenerse, o vender en pánico durante una caída."
+    },
+    proche: {
+     l: "Tu ritmo lleva a la zona del millón",
+     t: "Tu ritmo actual lleva a la zona del millón: entre {FV_bas} $ y {FV_haut} $ a los {cible} años. A esta cadencia, el resultado final depende del rendimiento y la constancia. Un ritmo de unos {M_requis} $ al mes convertiría la zona en trayectoria asegurada, y la diferencia con tu ritmo actual suele ser menor de lo que se piensa."
+    },
+    trajectoire: {
+     l: "Aquí es adonde lleva tu ritmo",
+     t: "A este ritmo, tu ruta lleva a entre {FV_bas} $ y {FV_haut} $ a los {cible} años. Dos lecturas de esa cifra, ambas verdaderas. Primera: el ritmo se puede cambiar. Cada 100 $ adicionales al mes acercan la fecha, y alcanzar el millón a los {cible} años requeriría unos {M_requis} $ al mes. Segunda: {FV_haut} $ no es un fracaso. El millón es un símbolo; la cifra que importa es la que financia tu vida, y el cuestionario de jubilación la calcula."
+    }
+   },
+   methodeTitre: "Cómo se construye esta cifra",
+   methode: "Tu capital actual y tu ahorro mensual se proyectan hasta la edad que elegiste, con un rendimiento medio constante extraído de tu perfil de inversión. El rango corresponde a un punto porcentual de rendimiento menos y más, porque un rendimiento exacto a treinta años no existe. Sin magia, solo interés compuesto.",
+   notes: {
+    note_non_investi: "El factor que lo cambia todo en tu caso: tu dinero aún no está invertido. La diferencia entre 1,5 % (cuenta de ahorro) y un portafolio diversificado es, en más de 20 años, la mayor decisión financiera de tu vida, mucho antes que el monto ahorrado.",
+    note_prudent: "Tu perfil prudente protege tu capital pero alarga la ruta hacia el millón. No es ni bueno ni malo: solo asegúrate de que sea una elección (tolerancia al riesgo, horizonte corto) y no un punto de partida nunca revisado.",
+    note_patience: "\"El tiempo que haga falta\" es estadísticamente la mejor respuesta del cuestionario: el tiempo es el único ingrediente del interés compuesto que ningún ingreso puede reemplazar."
+   },
+   textes: {
+    texte_securite: "La seguridad no espera al millón: empieza con el fondo de emergencia y crece con cada 100 000 $.",
+    texte_liberte: "La libertad se mide en años de gastos cubiertos, no en cifras redondas. Tu rango de arriba ya cubre algunos.",
+    texte_symbole: "Buena respuesta, también es la mía. Un símbolo que da dirección vale más que un objetivo razonable que se olvida."
+   },
+   liens: [
+    { href: "/es/calculadora/", t: "Juega con tus cifras reales" },
+    { href: "/es/cuestionarios/perfil-de-inversor/", t: "¿Qué tipo de inversor eres?" },
+    { href: "/es/mejores-ofertas/", t: "Mis mejores ofertas para invertir" }
+   ],
+   avertissement: "Proyección ilustrativa basada en rendimientos promedio constantes: los mercados reales fluctúan. Esto no es una proyección financiera oficial ni un consejo. Consulta a un profesional para tu situación."
+  },
+  questions: [
+   { q: "Tu edad actual:", options: [
+    { t: "Menos de 30", v: { age: 27 } },
+    { t: "30 a 39", v: { age: 35 } },
+    { t: "40 a 49", v: { age: 45 } },
+    { t: "50 a 59", v: { age: 55 } },
+    { t: "60 o más", v: { age: 62 } }
+   ] },
+   { q: "¿Cuánto tienes ya invertido (CÉLI, REER, cuentas de inversión, excluyendo tu casa)?", options: [
+    { t: "Menos de 10 000 $", v: { C: 5000 } },
+    { t: "10 000 $ a 50 000 $", v: { C: 30000 } },
+    { t: "50 000 $ a 150 000 $", v: { C: 100000 } },
+    { t: "150 000 $ a 300 000 $", v: { C: 225000 } },
+    { t: "Más de 300 000 $", v: { C: 400000 } }
+   ] },
+   { q: "¿Cuánto inviertes al mes, de forma realista y regular?", options: [
+    { t: "Menos de 100 $", v: { M: 50 } },
+    { t: "100 $ a 300 $", v: { M: 200 } },
+    { t: "300 $ a 600 $", v: { M: 450 } },
+    { t: "600 $ a 1 000 $", v: { M: 800 } },
+    { t: "Más de 1 000 $", v: { M: 1300 } }
+   ] },
+   { q: "Tu dinero está invertido de forma:", options: [
+    { t: "Prudente (GIC, ahorro, bonos)", v: { r: 0.03 }, note: "note_prudent" },
+    { t: "Equilibrada (fondos diversificados, mixta)", v: { r: 0.05 } },
+    { t: "Crecimiento (ETF de acciones, largo plazo)", v: { r: 0.07 } },
+    { t: "Aún no estoy invertido, mi dinero duerme en una cuenta", v: { r: 0.015 }, note: "note_non_investi" }
+   ] },
+   { q: "¿Hasta qué edad estás dispuesto a dejar crecer este dinero?", options: [
+    { t: "60 años", v: { cible: 60 } },
+    { t: "65 años", v: { cible: 65 } },
+    { t: "70 años", v: { cible: 70 } },
+    { t: "El tiempo que haga falta", v: { cible: 75 }, note: "note_patience" }
+   ] },
+   { q: "Honestamente, ¿por qué el millón?", options: [
+    { t: "La seguridad, no preocuparme nunca más", v: {}, texte: "texte_securite" },
+    { t: "La libertad, elegir mi tiempo", v: {}, texte: "texte_liberte" },
+    { t: "La cifra redonda, es un símbolo", v: {}, texte: "texte_symbole" }
+   ] }
+  ]
+ }
+};
+</script>
+<script src="/quiz.js" defer></script>
+</body>
+</html>
